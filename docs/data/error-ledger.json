@@ -1,9 +1,54 @@
 {
-  "updatedAt": "2026-08-19T04:19:00-03:00",
+  "updatedAt": "2026-08-19T12:34:00-03:00",
   "statuses": {
     "open":"erro/vazamento identificado",
     "corrected":"corrigido em nova tentativa",
     "retained":"permaneceu corrigido em revisão espaçada"
   },
-  "errors": []
+  "errors": [
+    {
+      "id":"ERR-CS50-000-001",
+      "status":"open",
+      "domain":"control-flow-tracing",
+      "title":"Confusão entre estado de entrada e estado de saída da iteração",
+      "source":"LAB-CS50-000 attempt 1",
+      "commit":"2f08b6245da9cc4cc6ef73adc055a7ed07986afa",
+      "evidence":"A sequência 1,2,4,6 foi prevista corretamente, mas a explicação afirmou que score já era 4 antes do if da terceira iteração.",
+      "correctionTarget":"R1-B: traçar explicitamente estado no início e no fim de cada iteração.",
+      "firstSeen":"2026-08-19"
+    },
+    {
+      "id":"ERR-CS50-000-002",
+      "status":"open",
+      "domain":"nested-control-flow",
+      "title":"Condição interpretada fora do contexto de execução",
+      "source":"LAB-CS50-000 attempt 1",
+      "commit":"2f08b6245da9cc4cc6ef73adc055a7ed07986afa",
+      "evidence":"No Repair, o game over foi descrito como ocorrendo ao iniciar, ignorando que a verificação está aninhada após bug touches server.",
+      "correctionTarget":"R1-D: simular o fluxo linha a linha e criar um caso de teste Given/When/Then.",
+      "firstSeen":"2026-08-19"
+    },
+    {
+      "id":"ERR-CS50-000-003",
+      "status":"open",
+      "domain":"state-lifecycle",
+      "title":"Escopo de reset parcial versus restart completo ainda não explícito",
+      "source":"LAB-CS50-000 attempt 1",
+      "commit":"2f08b6245da9cc4cc6ef73adc055a7ed07986afa",
+      "evidence":"Foram identificadas variáveis de estado, mas perder uma vida e reiniciar o jogo não foram separados em transições com regras distintas de manutenção/reset.",
+      "correctionTarget":"R1-E: modelar mudanças de estado por evento em tabela.",
+      "firstSeen":"2026-08-19"
+    },
+    {
+      "id":"ERR-CS50-000-004",
+      "status":"open",
+      "domain":"loops",
+      "title":"Modelo de loop restrito a repetição controlada por verdadeiro/falso",
+      "source":"LAB-CS50-000 attempt 1",
+      "commit":"2f08b6245da9cc4cc6ef73adc055a7ed07986afa",
+      "evidence":"A definição dada não cobre adequadamente loops de contagem como repeat 4 times.",
+      "correctionTarget":"R1-A: formular um modelo geral de repetição e regra de parada.",
+      "firstSeen":"2026-08-19"
+    }
+  ]
 }
