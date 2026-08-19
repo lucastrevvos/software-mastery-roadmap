@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-19T16:20:00-03:00",
+  "updatedAt": "2026-08-19T16:42:00-03:00",
   "statuses": {
     "open": "erro/vazamento identificado",
     "corrected": "corrigido em nova tentativa",
@@ -8,7 +8,7 @@
   "errors": [
     {
       "id": "ERR-CS50-000-001",
-      "status": "open",
+      "status": "corrected",
       "domain": "control-flow-tracing",
       "title": "Confusão entre estado de entrada e estado de saída da iteração",
       "source": "LAB-CS50-000 attempt 1",
@@ -17,35 +17,45 @@
       "correctionTarget": "R5-A/R5-B: registrar o estado após cada linha e distinguir explicitamente valor antes e depois de cada instrução de atribuição.",
       "firstSeen": "2026-08-19",
       "correctedAt": "2026-08-19",
-      "correctionCommit": "fe44f3eee057856a097746ddcffa7697f39a4cc4",
+      "correctionCommit": "78dafcc962ab5e23a55609af70b6a00f9e52b36a",
       "reopenedAt": "2026-08-19",
-      "reopenedCommit": "18044f96a7e254437585204e0fdf2097508ab1d4"
+      "reopenedCommit": "18044f96a7e254437585204e0fdf2097508ab1d4",
+      "correctionEvidence": "R5-A e R5-B registraram corretamente o estado após cada linha e separaram os valores antes/depois de cada atribuição.",
+      "nextRetention": "RET-CS50-000-D1"
     },
     {
       "id": "ERR-CS50-000-002",
-      "status": "open",
+      "status": "corrected",
       "domain": "nested-control-flow",
       "title": "Condição interpretada fora do contexto de execução",
       "source": "LAB-CS50-000 attempt 1",
       "commit": "2f08b6245da9cc4cc6ef73adc055a7ed07986afa",
-      "evidence": "A R4-B finalmente executou corretamente o bloco defeituoso de health, mas a R4-A ainda ficou contraditória: marcou o segundo if como não alcançado e mesmo assim atribuiu output = RED. O fluxo por blocos ainda não está estável.",
+      "evidence": "A R4-B finalmente executou corretamente o bloco defeituoso de health, mas a R4-A ainda ficou contraditória: marcou o segundo if como não alcançado e mesmo assim atribuiu output = RED. O fluxo por blocos ainda não estava estável.",
       "correctionTarget": "R5-A: usar worksheet de breakpoint por linha, registrando se cada linha executou antes de calcular seu efeito.",
       "firstSeen": "2026-08-19",
       "lastSeen": "2026-08-19",
-      "lastCommit": "18044f96a7e254437585204e0fdf2097508ab1d4"
+      "lastCommit": "18044f96a7e254437585204e0fdf2097508ab1d4",
+      "correctedAt": "2026-08-19",
+      "correctionCommit": "78dafcc962ab5e23a55609af70b6a00f9e52b36a",
+      "correctionEvidence": "R5-A executou corretamente os ramos com enabled=true e enabled=false, incluindo o não alcance das linhas internas quando o if externo é falso.",
+      "nextRetention": "RET-CS50-000-D1"
     },
     {
       "id": "ERR-CS50-000-003",
-      "status": "open",
+      "status": "corrected",
       "domain": "state-lifecycle",
       "title": "Escopo de reset parcial versus restart completo ainda não explícito",
       "source": "LAB-CS50-000 attempt 1",
       "commit": "2f08b6245da9cc4cc6ef73adc055a7ed07986afa",
-      "evidence": "Na R4-C, o estado preenchido depois do restart foi exatamente o estado fornecido como 'antes do restart' (points 6, lives 1, speedBug 3, playing), em vez de restaurar points 0, lives 3, speedBug 1 e gameState playing.",
+      "evidence": "Na R4-C, o estado preenchido depois do restart foi exatamente o estado fornecido como antes do restart, em vez de restaurar o estado inicial.",
       "correctionTarget": "R5-C: distinguir estado pré-restart e pós-restart e restaurar literalmente os valores do estado inicial.",
       "firstSeen": "2026-08-19",
       "lastSeen": "2026-08-19",
-      "lastCommit": "18044f96a7e254437585204e0fdf2097508ab1d4"
+      "lastCommit": "18044f96a7e254437585204e0fdf2097508ab1d4",
+      "correctedAt": "2026-08-19",
+      "correctionCommit": "78dafcc962ab5e23a55609af70b6a00f9e52b36a",
+      "correctionEvidence": "R5-C restaurou score=0, lives=2, speed=1 e mode=playing e explicou corretamente a diferença entre estado pré e pós-restart.",
+      "nextRetention": "RET-CS50-000-D1"
     },
     {
       "id": "ERR-CS50-000-004",
@@ -59,7 +69,8 @@
       "firstSeen": "2026-08-19",
       "correctedAt": "2026-08-19",
       "correctionCommit": "fe44f3eee057856a097746ddcffa7697f39a4cc4",
-      "correctionEvidence": "R1-A passou a distinguir repetição por condição e por quantidade definida de repetições."
+      "correctionEvidence": "R1-A passou a distinguir repetição por condição e por quantidade definida de repetições.",
+      "nextRetention": "RET-CS50-000-D1"
     },
     {
       "id": "ERR-CS50-000-005",
@@ -68,12 +79,13 @@
       "title": "Estado inicial do programa não decomposto em variáveis explícitas",
       "source": "LAB-CS50-000 R1",
       "commit": "fe44f3eee057856a097746ddcffa7697f39a4cc4",
-      "evidence": "No Rebuild, ESTADO INICIAL foi preenchido apenas como '0 (false)' e a colisão tiro/bug não explicitou a atualização de pontuação.",
+      "evidence": "No Rebuild, ESTADO INICIAL foi preenchido apenas como 0 (false) e a colisão tiro/bug não explicitou a atualização de pontuação.",
       "correctionTarget": "R2-B: declarar valores iniciais das variáveis relevantes e todas as mudanças produzidas pela colisão.",
       "firstSeen": "2026-08-19",
       "correctedAt": "2026-08-19",
       "correctionCommit": "d6fd21eb13caacf1a38a6c20a94d798b5b03ef8a",
-      "correctionEvidence": "R2-B declarou points, lives, speedBug e gameState e explicitou incremento de pontos e reset de bug/tiro na colisão."
+      "correctionEvidence": "R2-B declarou points, lives, speedBug e gameState e explicitou incremento de pontos e reset de bug/tiro na colisão.",
+      "nextRetention": "RET-CS50-000-D1"
     }
   ]
 }
