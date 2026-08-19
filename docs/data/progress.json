@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-08-19T16:20:00-03:00",
+  "updatedAt": "2026-08-19T16:42:00-03:00",
   "courses": {
     "cs50x": {
       "status": "in-progress",
       "started": true,
       "completed": ["lecture-0","problem-set-0-scratch"],
       "current": "lecture-1",
-      "notes": ["Lecture 0 concluída.","Projeto Scratch Bug vs Developer concluído, validado e submetido via CS50."]
+      "notes": ["Lecture 0 concluída.","Projeto Scratch Bug vs Developer concluído, validado e submetido via CS50.","Baseline LAB-CS50-000 aprovado em 2026-08-19; retenção D+1 agendada para 2026-08-20."]
     },
     "fcc-js-v10": {
       "status": "in-progress",
@@ -21,18 +21,20 @@
   },
   "labs": {
     "LAB-CS50-000": {
-      "status": "correction-required",
-      "attempts": 5,
-      "lastAttempt": "2026-08-19T16:19:55-03:00",
-      "lastCommit": "18044f96a7e254437585204e0fdf2097508ab1d4",
+      "status": "passed-baseline",
+      "attempts": 6,
+      "lastAttempt": "2026-08-19T16:40:16-03:00",
+      "lastCommit": "78dafcc962ab5e23a55609af70b6a00f9e52b36a",
       "lastResult": {
         "recall": "pass",
-        "trace": "correction-required",
+        "trace": "pass",
         "rebuild": "pass",
-        "repair": "partial",
-        "transfer": "correction-required"
+        "repair": "pass",
+        "transfer": "pass"
       },
-      "next": "REV-CS50-000-R5"
+      "retentionStatus": "pending",
+      "next": "RET-CS50-000-D1",
+      "nextDueDate": "2026-08-20"
     }
   }
 }
