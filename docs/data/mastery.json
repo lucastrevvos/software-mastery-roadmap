@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-19T15:39:00-03:00",
+  "updatedAt": "2026-08-19T16:04:00-03:00",
   "scale": {
     "0": "desconhecido/não avaliado",
     "1": "reconhece",
@@ -37,6 +37,15 @@
       "status": "correction-required",
       "dimensions": {"recall":"pass","trace":"pass","rebuild":"pass","repair":"correction-required","transfer":"partial"},
       "next": "REV-CS50-000-R3"
+    },
+    {
+      "lab": "LAB-CS50-000",
+      "attempt": 4,
+      "commit": "0274b283ad29dcd16ea611d6b500d156b2c82606",
+      "date": "2026-08-19",
+      "status": "correction-required",
+      "dimensions": {"recall":"pass","trace":"pass","rebuild":"pass","repair":"correction-required","transfer":"partial"},
+      "next": "REV-CS50-000-R4"
     }
   ],
   "competencies": [
@@ -55,8 +64,8 @@
       "domain": "programming-fundamentals",
       "level": 3,
       "provisional": true,
-      "evidence": ["Uso de pontuação/estado no projeto Scratch","LAB-CS50-000 R2: inicialização explícita corrigida; ciclo de vida de gameState ainda parcial"],
-      "nextGate": "REV-CS50-000-R3"
+      "evidence": ["Uso de pontuação/estado no projeto Scratch","LAB-CS50-000 R3: progressão de points/speedBug e persistência na perda de vida corretas; restart completo ainda não restaurou gameState exatamente ao estado inicial"],
+      "nextGate": "REV-CS50-000-R4"
     },
     {
       "id": "conditionals",
@@ -64,8 +73,8 @@
       "domain": "programming-fundamentals",
       "level": 3,
       "provisional": true,
-      "evidence": ["Condições de vitória/derrota no projeto Scratch","LAB-CS50-000 R2: regra desejada reconhecida, mas execução literal de condição aninhada ainda incorreta"],
-      "nextGate": "REV-CS50-000-R3"
+      "evidence": ["Condições de vitória/derrota no projeto Scratch","LAB-CS50-000 R3: condição foi classificada como verdadeira, mas o bloco interno não foi considerado executado; execução literal ainda precisa de correção"],
+      "nextGate": "REV-CS50-000-R4"
     },
     {
       "id": "loops",
@@ -100,8 +109,8 @@
       "domain": "engineering-practice",
       "level": 3,
       "provisional": true,
-      "evidence": ["Correções de reinício, parada de sprites e conflito de tecla durante Pset 0","LAB-CS50-000 R2: testes desejados corretos, mas tracing do código defeituoso foi feito como se a correção já estivesse aplicada"],
-      "nextGate": "REV-CS50-000-R3"
+      "evidence": ["Correções de reinício, parada de sprites e conflito de tecla durante Pset 0","LAB-CS50-000 R3: ainda mistura comportamento desejado com execução real do código defeituoso; R4 passa a isolar isso em CPU mode"],
+      "nextGate": "REV-CS50-000-R4"
     },
     {
       "id": "javascript-fundamentals",
