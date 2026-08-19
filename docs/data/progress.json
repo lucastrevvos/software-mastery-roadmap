@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-19T16:04:00-03:00",
+  "updatedAt": "2026-08-19T16:20:00-03:00",
   "courses": {
     "cs50x": {
       "status": "in-progress",
@@ -22,17 +22,17 @@
   "labs": {
     "LAB-CS50-000": {
       "status": "correction-required",
-      "attempts": 4,
-      "lastAttempt": "2026-08-19T16:03:54-03:00",
-      "lastCommit": "0274b283ad29dcd16ea611d6b500d156b2c82606",
+      "attempts": 5,
+      "lastAttempt": "2026-08-19T16:19:55-03:00",
+      "lastCommit": "18044f96a7e254437585204e0fdf2097508ab1d4",
       "lastResult": {
         "recall": "pass",
-        "trace": "pass",
+        "trace": "correction-required",
         "rebuild": "pass",
-        "repair": "correction-required",
-        "transfer": "partial"
+        "repair": "partial",
+        "transfer": "correction-required"
       },
-      "next": "REV-CS50-000-R4"
+      "next": "REV-CS50-000-R5"
     }
   }
 }
