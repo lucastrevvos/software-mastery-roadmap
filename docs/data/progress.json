@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-19T04:19:00-03:00",
+  "updatedAt": "2026-08-19T12:34:00-03:00",
   "courses": {
     "cs50x": {
       "status": "in-progress",
@@ -27,5 +27,14 @@
     "foundational-csharp": {"status":"not-started","started":false,"completed":[]},
     "cs50-sql": {"status":"not-started","started":false,"completed":[]},
     "cs50p": {"status":"not-started","started":false,"completed":[]}
+  },
+  "labs": {
+    "LAB-CS50-000": {
+      "status":"correction-required",
+      "attempts":1,
+      "lastAttempt":"2026-08-19T12:34:28-03:00",
+      "lastCommit":"2f08b6245da9cc4cc6ef73adc055a7ed07986afa",
+      "next":"REV-CS50-000-R1"
+    }
   }
 }
