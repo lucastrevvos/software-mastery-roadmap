@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-19T04:19:00-03:00",
+  "updatedAt": "2026-08-19T12:34:00-03:00",
   "scale": {
     "0": "desconhecido/não avaliado",
     "1": "reconhece",
@@ -10,6 +10,23 @@
     "6": "transfere para problema novo",
     "7": "retido após revisões espaçadas"
   },
+  "assessments": [
+    {
+      "lab":"LAB-CS50-000",
+      "attempt":1,
+      "commit":"2f08b6245da9cc4cc6ef73adc055a7ed07986afa",
+      "date":"2026-08-19",
+      "status":"correction-required",
+      "dimensions":{
+        "recall":"partial",
+        "trace":"partial",
+        "rebuild":"pending",
+        "repair":"partial",
+        "transfer":"partial"
+      },
+      "next":"REV-CS50-000-R1"
+    }
+  ],
   "competencies": [
     {
       "id":"computational-thinking",
@@ -17,8 +34,8 @@
       "domain":"programming-fundamentals",
       "level":2,
       "provisional":true,
-      "evidence":["CS50 Lecture 0","Scratch project: Bug vs Developer"],
-      "nextGate":"LAB-CS50-000"
+      "evidence":["CS50 Lecture 0","Scratch project: Bug vs Developer","LAB-CS50-000 attempt 1: Recall parcial; Rebuild pendente"],
+      "nextGate":"REV-CS50-000-R1"
     },
     {
       "id":"variables-state",
@@ -26,8 +43,8 @@
       "domain":"programming-fundamentals",
       "level":3,
       "provisional":true,
-      "evidence":["Uso de pontuação/estado no projeto Scratch"],
-      "nextGate":"LAB-CS50-000"
+      "evidence":["Uso de pontuação/estado no projeto Scratch","LAB-CS50-000 attempt 1: estados principais identificados; ciclo de vida ainda parcial"],
+      "nextGate":"REV-CS50-000-R1"
     },
     {
       "id":"conditionals",
@@ -35,8 +52,8 @@
       "domain":"programming-fundamentals",
       "level":3,
       "provisional":true,
-      "evidence":["Condições de vitória/derrota no projeto Scratch"],
-      "nextGate":"LAB-CS50-000"
+      "evidence":["Condições de vitória/derrota no projeto Scratch","LAB-CS50-000 attempt 1: resultado do trace correto e direção da correção do game over identificada; explicação do fluxo ainda parcial"],
+      "nextGate":"REV-CS50-000-R1"
     },
     {
       "id":"loops",
@@ -44,8 +61,8 @@
       "domain":"programming-fundamentals",
       "level":3,
       "provisional":true,
-      "evidence":["Movimento/repetição de sprites no projeto Scratch"],
-      "nextGate":"LAB-CS50-000"
+      "evidence":["Movimento/repetição de sprites no projeto Scratch","LAB-CS50-000 attempt 1: modelo conceitual de loop precisa generalizar além de condição booleana"],
+      "nextGate":"REV-CS50-000-R1"
     },
     {
       "id":"functions-abstraction",
@@ -53,8 +70,8 @@
       "domain":"programming-fundamentals",
       "level":2,
       "provisional":true,
-      "evidence":["Custom block com input exigido no CS50 Pset 0"],
-      "nextGate":"LAB-CS50-000"
+      "evidence":["Custom block com input exigido no CS50 Pset 0","LAB-CS50-000 attempt 1: reutilização reconhecida; abstração ainda precisa ser explicada como simplificação/encapsulamento de complexidade"],
+      "nextGate":"REV-CS50-000-R1"
     },
     {
       "id":"events-flow",
@@ -62,8 +79,8 @@
       "domain":"programming-fundamentals",
       "level":3,
       "provisional":true,
-      "evidence":["Eventos de teclado, restart e game state no Scratch"],
-      "nextGate":"LAB-CS50-000"
+      "evidence":["Eventos de teclado, restart e game state no Scratch","LAB-CS50-000 attempt 1: distinção evento versus ação ainda imprecisa"],
+      "nextGate":"REV-CS50-000-R1"
     },
     {
       "id":"debugging-basics",
@@ -71,8 +88,8 @@
       "domain":"engineering-practice",
       "level":3,
       "provisional":true,
-      "evidence":["Correções de reinício, parada de sprites e conflito de tecla durante Pset 0"],
-      "nextGate":"LAB-CS50-000"
+      "evidence":["Correções de reinício, parada de sprites e conflito de tecla durante Pset 0","LAB-CS50-000 attempt 1: direção da condição de game over detectada; teste e simulação do fluxo ainda pendentes"],
+      "nextGate":"REV-CS50-000-R1"
     },
     {
       "id":"javascript-fundamentals",
