@@ -1,54 +1,75 @@
 {
-  "updatedAt": "2026-08-19T12:34:00-03:00",
+  "updatedAt": "2026-08-19T13:29:00-03:00",
   "statuses": {
-    "open":"erro/vazamento identificado",
-    "corrected":"corrigido em nova tentativa",
-    "retained":"permaneceu corrigido em revisão espaçada"
+    "open": "erro/vazamento identificado",
+    "corrected": "corrigido em nova tentativa",
+    "retained": "permaneceu corrigido em revisão espaçada"
   },
   "errors": [
     {
-      "id":"ERR-CS50-000-001",
-      "status":"open",
-      "domain":"control-flow-tracing",
-      "title":"Confusão entre estado de entrada e estado de saída da iteração",
-      "source":"LAB-CS50-000 attempt 1",
-      "commit":"2f08b6245da9cc4cc6ef73adc055a7ed07986afa",
-      "evidence":"A sequência 1,2,4,6 foi prevista corretamente, mas a explicação afirmou que score já era 4 antes do if da terceira iteração.",
-      "correctionTarget":"R1-B: traçar explicitamente estado no início e no fim de cada iteração.",
-      "firstSeen":"2026-08-19"
+      "id": "ERR-CS50-000-001",
+      "status": "corrected",
+      "domain": "control-flow-tracing",
+      "title": "Confusão entre estado de entrada e estado de saída da iteração",
+      "source": "LAB-CS50-000 attempt 1",
+      "commit": "2f08b6245da9cc4cc6ef73adc055a7ed07986afa",
+      "evidence": "A sequência 1,2,4,6 foi prevista corretamente, mas a explicação afirmou que score já era 4 antes do if da terceira iteração.",
+      "correctionTarget": "R1-B: traçar explicitamente estado no início e no fim de cada iteração.",
+      "firstSeen": "2026-08-19",
+      "correctedAt": "2026-08-19",
+      "correctionCommit": "fe44f3eee057856a097746ddcffa7697f39a4cc4",
+      "correctionEvidence": "R1-B registrou corretamente início/fim de cada iteração e identificou score = 2 antes do if da terceira iteração."
     },
     {
-      "id":"ERR-CS50-000-002",
-      "status":"open",
-      "domain":"nested-control-flow",
-      "title":"Condição interpretada fora do contexto de execução",
-      "source":"LAB-CS50-000 attempt 1",
-      "commit":"2f08b6245da9cc4cc6ef73adc055a7ed07986afa",
-      "evidence":"No Repair, o game over foi descrito como ocorrendo ao iniciar, ignorando que a verificação está aninhada após bug touches server.",
-      "correctionTarget":"R1-D: simular o fluxo linha a linha e criar um caso de teste Given/When/Then.",
-      "firstSeen":"2026-08-19"
+      "id": "ERR-CS50-000-002",
+      "status": "open",
+      "domain": "nested-control-flow",
+      "title": "Condição interpretada fora do contexto de execução",
+      "source": "LAB-CS50-000 attempt 1",
+      "commit": "2f08b6245da9cc4cc6ef73adc055a7ed07986afa",
+      "evidence": "Na R1, a resposta afirmou que lives nunca é subtraído nas colisões, embora o código execute lives = lives - 1 dentro do ramo bug touches server. A simulação linha a linha solicitada também não foi realizada.",
+      "correctionTarget": "R2-A: executar o código original linha a linha antes de propor qualquer correção e criar casos de teste observáveis.",
+      "firstSeen": "2026-08-19",
+      "lastSeen": "2026-08-19",
+      "lastCommit": "fe44f3eee057856a097746ddcffa7697f39a4cc4"
     },
     {
-      "id":"ERR-CS50-000-003",
-      "status":"open",
-      "domain":"state-lifecycle",
-      "title":"Escopo de reset parcial versus restart completo ainda não explícito",
-      "source":"LAB-CS50-000 attempt 1",
-      "commit":"2f08b6245da9cc4cc6ef73adc055a7ed07986afa",
-      "evidence":"Foram identificadas variáveis de estado, mas perder uma vida e reiniciar o jogo não foram separados em transições com regras distintas de manutenção/reset.",
-      "correctionTarget":"R1-E: modelar mudanças de estado por evento em tabela.",
-      "firstSeen":"2026-08-19"
+      "id": "ERR-CS50-000-003",
+      "status": "open",
+      "domain": "state-lifecycle",
+      "title": "Escopo de reset parcial versus restart completo ainda não explícito",
+      "source": "LAB-CS50-000 attempt 1",
+      "commit": "2f08b6245da9cc4cc6ef73adc055a7ed07986afa",
+      "evidence": "Na R1, a tabela marcou speedBug como mudando em qualquer bug eliminado, sem representar a regra de mudança a cada 3 eliminações, e não explicitou completamente o estado de gameState no restart.",
+      "correctionTarget": "R2-C: modelar as transições #1, #2 e #3 separadamente e distinguir persistência ao perder vida de reset completo.",
+      "firstSeen": "2026-08-19",
+      "lastSeen": "2026-08-19",
+      "lastCommit": "fe44f3eee057856a097746ddcffa7697f39a4cc4"
     },
     {
-      "id":"ERR-CS50-000-004",
-      "status":"open",
-      "domain":"loops",
-      "title":"Modelo de loop restrito a repetição controlada por verdadeiro/falso",
-      "source":"LAB-CS50-000 attempt 1",
-      "commit":"2f08b6245da9cc4cc6ef73adc055a7ed07986afa",
-      "evidence":"A definição dada não cobre adequadamente loops de contagem como repeat 4 times.",
-      "correctionTarget":"R1-A: formular um modelo geral de repetição e regra de parada.",
-      "firstSeen":"2026-08-19"
+      "id": "ERR-CS50-000-004",
+      "status": "corrected",
+      "domain": "loops",
+      "title": "Modelo de loop restrito a repetição controlada por verdadeiro/falso",
+      "source": "LAB-CS50-000 attempt 1",
+      "commit": "2f08b6245da9cc4cc6ef73adc055a7ed07986afa",
+      "evidence": "A definição dada não cobria adequadamente loops de contagem como repeat 4 times.",
+      "correctionTarget": "R1-A: formular um modelo geral de repetição e regra de parada.",
+      "firstSeen": "2026-08-19",
+      "correctedAt": "2026-08-19",
+      "correctionCommit": "fe44f3eee057856a097746ddcffa7697f39a4cc4",
+      "correctionEvidence": "R1-A passou a distinguir repetição por condição e por quantidade definida de repetições."
+    },
+    {
+      "id": "ERR-CS50-000-005",
+      "status": "open",
+      "domain": "state-initialization",
+      "title": "Estado inicial do programa não decomposto em variáveis explícitas",
+      "source": "LAB-CS50-000 R1",
+      "commit": "fe44f3eee057856a097746ddcffa7697f39a4cc4",
+      "evidence": "No Rebuild, ESTADO INICIAL foi preenchido apenas como '0 (false)' e a colisão tiro/bug não explicitou a atualização de pontuação.",
+      "correctionTarget": "R2-B: declarar valores iniciais das variáveis relevantes e todas as mudanças produzidas pela colisão.",
+      "firstSeen": "2026-08-19"
     }
   ]
 }
