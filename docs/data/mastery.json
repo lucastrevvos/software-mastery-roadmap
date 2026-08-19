@@ -1,0 +1,87 @@
+{
+  "updatedAt": "2026-08-19T04:19:00-03:00",
+  "scale": {
+    "0": "desconhecido/não avaliado",
+    "1": "reconhece",
+    "2": "explica",
+    "3": "executa com ajuda",
+    "4": "executa sozinho",
+    "5": "depura",
+    "6": "transfere para problema novo",
+    "7": "retido após revisões espaçadas"
+  },
+  "competencies": [
+    {
+      "id":"computational-thinking",
+      "title":"Pensamento computacional e decomposição",
+      "domain":"programming-fundamentals",
+      "level":2,
+      "provisional":true,
+      "evidence":["CS50 Lecture 0","Scratch project: Bug vs Developer"],
+      "nextGate":"LAB-CS50-000"
+    },
+    {
+      "id":"variables-state",
+      "title":"Variáveis e estado",
+      "domain":"programming-fundamentals",
+      "level":3,
+      "provisional":true,
+      "evidence":["Uso de pontuação/estado no projeto Scratch"],
+      "nextGate":"LAB-CS50-000"
+    },
+    {
+      "id":"conditionals",
+      "title":"Condicionais",
+      "domain":"programming-fundamentals",
+      "level":3,
+      "provisional":true,
+      "evidence":["Condições de vitória/derrota no projeto Scratch"],
+      "nextGate":"LAB-CS50-000"
+    },
+    {
+      "id":"loops",
+      "title":"Loops e repetição",
+      "domain":"programming-fundamentals",
+      "level":3,
+      "provisional":true,
+      "evidence":["Movimento/repetição de sprites no projeto Scratch"],
+      "nextGate":"LAB-CS50-000"
+    },
+    {
+      "id":"functions-abstraction",
+      "title":"Funções, blocos e abstração",
+      "domain":"programming-fundamentals",
+      "level":2,
+      "provisional":true,
+      "evidence":["Custom block com input exigido no CS50 Pset 0"],
+      "nextGate":"LAB-CS50-000"
+    },
+    {
+      "id":"events-flow",
+      "title":"Eventos e fluxo de execução",
+      "domain":"programming-fundamentals",
+      "level":3,
+      "provisional":true,
+      "evidence":["Eventos de teclado, restart e game state no Scratch"],
+      "nextGate":"LAB-CS50-000"
+    },
+    {
+      "id":"debugging-basics",
+      "title":"Debugging básico",
+      "domain":"engineering-practice",
+      "level":3,
+      "provisional":true,
+      "evidence":["Correções de reinício, parada de sprites e conflito de tecla durante Pset 0"],
+      "nextGate":"LAB-CS50-000"
+    },
+    {
+      "id":"javascript-fundamentals",
+      "title":"JavaScript fundamentals",
+      "domain":"javascript",
+      "level":0,
+      "provisional":true,
+      "evidence":["freeCodeCamp JavaScript em andamento; seção atual ainda não informada"],
+      "nextGate":null
+    }
+  ]
+}
