@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-19T16:04:00-03:00",
+  "updatedAt": "2026-08-19T16:20:00-03:00",
   "policy": {
     "defaultIntervalsDays": [1, 3, 7, 14, 30, 60],
     "note": "Os intervalos são um protocolo operacional inicial e podem ser ajustados pelo desempenho real."
@@ -14,8 +14,8 @@
       "lab": "LAB-CS50-000",
       "attemptedAt": "2026-08-19T12:34:28-03:00",
       "attemptCommit": "2f08b6245da9cc4cc6ef73adc055a7ed07986afa",
-      "lastCorrectionAt": "2026-08-19T16:03:54-03:00",
-      "lastCorrectionCommit": "0274b283ad29dcd16ea611d6b500d156b2c82606",
+      "lastCorrectionAt": "2026-08-19T16:19:55-03:00",
+      "lastCorrectionCommit": "18044f96a7e254437585204e0fdf2097508ab1d4",
       "targets": ["computational-thinking","variables-state","conditionals","loops","functions-abstraction","events-flow","debugging-basics"]
     },
     {
@@ -65,11 +65,25 @@
       "id": "REV-CS50-000-R4",
       "source": "LAB-CS50-000 R3",
       "type": "cpu-mode-retest",
+      "status": "completed",
+      "outcome": "partial-correction",
+      "dueDate": "2026-08-19",
+      "completedAt": "2026-08-19T16:19:55-03:00",
+      "attemptCommit": "18044f96a7e254437585204e0fdf2097508ab1d4",
+      "lab": "LAB-CS50-000",
+      "reviewFile": "labs/cs50/week-00/LAB-CS50-000/REVIEW-04.md",
+      "improvedTargets": ["nested-control-flow"],
+      "remainingTargets": ["control-flow-tracing","nested-control-flow","state-lifecycle","debugging-basics"]
+    },
+    {
+      "id": "REV-CS50-000-R5",
+      "source": "LAB-CS50-000 R4",
+      "type": "guided-line-execution",
       "status": "due",
       "dueDate": "2026-08-19",
       "lab": "LAB-CS50-000",
-      "reviewFile": "labs/cs50/week-00/LAB-CS50-000/REVIEW-04.md",
-      "targets": ["nested-control-flow","state-lifecycle","debugging-basics"]
+      "reviewFile": "labs/cs50/week-00/LAB-CS50-000/REVIEW-05.md",
+      "targets": ["control-flow-tracing","nested-control-flow","state-lifecycle","debugging-basics"]
     }
   ]
 }

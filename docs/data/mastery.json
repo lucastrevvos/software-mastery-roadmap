@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-19T16:04:00-03:00",
+  "updatedAt": "2026-08-19T16:20:00-03:00",
   "scale": {
     "0": "desconhecido/não avaliado",
     "1": "reconhece",
@@ -46,6 +46,15 @@
       "status": "correction-required",
       "dimensions": {"recall":"pass","trace":"pass","rebuild":"pass","repair":"correction-required","transfer":"partial"},
       "next": "REV-CS50-000-R4"
+    },
+    {
+      "lab": "LAB-CS50-000",
+      "attempt": 5,
+      "commit": "18044f96a7e254437585204e0fdf2097508ab1d4",
+      "date": "2026-08-19",
+      "status": "correction-required",
+      "dimensions": {"recall":"pass","trace":"correction-required","rebuild":"pass","repair":"partial","transfer":"correction-required"},
+      "next": "REV-CS50-000-R5"
     }
   ],
   "competencies": [
@@ -64,8 +73,8 @@
       "domain": "programming-fundamentals",
       "level": 3,
       "provisional": true,
-      "evidence": ["Uso de pontuação/estado no projeto Scratch","LAB-CS50-000 R3: progressão de points/speedBug e persistência na perda de vida corretas; restart completo ainda não restaurou gameState exatamente ao estado inicial"],
-      "nextGate": "REV-CS50-000-R4"
+      "evidence": ["Uso de pontuação/estado no projeto Scratch","LAB-CS50-000 R4: regra de health foi executada corretamente, mas o exemplo neutro aplicou a mutação antes da linha de atribuição e o restart não restaurou o estado inicial"],
+      "nextGate": "REV-CS50-000-R5"
     },
     {
       "id": "conditionals",
@@ -73,8 +82,8 @@
       "domain": "programming-fundamentals",
       "level": 3,
       "provisional": true,
-      "evidence": ["Condições de vitória/derrota no projeto Scratch","LAB-CS50-000 R3: condição foi classificada como verdadeira, mas o bloco interno não foi considerado executado; execução literal ainda precisa de correção"],
-      "nextGate": "REV-CS50-000-R4"
+      "evidence": ["Condições de vitória/derrota no projeto Scratch","LAB-CS50-000 R4-B: health > 0 foi reconhecido como verdadeiro e game over como executado; R4-A ainda apresentou contradição de fluxo no bloco interno"],
+      "nextGate": "REV-CS50-000-R5"
     },
     {
       "id": "loops",
@@ -109,8 +118,8 @@
       "domain": "engineering-practice",
       "level": 3,
       "provisional": true,
-      "evidence": ["Correções de reinício, parada de sprites e conflito de tecla durante Pset 0","LAB-CS50-000 R3: ainda mistura comportamento desejado com execução real do código defeituoso; R4 passa a isolar isso em CPU mode"],
-      "nextGate": "REV-CS50-000-R4"
+      "evidence": ["Correções de reinício, parada de sprites e conflito de tecla durante Pset 0","LAB-CS50-000 R4: houve avanço no tracing do código de health, mas a execução por linha ainda precisa estabilizar estado antes/depois e alcance de blocos"],
+      "nextGate": "REV-CS50-000-R5"
     },
     {
       "id": "javascript-fundamentals",
