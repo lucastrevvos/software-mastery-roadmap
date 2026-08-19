@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-19T15:39:00-03:00",
+  "updatedAt": "2026-08-19T16:04:00-03:00",
   "statuses": {
     "open": "erro/vazamento identificado",
     "corrected": "corrigido em nova tentativa",
@@ -27,11 +27,11 @@
       "title": "Condição interpretada fora do contexto de execução",
       "source": "LAB-CS50-000 attempt 1",
       "commit": "2f08b6245da9cc4cc6ef73adc055a7ed07986afa",
-      "evidence": "Na R2, a tabela marcou game over = não após a 1ª e 2ª colisões mesmo com lives >= 0 = verdadeiro. Também avaliou a condição interna em momentos sem colisão, embora ela esteja dentro do bloco externo. Isso mostra mistura entre comportamento desejado e execução literal do código atual.",
-      "correctionTarget": "R3-A: separar explicitamente comportamento real do código e comportamento desejado usando um exemplo novo.",
+      "evidence": "Na R3, sem ataque a condição interna health > 0 foi marcada como avaliada mesmo estando dentro do if externo; com o primeiro ataque, health > 0 foi reconhecido como verdadeiro mas game over foi marcado como não executado. A resposta sobre comportamento real foi 'nunca', mostrando que a regra desejada ainda substitui mentalmente o código atual durante o tracing.",
+      "correctionTarget": "R4-A/R4-B: executar primeiro um exemplo neutro em CPU mode e só depois traduzir para o código de vidas.",
       "firstSeen": "2026-08-19",
       "lastSeen": "2026-08-19",
-      "lastCommit": "d6fd21eb13caacf1a38a6c20a94d798b5b03ef8a"
+      "lastCommit": "0274b283ad29dcd16ea611d6b500d156b2c82606"
     },
     {
       "id": "ERR-CS50-000-003",
@@ -40,11 +40,11 @@
       "title": "Escopo de reset parcial versus restart completo ainda não explícito",
       "source": "LAB-CS50-000 attempt 1",
       "commit": "2f08b6245da9cc4cc6ef73adc055a7ed07986afa",
-      "evidence": "A R2 corrigiu a regra de speedBug para a cada 3 eliminações e preservou points/speedBug ao perder vida, mas gameState mudou de 0 para 1 após a primeira eliminação sem regra que justificasse essa transição.",
-      "correctionTarget": "R3-B: modelar gameState com valores semânticos e mudar estado apenas quando uma regra de vitória/derrota/restart exigir.",
+      "evidence": "A R3 manteve gameState como playing nas eliminações e na perda de vida e aplicou corretamente a progressão de speedBug. No restart completo, porém, gameState foi colocado como 0 em vez de retornar exatamente ao valor inicial 'playing'.",
+      "correctionTarget": "R4-C: restaurar literalmente cada variável ao valor do estado inicial e explicar a invariância do restart completo.",
       "firstSeen": "2026-08-19",
       "lastSeen": "2026-08-19",
-      "lastCommit": "d6fd21eb13caacf1a38a6c20a94d798b5b03ef8a"
+      "lastCommit": "0274b283ad29dcd16ea611d6b500d156b2c82606"
     },
     {
       "id": "ERR-CS50-000-004",
