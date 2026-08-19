@@ -1,0 +1,9 @@
+{
+  "updatedAt": "2026-08-19T04:19:00-03:00",
+  "statuses": {
+    "open":"erro/vazamento identificado",
+    "corrected":"corrigido em nova tentativa",
+    "retained":"permaneceu corrigido em revisão espaçada"
+  },
+  "errors": []
+}
