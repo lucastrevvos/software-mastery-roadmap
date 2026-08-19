@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-19T13:29:00-03:00",
+  "updatedAt": "2026-08-19T15:39:00-03:00",
   "statuses": {
     "open": "erro/vazamento identificado",
     "corrected": "corrigido em nova tentativa",
@@ -27,11 +27,11 @@
       "title": "Condição interpretada fora do contexto de execução",
       "source": "LAB-CS50-000 attempt 1",
       "commit": "2f08b6245da9cc4cc6ef73adc055a7ed07986afa",
-      "evidence": "Na R1, a resposta afirmou que lives nunca é subtraído nas colisões, embora o código execute lives = lives - 1 dentro do ramo bug touches server. A simulação linha a linha solicitada também não foi realizada.",
-      "correctionTarget": "R2-A: executar o código original linha a linha antes de propor qualquer correção e criar casos de teste observáveis.",
+      "evidence": "Na R2, a tabela marcou game over = não após a 1ª e 2ª colisões mesmo com lives >= 0 = verdadeiro. Também avaliou a condição interna em momentos sem colisão, embora ela esteja dentro do bloco externo. Isso mostra mistura entre comportamento desejado e execução literal do código atual.",
+      "correctionTarget": "R3-A: separar explicitamente comportamento real do código e comportamento desejado usando um exemplo novo.",
       "firstSeen": "2026-08-19",
       "lastSeen": "2026-08-19",
-      "lastCommit": "fe44f3eee057856a097746ddcffa7697f39a4cc4"
+      "lastCommit": "d6fd21eb13caacf1a38a6c20a94d798b5b03ef8a"
     },
     {
       "id": "ERR-CS50-000-003",
@@ -40,11 +40,11 @@
       "title": "Escopo de reset parcial versus restart completo ainda não explícito",
       "source": "LAB-CS50-000 attempt 1",
       "commit": "2f08b6245da9cc4cc6ef73adc055a7ed07986afa",
-      "evidence": "Na R1, a tabela marcou speedBug como mudando em qualquer bug eliminado, sem representar a regra de mudança a cada 3 eliminações, e não explicitou completamente o estado de gameState no restart.",
-      "correctionTarget": "R2-C: modelar as transições #1, #2 e #3 separadamente e distinguir persistência ao perder vida de reset completo.",
+      "evidence": "A R2 corrigiu a regra de speedBug para a cada 3 eliminações e preservou points/speedBug ao perder vida, mas gameState mudou de 0 para 1 após a primeira eliminação sem regra que justificasse essa transição.",
+      "correctionTarget": "R3-B: modelar gameState com valores semânticos e mudar estado apenas quando uma regra de vitória/derrota/restart exigir.",
       "firstSeen": "2026-08-19",
       "lastSeen": "2026-08-19",
-      "lastCommit": "fe44f3eee057856a097746ddcffa7697f39a4cc4"
+      "lastCommit": "d6fd21eb13caacf1a38a6c20a94d798b5b03ef8a"
     },
     {
       "id": "ERR-CS50-000-004",
@@ -62,14 +62,17 @@
     },
     {
       "id": "ERR-CS50-000-005",
-      "status": "open",
+      "status": "corrected",
       "domain": "state-initialization",
       "title": "Estado inicial do programa não decomposto em variáveis explícitas",
       "source": "LAB-CS50-000 R1",
       "commit": "fe44f3eee057856a097746ddcffa7697f39a4cc4",
       "evidence": "No Rebuild, ESTADO INICIAL foi preenchido apenas como '0 (false)' e a colisão tiro/bug não explicitou a atualização de pontuação.",
       "correctionTarget": "R2-B: declarar valores iniciais das variáveis relevantes e todas as mudanças produzidas pela colisão.",
-      "firstSeen": "2026-08-19"
+      "firstSeen": "2026-08-19",
+      "correctedAt": "2026-08-19",
+      "correctionCommit": "d6fd21eb13caacf1a38a6c20a94d798b5b03ef8a",
+      "correctionEvidence": "R2-B declarou points, lives, speedBug e gameState e explicitou incremento de pontos e reset de bug/tiro na colisão."
     }
   ]
 }
