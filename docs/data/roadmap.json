@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "title": "Full Stack Software Architect & Cloud Engineer",
+    "version": "1.0.0",
+    "updatedAt": "2026-08-19",
+    "principles": [
+      "Fundamentos fortes antes de especialização",
+      "Priorizar certificados oficiais e verificáveis",
+      "Priorizar opções gratuitas",
+      "Curso concluído não implica domínio",
+      "Projetos e Mastery Gates comprovam habilidade prática"
+    ]
+  },
+  "phases": [
+    {
+      "id": "phase-01",
+      "title": "Fundamentos Certificados",
+      "goal": "Construir base sólida de ciência da computação, programação, JavaScript, C#, SQL e Python com credenciais fortes.",
+      "items": [
+        {"id":"cs50x","order":1,"title":"CS50x","provider":"Harvard University","credential":"CS50 Certificate","cost":"free","status":"in-progress","priority":"core"},
+        {"id":"foundational-csharp","order":2,"title":"Foundational C# with Microsoft","provider":"Microsoft + freeCodeCamp","credential":"Foundational C# Certification","cost":"free","status":"not-started","priority":"core"},
+        {"id":"fcc-js-v10","order":3,"title":"JavaScript Certification","provider":"freeCodeCamp","credential":"JavaScript Certification","cost":"free","status":"in-progress","priority":"core"},
+        {"id":"cs50-sql","order":4,"title":"CS50's Introduction to Databases with SQL","provider":"Harvard University","credential":"CS50 Certificate","cost":"free","status":"not-started","priority":"core"},
+        {"id":"cs50p","order":5,"title":"CS50's Introduction to Programming with Python","provider":"Harvard University","credential":"CS50 Certificate","cost":"free","status":"not-started","priority":"core"}
+      ]
+    },
+    {
+      "id": "phase-02",
+      "title": "Full Stack Moderno",
+      "goal": "Consolidar desenvolvimento web moderno, APIs, testes, containers e integração ponta a ponta.",
+      "items": [
+        {"id":"full-stack-open-core","order":6,"title":"Full Stack Open — Core 0–7","provider":"University of Helsinki","credential":"University certificate / ECTS where applicable","cost":"free","status":"not-started","priority":"core"},
+        {"id":"full-stack-open-extensions","order":7,"title":"Full Stack Open — extensões relevantes","provider":"University of Helsinki","credential":"University certificate / ECTS where applicable","cost":"free","status":"not-started","priority":"recommended"},
+        {"id":"angular-advanced","order":8,"title":"Angular avançado + SSR/SSG","provider":"Mastery Lab","credential":"Internal Mastery Gate","cost":"free","status":"not-started","priority":"stack"},
+        {"id":"dotnet-backend","order":9,"title":".NET/C# Backend Engineering","provider":"Microsoft Learn + Mastery Lab","credential":"Applied portfolio + badges where available","cost":"free","status":"not-started","priority":"stack"}
+      ]
+    },
+    {
+      "id": "phase-03",
+      "title": "Web, IA e Segurança",
+      "goal": "Expandir para aplicações web avançadas, inteligência artificial e fundamentos modernos de segurança.",
+      "items": [
+        {"id":"cs50-web","order":10,"title":"CS50's Web Programming with Python and JavaScript","provider":"Harvard University","credential":"CS50 Certificate","cost":"free","status":"not-started","priority":"recommended"},
+        {"id":"cs50-ai","order":11,"title":"CS50's Introduction to Artificial Intelligence with Python","provider":"Harvard University","credential":"CS50 Certificate","cost":"free","status":"not-started","priority":"core"},
+        {"id":"cs50-cyber","order":12,"title":"CS50's Introduction to Cybersecurity","provider":"Harvard University","credential":"CS50 Certificate","cost":"free","status":"not-started","priority":"core"},
+        {"id":"python-ai-engineering","order":13,"title":"Python para Engenharia de IA","provider":"Mastery Lab","credential":"Portfolio + Mastery Gate","cost":"free","status":"not-started","priority":"stack"}
+      ]
+    },
+    {
+      "id": "phase-04",
+      "title": "Cloud Engineer",
+      "goal": "Dominar fundamentos cloud, deploy, observabilidade, segurança e serviços gerenciados em provedores relevantes.",
+      "items": [
+        {"id":"azure-foundations","order":14,"title":"Azure Fundamentals","provider":"Microsoft Learn","credential":"AZ-900 when strategically justified","cost":"mixed","status":"not-started","priority":"core"},
+        {"id":"azure-developer","order":15,"title":"Azure Developer","provider":"Microsoft Learn","credential":"AZ-204 when strategically justified","cost":"paid-voucher-target","status":"not-started","priority":"core"},
+        {"id":"aws-foundations","order":16,"title":"AWS Cloud Foundations","provider":"AWS Educate / Skill Builder","credential":"AWS badges; paid exam only with strong ROI/voucher","cost":"mixed","status":"not-started","priority":"core"},
+        {"id":"oci-foundations","order":17,"title":"OCI Foundations","provider":"Oracle University","credential":"Oracle/OCI credential where available","cost":"free-first","status":"not-started","priority":"recommended"}
+      ]
+    },
+    {
+      "id": "phase-05",
+      "title": "Software Architecture",
+      "goal": "Evoluir de implementador para arquiteto capaz de modelar sistemas distribuídos, integrações e decisões técnicas.",
+      "items": [
+        {"id":"architecture-foundations","order":18,"title":"Architecture Foundations","provider":"Mastery Lab","credential":"Architecture Mastery Gate","cost":"free","status":"not-started","priority":"core"},
+        {"id":"ddd-clean-hexagonal","order":19,"title":"DDD, Clean Architecture e Hexagonal","provider":"Mastery Lab","credential":"Applied architecture project","cost":"free","status":"not-started","priority":"core"},
+        {"id":"distributed-systems","order":20,"title":"Distributed Systems, Messaging & Resilience","provider":"Mastery Lab","credential":"Applied architecture project","cost":"free","status":"not-started","priority":"core"},
+        {"id":"observability-platform","order":21,"title":"Observability, CI/CD, Containers & Platform Engineering","provider":"Mastery Lab + cloud providers","credential":"Portfolio + provider badges","cost":"free-first","status":"not-started","priority":"core"}
+      ]
+    },
+    {
+      "id": "phase-06",
+      "title": "AI-Native Software Architect",
+      "goal": "Projetar sistemas modernos com LLMs, RAG, agentes, avaliação, segurança e LLMOps sem abandonar fundamentos de engenharia.",
+      "items": [
+        {"id":"llm-apps","order":22,"title":"LLM Application Engineering","provider":"Mastery Lab","credential":"AI application portfolio","cost":"free-first","status":"not-started","priority":"core"},
+        {"id":"rag-agents","order":23,"title":"RAG, Agents & Tool Use","provider":"Mastery Lab","credential":"AI systems Mastery Gate","cost":"free-first","status":"not-started","priority":"core"},
+        {"id":"llmops","order":24,"title":"Evaluation, LLMOps, Safety & Observability","provider":"Mastery Lab","credential":"Production AI architecture project","cost":"free-first","status":"not-started","priority":"core"}
+      ]
+    },
+    {
+      "id": "phase-07",
+      "title": "Capstone Architect",
+      "goal": "Integrar software, frontend, backend, cloud, dados, segurança e IA em sistemas de portfólio com documentação arquitetural profissional.",
+      "items": [
+        {"id":"capstone-system","order":25,"title":"Capstone Full Stack + Cloud + AI","provider":"Programming Mastery Lab","credential":"Final Mastery Gate + public portfolio","cost":"free-first","status":"not-started","priority":"capstone"},
+        {"id":"architecture-defense","order":26,"title":"Architecture Defense","provider":"Programming Mastery Lab","credential":"Oral/written architecture defense","cost":"free","status":"not-started","priority":"capstone"}
+      ]
+    }
+  ]
+}
