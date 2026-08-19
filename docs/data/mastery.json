@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-19T13:29:00-03:00",
+  "updatedAt": "2026-08-19T15:39:00-03:00",
   "scale": {
     "0": "desconhecido/não avaliado",
     "1": "reconhece",
@@ -17,13 +17,7 @@
       "commit": "2f08b6245da9cc4cc6ef73adc055a7ed07986afa",
       "date": "2026-08-19",
       "status": "correction-required",
-      "dimensions": {
-        "recall": "partial",
-        "trace": "partial",
-        "rebuild": "pending",
-        "repair": "partial",
-        "transfer": "partial"
-      },
+      "dimensions": {"recall":"partial","trace":"partial","rebuild":"pending","repair":"partial","transfer":"partial"},
       "next": "REV-CS50-000-R1"
     },
     {
@@ -32,14 +26,17 @@
       "commit": "fe44f3eee057856a097746ddcffa7697f39a4cc4",
       "date": "2026-08-19",
       "status": "correction-required",
-      "dimensions": {
-        "recall": "pass",
-        "trace": "pass",
-        "rebuild": "partial",
-        "repair": "correction-required",
-        "transfer": "partial"
-      },
+      "dimensions": {"recall":"pass","trace":"pass","rebuild":"partial","repair":"correction-required","transfer":"partial"},
       "next": "REV-CS50-000-R2"
+    },
+    {
+      "lab": "LAB-CS50-000",
+      "attempt": 3,
+      "commit": "d6fd21eb13caacf1a38a6c20a94d798b5b03ef8a",
+      "date": "2026-08-19",
+      "status": "correction-required",
+      "dimensions": {"recall":"pass","trace":"pass","rebuild":"pass","repair":"correction-required","transfer":"partial"},
+      "next": "REV-CS50-000-R3"
     }
   ],
   "competencies": [
@@ -49,12 +46,8 @@
       "domain": "programming-fundamentals",
       "level": 3,
       "provisional": true,
-      "evidence": [
-        "CS50 Lecture 0",
-        "Scratch project: Bug vs Developer",
-        "LAB-CS50-000 R1: estrutura de fluxo reconstruída com ajuda; estado inicial e pontuação ainda incompletos"
-      ],
-      "nextGate": "REV-CS50-000-R2"
+      "evidence": ["CS50 Lecture 0","Scratch project: Bug vs Developer","LAB-CS50-000 R2: estado inicial e transições de colisão reconstruídos corretamente com scaffolding"],
+      "nextGate": "RET-CS50-000-D1"
     },
     {
       "id": "variables-state",
@@ -62,11 +55,8 @@
       "domain": "programming-fundamentals",
       "level": 3,
       "provisional": true,
-      "evidence": [
-        "Uso de pontuação/estado no projeto Scratch",
-        "LAB-CS50-000 R1: estados principais reconhecidos; ciclo de vida e inicialização ainda parciais"
-      ],
-      "nextGate": "REV-CS50-000-R2"
+      "evidence": ["Uso de pontuação/estado no projeto Scratch","LAB-CS50-000 R2: inicialização explícita corrigida; ciclo de vida de gameState ainda parcial"],
+      "nextGate": "REV-CS50-000-R3"
     },
     {
       "id": "conditionals",
@@ -74,11 +64,8 @@
       "domain": "programming-fundamentals",
       "level": 3,
       "provisional": true,
-      "evidence": [
-        "Condições de vitória/derrota no projeto Scratch",
-        "LAB-CS50-000 R1: tracing corrigido; Repair ainda mostra leitura incorreta do fluxo aninhado"
-      ],
-      "nextGate": "REV-CS50-000-R2"
+      "evidence": ["Condições de vitória/derrota no projeto Scratch","LAB-CS50-000 R2: regra desejada reconhecida, mas execução literal de condição aninhada ainda incorreta"],
+      "nextGate": "REV-CS50-000-R3"
     },
     {
       "id": "loops",
@@ -86,10 +73,7 @@
       "domain": "programming-fundamentals",
       "level": 3,
       "provisional": true,
-      "evidence": [
-        "Movimento/repetição de sprites no projeto Scratch",
-        "LAB-CS50-000 R1: modelo corrigido para repetição por contagem ou condição"
-      ],
+      "evidence": ["Movimento/repetição de sprites no projeto Scratch","LAB-CS50-000 R1: modelo corrigido para repetição por contagem ou condição"],
       "nextGate": "RET-CS50-000-D1"
     },
     {
@@ -98,10 +82,7 @@
       "domain": "programming-fundamentals",
       "level": 2,
       "provisional": true,
-      "evidence": [
-        "Custom block com input exigido no CS50 Pset 0",
-        "LAB-CS50-000 R1: abstração explicada por encapsulamento/reuso e parametrização"
-      ],
+      "evidence": ["Custom block com input exigido no CS50 Pset 0","LAB-CS50-000 R1: abstração explicada por encapsulamento/reuso e parametrização"],
       "nextGate": "RET-CS50-000-D1"
     },
     {
@@ -110,10 +91,7 @@
       "domain": "programming-fundamentals",
       "level": 3,
       "provisional": true,
-      "evidence": [
-        "Eventos de teclado, restart e game state no Scratch",
-        "LAB-CS50-000 R1: evento e ação distinguidos corretamente no disparo"
-      ],
+      "evidence": ["Eventos de teclado, restart e game state no Scratch","LAB-CS50-000 R1: evento e ação distinguidos corretamente no disparo"],
       "nextGate": "RET-CS50-000-D1"
     },
     {
@@ -122,11 +100,8 @@
       "domain": "engineering-practice",
       "level": 3,
       "provisional": true,
-      "evidence": [
-        "Correções de reinício, parada de sprites e conflito de tecla durante Pset 0",
-        "LAB-CS50-000 R1: tracing melhorou, mas simulação do bug e caso de teste ainda não foram executados corretamente"
-      ],
-      "nextGate": "REV-CS50-000-R2"
+      "evidence": ["Correções de reinício, parada de sprites e conflito de tecla durante Pset 0","LAB-CS50-000 R2: testes desejados corretos, mas tracing do código defeituoso foi feito como se a correção já estivesse aplicada"],
+      "nextGate": "REV-CS50-000-R3"
     },
     {
       "id": "javascript-fundamentals",
@@ -134,9 +109,7 @@
       "domain": "javascript",
       "level": 0,
       "provisional": true,
-      "evidence": [
-        "freeCodeCamp JavaScript em andamento; seção atual ainda não informada"
-      ],
+      "evidence": ["freeCodeCamp JavaScript em andamento; seção atual ainda não informada"],
       "nextGate": null
     }
   ]
