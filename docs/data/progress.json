@@ -1,0 +1,31 @@
+{
+  "updatedAt": "2026-08-19T04:19:00-03:00",
+  "courses": {
+    "cs50x": {
+      "status": "in-progress",
+      "started": true,
+      "completed": [
+        "lecture-0",
+        "problem-set-0-scratch"
+      ],
+      "current": "lecture-1",
+      "notes": [
+        "Lecture 0 concluída.",
+        "Projeto Scratch Bug vs Developer concluído, validado e submetido via CS50."
+      ]
+    },
+    "fcc-js-v10": {
+      "status": "in-progress",
+      "started": true,
+      "completed": [],
+      "current": "unknown-section",
+      "notes": [
+        "Curso em andamento em paralelo ao CS50x.",
+        "A seção atual será refinada conforme novos avanços forem informados no chat."
+      ]
+    },
+    "foundational-csharp": {"status":"not-started","started":false,"completed":[]},
+    "cs50-sql": {"status":"not-started","started":false,"completed":[]},
+    "cs50p": {"status":"not-started","started":false,"completed":[]}
+  }
+}
