@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-19T12:34:00-03:00",
+  "updatedAt": "2026-08-19T13:29:00-03:00",
   "courses": {
     "cs50x": {
       "status": "in-progress",
@@ -24,17 +24,36 @@
         "A seção atual será refinada conforme novos avanços forem informados no chat."
       ]
     },
-    "foundational-csharp": {"status":"not-started","started":false,"completed":[]},
-    "cs50-sql": {"status":"not-started","started":false,"completed":[]},
-    "cs50p": {"status":"not-started","started":false,"completed":[]}
+    "foundational-csharp": {
+      "status": "not-started",
+      "started": false,
+      "completed": []
+    },
+    "cs50-sql": {
+      "status": "not-started",
+      "started": false,
+      "completed": []
+    },
+    "cs50p": {
+      "status": "not-started",
+      "started": false,
+      "completed": []
+    }
   },
   "labs": {
     "LAB-CS50-000": {
-      "status":"correction-required",
-      "attempts":1,
-      "lastAttempt":"2026-08-19T12:34:28-03:00",
-      "lastCommit":"2f08b6245da9cc4cc6ef73adc055a7ed07986afa",
-      "next":"REV-CS50-000-R1"
+      "status": "correction-required",
+      "attempts": 2,
+      "lastAttempt": "2026-08-19T13:28:30-03:00",
+      "lastCommit": "fe44f3eee057856a097746ddcffa7697f39a4cc4",
+      "lastResult": {
+        "recall": "pass",
+        "trace": "pass",
+        "rebuild": "partial",
+        "repair": "correction-required",
+        "transfer": "partial"
+      },
+      "next": "REV-CS50-000-R2"
     }
   }
 }
