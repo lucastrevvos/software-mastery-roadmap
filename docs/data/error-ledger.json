@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-19T16:04:00-03:00",
+  "updatedAt": "2026-08-19T16:20:00-03:00",
   "statuses": {
     "open": "erro/vazamento identificado",
     "corrected": "corrigido em nova tentativa",
@@ -8,17 +8,18 @@
   "errors": [
     {
       "id": "ERR-CS50-000-001",
-      "status": "corrected",
+      "status": "open",
       "domain": "control-flow-tracing",
       "title": "Confusão entre estado de entrada e estado de saída da iteração",
       "source": "LAB-CS50-000 attempt 1",
       "commit": "2f08b6245da9cc4cc6ef73adc055a7ed07986afa",
-      "evidence": "A sequência 1,2,4,6 foi prevista corretamente, mas a explicação afirmou que score já era 4 antes do if da terceira iteração.",
-      "correctionTarget": "R1-B: traçar explicitamente estado no início e no fim de cada iteração.",
+      "evidence": "A R4 reabriu o padrão: no código x = 2; if signal; x = x - 1, a resposta colocou x = 1 antes do primeiro if e depois x = 0 após o decremento, aplicando a mutação uma linha cedo.",
+      "correctionTarget": "R5-A/R5-B: registrar o estado após cada linha e distinguir explicitamente valor antes e depois de cada instrução de atribuição.",
       "firstSeen": "2026-08-19",
       "correctedAt": "2026-08-19",
       "correctionCommit": "fe44f3eee057856a097746ddcffa7697f39a4cc4",
-      "correctionEvidence": "R1-B registrou corretamente início/fim de cada iteração e identificou score = 2 antes do if da terceira iteração."
+      "reopenedAt": "2026-08-19",
+      "reopenedCommit": "18044f96a7e254437585204e0fdf2097508ab1d4"
     },
     {
       "id": "ERR-CS50-000-002",
@@ -27,11 +28,11 @@
       "title": "Condição interpretada fora do contexto de execução",
       "source": "LAB-CS50-000 attempt 1",
       "commit": "2f08b6245da9cc4cc6ef73adc055a7ed07986afa",
-      "evidence": "Na R3, sem ataque a condição interna health > 0 foi marcada como avaliada mesmo estando dentro do if externo; com o primeiro ataque, health > 0 foi reconhecido como verdadeiro mas game over foi marcado como não executado. A resposta sobre comportamento real foi 'nunca', mostrando que a regra desejada ainda substitui mentalmente o código atual durante o tracing.",
-      "correctionTarget": "R4-A/R4-B: executar primeiro um exemplo neutro em CPU mode e só depois traduzir para o código de vidas.",
+      "evidence": "A R4-B finalmente executou corretamente o bloco defeituoso de health, mas a R4-A ainda ficou contraditória: marcou o segundo if como não alcançado e mesmo assim atribuiu output = RED. O fluxo por blocos ainda não está estável.",
+      "correctionTarget": "R5-A: usar worksheet de breakpoint por linha, registrando se cada linha executou antes de calcular seu efeito.",
       "firstSeen": "2026-08-19",
       "lastSeen": "2026-08-19",
-      "lastCommit": "0274b283ad29dcd16ea611d6b500d156b2c82606"
+      "lastCommit": "18044f96a7e254437585204e0fdf2097508ab1d4"
     },
     {
       "id": "ERR-CS50-000-003",
@@ -40,11 +41,11 @@
       "title": "Escopo de reset parcial versus restart completo ainda não explícito",
       "source": "LAB-CS50-000 attempt 1",
       "commit": "2f08b6245da9cc4cc6ef73adc055a7ed07986afa",
-      "evidence": "A R3 manteve gameState como playing nas eliminações e na perda de vida e aplicou corretamente a progressão de speedBug. No restart completo, porém, gameState foi colocado como 0 em vez de retornar exatamente ao valor inicial 'playing'.",
-      "correctionTarget": "R4-C: restaurar literalmente cada variável ao valor do estado inicial e explicar a invariância do restart completo.",
+      "evidence": "Na R4-C, o estado preenchido depois do restart foi exatamente o estado fornecido como 'antes do restart' (points 6, lives 1, speedBug 3, playing), em vez de restaurar points 0, lives 3, speedBug 1 e gameState playing.",
+      "correctionTarget": "R5-C: distinguir estado pré-restart e pós-restart e restaurar literalmente os valores do estado inicial.",
       "firstSeen": "2026-08-19",
       "lastSeen": "2026-08-19",
-      "lastCommit": "0274b283ad29dcd16ea611d6b500d156b2c82606"
+      "lastCommit": "18044f96a7e254437585204e0fdf2097508ab1d4"
     },
     {
       "id": "ERR-CS50-000-004",
