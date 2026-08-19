@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-19T12:34:00-03:00",
+  "updatedAt": "2026-08-19T13:29:00-03:00",
   "scale": {
     "0": "desconhecido/não avaliado",
     "1": "reconhece",
@@ -12,93 +12,132 @@
   },
   "assessments": [
     {
-      "lab":"LAB-CS50-000",
-      "attempt":1,
-      "commit":"2f08b6245da9cc4cc6ef73adc055a7ed07986afa",
-      "date":"2026-08-19",
-      "status":"correction-required",
-      "dimensions":{
-        "recall":"partial",
-        "trace":"partial",
-        "rebuild":"pending",
-        "repair":"partial",
-        "transfer":"partial"
+      "lab": "LAB-CS50-000",
+      "attempt": 1,
+      "commit": "2f08b6245da9cc4cc6ef73adc055a7ed07986afa",
+      "date": "2026-08-19",
+      "status": "correction-required",
+      "dimensions": {
+        "recall": "partial",
+        "trace": "partial",
+        "rebuild": "pending",
+        "repair": "partial",
+        "transfer": "partial"
       },
-      "next":"REV-CS50-000-R1"
+      "next": "REV-CS50-000-R1"
+    },
+    {
+      "lab": "LAB-CS50-000",
+      "attempt": 2,
+      "commit": "fe44f3eee057856a097746ddcffa7697f39a4cc4",
+      "date": "2026-08-19",
+      "status": "correction-required",
+      "dimensions": {
+        "recall": "pass",
+        "trace": "pass",
+        "rebuild": "partial",
+        "repair": "correction-required",
+        "transfer": "partial"
+      },
+      "next": "REV-CS50-000-R2"
     }
   ],
   "competencies": [
     {
-      "id":"computational-thinking",
-      "title":"Pensamento computacional e decomposição",
-      "domain":"programming-fundamentals",
-      "level":2,
-      "provisional":true,
-      "evidence":["CS50 Lecture 0","Scratch project: Bug vs Developer","LAB-CS50-000 attempt 1: Recall parcial; Rebuild pendente"],
-      "nextGate":"REV-CS50-000-R1"
+      "id": "computational-thinking",
+      "title": "Pensamento computacional e decomposição",
+      "domain": "programming-fundamentals",
+      "level": 3,
+      "provisional": true,
+      "evidence": [
+        "CS50 Lecture 0",
+        "Scratch project: Bug vs Developer",
+        "LAB-CS50-000 R1: estrutura de fluxo reconstruída com ajuda; estado inicial e pontuação ainda incompletos"
+      ],
+      "nextGate": "REV-CS50-000-R2"
     },
     {
-      "id":"variables-state",
-      "title":"Variáveis e estado",
-      "domain":"programming-fundamentals",
-      "level":3,
-      "provisional":true,
-      "evidence":["Uso de pontuação/estado no projeto Scratch","LAB-CS50-000 attempt 1: estados principais identificados; ciclo de vida ainda parcial"],
-      "nextGate":"REV-CS50-000-R1"
+      "id": "variables-state",
+      "title": "Variáveis e estado",
+      "domain": "programming-fundamentals",
+      "level": 3,
+      "provisional": true,
+      "evidence": [
+        "Uso de pontuação/estado no projeto Scratch",
+        "LAB-CS50-000 R1: estados principais reconhecidos; ciclo de vida e inicialização ainda parciais"
+      ],
+      "nextGate": "REV-CS50-000-R2"
     },
     {
-      "id":"conditionals",
-      "title":"Condicionais",
-      "domain":"programming-fundamentals",
-      "level":3,
-      "provisional":true,
-      "evidence":["Condições de vitória/derrota no projeto Scratch","LAB-CS50-000 attempt 1: resultado do trace correto e direção da correção do game over identificada; explicação do fluxo ainda parcial"],
-      "nextGate":"REV-CS50-000-R1"
+      "id": "conditionals",
+      "title": "Condicionais",
+      "domain": "programming-fundamentals",
+      "level": 3,
+      "provisional": true,
+      "evidence": [
+        "Condições de vitória/derrota no projeto Scratch",
+        "LAB-CS50-000 R1: tracing corrigido; Repair ainda mostra leitura incorreta do fluxo aninhado"
+      ],
+      "nextGate": "REV-CS50-000-R2"
     },
     {
-      "id":"loops",
-      "title":"Loops e repetição",
-      "domain":"programming-fundamentals",
-      "level":3,
-      "provisional":true,
-      "evidence":["Movimento/repetição de sprites no projeto Scratch","LAB-CS50-000 attempt 1: modelo conceitual de loop precisa generalizar além de condição booleana"],
-      "nextGate":"REV-CS50-000-R1"
+      "id": "loops",
+      "title": "Loops e repetição",
+      "domain": "programming-fundamentals",
+      "level": 3,
+      "provisional": true,
+      "evidence": [
+        "Movimento/repetição de sprites no projeto Scratch",
+        "LAB-CS50-000 R1: modelo corrigido para repetição por contagem ou condição"
+      ],
+      "nextGate": "RET-CS50-000-D1"
     },
     {
-      "id":"functions-abstraction",
-      "title":"Funções, blocos e abstração",
-      "domain":"programming-fundamentals",
-      "level":2,
-      "provisional":true,
-      "evidence":["Custom block com input exigido no CS50 Pset 0","LAB-CS50-000 attempt 1: reutilização reconhecida; abstração ainda precisa ser explicada como simplificação/encapsulamento de complexidade"],
-      "nextGate":"REV-CS50-000-R1"
+      "id": "functions-abstraction",
+      "title": "Funções, blocos e abstração",
+      "domain": "programming-fundamentals",
+      "level": 2,
+      "provisional": true,
+      "evidence": [
+        "Custom block com input exigido no CS50 Pset 0",
+        "LAB-CS50-000 R1: abstração explicada por encapsulamento/reuso e parametrização"
+      ],
+      "nextGate": "RET-CS50-000-D1"
     },
     {
-      "id":"events-flow",
-      "title":"Eventos e fluxo de execução",
-      "domain":"programming-fundamentals",
-      "level":3,
-      "provisional":true,
-      "evidence":["Eventos de teclado, restart e game state no Scratch","LAB-CS50-000 attempt 1: distinção evento versus ação ainda imprecisa"],
-      "nextGate":"REV-CS50-000-R1"
+      "id": "events-flow",
+      "title": "Eventos e fluxo de execução",
+      "domain": "programming-fundamentals",
+      "level": 3,
+      "provisional": true,
+      "evidence": [
+        "Eventos de teclado, restart e game state no Scratch",
+        "LAB-CS50-000 R1: evento e ação distinguidos corretamente no disparo"
+      ],
+      "nextGate": "RET-CS50-000-D1"
     },
     {
-      "id":"debugging-basics",
-      "title":"Debugging básico",
-      "domain":"engineering-practice",
-      "level":3,
-      "provisional":true,
-      "evidence":["Correções de reinício, parada de sprites e conflito de tecla durante Pset 0","LAB-CS50-000 attempt 1: direção da condição de game over detectada; teste e simulação do fluxo ainda pendentes"],
-      "nextGate":"REV-CS50-000-R1"
+      "id": "debugging-basics",
+      "title": "Debugging básico",
+      "domain": "engineering-practice",
+      "level": 3,
+      "provisional": true,
+      "evidence": [
+        "Correções de reinício, parada de sprites e conflito de tecla durante Pset 0",
+        "LAB-CS50-000 R1: tracing melhorou, mas simulação do bug e caso de teste ainda não foram executados corretamente"
+      ],
+      "nextGate": "REV-CS50-000-R2"
     },
     {
-      "id":"javascript-fundamentals",
-      "title":"JavaScript fundamentals",
-      "domain":"javascript",
-      "level":0,
-      "provisional":true,
-      "evidence":["freeCodeCamp JavaScript em andamento; seção atual ainda não informada"],
-      "nextGate":null
+      "id": "javascript-fundamentals",
+      "title": "JavaScript fundamentals",
+      "domain": "javascript",
+      "level": 0,
+      "provisional": true,
+      "evidence": [
+        "freeCodeCamp JavaScript em andamento; seção atual ainda não informada"
+      ],
+      "nextGate": null
     }
   ]
 }
