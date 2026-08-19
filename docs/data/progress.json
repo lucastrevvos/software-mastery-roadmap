@@ -1,59 +1,38 @@
 {
-  "updatedAt": "2026-08-19T13:29:00-03:00",
+  "updatedAt": "2026-08-19T15:39:00-03:00",
   "courses": {
     "cs50x": {
       "status": "in-progress",
       "started": true,
-      "completed": [
-        "lecture-0",
-        "problem-set-0-scratch"
-      ],
+      "completed": ["lecture-0","problem-set-0-scratch"],
       "current": "lecture-1",
-      "notes": [
-        "Lecture 0 concluída.",
-        "Projeto Scratch Bug vs Developer concluído, validado e submetido via CS50."
-      ]
+      "notes": ["Lecture 0 concluída.","Projeto Scratch Bug vs Developer concluído, validado e submetido via CS50."]
     },
     "fcc-js-v10": {
       "status": "in-progress",
       "started": true,
       "completed": [],
       "current": "unknown-section",
-      "notes": [
-        "Curso em andamento em paralelo ao CS50x.",
-        "A seção atual será refinada conforme novos avanços forem informados no chat."
-      ]
+      "notes": ["Curso em andamento em paralelo ao CS50x.","A seção atual será refinada conforme novos avanços forem informados no chat."]
     },
-    "foundational-csharp": {
-      "status": "not-started",
-      "started": false,
-      "completed": []
-    },
-    "cs50-sql": {
-      "status": "not-started",
-      "started": false,
-      "completed": []
-    },
-    "cs50p": {
-      "status": "not-started",
-      "started": false,
-      "completed": []
-    }
+    "foundational-csharp": {"status":"not-started","started":false,"completed":[]},
+    "cs50-sql": {"status":"not-started","started":false,"completed":[]},
+    "cs50p": {"status":"not-started","started":false,"completed":[]}
   },
   "labs": {
     "LAB-CS50-000": {
       "status": "correction-required",
-      "attempts": 2,
-      "lastAttempt": "2026-08-19T13:28:30-03:00",
-      "lastCommit": "fe44f3eee057856a097746ddcffa7697f39a4cc4",
+      "attempts": 3,
+      "lastAttempt": "2026-08-19T15:38:11-03:00",
+      "lastCommit": "d6fd21eb13caacf1a38a6c20a94d798b5b03ef8a",
       "lastResult": {
         "recall": "pass",
         "trace": "pass",
-        "rebuild": "partial",
+        "rebuild": "pass",
         "repair": "correction-required",
         "transfer": "partial"
       },
-      "next": "REV-CS50-000-R2"
+      "next": "REV-CS50-000-R3"
     }
   }
 }
