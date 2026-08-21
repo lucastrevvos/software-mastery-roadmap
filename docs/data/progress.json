@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-21T01:18:00-03:00",
+  "updatedAt": "2026-08-21T11:39:01-03:00",
   "courses": {
     "cs50x": {
       "status": "in-progress",
@@ -15,6 +15,7 @@
         "Lecture 0 concluída.",
         "Projeto Scratch Bug vs Developer concluído, validado e submetido via CS50.",
         "Baseline LAB-CS50-000 aprovado em 2026-08-19.",
+        "RET-CS50-000-D1 concluído em 2026-08-21 com retenção parcial; tracing por estado e loops voltaram à fila de retenção.",
         "Week 1 — C concluída e exercícios do Problem Set 1 enviados em 2026-08-21.",
         "Próximo conteúdo oficial: Week 2 — Arrays."
       ]
@@ -46,9 +47,14 @@
         "repair": "pass",
         "transfer": "pass"
       },
-      "retentionStatus": "overdue",
-      "next": "RET-CS50-000-D1",
-      "nextDueDate": "2026-08-20"
+      "retentionStatus": "partial-retention",
+      "lastRetention": "RET-CS50-000-D1",
+      "lastRetentionDate": "2026-08-21",
+      "lastRetentionCommit": "0dd2f090e02a985308a35cad444be5725ed2a7b7",
+      "retained": ["nested-control-flow","state-lifecycle"],
+      "reopened": ["control-flow-tracing","loops"],
+      "next": "RET-CS50-000-D3",
+      "nextDueDate": "2026-08-24"
     },
     "LAB-CS50-001": {
       "source": "CS50 Week 1 — C + Problem Set 1",
