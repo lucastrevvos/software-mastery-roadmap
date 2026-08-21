@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-21T16:37:00-03:00",
+  "updatedAt": "2026-08-21T17:01:00-03:00",
   "statuses": {
     "open": "erro/vazamento identificado",
     "corrected": "corrigido em nova tentativa",
@@ -105,7 +105,8 @@
       "lastCommit": "03625d70185e5ef593f42ba2f452e83118ffa8e3",
       "correctedAt": "2026-08-21",
       "correctionCommit": "d1e911e371d7ab645fc4e813b73bf6e92dddd56d",
-      "correctionEvidence": "R1-A distinguiu ferramenta de build, compilador, código-fonte e executável."
+      "correctionEvidence": "R1-A distinguiu ferramenta de build, compilador, código-fonte e executável.",
+      "nextRetention": "RET-CS50-001-D1"
     },
     {
       "id": "ERR-CS50-001-002",
@@ -121,20 +122,25 @@
       "lastCommit": "03625d70185e5ef593f42ba2f452e83118ffa8e3",
       "correctedAt": "2026-08-21",
       "correctionCommit": "d1e911e371d7ab645fc4e813b73bf6e92dddd56d",
-      "correctionEvidence": "R1-B explicou a ordem de avaliação e aplicou promoção/conversão antes da divisão."
+      "correctionEvidence": "R1-B explicou a ordem de avaliação e aplicou promoção/conversão antes da divisão.",
+      "nextRetention": "RET-CS50-001-D1"
     },
     {
       "id": "ERR-CS50-001-003",
-      "status": "open",
+      "status": "corrected",
       "domain": "c-types",
       "title": "Conversão para tipo menor modelada genericamente como erro de execução",
       "source": "LAB-CS50-001 attempt 1",
       "commit": "03625d70185e5ef593f42ba2f452e83118ffa8e3",
-      "evidence": "A R1 melhorou o modelo ao identificar valor fora da faixa, divisão inteira e perda fracionária separadamente. Ainda chamou a conversão long→int fora da faixa de 'integer overflow' e descreveu double→int como truncamento explícito, embora a atribuição sem cast seja uma conversão implícita. Falta separar operação aritmética de conversão e conversão implícita de cast explícito.",
-      "correctionTarget": "REV-CS50-001-R2: distinguir aritmética fora da faixa versus conversão para tipo de destino não representável, e implícito versus cast explícito.",
+      "evidence": "Na R2, overflow aritmético foi separado de conversão estreitante, e conversão implícita foi distinguida de cast explícito. A resposta também reconheceu que um cast não torna representável um valor que não cabe no tipo de destino.",
+      "correctionTarget": "Confirmar em revisão espaçada; refinar posteriormente a semântica portátil exata de conversões fora da faixa.",
       "firstSeen": "2026-08-21",
       "lastSeen": "2026-08-21",
-      "lastCommit": "d1e911e371d7ab645fc4e813b73bf6e92dddd56d"
+      "lastCommit": "48fa9acaf7117cbb2838b1ced378b88a19aecb4f",
+      "correctedAt": "2026-08-21",
+      "correctionCommit": "48fa9acaf7117cbb2838b1ced378b88a19aecb4f",
+      "correctionEvidence": "R2-A e R2-B distinguiram aritmética versus conversão e implícito versus explícito no nível exigido pelo baseline da Week 1. A regra portátil de valores fora da faixa será refinada em conteúdo futuro.",
+      "nextRetention": "RET-CS50-001-D1"
     },
     {
       "id": "ERR-CS50-001-004",
@@ -150,7 +156,8 @@
       "lastCommit": "03625d70185e5ef593f42ba2f452e83118ffa8e3",
       "correctedAt": "2026-08-21",
       "correctionCommit": "d1e911e371d7ab645fc4e813b73bf6e92dddd56d",
-      "correctionEvidence": "R1-D forneceu a tabela completa de testes e explicou por que compilação sem warnings não substitui verificação comportamental."
+      "correctionEvidence": "R1-D forneceu a tabela completa de testes e explicou por que compilação sem warnings não substitui verificação comportamental.",
+      "nextRetention": "RET-CS50-001-D1"
     }
   ]
 }
