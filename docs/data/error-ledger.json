@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-21T11:39:01-03:00",
+  "updatedAt": "2026-08-21T16:00:00-03:00",
   "statuses": {
     "open": "erro/vazamento identificado",
     "corrected": "corrigido em nova tentativa",
@@ -90,6 +90,58 @@
       "correctionCommit": "d6fd21eb13caacf1a38a6c20a94d798b5b03ef8a",
       "correctionEvidence": "R2-B declarou points, lives, speedBug e gameState e explicitou incremento de pontos e reset de bug/tiro na colisão.",
       "nextRetention": "RET-CS50-000-D3"
+    },
+    {
+      "id": "ERR-CS50-001-001",
+      "status": "open",
+      "domain": "compilation-cli",
+      "title": "make confundido com o compilador",
+      "source": "LAB-CS50-001 attempt 1",
+      "commit": "03625d70185e5ef593f42ba2f452e83118ffa8e3",
+      "evidence": "No Recall A3, make foi descrito como o comando que mostra ao compilador qual arquivo executar e a resposta afirmou que make é o compilador. O papel de ferramenta de build versus compilador ainda não está separado.",
+      "correctionTarget": "REV-CS50-001-R1 A: modelar explicitamente source file → make/build rule → compiler → executable.",
+      "firstSeen": "2026-08-21",
+      "lastSeen": "2026-08-21",
+      "lastCommit": "03625d70185e5ef593f42ba2f452e83118ffa8e3"
+    },
+    {
+      "id": "ERR-CS50-001-002",
+      "status": "open",
+      "domain": "numeric-representation",
+      "title": "Divisão inteira não reconhecida no Repair antes da atribuição a float",
+      "source": "LAB-CS50-001 attempt 1",
+      "commit": "03625d70185e5ef593f42ba2f452e83118ffa8e3",
+      "evidence": "O broken.c permaneceu com float average = total / people, onde total e people são int. A resposta aceitou average=3.0 como correto, embora a parte fracionária tenha sido perdida durante a divisão inteira antes da atribuição ao float. Curiosamente, o mesmo mecanismo foi reconhecido corretamente em E3, mostrando conhecimento ainda não transferido para debugging.",
+      "correctionTarget": "REV-CS50-001-R1 B: prever o tipo da operação antes da atribuição, localizar o ponto em que a precisão é perdida e corrigir o código em broken-r1.c.",
+      "firstSeen": "2026-08-21",
+      "lastSeen": "2026-08-21",
+      "lastCommit": "03625d70185e5ef593f42ba2f452e83118ffa8e3"
+    },
+    {
+      "id": "ERR-CS50-001-003",
+      "status": "open",
+      "domain": "c-types",
+      "title": "Conversão para tipo menor modelada genericamente como erro de execução",
+      "source": "LAB-CS50-001 attempt 1",
+      "commit": "03625d70185e5ef593f42ba2f452e83118ffa8e3",
+      "evidence": "No Recall A6, a resposta afirmou que converter valor para uma variável de tipo menor 'irá dar erro de execução'. Esse modelo não distingue truncamento de parte fracionária, valor fora da faixa do destino, conversões permitidas e comportamento específico/indefinido.",
+      "correctionTarget": "REV-CS50-001-R1 C: classificar exemplos concretos de conversão e identificar qual informação pode ser perdida em cada um.",
+      "firstSeen": "2026-08-21",
+      "lastSeen": "2026-08-21",
+      "lastCommit": "03625d70185e5ef593f42ba2f452e83118ffa8e3"
+    },
+    {
+      "id": "ERR-CS50-001-004",
+      "status": "open",
+      "domain": "verification-discipline",
+      "title": "Rebuild entregue sem registrar os casos de teste obrigatórios",
+      "source": "LAB-CS50-001 attempt 1",
+      "commit": "03625d70185e5ef593f42ba2f452e83118ffa8e3",
+      "evidence": "digitstats.c implementa corretamente a decomposição por % 10 e / 10 para inteiros positivos, mas answers.md não contém os quatro casos de teste pedidos, incluindo entrada inválida. A funcionalidade foi entregue sem a evidência de verificação exigida pelo gate.",
+      "correctionTarget": "REV-CS50-001-R1 D: executar e registrar quatro casos, incluindo um dígito, múltiplos dígitos, zeros internos/finais e rejeição de entrada inválida.",
+      "firstSeen": "2026-08-21",
+      "lastSeen": "2026-08-21",
+      "lastCommit": "03625d70185e5ef593f42ba2f452e83118ffa8e3"
     }
   ]
 }
