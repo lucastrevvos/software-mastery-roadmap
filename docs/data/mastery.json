@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-21T16:00:00-03:00",
+  "updatedAt": "2026-08-21T16:37:00-03:00",
   "scale": {
     "0": "desconhecido/não avaliado",
     "1": "reconhece",
@@ -87,6 +87,16 @@
       "dimensions": {"recall":"partial","trace":"pass","rebuild":"partial","repair":"correction-required","transfer":"partial"},
       "note": "Controle de fluxo e decomposição numérica foram fortes. Permanecem vazamentos em make versus compilador, divisão inteira antes da atribuição a float/double, conversão de tipos e disciplina de testes.",
       "next": "REV-CS50-001-R1"
+    },
+    {
+      "lab": "LAB-CS50-001",
+      "attempt": 2,
+      "commit": "d1e911e371d7ab645fc4e813b73bf6e92dddd56d",
+      "date": "2026-08-21",
+      "status": "correction-required",
+      "dimensions": {"recall":"partial","trace":"pass","rebuild":"pass","repair":"pass","transfer":"pass"},
+      "note": "R1 corrigiu build pipeline, divisão inteira no Repair, testes do Rebuild e dinheiro em centavos. Resta apenas estabilizar a semântica de conversões implícitas/explicitas e distinguir conversão fora da faixa de overflow aritmético.",
+      "next": "REV-CS50-001-R2"
     }
   ],
   "competencies": [
@@ -150,8 +160,8 @@
       "domain": "engineering-practice",
       "level": 3,
       "provisional": true,
-      "evidence": ["Correções de reinício, parada de sprites e conflito de tecla durante Pset 0","LAB-CS50-000 R5: tracing literal, alcance de blocos, estado por linha e regra health <= 0 corrigidos","RET-CS50-000-D1: comportamento real do código de health e correção health <= 0 recuperados corretamente","LAB-CS50-001: identificou atribuição em condição e direção errada do for, mas não detectou a divisão inteira em float average = total / people"],
-      "nextGate": "REV-CS50-001-R1"
+      "evidence": ["Correções de reinício, parada de sprites e conflito de tecla durante Pset 0","LAB-CS50-000 R5: tracing literal, alcance de blocos, estado por linha e regra health <= 0 corrigidos","RET-CS50-000-D1: comportamento real do código de health e correção health <= 0 recuperados corretamente","LAB-CS50-001: identificou atribuição em condição e direção errada do for","LAB-CS50-001 R1: corrigiu a divisão inteira restante no Repair após feedback direcionado"],
+      "nextGate": "RET-CS50-001-D1"
     },
     {
       "id": "c-fundamentals",
@@ -159,8 +169,8 @@
       "domain": "c",
       "level": 3,
       "provisional": true,
-      "evidence": ["CS50 Week 1 — C concluída","Problem Set 1 enviado","LAB-CS50-001: digitstats.c reconstruído com long, int, %, divisão inteira, do/while e while; sem arrays/strings","LAB-CS50-001 Recall: = versus ==, const e ponto flutuante explicados; conversão de tipos ainda imprecisa"],
-      "nextGate": "REV-CS50-001-R1"
+      "evidence": ["CS50 Week 1 — C concluída","Problem Set 1 enviado","LAB-CS50-001: digitstats.c reconstruído com long, int, %, divisão inteira, do/while e while; sem arrays/strings","LAB-CS50-001 R1: tipos e conversões foram classificados melhor, mas ainda resta distinguir conversão fora da faixa de overflow aritmético e implícito de cast explícito"],
+      "nextGate": "REV-CS50-001-R2"
     },
     {
       "id": "c-control-flow",
@@ -169,16 +179,16 @@
       "level": 4,
       "provisional": true,
       "evidence": ["CS50 Week 1 — C concluída","Problem Set 1 enviado","LAB-CS50-001 Trace: quatro iterações e estado de x executados corretamente","LAB-CS50-001 Transfer: do/while, for e while escolhidos de forma adequada","LAB-CS50-001 Repair: loop infinito causado por i-- identificado e corrigido"],
-      "nextGate": "REV-CS50-001-R1"
+      "nextGate": "RET-CS50-001-D1"
     },
     {
       "id": "compilation-cli",
       "title": "Source code, compilação, make e CLI",
       "domain": "computer-science-fundamentals",
-      "level": 1,
+      "level": 2,
       "provisional": true,
-      "evidence": ["CS50 Week 1 — C concluída","LAB-CS50-001: source/machine code e função geral de compilação reconhecidos, mas make foi identificado incorretamente como compilador"],
-      "nextGate": "REV-CS50-001-R1"
+      "evidence": ["CS50 Week 1 — C concluída","LAB-CS50-001: source/machine code e função geral de compilação reconhecidos","LAB-CS50-001 R1: make foi corretamente separado do compilador; código-fonte, ferramenta de build, compilador e executável foram explicados"],
+      "nextGate": "RET-CS50-001-D1"
     },
     {
       "id": "numeric-representation",
@@ -186,8 +196,8 @@
       "domain": "computer-science-fundamentals",
       "level": 3,
       "provisional": true,
-      "evidence": ["CS50 Week 1 — C concluída","LAB-CS50-001: integer overflow e 0.1 em representação binária explicados com bom modelo mental","LAB-CS50-001 E3: 7/2 chegando como 3.0 e necessidade de conversão antes da divisão reconhecidas","LAB-CS50-001 Repair: o mesmo mecanismo de divisão inteira não foi reconhecido no código broken.c"],
-      "nextGate": "REV-CS50-001-R1"
+      "evidence": ["CS50 Week 1 — C concluída","LAB-CS50-001: integer overflow e 0.1 em representação binária explicados com bom modelo mental","LAB-CS50-001 R1: divisão inteira antes da atribuição foi explicada e corrigida no código; representação monetária inteira em centavos foi aplicada corretamente","A semântica específica de conversão long→int fora da faixa ainda será fechada na R2"],
+      "nextGate": "REV-CS50-001-R2"
     },
     {
       "id": "javascript-fundamentals",
