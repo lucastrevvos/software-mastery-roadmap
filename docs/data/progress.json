@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-21T11:39:01-03:00",
+  "updatedAt": "2026-08-21T16:00:00-03:00",
   "courses": {
     "cs50x": {
       "status": "in-progress",
@@ -58,8 +58,17 @@
     },
     "LAB-CS50-001": {
       "source": "CS50 Week 1 — C + Problem Set 1",
-      "status": "ready",
-      "attempts": 0,
+      "status": "correction-required",
+      "attempts": 1,
+      "lastAttempt": "2026-08-21T15:59:53-03:00",
+      "lastCommit": "03625d70185e5ef593f42ba2f452e83118ffa8e3",
+      "lastResult": {
+        "recall": "partial",
+        "trace": "pass",
+        "rebuild": "partial",
+        "repair": "correction-required",
+        "transfer": "partial"
+      },
       "path": "labs/cs50/week-01/LAB-CS50-001/README.md",
       "targets": [
         "c-fundamentals",
@@ -68,7 +77,7 @@
         "numeric-representation",
         "debugging-basics"
       ],
-      "next": "LAB-CS50-001"
+      "next": "REV-CS50-001-R1"
     }
   }
 }
