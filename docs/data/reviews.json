@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-21T16:00:00-03:00",
+  "updatedAt": "2026-08-21T16:37:00-03:00",
   "policy": {
     "defaultIntervalsDays": [1, 3, 7, 14, 30, 60],
     "note": "Os intervalos são um protocolo operacional inicial e podem ser ajustados pelo desempenho real."
@@ -124,26 +124,42 @@
       "source": "CS50 Week 1 — C + Problem Set 1",
       "type": "baseline-mastery-gate",
       "status": "correction-required",
-      "outcome": "partial-baseline",
+      "outcome": "near-pass",
       "dueDate": "2026-08-21",
       "attemptedAt": "2026-08-21T15:59:53-03:00",
       "attemptCommit": "03625d70185e5ef593f42ba2f452e83118ffa8e3",
+      "lastCorrectionAt": "2026-08-21T16:37:00-03:00",
+      "lastCorrectionCommit": "d1e911e371d7ab645fc4e813b73bf6e92dddd56d",
       "lab": "LAB-CS50-001",
       "reviewFile": "labs/cs50/week-01/LAB-CS50-001/README.md",
-      "passedTargets": ["c-control-flow"],
-      "partialTargets": ["c-fundamentals","numeric-representation"],
-      "remainingTargets": ["compilation-cli","debugging-basics","verification-discipline"],
-      "next": "REV-CS50-001-R1"
+      "passedTargets": ["c-control-flow","compilation-cli","integer-division","verification-discipline","money-representation","debugging-basics"],
+      "partialTargets": ["c-fundamentals","type-conversion"],
+      "remainingTargets": ["type-conversion-semantics"],
+      "next": "REV-CS50-001-R2"
     },
     {
       "id": "REV-CS50-001-R1",
       "source": "LAB-CS50-001 attempt 1",
       "type": "targeted-correction",
+      "status": "completed",
+      "outcome": "partial-correction",
+      "dueDate": "2026-08-21",
+      "completedAt": "2026-08-21T16:37:00-03:00",
+      "attemptCommit": "d1e911e371d7ab645fc4e813b73bf6e92dddd56d",
+      "lab": "LAB-CS50-001",
+      "reviewFile": "labs/cs50/week-01/LAB-CS50-001/REVIEW-01.md",
+      "closedTargets": ["compilation-cli","integer-division","verification-discipline","money-representation","debugging-basics"],
+      "remainingTargets": ["type-conversion-semantics"]
+    },
+    {
+      "id": "REV-CS50-001-R2",
+      "source": "LAB-CS50-001 R1",
+      "type": "targeted-correction",
       "status": "due",
       "dueDate": "2026-08-21",
       "lab": "LAB-CS50-001",
-      "reviewFile": "labs/cs50/week-01/LAB-CS50-001/REVIEW-01.md",
-      "targets": ["compilation-cli","integer-division","type-conversion","verification-discipline","money-representation"]
+      "reviewFile": "labs/cs50/week-01/LAB-CS50-001/REVIEW-02.md",
+      "targets": ["type-conversion-semantics","implicit-vs-explicit-conversion","repair-output-verification"]
     }
   ]
 }
