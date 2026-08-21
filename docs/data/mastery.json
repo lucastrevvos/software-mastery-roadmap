@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-19T16:42:00-03:00",
+  "updatedAt": "2026-08-21T01:18:00-03:00",
   "scale": {
     "0": "desconhecido/não avaliado",
     "1": "reconhece",
@@ -128,8 +128,44 @@
       "domain": "engineering-practice",
       "level": 3,
       "provisional": true,
-      "evidence": ["Correções de reinício, parada de sprites e conflito de tecla durante Pset 0","LAB-CS50-000 R5: tracing literal, alcance de blocos, estado por linha e regra health <= 0 corrigidos"],
-      "nextGate": "RET-CS50-000-D1"
+      "evidence": ["Correções de reinício, parada de sprites e conflito de tecla durante Pset 0","LAB-CS50-000 R5: tracing literal, alcance de blocos, estado por linha e regra health <= 0 corrigidos","CS50 Week 1 / PSet 1 concluídos; debugging em C será reavaliado no LAB-CS50-001"],
+      "nextGate": "LAB-CS50-001"
+    },
+    {
+      "id": "c-fundamentals",
+      "title": "C: sintaxe, tipos, variáveis e operadores",
+      "domain": "c",
+      "level": 0,
+      "provisional": true,
+      "evidence": ["CS50 Week 1 — C concluída","Problem Set 1 enviado"],
+      "nextGate": "LAB-CS50-001"
+    },
+    {
+      "id": "c-control-flow",
+      "title": "C: condicionais e loops",
+      "domain": "c",
+      "level": 0,
+      "provisional": true,
+      "evidence": ["CS50 Week 1 — C concluída","Problem Set 1 enviado"],
+      "nextGate": "LAB-CS50-001"
+    },
+    {
+      "id": "compilation-cli",
+      "title": "Source code, compilação, make e CLI",
+      "domain": "computer-science-fundamentals",
+      "level": 0,
+      "provisional": true,
+      "evidence": ["CS50 Week 1 — C concluída"],
+      "nextGate": "LAB-CS50-001"
+    },
+    {
+      "id": "numeric-representation",
+      "title": "Overflow, divisão inteira e ponto flutuante",
+      "domain": "computer-science-fundamentals",
+      "level": 0,
+      "provisional": true,
+      "evidence": ["CS50 Week 1 — C concluída"],
+      "nextGate": "LAB-CS50-001"
     },
     {
       "id": "javascript-fundamentals",
