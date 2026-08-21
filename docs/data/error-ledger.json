@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-19T16:42:00-03:00",
+  "updatedAt": "2026-08-21T11:39:01-03:00",
   "statuses": {
     "open": "erro/vazamento identificado",
     "corrected": "corrigido em nova tentativa",
@@ -8,69 +8,73 @@
   "errors": [
     {
       "id": "ERR-CS50-000-001",
-      "status": "corrected",
+      "status": "open",
       "domain": "control-flow-tracing",
       "title": "Confusão entre estado de entrada e estado de saída da iteração",
       "source": "LAB-CS50-000 attempt 1",
       "commit": "2f08b6245da9cc4cc6ef73adc055a7ed07986afa",
-      "evidence": "A R4 reabriu o padrão: no código x = 2; if signal; x = x - 1, a resposta colocou x = 1 antes do primeiro if e depois x = 0 após o decremento, aplicando a mutação uma linha cedo.",
-      "correctionTarget": "R5-A/R5-B: registrar o estado após cada linha e distinguir explicitamente valor antes e depois de cada instrução de atribuição.",
+      "evidence": "No RET-CS50-000-D1, para count = 3; count = count + 2; count = count * 3, a resposta foi 5, 15, 15 em vez de 3, 5, 15. O padrão de aplicar uma mutação uma linha cedo reapareceu após o intervalo.",
+      "correctionTarget": "RET-CS50-000-D3: repetir tracing sem scaffolding, marcando o estado imediatamente após cada instrução.",
       "firstSeen": "2026-08-19",
       "correctedAt": "2026-08-19",
       "correctionCommit": "78dafcc962ab5e23a55609af70b6a00f9e52b36a",
-      "reopenedAt": "2026-08-19",
-      "reopenedCommit": "18044f96a7e254437585204e0fdf2097508ab1d4",
-      "correctionEvidence": "R5-A e R5-B registraram corretamente o estado após cada linha e separaram os valores antes/depois de cada atribuição.",
-      "nextRetention": "RET-CS50-000-D1"
+      "reopenedAt": "2026-08-21",
+      "reopenedCommit": "0dd2f090e02a985308a35cad444be5725ed2a7b7",
+      "lastSeen": "2026-08-21",
+      "nextRetention": "RET-CS50-000-D3"
     },
     {
       "id": "ERR-CS50-000-002",
-      "status": "corrected",
+      "status": "retained",
       "domain": "nested-control-flow",
       "title": "Condição interpretada fora do contexto de execução",
       "source": "LAB-CS50-000 attempt 1",
       "commit": "2f08b6245da9cc4cc6ef73adc055a7ed07986afa",
-      "evidence": "A R4-B finalmente executou corretamente o bloco defeituoso de health, mas a R4-A ainda ficou contraditória: marcou o segundo if como não alcançado e mesmo assim atribuiu output = RED. O fluxo por blocos ainda não estava estável.",
-      "correctionTarget": "R5-A: usar worksheet de breakpoint por linha, registrando se cada linha executou antes de calcular seu efeito.",
+      "evidence": "O RET-CS50-000-D1 executou corretamente os ramos enabled=true e enabled=false e também o fluxo aninhado defeituoso de health sem substituir mentalmente a condição escrita.",
+      "correctionTarget": "Manter em spot-checks futuros de retenção.",
       "firstSeen": "2026-08-19",
       "lastSeen": "2026-08-19",
-      "lastCommit": "18044f96a7e254437585204e0fdf2097508ab1d4",
       "correctedAt": "2026-08-19",
       "correctionCommit": "78dafcc962ab5e23a55609af70b6a00f9e52b36a",
-      "correctionEvidence": "R5-A executou corretamente os ramos com enabled=true e enabled=false, incluindo o não alcance das linhas internas quando o if externo é falso.",
-      "nextRetention": "RET-CS50-000-D1"
+      "retainedAt": "2026-08-21",
+      "retentionCommit": "0dd2f090e02a985308a35cad444be5725ed2a7b7",
+      "retentionEvidence": "B e D do D1 foram executados literalmente com alcance de blocos correto.",
+      "nextRetention": "RET-CS50-000-D3"
     },
     {
       "id": "ERR-CS50-000-003",
-      "status": "corrected",
+      "status": "retained",
       "domain": "state-lifecycle",
       "title": "Escopo de reset parcial versus restart completo ainda não explícito",
       "source": "LAB-CS50-000 attempt 1",
       "commit": "2f08b6245da9cc4cc6ef73adc055a7ed07986afa",
-      "evidence": "Na R4-C, o estado preenchido depois do restart foi exatamente o estado fornecido como antes do restart, em vez de restaurar o estado inicial.",
-      "correctionTarget": "R5-C: distinguir estado pré-restart e pós-restart e restaurar literalmente os valores do estado inicial.",
+      "evidence": "No RET-CS50-000-D1, o restart completo restaurou corretamente score=0, lives=3, speed=1 e mode=playing.",
+      "correctionTarget": "Manter em spot-checks futuros de retenção.",
       "firstSeen": "2026-08-19",
       "lastSeen": "2026-08-19",
-      "lastCommit": "18044f96a7e254437585204e0fdf2097508ab1d4",
       "correctedAt": "2026-08-19",
       "correctionCommit": "78dafcc962ab5e23a55609af70b6a00f9e52b36a",
-      "correctionEvidence": "R5-C restaurou score=0, lives=2, speed=1 e mode=playing e explicou corretamente a diferença entre estado pré e pós-restart.",
-      "nextRetention": "RET-CS50-000-D1"
+      "retainedAt": "2026-08-21",
+      "retentionCommit": "0dd2f090e02a985308a35cad444be5725ed2a7b7",
+      "retentionEvidence": "E do D1 restaurou exatamente o estado inicial.",
+      "nextRetention": "RET-CS50-000-D3"
     },
     {
       "id": "ERR-CS50-000-004",
-      "status": "corrected",
+      "status": "open",
       "domain": "loops",
       "title": "Modelo de loop restrito a repetição controlada por verdadeiro/falso",
       "source": "LAB-CS50-000 attempt 1",
       "commit": "2f08b6245da9cc4cc6ef73adc055a7ed07986afa",
-      "evidence": "A definição dada não cobria adequadamente loops de contagem como repeat 4 times.",
-      "correctionTarget": "R1-A: formular um modelo geral de repetição e regra de parada.",
+      "evidence": "No Recall do RET-CS50-000-D1, a resposta para o que impede um loop de repetir para sempre foi 'uma condição inversa a sua inicial', sem identificar uma condição/regra de parada que eventualmente seja atingida nem a progressão do estado de controle.",
+      "correctionTarget": "RET-CS50-000-D3: explicar e aplicar condição de parada e progresso da variável de controle em exemplo novo.",
       "firstSeen": "2026-08-19",
       "correctedAt": "2026-08-19",
       "correctionCommit": "fe44f3eee057856a097746ddcffa7697f39a4cc4",
-      "correctionEvidence": "R1-A passou a distinguir repetição por condição e por quantidade definida de repetições.",
-      "nextRetention": "RET-CS50-000-D1"
+      "reopenedAt": "2026-08-21",
+      "reopenedCommit": "0dd2f090e02a985308a35cad444be5725ed2a7b7",
+      "lastSeen": "2026-08-21",
+      "nextRetention": "RET-CS50-000-D3"
     },
     {
       "id": "ERR-CS50-000-005",
@@ -80,12 +84,12 @@
       "source": "LAB-CS50-000 R1",
       "commit": "fe44f3eee057856a097746ddcffa7697f39a4cc4",
       "evidence": "No Rebuild, ESTADO INICIAL foi preenchido apenas como 0 (false) e a colisão tiro/bug não explicitou a atualização de pontuação.",
-      "correctionTarget": "R2-B: declarar valores iniciais das variáveis relevantes e todas as mudanças produzidas pela colisão.",
+      "correctionTarget": "Confirmar em revisão futura que o estado inicial pode ser decomposto e reconstruído sem scaffolding.",
       "firstSeen": "2026-08-19",
       "correctedAt": "2026-08-19",
       "correctionCommit": "d6fd21eb13caacf1a38a6c20a94d798b5b03ef8a",
       "correctionEvidence": "R2-B declarou points, lives, speedBug e gameState e explicitou incremento de pontos e reset de bug/tiro na colisão.",
-      "nextRetention": "RET-CS50-000-D1"
+      "nextRetention": "RET-CS50-000-D3"
     }
   ]
 }
