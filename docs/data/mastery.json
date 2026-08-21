@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-21T11:39:01-03:00",
+  "updatedAt": "2026-08-21T16:00:00-03:00",
   "scale": {
     "0": "desconhecido/não avaliado",
     "1": "reconhece",
@@ -77,6 +77,16 @@
       "reopened": ["control-flow-tracing","loops"],
       "note": "Revisão prevista para 2026-08-20 foi concluída um dia depois. O espaçamento seguinte foi reancorado na data real da revisão.",
       "next": "RET-CS50-000-D3"
+    },
+    {
+      "lab": "LAB-CS50-001",
+      "attempt": 1,
+      "commit": "03625d70185e5ef593f42ba2f452e83118ffa8e3",
+      "date": "2026-08-21",
+      "status": "correction-required",
+      "dimensions": {"recall":"partial","trace":"pass","rebuild":"partial","repair":"correction-required","transfer":"partial"},
+      "note": "Controle de fluxo e decomposição numérica foram fortes. Permanecem vazamentos em make versus compilador, divisão inteira antes da atribuição a float/double, conversão de tipos e disciplina de testes.",
+      "next": "REV-CS50-001-R1"
     }
   ],
   "competencies": [
@@ -113,7 +123,7 @@
       "domain": "programming-fundamentals",
       "level": 3,
       "provisional": true,
-      "evidence": ["Movimento/repetição de sprites no projeto Scratch","LAB-CS50-000 R1: modelo corrigido para repetição por contagem ou condição","RET-CS50-000-D1: conceito de condição/progresso de parada não foi recuperado com precisão"],
+      "evidence": ["Movimento/repetição de sprites no projeto Scratch","LAB-CS50-000 R1: modelo corrigido para repetição por contagem ou condição","RET-CS50-000-D1: conceito de condição/progresso de parada não foi recuperado com precisão","LAB-CS50-001: escolha entre do/while, for e while e tracing de for executados corretamente no contexto de C"],
       "nextGate": "RET-CS50-000-D3"
     },
     {
@@ -140,44 +150,44 @@
       "domain": "engineering-practice",
       "level": 3,
       "provisional": true,
-      "evidence": ["Correções de reinício, parada de sprites e conflito de tecla durante Pset 0","LAB-CS50-000 R5: tracing literal, alcance de blocos, estado por linha e regra health <= 0 corrigidos","RET-CS50-000-D1: comportamento real do código de health e correção health <= 0 recuperados corretamente","CS50 Week 1 / PSet 1 concluídos; debugging em C será reavaliado no LAB-CS50-001"],
-      "nextGate": "LAB-CS50-001"
+      "evidence": ["Correções de reinício, parada de sprites e conflito de tecla durante Pset 0","LAB-CS50-000 R5: tracing literal, alcance de blocos, estado por linha e regra health <= 0 corrigidos","RET-CS50-000-D1: comportamento real do código de health e correção health <= 0 recuperados corretamente","LAB-CS50-001: identificou atribuição em condição e direção errada do for, mas não detectou a divisão inteira em float average = total / people"],
+      "nextGate": "REV-CS50-001-R1"
     },
     {
       "id": "c-fundamentals",
       "title": "C: sintaxe, tipos, variáveis e operadores",
       "domain": "c",
-      "level": 0,
+      "level": 3,
       "provisional": true,
-      "evidence": ["CS50 Week 1 — C concluída","Problem Set 1 enviado"],
-      "nextGate": "LAB-CS50-001"
+      "evidence": ["CS50 Week 1 — C concluída","Problem Set 1 enviado","LAB-CS50-001: digitstats.c reconstruído com long, int, %, divisão inteira, do/while e while; sem arrays/strings","LAB-CS50-001 Recall: = versus ==, const e ponto flutuante explicados; conversão de tipos ainda imprecisa"],
+      "nextGate": "REV-CS50-001-R1"
     },
     {
       "id": "c-control-flow",
       "title": "C: condicionais e loops",
       "domain": "c",
-      "level": 0,
+      "level": 4,
       "provisional": true,
-      "evidence": ["CS50 Week 1 — C concluída","Problem Set 1 enviado"],
-      "nextGate": "LAB-CS50-001"
+      "evidence": ["CS50 Week 1 — C concluída","Problem Set 1 enviado","LAB-CS50-001 Trace: quatro iterações e estado de x executados corretamente","LAB-CS50-001 Transfer: do/while, for e while escolhidos de forma adequada","LAB-CS50-001 Repair: loop infinito causado por i-- identificado e corrigido"],
+      "nextGate": "REV-CS50-001-R1"
     },
     {
       "id": "compilation-cli",
       "title": "Source code, compilação, make e CLI",
       "domain": "computer-science-fundamentals",
-      "level": 0,
+      "level": 1,
       "provisional": true,
-      "evidence": ["CS50 Week 1 — C concluída"],
-      "nextGate": "LAB-CS50-001"
+      "evidence": ["CS50 Week 1 — C concluída","LAB-CS50-001: source/machine code e função geral de compilação reconhecidos, mas make foi identificado incorretamente como compilador"],
+      "nextGate": "REV-CS50-001-R1"
     },
     {
       "id": "numeric-representation",
       "title": "Overflow, divisão inteira e ponto flutuante",
       "domain": "computer-science-fundamentals",
-      "level": 0,
+      "level": 3,
       "provisional": true,
-      "evidence": ["CS50 Week 1 — C concluída"],
-      "nextGate": "LAB-CS50-001"
+      "evidence": ["CS50 Week 1 — C concluída","LAB-CS50-001: integer overflow e 0.1 em representação binária explicados com bom modelo mental","LAB-CS50-001 E3: 7/2 chegando como 3.0 e necessidade de conversão antes da divisão reconhecidas","LAB-CS50-001 Repair: o mesmo mecanismo de divisão inteira não foi reconhecido no código broken.c"],
+      "nextGate": "REV-CS50-001-R1"
     },
     {
       "id": "javascript-fundamentals",
