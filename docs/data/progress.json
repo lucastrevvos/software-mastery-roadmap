@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-21T17:01:00-03:00",
+  "updatedAt": "2026-08-21T17:18:00-03:00",
   "courses": {
     "cs50x": {
       "status": "in-progress",
@@ -24,11 +24,23 @@
     "fcc-js-v10": {
       "status": "in-progress",
       "started": true,
-      "completed": [],
-      "current": "unknown-section",
+      "completed": [
+        "variables-and-strings/introduction-to-javascript",
+        "variables-and-strings/introduction-to-strings",
+        "variables-and-strings/understanding-code-clarity",
+        "variables-and-strings/build-a-greeting-bot",
+        "variables-and-strings/build-a-javascript-trivia-bot"
+      ],
+      "current": "variables-and-strings/build-a-sentence-maker",
+      "stepsComplete": 25,
+      "stepsTotal": 1320,
+      "section": "Variables and Strings",
+      "sectionStepsComplete": 25,
+      "sectionStepsTotal": 101,
       "notes": [
-        "Curso em andamento em paralelo ao CS50x.",
-        "A seção atual será refinada conforme novos avanços forem informados no chat."
+        "Posição confirmada por captura em 2026-08-21.",
+        "Próximo exercício: Build a Sentence Maker.",
+        "Primeiro LAB-FCC-JS será aberto após o núcleo de Data Types + Review + Quiz, para avaliar um bloco de competência completo em vez de cada exercício isolado."
       ]
     },
     "foundational-csharp": {"status":"not-started","started":false,"completed":[]},
