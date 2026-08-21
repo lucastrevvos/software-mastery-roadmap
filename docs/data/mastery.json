@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-21T01:18:00-03:00",
+  "updatedAt": "2026-08-21T11:39:01-03:00",
   "scale": {
     "0": "desconhecido/não avaliado",
     "1": "reconhece",
@@ -65,6 +65,18 @@
       "dimensions": {"recall":"pass","trace":"pass","rebuild":"pass","repair":"pass","transfer":"pass"},
       "note": "Baseline imediato aprovado após correções direcionadas. Retenção ainda precisa ser comprovada em revisões espaçadas.",
       "next": "RET-CS50-000-D1"
+    },
+    {
+      "review": "RET-CS50-000-D1",
+      "sourceLab": "LAB-CS50-000",
+      "commit": "0dd2f090e02a985308a35cad444be5725ed2a7b7",
+      "date": "2026-08-21",
+      "status": "partial-retention",
+      "dimensions": {"recall":"partial","trace":"partial","rebuild":"not-tested","repair":"pass","transfer":"partial"},
+      "retained": ["nested-control-flow","state-lifecycle"],
+      "reopened": ["control-flow-tracing","loops"],
+      "note": "Revisão prevista para 2026-08-20 foi concluída um dia depois. O espaçamento seguinte foi reancorado na data real da revisão.",
+      "next": "RET-CS50-000-D3"
     }
   ],
   "competencies": [
@@ -74,8 +86,8 @@
       "domain": "programming-fundamentals",
       "level": 3,
       "provisional": true,
-      "evidence": ["CS50 Lecture 0","Scratch project: Bug vs Developer","LAB-CS50-000 baseline aprovado após R5"],
-      "nextGate": "RET-CS50-000-D1"
+      "evidence": ["CS50 Lecture 0","Scratch project: Bug vs Developer","LAB-CS50-000 baseline aprovado após R5","RET-CS50-000-D1: transferência reconheceu a parada na terceira falha, mas não informou o estado final completo"],
+      "nextGate": "RET-CS50-000-D3"
     },
     {
       "id": "variables-state",
@@ -83,8 +95,8 @@
       "domain": "programming-fundamentals",
       "level": 3,
       "provisional": true,
-      "evidence": ["Uso de pontuação/estado no projeto Scratch","LAB-CS50-000 R5: estado antes/depois de atribuições e restart completo executados corretamente"],
-      "nextGate": "RET-CS50-000-D1"
+      "evidence": ["Uso de pontuação/estado no projeto Scratch","LAB-CS50-000 R5: estado antes/depois de atribuições e restart completo executados corretamente","RET-CS50-000-D1: tracing sequencial de count regrediu para 5,15,15 em vez de 3,5,15; restart permaneceu correto"],
+      "nextGate": "RET-CS50-000-D3"
     },
     {
       "id": "conditionals",
@@ -92,8 +104,8 @@
       "domain": "programming-fundamentals",
       "level": 3,
       "provisional": true,
-      "evidence": ["Condições de vitória/derrota no projeto Scratch","LAB-CS50-000 R5: condicionais aninhadas executadas literalmente com ramos verdadeiro e falso"],
-      "nextGate": "RET-CS50-000-D1"
+      "evidence": ["Condições de vitória/derrota no projeto Scratch","LAB-CS50-000 R5: condicionais aninhadas executadas literalmente com ramos verdadeiro e falso","RET-CS50-000-D1: ramos enabled=true/false e health > 0 executados literalmente após intervalo"],
+      "nextGate": "RET-CS50-000-D3"
     },
     {
       "id": "loops",
@@ -101,8 +113,8 @@
       "domain": "programming-fundamentals",
       "level": 3,
       "provisional": true,
-      "evidence": ["Movimento/repetição de sprites no projeto Scratch","LAB-CS50-000 R1: modelo corrigido para repetição por contagem ou condição"],
-      "nextGate": "RET-CS50-000-D1"
+      "evidence": ["Movimento/repetição de sprites no projeto Scratch","LAB-CS50-000 R1: modelo corrigido para repetição por contagem ou condição","RET-CS50-000-D1: conceito de condição/progresso de parada não foi recuperado com precisão"],
+      "nextGate": "RET-CS50-000-D3"
     },
     {
       "id": "functions-abstraction",
@@ -110,8 +122,8 @@
       "domain": "programming-fundamentals",
       "level": 2,
       "provisional": true,
-      "evidence": ["Custom block com input exigido no CS50 Pset 0","LAB-CS50-000 R1: abstração explicada por encapsulamento/reuso e parametrização"],
-      "nextGate": "RET-CS50-000-D1"
+      "evidence": ["Custom block com input exigido no CS50 Pset 0","LAB-CS50-000 R1: abstração explicada por encapsulamento/reuso e parametrização","RET-CS50-000-D1: abstração em bloco/função recuperada corretamente no Recall"],
+      "nextGate": "RET-CS50-000-D3"
     },
     {
       "id": "events-flow",
@@ -119,8 +131,8 @@
       "domain": "programming-fundamentals",
       "level": 3,
       "provisional": true,
-      "evidence": ["Eventos de teclado, restart e game state no Scratch","LAB-CS50-000 R1: evento e ação distinguidos corretamente no disparo"],
-      "nextGate": "RET-CS50-000-D1"
+      "evidence": ["Eventos de teclado, restart e game state no Scratch","LAB-CS50-000 R1: evento e ação distinguidos corretamente no disparo","RET-CS50-000-D1: resposta de Recall sobre evento versus ação ficou imprecisa e será retestada"],
+      "nextGate": "RET-CS50-000-D3"
     },
     {
       "id": "debugging-basics",
@@ -128,7 +140,7 @@
       "domain": "engineering-practice",
       "level": 3,
       "provisional": true,
-      "evidence": ["Correções de reinício, parada de sprites e conflito de tecla durante Pset 0","LAB-CS50-000 R5: tracing literal, alcance de blocos, estado por linha e regra health <= 0 corrigidos","CS50 Week 1 / PSet 1 concluídos; debugging em C será reavaliado no LAB-CS50-001"],
+      "evidence": ["Correções de reinício, parada de sprites e conflito de tecla durante Pset 0","LAB-CS50-000 R5: tracing literal, alcance de blocos, estado por linha e regra health <= 0 corrigidos","RET-CS50-000-D1: comportamento real do código de health e correção health <= 0 recuperados corretamente","CS50 Week 1 / PSet 1 concluídos; debugging em C será reavaliado no LAB-CS50-001"],
       "nextGate": "LAB-CS50-001"
     },
     {
