@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-21T16:37:00-03:00",
+  "updatedAt": "2026-08-21T17:01:00-03:00",
   "courses": {
     "cs50x": {
       "status": "in-progress",
@@ -17,6 +17,7 @@
         "Baseline LAB-CS50-000 aprovado em 2026-08-19.",
         "RET-CS50-000-D1 concluído em 2026-08-21 com retenção parcial; tracing por estado e loops voltaram à fila de retenção.",
         "Week 1 — C concluída e exercícios do Problem Set 1 enviados em 2026-08-21.",
+        "Baseline LAB-CS50-001 aprovado em 2026-08-21 após R2; retenção D+1 agendada para 2026-08-22.",
         "Próximo conteúdo oficial: Week 2 — Arrays."
       ]
     },
@@ -58,12 +59,12 @@
     },
     "LAB-CS50-001": {
       "source": "CS50 Week 1 — C + Problem Set 1",
-      "status": "correction-required",
-      "attempts": 2,
-      "lastAttempt": "2026-08-21T16:37:00-03:00",
-      "lastCommit": "d1e911e371d7ab645fc4e813b73bf6e92dddd56d",
+      "status": "passed-baseline",
+      "attempts": 3,
+      "lastAttempt": "2026-08-21T17:00:46-03:00",
+      "lastCommit": "48fa9acaf7117cbb2838b1ced378b88a19aecb4f",
       "lastResult": {
-        "recall": "partial",
+        "recall": "pass",
         "trace": "pass",
         "rebuild": "pass",
         "repair": "pass",
@@ -77,7 +78,9 @@
         "numeric-representation",
         "debugging-basics"
       ],
-      "next": "REV-CS50-001-R2"
+      "retentionStatus": "pending",
+      "next": "RET-CS50-001-D1",
+      "nextDueDate": "2026-08-22"
     }
   }
 }
