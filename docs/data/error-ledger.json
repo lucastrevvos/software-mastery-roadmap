@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-21T16:00:00-03:00",
+  "updatedAt": "2026-08-21T16:37:00-03:00",
   "statuses": {
     "open": "erro/vazamento identificado",
     "corrected": "corrigido em nova tentativa",
@@ -93,29 +93,35 @@
     },
     {
       "id": "ERR-CS50-001-001",
-      "status": "open",
+      "status": "corrected",
       "domain": "compilation-cli",
       "title": "make confundido com o compilador",
       "source": "LAB-CS50-001 attempt 1",
       "commit": "03625d70185e5ef593f42ba2f452e83118ffa8e3",
-      "evidence": "No Recall A3, make foi descrito como o comando que mostra ao compilador qual arquivo executar e a resposta afirmou que make é o compilador. O papel de ferramenta de build versus compilador ainda não está separado.",
-      "correctionTarget": "REV-CS50-001-R1 A: modelar explicitamente source file → make/build rule → compiler → executable.",
+      "evidence": "Na R1-A, hello.c, make, compilador e executável foram separados corretamente; make foi descrito como ferramenta de automação que decide como chamar o compilador, e o compilador como o tradutor efetivo.",
+      "correctionTarget": "Confirmar em revisão espaçada após o baseline.",
       "firstSeen": "2026-08-21",
       "lastSeen": "2026-08-21",
-      "lastCommit": "03625d70185e5ef593f42ba2f452e83118ffa8e3"
+      "lastCommit": "03625d70185e5ef593f42ba2f452e83118ffa8e3",
+      "correctedAt": "2026-08-21",
+      "correctionCommit": "d1e911e371d7ab645fc4e813b73bf6e92dddd56d",
+      "correctionEvidence": "R1-A distinguiu ferramenta de build, compilador, código-fonte e executável."
     },
     {
       "id": "ERR-CS50-001-002",
-      "status": "open",
+      "status": "corrected",
       "domain": "numeric-representation",
       "title": "Divisão inteira não reconhecida no Repair antes da atribuição a float",
       "source": "LAB-CS50-001 attempt 1",
       "commit": "03625d70185e5ef593f42ba2f452e83118ffa8e3",
-      "evidence": "O broken.c permaneceu com float average = total / people, onde total e people são int. A resposta aceitou average=3.0 como correto, embora a parte fracionária tenha sido perdida durante a divisão inteira antes da atribuição ao float. Curiosamente, o mesmo mecanismo foi reconhecido corretamente em E3, mostrando conhecimento ainda não transferido para debugging.",
-      "correctionTarget": "REV-CS50-001-R1 B: prever o tipo da operação antes da atribuição, localizar o ponto em que a precisão é perdida e corrigir o código em broken-r1.c.",
+      "evidence": "Na R1-B, a resposta identificou corretamente que 11/4 perde a parte fracionária antes da atribuição e mostrou duas correções que promovem um operando antes da divisão. broken-r1.c também passou a usar operando de ponto flutuante e preserva 3.5 para 7/2.",
+      "correctionTarget": "Confirmar em revisão espaçada após o baseline.",
       "firstSeen": "2026-08-21",
       "lastSeen": "2026-08-21",
-      "lastCommit": "03625d70185e5ef593f42ba2f452e83118ffa8e3"
+      "lastCommit": "03625d70185e5ef593f42ba2f452e83118ffa8e3",
+      "correctedAt": "2026-08-21",
+      "correctionCommit": "d1e911e371d7ab645fc4e813b73bf6e92dddd56d",
+      "correctionEvidence": "R1-B explicou a ordem de avaliação e aplicou promoção/conversão antes da divisão."
     },
     {
       "id": "ERR-CS50-001-003",
@@ -124,24 +130,27 @@
       "title": "Conversão para tipo menor modelada genericamente como erro de execução",
       "source": "LAB-CS50-001 attempt 1",
       "commit": "03625d70185e5ef593f42ba2f452e83118ffa8e3",
-      "evidence": "No Recall A6, a resposta afirmou que converter valor para uma variável de tipo menor 'irá dar erro de execução'. Esse modelo não distingue truncamento de parte fracionária, valor fora da faixa do destino, conversões permitidas e comportamento específico/indefinido.",
-      "correctionTarget": "REV-CS50-001-R1 C: classificar exemplos concretos de conversão e identificar qual informação pode ser perdida em cada um.",
+      "evidence": "A R1 melhorou o modelo ao identificar valor fora da faixa, divisão inteira e perda fracionária separadamente. Ainda chamou a conversão long→int fora da faixa de 'integer overflow' e descreveu double→int como truncamento explícito, embora a atribuição sem cast seja uma conversão implícita. Falta separar operação aritmética de conversão e conversão implícita de cast explícito.",
+      "correctionTarget": "REV-CS50-001-R2: distinguir aritmética fora da faixa versus conversão para tipo de destino não representável, e implícito versus cast explícito.",
       "firstSeen": "2026-08-21",
       "lastSeen": "2026-08-21",
-      "lastCommit": "03625d70185e5ef593f42ba2f452e83118ffa8e3"
+      "lastCommit": "d1e911e371d7ab645fc4e813b73bf6e92dddd56d"
     },
     {
       "id": "ERR-CS50-001-004",
-      "status": "open",
+      "status": "corrected",
       "domain": "verification-discipline",
       "title": "Rebuild entregue sem registrar os casos de teste obrigatórios",
       "source": "LAB-CS50-001 attempt 1",
       "commit": "03625d70185e5ef593f42ba2f452e83118ffa8e3",
-      "evidence": "digitstats.c implementa corretamente a decomposição por % 10 e / 10 para inteiros positivos, mas answers.md não contém os quatro casos de teste pedidos, incluindo entrada inválida. A funcionalidade foi entregue sem a evidência de verificação exigida pelo gate.",
-      "correctionTarget": "REV-CS50-001-R1 D: executar e registrar quatro casos, incluindo um dígito, múltiplos dígitos, zeros internos/finais e rejeição de entrada inválida.",
+      "evidence": "R1-D registrou os quatro casos exigidos: 7, 4827, 1000 e -5 seguido de 42, incluindo a rejeição da entrada inválida e a justificativa do papel de testes além da compilação.",
+      "correctionTarget": "Confirmar disciplina de verificação em labs futuros.",
       "firstSeen": "2026-08-21",
       "lastSeen": "2026-08-21",
-      "lastCommit": "03625d70185e5ef593f42ba2f452e83118ffa8e3"
+      "lastCommit": "03625d70185e5ef593f42ba2f452e83118ffa8e3",
+      "correctedAt": "2026-08-21",
+      "correctionCommit": "d1e911e371d7ab645fc4e813b73bf6e92dddd56d",
+      "correctionEvidence": "R1-D forneceu a tabela completa de testes e explicou por que compilação sem warnings não substitui verificação comportamental."
     }
   ]
 }
