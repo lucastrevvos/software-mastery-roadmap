@@ -1,19 +1,33 @@
 {
-  "updatedAt": "2026-08-19T16:42:00-03:00",
+  "updatedAt": "2026-08-21T01:18:00-03:00",
   "courses": {
     "cs50x": {
       "status": "in-progress",
       "started": true,
-      "completed": ["lecture-0","problem-set-0-scratch"],
-      "current": "lecture-1",
-      "notes": ["Lecture 0 concluída.","Projeto Scratch Bug vs Developer concluído, validado e submetido via CS50.","Baseline LAB-CS50-000 aprovado em 2026-08-19; retenção D+1 agendada para 2026-08-20."]
+      "completed": [
+        "lecture-0",
+        "problem-set-0-scratch",
+        "week-1-c",
+        "problem-set-1"
+      ],
+      "current": "week-2-arrays",
+      "notes": [
+        "Lecture 0 concluída.",
+        "Projeto Scratch Bug vs Developer concluído, validado e submetido via CS50.",
+        "Baseline LAB-CS50-000 aprovado em 2026-08-19.",
+        "Week 1 — C concluída e exercícios do Problem Set 1 enviados em 2026-08-21.",
+        "Próximo conteúdo oficial: Week 2 — Arrays."
+      ]
     },
     "fcc-js-v10": {
       "status": "in-progress",
       "started": true,
       "completed": [],
       "current": "unknown-section",
-      "notes": ["Curso em andamento em paralelo ao CS50x.","A seção atual será refinada conforme novos avanços forem informados no chat."]
+      "notes": [
+        "Curso em andamento em paralelo ao CS50x.",
+        "A seção atual será refinada conforme novos avanços forem informados no chat."
+      ]
     },
     "foundational-csharp": {"status":"not-started","started":false,"completed":[]},
     "cs50-sql": {"status":"not-started","started":false,"completed":[]},
@@ -32,9 +46,23 @@
         "repair": "pass",
         "transfer": "pass"
       },
-      "retentionStatus": "pending",
+      "retentionStatus": "overdue",
       "next": "RET-CS50-000-D1",
       "nextDueDate": "2026-08-20"
+    },
+    "LAB-CS50-001": {
+      "source": "CS50 Week 1 — C + Problem Set 1",
+      "status": "ready",
+      "attempts": 0,
+      "path": "labs/cs50/week-01/LAB-CS50-001/README.md",
+      "targets": [
+        "c-fundamentals",
+        "c-control-flow",
+        "compilation-cli",
+        "numeric-representation",
+        "debugging-basics"
+      ],
+      "next": "LAB-CS50-001"
     }
   }
 }
