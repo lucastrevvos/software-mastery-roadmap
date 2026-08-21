@@ -8,12 +8,12 @@ int main(void)
 
     int score = 9;
 
-    if (score = 10)
+    if (score == 10)
     {
         printf("perfect\n");
     }
 
-    for (int i = 1; i <= 3; i--)
+    for (int i = 1; i <= 3; i++)
     {
         printf("%i\n", i);
     }
