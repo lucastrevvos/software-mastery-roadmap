@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-22T22:17:00-03:00",
+  "updatedAt": "2026-08-24T13:36:00-03:00",
   "courses": {
     "cs50x": {
       "status": "in-progress",
@@ -9,19 +9,20 @@
         "problem-set-0-scratch",
         "week-1-c",
         "problem-set-1",
-        "week-2-arrays"
+        "week-2-arrays",
+        "problem-set-2"
       ],
-      "current": "problem-set-2",
+      "current": "week-3-algorithms",
       "notes": [
         "Lecture 0 concluída.",
         "Projeto Scratch Bug vs Developer concluído, validado e submetido via CS50.",
         "Baseline LAB-CS50-000 aprovado em 2026-08-19.",
         "RET-CS50-000-D1 concluído em 2026-08-21 com retenção parcial; tracing por estado e loops voltaram à fila de retenção.",
         "Week 1 — C concluída e exercícios do Problem Set 1 enviados em 2026-08-21.",
-        "Baseline LAB-CS50-001 aprovado em 2026-08-21 após R2; retenção D+1 agendada para 2026-08-22.",
+        "Baseline LAB-CS50-001 aprovado em 2026-08-21 após R2.",
         "Week 2 — Arrays assistida e concluída em 2026-08-22.",
-        "Problem Set 2 em andamento; exercícios ainda não registrados como concluídos.",
-        "Ordem oficial do PSet 2: Scrabble, Readability e depois Caesar ou Substitution."
+        "Problem Set 2 concluído em 2026-08-24 com Scrabble, Readability e Caesar.",
+        "A partir do PSet 2, CS50 entra em Velocity Mode: exercícios oficiais são a prática principal; labs grandes ficam para checkpoints cumulativos e para o sprint de mastery pós-curso; durante o curso, retestar apenas erros conceituais e fundamentos transferíveis."
       ]
     },
     "fcc-js-v10": {
@@ -69,8 +70,8 @@
       "lastRetentionCommit": "0dd2f090e02a985308a35cad444be5725ed2a7b7",
       "retained": ["nested-control-flow","state-lifecycle"],
       "reopened": ["control-flow-tracing","loops"],
-      "next": "RET-CS50-000-D3",
-      "nextDueDate": "2026-08-24"
+      "next": "cumulative-checkpoint",
+      "nextDueDate": null
     },
     "LAB-CS50-001": {
       "source": "CS50 Week 1 — C + Problem Set 1",
@@ -93,16 +94,16 @@
         "numeric-representation",
         "debugging-basics"
       ],
-      "retentionStatus": "pending",
-      "next": "RET-CS50-001-D1",
-      "nextDueDate": "2026-08-22"
+      "retentionStatus": "merged-into-cumulative-checkpoints",
+      "next": "cumulative-checkpoint",
+      "nextDueDate": null
     },
     "LAB-CS50-002": {
       "source": "CS50 Week 2 — Arrays + Problem Set 2",
-      "status": "future-after-pset2",
+      "status": "deferred-comprehensive",
       "attempts": 0,
       "path": "labs/cs50/week-02/LAB-CS50-002/README.md",
-      "note": "Gate já preparado, mas só deve ser feito depois da conclusão do Problem Set 2."
+      "note": "O lab completo foi preservado, mas foi adiado para um checkpoint cumulativo ou para o sprint de mastery pós-CS50. Durante o curso, o PSet oficial é a prática principal e só vazamentos conceituais relevantes serão retestados."
     }
   }
 }
