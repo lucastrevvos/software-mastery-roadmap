@@ -1,0 +1,29 @@
+{
+  "meta": {
+    "version": "1.0.0",
+    "updatedAt": "2026-08-25T13:03:00-03:00",
+    "purpose": "Anotações pessoais, modelos mentais e resumos úteis das conversas de estudo, vinculados diretamente a cada curso do roadmap."
+  },
+  "courses": {
+    "cs50x": [
+      {
+        "id": "CS50-NOTE-001",
+        "date": "2026-08-25",
+        "type": "mental-model",
+        "title": "Memória: bits, bytes, endereços e variáveis",
+        "summary": "A memória do computador pode ser entendida como uma grande sequência de bytes numerados por endereços. Bits formam bytes; bytes armazenam padrões binários; tipos e programas dão significado a esses padrões.",
+        "points": [
+          "Um bit representa dois estados possíveis, normalmente abstraídos como 0 ou 1.",
+          "Um byte é um grupo de 8 bits. Com 8 bits existem 256 padrões possíveis, de 00000000 a 11111111.",
+          "A RAM pode ser imaginada como uma longa sequência de bytes. Cada posição possui um endereço que permite ao processador localizar os dados.",
+          "Quando um programa cria uma variável, bytes da memória são reservados para guardar seu valor. O tipo informa como aqueles bits devem ser interpretados e, em C, também está ligado à quantidade de memória usada.",
+          "O mesmo padrão de bits pode ter significados diferentes conforme a interpretação. Por exemplo, 01000001 representa o número decimal 65 e, em uma codificação como ASCII, também representa o caractere 'A'.",
+          "Arrays ajudam a visualizar a memória porque seus elementos ficam em posições consecutivas. Se cada elemento ocupa vários bytes, o próximo começa depois desses bytes.",
+          "Um ponteiro não é o dado apontado: ele guarda um endereço de memória. Por isso entender bytes e endereços prepara o terreno para compreender pointers no CS50."
+        ],
+        "mentalModel": "bits → bytes → endereços de memória → valores → tipos dão significado → variáveis usam essas regiões → ponteiros guardam endereços",
+        "relatedTopics": ["binary", "ASCII", "RAM", "C types", "arrays", "pointers", "memory"]
+      }
+    ]
+  }
+}
