@@ -58,7 +58,20 @@ function paidPrice(item){
   const price=item.examPrice||item.programPrice;
   if(!price) return '';
   const base=item.priceAsOf?` · base ${item.priceAsOf}`:'';
-  return `<small style="display:block;margin-top:5px"><strong>Preço:</strong> ${price}${base}</small>`;
+  return `<small class="roadmap-price"><strong>Preço:</strong> ${price}${base}</small>`;
+}
+
+function isFreeCredential(item){
+  if(item.priority==='free-credential') return true;
+  if(item.cost!=='free') return false;
+  const credential=(item.credential||'').toLowerCase();
+  const externalCredential=/(certificate|certification|digital credential|micro-credential|university certificate|ects|badge)/.test(credential);
+  const internalOnly=/(no external certificate|mastery|portfolio|applied project|documentation)/.test(credential);
+  return externalCredential&&!internalOnly;
+}
+
+function freeCredentialBadge(item){
+  return isFreeCredential(item)?'<span class="free-credential-badge">CERTIFICAÇÃO GRÁTIS</span>':'';
 }
 
 function renderRoadmap(roadmap){
@@ -75,9 +88,9 @@ function renderRoadmap(roadmap){
       <p>${phase.goal}</p>
       <div class="phase-items">
         ${phase.items.map(item=>`
-          <article class="roadmap-item">
+          <article class="roadmap-item ${isFreeCredential(item)?'roadmap-item-free-credential':''}">
             <div>
-              <h4>${item.order}. ${item.title}</h4>
+              <div class="roadmap-title-line"><h4>${item.order}. ${item.title}</h4>${freeCredentialBadge(item)}</div>
               <small>${item.provider} · ${item.credential}</small>
               ${paidPrice(item)}
             </div>
