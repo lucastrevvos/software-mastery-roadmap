@@ -1,0 +1,24 @@
+{
+  "meta": {
+    "version": "1.0.0",
+    "updatedAt": "2026-08-25T16:45:00-03:00",
+    "purpose": "Catálogo de materiais visuais ligados às anotações e cursos do roadmap."
+  },
+  "materials": [
+    {
+      "id": "CS50-VISUAL-001",
+      "courseId": "cs50x",
+      "noteId": "CS50-NOTE-003",
+      "date": "2026-08-25",
+      "title": "Node.js — Event Loop e libuv",
+      "type": "infographic",
+      "description": "Infográfico visual sobre Node.js, V8, libuv, event loop, sockets, thread pool e fluxo de callbacks.",
+      "storage": {
+        "provider": "Canva",
+        "assetId": "MAHTVAe8M-Q",
+        "assetName": "CS50 - Node.js Event Loop e libuv"
+      },
+      "topics": ["Node.js", "V8", "libuv", "event loop", "call stack", "thread pool", "sockets", "asynchronous I/O"]
+    }
+  ]
+}
