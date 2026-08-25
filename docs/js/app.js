@@ -12,6 +12,12 @@ function statusLabel(status){
 
 function statusClass(status){return `status status-${status}`;}
 
+function escapeHtml(value){
+  return String(value??'').replace(/[&<>"']/g,char=>({
+    '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'
+  })[char]);
+}
+
 function renderCurrent(progress){
   const courses=Object.entries(progress.courses).filter(([,c])=>c.status==='in-progress');
   $('#current-courses').innerHTML=courses.map(([id,c])=>`
@@ -128,7 +134,32 @@ function roadmapDescription(item){
   return item.description||roadmapDescriptions[item.id]||item.note||'';
 }
 
-function renderRoadmap(roadmap){
+function renderCourseNotes(notes=[]){
+  if(!notes.length) return '';
+  return `
+    <details class="course-notes">
+      <summary>Anotações & resumos <span>${notes.length}</span></summary>
+      <div class="course-notes-list">
+        ${notes.map(note=>`
+          <article class="course-note">
+            <div class="course-note-head">
+              <div>
+                <span class="course-note-type">${escapeHtml(note.type||'nota')}</span>
+                <h5>${escapeHtml(note.title)}</h5>
+              </div>
+              <time>${escapeHtml(note.date||'')}</time>
+            </div>
+            ${note.summary?`<p>${escapeHtml(note.summary)}</p>`:''}
+            ${note.points?.length?`<ul>${note.points.map(point=>`<li>${escapeHtml(point)}</li>`).join('')}</ul>`:''}
+            ${note.mentalModel?`<div class="note-mental-model"><strong>Modelo mental</strong><code>${escapeHtml(note.mentalModel)}</code></div>`:''}
+            ${note.relatedTopics?.length?`<div class="note-tags">${note.relatedTopics.map(tag=>`<span>${escapeHtml(tag)}</span>`).join('')}</div>`:''}
+          </article>
+        `).join('')}
+      </div>
+    </details>`;
+}
+
+function renderRoadmap(roadmap,courseNotes){
   const items=roadmap.phases.flatMap(p=>p.items);
   const completed=items.filter(i=>['completed','mastered'].includes(i.status)).length;
   const active=items.filter(i=>i.status==='in-progress').length;
@@ -148,6 +179,7 @@ function renderRoadmap(roadmap){
               ${roadmapDescription(item)?`<p class="roadmap-description">${roadmapDescription(item)}</p>`:''}
               <small>${item.provider} · ${item.credential}</small>
               ${paidPrice(item)}
+              ${renderCourseNotes(courseNotes?.courses?.[item.id]||[])}
             </div>
             <span class="${statusClass(item.status)}">${statusLabel(item.status)}</span>
           </article>`).join('')}
@@ -157,18 +189,19 @@ function renderRoadmap(roadmap){
 
 async function init(){
   try{
-    const [roadmap,progress,mastery,reviews,ledger]=await Promise.all([
+    const [roadmap,progress,mastery,reviews,ledger,courseNotes]=await Promise.all([
       loadJson('data/roadmap.json'),
       loadJson('data/progress.json'),
       loadJson('data/mastery.json'),
       loadJson('data/reviews.json'),
-      loadJson('data/error-ledger.json')
+      loadJson('data/error-ledger.json'),
+      loadJson('data/course-notes.json')
     ]);
     renderCurrent(progress);
     renderMastery(mastery);
     renderReviews(reviews);
     renderErrors(ledger);
-    renderRoadmap(roadmap);
+    renderRoadmap(roadmap,courseNotes);
     $('#last-updated').textContent=`Atualizado ${progress.updatedAt.replace('T',' ').replace('-03:00',' BRT')}`;
   }catch(error){
     console.error(error);
