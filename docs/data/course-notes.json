@@ -1,7 +1,7 @@
 {
   "meta": {
-    "version": "1.0.0",
-    "updatedAt": "2026-08-25T13:03:00-03:00",
+    "version": "1.1.0",
+    "updatedAt": "2026-08-25T15:35:00-03:00",
     "purpose": "Anotações pessoais, modelos mentais e resumos úteis das conversas de estudo, vinculados diretamente a cada curso do roadmap."
   },
   "courses": {
@@ -23,6 +23,27 @@
         ],
         "mentalModel": "bits → bytes → endereços de memória → valores → tipos dão significado → variáveis usam essas regiões → ponteiros guardam endereços",
         "relatedTopics": ["binary", "ASCII", "RAM", "C types", "arrays", "pointers", "memory"]
+      },
+      {
+        "id": "CS50-NOTE-002",
+        "date": "2026-08-25",
+        "type": "mental-model",
+        "title": "Recursão, stack frames e stack overflow",
+        "summary": "Cada chamada de função precisa manter estado suficiente para que o programa saiba onde continuar quando ela retornar. Em uma chamada recursiva, a função anterior ainda não terminou, então novas chamadas se acumulam na stack. Se a profundidade crescer além do espaço reservado para essa stack, ocorre stack overflow.",
+        "points": [
+          "A stack é uma região de memória usada para organizar chamadas de função. Cada thread normalmente possui sua própria stack, com tamanho limitado.",
+          "Uma chamada de função cria, conceitualmente, um stack frame: um bloco de estado associado àquela chamada. Ele pode incluir variáveis locais, endereço de retorno, registradores salvos e outros dados definidos pelo compilador e pela convenção de chamada.",
+          "Nem todo argumento precisa fisicamente ficar na stack: em arquiteturas modernas vários argumentos podem ser passados em registradores. O ponto importante é que cada chamada precisa preservar estado para conseguir retornar corretamente.",
+          "Na recursão, a chamada atual fica pendente enquanto chama outra instância da mesma função. Por isso os frames se acumulam: f(5) espera f(4), que espera f(3), e assim por diante.",
+          "Uma condição de parada impede que a profundidade cresça indefinidamente. Quando ela é atingida, os retornos começam e a stack é desempilhada: cada chamada concluída libera seu frame.",
+          "Recursão infinita ou recursão profunda demais pode esgotar a região reservada para a stack. O programa então tenta ultrapassar esse limite e normalmente é encerrado pelo sistema, podendo aparecer como stack overflow ou segmentation fault.",
+          "Isso não significa, em geral, que toda a RAM do computador acabou. O que acabou foi o espaço permitido para a stack daquele fluxo de execução.",
+          "Um loop comum não cria uma cadeia de chamadas aninhadas a cada iteração. Por isso repetir um milhão de vezes em um loop não equivale a criar um milhão de stack frames recursivos.",
+          "A quantidade exata de memória usada por cada chamada depende do código, compilador, arquitetura, otimizações e ABI; não existe um tamanho universal de stack frame.",
+          "Em C, esse comportamento conecta diretamente memória abstrata e memória física do processo: stack frames ocupam bytes localizados em endereços virtuais que o sistema operacional mapeia e protege."
+        ],
+        "mentalModel": "chamada de função → estado da chamada precisa ser preservado → stack frame → chamada recursiva cria outro frame → profundidade cresce → condição de parada permite desempilhar; sem espaço suficiente → stack overflow",
+        "relatedTopics": ["C", "recursion", "stack", "stack frame", "stack overflow", "function calls", "memory", "segmentation fault"]
       }
     ]
   }
