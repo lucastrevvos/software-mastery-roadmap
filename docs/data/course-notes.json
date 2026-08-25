@@ -1,7 +1,7 @@
 {
   "meta": {
-    "version": "1.1.0",
-    "updatedAt": "2026-08-25T15:35:00-03:00",
+    "version": "1.2.0",
+    "updatedAt": "2026-08-25T16:39:00-03:00",
     "purpose": "Anotações pessoais, modelos mentais e resumos úteis das conversas de estudo, vinculados diretamente a cada curso do roadmap."
   },
   "courses": {
@@ -44,6 +44,27 @@
         ],
         "mentalModel": "chamada de função → estado da chamada precisa ser preservado → stack frame → chamada recursiva cria outro frame → profundidade cresce → condição de parada permite desempilhar; sem espaço suficiente → stack overflow",
         "relatedTopics": ["C", "recursion", "stack", "stack frame", "stack overflow", "function calls", "memory", "segmentation fault"]
+      },
+      {
+        "id": "CS50-NOTE-003",
+        "date": "2026-08-25",
+        "type": "mental-model",
+        "title": "Node.js por dentro: V8, libuv, event loop, sockets e threads",
+        "summary": "Node.js é um programa executável que, quando iniciado, vira um processo. Dentro desse processo, o V8 executa JavaScript e a libuv fornece a infraestrutura de I/O assíncrono. O event loop é uma parte da libuv: ele coordena quando trabalhos que ficaram prontos podem voltar a ser tratados pelo JavaScript.",
+        "points": [
+          "node.exe é o executável; ao ser iniciado, o sistema operacional cria o processo Node. V8 e libuv não são programas .exe separados: são componentes incorporados ao Node.",
+          "O V8 é o motor responsável por interpretar/compilar e executar o JavaScript. Ele mantém estruturas como a call stack e o heap do JavaScript.",
+          "A libuv é uma biblioteca nativa usada pelo Node. Dentro dela existem o event loop, suporte a timers, thread pool, rede, filesystem e outras abstrações de I/O.",
+          "O event loop não executa JavaScript. Ele coordena o fluxo de eventos e conclusões; quando a thread principal pode receber novo trabalho, o Node volta a entregar o callback ao V8 para execução.",
+          "Uma operação de rede normalmente não cria uma nova thread para cada conexão. A libuv registra sockets e usa mecanismos assíncronos do sistema operacional, como epoll no Linux, kqueue em sistemas BSD/macOS ou IOCP no Windows.",
+          "Socket é um canal de comunicação administrado pelo sistema operacional. Ele não é uma thread nem uma fila de JavaScript.",
+          "Algumas operações que não têm uma interface assíncrona conveniente no sistema operacional, como certas tarefas de filesystem, DNS, crypto e compressão, podem usar o thread pool da libuv.",
+          "A thread principal do Node continua disponível enquanto a rede, um timer ou um worker aguarda/conclui trabalho. Quando o resultado fica pronto, a libuv o sinaliza e o event loop coordena a volta ao JavaScript.",
+          "Se o JavaScript ocupa a thread principal por muito tempo, por exemplo com um while infinito ou uma tarefa pesada de CPU, o event loop não consegue fazer callbacks avançarem. Isso é bloquear o event loop.",
+          "Node não tornou I/O magicamente mais rápido: ele evita desperdiçar a thread principal esperando operações que podem ser acompanhadas pelo sistema operacional ou por workers."
+        ],
+        "mentalModel": "node.exe → processo Node → V8 executa JavaScript; Node chama APIs nativas → libuv → (kernel/sockets ou thread pool) → operação termina → event loop coordena → V8 executa o callback",
+        "relatedTopics": ["Node.js", "V8", "libuv", "event loop", "call stack", "thread", "thread pool", "socket", "kernel", "epoll", "IOCP", "asynchronous I/O"]
       }
     ]
   }
