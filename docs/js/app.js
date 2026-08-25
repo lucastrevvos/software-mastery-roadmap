@@ -54,6 +54,13 @@ function renderErrors(ledger){
   $('#errors-open').textContent=open;
 }
 
+function paidPrice(item){
+  const price=item.examPrice||item.programPrice;
+  if(!price) return '';
+  const base=item.priceAsOf?` · base ${item.priceAsOf}`:'';
+  return `<small style="display:block;margin-top:5px"><strong>Preço:</strong> ${price}${base}</small>`;
+}
+
 function renderRoadmap(roadmap){
   const items=roadmap.phases.flatMap(p=>p.items);
   const completed=items.filter(i=>['completed','mastered'].includes(i.status)).length;
@@ -69,7 +76,11 @@ function renderRoadmap(roadmap){
       <div class="phase-items">
         ${phase.items.map(item=>`
           <article class="roadmap-item">
-            <div><h4>${item.order}. ${item.title}</h4><small>${item.provider} · ${item.credential}</small></div>
+            <div>
+              <h4>${item.order}. ${item.title}</h4>
+              <small>${item.provider} · ${item.credential}</small>
+              ${paidPrice(item)}
+            </div>
             <span class="${statusClass(item.status)}">${statusLabel(item.status)}</span>
           </article>`).join('')}
       </div>
