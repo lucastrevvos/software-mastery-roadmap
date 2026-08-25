@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Full Stack Software Architect & Cloud Engineer",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "updatedAt": "2026-08-25",
     "principles": [
       "Fundamentos fortes antes de especialização",
@@ -32,7 +32,9 @@
         {"id":"full-stack-open-core","order":6,"title":"Full Stack Open — Core 0–7","provider":"University of Helsinki","credential":"University certificate / ECTS where applicable","cost":"free","status":"not-started","priority":"core"},
         {"id":"full-stack-open-extensions","order":7,"title":"Full Stack Open — extensões relevantes","provider":"University of Helsinki","credential":"University certificate / ECTS where applicable","cost":"free","status":"not-started","priority":"recommended"},
         {"id":"angular-advanced","order":8,"title":"Angular avançado + SSR/SSG","provider":"Mastery Lab","credential":"Internal Mastery Gate","cost":"free","status":"not-started","priority":"stack"},
-        {"id":"dotnet-backend","order":9,"title":".NET/C# Backend Engineering","provider":"Microsoft Learn + Mastery Lab","credential":"Applied portfolio + badges where available","cost":"free","status":"not-started","priority":"stack"}
+        {"id":"hackerrank-angular-basic","order":9,"title":"Angular (Basic) Skills Certification","provider":"HackerRank","credential":"HackerRank Angular (Basic) Certificate","cost":"free","status":"not-started","priority":"optional-free-credential","assessment":"60-minute timed assessment; 2 frontend questions","note":"Radar de credencial gratuita. HackerRank não oferece um curso Angular completo nesta certificação; o SkillUp usa desafios práticos obrigatórios antes de liberar a prova e pode oferecer AI tutor durante a prática. O Angular Basic atualmente é listado como tentativa única."},
+        {"id":"hackerrank-angular-intermediate","order":10,"title":"Angular (Intermediate) Skills Certification","provider":"HackerRank","credential":"HackerRank Angular (Intermediate) Certificate","cost":"free","status":"not-started","priority":"optional-free-credential","assessment":"90-minute timed assessment","note":"Radar de credencial gratuita. Preparação baseada em practice challenges/SkillUp, não em um curso completo. A matriz atual inclui Routing, NgModules, Observables, Dependency Injection e consumo de APIs; complementar com Angular moderno no Mastery Lab."},
+        {"id":"dotnet-backend","order":11,"title":".NET/C# Backend Engineering","provider":"Microsoft Learn + Mastery Lab","credential":"Applied portfolio + badges where available","cost":"free","status":"not-started","priority":"stack"}
       ]
     },
     {
@@ -40,13 +42,13 @@
       "title": "Web, Fundamentos de IA e Segurança",
       "goal": "Expandir para aplicações web avançadas e construir uma base certificada de IA/ML antes de avançar para IA aplicada, engenharia de IA e segurança.",
       "items": [
-        {"id":"cs50-web","order":10,"title":"CS50's Web Programming with Python and JavaScript","provider":"Harvard University","credential":"CS50 Certificate","cost":"free","status":"not-started","priority":"recommended"},
-        {"id":"ibm-ai-foundations-understanding","order":11,"title":"AI Fundamentals: Foundations for Understanding AI","provider":"IBM SkillsBuild","credential":"IBM SkillsBuild Digital Credential / Credly badge","cost":"free","status":"not-started","priority":"core","focus":["AI concepts","machine learning types","neural networks","deep learning","AI ethics","responsible AI"]},
-        {"id":"ibm-artificial-intelligence-fundamentals","order":12,"title":"Artificial Intelligence Fundamentals","provider":"IBM SkillsBuild","credential":"IBM SkillsBuild Digital Credential","cost":"free","status":"not-started","priority":"recommended","focus":["machine learning","deep learning","neural networks","NLP","computer vision","chatbots","AI model execution"]},
-        {"id":"alteryx-ml-fundamentals","order":13,"title":"Machine Learning Fundamentals Micro-Credential","provider":"Alteryx","credential":"Alteryx Machine Learning Fundamentals Micro-Credential / Credly","cost":"free","status":"not-started","priority":"core","assessment":"1-hour certification exam","focus":["machine learning concepts","data preparation","model selection","model evaluation","model interpretation"]},
-        {"id":"cs50-ai","order":14,"title":"CS50's Introduction to Artificial Intelligence with Python","provider":"Harvard University","credential":"CS50 Certificate","cost":"free","status":"not-started","priority":"core"},
-        {"id":"cs50-cyber","order":15,"title":"CS50's Introduction to Cybersecurity","provider":"Harvard University","credential":"CS50 Certificate","cost":"free","status":"not-started","priority":"core"},
-        {"id":"python-ai-engineering","order":16,"title":"Python para Engenharia de IA","provider":"Mastery Lab","credential":"Portfolio + Mastery Gate","cost":"free","status":"not-started","priority":"stack"}
+        {"id":"cs50-web","order":12,"title":"CS50's Web Programming with Python and JavaScript","provider":"Harvard University","credential":"CS50 Certificate","cost":"free","status":"not-started","priority":"recommended"},
+        {"id":"ibm-ai-foundations-understanding","order":13,"title":"AI Fundamentals: Foundations for Understanding AI","provider":"IBM SkillsBuild","credential":"IBM SkillsBuild Digital Credential / Credly badge","cost":"free","status":"not-started","priority":"core","focus":["AI concepts","machine learning types","neural networks","deep learning","AI ethics","responsible AI"]},
+        {"id":"ibm-artificial-intelligence-fundamentals","order":14,"title":"Artificial Intelligence Fundamentals","provider":"IBM SkillsBuild","credential":"IBM SkillsBuild Digital Credential","cost":"free","status":"not-started","priority":"recommended","focus":["machine learning","deep learning","neural networks","NLP","computer vision","chatbots","AI model execution"]},
+        {"id":"alteryx-ml-fundamentals","order":15,"title":"Machine Learning Fundamentals Micro-Credential","provider":"Alteryx","credential":"Alteryx Machine Learning Fundamentals Micro-Credential / Credly","cost":"free","status":"not-started","priority":"core","assessment":"1-hour certification exam","focus":["machine learning concepts","data preparation","model selection","model evaluation","model interpretation"]},
+        {"id":"cs50-ai","order":16,"title":"CS50's Introduction to Artificial Intelligence with Python","provider":"Harvard University","credential":"CS50 Certificate","cost":"free","status":"not-started","priority":"core"},
+        {"id":"cs50-cyber","order":17,"title":"CS50's Introduction to Cybersecurity","provider":"Harvard University","credential":"CS50 Certificate","cost":"free","status":"not-started","priority":"core"},
+        {"id":"python-ai-engineering","order":18,"title":"Python para Engenharia de IA","provider":"Mastery Lab","credential":"Portfolio + Mastery Gate","cost":"free","status":"not-started","priority":"stack"}
       ]
     },
     {
@@ -54,10 +56,10 @@
       "title": "Cloud Engineer",
       "goal": "Dominar fundamentos cloud, deploy, observabilidade, segurança e serviços gerenciados em provedores relevantes.",
       "items": [
-        {"id":"azure-foundations","order":17,"title":"Azure Fundamentals","provider":"Microsoft Learn","credential":"AZ-900 when strategically justified","cost":"mixed","status":"not-started","priority":"core"},
-        {"id":"azure-developer","order":18,"title":"Azure Developer","provider":"Microsoft Learn","credential":"AZ-204 when strategically justified","cost":"paid-voucher-target","status":"not-started","priority":"core"},
-        {"id":"aws-foundations","order":19,"title":"AWS Cloud Foundations","provider":"AWS Educate / Skill Builder","credential":"AWS badges; paid exam only with strong ROI/voucher","cost":"mixed","status":"not-started","priority":"core"},
-        {"id":"oci-foundations","order":20,"title":"OCI Foundations","provider":"Oracle University","credential":"Oracle/OCI credential where available","cost":"free-first","status":"not-started","priority":"recommended"}
+        {"id":"azure-foundations","order":19,"title":"Azure Fundamentals","provider":"Microsoft Learn","credential":"AZ-900 when strategically justified","cost":"mixed","status":"not-started","priority":"core"},
+        {"id":"azure-developer","order":20,"title":"Azure Developer","provider":"Microsoft Learn","credential":"AZ-204 when strategically justified","cost":"paid-voucher-target","status":"not-started","priority":"core"},
+        {"id":"aws-foundations","order":21,"title":"AWS Cloud Foundations","provider":"AWS Educate / Skill Builder","credential":"AWS badges; paid exam only with strong ROI/voucher","cost":"mixed","status":"not-started","priority":"core"},
+        {"id":"oci-foundations","order":22,"title":"OCI Foundations","provider":"Oracle University","credential":"Oracle/OCI credential where available","cost":"free-first","status":"not-started","priority":"recommended"}
       ]
     },
     {
@@ -65,10 +67,10 @@
       "title": "Software Architecture",
       "goal": "Evoluir de implementador para arquiteto capaz de modelar sistemas distribuídos, integrações e decisões técnicas.",
       "items": [
-        {"id":"architecture-foundations","order":21,"title":"Architecture Foundations","provider":"Mastery Lab","credential":"Architecture Mastery Gate","cost":"free","status":"not-started","priority":"core"},
-        {"id":"ddd-clean-hexagonal","order":22,"title":"DDD, Clean Architecture e Hexagonal","provider":"Mastery Lab","credential":"Applied architecture project","cost":"free","status":"not-started","priority":"core"},
-        {"id":"distributed-systems","order":23,"title":"Distributed Systems, Messaging & Resilience","provider":"Mastery Lab","credential":"Applied architecture project","cost":"free","status":"not-started","priority":"core"},
-        {"id":"observability-platform","order":24,"title":"Observability, CI/CD, Containers & Platform Engineering","provider":"Mastery Lab + cloud providers","credential":"Portfolio + provider badges","cost":"free-first","status":"not-started","priority":"core"}
+        {"id":"architecture-foundations","order":23,"title":"Architecture Foundations","provider":"Mastery Lab","credential":"Architecture Mastery Gate","cost":"free","status":"not-started","priority":"core"},
+        {"id":"ddd-clean-hexagonal","order":24,"title":"DDD, Clean Architecture e Hexagonal","provider":"Mastery Lab","credential":"Applied architecture project","cost":"free","status":"not-started","priority":"core"},
+        {"id":"distributed-systems","order":25,"title":"Distributed Systems, Messaging & Resilience","provider":"Mastery Lab","credential":"Applied architecture project","cost":"free","status":"not-started","priority":"core"},
+        {"id":"observability-platform","order":26,"title":"Observability, CI/CD, Containers & Platform Engineering","provider":"Mastery Lab + cloud providers","credential":"Portfolio + provider badges","cost":"free-first","status":"not-started","priority":"core"}
       ]
     },
     {
@@ -76,9 +78,9 @@
       "title": "AI-Native Software Architect",
       "goal": "Projetar sistemas modernos com LLMs, RAG, agentes, avaliação, segurança e LLMOps sem abandonar fundamentos de engenharia.",
       "items": [
-        {"id":"llm-apps","order":25,"title":"LLM Application Engineering","provider":"Mastery Lab","credential":"AI application portfolio","cost":"free-first","status":"not-started","priority":"core"},
-        {"id":"rag-agents","order":26,"title":"RAG, Agents & Tool Use","provider":"Mastery Lab","credential":"AI systems Mastery Gate","cost":"free-first","status":"not-started","priority":"core"},
-        {"id":"llmops","order":27,"title":"Evaluation, LLMOps, Safety & Observability","provider":"Mastery Lab","credential":"Production AI architecture project","cost":"free-first","status":"not-started","priority":"core"}
+        {"id":"llm-apps","order":27,"title":"LLM Application Engineering","provider":"Mastery Lab","credential":"AI application portfolio","cost":"free-first","status":"not-started","priority":"core"},
+        {"id":"rag-agents","order":28,"title":"RAG, Agents & Tool Use","provider":"Mastery Lab","credential":"AI systems Mastery Gate","cost":"free-first","status":"not-started","priority":"core"},
+        {"id":"llmops","order":29,"title":"Evaluation, LLMOps, Safety & Observability","provider":"Mastery Lab","credential":"Production AI architecture project","cost":"free-first","status":"not-started","priority":"core"}
       ]
     },
     {
@@ -86,8 +88,8 @@
       "title": "Capstone Architect",
       "goal": "Integrar software, frontend, backend, cloud, dados, segurança e IA em sistemas de portfólio com documentação arquitetural profissional.",
       "items": [
-        {"id":"capstone-system","order":28,"title":"Capstone Full Stack + Cloud + AI","provider":"Programming Mastery Lab","credential":"Final Mastery Gate + public portfolio","cost":"free-first","status":"not-started","priority":"capstone"},
-        {"id":"architecture-defense","order":29,"title":"Architecture Defense","provider":"Programming Mastery Lab","credential":"Oral/written architecture defense","cost":"free","status":"not-started","priority":"capstone"}
+        {"id":"capstone-system","order":30,"title":"Capstone Full Stack + Cloud + AI","provider":"Programming Mastery Lab","credential":"Final Mastery Gate + public portfolio","cost":"free-first","status":"not-started","priority":"capstone"},
+        {"id":"architecture-defense","order":31,"title":"Architecture Defense","provider":"Programming Mastery Lab","credential":"Oral/written architecture defense","cost":"free","status":"not-started","priority":"capstone"}
       ]
     }
   ]
