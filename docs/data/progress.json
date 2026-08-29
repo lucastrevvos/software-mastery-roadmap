@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-29T19:14:00-03:00",
+  "updatedAt": "2026-08-29T19:30:00-03:00",
   "courses": {
     "cs50x": {
       "status": "in-progress",
@@ -14,7 +14,7 @@
         "week-3-algorithms",
         "problem-set-3"
       ],
-      "current": "week-4-memory",
+      "current": "week-4-memory/pset-4-volume",
       "notes": [
         "Lecture 0 concluída.",
         "Projeto Scratch Bug vs Developer concluído, validado e submetido via CS50.",
@@ -28,7 +28,8 @@
         "Week 3 — Algorithms concluída, com Linear Search, Binary Search, Bubble Sort, Selection Sort, Merge Sort e Big O trabalhados em contexto prático.",
         "Problem Set 3 concluído e entregue em 2026-08-29: Sort, Plurality e Runoff.",
         "PSet 3 consolidou padrões mentais reutilizáveis: Linear Search, MIN-SO-FAR, MAX-SO-FAR, ALL-MATCH, FILTER + UPDATE e FIRST VALID + BREAK.",
-        "Week 4 — Memory iniciada em 2026-08-29, com strings em C como char pointers, endereços, dereference e relação entre char *, *s e formatos %s/%c."
+        "Week 4 — Memory iniciada em 2026-08-29, com strings em C como char pointers, endereços, dereference e relação entre char *, *s e formatos %s/%c.",
+        "PSet 4 — Volume implementado e testado localmente em 2026-08-29 com fatores 0.5 e 2.0; no Windows/MSYS2 foi necessário abrir os arquivos WAV em modo binário (rb/wb). Aguardando check50/submissão para marcar como concluído."
       ]
     },
     "fcc-js-v10": {
