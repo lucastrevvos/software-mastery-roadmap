@@ -1,8 +1,8 @@
 {
   "meta": {
     "title": "Full Stack Software Architect & Cloud Engineer",
-    "version": "1.7.0",
-    "updatedAt": "2026-08-25",
+    "version": "1.8.0",
+    "updatedAt": "2026-08-29",
     "principles": [
       "Fundamentos fortes antes de especialização",
       "Priorizar certificados oficiais e verificáveis",
@@ -18,14 +18,126 @@
       "title": "Fundamentos Certificados",
       "goal": "Construir base sólida de ciência da computação, programação, JavaScript, C#, SQL, Python, Linux e networking com credenciais fortes.",
       "items": [
-        {"id":"cs50x","order":1,"title":"CS50x","provider":"Harvard University","credential":"CS50 Certificate","cost":"free","status":"in-progress","priority":"core"},
-        {"id":"foundational-csharp","order":2,"title":"Foundational C# with Microsoft","provider":"Microsoft + freeCodeCamp","credential":"Foundational C# Certification","cost":"free","status":"not-started","priority":"core"},
-        {"id":"fcc-js-v10","order":3,"title":"JavaScript Certification","provider":"freeCodeCamp","credential":"JavaScript Certification","cost":"free","status":"in-progress","priority":"core"},
-        {"id":"cs50-sql","order":4,"title":"CS50's Introduction to Databases with SQL","provider":"Harvard University","credential":"CS50 Certificate","cost":"free","status":"not-started","priority":"core"},
-        {"id":"cs50p","order":5,"title":"CS50's Introduction to Programming with Python","provider":"Harvard University","credential":"CS50 Certificate","cost":"free","status":"not-started","priority":"core"},
-        {"id":"linux-essentials","order":6,"title":"Linux Fundamentals — Linux Essentials","provider":"Linux Professional Institute (LPI)","credential":"LPI Linux Essentials 010-160 target","cost":"free-study; paid-exam-when-justified","examPrice":"US$80–120, dependendo do país/território selecionado no LPI","priceAsOf":"2026-08-25","priceSource":"https://www.lpi.org/exam-pricing/","status":"not-started","priority":"core","source":"https://www.lpi.org/pt-br/our-certifications/linux-essentials-overview/","objectives":"https://www.lpi.org/pt-br/exam-010-objectives/","learningMaterial":"https://learning.lpi.org/pdfstore/LPI-Learning-Material-010-160-pt.pdf","focus":["Linux and open source ecosystem","distributions","command line","files and directories","processes","users and groups","permissions","package management","networking basics","security basics","archives and backups","simple shell scripting"],"assessment":"LPI Linux Essentials 010-160: 40 questions, 60 minutes; certificate has lifetime validity","note":"Estudo guiado pelos objetivos oficiais e pelo material oficial gratuito do LPI em português. O LPI usa preços regionais; confirmar o valor exato para Brasil no checkout antes da compra. A prova só deve ser comprada quando houver ROI ou oportunidade de voucher."},
-        {"id":"cisco-networking-basics","order":7,"title":"Networking Fundamentals — Cisco Networking Basics","provider":"Cisco Networking Academy","credential":"Cisco Networking Academy Digital Badge","cost":"free","status":"not-started","priority":"core","source":"https://www.netacad.com/courses/networking-basics","estimatedHours":"~22h","focus":["network communication fundamentals","Ethernet and switching basics","IPv4 and IPv6 addressing","routers and local networks","TCP/UDP and common application protocols","wireless basics","network troubleshooting","basic network security"],"assessment":"Official self-paced Cisco Networking Academy course with labs, final assessment and digital badge","note":"Base de redes para backend, cloud, containers, sistemas distribuídos e arquitetura. Fazer com prática/labs e um Network Mastery Gate curto antes de avançar."},
-        {"id":"cisco-ccst-networking","order":8,"title":"Cisco Certified Support Technician (CCST) Networking","provider":"Cisco","credential":"Cisco Certified Support Technician (CCST) Networking","cost":"paid-exam","examPrice":"US$125","priceAsOf":"2026-08-25","priceSource":"https://www.cisco.com/site/us/en/learn/training-certifications/exams/ccst-networking.html","status":"not-started","priority":"optional-credential-target","note":"Alvo opcional depois do Networking Basics. Comprar a prova apenas com domínio suficiente e quando houver ROI, voucher ou utilidade clara para o mercado."}
+        {
+          "id": "cs50x",
+          "order": 1,
+          "title": "CS50x",
+          "provider": "Harvard University",
+          "credential": "CS50 Certificate",
+          "cost": "free",
+          "status": "in-progress",
+          "priority": "core"
+        },
+        {
+          "id": "foundational-csharp",
+          "order": 2,
+          "title": "Foundational C# with Microsoft",
+          "provider": "Microsoft + freeCodeCamp",
+          "credential": "Foundational C# Certification",
+          "cost": "free",
+          "status": "not-started",
+          "priority": "core"
+        },
+        {
+          "id": "fcc-js-v10",
+          "order": 3,
+          "title": "JavaScript Certification",
+          "provider": "freeCodeCamp",
+          "credential": "JavaScript Certification",
+          "cost": "free",
+          "status": "in-progress",
+          "priority": "core"
+        },
+        {
+          "id": "cs50-sql",
+          "order": 4,
+          "title": "CS50's Introduction to Databases with SQL",
+          "provider": "Harvard University",
+          "credential": "CS50 Certificate",
+          "cost": "free",
+          "status": "not-started",
+          "priority": "core"
+        },
+        {
+          "id": "cs50p",
+          "order": 5,
+          "title": "CS50's Introduction to Programming with Python",
+          "provider": "Harvard University",
+          "credential": "CS50 Certificate",
+          "cost": "free",
+          "status": "not-started",
+          "priority": "core"
+        },
+        {
+          "id": "linux-essentials",
+          "order": 6,
+          "title": "Linux Fundamentals — Linux Essentials",
+          "provider": "Linux Professional Institute (LPI)",
+          "credential": "LPI Linux Essentials 010-160 target",
+          "cost": "free-study; paid-exam-when-justified",
+          "examPrice": "US$80–120, dependendo do país/território selecionado no LPI",
+          "priceAsOf": "2026-08-25",
+          "priceSource": "https://www.lpi.org/exam-pricing/",
+          "status": "not-started",
+          "priority": "core",
+          "source": "https://www.lpi.org/pt-br/our-certifications/linux-essentials-overview/",
+          "objectives": "https://www.lpi.org/pt-br/exam-010-objectives/",
+          "learningMaterial": "https://learning.lpi.org/pdfstore/LPI-Learning-Material-010-160-pt.pdf",
+          "focus": [
+            "Linux and open source ecosystem",
+            "distributions",
+            "command line",
+            "files and directories",
+            "processes",
+            "users and groups",
+            "permissions",
+            "package management",
+            "networking basics",
+            "security basics",
+            "archives and backups",
+            "simple shell scripting"
+          ],
+          "assessment": "LPI Linux Essentials 010-160: 40 questions, 60 minutes; certificate has lifetime validity",
+          "note": "Estudo guiado pelos objetivos oficiais e pelo material oficial gratuito do LPI em português. O LPI usa preços regionais; confirmar o valor exato para Brasil no checkout antes da compra. A prova só deve ser comprada quando houver ROI ou oportunidade de voucher."
+        },
+        {
+          "id": "cisco-networking-basics",
+          "order": 7,
+          "title": "Networking Fundamentals — Cisco Networking Basics",
+          "provider": "Cisco Networking Academy",
+          "credential": "Cisco Networking Academy Digital Badge",
+          "cost": "free",
+          "status": "not-started",
+          "priority": "core",
+          "source": "https://www.netacad.com/courses/networking-basics",
+          "estimatedHours": "~22h",
+          "focus": [
+            "network communication fundamentals",
+            "Ethernet and switching basics",
+            "IPv4 and IPv6 addressing",
+            "routers and local networks",
+            "TCP/UDP and common application protocols",
+            "wireless basics",
+            "network troubleshooting",
+            "basic network security"
+          ],
+          "assessment": "Official self-paced Cisco Networking Academy course with labs, final assessment and digital badge",
+          "note": "Base de redes para backend, cloud, containers, sistemas distribuídos e arquitetura. Fazer com prática/labs e um Network Mastery Gate curto antes de avançar."
+        },
+        {
+          "id": "cisco-ccst-networking",
+          "order": 8,
+          "title": "Cisco Certified Support Technician (CCST) Networking",
+          "provider": "Cisco",
+          "credential": "Cisco Certified Support Technician (CCST) Networking",
+          "cost": "paid-exam",
+          "examPrice": "US$125",
+          "priceAsOf": "2026-08-25",
+          "priceSource": "https://www.cisco.com/site/us/en/learn/training-certifications/exams/ccst-networking.html",
+          "status": "not-started",
+          "priority": "optional-credential-target",
+          "note": "Alvo opcional depois do Networking Basics. Comprar a prova apenas com domínio suficiente e quando houver ROI, voucher ou utilidade clara para o mercado."
+        }
       ]
     },
     {
@@ -33,80 +145,660 @@
       "title": "Full Stack Moderno",
       "goal": "Consolidar desenvolvimento web moderno, APIs, testes, containers e integração ponta a ponta, com uma trilha Angular baseada prioritariamente nas fontes oficiais.",
       "items": [
-        {"id":"full-stack-open-core","order":9,"title":"Full Stack Open — Core 0–7","provider":"University of Helsinki","credential":"University certificate / ECTS where applicable","cost":"free","status":"not-started","priority":"core"},
-        {"id":"full-stack-open-extensions","order":10,"title":"Full Stack Open — extensões relevantes","provider":"University of Helsinki","credential":"University certificate / ECTS where applicable","cost":"free","status":"not-started","priority":"recommended"},
-        {"id":"angular-official-essentials","order":11,"title":"Angular Official — Essentials + First App","provider":"Angular Team / angular.dev","credential":"Official learning path; no external certificate","cost":"free","status":"not-started","priority":"stack","source":"https://angular.dev/essentials","practice":"https://angular.dev/tutorials","focus":["Angular mental model","components","templates","signals basics","CLI","first local app"]},
-        {"id":"angular-official-core","order":12,"title":"Angular Official — Components, Templates, Signals & Dependency Injection","provider":"Angular Team / angular.dev","credential":"Official documentation + Mastery evidence","cost":"free","status":"not-started","priority":"stack","focus":["standalone components","component composition","template syntax","bindings","control flow","signals","computed/effect","dependency injection"]},
-        {"id":"angular-official-app-engineering","order":13,"title":"Angular Official — Routing, HTTP, Forms & Application Data Flow","provider":"Angular Team / angular.dev","credential":"Official documentation + applied project","cost":"free","status":"not-started","priority":"stack","focus":["router","route params","guards","lazy loading","HttpClient","interceptors","reactive forms","template-driven forms","Signal Forms where stable","Observable integration"]},
-        {"id":"angular-official-testing-debugging","order":14,"title":"Angular Official — Testing & Debugging","provider":"Angular Team / angular.dev","credential":"Official documentation + Mastery evidence","cost":"free","status":"not-started","priority":"stack","focus":["TestBed","component tests","HTTP testing","router testing","async behavior","Angular DevTools","debugging discipline"]},
-        {"id":"angular-official-performance-ssr","order":15,"title":"Angular Official — Performance, SSR/SSG, Hydration & Zoneless","provider":"Angular Team / angular.dev","credential":"Official documentation + applied project","cost":"free","status":"not-started","priority":"stack","focus":["performance","lazy loading","@defer","SSR","SSG/prerender","hydration","incremental hydration","Core Web Vitals","zoneless Angular"]},
-        {"id":"angular-mastery-project","order":16,"title":"Angular Applied Project + Mastery Gate","provider":"Programming Mastery Lab","credential":"Internal Mastery Gate + public portfolio evidence","cost":"free","status":"not-started","priority":"core","note":"Construir/revisar uma aplicação Angular moderna usando as APIs atuais do framework e comprovar Explain, Trace, Build, Debug e Transfer antes das provas externas."},
-        {"id":"hackerrank-angular-basic","order":17,"title":"Angular (Basic) Skills Certification","provider":"HackerRank","credential":"HackerRank Angular (Basic) Certificate","cost":"free","status":"not-started","priority":"free-credential","assessment":"60-minute timed assessment; 2 frontend questions","note":"Fazer apenas depois da trilha oficial e do Mastery Gate. A certificação pública é gratuita e o Angular Basic é atualmente tentativa única; usar o sample test antes da prova."},
-        {"id":"hackerrank-angular-intermediate","order":18,"title":"Angular (Intermediate) Skills Certification","provider":"HackerRank","credential":"HackerRank Angular (Intermediate) Certificate","cost":"free","status":"not-started","priority":"free-credential","assessment":"90-minute timed assessment","note":"Credencial final do bloco Angular. A matriz atual cobra Routing, NgModules, Observables, Dependency Injection e APIs; estudar também o Angular moderno oficial, pois a prova não representa sozinha o estado atual do framework."},
-        {"id":"dotnet-backend","order":19,"title":".NET/C# Backend Engineering","provider":"Microsoft Learn + Mastery Lab","credential":"Applied portfolio + badges where available","cost":"free","status":"not-started","priority":"stack"}
+        {
+          "id": "full-stack-open-core",
+          "order": 9,
+          "title": "Full Stack Open — Core 0–7",
+          "provider": "University of Helsinki",
+          "credential": "University certificate / ECTS where applicable",
+          "cost": "free",
+          "status": "not-started",
+          "priority": "core"
+        },
+        {
+          "id": "full-stack-open-extensions",
+          "order": 10,
+          "title": "Full Stack Open — extensões relevantes",
+          "provider": "University of Helsinki",
+          "credential": "University certificate / ECTS where applicable",
+          "cost": "free",
+          "status": "not-started",
+          "priority": "recommended"
+        },
+        {
+          "id": "angular-official-essentials",
+          "order": 11,
+          "title": "Angular Official — Essentials + First App",
+          "provider": "Angular Team / angular.dev",
+          "credential": "Official learning path; no external certificate",
+          "cost": "free",
+          "status": "not-started",
+          "priority": "stack",
+          "source": "https://angular.dev/essentials",
+          "practice": "https://angular.dev/tutorials",
+          "focus": [
+            "Angular mental model",
+            "components",
+            "templates",
+            "signals basics",
+            "CLI",
+            "first local app"
+          ]
+        },
+        {
+          "id": "angular-official-core",
+          "order": 12,
+          "title": "Angular Official — Components, Templates, Signals & Dependency Injection",
+          "provider": "Angular Team / angular.dev",
+          "credential": "Official documentation + Mastery evidence",
+          "cost": "free",
+          "status": "not-started",
+          "priority": "stack",
+          "focus": [
+            "standalone components",
+            "component composition",
+            "template syntax",
+            "bindings",
+            "control flow",
+            "signals",
+            "computed/effect",
+            "dependency injection"
+          ]
+        },
+        {
+          "id": "angular-official-app-engineering",
+          "order": 13,
+          "title": "Angular Official — Routing, HTTP, Forms & Application Data Flow",
+          "provider": "Angular Team / angular.dev",
+          "credential": "Official documentation + applied project",
+          "cost": "free",
+          "status": "not-started",
+          "priority": "stack",
+          "focus": [
+            "router",
+            "route params",
+            "guards",
+            "lazy loading",
+            "HttpClient",
+            "interceptors",
+            "reactive forms",
+            "template-driven forms",
+            "Signal Forms where stable",
+            "Observable integration"
+          ]
+        },
+        {
+          "id": "angular-official-testing-debugging",
+          "order": 14,
+          "title": "Angular Official — Testing & Debugging",
+          "provider": "Angular Team / angular.dev",
+          "credential": "Official documentation + Mastery evidence",
+          "cost": "free",
+          "status": "not-started",
+          "priority": "stack",
+          "focus": [
+            "TestBed",
+            "component tests",
+            "HTTP testing",
+            "router testing",
+            "async behavior",
+            "Angular DevTools",
+            "debugging discipline"
+          ]
+        },
+        {
+          "id": "angular-official-performance-ssr",
+          "order": 15,
+          "title": "Angular Official — Performance, SSR/SSG, Hydration & Zoneless",
+          "provider": "Angular Team / angular.dev",
+          "credential": "Official documentation + applied project",
+          "cost": "free",
+          "status": "not-started",
+          "priority": "stack",
+          "focus": [
+            "performance",
+            "lazy loading",
+            "@defer",
+            "SSR",
+            "SSG/prerender",
+            "hydration",
+            "incremental hydration",
+            "Core Web Vitals",
+            "zoneless Angular"
+          ]
+        },
+        {
+          "id": "angular-mastery-project",
+          "order": 16,
+          "title": "Angular Applied Project + Mastery Gate",
+          "provider": "Programming Mastery Lab",
+          "credential": "Internal Mastery Gate + public portfolio evidence",
+          "cost": "free",
+          "status": "not-started",
+          "priority": "core",
+          "note": "Construir/revisar uma aplicação Angular moderna usando as APIs atuais do framework e comprovar Explain, Trace, Build, Debug e Transfer antes das provas externas."
+        },
+        {
+          "id": "hackerrank-angular-basic",
+          "order": 17,
+          "title": "Angular (Basic) Skills Certification",
+          "provider": "HackerRank",
+          "credential": "HackerRank Angular (Basic) Certificate",
+          "cost": "free",
+          "status": "not-started",
+          "priority": "free-credential",
+          "assessment": "60-minute timed assessment; 2 frontend questions",
+          "note": "Fazer apenas depois da trilha oficial e do Mastery Gate. A certificação pública é gratuita e o Angular Basic é atualmente tentativa única; usar o sample test antes da prova."
+        },
+        {
+          "id": "hackerrank-angular-intermediate",
+          "order": 18,
+          "title": "Angular (Intermediate) Skills Certification",
+          "provider": "HackerRank",
+          "credential": "HackerRank Angular (Intermediate) Certificate",
+          "cost": "free",
+          "status": "not-started",
+          "priority": "free-credential",
+          "assessment": "90-minute timed assessment",
+          "note": "Credencial final do bloco Angular. A matriz atual cobra Routing, NgModules, Observables, Dependency Injection e APIs; estudar também o Angular moderno oficial, pois a prova não representa sozinha o estado atual do framework."
+        },
+        {
+          "id": "dotnet-backend",
+          "order": 19,
+          "title": ".NET/C# Backend Engineering",
+          "provider": "Microsoft Learn + Mastery Lab",
+          "credential": "Applied portfolio + badges where available",
+          "cost": "free",
+          "status": "not-started",
+          "priority": "stack"
+        }
       ]
     },
     {
-      "id":"phase-03",
-      "title":"Web, Fundamentos de IA e Segurança",
-      "goal":"Expandir para aplicações web avançadas e construir uma base certificada de IA/ML antes de avançar para IA aplicada, engenharia de IA e segurança.",
-      "items":[
-        {"id":"cs50-web","order":20,"title":"CS50's Web Programming with Python and JavaScript","provider":"Harvard University","credential":"CS50 Certificate","cost":"free","status":"not-started","priority":"recommended"},
-        {"id":"ibm-ai-foundations-understanding","order":21,"title":"AI Fundamentals: Foundations for Understanding AI","provider":"IBM SkillsBuild","credential":"IBM SkillsBuild Digital Credential / Credly badge","cost":"free","status":"not-started","priority":"core","focus":["AI concepts","machine learning types","neural networks","deep learning","AI ethics","responsible AI"]},
-        {"id":"ibm-artificial-intelligence-fundamentals","order":22,"title":"Artificial Intelligence Fundamentals","provider":"IBM SkillsBuild","credential":"IBM SkillsBuild Digital Credential","cost":"free","status":"not-started","priority":"recommended","focus":["machine learning","deep learning","neural networks","NLP","computer vision","chatbots","AI model execution"]},
-        {"id":"alteryx-ml-fundamentals","order":23,"title":"Machine Learning Fundamentals Micro-Credential","provider":"Alteryx","credential":"Alteryx Machine Learning Fundamentals Micro-Credential / Credly","cost":"free","status":"not-started","priority":"core","assessment":"1-hour certification exam","focus":["machine learning concepts","data preparation","model selection","model evaluation","model interpretation"]},
-        {"id":"cs50-ai","order":24,"title":"CS50's Introduction to Artificial Intelligence with Python","provider":"Harvard University","credential":"CS50 Certificate","cost":"free","status":"not-started","priority":"core"},
-        {"id":"cs50-cyber","order":25,"title":"CS50's Introduction to Cybersecurity","provider":"Harvard University","credential":"CS50 Certificate","cost":"free","status":"not-started","priority":"core"},
-        {"id":"python-ai-engineering","order":26,"title":"Python para Engenharia de IA","provider":"Mastery Lab","credential":"Portfolio + Mastery Gate","cost":"free","status":"not-started","priority":"stack"}
+      "id": "phase-03",
+      "title": "Web, Dados, Fundamentos de IA e Segurança",
+      "goal": "Expandir para aplicações web avançadas, construir base prática em dados com Python e consolidar fundamentos certificados de IA/ML antes de avançar para IA aplicada, engenharia de IA e segurança.",
+      "items": [
+        {
+          "id": "cs50-web",
+          "order": 20,
+          "title": "CS50's Web Programming with Python and JavaScript",
+          "provider": "Harvard University",
+          "credential": "CS50 Certificate",
+          "cost": "free",
+          "status": "not-started",
+          "priority": "recommended"
+        },
+        {
+          "id": "harvard-data-science-python",
+          "order": 21,
+          "title": "Introduction to Data Science with Python",
+          "provider": "Harvard University / HarvardX",
+          "credential": "Verified Certificate (edX, optional)",
+          "cost": "free-audit; paid-verified-certificate",
+          "programPrice": "US$299",
+          "priceAsOf": "2026-08-29",
+          "priceSource": "https://pll.harvard.edu/course/introduction-data-science-python",
+          "status": "not-started",
+          "priority": "core",
+          "source": "https://pll.harvard.edu/course/introduction-data-science-python",
+          "estimatedHours": "8 weeks · 3–4h/week",
+          "description": "Ponte prática entre Python e IA: análise de dados, modelagem, estatística, visualização e machine learning básico com Pandas, NumPy, matplotlib e scikit-learn.",
+          "focus": [
+            "data science workflow with Python",
+            "Pandas and NumPy",
+            "data visualization with matplotlib",
+            "modeling and statistics",
+            "basic machine learning models",
+            "model evaluation",
+            "scikit-learn",
+            "real-world data science problems"
+          ],
+          "note": "Fazer depois do CS50P. O acesso em modo audit é gratuito; o certificado verificado no edX é opcional e pago. Entra como ponte entre programação em Python e os blocos mais pesados de machine learning/IA."
+        },
+        {
+          "id": "ibm-ai-foundations-understanding",
+          "order": 22,
+          "title": "AI Fundamentals: Foundations for Understanding AI",
+          "provider": "IBM SkillsBuild",
+          "credential": "IBM SkillsBuild Digital Credential / Credly badge",
+          "cost": "free",
+          "status": "not-started",
+          "priority": "core",
+          "focus": [
+            "AI concepts",
+            "machine learning types",
+            "neural networks",
+            "deep learning",
+            "AI ethics",
+            "responsible AI"
+          ]
+        },
+        {
+          "id": "ibm-artificial-intelligence-fundamentals",
+          "order": 23,
+          "title": "Artificial Intelligence Fundamentals",
+          "provider": "IBM SkillsBuild",
+          "credential": "IBM SkillsBuild Digital Credential",
+          "cost": "free",
+          "status": "not-started",
+          "priority": "recommended",
+          "focus": [
+            "machine learning",
+            "deep learning",
+            "neural networks",
+            "NLP",
+            "computer vision",
+            "chatbots",
+            "AI model execution"
+          ]
+        },
+        {
+          "id": "alteryx-ml-fundamentals",
+          "order": 24,
+          "title": "Machine Learning Fundamentals Micro-Credential",
+          "provider": "Alteryx",
+          "credential": "Alteryx Machine Learning Fundamentals Micro-Credential / Credly",
+          "cost": "free",
+          "status": "not-started",
+          "priority": "core",
+          "assessment": "1-hour certification exam",
+          "focus": [
+            "machine learning concepts",
+            "data preparation",
+            "model selection",
+            "model evaluation",
+            "model interpretation"
+          ]
+        },
+        {
+          "id": "cs50-ai",
+          "order": 25,
+          "title": "CS50's Introduction to Artificial Intelligence with Python",
+          "provider": "Harvard University",
+          "credential": "CS50 Certificate",
+          "cost": "free",
+          "status": "not-started",
+          "priority": "core"
+        },
+        {
+          "id": "cs50-cyber",
+          "order": 26,
+          "title": "CS50's Introduction to Cybersecurity",
+          "provider": "Harvard University",
+          "credential": "CS50 Certificate",
+          "cost": "free",
+          "status": "not-started",
+          "priority": "core"
+        },
+        {
+          "id": "python-ai-engineering",
+          "order": 27,
+          "title": "Python para Engenharia de IA",
+          "provider": "Mastery Lab",
+          "credential": "Portfolio + Mastery Gate",
+          "cost": "free",
+          "status": "not-started",
+          "priority": "stack"
+        }
       ]
     },
     {
-      "id":"phase-04",
-      "title":"Cloud Engineer & Cloud Architecture",
-      "goal":"Dominar fundamentos cloud, desenvolvimento, administração, segurança, observabilidade e arquitetura em provedores relevantes, mantendo a arquitetura cloud separada da formação vendor-neutral de Software Architecture.",
-      "items":[
-        {"id":"azure-foundations","order":27,"title":"Azure Fundamentals (AZ-900)","provider":"Microsoft Learn","credential":"Microsoft Certified: Azure Fundamentals","cost":"paid-exam","examPrice":"US$59 (Brasil)","priceAsOf":"2026-08-25","priceSource":"https://learn.microsoft.com/pt-br/credentials/certifications/azure-fundamentals/","status":"not-started","priority":"core","note":"Preço regional exibido pela Microsoft para o Brasil; pode ser alterado pelo provedor."},
-        {"id":"azure-developer","order":28,"title":"Azure AI Cloud Developer Associate (AI-200)","provider":"Microsoft Learn","credential":"Microsoft Certified: Azure AI Cloud Developer Associate","cost":"paid-exam","examPrice":"US$99 (Brasil)","priceAsOf":"2026-08-25","priceSource":"https://learn.microsoft.com/pt-br/credentials/certifications/azure-ai-cloud-developer-associate/","status":"not-started","priority":"core","note":"Substitui oficialmente Azure Developer Associate / AZ-204, aposentada em 31/07/2026. O AI-200 mantém desenvolvimento cloud/back-end, com maior integração de IA, containers, dados, mensageria, segurança e observabilidade."},
-        {"id":"azure-administrator","order":29,"title":"Azure Administrator Associate (AZ-104)","provider":"Microsoft Learn","credential":"Microsoft Certified: Azure Administrator Associate","cost":"paid-exam","examPrice":"US$99 (Brasil)","priceAsOf":"2026-08-25","priceSource":"https://learn.microsoft.com/pt-br/credentials/certifications/azure-administrator/","status":"not-started","priority":"core","focus":["Azure identities and governance","storage","compute","virtual networking","monitoring and maintenance"],"note":"Parte do caminho para Azure Solutions Architect Expert e importante para dominar a operação real da plataforma antes de desenhar soluções de arquitetura."},
-        {"id":"azure-solutions-architect","order":30,"title":"Designing Microsoft Azure Infrastructure Solutions (AZ-305)","provider":"Microsoft Learn","credential":"AZ-305 exam; with Azure Administrator Associate leads to Microsoft Certified: Azure Solutions Architect Expert","cost":"paid-exam","examPrice":"US$99 (Brasil)","priceAsOf":"2026-08-25","priceSource":"https://learn.microsoft.com/pt-br/credentials/certifications/azure-solutions-architect/","status":"not-started","priority":"architecture-target","focus":["identity and governance architecture","data storage architecture","business continuity architecture","infrastructure architecture"],"note":"Alvo de arquitetura Azure. A credencial Azure Solutions Architect Expert exige Azure Administrator Associate mais o exame AZ-305."},
-        {"id":"aws-foundations","order":31,"title":"AWS Cloud Foundations + Certified Cloud Practitioner","provider":"AWS Educate / AWS Skill Builder","credential":"AWS Certified Cloud Practitioner (CLF-C02) target + free AWS learning badges","cost":"mixed-free-study-paid-exam","examPrice":"US$100 + impostos aplicáveis","priceAsOf":"2026-08-25","priceSource":"https://aws.amazon.com/pt/certification/certified-cloud-practitioner/","status":"not-started","priority":"core","note":"Treinamento e vários badges podem ser gratuitos; a certificação AWS Certified Cloud Practitioner é paga. Após obter uma AWS Certification, a AWS oferece 50% de desconto em outro exame de certificação elegível."},
-        {"id":"aws-solutions-architect-associate","order":32,"title":"AWS Certified Solutions Architect — Associate (SAA-C03)","provider":"AWS Training and Certification","credential":"AWS Certified Solutions Architect — Associate","cost":"paid-exam","examPrice":"US$150 + impostos aplicáveis","priceAsOf":"2026-08-25","priceSource":"https://aws.amazon.com/pt/certification/certified-solutions-architect-associate/","status":"not-started","priority":"architecture-target","focus":["secure architectures","resilient architectures","high-performing architectures","cost-optimized architectures","AWS architecture trade-offs"],"note":"Principal alvo de arquitetura AWS no nível Associate. Fazer depois dos fundamentos AWS e de prática suficiente com serviços reais."},
-        {"id":"oci-foundations","order":33,"title":"OCI Foundations (2026)","provider":"Oracle University","credential":"Oracle Cloud Infrastructure 2026 Foundations Associate (1Z0-1085-26)","cost":"free-first","status":"not-started","priority":"recommended","source":"https://learn.oracle.com/ols/course-list/146553","note":"Usar sempre a versão 2026 atual do learning path. A linha Foundations da Oracle tem histórico de prova gratuita; confirmar o preço exibido no registro da versão atual antes de agendar."}
+      "id": "phase-04",
+      "title": "Cloud Engineer & Cloud Architecture",
+      "goal": "Dominar fundamentos cloud, desenvolvimento, administração, segurança, observabilidade e arquitetura em provedores relevantes, mantendo a arquitetura cloud separada da formação vendor-neutral de Software Architecture.",
+      "items": [
+        {
+          "id": "azure-foundations",
+          "order": 28,
+          "title": "Azure Fundamentals (AZ-900)",
+          "provider": "Microsoft Learn",
+          "credential": "Microsoft Certified: Azure Fundamentals",
+          "cost": "paid-exam",
+          "examPrice": "US$59 (Brasil)",
+          "priceAsOf": "2026-08-25",
+          "priceSource": "https://learn.microsoft.com/pt-br/credentials/certifications/azure-fundamentals/",
+          "status": "not-started",
+          "priority": "core",
+          "note": "Preço regional exibido pela Microsoft para o Brasil; pode ser alterado pelo provedor."
+        },
+        {
+          "id": "azure-developer",
+          "order": 29,
+          "title": "Azure AI Cloud Developer Associate (AI-200)",
+          "provider": "Microsoft Learn",
+          "credential": "Microsoft Certified: Azure AI Cloud Developer Associate",
+          "cost": "paid-exam",
+          "examPrice": "US$99 (Brasil)",
+          "priceAsOf": "2026-08-25",
+          "priceSource": "https://learn.microsoft.com/pt-br/credentials/certifications/azure-ai-cloud-developer-associate/",
+          "status": "not-started",
+          "priority": "core",
+          "note": "Substitui oficialmente Azure Developer Associate / AZ-204, aposentada em 31/07/2026. O AI-200 mantém desenvolvimento cloud/back-end, com maior integração de IA, containers, dados, mensageria, segurança e observabilidade."
+        },
+        {
+          "id": "azure-administrator",
+          "order": 30,
+          "title": "Azure Administrator Associate (AZ-104)",
+          "provider": "Microsoft Learn",
+          "credential": "Microsoft Certified: Azure Administrator Associate",
+          "cost": "paid-exam",
+          "examPrice": "US$99 (Brasil)",
+          "priceAsOf": "2026-08-25",
+          "priceSource": "https://learn.microsoft.com/pt-br/credentials/certifications/azure-administrator/",
+          "status": "not-started",
+          "priority": "core",
+          "focus": [
+            "Azure identities and governance",
+            "storage",
+            "compute",
+            "virtual networking",
+            "monitoring and maintenance"
+          ],
+          "note": "Parte do caminho para Azure Solutions Architect Expert e importante para dominar a operação real da plataforma antes de desenhar soluções de arquitetura."
+        },
+        {
+          "id": "azure-solutions-architect",
+          "order": 31,
+          "title": "Designing Microsoft Azure Infrastructure Solutions (AZ-305)",
+          "provider": "Microsoft Learn",
+          "credential": "AZ-305 exam; with Azure Administrator Associate leads to Microsoft Certified: Azure Solutions Architect Expert",
+          "cost": "paid-exam",
+          "examPrice": "US$99 (Brasil)",
+          "priceAsOf": "2026-08-25",
+          "priceSource": "https://learn.microsoft.com/pt-br/credentials/certifications/azure-solutions-architect/",
+          "status": "not-started",
+          "priority": "architecture-target",
+          "focus": [
+            "identity and governance architecture",
+            "data storage architecture",
+            "business continuity architecture",
+            "infrastructure architecture"
+          ],
+          "note": "Alvo de arquitetura Azure. A credencial Azure Solutions Architect Expert exige Azure Administrator Associate mais o exame AZ-305."
+        },
+        {
+          "id": "aws-foundations",
+          "order": 32,
+          "title": "AWS Cloud Foundations + Certified Cloud Practitioner",
+          "provider": "AWS Educate / AWS Skill Builder",
+          "credential": "AWS Certified Cloud Practitioner (CLF-C02) target + free AWS learning badges",
+          "cost": "mixed-free-study-paid-exam",
+          "examPrice": "US$100 + impostos aplicáveis",
+          "priceAsOf": "2026-08-25",
+          "priceSource": "https://aws.amazon.com/pt/certification/certified-cloud-practitioner/",
+          "status": "not-started",
+          "priority": "core",
+          "note": "Treinamento e vários badges podem ser gratuitos; a certificação AWS Certified Cloud Practitioner é paga. Após obter uma AWS Certification, a AWS oferece 50% de desconto em outro exame de certificação elegível."
+        },
+        {
+          "id": "aws-solutions-architect-associate",
+          "order": 33,
+          "title": "AWS Certified Solutions Architect — Associate (SAA-C03)",
+          "provider": "AWS Training and Certification",
+          "credential": "AWS Certified Solutions Architect — Associate",
+          "cost": "paid-exam",
+          "examPrice": "US$150 + impostos aplicáveis",
+          "priceAsOf": "2026-08-25",
+          "priceSource": "https://aws.amazon.com/pt/certification/certified-solutions-architect-associate/",
+          "status": "not-started",
+          "priority": "architecture-target",
+          "focus": [
+            "secure architectures",
+            "resilient architectures",
+            "high-performing architectures",
+            "cost-optimized architectures",
+            "AWS architecture trade-offs"
+          ],
+          "note": "Principal alvo de arquitetura AWS no nível Associate. Fazer depois dos fundamentos AWS e de prática suficiente com serviços reais."
+        },
+        {
+          "id": "oci-foundations",
+          "order": 34,
+          "title": "OCI Foundations (2026)",
+          "provider": "Oracle University",
+          "credential": "Oracle Cloud Infrastructure 2026 Foundations Associate (1Z0-1085-26)",
+          "cost": "free-first",
+          "status": "not-started",
+          "priority": "recommended",
+          "source": "https://learn.oracle.com/ols/course-list/146553",
+          "note": "Usar sempre a versão 2026 atual do learning path. A linha Foundations da Oracle tem histórico de prova gratuita; confirmar o preço exibido no registro da versão atual antes de agendar."
+        }
       ]
     },
     {
-      "id":"phase-05",
-      "title":"Software Architecture",
-      "goal":"Formar arquitetura de software vendor-neutral usando o currículo oficial iSAQB CPSA-F como espinha dorsal externa, com projetos e Mastery Gates para comprovar design, documentação, trade-offs, qualidade e sistemas distribuídos.",
-      "items":[
-        {"id":"isaqb-cpsa-f-curriculum","order":34,"title":"iSAQB CPSA-F — Official Curriculum, Glossary & Mock Exam","provider":"iSAQB","credential":"Official CPSA-F curriculum preparation; certification exam optional later","cost":"free-study","status":"not-started","priority":"core","source":"https://www.isaqb.org/certifications/cpsa-certifications/","focus":["software architecture fundamentals","architecture design","quality requirements","architecture documentation","communication","design decisions","tools and examples"],"note":"Usar o material oficial gratuito como referência externa principal. A prova paga fica para quando houver ROI/voucher e domínio suficiente para passar de primeira."},
-        {"id":"architecture-foundations","order":35,"title":"Software Architecture Foundations — Mastery Lab","provider":"Programming Mastery Lab + iSAQB curriculum","credential":"Architecture Mastery Gate","cost":"free","status":"not-started","priority":"core","focus":["architectural drivers","quality attributes","constraints","trade-offs","coupling/cohesion","architecture styles","design decisions"],"note":"Camada prática: transformar o currículo iSAQB em capacidade demonstrável de explicar, desenhar, criticar e defender uma arquitetura."},
-        {"id":"architecture-documentation","order":36,"title":"Architecture Documentation — C4, ADRs, Quality Scenarios & Architecture Communication","provider":"iSAQB-aligned + Programming Mastery Lab","credential":"Applied architecture documentation portfolio","cost":"free","status":"not-started","priority":"core","focus":["C4 diagrams","ADRs","quality scenarios","views and viewpoints","architecture communication","decision rationale"]},
-        {"id":"ddd-clean-hexagonal","order":37,"title":"DDD, Clean Architecture & Hexagonal Architecture","provider":"Programming Mastery Lab + primary references","credential":"Applied architecture project","cost":"free-first","status":"not-started","priority":"core","focus":["bounded contexts","domain modeling","ports and adapters","dependency direction","modularity","testability"]},
-        {"id":"distributed-systems","order":38,"title":"Distributed Systems, Messaging & Resilience","provider":"Programming Mastery Lab + vendor-neutral references","credential":"Applied architecture project","cost":"free-first","status":"not-started","priority":"core","focus":["distributed systems fundamentals","messaging","consistency","idempotency","retries","timeouts","circuit breakers","resilience","event-driven architecture"]},
-        {"id":"observability-platform","order":39,"title":"Observability, CI/CD, Containers & Platform Engineering","provider":"Programming Mastery Lab + cloud providers","credential":"Portfolio + provider badges","cost":"free-first","status":"not-started","priority":"core"},
-        {"id":"architecture-mastery-defense","order":40,"title":"Software Architecture Mastery Gate & Architecture Defense","provider":"Programming Mastery Lab","credential":"Internal architecture defense + public architecture portfolio","cost":"free","status":"not-started","priority":"core","focus":["design from requirements","trade-off analysis","architecture review","documentation","defense of decisions","evolution strategy"]},
-        {"id":"isaqb-cpsa-f-exam","order":41,"title":"iSAQB Certified Professional for Software Architecture — Foundation Level (CPSA-F)","provider":"iSAQB","credential":"CPSA-F","cost":"paid-when-justified","examPrice":"Varia por país e organismo certificador; exemplos autorizados em 2026: €180–265 + IVA; iSQI também exibe ofertas na faixa de ~US$317","priceAsOf":"2026-08-25","priceSource":"https://www.isaqb.org/certifications/cpsa-exams/foundation-level-exam/","priceExampleSource":"https://www.gasq.org/en/certification/exam-booking/details/isaqb-de-2461-43704.html","status":"not-started","priority":"credential-target","note":"O iSAQB não fixa um preço mundial para o CPSA-F: a prova é realizada por organismos certificadores independentes e o preço varia por país. Treinamento não é obrigatório para autodidatas."},
-        {"id":"sei-software-architecture-professional","order":42,"title":"SEI Software Architecture Professional Certificate","provider":"Carnegie Mellon University — Software Engineering Institute","credential":"SEI Software Architecture Professional Certificate","cost":"paid","programPrice":"≈ US$3.400 mínimo para aluno internacional: US$500 Principles & Practices eLearning + US$500 Documenting Software Architectures eLearning + US$2.250 Software Architecture Design and Analysis + US$150 exame; livros obrigatórios à parte","priceAsOf":"2026-08-25","priceSource":"https://www.sei.cmu.edu/credentials/sei-software-architecture-professional-certificate/","priceBreakdown":["Software Architecture: Principles and Practices eLearning — US$500","Documenting Software Architectures eLearning — US$500","Software Architecture Design and Analysis — US$2.250 para participante internacional","Examination of Software Architecture: Principles and Practices — US$150","Certificado final — sem taxa adicional","Livros obrigatórios — custo adicional"],"status":"not-started","priority":"optional-high-value","source":"https://www.sei.cmu.edu/credentials/sei-software-architecture-professional-certificate/","note":"Aprofundamento opcional de alto valor. O valor mínimo estimado usa as modalidades mais baratas disponíveis para os dois primeiros cursos e a tarifa internacional publicada para Design and Analysis; não é necessário para avançar no roadmap."}
+      "id": "phase-05",
+      "title": "Software Architecture",
+      "goal": "Formar arquitetura de software vendor-neutral usando o currículo oficial iSAQB CPSA-F como espinha dorsal externa, com projetos e Mastery Gates para comprovar design, documentação, trade-offs, qualidade e sistemas distribuídos.",
+      "items": [
+        {
+          "id": "isaqb-cpsa-f-curriculum",
+          "order": 35,
+          "title": "iSAQB CPSA-F — Official Curriculum, Glossary & Mock Exam",
+          "provider": "iSAQB",
+          "credential": "Official CPSA-F curriculum preparation; certification exam optional later",
+          "cost": "free-study",
+          "status": "not-started",
+          "priority": "core",
+          "source": "https://www.isaqb.org/certifications/cpsa-certifications/",
+          "focus": [
+            "software architecture fundamentals",
+            "architecture design",
+            "quality requirements",
+            "architecture documentation",
+            "communication",
+            "design decisions",
+            "tools and examples"
+          ],
+          "note": "Usar o material oficial gratuito como referência externa principal. A prova paga fica para quando houver ROI/voucher e domínio suficiente para passar de primeira."
+        },
+        {
+          "id": "architecture-foundations",
+          "order": 36,
+          "title": "Software Architecture Foundations — Mastery Lab",
+          "provider": "Programming Mastery Lab + iSAQB curriculum",
+          "credential": "Architecture Mastery Gate",
+          "cost": "free",
+          "status": "not-started",
+          "priority": "core",
+          "focus": [
+            "architectural drivers",
+            "quality attributes",
+            "constraints",
+            "trade-offs",
+            "coupling/cohesion",
+            "architecture styles",
+            "design decisions"
+          ],
+          "note": "Camada prática: transformar o currículo iSAQB em capacidade demonstrável de explicar, desenhar, criticar e defender uma arquitetura."
+        },
+        {
+          "id": "architecture-documentation",
+          "order": 37,
+          "title": "Architecture Documentation — C4, ADRs, Quality Scenarios & Architecture Communication",
+          "provider": "iSAQB-aligned + Programming Mastery Lab",
+          "credential": "Applied architecture documentation portfolio",
+          "cost": "free",
+          "status": "not-started",
+          "priority": "core",
+          "focus": [
+            "C4 diagrams",
+            "ADRs",
+            "quality scenarios",
+            "views and viewpoints",
+            "architecture communication",
+            "decision rationale"
+          ]
+        },
+        {
+          "id": "ddd-clean-hexagonal",
+          "order": 38,
+          "title": "DDD, Clean Architecture & Hexagonal Architecture",
+          "provider": "Programming Mastery Lab + primary references",
+          "credential": "Applied architecture project",
+          "cost": "free-first",
+          "status": "not-started",
+          "priority": "core",
+          "focus": [
+            "bounded contexts",
+            "domain modeling",
+            "ports and adapters",
+            "dependency direction",
+            "modularity",
+            "testability"
+          ]
+        },
+        {
+          "id": "distributed-systems",
+          "order": 39,
+          "title": "Distributed Systems, Messaging & Resilience",
+          "provider": "Programming Mastery Lab + vendor-neutral references",
+          "credential": "Applied architecture project",
+          "cost": "free-first",
+          "status": "not-started",
+          "priority": "core",
+          "focus": [
+            "distributed systems fundamentals",
+            "messaging",
+            "consistency",
+            "idempotency",
+            "retries",
+            "timeouts",
+            "circuit breakers",
+            "resilience",
+            "event-driven architecture"
+          ]
+        },
+        {
+          "id": "observability-platform",
+          "order": 40,
+          "title": "Observability, CI/CD, Containers & Platform Engineering",
+          "provider": "Programming Mastery Lab + cloud providers",
+          "credential": "Portfolio + provider badges",
+          "cost": "free-first",
+          "status": "not-started",
+          "priority": "core"
+        },
+        {
+          "id": "architecture-mastery-defense",
+          "order": 41,
+          "title": "Software Architecture Mastery Gate & Architecture Defense",
+          "provider": "Programming Mastery Lab",
+          "credential": "Internal architecture defense + public architecture portfolio",
+          "cost": "free",
+          "status": "not-started",
+          "priority": "core",
+          "focus": [
+            "design from requirements",
+            "trade-off analysis",
+            "architecture review",
+            "documentation",
+            "defense of decisions",
+            "evolution strategy"
+          ]
+        },
+        {
+          "id": "isaqb-cpsa-f-exam",
+          "order": 42,
+          "title": "iSAQB Certified Professional for Software Architecture — Foundation Level (CPSA-F)",
+          "provider": "iSAQB",
+          "credential": "CPSA-F",
+          "cost": "paid-when-justified",
+          "examPrice": "Varia por país e organismo certificador; exemplos autorizados em 2026: €180–265 + IVA; iSQI também exibe ofertas na faixa de ~US$317",
+          "priceAsOf": "2026-08-25",
+          "priceSource": "https://www.isaqb.org/certifications/cpsa-exams/foundation-level-exam/",
+          "priceExampleSource": "https://www.gasq.org/en/certification/exam-booking/details/isaqb-de-2461-43704.html",
+          "status": "not-started",
+          "priority": "credential-target",
+          "note": "O iSAQB não fixa um preço mundial para o CPSA-F: a prova é realizada por organismos certificadores independentes e o preço varia por país. Treinamento não é obrigatório para autodidatas."
+        },
+        {
+          "id": "sei-software-architecture-professional",
+          "order": 43,
+          "title": "SEI Software Architecture Professional Certificate",
+          "provider": "Carnegie Mellon University — Software Engineering Institute",
+          "credential": "SEI Software Architecture Professional Certificate",
+          "cost": "paid",
+          "programPrice": "≈ US$3.400 mínimo para aluno internacional: US$500 Principles & Practices eLearning + US$500 Documenting Software Architectures eLearning + US$2.250 Software Architecture Design and Analysis + US$150 exame; livros obrigatórios à parte",
+          "priceAsOf": "2026-08-25",
+          "priceSource": "https://www.sei.cmu.edu/credentials/sei-software-architecture-professional-certificate/",
+          "priceBreakdown": [
+            "Software Architecture: Principles and Practices eLearning — US$500",
+            "Documenting Software Architectures eLearning — US$500",
+            "Software Architecture Design and Analysis — US$2.250 para participante internacional",
+            "Examination of Software Architecture: Principles and Practices — US$150",
+            "Certificado final — sem taxa adicional",
+            "Livros obrigatórios — custo adicional"
+          ],
+          "status": "not-started",
+          "priority": "optional-high-value",
+          "source": "https://www.sei.cmu.edu/credentials/sei-software-architecture-professional-certificate/",
+          "note": "Aprofundamento opcional de alto valor. O valor mínimo estimado usa as modalidades mais baratas disponíveis para os dois primeiros cursos e a tarifa internacional publicada para Design and Analysis; não é necessário para avançar no roadmap."
+        }
       ]
     },
     {
-      "id":"phase-06",
-      "title":"AI-Native Software Architect",
-      "goal":"Projetar sistemas modernos com LLMs, RAG, agentes, avaliação, segurança e LLMOps sem abandonar fundamentos de engenharia.",
-      "items":[
-        {"id":"llm-apps","order":43,"title":"LLM Application Engineering","provider":"Mastery Lab","credential":"AI application portfolio","cost":"free-first","status":"not-started","priority":"core"},
-        {"id":"rag-agents","order":44,"title":"RAG, Agents & Tool Use","provider":"Mastery Lab","credential":"AI systems Mastery Gate","cost":"free-first","status":"not-started","priority":"core"},
-        {"id":"llmops","order":45,"title":"Evaluation, LLMOps, Safety & Observability","provider":"Mastery Lab","credential":"Production AI architecture project","cost":"free-first","status":"not-started","priority":"core"}
+      "id": "phase-06",
+      "title": "AI-Native Software Architect",
+      "goal": "Projetar sistemas modernos com LLMs, RAG, agentes, avaliação, segurança e LLMOps sem abandonar fundamentos de engenharia.",
+      "items": [
+        {
+          "id": "llm-apps",
+          "order": 44,
+          "title": "LLM Application Engineering",
+          "provider": "Mastery Lab",
+          "credential": "AI application portfolio",
+          "cost": "free-first",
+          "status": "not-started",
+          "priority": "core"
+        },
+        {
+          "id": "rag-agents",
+          "order": 45,
+          "title": "RAG, Agents & Tool Use",
+          "provider": "Mastery Lab",
+          "credential": "AI systems Mastery Gate",
+          "cost": "free-first",
+          "status": "not-started",
+          "priority": "core"
+        },
+        {
+          "id": "llmops",
+          "order": 46,
+          "title": "Evaluation, LLMOps, Safety & Observability",
+          "provider": "Mastery Lab",
+          "credential": "Production AI architecture project",
+          "cost": "free-first",
+          "status": "not-started",
+          "priority": "core"
+        }
       ]
     },
     {
-      "id":"phase-07",
-      "title":"Capstone Architect",
-      "goal":"Integrar software, frontend, backend, cloud, dados, segurança e IA em sistemas de portfólio com documentação arquitetural profissional.",
-      "items":[
-        {"id":"capstone-system","order":46,"title":"Capstone Full Stack + Cloud + AI","provider":"Programming Mastery Lab","credential":"Final Mastery Gate + public portfolio","cost":"free-first","status":"not-started","priority":"capstone"},
-        {"id":"architecture-defense","order":47,"title":"Architecture Defense","provider":"Programming Mastery Lab","credential":"Oral/written architecture defense","cost":"free","status":"not-started","priority":"capstone"}
+      "id": "phase-07",
+      "title": "Capstone Architect",
+      "goal": "Integrar software, frontend, backend, cloud, dados, segurança e IA em sistemas de portfólio com documentação arquitetural profissional.",
+      "items": [
+        {
+          "id": "capstone-system",
+          "order": 47,
+          "title": "Capstone Full Stack + Cloud + AI",
+          "provider": "Programming Mastery Lab",
+          "credential": "Final Mastery Gate + public portfolio",
+          "cost": "free-first",
+          "status": "not-started",
+          "priority": "capstone"
+        },
+        {
+          "id": "architecture-defense",
+          "order": 48,
+          "title": "Architecture Defense",
+          "provider": "Programming Mastery Lab",
+          "credential": "Oral/written architecture defense",
+          "cost": "free",
+          "status": "not-started",
+          "priority": "capstone"
+        }
       ]
     }
   ]
