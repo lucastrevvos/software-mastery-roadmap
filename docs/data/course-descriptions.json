@@ -19,6 +19,7 @@
   "hackerrank-angular-intermediate": "Avaliação intermediária de Angular com Routing, módulos, Observables, Dependency Injection, integração com APIs e estrutura de aplicações.",
   "dotnet-backend": "Engenharia backend com .NET/C#: ASP.NET Core, APIs, persistência, async, testes, segurança, observabilidade e práticas de arquitetura.",
   "cs50-web": "Desenvolvimento web avançado com Python, JavaScript, Django, SQL, APIs, interfaces, testes, segurança, escalabilidade e projetos completos.",
+  "harvard-data-science-python": "Ponte prática entre Python e IA: análise de dados, modelagem, estatística, visualização e machine learning básico com Pandas, NumPy, matplotlib e scikit-learn.",
   "ibm-ai-foundations-understanding": "Base conceitual de IA, machine learning, redes neurais, deep learning, aplicações, ética e princípios de IA responsável.",
   "ibm-artificial-intelligence-fundamentals": "Fundamentos aplicados de IA cobrindo ML, deep learning, NLP, visão computacional, chatbots, redes neurais e execução de modelos.",
   "alteryx-ml-fundamentals": "Microcredencial sobre o ciclo básico de machine learning: preparação de dados, escolha, avaliação e interpretação de modelos.",
