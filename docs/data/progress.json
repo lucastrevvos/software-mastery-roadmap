@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-30T11:05:00-03:00",
+  "updatedAt": "2026-08-30T12:30:00-03:00",
   "courses": {
     "cs50x": {
       "status": "in-progress",
@@ -18,7 +18,7 @@
         "problem-set-4-recover",
         "problem-set-4"
       ],
-      "current": "week-5-data-structures/pset-5-inheritance",
+      "current": "week-5-data-structures/pset-5-inheritance-check50",
       "notes": [
         "Lecture 0 concluída.",
         "Projeto Scratch Bug vs Developer concluído, validado e submetido via CS50.",
@@ -40,7 +40,8 @@
         "PSet 4 — Volume validado com check50 em 2026-08-29; processamento de WAV com header de 44 bytes, samples int16_t, fread/fwrite e fator de escala.",
         "PSet 4 — Recover validado com check50 em 2026-08-29; file carving de JPEGs a partir de card.raw usando blocos de 512 bytes e assinatura FF D8 FF E?.",
         "Problem Set 4 concluído em 2026-08-29: Volume, Filter (Less) e Recover.",
-        "Problem Set 5 iniciado em 2026-08-30. Ordem oficial de 2026: Inheritance e depois Speller. Inheritance será usado para consolidar structs, ponteiros, árvores familiares, recursão, malloc e free."
+        "Problem Set 5 iniciado em 2026-08-30. Ordem oficial de 2026: Inheritance e depois Speller. Inheritance será usado para consolidar structs, ponteiros, árvores familiares, recursão, malloc e free.",
+        "PSet 5 — Inheritance compilado e executado localmente em 2026-08-30. A árvore de 3 gerações foi criada corretamente, com alleles herdados dos pais e liberação recursiva planejada; aguardando check50 para marcar como concluído."
       ]
     },
     "fcc-js-v10": {
