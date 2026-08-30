@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-30T12:35:00-03:00",
+  "updatedAt": "2026-08-30T14:05:00-03:00",
   "courses": {
     "cs50x": {
       "status": "in-progress",
@@ -19,7 +19,7 @@
         "problem-set-4",
         "problem-set-5-inheritance"
       ],
-      "current": "week-5-data-structures/pset-5-speller",
+      "current": "week-5-data-structures/pset-5-speller-check50",
       "notes": [
         "Lecture 0 concluída.",
         "Projeto Scratch Bug vs Developer concluído, validado e submetido via CS50.",
@@ -43,7 +43,8 @@
         "Problem Set 4 concluído em 2026-08-29: Volume, Filter (Less) e Recover.",
         "Problem Set 5 iniciado em 2026-08-30. Ordem oficial de 2026: Inheritance e depois Speller. Inheritance será usado para consolidar structs, ponteiros, árvores familiares, recursão, malloc e free.",
         "PSet 5 — Inheritance compilado e executado localmente em 2026-08-30. A árvore de 3 gerações foi criada corretamente, com alleles herdados dos pais e liberação recursiva planejada; aguardando check50 para marcar como concluído.",
-        "PSet 5 — Inheritance validado com check50 em 2026-08-30. Consolidados: structs auto-referenciadas, nodes, árvores, recursão, malloc/free, herança de alleles e liberação recursiva em post-order."
+        "PSet 5 — Inheritance validado com check50 em 2026-08-30. Consolidados: structs auto-referenciadas, nodes, árvores, recursão, malloc/free, herança de alleles e liberação recursiva em post-order.",
+        "PSet 5 — Speller executado localmente em 2026-08-30 com dictionary large: 143091 palavras no dicionário, 7573 palavras no texto, 30 misspellings; tempos observados: load 0.04s, check 0.03s, size 0.00s, unload 0.02s, total 0.09s. Aguardando check50 para marcar como concluído."
       ]
     },
     "fcc-js-v10": {
