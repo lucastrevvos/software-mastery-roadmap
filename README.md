@@ -13,9 +13,10 @@ Este repositório é a fonte da verdade para quatro coisas diferentes:
 
 ## Estado atual
 
-- CS50x: em andamento — Lecture 0 concluída; Scratch/Problem Set 0 concluído e submetido.
-- freeCodeCamp JavaScript Certification: em andamento, em paralelo.
-- Programming Mastery Lab: ativo.
+- **CS50x:** em andamento — Weeks 0–4 concluídas, incluindo Problem Sets 0–4; etapa atual: Week 5 — Data Structures.
+- **freeCodeCamp JavaScript Certification:** em andamento, em paralelo.
+- **Programming Mastery Lab:** ativo em modo de checkpoints cumulativos.
+- **Engineering Impact:** trilha transversal ativa para transformar maturidade técnica em projetos, documentação, open source e contribuição pública quando fizer sentido.
 
 ## Método do laboratório
 
@@ -48,11 +49,12 @@ Em trabalho real, vale usar ChatGPT, Codex, autocomplete, documentação e demai
 2. O progresso é atualizado em `docs/data/progress.json`.
 3. O conteúdo estudado é convertido em competências em `docs/data/mastery.json`.
 4. Quando necessário, nasce um laboratório em `labs/` ou um Mastery Gate em `mastery-gates/`.
-5. Lucas executa localmente, faz commit e push.
-6. O código é revisado no GitHub.
-7. Erros conceituais recorrentes entram em `docs/data/error-ledger.json`.
-8. Revisões futuras entram em `docs/data/reviews.json`.
-9. Só após retenção e transferência o tópico chega a Mastery 7.
+5. Tópicos maduros são avaliados pela trilha [Engineering Impact](ENGINEERING_IMPACT.md): estudo apenas, projeto, artigo, open source, contribuição comunitária ou palestra.
+6. Lucas executa localmente, faz commit e push.
+7. O código é revisado no GitHub.
+8. Erros conceituais recorrentes entram em `docs/data/error-ledger.json`.
+9. Revisões futuras entram em `docs/data/reviews.json`.
+10. Só após retenção e transferência o tópico chega a Mastery 7.
 
 ## Estrutura
 
