@@ -1,7 +1,7 @@
 {
   "meta": {
-    "version": "1.2.0",
-    "updatedAt": "2026-08-25T16:39:00-03:00",
+    "version": "2.0.0",
+    "updatedAt": "2026-08-29T23:58:00-03:00",
     "purpose": "Anotações pessoais, modelos mentais e resumos úteis das conversas de estudo, vinculados diretamente a cada curso do roadmap."
   },
   "courses": {
@@ -22,7 +22,15 @@
           "Um ponteiro não é o dado apontado: ele guarda um endereço de memória. Por isso entender bytes e endereços prepara o terreno para compreender pointers no CS50."
         ],
         "mentalModel": "bits → bytes → endereços de memória → valores → tipos dão significado → variáveis usam essas regiões → ponteiros guardam endereços",
-        "relatedTopics": ["binary", "ASCII", "RAM", "C types", "arrays", "pointers", "memory"]
+        "relatedTopics": [
+          "binary",
+          "ASCII",
+          "RAM",
+          "C types",
+          "arrays",
+          "pointers",
+          "memory"
+        ]
       },
       {
         "id": "CS50-NOTE-002",
@@ -43,7 +51,16 @@
           "Em C, esse comportamento conecta diretamente memória abstrata e memória física do processo: stack frames ocupam bytes localizados em endereços virtuais que o sistema operacional mapeia e protege."
         ],
         "mentalModel": "chamada de função → estado da chamada precisa ser preservado → stack frame → chamada recursiva cria outro frame → profundidade cresce → condição de parada permite desempilhar; sem espaço suficiente → stack overflow",
-        "relatedTopics": ["C", "recursion", "stack", "stack frame", "stack overflow", "function calls", "memory", "segmentation fault"]
+        "relatedTopics": [
+          "C",
+          "recursion",
+          "stack",
+          "stack frame",
+          "stack overflow",
+          "function calls",
+          "memory",
+          "segmentation fault"
+        ]
       },
       {
         "id": "CS50-NOTE-003",
@@ -64,7 +81,198 @@
           "Node não tornou I/O magicamente mais rápido: ele evita desperdiçar a thread principal esperando operações que podem ser acompanhadas pelo sistema operacional ou por workers."
         ],
         "mentalModel": "node.exe → processo Node → V8 executa JavaScript; Node chama APIs nativas → libuv → (kernel/sockets ou thread pool) → operação termina → event loop coordena → V8 executa o callback",
-        "relatedTopics": ["Node.js", "V8", "libuv", "event loop", "call stack", "thread", "thread pool", "socket", "kernel", "epoll", "IOCP", "asynchronous I/O"]
+        "relatedTopics": [
+          "Node.js",
+          "V8",
+          "libuv",
+          "event loop",
+          "call stack",
+          "thread",
+          "thread pool",
+          "socket",
+          "kernel",
+          "epoll",
+          "IOCP",
+          "asynchronous I/O"
+        ]
+      },
+      {
+        "id": "CS50-NOTE-004",
+        "date": "2026-08-29",
+        "type": "mental-model",
+        "title": "Processos, threads, cores e concorrência",
+        "summary": "Programa é o código no disco; processo é a instância em execução; threads são fluxos de execução dentro do processo; o scheduler do sistema operacional distribui threads executáveis entre CPUs lógicas/cores.",
+        "points": [
+          "Um processo pode ter várias threads. Threads do mesmo processo compartilham código, heap e recursos, mas cada thread possui seu próprio estado de execução, registradores e stack.",
+          "O sistema pode ter centenas de processos e threads mesmo com poucos cores, porque o scheduler alterna quais threads executam em cada CPU lógica.",
+          "Sem SMT, 8 cores físicos executam aproximadamente 8 threads de software simultaneamente; com SMT, o sistema pode expor mais CPUs lógicas, mas isso não equivale a duplicar cores completos.",
+          "Em C com pthreads, o programador lida diretamente com threads do sistema operacional. Em Go, go f() cria uma goroutine e o runtime multiplexa muitas goroutines sobre threads do SO.",
+          "No Node.js, JavaScript normalmente roda na thread principal; I/O assíncrono evita uma thread por conexão, e Worker Threads/processos podem ser usados quando paralelismo de CPU é necessário."
+        ],
+        "mentalModel": "programa → processo → threads → scheduler → CPUs lógicas/cores executam threads",
+        "relatedTopics": [
+          "process",
+          "thread",
+          "core",
+          "scheduler",
+          "concurrency",
+          "parallelism",
+          "Go",
+          "Node.js"
+        ]
+      },
+      {
+        "id": "CS50-NOTE-005",
+        "date": "2026-08-29",
+        "type": "mental-model",
+        "title": "EDA, Event Sourcing e microservices não são a mesma coisa",
+        "summary": "Event-Driven Architecture descreve comunicação por eventos; Event Sourcing é um modelo de persistência baseado no histórico de eventos; microservices descrevem como o sistema é dividido em serviços independentes.",
+        "points": [
+          "Event Loop é um mecanismo interno de runtime; Event-Driven Architecture é uma decisão arquitetural entre componentes ou serviços.",
+          "EDA permite que uma API publique trabalho em broker/fila e que workers processem depois, reduzindo acoplamento temporal e permitindo escalabilidade e resiliência.",
+          "Event Sourcing guarda eventos como fonte de verdade e reconstrói estado a partir deles; isso é diferente de simplesmente publicar eventos entre serviços.",
+          "Microservices dizem onde o sistema é dividido; EDA diz uma forma de as partes se comunicarem.",
+          "Microservices podem usar HTTP síncrono, eventos assíncronos ou uma combinação dos dois."
+        ],
+        "mentalModel": "microservices = onde dividir; EDA = como comunicar/reagir; event sourcing = como persistir o estado via eventos",
+        "relatedTopics": [
+          "event-driven architecture",
+          "event sourcing",
+          "microservices",
+          "messaging",
+          "brokers",
+          "architecture"
+        ]
+      },
+      {
+        "id": "CS50-NOTE-006",
+        "date": "2026-08-29",
+        "type": "mental-model",
+        "title": "Big O e biblioteca de padrões mentais para algoritmos",
+        "summary": "Big O descreve como o trabalho cresce com o tamanho da entrada. Mais importante que decorar algoritmos é reconhecer padrões de decomposição que reaparecem em problemas diferentes.",
+        "points": [
+          "Linear Search é O(n); Binary Search é O(log n), mas exige dados ordenados e acesso adequado.",
+          "Bubble e Selection são O(n²) no caso geral; Merge Sort é O(n log n) e foi reconhecido pelos tempos de execução consistentes.",
+          "Bibliotecas e bancos escondem implementações, mas o custo algorítmico continua existindo por baixo de sort, find, joins, índices e consultas.",
+          "MIN-SO-FAR: percorra elementos válidos e substitua o mínimo quando encontrar valor menor.",
+          "MAX-SO-FAR: mesma ideia para o maior valor.",
+          "COUNTER: conte quantos elementos satisfazem uma condição.",
+          "EXISTS/SEARCH BOOLEAN: retorne verdadeiro ao encontrar; retorne falso depois do loop.",
+          "ALL-MATCH: se encontrar uma exceção, retorne falso; se terminar sem exceção, retorne verdadeiro.",
+          "FIRST VALID + BREAK: percorra opções em ordem e pare na primeira que satisfaz a regra.",
+          "FILTER + UPDATE: aplique uma alteração apenas aos elementos que atendem à condição."
+        ],
+        "mentalModel": "entender o enunciado → reconhecer padrão → escolher estado mínimo → percorrer → comparar/atualizar → terminar",
+        "relatedTopics": [
+          "Big O",
+          "linear search",
+          "binary search",
+          "sorting",
+          "algorithmic thinking",
+          "patterns"
+        ]
+      },
+      {
+        "id": "CS50-NOTE-007",
+        "date": "2026-08-29",
+        "type": "mental-model",
+        "title": "Strings em C são bytes, endereços e ponteiros",
+        "summary": "O tipo string do CS50 não faz parte do C padrão; ele é uma abstração para char *. Uma string em C é uma sequência de chars terminada por '\\0'.",
+        "points": [
+          "No CS50, string é essencialmente um typedef para char *. Sem a biblioteca CS50, usa-se char *, const char * ou char[].",
+          "char *s = \"HI!\" faz s guardar o endereço do primeiro caractere. *s acessa o valor naquele endereço, ou seja, 'H'.",
+          "%s espera um char * apontando para uma sequência terminada em '\\0'; %c espera um único caractere.",
+          "s[i] é equivalente a *(s + i). Assim, s+1 aponta para o próximo char e *(s+1) lê esse caractere.",
+          "&s é o endereço da própria variável ponteiro; s é o endereço que ela armazena. São conceitos diferentes.",
+          "Para literais de string, const char *s = \"HI!\" expressa melhor que o conteúdo literal não deve ser modificado."
+        ],
+        "mentalModel": "s → endereço do primeiro char; *s → valor naquele endereço; s+i → endereço deslocado; *(s+i) → caractere",
+        "relatedTopics": [
+          "C strings",
+          "char pointer",
+          "pointer",
+          "dereference",
+          "null terminator",
+          "printf"
+        ]
+      },
+      {
+        "id": "CS50-NOTE-008",
+        "date": "2026-08-29",
+        "type": "mental-model",
+        "title": "Arquivos binários, buffers e fread/fwrite",
+        "summary": "WAV, BMP e outros formatos podem ser tratados como sequências de bytes. fread copia bytes do arquivo para memória; fwrite copia bytes da memória para outro arquivo.",
+        "points": [
+          "Um buffer é uma região temporária de memória usada para receber ou enviar blocos de bytes.",
+          "uint8_t header[44] cria 44 posições de exatamente 1 byte, adequado para copiar o header WAV do exercício.",
+          "fread(destino, tamanhoDoItem, quantidade, arquivo) lê bytes e avança o cursor do arquivo.",
+          "fwrite(origem, tamanhoDoItem, quantidade, arquivo) grava bytes no arquivo de saída.",
+          "Amostras WAV do exercício usam int16_t, então cada sample ocupa 2 bytes e pode ser multiplicado pelo fator de volume.",
+          "No Windows/MSYS2, arquivos binários precisaram ser abertos com rb/wb para evitar tradução de modo texto; no ambiente Linux do CS50, r/w funcionam para o mesmo código."
+        ],
+        "mentalModel": "arquivo → fread → buffer/variável na RAM → transformar se necessário → fwrite → novo arquivo",
+        "relatedTopics": [
+          "binary files",
+          "buffer",
+          "fread",
+          "fwrite",
+          "WAV",
+          "BMP",
+          "int16_t",
+          "uint8_t",
+          "Windows"
+        ]
+      },
+      {
+        "id": "CS50-NOTE-009",
+        "date": "2026-08-29",
+        "type": "mental-model",
+        "title": "Processamento de imagens: matriz, swap, vizinhança e cópia antes de mutar",
+        "summary": "No Filter, uma imagem é tratada como matriz de pixels RGB. Diferentes filtros reutilizam padrões gerais de processamento de matrizes.",
+        "points": [
+          "MATRIX TRAVERSAL: para cada linha, para cada coluna, processe image[i][j].",
+          "Grayscale calcula a média de R, G e B e atribui o mesmo valor aos três canais.",
+          "Sepia calcula novos canais por fórmulas e limita cada resultado ao intervalo máximo permitido, 255.",
+          "Reflect usa posições simétricas: esquerda j, direita width - 1 - j, trocando pixels com uma variável temporária.",
+          "Blur exige COPY BEFORE MUTATION: os novos pixels devem ser calculados a partir da imagem original, não de pixels já alterados.",
+          "NEIGHBORHOOD SCAN usa deslocamentos -1, 0 e +1 para visitar a região 3x3 ao redor de um pixel.",
+          "BOUNDS CHECK impede acesso a índices negativos ou além de height/width."
+        ],
+        "mentalModel": "matriz → percorrer elemento → obter vizinhança/posição correspondente → calcular → validar limites → escrever resultado",
+        "relatedTopics": [
+          "image processing",
+          "RGB",
+          "matrix",
+          "swap",
+          "blur",
+          "bounds check",
+          "copy before mutation"
+        ]
+      },
+      {
+        "id": "CS50-NOTE-010",
+        "date": "2026-08-29",
+        "type": "mental-model",
+        "title": "JPEG, magic numbers, bitmask e file carving",
+        "summary": "Recover mostra que arquivos podem ser identificados diretamente pelos bytes, mesmo sem nomes ou metadados do filesystem. O programa procura assinaturas JPEG em blocos brutos e reconstrói as imagens.",
+        "points": [
+          "JPEGs começam com o marcador SOI FF D8; no card.raw do exercício, os arquivos podem ser reconhecidos pelo padrão mais específico FF D8 FF E?.",
+          "O quarto byte pode variar de E0 a EF. A expressão (buffer[3] & 0xf0) == 0xe0 preserva apenas o nibble alto e ignora os 4 bits inferiores.",
+          "Essa técnica é uma bitmask: 0xf0 equivale a 11110000 em binário.",
+          "O card.raw é lido em blocos de 512 bytes. Ao encontrar um novo header JPEG, fecha-se o arquivo anterior e inicia-se outro.",
+          "Quando um arquivo é apagado, seus blocos podem continuar contendo os dados até serem sobrescritos; ferramentas forenses podem recuperar esses bytes.",
+          "File carving identifica e extrai arquivos com base em assinaturas e estrutura binária, sem depender do nome ou da extensão original."
+        ],
+        "mentalModel": "dados brutos → ler blocos → procurar magic number → detectar início de arquivo → copiar blocos → reconstruir arquivo",
+        "relatedTopics": [
+          "JPEG",
+          "magic number",
+          "hexadecimal",
+          "bitmask",
+          "file carving",
+          "forensics",
+          "512-byte blocks"
+        ]
       }
     ]
   }
