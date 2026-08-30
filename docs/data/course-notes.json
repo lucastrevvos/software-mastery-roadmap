@@ -1,7 +1,7 @@
 {
   "meta": {
-    "version": "2.0.0",
-    "updatedAt": "2026-08-29T23:58:00-03:00",
+    "version": "2.1.0",
+    "updatedAt": "2026-08-30T14:12:00-03:00",
     "purpose": "Anotações pessoais, modelos mentais e resumos úteis das conversas de estudo, vinculados diretamente a cada curso do roadmap."
   },
   "courses": {
@@ -272,6 +272,182 @@
           "file carving",
           "forensics",
           "512-byte blocks"
+        ]
+      },
+      {
+        "id": "CS50-NOTE-011",
+        "date": "2026-08-30",
+        "type": "mental-model",
+        "title": "Linked lists: nodes ligados por referências",
+        "summary": "Uma linked list é uma sequência de nodes em que cada node guarda um valor e o endereço/referência do próximo. Ela troca acesso rápido por índice por flexibilidade para inserir e remover elementos sem deslocar uma sequência inteira.",
+        "points": [
+          "Um node é apenas uma struct/objeto com dados e um link para outro node.",
+          "Em C, node *next guarda o endereço do próximo node; em linguagens gerenciadas isso costuma aparecer como uma referência.",
+          "A lista termina quando next == NULL.",
+          "Percorrer a lista significa começar no primeiro node e repetir ptr = ptr->next até NULL.",
+          "Acesso por posição é O(n), pois é preciso caminhar node por node.",
+          "Inserção/remoção pode ser O(1) quando já se tem a referência do ponto correto.",
+          "Em C# LinkedList<T> expõe esse modelo; List<T> é outra estrutura, um array dinâmico."
+        ],
+        "mentalModel": "node = dado + endereço do próximo; linked list = node → node → node → NULL",
+        "relatedTopics": [
+          "linked list",
+          "node",
+          "pointer",
+          "reference",
+          "List<T>",
+          "LinkedList<T>",
+          "Big O"
+        ]
+      },
+      {
+        "id": "CS50-NOTE-012",
+        "date": "2026-08-30",
+        "type": "mental-model",
+        "title": "Trees: nodes com múltiplos caminhos",
+        "summary": "Uma árvore é uma estrutura de nodes em que cada node pode apontar para filhos. Em uma binary tree, cada node tem até dois filhos; em uma binary search tree, valores menores ficam à esquerda e maiores à direita.",
+        "points": [
+          "A ideia é a mesma da linked list, mas em vez de next há ponteiros como left e right.",
+          "Root é o primeiro node; parent é um node que aponta para filhos; leaf é um node sem filhos.",
+          "Em uma BST, a regra esquerda < node < direita permite descartar ramos inteiros durante a busca.",
+          "Recursão encaixa naturalmente porque cada subtree também é uma árvore.",
+          "Uma árvore equilibrada pode permitir busca em O(log n); uma árvore degenerada pode se comportar como uma linked list e cair para O(n)."
+        ],
+        "mentalModel": "linked list = um caminho; tree = caminhos que se bifurcam; BST = esquerda menor, direita maior",
+        "relatedTopics": [
+          "tree",
+          "binary tree",
+          "binary search tree",
+          "recursion",
+          "node",
+          "search",
+          "Big O"
+        ]
+      },
+      {
+        "id": "CS50-NOTE-013",
+        "date": "2026-08-30",
+        "type": "mental-model",
+        "title": "Hashing e hash tables",
+        "summary": "Hashing transforma uma chave em um índice/bucket. Uma hash table combina uma função hash, um array de buckets e uma estratégia de colisão, como linked lists.",
+        "points": [
+          "A hash function tenta responder em qual bucket uma chave deve ficar.",
+          "Colisão ocorre quando chaves diferentes geram o mesmo bucket.",
+          "Separação por chaining usa uma linked list em cada bucket para armazenar múltiplos itens.",
+          "Uma boa hash usa bastante informação da chave e distribui valores de forma uniforme.",
+          "Lookup em hash table costuma ser O(1) em média, mas pode degradar para O(n) em caso ruim.",
+          "C# Dictionary<TKey,TValue>, Python dict, Java HashMap e estruturas semelhantes usam hashing internamente."
+        ],
+        "mentalModel": "chave → hash → bucket → pequena busca local",
+        "relatedTopics": [
+          "hashing",
+          "hash table",
+          "collision",
+          "bucket",
+          "Dictionary",
+          "dict",
+          "Map",
+          "Set"
+        ]
+      },
+      {
+        "id": "CS50-NOTE-014",
+        "date": "2026-08-30",
+        "type": "mental-model",
+        "title": "Tries: strings organizadas por prefixos",
+        "summary": "Trie é uma árvore especializada em strings. Cada caminho representa caracteres e prefixos comuns são compartilhados, tornando busca por prefixo e autocomplete naturais.",
+        "points": [
+          "Em vez de organizar por hash, a trie organiza pelos próprios caracteres da chave.",
+          "Cada node pode ter vários filhos, por exemplo 26 posições para letras a-z.",
+          "Um campo como is_word diferencia um prefixo de uma palavra completa.",
+          "Busca percorre um caractere por vez, normalmente O(k), onde k é o tamanho da palavra.",
+          "Tries são úteis para autocomplete, dicionários, roteamento de prefixos e outras buscas prefixadas."
+        ],
+        "mentalModel": "root → caractere → caractere → caractere; o caminho forma a palavra",
+        "relatedTopics": [
+          "trie",
+          "prefix",
+          "autocomplete",
+          "tree",
+          "string search"
+        ]
+      },
+      {
+        "id": "CS50-NOTE-015",
+        "date": "2026-08-30",
+        "type": "mental-model",
+        "title": "Inheritance: árvores, recursão e ciclo malloc/free",
+        "summary": "O exercício Inheritance constrói uma árvore familiar dinamicamente. Recursão cria os nodes, ponteiros conectam pais e filhos, alleles são herdados e free_family desmonta a árvore em post-order.",
+        "points": [
+          "malloc(sizeof(person)) cria cada node person dinamicamente.",
+          "parents[0] e parents[1] são os galhos que conectam cada pessoa aos dois pais.",
+          "create_family(generations - 1) constrói subtrees recursivamente.",
+          "Cada filho recebe um allele aleatório de cada pai.",
+          "Na geração mais antiga, os parent pointers ficam NULL e os alleles são gerados.",
+          "free_family primeiro libera as subtrees dos pais e só depois o node atual, evitando perder referências antes da hora.",
+          "Tudo que é criado com malloc precisa ter um ciclo de liberação correspondente para evitar memory leak."
+        ],
+        "mentalModel": "malloc cria node → recursão cria subtrees → ponteiros conectam → dados fluem dos pais → free desmonta de baixo para cima",
+        "relatedTopics": [
+          "inheritance",
+          "tree",
+          "recursion",
+          "malloc",
+          "free",
+          "post-order",
+          "memory leak"
+        ]
+      },
+      {
+        "id": "CS50-NOTE-016",
+        "date": "2026-08-30",
+        "type": "mental-model",
+        "title": "Speller: hash table real para correção ortográfica",
+        "summary": "Speller carrega 143091 palavras em uma hash table e usa hashing + linked lists para verificar rapidamente as palavras de um texto, demonstrando na prática por que estruturas de dados reduzem custo de busca.",
+        "points": [
+          "load() lê cada palavra do dicionário, cria um node, calcula o hash e insere o node no bucket correspondente.",
+          "check() calcula o hash da palavra, entra apenas no bucket correspondente e percorre sua linked list.",
+          "size() retorna um contador mantido durante load(), tornando a operação O(1).",
+          "unload() percorre todos os buckets e libera todos os nodes, salvando next antes de free.",
+          "A hash inicial por primeira letra funcionava, mas criava muitas colisões; uma hash melhor usa todos os caracteres e mais buckets.",
+          "Execução observada: 143091 palavras no dicionário, 7573 no texto, 30 misspellings; total aproximado de 0.09s."
+        ],
+        "mentalModel": "dictionary file → load → hash table → check(text word) → hash → bucket → compare → unload/free",
+        "relatedTopics": [
+          "speller",
+          "hash table",
+          "linked list",
+          "hash function",
+          "malloc",
+          "free",
+          "Big O",
+          "dictionary"
+        ]
+      },
+      {
+        "id": "CS50-NOTE-017",
+        "date": "2026-08-30",
+        "type": "learning-rule",
+        "title": "Regra de transferência entre linguagens",
+        "summary": "Ao estudar Python, JavaScript/Node.js e C#/.NET, sempre explicitar qual fundamento já visto em C/CS50 está por baixo da abstração atual.",
+        "points": [
+          "Python dict / C# Dictionary / mapas em outras linguagens → hash tables e hashing.",
+          "List<T>, Python list e estruturas semelhantes → arrays dinâmicos, não linked lists.",
+          "Objetos conectados por referências → mesma ideia estrutural de nodes ligados, mas com ponteiros abstraídos.",
+          "Garbage collector → automatiza parte do ciclo de memória que em C exigiu malloc/free.",
+          "Recursão → continua usando stack frames e mantém risco de profundidade excessiva.",
+          "Sort, find, filter, LINQ, índices de banco e coleções prontas continuam carregando custos algorítmicos e Big O.",
+          "Sempre separar: o que a linguagem abstraiu e o que continua sendo responsabilidade do programador."
+        ],
+        "mentalModel": "conceito novo → identificar fundamento antigo → mostrar abstração da linguagem → apontar responsabilidade que permaneceu",
+        "relatedTopics": [
+          "Python",
+          "JavaScript",
+          "Node.js",
+          "C#",
+          ".NET",
+          "abstraction",
+          "transfer learning"
         ]
       }
     ]
