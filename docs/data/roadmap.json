@@ -1,8 +1,8 @@
 {
   "meta": {
     "title": "Full Stack Software Architect & Cloud Engineer",
-    "version": "1.8.0",
-    "updatedAt": "2026-08-29",
+    "version": "1.9.0",
+    "updatedAt": "2026-08-30",
     "principles": [
       "Fundamentos fortes antes de especialização",
       "Priorizar certificados oficiais e verificáveis",
@@ -317,7 +317,7 @@
     {
       "id": "phase-03",
       "title": "Web, Dados, Fundamentos de IA e Segurança",
-      "goal": "Expandir para aplicações web avançadas, construir base prática em dados com Python e consolidar fundamentos certificados de IA/ML antes de avançar para IA aplicada, engenharia de IA e segurança.",
+      "goal": "Expandir para aplicações web avançadas, construir base prática em dados com Python e consolidar fundamentos de IA/ML com uma sequência principal enxuta, mantendo credenciais complementares gratuitas como opcionais.",
       "items": [
         {
           "id": "cs50-web",
@@ -357,14 +357,36 @@
           "note": "Fazer depois do CS50P. O acesso em modo audit é gratuito; o certificado verificado no edX é opcional e pago. Entra como ponte entre programação em Python e os blocos mais pesados de machine learning/IA."
         },
         {
-          "id": "ibm-ai-foundations-understanding",
+          "id": "elements-of-ai",
           "order": 22,
+          "title": "Elements of AI — Introduction to AI",
+          "provider": "University of Helsinki + MinnaLearn",
+          "credential": "Free Digital Certificate",
+          "cost": "free",
+          "status": "not-started",
+          "priority": "core",
+          "source": "https://www.elementsofai.com/",
+          "estimatedHours": "~30h",
+          "description": "Introdução acessível e conceitualmente sólida à IA, cobrindo o que é IA, resolução de problemas, busca, probabilidade, machine learning, redes neurais e implicações sociais.",
+          "focus": [
+            "what artificial intelligence is and is not",
+            "problem solving and search",
+            "probability and uncertainty",
+            "machine learning fundamentals",
+            "neural networks basics",
+            "societal implications of AI"
+          ],
+          "note": "Novo núcleo introdutório de IA da trilha. Curso e certificado digital da parte Introduction to AI são gratuitos. Entra antes dos blocos mais aplicados de ML/IA."
+        },
+        {
+          "id": "ibm-ai-foundations-understanding",
+          "order": 23,
           "title": "AI Fundamentals: Foundations for Understanding AI",
           "provider": "IBM SkillsBuild",
           "credential": "IBM SkillsBuild Digital Credential / Credly badge",
           "cost": "free",
           "status": "not-started",
-          "priority": "core",
+          "priority": "optional-complementary",
           "focus": [
             "AI concepts",
             "machine learning types",
@@ -372,11 +394,13 @@
             "deep learning",
             "AI ethics",
             "responsible AI"
-          ]
+          ],
+          "description": "Opcional complementar — base conceitual de IA, machine learning, redes neurais, deep learning, ética e IA responsável. Mantido pela credencial gratuita, mas não bloqueia a sequência principal.",
+          "note": "Mantido como opcional complementar pela credencial gratuita e pelo reforço de fundamentos. Há sobreposição com Elements of AI e com o outro bloco IBM, portanto não é obrigatório para avançar."
         },
         {
           "id": "ibm-artificial-intelligence-fundamentals",
-          "order": 23,
+          "order": 24,
           "title": "Artificial Intelligence Fundamentals",
           "provider": "IBM SkillsBuild",
           "credential": "IBM SkillsBuild Digital Credential",
@@ -394,8 +418,28 @@
           ]
         },
         {
+          "id": "umd-ai-career-empowerment",
+          "order": 25,
+          "title": "AI and Career Empowerment",
+          "provider": "University of Maryland — Robert H. Smith School of Business",
+          "credential": "Free Certificate of Completion",
+          "cost": "free",
+          "status": "not-started",
+          "priority": "optional-complementary",
+          "source": "https://www.rhsmith.umd.edu/programs/executive-education/learning-opportunities-individuals/free-online-certificate-artificial-intelligence-and-career-empowerment",
+          "description": "Opcional complementar — formação curta sobre literacia em IA, uso responsável, transformação de negócios e aplicações profissionais, com certificado gratuito.",
+          "focus": [
+            "AI literacy",
+            "responsible AI",
+            "AI systems and applications",
+            "business transformation",
+            "career impact and practical adoption"
+          ],
+          "note": "Credencial gratuita complementar, voltada mais a aplicação profissional e carreira do que a profundidade técnica. Não bloqueia o percurso principal."
+        },
+        {
           "id": "alteryx-ml-fundamentals",
-          "order": 24,
+          "order": 26,
           "title": "Machine Learning Fundamentals Micro-Credential",
           "provider": "Alteryx",
           "credential": "Alteryx Machine Learning Fundamentals Micro-Credential / Credly",
@@ -413,7 +457,7 @@
         },
         {
           "id": "cs50-ai",
-          "order": 25,
+          "order": 27,
           "title": "CS50's Introduction to Artificial Intelligence with Python",
           "provider": "Harvard University",
           "credential": "CS50 Certificate",
@@ -423,7 +467,7 @@
         },
         {
           "id": "cs50-cyber",
-          "order": 26,
+          "order": 28,
           "title": "CS50's Introduction to Cybersecurity",
           "provider": "Harvard University",
           "credential": "CS50 Certificate",
@@ -433,7 +477,7 @@
         },
         {
           "id": "python-ai-engineering",
-          "order": 27,
+          "order": 29,
           "title": "Python para Engenharia de IA",
           "provider": "Mastery Lab",
           "credential": "Portfolio + Mastery Gate",
@@ -450,7 +494,7 @@
       "items": [
         {
           "id": "azure-foundations",
-          "order": 28,
+          "order": 30,
           "title": "Azure Fundamentals (AZ-900)",
           "provider": "Microsoft Learn",
           "credential": "Microsoft Certified: Azure Fundamentals",
@@ -464,7 +508,7 @@
         },
         {
           "id": "azure-developer",
-          "order": 29,
+          "order": 31,
           "title": "Azure AI Cloud Developer Associate (AI-200)",
           "provider": "Microsoft Learn",
           "credential": "Microsoft Certified: Azure AI Cloud Developer Associate",
@@ -478,7 +522,7 @@
         },
         {
           "id": "azure-administrator",
-          "order": 30,
+          "order": 32,
           "title": "Azure Administrator Associate (AZ-104)",
           "provider": "Microsoft Learn",
           "credential": "Microsoft Certified: Azure Administrator Associate",
@@ -499,7 +543,7 @@
         },
         {
           "id": "azure-solutions-architect",
-          "order": 31,
+          "order": 33,
           "title": "Designing Microsoft Azure Infrastructure Solutions (AZ-305)",
           "provider": "Microsoft Learn",
           "credential": "AZ-305 exam; with Azure Administrator Associate leads to Microsoft Certified: Azure Solutions Architect Expert",
@@ -519,7 +563,7 @@
         },
         {
           "id": "aws-foundations",
-          "order": 32,
+          "order": 34,
           "title": "AWS Cloud Foundations + Certified Cloud Practitioner",
           "provider": "AWS Educate / AWS Skill Builder",
           "credential": "AWS Certified Cloud Practitioner (CLF-C02) target + free AWS learning badges",
@@ -533,7 +577,7 @@
         },
         {
           "id": "aws-solutions-architect-associate",
-          "order": 33,
+          "order": 35,
           "title": "AWS Certified Solutions Architect — Associate (SAA-C03)",
           "provider": "AWS Training and Certification",
           "credential": "AWS Certified Solutions Architect — Associate",
@@ -554,7 +598,7 @@
         },
         {
           "id": "oci-foundations",
-          "order": 34,
+          "order": 36,
           "title": "OCI Foundations (2026)",
           "provider": "Oracle University",
           "credential": "Oracle Cloud Infrastructure 2026 Foundations Associate (1Z0-1085-26)",
@@ -573,7 +617,7 @@
       "items": [
         {
           "id": "isaqb-cpsa-f-curriculum",
-          "order": 35,
+          "order": 37,
           "title": "iSAQB CPSA-F — Official Curriculum, Glossary & Mock Exam",
           "provider": "iSAQB",
           "credential": "Official CPSA-F curriculum preparation; certification exam optional later",
@@ -594,7 +638,7 @@
         },
         {
           "id": "architecture-foundations",
-          "order": 36,
+          "order": 38,
           "title": "Software Architecture Foundations — Mastery Lab",
           "provider": "Programming Mastery Lab + iSAQB curriculum",
           "credential": "Architecture Mastery Gate",
@@ -614,7 +658,7 @@
         },
         {
           "id": "architecture-documentation",
-          "order": 37,
+          "order": 39,
           "title": "Architecture Documentation — C4, ADRs, Quality Scenarios & Architecture Communication",
           "provider": "iSAQB-aligned + Programming Mastery Lab",
           "credential": "Applied architecture documentation portfolio",
@@ -632,7 +676,7 @@
         },
         {
           "id": "ddd-clean-hexagonal",
-          "order": 38,
+          "order": 40,
           "title": "DDD, Clean Architecture & Hexagonal Architecture",
           "provider": "Programming Mastery Lab + primary references",
           "credential": "Applied architecture project",
@@ -650,7 +694,7 @@
         },
         {
           "id": "distributed-systems",
-          "order": 39,
+          "order": 41,
           "title": "Distributed Systems, Messaging & Resilience",
           "provider": "Programming Mastery Lab + vendor-neutral references",
           "credential": "Applied architecture project",
@@ -671,7 +715,7 @@
         },
         {
           "id": "observability-platform",
-          "order": 40,
+          "order": 42,
           "title": "Observability, CI/CD, Containers & Platform Engineering",
           "provider": "Programming Mastery Lab + cloud providers",
           "credential": "Portfolio + provider badges",
@@ -681,7 +725,7 @@
         },
         {
           "id": "architecture-mastery-defense",
-          "order": 41,
+          "order": 43,
           "title": "Software Architecture Mastery Gate & Architecture Defense",
           "provider": "Programming Mastery Lab",
           "credential": "Internal architecture defense + public architecture portfolio",
@@ -699,7 +743,7 @@
         },
         {
           "id": "isaqb-cpsa-f-exam",
-          "order": 42,
+          "order": 44,
           "title": "iSAQB Certified Professional for Software Architecture — Foundation Level (CPSA-F)",
           "provider": "iSAQB",
           "credential": "CPSA-F",
@@ -714,7 +758,7 @@
         },
         {
           "id": "sei-software-architecture-professional",
-          "order": 43,
+          "order": 45,
           "title": "SEI Software Architecture Professional Certificate",
           "provider": "Carnegie Mellon University — Software Engineering Institute",
           "credential": "SEI Software Architecture Professional Certificate",
@@ -744,7 +788,7 @@
       "items": [
         {
           "id": "llm-apps",
-          "order": 44,
+          "order": 46,
           "title": "LLM Application Engineering",
           "provider": "Mastery Lab",
           "credential": "AI application portfolio",
@@ -754,7 +798,7 @@
         },
         {
           "id": "rag-agents",
-          "order": 45,
+          "order": 47,
           "title": "RAG, Agents & Tool Use",
           "provider": "Mastery Lab",
           "credential": "AI systems Mastery Gate",
@@ -764,7 +808,7 @@
         },
         {
           "id": "llmops",
-          "order": 46,
+          "order": 48,
           "title": "Evaluation, LLMOps, Safety & Observability",
           "provider": "Mastery Lab",
           "credential": "Production AI architecture project",
@@ -781,7 +825,7 @@
       "items": [
         {
           "id": "capstone-system",
-          "order": 47,
+          "order": 49,
           "title": "Capstone Full Stack + Cloud + AI",
           "provider": "Programming Mastery Lab",
           "credential": "Final Mastery Gate + public portfolio",
@@ -791,7 +835,7 @@
         },
         {
           "id": "architecture-defense",
-          "order": 48,
+          "order": 50,
           "title": "Architecture Defense",
           "provider": "Programming Mastery Lab",
           "credential": "Oral/written architecture defense",
