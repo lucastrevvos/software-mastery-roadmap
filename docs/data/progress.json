@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-29T22:25:00-03:00",
+  "updatedAt": "2026-08-29T23:30:00-03:00",
   "courses": {
     "cs50x": {
       "status": "in-progress",
@@ -12,9 +12,10 @@
         "week-2-arrays",
         "problem-set-2",
         "week-3-algorithms",
-        "problem-set-3"
+        "problem-set-3",
+        "problem-set-4-filter-less"
       ],
-      "current": "week-4-memory/pset-4-filter-less",
+      "current": "week-4-memory/pset-4-recover",
       "notes": [
         "Lecture 0 concluída.",
         "Projeto Scratch Bug vs Developer concluído, validado e submetido via CS50.",
@@ -30,7 +31,8 @@
         "PSet 3 consolidou padrões mentais reutilizáveis: Linear Search, MIN-SO-FAR, MAX-SO-FAR, ALL-MATCH, FILTER + UPDATE e FIRST VALID + BREAK.",
         "Week 4 — Memory iniciada em 2026-08-29, com strings em C como char pointers, endereços, dereference e relação entre char *, *s e formatos %s/%c.",
         "PSet 4 — Volume implementado e testado localmente em 2026-08-29 com fatores 0.5 e 2.0; no Windows/MSYS2 foi necessário abrir os arquivos WAV em modo binário (rb/wb). Aguardando check50/submissão para marcar como concluído.",
-        "PSet 4 — Filter (Less): grayscale implementado e validado visualmente em 2026-08-29; no Windows/MSYS2 foi necessário abrir BMPs em modo binário (rb/wb). Ainda pendente de check50 antes de marcar o exercício como concluído."
+        "PSet 4 — Filter (Less): grayscale implementado e validado visualmente em 2026-08-29; no Windows/MSYS2 foi necessário abrir BMPs em modo binário (rb/wb). Ainda pendente de check50 antes de marcar o exercício como concluído.",
+        "PSet 4 — Filter (Less) validado com check50 em 2026-08-29. Grayscale, Sepia, Reflect e Blur passaram; conceitos trabalhados: traversal de matriz, médias RGB, clamp em 255, swap simétrico, cópia antes de mutação, neighborhood scan e bounds check."
       ]
     },
     "fcc-js-v10": {
