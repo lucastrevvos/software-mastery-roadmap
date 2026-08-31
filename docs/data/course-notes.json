@@ -1,7 +1,7 @@
 {
   "meta": {
-    "version": "2.2.0",
-    "updatedAt": "2026-08-30T21:45:00-03:00",
+    "version": "2.3.0",
+    "updatedAt": "2026-08-30T21:55:00-03:00",
     "purpose": "Anotações pessoais, modelos mentais e resumos úteis das conversas de estudo, vinculados diretamente a cada curso do roadmap."
   },
   "courses": {
@@ -476,6 +476,58 @@
           "C#",
           "JavaScript",
           "engineering"
+        ]
+      },
+      {
+        "id": "CS50-NOTE-019",
+        "date": "2026-08-30",
+        "type": "mental-model",
+        "title": "Python: a mesma computação com mais abstração",
+        "summary": "A Week 6 mostrou que Python remove grande parte da sintaxe e do gerenciamento manual vistos em C, mas os fundamentos continuam: loops, funções, estruturas de dados, memória, algoritmos e custos de execução.",
+        "points": [
+          "Python gerencia memória automaticamente; o programador normalmente não chama malloc/free, mas objetos e referências continuam existindo por baixo.",
+          "Python list é conceitualmente um array dinâmico; dict é uma tabela de mapeamento baseada em hashing; set também usa a ideia de hashing.",
+          "Métodos como isalpha(), slicing e repetição de strings escondem loops e manipulação de memória que em C seriam escritos de forma mais explícita.",
+          "Exceptions com try/except substituem parte do padrão de verificar códigos de retorno manualmente.",
+          "Funções continuam criando chamadas e stack frames; recursão não deixa de ter custo porque a linguagem é de alto nível.",
+          "Abstração reduz cerimônia, não elimina responsabilidade por lógica, complexidade e escolha de estrutura."
+        ],
+        "mentalModel": "C expõe mecanismos → Python abstrai mecanismos → algoritmos e estruturas continuam por baixo",
+        "relatedTopics": [
+          "Python",
+          "C",
+          "abstraction",
+          "garbage collection",
+          "list",
+          "dict",
+          "set",
+          "exceptions",
+          "stack frames"
+        ]
+      },
+      {
+        "id": "CS50-NOTE-020",
+        "date": "2026-08-30",
+        "type": "mental-model",
+        "title": "DNA: CSV, dict e eliminação de candidatos",
+        "summary": "O exercício DNA combina leitura de arquivos, dicionários e busca: calcula a maior sequência consecutiva de cada STR e compara esse perfil com cada pessoa do banco.",
+        "points": [
+          "csv.DictReader transforma cada linha do CSV em um dicionário chave→valor, evitando trabalhar apenas por posição de coluna.",
+          "O mapa de resultados dos STRs é um dict: nome do STR → maior repetição encontrada.",
+          "longest_match percorre possíveis posições e conta repetições consecutivas de uma subsequência.",
+          "Ao comparar uma pessoa, basta um STR diferente para descartá-la; por isso break evita trabalho desnecessário.",
+          "O padrão geral é: extrair características → guardar em estrutura chave→valor → comparar candidatos → eliminar cedo quando uma condição falha."
+        ],
+        "mentalModel": "DNA → extrair perfil STR → dict de contagens → comparar com cada perfil CSV → primeiro mismatch descarta → match completo identifica",
+        "relatedTopics": [
+          "Python",
+          "CSV",
+          "dict",
+          "hash table",
+          "search",
+          "break",
+          "string slicing",
+          "DNA"
         ]
       }
     ]
