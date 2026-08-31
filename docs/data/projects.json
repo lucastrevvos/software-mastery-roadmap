@@ -1,7 +1,7 @@
 {
   "meta": {
     "version": "1.0.0",
-    "updatedAt": "2026-08-31T14:40:00-03:00",
+    "updatedAt": "2026-08-31T15:45:00-03:00",
     "purpose": "Camada de projetos aplicados do roadmap: estratégia, arquitetura, requisitos praticados, evidências, progresso e próximos gates."
   },
   "principles": [
@@ -21,7 +21,7 @@
       "status": "in-progress",
       "priority": "high",
       "startedAt": "2026-08-31",
-      "updatedAt": "2026-08-31T14:40:00-03:00",
+      "updatedAt": "2026-08-31T15:45:00-03:00",
       "purpose": "Reativar e aprofundar Node.js, TypeScript, NestJS, React, APIs, microsserviços, integrações e cloud por meio de um sistema automotivo próximo de um cenário de produção.",
       "careerContext": "Preparação imediata para oportunidade Full Stack com Node.js, React, TypeScript, APIs, microsserviços e integrações, preservando o projeto depois da entrevista como laboratório permanente de engenharia.",
       "goal": "Construir localmente um pequeno ecossistema full stack, mapear cada componente para AWS/Azure, realizar deploy real em cloud e praticar falhas de produção, observabilidade e decisões arquiteturais.",
@@ -82,13 +82,13 @@
           "id": "typescript",
           "title": "TypeScript",
           "status": "in-progress",
-          "evidence": "Projeto NestJS criado em strict mode."
+          "evidence": "DTO tipado com decorators e strict mode; spread, classes, tipos e parâmetros em uso."
         },
         {
           "id": "nestjs",
           "title": "NestJS",
           "status": "in-progress",
-          "evidence": "Nest CLI 12.0.0 e scaffold ESM criados; próximo passo é Module → Controller → Service → DI."
+          "evidence": "Module/Controller/Service/DI ativos; DTO + ValidationPipe configurados; próximo passo GET por id e tratamento 404."
         },
         {
           "id": "react",
@@ -100,7 +100,7 @@
           "id": "apis",
           "title": "APIs REST",
           "status": "in-progress",
-          "evidence": "Endpoints planejados para vehicles e service-orders."
+          "evidence": "GET /vehicles e POST /vehicles funcionando; validação de entrada retornando HTTP 400 corretamente."
         },
         {
           "id": "microservices",
@@ -211,15 +211,17 @@
           "order": 1,
           "title": "NestJS Core & REST",
           "status": "in-progress",
-          "progress": 10,
+          "progress": 35,
           "deliverables": [
             "VehiclesModule",
             "VehiclesController",
             "VehiclesService",
             "Dependency Injection",
-            "GET/POST/PUT/DELETE",
+            "GET /vehicles",
+            "POST /vehicles",
             "DTO + ValidationPipe",
-            "exceptions/status codes"
+            "exceptions/status codes",
+            "GET/POST/PUT/DELETE"
           ]
         },
         {
@@ -350,9 +352,9 @@
         }
       ],
       "progress": {
-        "percent": 7,
+        "percent": 12,
         "currentPhase": "NestJS Core & REST",
-        "currentTask": "Criar VehiclesModule, VehiclesController e VehiclesService e fazer GET /vehicles funcionar.",
+        "currentTask": "Implementar GET /vehicles/:id com @Param, ParseIntPipe e NotFoundException.",
         "nextTasks": [
           "DTO + ValidationPipe e POST /vehicles",
           "CRUD REST e status codes",
@@ -365,7 +367,10 @@
           "npm 11.12.1 ativo.",
           "Nest CLI 12.0.0 instalado.",
           "Projeto vehicle-service-api criado com strict mode, ESM e Vitest.",
-          "Auto-instrumentação @nestjs/observe mantida desativada inicialmente para aprender observabilidade de forma explícita."
+          "Auto-instrumentação @nestjs/observe mantida desativada inicialmente para aprender observabilidade de forma explícita.",
+          "POST /vehicles funcionando com CreateVehicleDto.",
+          "ValidationPipe global configurado com whitelist e transform.",
+          "Validação rejeitou year=1800 com HTTP 400 e mensagem de class-validator."
         ]
       },
       "productionQuestions": [
