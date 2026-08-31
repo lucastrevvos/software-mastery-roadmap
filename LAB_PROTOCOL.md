@@ -157,3 +157,40 @@ problema → decomposição → reconhecimento de padrão → pseudocódigo → 
 - o objetivo final é resolver problemas novos com método, não fazer qualquer algoritmo de memória.
 
 O bloco deve ser formalizado no roadmap principal quando o CS50P for concluído, preservando a prioridade atual de concluir a base do CS50 sem inflar a carga paralela.
+
+
+## 13. Project Layer — projetos aplicados, estratégia e progresso
+
+A camada de projetos é independente da sequência linear de cursos. Ela registra aplicações reais ou laboratórios de engenharia que podem atravessar várias fases do roadmap ao mesmo tempo.
+
+Fonte da verdade: `docs/data/projects.json`.
+
+Cada projeto deve registrar:
+
+- propósito e contexto profissional;
+- stack e requisitos que serão praticados;
+- arquitetura local e mapeamento para cloud;
+- estratégia por fases;
+- progresso percentual, fase atual e próxima tarefa;
+- evidências concluídas;
+- falhas e cenários de produção que serão simulados;
+- deploys reais quando fizer sentido;
+- futuros Mastery Gates / Architecture Defense.
+
+### Regra local-first / cloud-real
+
+Quando um projeto envolver cloud:
+
+1. construir e compreender o conceito localmente;
+2. mapear explicitamente o componente local para o serviço cloud correspondente;
+3. explicar por que aquele serviço é adequado e quais alternativas existem;
+4. realizar deploy real quando custo, segurança e utilidade justificarem;
+5. adicionar observabilidade e health checks;
+6. provocar falhas controladas e diagnosticar;
+7. destruir ou reduzir recursos após o laboratório para evitar custo esquecido.
+
+### Projetos de reativação profissional
+
+Projetos criados para entrevista ou retorno de stack não precisam ser concluídos antes da oportunidade. O objetivo imediato é recuperar fluência e raciocínio; depois da entrevista, o projeto continua até virar evidência real de engenharia.
+
+Prática atual em laboratório nunca deve ser apresentada como experiência profissional passada. Ela serve como evidência atual de atualização, domínio e capacidade de transferência.
