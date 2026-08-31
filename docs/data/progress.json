@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-30T14:10:00-03:00",
+  "updatedAt": "2026-08-30T21:55:00-03:00",
   "courses": {
     "cs50x": {
       "status": "in-progress",
@@ -20,9 +20,15 @@
         "problem-set-5-inheritance",
         "problem-set-5-speller",
         "problem-set-5",
-        "week-5-data-structures"
+        "week-5-data-structures",
+        "problem-set-6-sentimental-mario-less",
+        "problem-set-6-sentimental-cash",
+        "problem-set-6-sentimental-readability",
+        "problem-set-6-dna",
+        "problem-set-6",
+        "week-6-python"
       ],
-      "current": "week-6-python",
+      "current": "week-7-sql",
       "notes": [
         "Lecture 0 concluída.",
         "Projeto Scratch Bug vs Developer concluído, validado e submetido via CS50.",
@@ -51,7 +57,11 @@
         "PSet 5 — Speller validado e submetido em 2026-08-30. Conceitos consolidados: hash table, buckets, linked lists, hash function, collisions, malloc/free, lookup e Big O.",
         "Problem Set 5 concluído e submetido em 2026-08-30: Inheritance + Speller.",
         "Week 5 — Data Structures concluída em 2026-08-30. Estruturas trabalhadas: linked lists, trees, hash tables e tries.",
-        "Week 6 — Python iniciada em 2026-08-30. Regra de estudo: sempre conectar abstrações de Python aos fundamentos já vistos em C, memória, algoritmos e estruturas de dados."
+        "Week 6 — Python iniciada em 2026-08-30. Regra de estudo: sempre conectar abstrações de Python aos fundamentos já vistos em C, memória, algoritmos e estruturas de dados.",
+        "Week 6 — Python concluída em 2026-08-30.",
+        "Problem Set 6 concluído e submetido em 2026-08-30: Sentimental Mario (Less), Sentimental Cash, Sentimental Readability e DNA.",
+        "Week 6 consolidou a ponte C → Python: menos sintaxe explícita, memória gerenciada, tipos/coleções de alto nível, exceptions e uso de dict como abstração de hash table.",
+        "Week 7 — SQL iniciada em 2026-08-30."
       ]
     },
     "fcc-js-v10": {
