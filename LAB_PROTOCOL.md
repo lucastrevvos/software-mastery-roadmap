@@ -124,3 +124,36 @@ Micro-retrievals feitos durante Velocity Mode podem ocorrer diretamente no chat 
 ## 11. Regra de ouro
 
 **Memória para fundamentos. Modelos mentais para mecanismos. Prática para padrões. Documentação para detalhes.**
+
+
+## 12. Algorithm Gym — prática progressiva de resolução de problemas
+
+Depois do CS50P, iniciar um bloco explícito de prática algorítmica progressiva. O objetivo não é memorizar soluções nem depender de enunciados que indiquem a técnica, mas desenvolver capacidade de decompor problemas novos, reconhecer padrões, escolher estruturas de dados, implementar, analisar custo e adaptar a solução quando as regras mudarem.
+
+### Progressão por níveis
+
+1. loops, condições, contadores, min/max e strings;
+2. arrays/lists, frequência, two pointers e sliding window;
+3. hash tables, sets, stacks e queues;
+4. sorting, binary search e recursion;
+5. linked lists, trees e BSTs;
+6. graphs, BFS e DFS;
+7. greedy, backtracking e divide and conquer;
+8. dynamic programming;
+9. problemas mistos sem indicar previamente a técnica;
+10. problemas de engenharia com dados grandes, memória, concorrência, banco, latência, caching, filas e distribuição.
+
+### Ciclo de cada problema
+
+problema → decomposição → reconhecimento de padrão → pseudocódigo → implementação → análise de Big O → variação de requisito → adaptação/transferência.
+
+### Regras de progressão
+
+- não subir de nível por quantidade bruta de exercícios;
+- exigir evidência de Explain, Trace, Build, Debug e Transfer;
+- alternar linguagens quando isso ajudar a separar algoritmo de sintaxe, especialmente Python, C# e JavaScript;
+- problemas avançados devem deixar de indicar a técnica esperada;
+- usar gates cumulativos para provar independência de solução pronta;
+- o objetivo final é resolver problemas novos com método, não fazer qualquer algoritmo de memória.
+
+O bloco deve ser formalizado no roadmap principal quando o CS50P for concluído, preservando a prioridade atual de concluir a base do CS50 sem inflar a carga paralela.
