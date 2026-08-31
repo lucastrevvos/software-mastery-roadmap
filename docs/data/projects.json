@@ -1,7 +1,7 @@
 {
   "meta": {
     "version": "1.0.0",
-    "updatedAt": "2026-08-31T16:45:00-03:00",
+    "updatedAt": "2026-08-31T18:10:00-03:00",
     "purpose": "Camada de projetos aplicados do roadmap: estratégia, arquitetura, requisitos praticados, evidências, progresso e próximos gates."
   },
   "principles": [
@@ -21,7 +21,7 @@
       "status": "in-progress",
       "priority": "high",
       "startedAt": "2026-08-31",
-      "updatedAt": "2026-08-31T16:45:00-03:00",
+      "updatedAt": "2026-08-31T18:10:00-03:00",
       "purpose": "Reativar e aprofundar Node.js, TypeScript, NestJS, React, APIs, microsserviços, integrações e cloud por meio de um sistema automotivo próximo de um cenário de produção.",
       "careerContext": "Preparação imediata para oportunidade Full Stack com Node.js, React, TypeScript, APIs, microsserviços e integrações, preservando o projeto depois da entrevista como laboratório permanente de engenharia.",
       "goal": "Construir localmente um pequeno ecossistema full stack, mapear cada componente para AWS/Azure, realizar deploy real em cloud e praticar falhas de produção, observabilidade e decisões arquiteturais.",
@@ -87,7 +87,7 @@
         {
           "id": "nestjs",
           "title": "NestJS",
-          "status": "in-progress",
+          "status": "covered",
           "evidence": "NestJS core concluído no módulo vehicles: Module, Controller, Service, DI, DTOs, pipes, exceptions e CRUD."
         },
         {
@@ -136,13 +136,13 @@
           "id": "postgresql",
           "title": "PostgreSQL",
           "status": "in-progress",
-          "evidence": "Próximo bloco: PostgreSQL local em Docker, SQL parametrizado, pool de conexões e mapeamento futuro para RDS/Azure PostgreSQL."
+          "evidence": "CRUD completo em PostgreSQL via pg/Pool e SQL parametrizado; próximos passos: migrations, pool, índices e EXPLAIN."
         },
         {
           "id": "testing",
           "title": "Testes",
           "status": "not-started",
-          "evidence": "Vitest e testes de integração/e2e serão adicionados durante evolução dos endpoints."
+          "evidence": "Ainda pendente; CRUD validado manualmente com curl. Testes automatizados virão após consolidar persistência."
         },
         {
           "id": "observability",
@@ -228,12 +228,15 @@
           "order": 2,
           "title": "Persistência PostgreSQL",
           "status": "in-progress",
-          "progress": 5,
+          "progress": 60,
           "deliverables": [
             "modelagem",
             "repository/data access",
+            "SQL parametrizado",
+            "pool de conexões",
             "migrations",
             "índices",
+            "EXPLAIN",
             "consultas e Big O"
           ]
         },
@@ -352,9 +355,9 @@
         }
       ],
       "progress": {
-        "percent": 22,
+        "percent": 31,
         "currentPhase": "Persistência PostgreSQL",
-        "currentTask": "Subir PostgreSQL local em Docker e substituir o array em memória por persistência real.",
+        "currentTask": "Versionar schema com migrations e estudar pool, índices e EXPLAIN.",
         "nextTasks": [
           "DTO + ValidationPipe e POST /vehicles",
           "CRUD REST e status codes",
@@ -376,7 +379,11 @@
           "NotFoundException retornando HTTP 404 para veículo inexistente.",
           "CRUD REST básico concluído: POST, GET list, GET by id, PATCH e DELETE.",
           "Update parcial funcionando com UpdateVehicleDto e Object.assign().",
-          "DELETE removendo recurso e GET subsequente retornando 404."
+          "DELETE removendo recurso e GET subsequente retornando 404.",
+          "CRUD completo persistindo em PostgreSQL.",
+          "Diagnóstico de autenticação PostgreSQL 28P01 realizado e corrigido.",
+          "Diagnóstico de schema drift (coluna plate inexistente) realizado e corrigido.",
+          "Dados persistem fora da memória do processo Node."
         ]
       },
       "productionQuestions": [
