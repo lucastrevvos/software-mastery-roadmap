@@ -1,7 +1,7 @@
 {
   "meta": {
-    "version": "2.1.0",
-    "updatedAt": "2026-08-30T14:12:00-03:00",
+    "version": "2.2.0",
+    "updatedAt": "2026-08-30T21:45:00-03:00",
     "purpose": "Anotações pessoais, modelos mentais e resumos úteis das conversas de estudo, vinculados diretamente a cada curso do roadmap."
   },
   "courses": {
@@ -448,6 +448,34 @@
           ".NET",
           "abstraction",
           "transfer learning"
+        ]
+      },
+      {
+        "id": "CS50-NOTE-018",
+        "date": "2026-08-30",
+        "type": "learning-plan",
+        "title": "Algorithm Gym após CS50P",
+        "summary": "Após CS50P, iniciar uma fase progressiva de prática algorítmica para transformar fundamentos em capacidade independente de resolver problemas novos, sem memorizar receitas.",
+        "points": [
+          "A progressão vai de loops/strings e arrays até hashing, stacks/queues, busca, recursão, árvores, grafos, greedy, backtracking, divide and conquer e dynamic programming.",
+          "Nos níveis finais, os problemas não devem informar qual técnica usar; o objetivo é reconhecer o padrão a partir do enunciado.",
+          "Cada exercício segue o ciclo: decompor → identificar padrão → pseudocódigo → implementar → analisar Big O → receber uma mudança de requisito → adaptar.",
+          "A progressão não depende de quantidade de exercícios, mas de Explain, Trace, Build, Debug e Transfer.",
+          "Alguns problemas serão reimplementados em Python, C# e JavaScript para separar algoritmo de sintaxe.",
+          "O nível final inclui problemas de engenharia com dados grandes, memória, concorrência, bancos, latência, caching, filas e sistemas distribuídos.",
+          "Meta: diante de um problema novo, saber construir uma estratégia e solução sem depender de alguém indicar previamente a técnica."
+        ],
+        "mentalModel": "repertório de fundamentos → prática graduada → reconhecimento de padrões → independência → transferência para problemas de engenharia",
+        "relatedTopics": [
+          "algorithms",
+          "problem solving",
+          "Big O",
+          "data structures",
+          "mastery",
+          "Python",
+          "C#",
+          "JavaScript",
+          "engineering"
         ]
       }
     ]
