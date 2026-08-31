@@ -1,0 +1,383 @@
+{
+  "meta": {
+    "version": "1.0.0",
+    "updatedAt": "2026-08-31T14:40:00-03:00",
+    "purpose": "Camada de projetos aplicados do roadmap: estratégia, arquitetura, requisitos praticados, evidências, progresso e próximos gates."
+  },
+  "principles": [
+    "Projeto deve transformar conhecimento em evidência prática, não apenas repetir tutorial.",
+    "Local-first, mas cada componente local deve ter um mapeamento explícito para produção em cloud.",
+    "Quando fizer sentido, o projeto deve chegar a deploy real e operação real em cloud.",
+    "Falhas, timeouts, duplicidade, indisponibilidade e configuração incorreta devem ser simulados para treinar diagnóstico e resiliência.",
+    "Cloud deve ser aprendida como parte da arquitetura do sistema, e não como lista isolada de serviços.",
+    "Custos de cloud devem ter guardrails, alertas e teardown planejado.",
+    "Experiência registrada no projeto não deve ser apresentada como experiência profissional passada; é evidência atual de prática e atualização técnica."
+  ],
+  "projects": [
+    {
+      "id": "vehicle-service-cloud-lab",
+      "title": "Vehicle Service — Full Stack, Microservices & Cloud Lab",
+      "kind": "career-reactivation-and-mastery",
+      "status": "in-progress",
+      "priority": "high",
+      "startedAt": "2026-08-31",
+      "updatedAt": "2026-08-31T14:40:00-03:00",
+      "purpose": "Reativar e aprofundar Node.js, TypeScript, NestJS, React, APIs, microsserviços, integrações e cloud por meio de um sistema automotivo próximo de um cenário de produção.",
+      "careerContext": "Preparação imediata para oportunidade Full Stack com Node.js, React, TypeScript, APIs, microsserviços e integrações, preservando o projeto depois da entrevista como laboratório permanente de engenharia.",
+      "goal": "Construir localmente um pequeno ecossistema full stack, mapear cada componente para AWS/Azure, realizar deploy real em cloud e praticar falhas de produção, observabilidade e decisões arquiteturais.",
+      "stack": {
+        "runtime": [
+          "Node.js 24"
+        ],
+        "backend": [
+          "TypeScript",
+          "NestJS 12"
+        ],
+        "frontend": [
+          "React",
+          "TypeScript"
+        ],
+        "data": [
+          "PostgreSQL"
+        ],
+        "localPlatform": [
+          "Docker",
+          "Docker Compose"
+        ],
+        "integration": [
+          "REST",
+          "fake external automotive API",
+          "mensageria/worker"
+        ],
+        "awsTarget": [
+          "ECS/Fargate",
+          "RDS PostgreSQL",
+          "S3",
+          "CloudFront",
+          "Cognito",
+          "IAM",
+          "SES",
+          "SQS/SNS",
+          "CloudWatch"
+        ],
+        "azureTarget": [
+          "Container Apps/App Service",
+          "Azure Database for PostgreSQL",
+          "Blob Storage",
+          "Front Door/CDN",
+          "Entra External ID",
+          "Managed Identities/RBAC",
+          "Service Bus/Event Grid",
+          "Azure Monitor/Application Insights"
+        ]
+      },
+      "requirements": [
+        {
+          "id": "nodejs",
+          "title": "Node.js",
+          "status": "in-progress",
+          "evidence": "Node 24.15.0 configurado; runtime e event loop serão revisitados durante APIs e integrações."
+        },
+        {
+          "id": "typescript",
+          "title": "TypeScript",
+          "status": "in-progress",
+          "evidence": "Projeto NestJS criado em strict mode."
+        },
+        {
+          "id": "nestjs",
+          "title": "NestJS",
+          "status": "in-progress",
+          "evidence": "Nest CLI 12.0.0 e scaffold ESM criados; próximo passo é Module → Controller → Service → DI."
+        },
+        {
+          "id": "react",
+          "title": "React + TypeScript",
+          "status": "not-started",
+          "evidence": "Frontend será criado depois da API básica."
+        },
+        {
+          "id": "apis",
+          "title": "APIs REST",
+          "status": "in-progress",
+          "evidence": "Endpoints planejados para vehicles e service-orders."
+        },
+        {
+          "id": "microservices",
+          "title": "Microsserviços",
+          "status": "not-started",
+          "evidence": "Separação planejada de API e notification worker/serviço."
+        },
+        {
+          "id": "integrations",
+          "title": "Integrações",
+          "status": "not-started",
+          "evidence": "Fake Automotive API será usada para 200/500/timeout/resposta inválida e retry."
+        },
+        {
+          "id": "aws",
+          "title": "AWS",
+          "status": "not-started",
+          "evidence": "Deploy real planejado após arquitetura local: ECS/Fargate, RDS, S3, CloudFront, Cognito, IAM, SES, mensageria e CloudWatch."
+        },
+        {
+          "id": "azure",
+          "title": "Azure",
+          "status": "not-started",
+          "evidence": "Depois da AWS, mapear e subir uma versão seletiva equivalente em Azure."
+        },
+        {
+          "id": "docker",
+          "title": "Docker / Docker Compose",
+          "status": "not-started",
+          "evidence": "Topologia local de produção será containerizada."
+        },
+        {
+          "id": "postgresql",
+          "title": "PostgreSQL",
+          "status": "not-started",
+          "evidence": "Persistência será adicionada depois do domínio/API inicial."
+        },
+        {
+          "id": "testing",
+          "title": "Testes",
+          "status": "not-started",
+          "evidence": "Vitest e testes de integração/e2e serão adicionados durante evolução dos endpoints."
+        },
+        {
+          "id": "observability",
+          "title": "Observabilidade",
+          "status": "not-started",
+          "evidence": "Logs, health checks, métricas e traces serão adicionados conscientemente após o núcleo, sem auto-instrumentação inicial."
+        }
+      ],
+      "architecture": {
+        "local": [
+          "React + TypeScript",
+          "NestJS API",
+          "PostgreSQL",
+          "Fake Automotive API",
+          "Notification worker",
+          "Fila/broker local",
+          "Docker Compose"
+        ],
+        "aws": [
+          "Frontend estático → S3 + CloudFront",
+          "NestJS APIs/workers → ECS/Fargate",
+          "PostgreSQL → RDS",
+          "Objetos/arquivos → S3",
+          "Autenticação → Cognito",
+          "Permissões → IAM",
+          "Email → SES",
+          "Mensageria → SQS/SNS conforme requisito",
+          "Logs/métricas → CloudWatch"
+        ],
+        "azure": [
+          "Frontend → Front Door/CDN + hosting adequado",
+          "APIs/workers → Container Apps ou App Service conforme workload",
+          "PostgreSQL → Azure Database for PostgreSQL",
+          "Objetos → Blob Storage",
+          "Identidade → Entra External ID quando aplicável",
+          "Permissões → Managed Identities + RBAC",
+          "Mensageria → Service Bus/Event Grid conforme requisito",
+          "Observabilidade → Azure Monitor + Application Insights"
+        ]
+      },
+      "strategy": [
+        "Fase 1 — construir cada conceito localmente e entender o mecanismo antes da cloud.",
+        "Fase 2 — para cada peça local, registrar qual serviço de cloud a representa e por quê.",
+        "Fase 3 — simular integrações externas e falhas: 500, timeout, resposta inválida, retry e duplicidade.",
+        "Fase 4 — separar responsabilidades em serviços/worker e praticar comunicação síncrona e assíncrona.",
+        "Fase 5 — containerizar a topologia local e aproximá-la do formato de produção.",
+        "Fase 6 — subir uma versão real na AWS com guardrails de custo, CI/CD, health checks e observabilidade.",
+        "Fase 7 — provocar falhas reais/controladas e diagnosticar logs, configuração, rede, banco, secrets e health checks.",
+        "Fase 8 — mapear a arquitetura para Azure e realizar deploy seletivo para aprender equivalências e trade-offs.",
+        "Fase 9 — fazer Architecture/Mastery Defense explicando escolhas, alternativas, custos, falhas e evolução."
+      ],
+      "phases": [
+        {
+          "order": 0,
+          "title": "Ambiente & scaffold",
+          "status": "completed",
+          "progress": 100,
+          "deliverables": [
+            "Node.js 24.15.0",
+            "npm 11.12.1",
+            "Nest CLI 12.0.0",
+            "Nest app ESM + strict criado"
+          ]
+        },
+        {
+          "order": 1,
+          "title": "NestJS Core & REST",
+          "status": "in-progress",
+          "progress": 10,
+          "deliverables": [
+            "VehiclesModule",
+            "VehiclesController",
+            "VehiclesService",
+            "Dependency Injection",
+            "GET/POST/PUT/DELETE",
+            "DTO + ValidationPipe",
+            "exceptions/status codes"
+          ]
+        },
+        {
+          "order": 2,
+          "title": "Persistência PostgreSQL",
+          "status": "not-started",
+          "progress": 0,
+          "deliverables": [
+            "modelagem",
+            "repository/data access",
+            "migrations",
+            "índices",
+            "consultas e Big O"
+          ]
+        },
+        {
+          "order": 3,
+          "title": "Integração externa fake & resiliência",
+          "status": "not-started",
+          "progress": 0,
+          "deliverables": [
+            "Fake Automotive API",
+            "timeout",
+            "500",
+            "payload inválido",
+            "retry",
+            "circuit breaker conceitual",
+            "idempotência"
+          ]
+        },
+        {
+          "order": 4,
+          "title": "React + TypeScript",
+          "status": "not-started",
+          "progress": 0,
+          "deliverables": [
+            "listagem",
+            "cadastro",
+            "forms",
+            "state",
+            "hooks",
+            "loading/error",
+            "consumo da API"
+          ]
+        },
+        {
+          "order": 5,
+          "title": "Microsserviços & mensageria",
+          "status": "not-started",
+          "progress": 0,
+          "deliverables": [
+            "notification worker/service",
+            "eventos",
+            "fila",
+            "duplicidade",
+            "dead-letter/retry strategy"
+          ]
+        },
+        {
+          "order": 6,
+          "title": "Docker & topologia local de produção",
+          "status": "not-started",
+          "progress": 0,
+          "deliverables": [
+            "Dockerfiles",
+            "Docker Compose",
+            "configuração por ambiente",
+            "health checks",
+            "secrets locais"
+          ]
+        },
+        {
+          "order": 7,
+          "title": "AWS real",
+          "status": "not-started",
+          "progress": 0,
+          "deliverables": [
+            "ECS/Fargate",
+            "RDS",
+            "S3",
+            "CloudFront",
+            "Cognito",
+            "IAM",
+            "SES",
+            "SQS/SNS",
+            "CloudWatch",
+            "CI/CD"
+          ]
+        },
+        {
+          "order": 8,
+          "title": "Production drills & observabilidade",
+          "status": "not-started",
+          "progress": 0,
+          "deliverables": [
+            "container down",
+            "secret incorreto",
+            "DB indisponível",
+            "timeout",
+            "mensagem duplicada",
+            "CPU/latência",
+            "diagnóstico"
+          ]
+        },
+        {
+          "order": 9,
+          "title": "Azure real & equivalências",
+          "status": "not-started",
+          "progress": 0,
+          "deliverables": [
+            "mapeamento AWS↔Azure",
+            "deploy seletivo",
+            "trade-offs"
+          ]
+        },
+        {
+          "order": 10,
+          "title": "Architecture / Mastery Defense",
+          "status": "not-started",
+          "progress": 0,
+          "deliverables": [
+            "C4/diagrama",
+            "ADRs curtos",
+            "trade-offs",
+            "defesa oral/técnica",
+            "evidência de portfólio"
+          ]
+        }
+      ],
+      "progress": {
+        "percent": 7,
+        "currentPhase": "NestJS Core & REST",
+        "currentTask": "Criar VehiclesModule, VehiclesController e VehiclesService e fazer GET /vehicles funcionar.",
+        "nextTasks": [
+          "DTO + ValidationPipe e POST /vehicles",
+          "CRUD REST e status codes",
+          "PostgreSQL",
+          "Fake Automotive API com falhas controladas",
+          "React + TypeScript"
+        ],
+        "completedEvidence": [
+          "Node.js atualizado de 20.19.4 para 24.15.0 por incompatibilidade de dependências.",
+          "npm 11.12.1 ativo.",
+          "Nest CLI 12.0.0 instalado.",
+          "Projeto vehicle-service-api criado com strict mode, ESM e Vitest.",
+          "Auto-instrumentação @nestjs/observe mantida desativada inicialmente para aprender observabilidade de forma explícita."
+        ]
+      },
+      "productionQuestions": [
+        "Por que ECS/Fargate em vez de Lambda para este workload?",
+        "Onde usar comunicação síncrona e onde usar mensageria?",
+        "Como evitar processamento duplicado?",
+        "O que acontece quando uma API externa retorna 500 ou demora 8 segundos?",
+        "Como o serviço autentica usuário e autoriza acesso?",
+        "Como secrets e permissões entre serviços são gerenciados?",
+        "Como saber que o sistema está degradando antes do usuário reclamar?",
+        "Como fazer rollback e diagnosticar um container que não sobe?"
+      ]
+    }
+  ]
+}
