@@ -1,7 +1,7 @@
 {
   "meta": {
     "version": "1.0.0",
-    "updatedAt": "2026-08-31T15:45:00-03:00",
+    "updatedAt": "2026-08-31T15:50:00-03:00",
     "purpose": "Camada de projetos aplicados do roadmap: estratégia, arquitetura, requisitos praticados, evidências, progresso e próximos gates."
   },
   "principles": [
@@ -21,7 +21,7 @@
       "status": "in-progress",
       "priority": "high",
       "startedAt": "2026-08-31",
-      "updatedAt": "2026-08-31T15:45:00-03:00",
+      "updatedAt": "2026-08-31T15:50:00-03:00",
       "purpose": "Reativar e aprofundar Node.js, TypeScript, NestJS, React, APIs, microsserviços, integrações e cloud por meio de um sistema automotivo próximo de um cenário de produção.",
       "careerContext": "Preparação imediata para oportunidade Full Stack com Node.js, React, TypeScript, APIs, microsserviços e integrações, preservando o projeto depois da entrevista como laboratório permanente de engenharia.",
       "goal": "Construir localmente um pequeno ecossistema full stack, mapear cada componente para AWS/Azure, realizar deploy real em cloud e praticar falhas de produção, observabilidade e decisões arquiteturais.",
@@ -88,7 +88,7 @@
           "id": "nestjs",
           "title": "NestJS",
           "status": "in-progress",
-          "evidence": "Module/Controller/Service/DI ativos; DTO + ValidationPipe configurados; próximo passo GET por id e tratamento 404."
+          "evidence": "Module/Controller/Service/DI, DTO, ValidationPipe, ParseIntPipe e NotFoundException funcionando."
         },
         {
           "id": "react",
@@ -100,7 +100,7 @@
           "id": "apis",
           "title": "APIs REST",
           "status": "in-progress",
-          "evidence": "GET /vehicles e POST /vehicles funcionando; validação de entrada retornando HTTP 400 corretamente."
+          "evidence": "GET list, GET by id e POST funcionando; 400 para input inválido e 404 para recurso inexistente."
         },
         {
           "id": "microservices",
@@ -211,7 +211,7 @@
           "order": 1,
           "title": "NestJS Core & REST",
           "status": "in-progress",
-          "progress": 35,
+          "progress": 50,
           "deliverables": [
             "VehiclesModule",
             "VehiclesController",
@@ -352,9 +352,9 @@
         }
       ],
       "progress": {
-        "percent": 12,
+        "percent": 16,
         "currentPhase": "NestJS Core & REST",
-        "currentTask": "Implementar GET /vehicles/:id com @Param, ParseIntPipe e NotFoundException.",
+        "currentTask": "Fechar CRUD REST com PATCH /vehicles/:id e DELETE /vehicles/:id.",
         "nextTasks": [
           "DTO + ValidationPipe e POST /vehicles",
           "CRUD REST e status codes",
@@ -370,7 +370,10 @@
           "Auto-instrumentação @nestjs/observe mantida desativada inicialmente para aprender observabilidade de forma explícita.",
           "POST /vehicles funcionando com CreateVehicleDto.",
           "ValidationPipe global configurado com whitelist e transform.",
-          "Validação rejeitou year=1800 com HTTP 400 e mensagem de class-validator."
+          "Validação rejeitou year=1800 com HTTP 400 e mensagem de class-validator.",
+          "GET /vehicles/:id funcionando.",
+          "ParseIntPipe validando parâmetro numérico e retornando HTTP 400 para id inválido.",
+          "NotFoundException retornando HTTP 404 para veículo inexistente."
         ]
       },
       "productionQuestions": [
