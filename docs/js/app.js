@@ -29,6 +29,54 @@ function renderCurrent(progress){
     </article>`).join('');
 }
 
+function renderProjects(projectData){
+  const projects=projectData.projects||[];
+  const container=$('#projects-list');
+  if(!container) return;
+  if(!projects.length){container.innerHTML='<p class="muted">Nenhum projeto registrado.</p>';return;}
+  container.innerHTML=projects.map(project=>{
+    const reqs=project.requirements||[];
+    const covered=reqs.filter(r=>['completed','covered'].includes(r.status)).length;
+    const active=reqs.filter(r=>r.status==='in-progress').length;
+    const phases=project.phases||[];
+    const currentPhase=phases.find(p=>p.status==='in-progress');
+    return `
+      <article class="project-card">
+        <div class="project-head">
+          <div>
+            <span class="${statusClass(project.status)}">${statusLabel(project.status)}</span>
+            <h3>${escapeHtml(project.title)}</h3>
+            <p>${escapeHtml(project.purpose)}</p>
+          </div>
+          <div class="project-percent"><strong>${project.progress?.percent??0}%</strong><small>progresso</small></div>
+        </div>
+        <div class="project-track"><div class="project-fill" style="width:${project.progress?.percent??0}%"></div></div>
+        <div class="project-now">
+          <div><small>FASE ATUAL</small><strong>${escapeHtml(project.progress?.currentPhase||currentPhase?.title||'a definir')}</strong></div>
+          <div><small>AGORA</small><strong>${escapeHtml(project.progress?.currentTask||'a definir')}</strong></div>
+        </div>
+        <div class="project-requirements">
+          ${reqs.map(req=>`<span class="project-req project-req-${escapeHtml(req.status)}" title="${escapeHtml(req.evidence||'')}">${escapeHtml(req.title)}</span>`).join('')}
+        </div>
+        <small class="project-summary">${covered} requisito(s) coberto(s) · ${active} em prática · ${reqs.length} mapeados</small>
+        <details class="project-details">
+          <summary>Estratégia, arquitetura e fases</summary>
+          <div class="project-detail-grid">
+            <section><h4>Estratégia</h4><ol>${(project.strategy||[]).map(x=>`<li>${escapeHtml(x)}</li>`).join('')}</ol></section>
+            <section><h4>Local → AWS → Azure</h4>
+              <p><strong>Local:</strong> ${escapeHtml((project.architecture?.local||[]).join(' → '))}</p>
+              <p><strong>AWS:</strong> ${escapeHtml((project.architecture?.aws||[]).join(' · '))}</p>
+              <p><strong>Azure:</strong> ${escapeHtml((project.architecture?.azure||[]).join(' · '))}</p>
+            </section>
+          </div>
+          <div class="project-phases">
+            ${phases.map(phase=>`<div class="project-phase"><span>${String(phase.order).padStart(2,'0')}</span><div><strong>${escapeHtml(phase.title)}</strong><small>${escapeHtml(statusLabel(phase.status))} · ${phase.progress}%</small></div></div>`).join('')}
+          </div>
+        </details>
+      </article>`;
+  }).join('');
+}
+
 function renderMastery(mastery){
   const list=mastery.competencies;
   const assessed=list.filter(x=>x.level>0);
@@ -189,15 +237,17 @@ function renderRoadmap(roadmap,courseNotes){
 
 async function init(){
   try{
-    const [roadmap,progress,mastery,reviews,ledger,courseNotes]=await Promise.all([
+    const [roadmap,progress,mastery,reviews,ledger,courseNotes,projects]=await Promise.all([
       loadJson('data/roadmap.json'),
       loadJson('data/progress.json'),
       loadJson('data/mastery.json'),
       loadJson('data/reviews.json'),
       loadJson('data/error-ledger.json'),
-      loadJson('data/course-notes.json')
+      loadJson('data/course-notes.json'),
+      loadJson('data/projects.json')
     ]);
     renderCurrent(progress);
+    renderProjects(projects);
     renderMastery(mastery);
     renderReviews(reviews);
     renderErrors(ledger);
