@@ -1,0 +1,654 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Um roadmap independente, baseado em ciência da aprendizagem, currículos de referência e práticas globais, para realmente aprender programação e engenharia de software.">
+  <title>Como Realmente Aprender Programação — Software Formation Roadmap</title>
+  <link rel="stylesheet" href="css/real-learning-roadmap.css?v=1.0.0">
+</head>
+<body>
+  <header class="hero">
+    <div class="shell">
+      <nav class="topnav" aria-label="Navegação">
+        <a class="brand" href="index.html">Software Mastery Roadmap</a>
+        <div class="navlinks">
+          <a href="#metodo">Método</a>
+          <a href="#fases">Formação</a>
+          <a href="#mundo">Mundo</a>
+          <a href="#ia">IA</a>
+          <a href="#fontes">Fontes</a>
+        </div>
+      </nav>
+
+      <div class="hero-grid">
+        <div>
+          <p class="eyebrow">ROADMAP EXPERIMENTAL · FORMAÇÃO, NÃO CERTIFICAÇÃO</p>
+          <h1>Como realmente<br>aprender programação.</h1>
+          <p class="lead">
+            Um currículo construído do zero para formar alguém capaz de compreender, implementar, depurar,
+            transferir, revisar, entregar e operar software — sem confundir curso concluído com competência.
+          </p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#fases">Ver a formação</a>
+            <a class="btn" href="#principios">Ver os princípios</a>
+          </div>
+        </div>
+
+        <aside class="manifesto-card">
+          <span class="tiny-label">TESE</span>
+          <blockquote>
+            Programação não é aprendida consumindo sintaxe. Ela é aprendida construindo modelos mentais
+            corretos e provando, repetidamente, que eles sobrevivem a problemas novos.
+          </blockquote>
+          <div class="manifesto-tags">
+            <span>fundamentos</span><span>transferência</span><span>debugging</span>
+            <span>sistemas</span><span>produção</span><span>ownership</span>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </header>
+
+  <main class="shell">
+    <section id="principios" class="section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">01 · PRINCÍPIOS</p>
+          <h2>O que este roadmap otimiza</h2>
+        </div>
+        <p class="section-note">Não há certificado como requisito de avanço. Evidência de capacidade é o gate.</p>
+      </div>
+
+      <div class="principle-grid">
+        <article class="principle">
+          <span>01</span><h3>Modelos antes de APIs</h3>
+          <p>Entender o mecanismo o suficiente para prever comportamento antes de decorar a interface que o esconde.</p>
+        </article>
+        <article class="principle">
+          <span>02</span><h3>Problemas antes de padrões</h3>
+          <p>Primeiro reconhecer a estrutura do problema; só depois nomear algoritmo, pattern ou framework.</p>
+        </article>
+        <article class="principle">
+          <span>03</span><h3>Debugging é currículo</h3>
+          <p>Encontrar causa, formular hipótese, medir e corrigir é uma competência própria — não um acidente do projeto.</p>
+        </article>
+        <article class="principle">
+          <span>04</span><h3>Ferramenta é veículo</h3>
+          <p>Python, C, C#, JavaScript ou Rust servem ao objetivo cognitivo. A linguagem não define a fase da formação.</p>
+        </article>
+        <article class="principle">
+          <span>05</span><h3>Produção faz parte</h3>
+          <p>Software não termina quando compila: precisa ser testado, observado, implantado, degradado e recuperado.</p>
+        </article>
+        <article class="principle">
+          <span>06</span><h3>Transferência vence repetição</h3>
+          <p>Resolver 100 exercícios parecidos vale menos que resolver um problema novo sem receber a técnica no título.</p>
+        </article>
+        <article class="principle">
+          <span>07</span><h3>Feedback rápido, ajuda graduada</h3>
+          <p>Novatos recebem exemplos e pistas; a ajuda é retirada conforme a habilidade cresce.</p>
+        </article>
+        <article class="principle">
+          <span>08</span><h3>Ownership acima de autoria</h3>
+          <p>Mesmo com IA, você deve conseguir explicar, defender, modificar e depurar tudo que entrega.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="metodo" class="section panel">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">02 · MOTOR DE APRENDIZAGEM</p>
+          <h2>O loop que atravessa todas as fases</h2>
+        </div>
+        <p class="section-note">A dificuldade cresce; o ciclo permanece.</p>
+      </div>
+
+      <div class="loop">
+        <article><strong>MODEL</strong><span>Construa o modelo mental e os invariantes.</span></article>
+        <article><strong>TRACE</strong><span>Preveja estado, fluxo, memória, custo ou protocolo antes de executar.</span></article>
+        <article><strong>BUILD</strong><span>Implemente sem copiar a solução.</span></article>
+        <article><strong>BREAK</strong><span>Crie casos que façam soluções frágeis falharem.</span></article>
+        <article><strong>EXPLAIN</strong><span>Explique decisões e comportamento sem esconder-se atrás da sintaxe.</span></article>
+        <article><strong>TRANSFER</strong><span>Resolva uma variação sem tag e sem roteiro.</span></article>
+        <article><strong>RETAIN</strong><span>Reteste depois de dias ou semanas.</span></article>
+        <article><strong>SHIP</strong><span>Quando aplicável, entregue e opere em ambiente real.</span></article>
+      </div>
+
+      <div class="method-columns">
+        <div>
+          <h3>Para iniciantes</h3>
+          <p>Exemplo trabalhado → exercício semelhante → retirada gradual de pistas → problema independente.</p>
+        </div>
+        <div>
+          <h3>Para intermediários</h3>
+          <p>Problema → hipótese → implementação → teste → code review → variação sem tag → reteste.</p>
+        </div>
+        <div>
+          <h3>Para avançados</h3>
+          <p>Requisitos incompletos → trade-offs → sistema → falhas injetadas → incidentes → defesa arquitetural.</p>
+        </div>
+      </div>
+
+      <div class="evidence-strip">
+        <strong>Gate mínimo por tópico importante</strong>
+        <span>explicar</span><span>traçar</span><span>construir</span><span>depurar</span>
+        <span>transferir</span><span>retestar</span>
+      </div>
+    </section>
+
+    <section id="fases" class="section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">03 · FORMAÇÃO</p>
+          <h2>O meu roadmap ideal</h2>
+        </div>
+        <p class="section-note">A ordem é por dependência cognitiva, não por moda de mercado.</p>
+      </div>
+
+      <div class="timeline">
+
+        <article class="stage">
+          <div class="stage-index"><span>00</span><small>ORIENTAÇÃO</small></div>
+          <div class="stage-body">
+            <div class="stage-title"><h3>Computador como instrumento</h3><span class="phase-tag">primeiros dias</span></div>
+            <p class="stage-thesis">Antes de “aprender uma stack”, aprenda a observar o ambiente onde o programa vive.</p>
+            <div class="stage-grid">
+              <section><h4>Aprender</h4><ul>
+                <li>terminal, filesystem e processos</li><li>editor/IDE sem magia</li><li>Git e histórico</li>
+                <li>debugger, logs, profiler básico</li><li>entrada/saída e execução</li>
+              </ul></section>
+              <section><h4>Praticar</h4><ul>
+                <li>navegar e manipular arquivos no shell</li><li>usar breakpoints desde o início</li>
+                <li>ler stack trace antes de pesquisar</li><li>versionar todo exercício relevante</li>
+              </ul></section>
+              <section><h4>Gate</h4><p>Consegue localizar onde o programa está, como executa, onde falhou e voltar a uma versão anterior sem tutorial.</p></section>
+            </div>
+            <div class="resource-row">
+              <a href="https://missing.csail.mit.edu/" target="_blank" rel="noreferrer">MIT Missing Semester</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="stage">
+          <div class="stage-index"><span>01</span><small>FLUÊNCIA</small></div>
+          <div class="stage-body">
+            <div class="stage-title"><h3>Programação fundamental</h3><span class="phase-tag">uma linguagem simples</span></div>
+            <p class="stage-thesis">Aprender a transformar estado e regras em programas pequenos, legíveis e testáveis.</p>
+            <div class="stage-grid">
+              <section><h4>Aprender</h4><ul>
+                <li>valores, tipos e expressões</li><li>condições e iteração</li><li>funções e decomposição</li>
+                <li>coleções e mutabilidade</li><li>erros, testes e invariantes</li>
+              </ul></section>
+              <section><h4>Praticar</h4><ul>
+                <li>finger exercises curtos</li><li>programas úteis pequenos</li>
+                <li>trace manual de execução</li><li>reescrever sem olhar</li>
+              </ul></section>
+              <section><h4>Gate</h4><p>Recebe um problema pequeno, decompõe em funções, escreve testes e chega à solução sem tutorial passo a passo.</p></section>
+            </div>
+            <div class="resource-row">
+              <a href="https://ocw.mit.edu/courses/6-100l-introduction-to-cs-and-programming-using-python-fall-2022/" target="_blank" rel="noreferrer">MIT 6.100L</a>
+              <a href="https://onlinejudge.u-aizu.ac.jp/courses/list" target="_blank" rel="noreferrer">Aizu ITP1</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="stage">
+          <div class="stage-index"><span>02</span><small>ABSTRAÇÃO</small></div>
+          <div class="stage-body">
+            <div class="stage-title"><h3>Abstração, paradigmas e complexidade</h3><span class="phase-tag">pensar acima da sintaxe</span></div>
+            <p class="stage-thesis">Aprender por que funções, objetos, interfaces, closures, iteradores e tipos existem — e quando não ajudam.</p>
+            <div class="stage-grid">
+              <section><h4>Aprender</h4><ul>
+                <li>abstração procedural e de dados</li><li>recursão e funções de alta ordem</li>
+                <li>OOP e composição</li><li>interfaces e contratos</li><li>noções de análise assintótica</li>
+              </ul></section>
+              <section><h4>Praticar</h4><ul>
+                <li>mesmo problema em dois paradigmas</li><li>construir mini-interpretador ou DSL</li>
+                <li>refatorar código procedural para abstrações</li><li>justificar cada camada criada</li>
+              </ul></section>
+              <section><h4>Gate</h4><p>Consegue trocar a representação interna sem quebrar o contrato e explicar o custo e o benefício da abstração.</p></section>
+            </div>
+            <div class="resource-row">
+              <a href="https://www2.eecs.berkeley.edu/Courses/CS61A/" target="_blank" rel="noreferrer">Berkeley CS61A</a>
+              <a href="https://42.fr/en/the-program/innovative-learning/" target="_blank" rel="noreferrer">42 Method</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="stage">
+          <div class="stage-index"><span>03</span><small>PROBLEM SOLVING</small></div>
+          <div class="stage-body">
+            <div class="stage-title"><h3>Estruturas de dados e algoritmos</h3><span class="phase-tag">ginásio deliberado</span></div>
+            <p class="stage-thesis">Não para “passar no LeetCode”, mas para aprender a reconhecer estrutura, custo e invariantes em problemas desconhecidos.</p>
+            <div class="stage-grid">
+              <section><h4>Aprender</h4><ul>
+                <li>arrays, listas, hash, stacks/queues</li><li>árvores, heaps e grafos</li>
+                <li>sorting e searching</li><li>greedy, backtracking e DP</li><li>complexidade de tempo e espaço</li>
+              </ul></section>
+              <section><h4>Praticar</h4><ul>
+                <li>séries curtas por padrão</li><li>problemas sem tag</li><li>contraexemplos e hacking</li>
+                <li>contests curtos</li><li>radar de competência por categoria</li>
+              </ul></section>
+              <section><h4>Gate</h4><p>Consegue escolher uma estrutura, justificar Big-O, adaptar a solução quando a restrição muda e detectar solução aparentemente correta que falha.</p></section>
+            </div>
+            <div class="resource-row">
+              <a href="https://onlinejudge.u-aizu.ac.jp/courses/list" target="_blank" rel="noreferrer">AOJ ALDS1</a>
+              <a href="https://cses.fi/problemset/" target="_blank" rel="noreferrer">CSES</a>
+              <a href="https://atcoder.jp/" target="_blank" rel="noreferrer">AtCoder</a>
+              <a href="https://www.codechef.com/roadmap/data-structures-and-algorithms" target="_blank" rel="noreferrer">CodeChef DSA</a>
+              <a href="https://solved.ac/" target="_blank" rel="noreferrer">solved.ac</a>
+              <a href="https://www.nptel.ac.in/courses/106102064" target="_blank" rel="noreferrer">IIT Delhi DSA</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="stage">
+          <div class="stage-index"><span>04</span><small>SISTEMAS</small></div>
+          <div class="stage-body">
+            <div class="stage-title"><h3>O que existe abaixo do código</h3><span class="phase-tag">C + máquina</span></div>
+            <p class="stage-thesis">O programador começa a enxergar memória, representação, compilação, CPU, processos e concorrência como parte do próprio código.</p>
+            <div class="stage-grid">
+              <section><h4>Aprender</h4><ul>
+                <li>C, ponteiros e layout de memória</li><li>assembly e calling conventions</li>
+                <li>cache e hierarquia de memória</li><li>processos, syscalls e virtual memory</li><li>threads, locks e I/O</li>
+              </ul></section>
+              <section><h4>Praticar</h4><ul>
+                <li>memory bugs deliberados</li><li>profiling e locality</li><li>ler assembly simples</li>
+                <li>modificar kernel didático</li><li>explicar custo de uma abstração de alto nível</li>
+              </ul></section>
+              <section><h4>Gate</h4><p>Consegue seguir um valor do código fonte até memória/máquina e diagnosticar um bug de sistema sem tratar o runtime como caixa-preta.</p></section>
+            </div>
+            <div class="resource-row">
+              <a href="https://www2.eecs.berkeley.edu/Courses/CS61C/" target="_blank" rel="noreferrer">Berkeley CS61C</a>
+              <a href="https://csd.cs.cmu.edu/15213-introduction-to-computer-systems" target="_blank" rel="noreferrer">CMU 15-213</a>
+              <a href="https://pdos.csail.mit.edu/6.S081/2026/" target="_blank" rel="noreferrer">MIT 6.1810 / xv6</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="stage">
+          <div class="stage-index"><span>05</span><small>DADOS</small></div>
+          <div class="stage-body">
+            <div class="stage-title"><h3>Persistência e bancos por dentro</h3><span class="phase-tag">dados com mecânica</span></div>
+            <p class="stage-thesis">SQL é só a superfície. O objetivo é compreender modelagem, storage, índices, execução, concorrência e recuperação.</p>
+            <div class="stage-grid">
+              <section><h4>Aprender</h4><ul>
+                <li>modelo relacional e normalização</li><li>índices e estruturas de storage</li>
+                <li>query planning/execution</li><li>ACID e isolation</li><li>logging, recovery e distribuição</li>
+              </ul></section>
+              <section><h4>Praticar</h4><ul>
+                <li>explicar plano de consulta</li><li>provocar lock/contention</li><li>implementar mini buffer/index</li>
+                <li>medir efeito de índice</li><li>debugging de query lenta</li>
+              </ul></section>
+              <section><h4>Gate</h4><p>Consegue explicar por que uma consulta ficou lenta, escolher índice/transação e prever anomalias de concorrência.</p></section>
+            </div>
+            <div class="resource-row">
+              <a href="https://15445.courses.cs.cmu.edu/fall2026/" target="_blank" rel="noreferrer">CMU 15-445</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="stage">
+          <div class="stage-index"><span>06</span><small>REDES</small></div>
+          <div class="stage-body">
+            <div class="stage-title"><h3>Software que conversa</h3><span class="phase-tag">protocolos, não endpoints</span></div>
+            <p class="stage-thesis">Antes de “API REST”, entender estado, bytes, latência, perda, retransmissão, timeout e protocolos.</p>
+            <div class="stage-grid">
+              <section><h4>Aprender</h4><ul>
+                <li>IP, TCP, UDP e DNS</li><li>HTTP e TLS</li><li>sockets e state machines</li>
+                <li>timeouts, buffering e backpressure</li><li>latência e largura de banda</li>
+              </ul></section>
+              <section><h4>Praticar</h4><ul>
+                <li>capturar tráfego</li><li>implementar protocolo pequeno</li><li>construir partes de TCP</li>
+                <li>simular perda e reordenação</li><li>diagnosticar timeout real</li>
+              </ul></section>
+              <section><h4>Gate</h4><p>Consegue explicar uma requisição ponta a ponta e localizar se a falha está no aplicativo, protocolo, DNS, conexão ou servidor.</p></section>
+            </div>
+            <div class="resource-row">
+              <a href="https://web.stanford.edu/class/cs144/" target="_blank" rel="noreferrer">Stanford CS144</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="stage">
+          <div class="stage-index"><span>07</span><small>ENGENHARIA</small></div>
+          <div class="stage-body">
+            <div class="stage-title"><h3>Construir software com outras pessoas</h3><span class="phase-tag">do código ao produto</span></div>
+            <p class="stage-thesis">A diferença entre “sei programar” e “sou engenheiro de software” aparece quando o código precisa sobreviver a mudança, equipe e tempo.</p>
+            <div class="stage-grid">
+              <section><h4>Aprender</h4><ul>
+                <li>testes, contratos e refactoring</li><li>modularidade, coesão e acoplamento</li>
+                <li>Git colaborativo e code review</li><li>requisitos e trade-offs</li><li>documentação e ADRs</li>
+              </ul></section>
+              <section><h4>Praticar</h4><ul>
+                <li>peer review obrigatório</li><li>reviewer mode em código alheio</li><li>projeto em equipe</li>
+                <li>mudança de requisito no meio</li><li>entrega documentada</li>
+              </ul></section>
+              <section><h4>Gate</h4><p>Consegue revisar PR, defender design, mudar requisito sem reescrever tudo e deixar o sistema compreensível para outra pessoa.</p></section>
+            </div>
+            <div class="resource-row">
+              <a href="https://42.fr/en/the-program/innovative-learning/" target="_blank" rel="noreferrer">42 Peer Learning</a>
+              <a href="https://www.bibb.de/dienst/berufesuche/profile/apprenticeship/80000" target="_blank" rel="noreferrer">Alemanha · Fachinformatiker</a>
+              <a href="https://www.helsinki.fi/en/admissions-and-education/open-university/open-university-studies-degree-programme/computer-science" target="_blank" rel="noreferrer">Helsinki Open CS</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="stage">
+          <div class="stage-index"><span>08</span><small>PRODUÇÃO</small></div>
+          <div class="stage-body">
+            <div class="stage-title"><h3>Entregar, observar e recuperar</h3><span class="phase-tag">software vivo</span></div>
+            <p class="stage-thesis">Produção é um laboratório: ela ensina carga, falha, custo, operação, observabilidade e responsabilidade.</p>
+            <div class="stage-grid">
+              <section><h4>Aprender</h4><ul>
+                <li>CI/CD e release</li><li>containers e runtime</li><li>logs, métricas e traces</li>
+                <li>SLOs e error budgets</li><li>capacity, overload e incident response</li>
+              </ul></section>
+              <section><h4>Praticar</h4><ul>
+                <li>deploy real</li><li>load test</li><li>falha controlada</li>
+                <li>postmortem</li><li>profiling e otimização guiada por medida</li>
+              </ul></section>
+              <section><h4>Gate</h4><p>Consegue detectar degradação, formular hipótese, recuperar serviço e explicar causa e prevenção com evidência.</p></section>
+            </div>
+            <div class="resource-row">
+              <a href="https://sre.google/books/" target="_blank" rel="noreferrer">Google SRE Books</a>
+              <a href="https://missing.csail.mit.edu/2026/" target="_blank" rel="noreferrer">MIT Missing Semester 2026</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="stage">
+          <div class="stage-index"><span>09</span><small>ADVERSARIAL</small></div>
+          <div class="stage-body">
+            <div class="stage-title"><h3>Segurança e pensamento de atacante</h3><span class="phase-tag">construir pensando em abuso</span></div>
+            <p class="stage-thesis">Todo sistema possui entradas hostis, estados inesperados e suposições quebráveis. Segurança vira parte do design, não checklist final.</p>
+            <div class="stage-grid">
+              <section><h4>Aprender</h4><ul>
+                <li>threat modeling</li><li>authn/authz e sessão</li><li>validação e trust boundaries</li>
+                <li>vulnerabilidades web</li><li>segredos, crypto básica e supply chain</li>
+              </ul></section>
+              <section><h4>Praticar</h4><ul>
+                <li>labs vulneráveis legais</li><li>quebrar a própria API</li><li>abuso de regras de negócio</li>
+                <li>security review</li><li>corrigir e retestar a mesma falha</li>
+              </ul></section>
+              <section><h4>Gate</h4><p>Consegue identificar fronteiras de confiança, explorar uma classe de falha em ambiente seguro e implementar a defesa correta.</p></section>
+            </div>
+            <div class="resource-row">
+              <a href="https://portswigger.net/web-security" target="_blank" rel="noreferrer">PortSwigger Web Security Academy</a>
+              <a href="https://sre.google/books/" target="_blank" rel="noreferrer">Building Secure & Reliable Systems</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="stage">
+          <div class="stage-index"><span>10</span><small>DISTRIBUIÇÃO</small></div>
+          <div class="stage-body">
+            <div class="stage-title"><h3>Concorrência e sistemas distribuídos</h3><span class="phase-tag">falha como estado normal</span></div>
+            <p class="stage-thesis">Quando há simultaneidade e rede, “correto” passa a depender de ordem, tempo, consistência e falhas parciais.</p>
+            <div class="stage-grid">
+              <section><h4>Aprender</h4><ul>
+                <li>threads, locks e atomics</li><li>race conditions e deadlocks</li>
+                <li>RPC, retries e idempotência</li><li>replicação e consistência</li><li>consenso e fault tolerance</li>
+              </ul></section>
+              <section><h4>Praticar</h4><ul>
+                <li>race bugs deliberados</li><li>injeção de atraso e perda</li><li>KV store replicado</li>
+                <li>Raft/consensus lab</li><li>chaos e recovery</li>
+              </ul></section>
+              <section><h4>Gate</h4><p>Consegue explicar exatamente o que ocorre quando mensagens atrasam, duplicam ou somem — e projetar comportamento seguro.</p></section>
+            </div>
+            <div class="resource-row">
+              <a href="https://pdos.csail.mit.edu/6.5840/" target="_blank" rel="noreferrer">MIT 6.5840 Distributed Systems</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="stage">
+          <div class="stage-index"><span>11</span><small>ESPECIALIZAÇÃO</small></div>
+          <div class="stage-body">
+            <div class="stage-title"><h3>Especializar sem perder a base</h3><span class="phase-tag">agora sim: stack</span></div>
+            <p class="stage-thesis">Frameworks e plataformas entram depois que os conceitos que eles encapsulam já têm modelos mentais.</p>
+            <div class="specialty-grid">
+              <div><strong>Backend</strong><span>runtime · APIs · dados · filas · cache · observabilidade</span></div>
+              <div><strong>Frontend</strong><span>browser · rendering · estado · acessibilidade · performance</span></div>
+              <div><strong>Mobile</strong><span>lifecycle · offline · energia · sensores · distribuição</span></div>
+              <div><strong>Data</strong><span>modelagem · pipelines · storage · qualidade · sistemas</span></div>
+              <div><strong>AI Engineering</strong><span>modelos · dados · evals · serving · guardrails · observabilidade</span></div>
+              <div><strong>Embedded</strong><span>eletrônica · C/C++ · RTOS · memória · interfaces · timing</span></div>
+            </div>
+            <div class="stage-grid compact">
+              <section><h4>Gate</h4><p>Consegue aprender uma nova ferramenta pela documentação e mapear cada abstração nova para conceitos já dominados.</p></section>
+            </div>
+          </div>
+        </article>
+
+        <article class="stage capstone">
+          <div class="stage-index"><span>12</span><small>OWNERSHIP</small></div>
+          <div class="stage-body">
+            <div class="stage-title"><h3>Capstone: possuir o sistema</h3><span class="phase-tag">defesa final</span></div>
+            <p class="stage-thesis">O fim não é um projeto bonito. É um sistema que você conhece o suficiente para defender sob perguntas e falhas.</p>
+            <div class="capstone-grid">
+              <div><strong>Requisito</strong><span>receba objetivos e restrições incompletas</span></div>
+              <div><strong>Design</strong><span>modele trade-offs e registre decisões</span></div>
+              <div><strong>Build</strong><span>implemente com testes e revisão</span></div>
+              <div><strong>Ship</strong><span>deploy, telemetry e runbook</span></div>
+              <div><strong>Break</strong><span>carga, falha, abuso e degradação</span></div>
+              <div><strong>Defend</strong><span>explique e modifique ao vivo</span></div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="mundo" class="section panel">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">04 · WORLD MASTERY PATTERNS</p>
+          <h2>O que foi roubado do mundo</h2>
+        </div>
+        <p class="section-note">País não é estereótipo; o que interessa é o mecanismo educacional observável.</p>
+      </div>
+
+      <div class="world-grid">
+        <article><span>🇯🇵 Japão</span><h3>Profundidade</h3><p>Entender mecanismos e implementar antes de depender da abstração.</p></article>
+        <article><span>🇨🇳 China</span><h3>Drill deliberado</h3><p>Séries progressivas, reteste e reconhecimento de padrões com volume controlado.</p></article>
+        <article><span>🇮🇳 Índia</span><h3>Empregabilidade</h3><p>DSA, Core CS e conexão explícita entre estudo, entrevista e trabalho.</p></article>
+        <article><span>🇰🇷 Coreia</span><h3>Skill Radar</h3><p>Medir dificuldade e proficiência por área, não apenas número de problemas.</p></article>
+        <article><span>🇫🇮 Finlândia</span><h3>Break-It</h3><p>Resolver e depois tentar quebrar soluções alheias com contraexemplos.</p></article>
+        <article><span>🇸🇬 Singapura</span><h3>Depth × Fluency</h3><p>Equilibrar diligência profunda e execução sob pressão.</p></article>
+        <article><span>🇫🇷 França</span><h3>Peer Review</h3><p>Projetos, avaliação por pares e defesa da própria abordagem.</p></article>
+        <article><span>🇩🇪 Alemanha</span><h3>Delivery</h3><p>Requisitos, implementação, qualidade, segurança, operação e documentação como uma unidade.</p></article>
+        <article><span>🇵🇱 Polônia</span><h3>Blind Problems</h3><p>Descobrir qual é o problema algorítmico antes de escolher a técnica.</p></article>
+        <article><span>🇮🇱 Israel</span><h3>Adversarial Systems</h3><p>Programação ligada cedo a sistemas, redes, segurança e projetos.</p></article>
+        <article><span>🇺🇸 EUA</span><h3>Systems by Building</h3><p>CMU, MIT, Berkeley e Stanford: aprender internals construindo sistemas reais ou didáticos.</p></article>
+        <article><span>🌍 Síntese</span><h3>Ownership</h3><p>A melhor formação combina modelos mentais, prática, feedback, transferência, colaboração e produção.</p></article>
+      </div>
+    </section>
+
+    <section id="ia" class="section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">05 · APRENDER NA ERA DA IA</p>
+          <h2>IA não sai do currículo. Ela muda de papel.</h2>
+        </div>
+        <p class="section-note">O objetivo é aproveitar assistência sem terceirizar o esforço cognitivo que constrói habilidade.</p>
+      </div>
+
+      <div class="ai-grid">
+        <article class="ai-card">
+          <span class="mode mode-closed">MODO 1</span>
+          <h3>Closed Loop</h3>
+          <p>Primeira tentativa sem solução de IA. Pode usar documentação de referência quando a tarefa não estiver testando memória de API.</p>
+          <ul><li>recall</li><li>trace</li><li>problema-base</li><li>gates de domínio</li></ul>
+        </article>
+        <article class="ai-card">
+          <span class="mode mode-tutor">MODO 2</span>
+          <h3>Tutor</h3>
+          <p>A IA dá pista gradual, cria testes, questiona hipótese, compara alternativas e aponta categoria de erro — sem substituir a tentativa.</p>
+          <ul><li>feedback</li><li>debugging guiado</li><li>review</li><li>retest</li></ul>
+        </article>
+        <article class="ai-card">
+          <span class="mode mode-prod">MODO 3</span>
+          <h3>Production</h3>
+          <p>Agentes e copilots são liberados para produtividade, mas o código entra em Code Ownership Gate.</p>
+          <ul><li>explicar</li><li>defender</li><li>depurar</li><li>modificar sem assistência</li></ul>
+        </article>
+      </div>
+
+      <div class="ownership-box">
+        <div>
+          <p class="eyebrow">CODE OWNERSHIP GATE</p>
+          <h3>Se a IA escreveu, você ainda responde.</h3>
+        </div>
+        <ol>
+          <li>Explique o fluxo e as invariantes.</li>
+          <li>Aponte riscos, complexidade e trade-offs.</li>
+          <li>Encontre um bug inserido sem aviso.</li>
+          <li>Faça uma mudança de requisito.</li>
+          <li>Defenda por que aceitaria esse código em produção.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section panel">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">06 · MEDIÇÃO</p>
+          <h2>O que medir em vez de horas e certificados</h2>
+        </div>
+      </div>
+
+      <div class="metrics-grid">
+        <article><span>UNDERSTANDING</span><strong>0–5</strong><p>Qualidade do modelo mental e explicação causal.</p></article>
+        <article><span>FLUENCY</span><strong>0–5</strong><p>Execução sem carga cognitiva excessiva.</p></article>
+        <article><span>DEBUG</span><strong>0–5</strong><p>Qualidade das hipóteses e velocidade de diagnóstico.</p></article>
+        <article><span>TRANSFER</span><strong>0–5</strong><p>Capacidade de aplicar em problema sem tag.</p></article>
+        <article><span>ROBUSTNESS</span><strong>0–5</strong><p>Edge cases, testes, falhas e adversarial thinking.</p></article>
+        <article><span>OWNERSHIP</span><strong>0–5</strong><p>Explicar, defender, modificar e operar o que foi entregue.</p></article>
+      </div>
+
+      <div class="anti">
+        <h3>Anti-métricas</h3>
+        <div>
+          <span>horas de vídeo</span><span>streak</span><span>quantidade bruta de LeetCode</span>
+          <span>certificados acumulados</span><span>frameworks “conhecidos”</span><span>projetos clone</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">07 · RITMO</p>
+          <h2>Como uma semana de estudo deveria parecer</h2>
+        </div>
+        <p class="section-note">Proporção inicial; adaptar ao nível e ao objetivo.</p>
+      </div>
+
+      <div class="week-grid">
+        <article><strong>25%</strong><h3>Modelo</h3><p>Aula, leitura, exemplos trabalhados e perguntas profundas.</p></article>
+        <article><strong>30%</strong><h3>Build</h3><p>Exercícios, pequenos programas e implementação de mecanismos.</p></article>
+        <article><strong>15%</strong><h3>Problem Gym</h3><p>Problemas graduados e alguns sem tag.</p></article>
+        <article><strong>15%</strong><h3>Debug / Break</h3><p>Código quebrado, contraexemplos, profiling e incidentes.</p></article>
+        <article><strong>10%</strong><h3>Review</h3><p>Code review, explicação e comparação de soluções.</p></article>
+        <article><strong>5%</strong><h3>Retest</h3><p>Recuperação espaçada dos fundamentos que precisam permanecer.</p></article>
+      </div>
+      <p class="footnote">Em fases de projeto e produção, Build/Ship cresce; em fundamentos, Model/Problem Gym cresce. Não existe proporção universal.</p>
+    </section>
+
+    <section class="section panel">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">08 · O QUE NÃO FAZER</p>
+          <h2>Os atalhos que parecem progresso</h2>
+        </div>
+      </div>
+      <div class="dont-grid">
+        <div><strong>Framework-first</strong><span>usar abstração sem possuir o conceito</span></div>
+        <div><strong>Curso infinito</strong><span>substituir tentativa por consumo</span></div>
+        <div><strong>Clone portfolio</strong><span>reproduzir tutorial e chamar de projeto</span></div>
+        <div><strong>LeetCode-only</strong><span>otimizar puzzle e negligenciar sistemas</span></div>
+        <div><strong>AI copy/paste</strong><span>entregar sem code ownership</span></div>
+        <div><strong>Pattern bingo</strong><span>decorar DDD/CQRS antes de entender forças e trade-offs</span></div>
+        <div><strong>Happy path</strong><span>nunca treinar falha, carga ou abuso</span></div>
+        <div><strong>Solo forever</strong><span>não aprender review, comunicação e trabalho em equipe</span></div>
+      </div>
+    </section>
+
+    <section id="fontes" class="section sources">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">09 · ATLAS DE REFERÊNCIAS</p>
+          <h2>De onde esta síntese bebe</h2>
+        </div>
+        <p class="section-note">Recursos são referências e laboratórios, não uma lista obrigatória de cursos.</p>
+      </div>
+
+      <div class="source-groups">
+        <section>
+          <h3>Ciência da aprendizagem</h3>
+          <a href="https://www.sciencedirect.com/science/article/pii/S1364661310002081" target="_blank" rel="noreferrer">Retrieval practice e retenção</a>
+          <a href="https://www.apa.org/education-career/k12/practice-acquisition" target="_blank" rel="noreferrer">Prática guiada e feedback</a>
+          <a href="https://www.sciencedirect.com/science/article/pii/S0747563220301023" target="_blank" rel="noreferrer">Meta-análise sobre ensino de programação</a>
+          <a href="https://www.sciencedirect.com/science/article/pii/S0959475225001203" target="_blank" rel="noreferrer">Worked examples + retrieval</a>
+        </section>
+        <section>
+          <h3>Currículo e fundamentos</h3>
+          <a href="https://csed.acm.org/wp-content/uploads/2025/11/CS2023-Report.htm" target="_blank" rel="noreferrer">ACM/IEEE CS2023</a>
+          <a href="https://www2.eecs.berkeley.edu/Courses/CS61A/" target="_blank" rel="noreferrer">Berkeley 61A</a>
+          <a href="https://www2.eecs.berkeley.edu/Courses/CS61B/" target="_blank" rel="noreferrer">Berkeley 61B</a>
+          <a href="https://www2.eecs.berkeley.edu/Courses/CS61C/" target="_blank" rel="noreferrer">Berkeley 61C</a>
+        </section>
+        <section>
+          <h3>Sistemas reais</h3>
+          <a href="https://csd.cs.cmu.edu/15213-introduction-to-computer-systems" target="_blank" rel="noreferrer">CMU 15-213</a>
+          <a href="https://pdos.csail.mit.edu/6.S081/2026/" target="_blank" rel="noreferrer">MIT 6.1810</a>
+          <a href="https://15445.courses.cs.cmu.edu/fall2026/" target="_blank" rel="noreferrer">CMU 15-445</a>
+          <a href="https://web.stanford.edu/class/cs144/" target="_blank" rel="noreferrer">Stanford CS144</a>
+          <a href="https://pdos.csail.mit.edu/6.5840/" target="_blank" rel="noreferrer">MIT 6.5840</a>
+        </section>
+        <section>
+          <h3>Prática global</h3>
+          <a href="https://onlinejudge.u-aizu.ac.jp/courses/list" target="_blank" rel="noreferrer">Aizu Online Judge</a>
+          <a href="https://cses.fi/problemset/" target="_blank" rel="noreferrer">CSES</a>
+          <a href="https://atcoder.jp/" target="_blank" rel="noreferrer">AtCoder</a>
+          <a href="https://solved.ac/" target="_blank" rel="noreferrer">solved.ac / Baekjoon</a>
+          <a href="https://www.codechef.com/" target="_blank" rel="noreferrer">CodeChef</a>
+          <a href="https://www.nptel.ac.in/" target="_blank" rel="noreferrer">NPTEL / IIT</a>
+        </section>
+        <section>
+          <h3>Engenharia e produção</h3>
+          <a href="https://42.fr/en/the-program/innovative-learning/" target="_blank" rel="noreferrer">42 peer-to-peer</a>
+          <a href="https://www.bibb.de/dienst/berufesuche/profile/apprenticeship/80000" target="_blank" rel="noreferrer">BIBB · Alemanha</a>
+          <a href="https://sre.google/books/" target="_blank" rel="noreferrer">Google SRE</a>
+          <a href="https://portswigger.net/web-security" target="_blank" rel="noreferrer">PortSwigger Academy</a>
+        </section>
+        <section>
+          <h3>IA e code ownership</h3>
+          <a href="https://15445.courses.cs.cmu.edu/fall2026/syllabus.html" target="_blank" rel="noreferrer">CMU 15-445 · AI / DRC policy</a>
+          <a href="https://www.sciencedirect.com/science/article/pii/S2666920X26000329" target="_blank" rel="noreferrer">GenAI em CS Education · revisão 2026</a>
+          <a href="https://www.sciencedirect.com/science/article/pii/S2666920X26000706" target="_blank" rel="noreferrer">GenAI + computational thinking · 2026</a>
+        </section>
+      </div>
+    </section>
+
+    <section class="closing">
+      <p class="eyebrow">DEFINIÇÃO DE “APRENDEU”</p>
+      <h2>Você não termina quando sabe a resposta.</h2>
+      <p>
+        Termina quando consegue chegar nela novamente, explicar por que funciona, encontrar onde quebra,
+        adaptar quando o problema muda e assumir responsabilidade pelo comportamento do sistema.
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="shell">
+      <span>Software Formation Roadmap · página independente</span>
+      <div><a href="index.html">Roadmap certificado</a><a href="https://github.com/lucastrevvos/software-mastery-roadmap">GitHub</a></div>
+    </div>
+  </footer>
+</body>
+</html>
