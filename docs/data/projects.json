@@ -1,7 +1,7 @@
 {
   "meta": {
     "version": "1.0.0",
-    "updatedAt": "2026-09-01T16:25:00-03:00",
+    "updatedAt": "2026-09-01T16:35:00-03:00",
     "purpose": "Camada de projetos aplicados do roadmap: estratégia, arquitetura, requisitos praticados, evidências, progresso e próximos gates."
   },
   "principles": [
@@ -21,7 +21,7 @@
       "status": "in-progress",
       "priority": "high",
       "startedAt": "2026-08-31",
-      "updatedAt": "2026-09-01T16:25:00-03:00",
+      "updatedAt": "2026-09-01T16:35:00-03:00",
       "purpose": "Reativar e aprofundar Node.js, TypeScript, NestJS, React, APIs, microsserviços, integrações e cloud por meio de um sistema automotivo próximo de um cenário de produção.",
       "careerContext": "Preparação imediata para oportunidade Full Stack com Node.js, React, TypeScript, APIs, microsserviços e integrações, preservando o projeto depois da entrevista como laboratório permanente de engenharia.",
       "goal": "Construir localmente um pequeno ecossistema full stack, mapear cada componente para AWS/Azure, realizar deploy real em cloud e praticar falhas de produção, observabilidade e decisões arquiteturais.",
@@ -193,7 +193,8 @@
         "Fase 7 — provocar falhas reais/controladas e diagnosticar logs, configuração, rede, banco, secrets e health checks.",
         "Fase 8 — mapear a arquitetura para Azure e realizar deploy seletivo para aprender equivalências e trade-offs.",
         "Fase 9 — fazer Architecture/Mastery Defense explicando escolhas, alternativas, custos, falhas e evolução.",
-        "Padrão profissional transversal — controllers finos, services/use cases, repositories, clients/adapters, contratos internos, config/secrets externos ao código, resiliência, observabilidade, segurança, testes e operação serão aplicados ao longo de todo o lab."
+        "Padrão profissional transversal — controllers finos, services/use cases, repositories, clients/adapters, contratos internos, config/secrets externos ao código, resiliência, observabilidade, segurança, testes e operação serão aplicados ao longo de todo o lab.",
+        "Progressão didática guiada por necessidade — cada conceito entra quando um problema real do lab o exige; primeiro observar o mecanismo/falha, depois nomear o conceito, implementar a solução profissional e só então refatorar para abstrações/padrões mais avançados."
       ],
       "phases": [
         {
@@ -472,6 +473,25 @@
           "Deploy real em cloud.",
           "Rollback/roll-forward strategy.",
           "Runbook e cenários de incidente."
+        ]
+      },
+      "learningStrategy": {
+        "principle": "Introduzir conceitos arquiteturais e de engenharia quando o problema que eles resolvem aparecer no lab, praticá-los primeiro e só depois aumentar a abstração.",
+        "progression": [
+          "mecanismo concreto",
+          "problema/falha observável",
+          "conceito que explica o problema",
+          "implementação profissional",
+          "trade-offs e alternativas",
+          "refatoração arquitetural quando a complexidade justificar",
+          "transferência para cloud/microservices/system design"
+        ],
+        "guardrails": [
+          "Não antecipar padrões só por estética arquitetural.",
+          "Não manter código simplificado quando ele esconder um conceito importante de produção.",
+          "Separar responsabilidades quando houver benefício didático e arquitetural real.",
+          "Cada conceito novo deve gerar evidência prática no lab.",
+          "Conectar continuamente fundamentos do CS50/Node/PostgreSQL com abstrações de framework e cloud."
         ]
       }
     }
