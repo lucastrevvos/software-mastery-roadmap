@@ -1,7 +1,7 @@
 {
   "meta": {
     "version": "1.0.0",
-    "updatedAt": "2026-09-01T16:58:00-03:00",
+    "updatedAt": "2026-09-01T19:16:00-03:00",
     "purpose": "Camada de projetos aplicados do roadmap: estratégia, arquitetura, requisitos praticados, evidências, progresso e próximos gates."
   },
   "principles": [
@@ -21,7 +21,7 @@
       "status": "in-progress",
       "priority": "high",
       "startedAt": "2026-08-31",
-      "updatedAt": "2026-09-01T16:58:00-03:00",
+      "updatedAt": "2026-09-01T19:16:00-03:00",
       "purpose": "Reativar e aprofundar Node.js, TypeScript, NestJS, React, APIs, microsserviços, integrações e cloud por meio de um sistema automotivo próximo de um cenário de produção.",
       "careerContext": "Preparação imediata para oportunidade Full Stack com Node.js, React, TypeScript, APIs, microsserviços e integrações, preservando o projeto depois da entrevista como laboratório permanente de engenharia.",
       "goal": "Construir localmente um pequeno ecossistema full stack, mapear cada componente para AWS/Azure, realizar deploy real em cloud e praticar falhas de produção, observabilidade e decisões arquiteturais.",
@@ -112,7 +112,7 @@
           "id": "integrations",
           "title": "Integrações",
           "status": "in-progress",
-          "evidence": "Adapter dedicado com config por ambiente, runtime validation Zod, contrato interno, timeout, error mapping, retry/backoff/jitter e Retry-After testados. Próximo: Idempotency-Key e circuit breaker."
+          "evidence": "Adapter/client com validação, timeout, retry/backoff/jitter e Retry-After testados; duplicidade por retry em POST reproduzida. Próximo: Idempotency-Key."
         },
         {
           "id": "aws",
@@ -246,7 +246,7 @@
           "order": 3,
           "title": "Integração externa fake & resiliência",
           "status": "in-progress",
-          "progress": 55,
+          "progress": 65,
           "deliverables": [
             "Fake Automotive API",
             "client/adapter dedicado",
@@ -362,9 +362,9 @@
         }
       ],
       "progress": {
-        "percent": 50,
+        "percent": 53,
         "currentPhase": "Integração externa fake & resiliência",
-        "currentTask": "Idempotency Lab — provocar duplicidade real em POST após timeout/retry, antes de implementar Idempotency-Key.",
+        "currentTask": "Implementar Idempotency-Key no POST de service order e provar que retries mantêm um único efeito lógico.",
         "nextTasks": [
           "Provocar POST duplicado após timeout com efeito já persistido no fornecedor fake",
           "Implementar Idempotency-Key reutilizada entre retries",
@@ -412,7 +412,10 @@
           "Cenário flaky concluído com sucesso após retries.",
           "Cenário slow corretamente traduzido para HTTP 504.",
           "Cenário upstream 500 corretamente traduzido para HTTP 502.",
-          "Modelo de trust boundary consolidado: produtor protege sua API e consumidor valida a dependência externa mesmo assim."
+          "Modelo de trust boundary consolidado: produtor protege sua API e consumidor valida a dependência externa mesmo assim.",
+          "Idempotency Lab reproduziu duplicidade real: primeira tentativa criou order #1, resposta atrasou além do timeout e retry criou order #2.",
+          "Consulta ao upstream mostrou duas ordens para uma única intenção lógica, provando risco de retry em POST sem deduplicação.",
+          "Segunda chamada insegura criou apenas #3 porque o modo lost-response-once já havia consumido sua primeira tentativa no contador em memória do fake upstream."
         ]
       },
       "productionQuestions": [
