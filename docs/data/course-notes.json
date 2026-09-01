@@ -1,7 +1,7 @@
 {
   "meta": {
-    "version": "2.3.0",
-    "updatedAt": "2026-08-30T21:55:00-03:00",
+    "version": "2.4.0",
+    "updatedAt": "2026-09-01T16:25:00-03:00",
     "purpose": "Anotações pessoais, modelos mentais e resumos úteis das conversas de estudo, vinculados diretamente a cada curso do roadmap."
   },
   "courses": {
@@ -528,6 +528,74 @@
           "break",
           "string slicing",
           "DNA"
+        ]
+      },
+      {
+        "id": "CS50-NOTE-021",
+        "date": "2026-09-01",
+        "type": "transfer",
+        "title": "Integrações externas profissionais: trust boundary, adapters e resiliência",
+        "summary": "Uma integração profissional não é apenas chamar axios/fetch. O fornecedor deve validar e proteger a própria API, mas o consumidor também deve tratar a dependência externa como uma trust boundary: validar contrato em runtime, limitar espera, traduzir erros e desacoplar o domínio do contrato do fornecedor.",
+        "points": [
+          "O produtor da API é responsável por validar entradas, cumprir seu contrato de saída, devolver códigos coerentes, aplicar segurança, rate limiting, observabilidade e idempotência quando necessário.",
+          "O consumidor não deve confiar cegamente no fornecedor: rede, proxy, deploy ruim, versão incompatível, timeout, 429, 5xx, JSON inválido e contrato alterado continuam possíveis.",
+          "Client/adapter dedicado encapsula URL, autenticação, HTTP, timeout, retry, error mapping e peculiaridades do fornecedor. Controllers e regras de negócio não devem conhecer esses detalhes.",
+          "TypeScript protege em compile time; dados recebidos pela rede precisam de validação em runtime. Zod foi usado para validar o contrato externo antes de entregá-lo ao restante da aplicação.",
+          "Contrato externo e modelo interno podem ser diferentes. O adapter converte status/recalls/source para active/recallCount, reduzindo acoplamento e funcionando como uma Anti-Corruption Layer simples.",
+          "HTTP 200 não significa resposta válida: JSON pode ser sintaticamente válido e ainda violar o contrato esperado.",
+          "Timeout limita o tempo de espera por uma dependência. 502 representa falha do upstream; 504 representa timeout do upstream no contexto do gateway/API intermediária.",
+          "Retry só deve ocorrer para falhas potencialmente transitórias e operações seguras/idempotentes. 429 deve respeitar Retry-After; 502/503/504 e certos erros de rede podem ser retryable conforme o contexto.",
+          "Exponential backoff aumenta gradualmente a espera entre tentativas; jitter adiciona aleatoriedade para evitar thundering herd.",
+          "Idempotência precisa ser pensada junto com retry. Repetir um GET normalmente é seguro; repetir um POST de cobrança sem Idempotency-Key pode duplicar efeitos.",
+          "Nos testes do lab, bad-contract foi isolado diretamente no fornecedor fake, rate-limit e flaky terminaram em sucesso após resiliência, slow virou 504 e error virou 502."
+        ],
+        "mentalModel": "fornecedor protege sua API → rede é fronteira não confiável → client/adapter chama → timeout/retry/error mapping → validação runtime → tradução para contrato interno → service usa resultado sem conhecer peculiaridades externas",
+        "relatedTopics": [
+          "external APIs",
+          "integration",
+          "trust boundary",
+          "adapter",
+          "anti-corruption layer",
+          "Zod",
+          "runtime validation",
+          "timeout",
+          "retry",
+          "backoff",
+          "jitter",
+          "rate limiting",
+          "idempotency"
+        ]
+      },
+      {
+        "id": "CS50-NOTE-022",
+        "date": "2026-09-01",
+        "type": "mental-model",
+        "title": "Sistemas distribuídos: várias máquinas/processos cooperando por uma rede que pode falhar",
+        "summary": "Um sistema distribuído surge quando partes necessárias para entregar uma funcionalidade executam de forma independente e precisam cooperar por comunicação remota. A grande mudança em relação a uma função local é que cada componente pode falhar separadamente, a rede pode atrasar ou perder comunicação e não existe uma memória/estado único compartilhado por todos.",
+        "points": [
+          "Duas funções dentro do mesmo processo não formam um sistema distribuído; NestJS chamando uma API externa em outro processo já introduz uma fronteira distribuída.",
+          "Em produção, frontend, API, banco, workers, broker e serviços externos podem rodar em máquinas/containers/regiões diferentes e falhar de forma independente.",
+          "Uma chamada local normalmente falha ou retorna de modo imediato e observável. Uma chamada remota pode ter sucesso no servidor e perder a resposta, pode ficar lenta, pode duplicar, chegar fora de ordem ou não chegar.",
+          "Timeout é obrigatório conceitualmente porque, numa rede, ausência de resposta não permite saber imediatamente se o outro lado está lento, indisponível ou se a resposta se perdeu.",
+          "Retry cria uma nova tentativa, mas não apaga a incerteza sobre a anterior. Por isso operações com efeito precisam de idempotência ou deduplicação.",
+          "Concorrência distribuída cria estados parcialmente independentes: dois serviços podem enxergar versões diferentes dos dados por algum tempo.",
+          "Mensageria troca acoplamento temporal por novas responsabilidades: delivery, duplicidade, ordering, retries, dead-letter queues e observabilidade.",
+          "Microsserviços são uma forma de dividir um sistema distribuído, mas sistemas distribuídos também existem sem microservices: uma API + banco remoto + cache + fila já é distribuída.",
+          "Cloud facilita executar e conectar componentes distribuídos, mas não elimina os problemas fundamentais de rede, falhas parciais, consistência, latência e observabilidade.",
+          "A habilidade principal é projetar assumindo falha parcial: cada dependência precisa de limites, contratos, recuperação, métricas e comportamento previsível quando o resto do sistema degrada."
+        ],
+        "mentalModel": "processo A precisa de processo B pela rede → não compartilham memória nem destino de falha → comunicação pode atrasar/falhar/duplicar → surge incerteza → projetar com timeout, retry seguro, idempotência, mensageria, consistência e observabilidade",
+        "relatedTopics": [
+          "distributed systems",
+          "microservices",
+          "network",
+          "partial failure",
+          "latency",
+          "consistency",
+          "idempotency",
+          "messaging",
+          "resilience",
+          "observability"
         ]
       }
     ]
