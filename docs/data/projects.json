@@ -1,7 +1,7 @@
 {
   "meta": {
     "version": "1.0.0",
-    "updatedAt": "2026-08-31T18:10:00-03:00",
+    "updatedAt": "2026-08-31T22:25:00-03:00",
     "purpose": "Camada de projetos aplicados do roadmap: estratégia, arquitetura, requisitos praticados, evidências, progresso e próximos gates."
   },
   "principles": [
@@ -21,7 +21,7 @@
       "status": "in-progress",
       "priority": "high",
       "startedAt": "2026-08-31",
-      "updatedAt": "2026-08-31T18:10:00-03:00",
+      "updatedAt": "2026-08-31T22:25:00-03:00",
       "purpose": "Reativar e aprofundar Node.js, TypeScript, NestJS, React, APIs, microsserviços, integrações e cloud por meio de um sistema automotivo próximo de um cenário de produção.",
       "careerContext": "Preparação imediata para oportunidade Full Stack com Node.js, React, TypeScript, APIs, microsserviços e integrações, preservando o projeto depois da entrevista como laboratório permanente de engenharia.",
       "goal": "Construir localmente um pequeno ecossistema full stack, mapear cada componente para AWS/Azure, realizar deploy real em cloud e praticar falhas de produção, observabilidade e decisões arquiteturais.",
@@ -357,7 +357,7 @@
       "progress": {
         "percent": 31,
         "currentPhase": "Persistência PostgreSQL",
-        "currentTask": "Versionar schema com migrations e estudar pool, índices e EXPLAIN.",
+        "currentTask": "Corrigir ciclo de import ESM separando o token PG_POOL do DatabaseModule; depois repetir o laboratório de saturação do pool.",
         "nextTasks": [
           "DTO + ValidationPipe e POST /vehicles",
           "CRUD REST e status codes",
@@ -383,7 +383,8 @@
           "CRUD completo persistindo em PostgreSQL.",
           "Diagnóstico de autenticação PostgreSQL 28P01 realizado e corrigido.",
           "Diagnóstico de schema drift (coluna plate inexistente) realizado e corrigido.",
-          "Dados persistem fora da memória do processo Node."
+          "Dados persistem fora da memória do processo Node.",
+          "Detectado erro ESM ReferenceError 'Cannot access PG_POOL before initialization' causado por import circular entre DatabaseModule e DatabaseLabController."
         ]
       },
       "productionQuestions": [
