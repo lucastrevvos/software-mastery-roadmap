@@ -194,9 +194,87 @@
         {
           "id": "00.3",
           "title": "Arquivos, bytes, texto e encoding",
+          "status": "completed",
+          "summary": "Arquivos armazenam bytes; texto surge quando esses bytes são interpretados por um encoding. UTF-8 usa quantidade variável de bytes por caractere, e line endings/BOM podem tornar arquivos visualmente iguais binariamente diferentes.",
+          "mentalModel": "caractere → encoding → bytes → arquivo / stream → decoding → caractere",
+          "concepts": [
+            "ASCII vs Unicode/UTF-8",
+            "byte ≠ caractere",
+            "encoding e decoding",
+            "LF vs CRLF",
+            "BOM",
+            "comparação binária e hash"
+          ],
+          "commands": [
+            {
+              "cmd": "printf 'A' | xxd",
+              "meaning": "mostra os bytes hexadecimais da saída"
+            },
+            {
+              "cmd": "printf 'Olá 🙂' | wc -c",
+              "meaning": "conta bytes"
+            },
+            {
+              "cmd": "printf 'Olá 🙂' | wc -m",
+              "meaning": "conta caracteres"
+            },
+            {
+              "cmd": "file utf8.txt",
+              "meaning": "tenta identificar tipo de arquivo e encoding"
+            },
+            {
+              "cmd": "xxd arquivo",
+              "meaning": "mostra bytes em hexadecimal"
+            },
+            {
+              "cmd": "hexdump -C arquivo",
+              "meaning": "mostra offset, bytes e representação textual"
+            },
+            {
+              "cmd": "printf 'linha1\\nlinha2\\n' > lf.txt",
+              "meaning": "cria arquivo com line endings LF"
+            },
+            {
+              "cmd": "printf 'linha1\\r\\nlinha2\\r\\n' > crlf.txt",
+              "meaning": "cria arquivo com line endings CRLF"
+            },
+            {
+              "cmd": "diff a b",
+              "meaning": "compara conteúdo textual"
+            },
+            {
+              "cmd": "cmp a b",
+              "meaning": "compara arquivos byte a byte"
+            },
+            {
+              "cmd": "sha256sum a b",
+              "meaning": "calcula hash SHA-256 dos bytes do arquivo"
+            },
+            {
+              "cmd": "printf '\\xEF\\xBB\\xBFhello\\n' > bom.txt",
+              "meaning": "cria arquivo UTF-8 com BOM para inspeção"
+            }
+          ],
+          "lab": [
+            "Comparar bytes de A, ç e emoji.",
+            "Comparar contagem de bytes e caracteres.",
+            "Criar arquivos LF e CRLF e inspecionar diferenças.",
+            "Comparar hashes de arquivos visualmente semelhantes.",
+            "Criar arquivo com BOM e localizar EF BB BF."
+          ],
+          "traps": [
+            "Texto corrompido como JoÃ£o normalmente indica bytes corretos interpretados com encoding errado.",
+            "Arquivos LF e CRLF podem parecer iguais no editor e ainda assim quebrar scripts, testes e hashes.",
+            "cat não interpreta semanticamente um arquivo; apenas envia bytes para stdout."
+          ],
+          "takeaway": "Arquivo é bytes. Texto é uma interpretação desses bytes segundo uma codificação."
+        },
+        {
+          "id": "00.4",
+          "title": "Git como máquina do tempo",
           "status": "next",
-          "summary": "Próxima aula: entender como texto vira bytes e por que encoding, line endings e arquivos 'iguais' podem produzir bugs.",
-          "mentalModel": "caractere → codificação → bytes → arquivo / stream",
+          "summary": "Próxima aula: entender working tree, staging area, commits e histórico como estados do projeto, não decorar comandos.",
+          "mentalModel": "working tree → index/staging → commit → histórico",
           "concepts": [],
           "commands": [],
           "lab": [],
