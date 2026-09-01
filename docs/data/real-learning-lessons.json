@@ -272,9 +272,90 @@
         {
           "id": "00.4",
           "title": "Git como máquina do tempo",
+          "status": "completed",
+          "summary": "Git registra estados do projeto ao longo do tempo. Working Tree, Staging Area, commits, branches e HEAD representam camadas e ponteiros diferentes; GitHub não faz parte desse modelo básico.",
+          "mentalModel": "Working Tree → git add → Staging/Index → git commit → Repository/History",
+          "concepts": [
+            "Working Tree",
+            "Staging Area / Index",
+            "commit como snapshot",
+            "HEAD",
+            "branch como ponteiro",
+            "diff vs diff --staged",
+            "merge e fast-forward"
+          ],
+          "commands": [
+            {
+              "cmd": "git init",
+              "meaning": "inicializa um repositório Git criando .git"
+            },
+            {
+              "cmd": "git status",
+              "meaning": "mostra diferenças entre working tree, staging e histórico"
+            },
+            {
+              "cmd": "git add <arquivo>",
+              "meaning": "coloca a versão atual do arquivo no staging"
+            },
+            {
+              "cmd": "git commit -m \"mensagem\"",
+              "meaning": "registra um snapshot preparado"
+            },
+            {
+              "cmd": "git log --oneline",
+              "meaning": "mostra histórico de commits de forma compacta"
+            },
+            {
+              "cmd": "git log --oneline --decorate",
+              "meaning": "mostra commits com ponteiros como HEAD e branches"
+            },
+            {
+              "cmd": "git diff",
+              "meaning": "compara Working Tree com Staging"
+            },
+            {
+              "cmd": "git diff --staged",
+              "meaning": "compara Staging com o último commit"
+            },
+            {
+              "cmd": "git show <hash>",
+              "meaning": "mostra detalhes e mudanças de um commit"
+            },
+            {
+              "cmd": "git branch <nome>",
+              "meaning": "cria uma branch apontando para o commit atual"
+            },
+            {
+              "cmd": "git switch <branch>",
+              "meaning": "move HEAD para outra branch"
+            },
+            {
+              "cmd": "git merge <branch>",
+              "meaning": "integra o histórico da branch indicada na branch atual"
+            }
+          ],
+          "lab": [
+            "Criar repositório local e dois commits.",
+            "Observar diferenças antes e depois de git add.",
+            "Criar branch experiment e fazer commit nela.",
+            "Alternar entre branches e observar o working tree mudar.",
+            "Executar merge fast-forward.",
+            "Deixar parte da mudança staged e parte unstaged no mesmo arquivo."
+          ],
+          "traps": [
+            "git add não 'salva no GitHub'; prepara conteúdo para o próximo commit.",
+            "Branch não é uma cópia completa do projeto; é um ponteiro móvel para commits.",
+            "Git e GitHub são coisas diferentes.",
+            "Um mesmo arquivo pode ter uma versão no último commit, outra no staging e outra no working tree."
+          ],
+          "takeaway": "Git fica simples quando você pensa em estados e ponteiros, não em uma lista de comandos."
+        },
+        {
+          "id": "00.5",
+          "title": "Debugger e stack trace",
           "status": "next",
-          "summary": "Próxima aula: entender working tree, staging area, commits e histórico como estados do projeto, não decorar comandos.",
-          "mentalModel": "working tree → index/staging → commit → histórico",
+          "summary": "Próxima aula: investigar execução real com breakpoints, call stack, variáveis e hipóteses em vez de alterar código no escuro.",
+          "mentalModel": "sintoma → stack trace → hipótese → breakpoint → observar estado → provar causa → corrigir → retestar",
           "concepts": [],
           "commands": [],
           "lab": [],
