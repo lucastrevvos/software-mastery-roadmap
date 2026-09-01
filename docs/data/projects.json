@@ -1,7 +1,7 @@
 {
   "meta": {
     "version": "1.0.0",
-    "updatedAt": "2026-08-31T23:10:00-03:00",
+    "updatedAt": "2026-09-01T11:05:00-03:00",
     "purpose": "Camada de projetos aplicados do roadmap: estratégia, arquitetura, requisitos praticados, evidências, progresso e próximos gates."
   },
   "principles": [
@@ -21,7 +21,7 @@
       "status": "in-progress",
       "priority": "high",
       "startedAt": "2026-08-31",
-      "updatedAt": "2026-08-31T23:10:00-03:00",
+      "updatedAt": "2026-09-01T11:05:00-03:00",
       "purpose": "Reativar e aprofundar Node.js, TypeScript, NestJS, React, APIs, microsserviços, integrações e cloud por meio de um sistema automotivo próximo de um cenário de produção.",
       "careerContext": "Preparação imediata para oportunidade Full Stack com Node.js, React, TypeScript, APIs, microsserviços e integrações, preservando o projeto depois da entrevista como laboratório permanente de engenharia.",
       "goal": "Construir localmente um pequeno ecossistema full stack, mapear cada componente para AWS/Azure, realizar deploy real em cloud e praticar falhas de produção, observabilidade e decisões arquiteturais.",
@@ -363,13 +363,14 @@
       "progress": {
         "percent": 46,
         "currentPhase": "Integração externa fake & resiliência",
-        "currentTask": "Profissionalizar a integração externa: config por ambiente, runtime validation do payload, error mapping e política de retry.",
+        "currentTask": "Implementar retry profissional em GET idempotente com exponential backoff, jitter, Retry-After e validação de contrato.",
         "nextTasks": [
-          "DTO + ValidationPipe e POST /vehicles",
-          "CRUD REST e status codes",
-          "PostgreSQL",
-          "Fake Automotive API com falhas controladas",
-          "React + TypeScript"
+          "Retry seguro em GET com backoff/jitter",
+          "Rate-limit 429 + Retry-After",
+          "Idempotency-Key em comando POST",
+          "Circuit breaker",
+          "Structured logging + correlation ID",
+          "Contract/integration tests"
         ],
         "completedEvidence": [
           "Node.js atualizado de 20.19.4 para 24.15.0 por incompatibilidade de dependências.",
