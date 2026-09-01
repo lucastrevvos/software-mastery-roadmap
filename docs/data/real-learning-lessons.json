@@ -1,0 +1,209 @@
+{
+  "meta": {
+    "title": "Caderno de Aulas — Como Realmente Aprender Programação",
+    "updatedAt": "2026-09-01",
+    "principle": "Registrar o que precisa ser recuperável, não transcrever a aula inteira."
+  },
+  "stages": [
+    {
+      "id": "stage-00",
+      "title": "Computador como instrumento",
+      "lessons": [
+        {
+          "id": "00.1",
+          "title": "Terminal e filesystem",
+          "status": "completed",
+          "summary": "O terminal é a interface; o shell interpreta comandos. O filesystem é uma árvore de diretórios e caminhos podem ser absolutos ou relativos.",
+          "mentalModel": "Você → Terminal → Shell → Sistema Operacional → Filesystem / processos / dispositivos",
+          "concepts": [
+            "terminal ≠ shell",
+            "diretório atual e diretório pai",
+            "caminho absoluto vs relativo",
+            "stdout e redirecionamento básico",
+            "PATH e descoberta de executáveis"
+          ],
+          "commands": [
+            {
+              "cmd": "pwd",
+              "meaning": "mostra o diretório de trabalho atual"
+            },
+            {
+              "cmd": "ls",
+              "meaning": "lista arquivos e diretórios"
+            },
+            {
+              "cmd": "ls -la",
+              "meaning": "lista em detalhe, incluindo arquivos ocultos"
+            },
+            {
+              "cmd": "cd <dir>",
+              "meaning": "entra em um diretório"
+            },
+            {
+              "cmd": "cd ..",
+              "meaning": "sobe para o diretório pai"
+            },
+            {
+              "cmd": "mkdir <dir>",
+              "meaning": "cria um diretório"
+            },
+            {
+              "cmd": "touch <arquivo>",
+              "meaning": "cria arquivo vazio ou atualiza timestamp"
+            },
+            {
+              "cmd": "cat <arquivo>",
+              "meaning": "mostra o conteúdo de um arquivo"
+            },
+            {
+              "cmd": "echo \"texto\" > arquivo",
+              "meaning": "redireciona stdout e sobrescreve o arquivo"
+            },
+            {
+              "cmd": "echo \"texto\" >> arquivo",
+              "meaning": "adiciona stdout ao final do arquivo"
+            },
+            {
+              "cmd": "cp origem destino",
+              "meaning": "copia arquivo"
+            },
+            {
+              "cmd": "mv origem destino",
+              "meaning": "move ou renomeia"
+            },
+            {
+              "cmd": "rm <arquivo>",
+              "meaning": "remove arquivo"
+            },
+            {
+              "cmd": "rmdir <dir>",
+              "meaning": "remove diretório vazio"
+            },
+            {
+              "cmd": "which <comando>",
+              "meaning": "mostra qual executável será encontrado pelo PATH"
+            },
+            {
+              "cmd": "echo $PATH",
+              "meaning": "mostra os diretórios onde o shell procura executáveis"
+            }
+          ],
+          "lab": [
+            "Criar formation-lab/stage-00.",
+            "Criar hello.txt e escrever conteúdo usando > e >>.",
+            "Copiar, renomear, mover e remover arquivos.",
+            "Descobrir onde ls, git, python e dotnet estão instalados."
+          ],
+          "traps": [
+            "Um 'file not found' pode ser problema do diretório atual, não da existência do arquivo.",
+            "rm -rf é destrutivo e deve ser entendido antes de ser executado."
+          ],
+          "takeaway": "Arquivos e comandos sempre existem em um contexto: diretório atual, caminho e ambiente."
+        },
+        {
+          "id": "00.2",
+          "title": "Processos e execução",
+          "status": "completed",
+          "summary": "Programa é o artefato; processo é o programa em execução, com PID, memória, ambiente, entradas/saídas e um código de término.",
+          "mentalModel": "Shell → encontra programa → inicia processo → PID + memória + ambiente + stdin/stdout/stderr → execução → exit code",
+          "concepts": [
+            "programa vs processo",
+            "PID e PPID",
+            "foreground vs background",
+            "stdin, stdout e stderr",
+            "pipes",
+            "exit codes",
+            "variáveis de ambiente e herança"
+          ],
+          "commands": [
+            {
+              "cmd": "ps",
+              "meaning": "mostra processos associados ao terminal"
+            },
+            {
+              "cmd": "ps aux",
+              "meaning": "lista ampla de processos em execução"
+            },
+            {
+              "cmd": "sleep 100",
+              "meaning": "executa um processo que espera 100 segundos"
+            },
+            {
+              "cmd": "sleep 100 &",
+              "meaning": "executa em background"
+            },
+            {
+              "cmd": "jobs",
+              "meaning": "lista jobs do shell atual"
+            },
+            {
+              "cmd": "kill <PID>",
+              "meaning": "envia sinal de término ao processo"
+            },
+            {
+              "cmd": "echo $$",
+              "meaning": "mostra o PID do shell atual"
+            },
+            {
+              "cmd": "ps -o pid,ppid,cmd",
+              "meaning": "mostra relação entre processo e processo pai"
+            },
+            {
+              "cmd": "echo $?",
+              "meaning": "mostra o exit code do último comando"
+            },
+            {
+              "cmd": "comando 2> error.txt",
+              "meaning": "redireciona stderr para arquivo"
+            },
+            {
+              "cmd": "comando1 | comando2",
+              "meaning": "conecta stdout do primeiro ao stdin do segundo"
+            },
+            {
+              "cmd": "env",
+              "meaning": "lista variáveis de ambiente"
+            },
+            {
+              "cmd": "export APP_ENV=development",
+              "meaning": "define variável de ambiente exportada aos processos filhos"
+            },
+            {
+              "cmd": "chmod +x run.sh",
+              "meaning": "adiciona permissão de execução ao arquivo"
+            },
+            {
+              "cmd": "./run.sh",
+              "meaning": "executa arquivo localizado no diretório atual"
+            }
+          ],
+          "lab": [
+            "Executar sleep em foreground e background e observar o PID.",
+            "Inspecionar PID/PPID.",
+            "Testar exit codes com true, false e um script que retorna 7.",
+            "Redirecionar stderr.",
+            "Criar variável de ambiente e observar sua herança em um shell filho."
+          ],
+          "traps": [
+            "Terminal 'parado' pode apenas estar aguardando o processo em foreground.",
+            "Exit code 0 significa sucesso por convenção; qualquer outro valor comunica algum tipo de falha.",
+            "Variáveis de ambiente pertencem ao ambiente do processo e são herdadas por filhos; não são configuração global mágica."
+          ],
+          "takeaway": "Executar software significa criar processos que se comunicam com o sistema operacional e entre si por interfaces bem definidas."
+        },
+        {
+          "id": "00.3",
+          "title": "Arquivos, bytes, texto e encoding",
+          "status": "next",
+          "summary": "Próxima aula: entender como texto vira bytes e por que encoding, line endings e arquivos 'iguais' podem produzir bugs.",
+          "mentalModel": "caractere → codificação → bytes → arquivo / stream",
+          "concepts": [],
+          "commands": [],
+          "lab": [],
+          "traps": [],
+          "takeaway": ""
+        }
+      ]
+    }
+  ]
+}
