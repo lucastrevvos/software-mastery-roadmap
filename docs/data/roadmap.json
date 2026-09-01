@@ -1,15 +1,16 @@
 {
   "meta": {
     "title": "Full Stack Software Architect & Cloud Engineer",
-    "version": "1.9.0",
-    "updatedAt": "2026-08-30",
+    "version": "2.0.0",
+    "updatedAt": "2026-08-31",
     "principles": [
       "Fundamentos fortes antes de especialização",
       "Priorizar certificados oficiais e verificáveis",
       "Priorizar opções gratuitas",
       "Curso concluído não implica domínio",
       "Projetos e Mastery Gates comprovam habilidade prática",
-      "Toda credencial paga deve exibir preço e data-base; quando o valor variar por país ou provedor, registrar a faixa ou regra de preço"
+      "Toda credencial paga deve exibir preço e data-base; quando o valor variar por país ou provedor, registrar a faixa ou regra de preço",
+      "Método Especial JCI: profundidade japonesa, treino deliberado chinês e empregabilidade indiana como camada transversal"
     ]
   },
   "phases": [
@@ -845,5 +846,44 @@
         }
       ]
     }
-  ]
+  ],
+  "transversalMethods": {
+    "jci": {
+      "title": "Método Especial JCI — Japão, China e Índia",
+      "role": "Camada transversal de execução e validação; não altera a ordem principal do roadmap.",
+      "pillars": {
+        "japan": {
+          "goal": "Profundidade, primeiros princípios e mecanismos por baixo das abstrações.",
+          "platforms": [
+            "Aizu Online Judge",
+            "AtCoder"
+          ]
+        },
+        "china": {
+          "goal": "Treino deliberado, repetição progressiva, Error Ledger, transferência e reteste.",
+          "platforms": [
+            "Luogu",
+            "Nowcoder"
+          ]
+        },
+        "india": {
+          "goal": "DSA, Core CS, entrevistas, system design e aplicação prática.",
+          "platforms": [
+            "CodeChef",
+            "NPTEL / IIT / SWAYAM",
+            "GeeksforGeeks"
+          ]
+        }
+      },
+      "antiBloat": [
+        "Manter um curso principal por assunto.",
+        "Usar online judges como ginásio, não como nova grade curricular.",
+        "Usar NPTEL/IIT por módulo ou deep dive quando houver lacuna real.",
+        "Não medir progresso por quantidade bruta de problemas.",
+        "Competitive programming é ferramenta de raciocínio, não objetivo profissional."
+      ],
+      "currentApplication": "Durante CS50x, priorizar exercícios oficiais. Após blocos estruturais, usar poucos problemas externos seletivos. Na Week 5, aproximadamente 3–5 problemas compatíveis de DSA após o trabalho oficial.",
+      "algorithmGymStart": "Após CS50P"
+    }
+  }
 }
