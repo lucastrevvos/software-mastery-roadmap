@@ -1,7 +1,7 @@
 {
   "meta": {
     "version": "1.0.0",
-    "updatedAt": "2026-09-01T16:35:00-03:00",
+    "updatedAt": "2026-09-01T16:58:00-03:00",
     "purpose": "Camada de projetos aplicados do roadmap: estratégia, arquitetura, requisitos praticados, evidências, progresso e próximos gates."
   },
   "principles": [
@@ -21,7 +21,7 @@
       "status": "in-progress",
       "priority": "high",
       "startedAt": "2026-08-31",
-      "updatedAt": "2026-09-01T16:35:00-03:00",
+      "updatedAt": "2026-09-01T16:58:00-03:00",
       "purpose": "Reativar e aprofundar Node.js, TypeScript, NestJS, React, APIs, microsserviços, integrações e cloud por meio de um sistema automotivo próximo de um cenário de produção.",
       "careerContext": "Preparação imediata para oportunidade Full Stack com Node.js, React, TypeScript, APIs, microsserviços e integrações, preservando o projeto depois da entrevista como laboratório permanente de engenharia.",
       "goal": "Construir localmente um pequeno ecossistema full stack, mapear cada componente para AWS/Azure, realizar deploy real em cloud e praticar falhas de produção, observabilidade e decisões arquiteturais.",
@@ -364,14 +364,14 @@
       "progress": {
         "percent": 50,
         "currentPhase": "Integração externa fake & resiliência",
-        "currentTask": "Adicionar Idempotency-Key a uma operação POST e demonstrar por que retry sem deduplicação pode repetir efeitos.",
+        "currentTask": "Idempotency Lab — provocar duplicidade real em POST após timeout/retry, antes de implementar Idempotency-Key.",
         "nextTasks": [
-          "Retry seguro em GET com backoff/jitter",
-          "Rate-limit 429 + Retry-After",
-          "Idempotency-Key em comando POST",
+          "Provocar POST duplicado após timeout com efeito já persistido no fornecedor fake",
+          "Implementar Idempotency-Key reutilizada entre retries",
+          "Validar mesma chave + payload diferente",
+          "Discutir storage compartilhado/atômico para idempotência em produção",
           "Circuit breaker",
-          "Structured logging + correlation ID",
-          "Contract/integration tests"
+          "Structured logging + correlation ID"
         ],
         "completedEvidence": [
           "Node.js atualizado de 20.19.4 para 24.15.0 por incompatibilidade de dependências.",
