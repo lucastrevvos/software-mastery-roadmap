@@ -1,7 +1,7 @@
 {
   "meta": {
     "version": "1.0.0",
-    "updatedAt": "2026-08-31T22:58:00-03:00",
+    "updatedAt": "2026-08-31T23:10:00-03:00",
     "purpose": "Camada de projetos aplicados do roadmap: estratégia, arquitetura, requisitos praticados, evidências, progresso e próximos gates."
   },
   "principles": [
@@ -21,7 +21,7 @@
       "status": "in-progress",
       "priority": "high",
       "startedAt": "2026-08-31",
-      "updatedAt": "2026-08-31T22:58:00-03:00",
+      "updatedAt": "2026-08-31T23:10:00-03:00",
       "purpose": "Reativar e aprofundar Node.js, TypeScript, NestJS, React, APIs, microsserviços, integrações e cloud por meio de um sistema automotivo próximo de um cenário de produção.",
       "careerContext": "Preparação imediata para oportunidade Full Stack com Node.js, React, TypeScript, APIs, microsserviços e integrações, preservando o projeto depois da entrevista como laboratório permanente de engenharia.",
       "goal": "Construir localmente um pequeno ecossistema full stack, mapear cada componente para AWS/Azure, realizar deploy real em cloud e praticar falhas de produção, observabilidade e decisões arquiteturais.",
@@ -112,7 +112,7 @@
           "id": "integrations",
           "title": "Integrações",
           "status": "in-progress",
-          "evidence": "Próximo bloco: processo externo fake com respostas 200/500/timeout/payload inválido; consumo HTTP via fetch e timeout."
+          "evidence": "Client/adapter dedicado será evoluído com config, timeout, validação de payload, error mapping, retry/backoff/jitter, circuit breaker, rate-limit handling e contract tests."
         },
         {
           "id": "aws",
@@ -142,13 +142,13 @@
           "id": "testing",
           "title": "Testes",
           "status": "not-started",
-          "evidence": "Ainda pendente; CRUD validado manualmente com curl. Testes automatizados virão após consolidar persistência."
+          "evidence": "Planejados testes unitários, integração, e2e e contract tests para API e dependências externas."
         },
         {
           "id": "observability",
           "title": "Observabilidade",
           "status": "not-started",
-          "evidence": "Logs, health checks, métricas e traces serão adicionados conscientemente após o núcleo, sem auto-instrumentação inicial."
+          "evidence": "Planejado structured logging, correlation ID, métricas, traces e health/readiness como parte obrigatória da API profissional."
         }
       ],
       "architecture": {
@@ -192,7 +192,8 @@
         "Fase 6 — subir uma versão real na AWS com guardrails de custo, CI/CD, health checks e observabilidade.",
         "Fase 7 — provocar falhas reais/controladas e diagnosticar logs, configuração, rede, banco, secrets e health checks.",
         "Fase 8 — mapear a arquitetura para Azure e realizar deploy seletivo para aprender equivalências e trade-offs.",
-        "Fase 9 — fazer Architecture/Mastery Defense explicando escolhas, alternativas, custos, falhas e evolução."
+        "Fase 9 — fazer Architecture/Mastery Defense explicando escolhas, alternativas, custos, falhas e evolução.",
+        "Padrão profissional transversal — controllers finos, services/use cases, repositories, clients/adapters, contratos internos, config/secrets externos ao código, resiliência, observabilidade, segurança, testes e operação serão aplicados ao longo de todo o lab."
       ],
       "phases": [
         {
@@ -244,15 +245,20 @@
           "order": 3,
           "title": "Integração externa fake & resiliência",
           "status": "in-progress",
-          "progress": 5,
+          "progress": 20,
           "deliverables": [
             "Fake Automotive API",
+            "client/adapter dedicado",
+            "configuração por ambiente",
+            "runtime validation de payload",
+            "error mapping 4xx/5xx",
             "timeout",
-            "500",
-            "payload inválido",
-            "retry",
-            "circuit breaker conceitual",
-            "idempotência"
+            "retry seguro",
+            "exponential backoff + jitter",
+            "rate-limit/Retry-After",
+            "circuit breaker",
+            "idempotência",
+            "contract tests"
           ]
         },
         {
@@ -355,9 +361,9 @@
         }
       ],
       "progress": {
-        "percent": 44,
+        "percent": 46,
         "currentPhase": "Integração externa fake & resiliência",
-        "currentTask": "Criar uma API automotiva externa fake em outro processo e integrar via HTTP com timeout controlado.",
+        "currentTask": "Profissionalizar a integração externa: config por ambiente, runtime validation do payload, error mapping e política de retry.",
         "nextTasks": [
           "DTO + ValidationPipe e POST /vehicles",
           "CRUD REST e status codes",
@@ -407,7 +413,57 @@
         "Como secrets e permissões entre serviços são gerenciados?",
         "Como saber que o sistema está degradando antes do usuário reclamar?",
         "Como fazer rollback e diagnosticar um container que não sobe?"
-      ]
+      ],
+      "professionalApiStandards": {
+        "architecture": [
+          "Controllers finos: HTTP in/out, sem regra de negócio nem detalhes de fornecedor.",
+          "Services/use cases orquestram regras de negócio.",
+          "Repositories encapsulam persistência.",
+          "Clients/adapters encapsulam dependências externas.",
+          "Contratos externos são convertidos para modelos internos para reduzir acoplamento.",
+          "Configuração e secrets ficam fora do código e variam por ambiente."
+        ],
+        "resilience": [
+          "Timeouts explícitos por dependência.",
+          "Retry apenas em falhas transitórias e operações seguras/idempotentes.",
+          "Exponential backoff com jitter.",
+          "Circuit breaker quando a dependência apresenta falha persistente.",
+          "Rate-limit handling e respeito a Retry-After quando aplicável.",
+          "Bulkhead/concurrency limits quando necessário para impedir uma integração de consumir todos os recursos."
+        ],
+        "correctness": [
+          "Runtime validation de respostas externas.",
+          "DTOs/validation para entrada.",
+          "SQL parametrizado.",
+          "Idempotency keys para comandos repetíveis quando aplicável.",
+          "Transações curtas e boundaries explícitos.",
+          "Migrations versionadas."
+        ],
+        "observability": [
+          "Structured logging.",
+          "Correlation/Request ID.",
+          "Métricas de latência, erro, throughput e saturação.",
+          "Tracing entre API, banco e integrações.",
+          "Health/readiness checks.",
+          "Logs sem secrets ou PII desnecessária."
+        ],
+        "security": [
+          "AuthN/AuthZ explícitos.",
+          "Secrets fora do Git.",
+          "Least privilege.",
+          "Validação e normalização de entrada.",
+          "CORS/rate limiting quando aplicável.",
+          "Dependências e imagens com atualização/vulnerability scanning."
+        ],
+        "delivery": [
+          "Testes unitários, integração, e2e e contract tests onde fizer sentido.",
+          "Docker e configuração por ambiente.",
+          "CI/CD.",
+          "Deploy real em cloud.",
+          "Rollback/roll-forward strategy.",
+          "Runbook e cenários de incidente."
+        ]
+      }
     }
   ]
 }
