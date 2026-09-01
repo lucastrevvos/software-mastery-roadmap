@@ -159,7 +159,66 @@ problema → decomposição → reconhecimento de padrão → pseudocódigo → 
 O bloco deve ser formalizado no roadmap principal quando o CS50P for concluído, preservando a prioridade atual de concluir a base do CS50 sem inflar a carga paralela.
 
 
-## 13. Project Layer — projetos aplicados, estratégia e progresso
+## 13. Método Especial JCI — profundidade, treino e empregabilidade
+
+O protocolo JCI complementa o Mastery Lab sem substituir Recall, Trace, Rebuild, Repair, Transfer e Retest.
+
+### Japão — quando acionar
+
+Usar profundidade japonesa quando:
+
+- o tópico representa um mecanismo fundamental;
+- uma abstração esconde comportamento importante;
+- o aluno consegue usar uma API, mas não explicar o que ocorre por baixo;
+- memória, runtime, estruturas, concorrência, rede, banco, compilação, sistema operacional ou hardware forem relevantes.
+
+Ferramentas principais: **AOJ** para fundamentos/DSA e **AtCoder** para transferência.
+
+### China — quando acionar
+
+Usar treino deliberado chinês quando:
+
+- há erro recorrente no Error Ledger;
+- o aluno reconhece a solução depois de vê-la, mas não chega nela sozinho;
+- um padrão precisa ser automatizado;
+- é necessário testar desempenho sob tempo;
+- falta transferência entre enunciados diferentes.
+
+Ferramentas principais: **Luogu**, AOJ, AtCoder e séries seletivas de problemas.
+
+### Índia — quando acionar
+
+Usar pragmatismo indiano quando:
+
+- o fundamento precisa ser conectado à carreira;
+- o assunto aparece em coding interview ou Core CS;
+- é hora de transformar conhecimento em projeto, system design ou aplicação de produção;
+- uma aula universitária mais profunda resolveria uma lacuna real.
+
+Ferramentas principais: **CodeChef**, **Nowcoder** e **NPTEL/IIT/SWAYAM**.
+
+### Regra de seleção de recursos
+
+- uma trilha principal continua sendo a fonte de currículo;
+- plataformas externas funcionam como ginásio, reteste ou deep dive;
+- não concluir catálogos inteiros por obrigação;
+- NPTEL pode ser consumido por aula/módulo específico;
+- Nowcoder ganha prioridade apenas na fase de entrevista/Core CS;
+- C++ não é requisito do JCI;
+- preferir C para mecanismos de baixo nível, C# para backend/.NET, Python para algoritmos/IA e JavaScript quando a habilidade estudada for web/linguagem;
+- em Velocity Mode, usar microblocos JCI e só ampliar quando houver erro, lacuna ou gate importante.
+
+### Integração imediata com CS50
+
+Enquanto o CS50x estiver em andamento, os exercícios oficiais continuam sendo a prática principal.
+
+Depois de blocos estruturalmente importantes, podem ser selecionados poucos problemas externos. Na Week 5 — Data Structures, usar aproximadamente **3–5 problemas** compatíveis de AOJ/ALDS1 ou fonte equivalente depois dos exercícios oficiais, com foco em Trace, Rebuild, complexidade e Transfer.
+
+O Algorithm Gym completo continua planejado para depois do CS50P.
+
+Documento completo: [JCI_METHOD.md](JCI_METHOD.md).
+
+## 14. Project Layer — projetos aplicados, estratégia e progresso
 
 A camada de projetos é independente da sequência linear de cursos. Ela registra aplicações reais ou laboratórios de engenharia que podem atravessar várias fases do roadmap ao mesmo tempo.
 
