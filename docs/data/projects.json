@@ -1,7 +1,7 @@
 {
   "meta": {
     "version": "1.0.0",
-    "updatedAt": "2026-08-31T22:35:00-03:00",
+    "updatedAt": "2026-08-31T22:40:00-03:00",
     "purpose": "Camada de projetos aplicados do roadmap: estratégia, arquitetura, requisitos praticados, evidências, progresso e próximos gates."
   },
   "principles": [
@@ -21,7 +21,7 @@
       "status": "in-progress",
       "priority": "high",
       "startedAt": "2026-08-31",
-      "updatedAt": "2026-08-31T22:35:00-03:00",
+      "updatedAt": "2026-08-31T22:40:00-03:00",
       "purpose": "Reativar e aprofundar Node.js, TypeScript, NestJS, React, APIs, microsserviços, integrações e cloud por meio de um sistema automotivo próximo de um cenário de produção.",
       "careerContext": "Preparação imediata para oportunidade Full Stack com Node.js, React, TypeScript, APIs, microsserviços e integrações, preservando o projeto depois da entrevista como laboratório permanente de engenharia.",
       "goal": "Construir localmente um pequeno ecossistema full stack, mapear cada componente para AWS/Azure, realizar deploy real em cloud e praticar falhas de produção, observabilidade e decisões arquiteturais.",
@@ -136,7 +136,7 @@
           "id": "postgresql",
           "title": "PostgreSQL",
           "status": "in-progress",
-          "evidence": "CRUD real + SQL parametrizado + pool instrumentado; saturação observada com waitingCount=1 e reutilização após release."
+          "evidence": "CRUD + pool + pg_stat_activity; sessão real e idle in transaction observados. Próximo: lock contention e bloqueio entre transações."
         },
         {
           "id": "testing",
@@ -228,7 +228,7 @@
           "order": 2,
           "title": "Persistência PostgreSQL",
           "status": "in-progress",
-          "progress": 75,
+          "progress": 82,
           "deliverables": [
             "modelagem",
             "repository/data access",
@@ -355,9 +355,9 @@
         }
       ],
       "progress": {
-        "percent": 35,
+        "percent": 38,
         "currentPhase": "Persistência PostgreSQL",
-        "currentTask": "Observar conexões e uma transação aberta pelo lado do PostgreSQL usando pg_stat_activity.",
+        "currentTask": "Simular contenção de lock com duas transações para observar uma sessão bloqueando outra.",
         "nextTasks": [
           "DTO + ValidationPipe e POST /vehicles",
           "CRUD REST e status codes",
@@ -388,7 +388,10 @@
           "Mini-lab de saturação do pool concluído com max=2.",
           "Observado totalCount=2, idleCount=0 e waitingCount=1 durante saturação.",
           "Observado client.release() devolvendo conexões ao pool até idleCount=2.",
-          "Import circular ESM corrigido separando PG_POOL em database.constants.ts."
+          "Import circular ESM corrigido separando PG_POOL em database.constants.ts.",
+          "pg_stat_activity validou sessão real do pool com application_name=vehicle-service-api.",
+          "Observado backend PostgreSQL em state='idle in transaction' durante transação mantida aberta.",
+          "PID da sessão e client_addr do container/host foram observados diretamente no PostgreSQL."
         ]
       },
       "productionQuestions": [
