@@ -1,7 +1,7 @@
 {
   "meta": {
     "version": "1.0.0",
-    "updatedAt": "2026-09-01T16:00:00-03:00",
+    "updatedAt": "2026-09-01T16:25:00-03:00",
     "purpose": "Camada de projetos aplicados do roadmap: estratégia, arquitetura, requisitos praticados, evidências, progresso e próximos gates."
   },
   "principles": [
@@ -21,7 +21,7 @@
       "status": "in-progress",
       "priority": "high",
       "startedAt": "2026-08-31",
-      "updatedAt": "2026-09-01T16:00:00-03:00",
+      "updatedAt": "2026-09-01T16:25:00-03:00",
       "purpose": "Reativar e aprofundar Node.js, TypeScript, NestJS, React, APIs, microsserviços, integrações e cloud por meio de um sistema automotivo próximo de um cenário de produção.",
       "careerContext": "Preparação imediata para oportunidade Full Stack com Node.js, React, TypeScript, APIs, microsserviços e integrações, preservando o projeto depois da entrevista como laboratório permanente de engenharia.",
       "goal": "Construir localmente um pequeno ecossistema full stack, mapear cada componente para AWS/Azure, realizar deploy real em cloud e praticar falhas de produção, observabilidade e decisões arquiteturais.",
@@ -112,7 +112,7 @@
           "id": "integrations",
           "title": "Integrações",
           "status": "in-progress",
-          "evidence": "Client/adapter dedicado será evoluído com config, timeout, validação de payload, error mapping, retry/backoff/jitter, circuit breaker, rate-limit handling e contract tests."
+          "evidence": "Adapter dedicado com config por ambiente, runtime validation Zod, contrato interno, timeout, error mapping, retry/backoff/jitter e Retry-After testados. Próximo: Idempotency-Key e circuit breaker."
         },
         {
           "id": "aws",
@@ -245,7 +245,7 @@
           "order": 3,
           "title": "Integração externa fake & resiliência",
           "status": "in-progress",
-          "progress": 20,
+          "progress": 55,
           "deliverables": [
             "Fake Automotive API",
             "client/adapter dedicado",
@@ -361,9 +361,9 @@
         }
       ],
       "progress": {
-        "percent": 46,
+        "percent": 50,
         "currentPhase": "Integração externa fake & resiliência",
-        "currentTask": "Corrigir integração externa: confirmar fake API reiniciada com novos modos e substituir implementação antiga do AutomotiveClient pela versão com contrato interno, Zod e retry.",
+        "currentTask": "Adicionar Idempotency-Key a uma operação POST e demonstrar por que retry sem deduplicação pode repetir efeitos.",
         "nextTasks": [
           "Retry seguro em GET com backoff/jitter",
           "Rate-limit 429 + Retry-After",
@@ -404,7 +404,14 @@
           "Lock timeout configurado como mecanismo de fail-fast para espera excessiva por lock.",
           "Distinção operacional consolidada entre pool saturation, lock wait e transação aberta.",
           "Diagnóstico preliminar: endpoint normal ainda retorna contrato bruto externo, indicando que AutomotiveClient em execução continua na implementação anterior.",
-          "Diagnóstico preliminar: novos modos bad-contract/flaky/rate-limit retornam erro de conexão, sugerindo fake API não reiniciada corretamente ou processo externo encerrado após alteração."
+          "Diagnóstico preliminar: novos modos bad-contract/flaky/rate-limit retornam erro de conexão, sugerindo fake API não reiniciada corretamente ou processo externo encerrado após alteração.",
+          "Contrato externo validado em runtime com Zod e convertido para contrato interno { active, recallCount }.",
+          "Fake upstream testado diretamente com HTTP 200 + contrato inválido.",
+          "Cenário rate-limit concluído com sucesso após política de retry/Retry-After.",
+          "Cenário flaky concluído com sucesso após retries.",
+          "Cenário slow corretamente traduzido para HTTP 504.",
+          "Cenário upstream 500 corretamente traduzido para HTTP 502.",
+          "Modelo de trust boundary consolidado: produtor protege sua API e consumidor valida a dependência externa mesmo assim."
         ]
       },
       "productionQuestions": [
