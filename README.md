@@ -8,6 +8,7 @@ Este repositório é a fonte da verdade para quatro coisas diferentes:
 2. **Progress** — o que foi iniciado/concluído nos cursos.
 3. **Mastery** — o que realmente consegue ser explicado, construído, depurado e transferido sem ajuda.
 4. **Retention** — o que continua disponível na memória depois de dias/semanas.
+5. **Método Especial JCI** — como combinar profundidade japonesa, treino deliberado chinês e pragmatismo indiano em cada etapa relevante.
 
 > Curso concluído não significa domínio. Certificado é evidência externa; Mastery Gate é evidência interna.
 
@@ -17,6 +18,7 @@ Este repositório é a fonte da verdade para quatro coisas diferentes:
 - **freeCodeCamp JavaScript Certification:** em andamento, em paralelo.
 - **Programming Mastery Lab:** ativo em modo de checkpoints cumulativos.
 - **Engineering Impact:** trilha transversal ativa para transformar maturidade técnica em projetos, documentação, open source e contribuição pública quando fizer sentido.
+- **Método Especial JCI:** camada transversal ativa; Japão = profundidade, China = treino deliberado, Índia = aplicação/empregabilidade. Ver [JCI_METHOD.md](JCI_METHOD.md).
 
 ## Método do laboratório
 
@@ -43,18 +45,29 @@ Durante laboratórios de aprendizagem, IA não entrega a solução completa ante
 
 Em trabalho real, vale usar ChatGPT, Codex, autocomplete, documentação e demais ferramentas para produtividade máxima.
 
+## Método Especial JCI
+
+O Mastery Lab é reforçado pelo **JCI — Japão, China e Índia**:
+
+- **Japão:** primeiros princípios, mecanismos por baixo das abstrações, implementação e explicação;
+- **China:** repetição progressiva, Error Ledger, variações, reteste e sessões cronometradas quando apropriado;
+- **Índia:** DSA, Core CS, entrevistas, system design e aplicação prática.
+
+Plataformas prioritárias: **Aizu Online Judge, AtCoder, Luogu, Nowcoder e CodeChef**. **NPTEL/IIT/SWAYAM** entra como aprofundamento universitário sob demanda, não como segunda grade curricular. Detalhes e política anti-inchaço em [JCI_METHOD.md](JCI_METHOD.md).
+
 ## Ciclo de trabalho
 
 1. Lucas informa no chat um avanço real de curso.
 2. O progresso é atualizado em `docs/data/progress.json`.
 3. O conteúdo estudado é convertido em competências em `docs/data/mastery.json`.
 4. Quando necessário, nasce um laboratório em `labs/` ou um Mastery Gate em `mastery-gates/`.
-5. Tópicos maduros são avaliados pela trilha [Engineering Impact](ENGINEERING_IMPACT.md): estudo apenas, projeto, artigo, open source, contribuição comunitária ou palestra.
-6. Lucas executa localmente, faz commit e push.
-7. O código é revisado no GitHub.
-8. Erros conceituais recorrentes entram em `docs/data/error-ledger.json`.
-9. Revisões futuras entram em `docs/data/reviews.json`.
-10. Só após retenção e transferência o tópico chega a Mastery 7.
+5. O [Método Especial JCI](JCI_METHOD.md) decide se o tópico merece profundidade extra, treino externo, reteste cronometrado ou aplicação profissional — sem duplicar cursos por burocracia.
+6. Tópicos maduros são avaliados pela trilha [Engineering Impact](ENGINEERING_IMPACT.md): estudo apenas, projeto, artigo, open source, contribuição comunitária ou palestra.
+7. Lucas executa localmente, faz commit e push.
+8. O código é revisado no GitHub.
+9. Erros conceituais recorrentes entram em `docs/data/error-ledger.json`.
+10. Revisões futuras entram em `docs/data/reviews.json`.
+11. Só após retenção e transferência o tópico chega a Mastery 7.
 
 ## Estrutura
 
