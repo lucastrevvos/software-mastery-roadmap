@@ -1,7 +1,7 @@
 {
   "meta": {
-    "version": "2.4.0",
-    "updatedAt": "2026-09-01T16:25:00-03:00",
+    "version": "2.5.0",
+    "updatedAt": "2026-09-02T10:30:00-03:00",
     "purpose": "Anotações pessoais, modelos mentais e resumos úteis das conversas de estudo, vinculados diretamente a cada curso do roadmap."
   },
   "courses": {
@@ -596,6 +596,32 @@
           "messaging",
           "resilience",
           "observability"
+        ]
+      },
+      {
+        "id": "CS50-NOTE-023",
+        "date": "2026-09-02",
+        "type": "mental-model",
+        "title": "Idempotência: retries múltiplos, um único efeito lógico",
+        "summary": "Em sistemas distribuídos, timeout não prova que uma operação falhou. Um POST pode ter sido processado e apenas a resposta ter se perdido. Idempotency-Key permite repetir a requisição sem repetir o efeito.",
+        "points": [
+          "O bug foi reproduzido primeiro sem proteção: uma intenção lógica gerou duas ordens porque a primeira foi processada antes do timeout e o retry criou outra.",
+          "A correção usa uma Idempotency-Key gerada uma vez por operação lógica e reutilizada em todos os retries.",
+          "O fornecedor, que executa o efeito, registra a chave junto ao fingerprint do payload e ao resultado.",
+          "Se a mesma chave chega com o mesmo payload, o fornecedor devolve o resultado anterior sem executar novamente.",
+          "Se a mesma chave chega com payload diferente, deve haver conflito, porque a chave representa uma operação lógica específica.",
+          "No lab seguro, duas requisições HTTP resultaram em uma única ordem persistida no fornecedor fake.",
+          "Em produção, Map local serve apenas para demonstração; múltiplas instâncias exigem armazenamento compartilhado e operação atômica para deduplicação."
+        ],
+        "mentalModel": "operação lógica cria uma chave → primeira tentativa pode executar e perder a resposta → retry reutiliza a mesma chave → fornecedor reconhece que já processou → devolve o mesmo resultado → várias tentativas, um único efeito",
+        "relatedTopics": [
+          "idempotency",
+          "retry",
+          "timeout",
+          "distributed systems",
+          "deduplication",
+          "POST",
+          "Idempotency-Key"
         ]
       }
     ]
