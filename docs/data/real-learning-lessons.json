@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Caderno de Aulas — Como Realmente Aprender Programação",
-    "updatedAt": "2026-09-01",
+    "updatedAt": "2026-09-02",
     "principle": "Registrar o que precisa ser recuperável, não transcrever a aula inteira."
   },
   "stages": [
@@ -353,9 +353,91 @@
         {
           "id": "00.5",
           "title": "Debugger e stack trace",
-          "status": "next",
-          "summary": "Próxima aula: investigar execução real com breakpoints, call stack, variáveis e hipóteses em vez de alterar código no escuro.",
+          "status": "completed",
+          "summary": "Debugging é investigação guiada por evidência: ler o stack trace, distinguir sintoma de causa, formular hipótese, observar estado real com breakpoints e call stack, corrigir e retestar.",
           "mentalModel": "sintoma → stack trace → hipótese → breakpoint → observar estado → provar causa → corrigir → retestar",
+          "concepts": [
+            "stack trace vs call stack",
+            "frames de execução",
+            "breakpoints",
+            "step into vs next",
+            "inspeção de variáveis",
+            "causa vs sintoma",
+            "hipótese e experimento",
+            "regressão"
+          ],
+          "commands": [
+            {
+              "cmd": "python3 -m pdb app.py",
+              "meaning": "inicia o programa sob o debugger pdb"
+            },
+            {
+              "cmd": "b <função/linha>",
+              "meaning": "cria breakpoint"
+            },
+            {
+              "cmd": "c",
+              "meaning": "continua execução até breakpoint ou término"
+            },
+            {
+              "cmd": "n",
+              "meaning": "executa próxima linha sem entrar profundamente em chamadas"
+            },
+            {
+              "cmd": "s",
+              "meaning": "executa entrando na função chamada"
+            },
+            {
+              "cmd": "p <expr>",
+              "meaning": "avalia e imprime expressão/variável"
+            },
+            {
+              "cmd": "pp <expr>",
+              "meaning": "pretty print de expressão/estrutura"
+            },
+            {
+              "cmd": "where",
+              "meaning": "mostra a call stack atual"
+            },
+            {
+              "cmd": "up",
+              "meaning": "sobe um frame na call stack"
+            },
+            {
+              "cmd": "down",
+              "meaning": "desce um frame"
+            },
+            {
+              "cmd": "list",
+              "meaning": "mostra código ao redor da linha atual"
+            },
+            {
+              "cmd": "q",
+              "meaning": "encerra o debugger"
+            }
+          ],
+          "lab": [
+            "Executar bug proposital com desconto VIP retornando None.",
+            "Ler stack trace antes de alterar código.",
+            "Parar em calculate_total e inspecionar estado.",
+            "Entrar em load_discount e observar a origem de None.",
+            "Navegar pelos frames da call stack.",
+            "Corrigir a causa e retestar caso VIP e caso normal."
+          ],
+          "traps": [
+            "A linha onde a exceção explode pode ser apenas o sintoma.",
+            "Alterar código antes de formular hipótese transforma debugging em tentativa e erro.",
+            "Uma correção que remove o erro pode ainda violar o contrato do sistema.",
+            "Depois da correção é preciso testar também caminhos que já funcionavam."
+          ],
+          "takeaway": "Debugging é o processo de substituir suposições por observações até que a causa esteja provada."
+        },
+        {
+          "id": "00.6",
+          "title": "Logs e observabilidade",
+          "status": "next",
+          "summary": "Próxima aula: registrar eventos úteis para reconstruir o comportamento de um programa quando não é possível parar a execução com debugger.",
+          "mentalModel": "evento → contexto → log estruturado → correlação → reconstrução da execução",
           "concepts": [],
           "commands": [],
           "lab": [],
