@@ -1,7 +1,7 @@
 {
   "meta": {
-    "version": "2.5.0",
-    "updatedAt": "2026-09-02T10:30:00-03:00",
+    "version": "2.6.0",
+    "updatedAt": "2026-09-02T11:16:00-03:00",
     "purpose": "Anotações pessoais, modelos mentais e resumos úteis das conversas de estudo, vinculados diretamente a cada curso do roadmap."
   },
   "courses": {
@@ -622,6 +622,39 @@
           "deduplication",
           "POST",
           "Idempotency-Key"
+        ]
+      },
+      {
+        "id": "CS50-NOTE-024",
+        "date": "2026-09-02",
+        "type": "plan",
+        "title": "Pagamentos externos e observabilidade como próximos laboratórios distribuídos",
+        "summary": "Dúvidas e próximos passos registrados: em integrações de pagamento, idempotência deve existir no provedor que executa o efeito e também ser correlacionada localmente; confirmação robusta envolve resposta síncrona, webhooks e reconciliation. O roadmap também incluirá observabilidade prática com OpenTelemetry e comparação de backends como Axiom, Grafana stack, Sentry e provedores nativos de cloud.",
+        "points": [
+          "Pagamento externo: persistir localmente a relação entre operação, Idempotency-Key, provider payment id e status conhecido.",
+          "Timeout de pagamento significa estado incerto, não necessariamente falha; modelar PENDING/PROCESSING/PAID/FAILED/UNKNOWN conforme necessidade.",
+          "Webhooks servirão como confirmação assíncrona do provedor.",
+          "Reconciliation servirá para consultar e corrigir divergências entre estado local e estado do provedor.",
+          "A observabilidade será ensinada em prática: logs estruturados, métricas, traces, correlation/request id e health/readiness.",
+          "OpenTelemetry será usado como camada de instrumentação/vendor-neutral antes de escolher backends.",
+          "Serão comparados backends/plataformas como Axiom, Grafana/Prometheus/Loki/Tempo, Sentry e serviços nativos como CloudWatch e Application Insights.",
+          "A escolha de ferramenta será guiada por custo, volume, experiência de consulta, tracing, retenção, lock-in e facilidade operacional."
+        ],
+        "mentalModel": "aplicação produz telemetry → OpenTelemetry padroniza/instrumenta → backend de observabilidade armazena/indexa/visualiza → alertas e investigação; pagamento externo usa idempotência + webhook + reconciliation para reduzir incerteza distribuída",
+        "relatedTopics": [
+          "payments",
+          "webhooks",
+          "reconciliation",
+          "observability",
+          "OpenTelemetry",
+          "Axiom",
+          "Grafana",
+          "Prometheus",
+          "Loki",
+          "Tempo",
+          "Sentry",
+          "CloudWatch",
+          "Application Insights"
         ]
       }
     ]
