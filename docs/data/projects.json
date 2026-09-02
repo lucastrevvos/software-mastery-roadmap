@@ -1,7 +1,7 @@
 {
   "meta": {
     "version": "1.0.0",
-    "updatedAt": "2026-09-02T11:22:00-03:00",
+    "updatedAt": "2026-09-02T16:40:00-03:00",
     "purpose": "Camada de projetos aplicados do roadmap: estratégia, arquitetura, requisitos praticados, evidências, progresso e próximos gates."
   },
   "principles": [
@@ -21,7 +21,7 @@
       "status": "in-progress",
       "priority": "high",
       "startedAt": "2026-08-31",
-      "updatedAt": "2026-09-02T11:22:00-03:00",
+      "updatedAt": "2026-09-02T16:40:00-03:00",
       "purpose": "Reativar e aprofundar Node.js, TypeScript, NestJS, React, APIs, microsserviços, integrações e cloud por meio de um sistema automotivo próximo de um cenário de produção.",
       "careerContext": "Preparação imediata para oportunidade Full Stack com Node.js, React, TypeScript, APIs, microsserviços e integrações, preservando o projeto depois da entrevista como laboratório permanente de engenharia.",
       "goal": "Construir localmente um pequeno ecossistema full stack, mapear cada componente para AWS/Azure, realizar deploy real em cloud e praticar falhas de produção, observabilidade e decisões arquiteturais.",
@@ -112,7 +112,7 @@
           "id": "integrations",
           "title": "Integrações",
           "status": "in-progress",
-          "evidence": "Timeout, retry/backoff/jitter, Retry-After, validação Zod, contrato interno e Idempotency-Key concluídos; conflito chave/payload validado. Próximo: circuit breaker."
+          "evidence": "Circuit breaker funcional: OPEN, HALF_OPEN e reabertura após probe falhar observados. Próximo: probe única sem retry e classificação de falhas."
         },
         {
           "id": "aws",
@@ -246,7 +246,7 @@
           "order": 3,
           "title": "Integração externa fake & resiliência",
           "status": "in-progress",
-          "progress": 82,
+          "progress": 88,
           "deliverables": [
             "Fake Automotive API",
             "client/adapter dedicado",
@@ -362,9 +362,9 @@
         }
       ],
       "progress": {
-        "percent": 60,
+        "percent": 63,
         "currentPhase": "Integração externa fake & resiliência",
-        "currentTask": "Circuit Breaker Lab — observar fornecedor falhando repetidamente, abrir circuito, falhar rápido e testar recuperação HALF_OPEN.",
+        "currentTask": "Refinar circuit breaker: HALF_OPEN com probe única sem retry e classificar falhas que contam para abrir o circuito; depois validar recuperação OPEN→HALF_OPEN→CLOSED.",
         "nextTasks": [
           "Provocar POST duplicado após timeout com efeito já persistido no fornecedor fake",
           "Implementar Idempotency-Key reutilizada entre retries",
@@ -421,7 +421,10 @@
           "Segunda chamada insegura criou apenas #3 porque o modo lost-response-once já havia consumido sua primeira tentativa no contador em memória do fake upstream.",
           "Idempotency-Key testada com sucesso: retry após timeout retornou a mesma ordem e /service-orders permaneceu com uma única entrada.",
           "Duas requisições HTTP foram reduzidas a um único efeito lógico no upstream fake.",
-          "Idempotency-Key reutilizada com payload diferente foi rejeitada corretamente pelo upstream fake com conflito, preservando a semântica de uma chave por operação lógica."
+          "Idempotency-Key reutilizada com payload diferente foi rejeitada corretamente pelo upstream fake com conflito, preservando a semântica de uma chave por operação lógica.",
+          "Circuit breaker abriu após limiar de falhas e entrou em HALF_OPEN após a janela configurada.",
+          "HALF_OPEN recebeu 503, executou retries internos e reabriu o circuito repetidamente, comprovando a máquina de estados OPEN→HALF_OPEN→OPEN.",
+          "Logs do upstream confirmaram novas chamadas durante probes HALF_OPEN e ausência de recuperação enquanto o fornecedor permaneceu em mode=down."
         ]
       },
       "productionQuestions": [
