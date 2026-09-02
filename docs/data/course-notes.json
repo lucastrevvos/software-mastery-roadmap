@@ -1,7 +1,7 @@
 {
   "meta": {
-    "version": "2.6.0",
-    "updatedAt": "2026-09-02T11:16:00-03:00",
+    "version": "2.7.0",
+    "updatedAt": "2026-09-02T16:40:00-03:00",
     "purpose": "Anotações pessoais, modelos mentais e resumos úteis das conversas de estudo, vinculados diretamente a cada curso do roadmap."
   },
   "courses": {
@@ -655,6 +655,32 @@
           "Sentry",
           "CloudWatch",
           "Application Insights"
+        ]
+      },
+      {
+        "id": "CS50-NOTE-025",
+        "date": "2026-09-02",
+        "type": "mental-model",
+        "title": "Circuit Breaker: CLOSED, OPEN, HALF_OPEN e fail-fast",
+        "summary": "Circuit breaker evita continuar chamando uma dependência que está falhando repetidamente. Após atingir o limiar de falhas, abre o circuito e falha rápido; depois de uma janela de espera, entra em HALF_OPEN para testar recuperação.",
+        "points": [
+          "CLOSED permite chamadas normalmente e contabiliza falhas da operação lógica.",
+          "OPEN bloqueia chamadas ao upstream durante a janela configurada e devolve erro imediatamente.",
+          "HALF_OPEN permite uma chamada de prova para decidir se fecha novamente ou reabre.",
+          "No lab, 3 operações lógicas falhas abriram o circuito; após 10s, probes HALF_OPEN continuaram recebendo 503 e o circuito reabriu.",
+          "Retry fica dentro da operação protegida pelo breaker; por isso uma operação pode fazer várias tentativas HTTP mas contar como uma falha do breaker.",
+          "Para um HALF_OPEN mais conservador, pode ser melhor não fazer retry dentro da probe, evitando carga extra e feedback lento durante recuperação.",
+          "Timeout responde quanto esperar uma tentativa; retry responde se vale tentar de novo; circuit breaker responde se vale chamar a dependência agora."
+        ],
+        "mentalModel": "CLOSED → falhas suficientes → OPEN → espera → HALF_OPEN → sucesso = CLOSED; falha = OPEN novamente",
+        "relatedTopics": [
+          "circuit breaker",
+          "resilience",
+          "retry",
+          "timeout",
+          "fail-fast",
+          "distributed systems",
+          "state machine"
         ]
       }
     ]
