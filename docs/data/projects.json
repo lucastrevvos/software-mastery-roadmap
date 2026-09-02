@@ -1,7 +1,7 @@
 {
   "meta": {
     "version": "1.0.0",
-    "updatedAt": "2026-09-02T10:30:00-03:00",
+    "updatedAt": "2026-09-02T11:16:00-03:00",
     "purpose": "Camada de projetos aplicados do roadmap: estratégia, arquitetura, requisitos praticados, evidências, progresso e próximos gates."
   },
   "principles": [
@@ -21,7 +21,7 @@
       "status": "in-progress",
       "priority": "high",
       "startedAt": "2026-08-31",
-      "updatedAt": "2026-09-02T10:30:00-03:00",
+      "updatedAt": "2026-09-02T11:16:00-03:00",
       "purpose": "Reativar e aprofundar Node.js, TypeScript, NestJS, React, APIs, microsserviços, integrações e cloud por meio de um sistema automotivo próximo de um cenário de produção.",
       "careerContext": "Preparação imediata para oportunidade Full Stack com Node.js, React, TypeScript, APIs, microsserviços e integrações, preservando o projeto depois da entrevista como laboratório permanente de engenharia.",
       "goal": "Construir localmente um pequeno ecossistema full stack, mapear cada componente para AWS/Azure, realizar deploy real em cloud e praticar falhas de produção, observabilidade e decisões arquiteturais.",
@@ -371,7 +371,10 @@
           "Validar mesma chave + payload diferente",
           "Discutir storage compartilhado/atômico para idempotência em produção",
           "Circuit breaker",
-          "Structured logging + correlation ID"
+          "Structured logging + correlation ID",
+          "Payment/webhook/reconciliation lab",
+          "OpenTelemetry instrumentation",
+          "Compare observability backends including Axiom"
         ],
         "completedEvidence": [
           "Node.js atualizado de 20.19.4 para 24.15.0 por incompatibilidade de dependências.",
@@ -498,7 +501,13 @@
           "Cada conceito novo deve gerar evidência prática no lab.",
           "Conectar continuamente fundamentos do CS50/Node/PostgreSQL com abstrações de framework e cloud."
         ]
-      }
+      },
+      "futureLabs": [
+        "Payment integration lab: provider idempotency + local payment state + webhook + reconciliation + UNKNOWN state.",
+        "Observability lab: structured logs + correlation ID + metrics + distributed tracing with OpenTelemetry.",
+        "Observability backend comparison: Axiom vs Grafana stack (Prometheus/Loki/Tempo) vs Sentry vs CloudWatch/Application Insights.",
+        "Failure investigation lab: trace one request across API, PostgreSQL, external API, queue and worker."
+      ]
     }
   ]
 }
