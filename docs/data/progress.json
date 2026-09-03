@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-03T13:35:00-03:00",
+  "updatedAt": "2026-09-03T14:40:00-03:00",
   "courses": {
     "cs50x": {
       "status": "in-progress",
@@ -164,6 +164,6 @@
     }
   },
   "current": "week-7-sql",
-  "currentTask": "songs",
-  "currentTaskUrl": "https://cs50.harvard.edu/x/psets/7/songs/"
+  "currentTask": "movies",
+  "currentTaskUrl": "https://cs50.harvard.edu/x/psets/7/movies/"
 }
