@@ -435,9 +435,71 @@
         {
           "id": "00.6",
           "title": "Logs e observabilidade",
+          "status": "completed",
+          "summary": "Logs são evidências deixadas pelo programa para reconstruir o que aconteceu quando não é possível parar a execução. Bons logs carregam contexto, níveis, correlação e stack trace quando necessário.",
+          "mentalModel": "evento → contexto → log estruturado → correlação → reconstrução → hipótese",
+          "concepts": [
+            "print vs logging",
+            "níveis DEBUG/INFO/WARNING/ERROR/CRITICAL",
+            "structured logging",
+            "correlation/request ID",
+            "logger.exception e stack trace",
+            "stdout/stderr",
+            "logs, métricas e traces",
+            "dados sensíveis em logs"
+          ],
+          "commands": [
+            {
+              "cmd": "python3 app.py > app.log 2>&1",
+              "meaning": "redireciona stdout e stderr para o mesmo arquivo"
+            },
+            {
+              "cmd": "grep checkout app.log",
+              "meaning": "filtra linhas contendo checkout"
+            },
+            {
+              "cmd": "grep ERROR app.log",
+              "meaning": "filtra eventos de erro"
+            },
+            {
+              "cmd": "tail app.log",
+              "meaning": "mostra as últimas linhas do arquivo"
+            },
+            {
+              "cmd": "tail -n 20 app.log",
+              "meaning": "mostra as últimas 20 linhas"
+            },
+            {
+              "cmd": "tail -f app.log",
+              "meaning": "acompanha novas linhas em tempo real"
+            },
+            {
+              "cmd": "grep ERROR app.log | wc -l",
+              "meaning": "conta quantas linhas de erro existem"
+            }
+          ],
+          "lab": [
+            "Adicionar logging com timestamp e nível ao checkout.",
+            "Adicionar request_id para correlacionar eventos.",
+            "Executar caminho normal e caminho com erro.",
+            "Registrar stack trace com logger.exception.",
+            "Redirecionar logs para arquivo.",
+            "Filtrar e acompanhar logs com grep e tail."
+          ],
+          "traps": [
+            "Prints soltos não carregam contexto suficiente para produção.",
+            "Logar tudo cria ruído e pode esconder o sinal.",
+            "Nunca registrar senhas, tokens, cookies, chaves ou dados sensíveis.",
+            "Logs contam eventos; observabilidade também envolve métricas e traces."
+          ],
+          "takeaway": "Bom log não conta tudo que o programa fez; deixa evidência suficiente para explicar o que aconteceu."
+        },
+        {
+          "id": "00.7",
+          "title": "Profiling básico",
           "status": "next",
-          "summary": "Próxima aula: registrar eventos úteis para reconstruir o comportamento de um programa quando não é possível parar a execução com debugger.",
-          "mentalModel": "evento → contexto → log estruturado → correlação → reconstrução da execução",
+          "summary": "Próxima aula: medir onde CPU e tempo são consumidos antes de tentar otimizar.",
+          "mentalModel": "medir → localizar hotspot → formular hipótese → alterar → medir novamente",
           "concepts": [],
           "commands": [],
           "lab": [],
