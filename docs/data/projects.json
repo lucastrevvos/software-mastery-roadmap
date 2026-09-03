@@ -1,7 +1,7 @@
 {
   "meta": {
     "version": "1.0.0",
-    "updatedAt": "2026-09-02T16:45:00-03:00",
+    "updatedAt": "2026-09-03T13:35:00-03:00",
     "purpose": "Camada de projetos aplicados do roadmap: estratégia, arquitetura, requisitos praticados, evidências, progresso e próximos gates."
   },
   "principles": [
@@ -21,7 +21,7 @@
       "status": "in-progress",
       "priority": "high",
       "startedAt": "2026-08-31",
-      "updatedAt": "2026-09-02T16:45:00-03:00",
+      "updatedAt": "2026-09-03T13:35:00-03:00",
       "purpose": "Reativar e aprofundar Node.js, TypeScript, NestJS, React, APIs, microsserviços, integrações e cloud por meio de um sistema automotivo próximo de um cenário de produção.",
       "careerContext": "Preparação imediata para oportunidade Full Stack com Node.js, React, TypeScript, APIs, microsserviços e integrações, preservando o projeto depois da entrevista como laboratório permanente de engenharia.",
       "goal": "Construir localmente um pequeno ecossistema full stack, mapear cada componente para AWS/Azure, realizar deploy real em cloud e praticar falhas de produção, observabilidade e decisões arquiteturais.",
@@ -364,7 +364,7 @@
       "progress": {
         "percent": 63,
         "currentPhase": "Integração externa fake & resiliência",
-        "currentTask": "Refatorar Circuit Breaker: HALF_OPEN com probe única sem retry e classificação explícita das falhas que contam para o breaker.",
+        "currentTask": "PAUSADO — retomar em Circuit Breaker: versão refatorada com AutomotiveUpstreamError, fetchOnce, fetchWithRetry, HALF_OPEN sem retry e validação de recuperação/erros não-breaker.",
         "nextTasks": [
           "Criar fetchOnce para probe HALF_OPEN",
           "Classificar erros retryable e breaker-relevant",
@@ -421,7 +421,16 @@
           "Circuit breaker abriu após limiar de falhas e entrou em HALF_OPEN após a janela configurada.",
           "HALF_OPEN recebeu 503, executou retries internos e reabriu o circuito repetidamente, comprovando a máquina de estados OPEN→HALF_OPEN→OPEN.",
           "Logs do upstream confirmaram novas chamadas durante probes HALF_OPEN e ausência de recuperação enquanto o fornecedor permaneceu em mode=down."
-        ]
+        ],
+        "resumePoint": {
+          "date": "2026-09-03",
+          "nextSteps": [
+            "Testar HALF_OPEN usando fetchOnce sem retry.",
+            "Validar OPEN→HALF_OPEN→CLOSED quando upstream voltar.",
+            "Validar 4xx/429 sem abrir circuit breaker conforme política.",
+            "Depois seguir para observabilidade estruturada/correlation ID."
+          ]
+        }
       },
       "productionQuestions": [
         "Por que ECS/Fargate em vez de Lambda para este workload?",
