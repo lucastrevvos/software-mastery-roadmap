@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-30T21:55:00-03:00",
+  "updatedAt": "2026-09-03T13:35:00-03:00",
   "courses": {
     "cs50x": {
       "status": "in-progress",
@@ -162,5 +162,8 @@
       "path": "labs/cs50/week-02/LAB-CS50-002/README.md",
       "note": "O lab completo foi preservado, mas foi adiado para um checkpoint cumulativo ou para o sprint de mastery pós-CS50. Durante o curso, o PSet oficial é a prática principal e só vazamentos conceituais relevantes serão retestados."
     }
-  }
+  },
+  "current": "week-7-sql",
+  "currentTask": "songs",
+  "currentTaskUrl": "https://cs50.harvard.edu/x/psets/7/songs/"
 }
