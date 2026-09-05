@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-03T14:40:00-03:00",
+  "updatedAt": "2026-09-05T17:44:00-03:00",
   "courses": {
     "cs50x": {
       "status": "in-progress",
@@ -26,9 +26,10 @@
         "problem-set-6-sentimental-readability",
         "problem-set-6-dna",
         "problem-set-6",
-        "week-6-python"
+        "week-6-python",
+        "problem-set-7-songs"
       ],
-      "current": "week-7-sql",
+      "current": "week-8-html-css-javascript",
       "notes": [
         "Lecture 0 concluída.",
         "Projeto Scratch Bug vs Developer concluído, validado e submetido via CS50.",
@@ -61,7 +62,11 @@
         "Week 6 — Python concluída em 2026-08-30.",
         "Problem Set 6 concluído e submetido em 2026-08-30: Sentimental Mario (Less), Sentimental Cash, Sentimental Readability e DNA.",
         "Week 6 consolidou a ponte C → Python: menos sintaxe explícita, memória gerenciada, tipos/coleções de alto nível, exceptions e uso de dict como abstração de hash table.",
-        "Week 7 — SQL iniciada em 2026-08-30."
+        "Week 7 — SQL iniciada em 2026-08-30.",
+        "PSet 7 — Songs concluído em 2026-09-03.",
+        "PSet 7 — Movies: 13 consultas trabalhadas. Primeira submissão apresentou falhas em 2.sql, 3.sql e 4.sql; correções feitas no estudo. Reenvio final não confirmado no chat.",
+        "PSet 7 — Fiftyville: investigação concluída em 2026-09-03 com Bruce identificado como ladrão, New York City como destino e Robin como cúmplice. Submissão final não confirmada no chat.",
+        "Week 8 — HTML, CSS e JavaScript alcançada em 2026-09-05. Exercício atual: Trivia."
       ]
     },
     "fcc-js-v10": {
@@ -163,7 +168,7 @@
       "note": "O lab completo foi preservado, mas foi adiado para um checkpoint cumulativo ou para o sprint de mastery pós-CS50. Durante o curso, o PSet oficial é a prática principal e só vazamentos conceituais relevantes serão retestados."
     }
   },
-  "current": "week-7-sql",
-  "currentTask": "movies",
-  "currentTaskUrl": "https://cs50.harvard.edu/x/psets/7/movies/"
+  "current": "week-8-html-css-javascript",
+  "currentTask": "trivia",
+  "currentTaskUrl": "https://cs50.harvard.edu/x/psets/8/trivia/"
 }
