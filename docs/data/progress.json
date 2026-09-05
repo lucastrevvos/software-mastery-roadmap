@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-05T17:44:00-03:00",
+  "updatedAt": "2026-09-05T19:11:00-03:00",
   "courses": {
     "cs50x": {
       "status": "in-progress",
@@ -66,7 +66,9 @@
         "PSet 7 — Songs concluído em 2026-09-03.",
         "PSet 7 — Movies: 13 consultas trabalhadas. Primeira submissão apresentou falhas em 2.sql, 3.sql e 4.sql; correções feitas no estudo. Reenvio final não confirmado no chat.",
         "PSet 7 — Fiftyville: investigação concluída em 2026-09-03 com Bruce identificado como ladrão, New York City como destino e Robin como cúmplice. Submissão final não confirmada no chat.",
-        "Week 8 — HTML, CSS e JavaScript alcançada em 2026-09-05. Exercício atual: Trivia."
+        "Week 8 — HTML, CSS e JavaScript alcançada em 2026-09-05.",
+        "PSet 8 — Trivia implementado e testado manualmente em 2026-09-05; submissão final não confirmada no chat.",
+        "PSet 8 — Homepage iniciado em 2026-09-05."
       ]
     },
     "fcc-js-v10": {
@@ -169,6 +171,6 @@
     }
   },
   "current": "week-8-html-css-javascript",
-  "currentTask": "trivia",
-  "currentTaskUrl": "https://cs50.harvard.edu/x/psets/8/trivia/"
+  "currentTask": "homepage",
+  "currentTaskUrl": "https://cs50.harvard.edu/x/psets/8/homepage/"
 }
