@@ -16,7 +16,7 @@ SYNTHETIC_SIZE = 6000
 
 
 def load_customers(path: Path):
-    with path.open("r", encoding="utf-8-sig", newline="") as file:
+    with path.open("r", encoding="utf-8", newline="") as file:
         reader = csv.DictReader(file)
         customers = list(reader)
 
