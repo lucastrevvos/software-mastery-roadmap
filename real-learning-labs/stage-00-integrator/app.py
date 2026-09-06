@@ -30,13 +30,10 @@ def load_customers(path: Path):
 
 
 def has_duplicate_ids(customers):
-    seen = set()
-
-    for customer in customers:
-        customer_id = customer["id"]
-        if customer_id in seen:
-            return True
-        seen.add(customer_id)
+    for i in range(len(customers)):
+        for j in range(i + 1, len(customers)):
+            if customers[i]["id"] == customers[j]["id"]:
+                return True
 
     return False
 
