@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-05T19:11:00-03:00",
+  "updatedAt": "2026-09-06T19:05:00-03:00",
   "courses": {
     "cs50x": {
       "status": "in-progress",
@@ -29,7 +29,7 @@
         "week-6-python",
         "problem-set-7-songs"
       ],
-      "current": "week-8-html-css-javascript",
+      "current": "week-9-flask",
       "notes": [
         "Lecture 0 concluída.",
         "Projeto Scratch Bug vs Developer concluído, validado e submetido via CS50.",
@@ -68,7 +68,9 @@
         "PSet 7 — Fiftyville: investigação concluída em 2026-09-03 com Bruce identificado como ladrão, New York City como destino e Robin como cúmplice. Submissão final não confirmada no chat.",
         "Week 8 — HTML, CSS e JavaScript alcançada em 2026-09-05.",
         "PSet 8 — Trivia implementado e testado manualmente em 2026-09-05; submissão final não confirmada no chat.",
-        "PSet 8 — Homepage iniciado em 2026-09-05."
+        "PSet 8 — Homepage iniciado em 2026-09-05.",
+        "Week 9 — Flask alcançada em 2026-09-06.",
+        "PSet 9 — Birthdays iniciado em 2026-09-06; foco atual em request GET/POST, Jinja, formulários e persistência SQLite."
       ]
     },
     "fcc-js-v10": {
@@ -170,7 +172,7 @@
       "note": "O lab completo foi preservado, mas foi adiado para um checkpoint cumulativo ou para o sprint de mastery pós-CS50. Durante o curso, o PSet oficial é a prática principal e só vazamentos conceituais relevantes serão retestados."
     }
   },
-  "current": "week-8-html-css-javascript",
-  "currentTask": "homepage",
-  "currentTaskUrl": "https://cs50.harvard.edu/x/psets/8/homepage/"
+  "current": "week-9-flask",
+  "currentTask": "birthdays",
+  "currentTaskUrl": "https://cs50.harvard.edu/x/psets/9/birthdays/"
 }
