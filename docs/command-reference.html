@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Caixa de ferramentas de comandos do roadmap Como Realmente Aprender Programação.">
+  <title>Command Reference — Software Formation Roadmap</title>
+  <link rel="stylesheet" href="css/real-learning-roadmap.css?v=1.0.0">
+  <style>
+    .ref-hero{padding:3rem 0 1.5rem}.ref-search{width:100%;max-width:760px;padding:.95rem 1rem;border:1px solid rgba(127,127,127,.35);border-radius:12px;background:transparent;color:inherit;font:inherit}.ref-grid{display:grid;gap:1rem}.ref-card{border:1px solid rgba(127,127,127,.25);border-radius:16px;padding:1.1rem 1.2rem;background:rgba(127,127,127,.04)}.ref-card h3{margin-top:0}.ref-card table{width:100%;border-collapse:collapse}.ref-card th,.ref-card td{text-align:left;vertical-align:top;padding:.65rem;border-bottom:1px solid rgba(127,127,127,.18)}.ref-card code{white-space:pre-wrap}.question-map{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:.75rem;margin:1rem 0 2rem}.question{padding:1rem;border:1px solid rgba(127,127,127,.22);border-radius:14px}.question strong{display:block;margin-bottom:.35rem}.copy-note{margin-top:.8rem}.hidden{display:none!important}@media(max-width:720px){.ref-card{overflow-x:auto}.ref-card table{min-width:650px}}
+  </style>
+</head>
+<body>
+<header class="ref-hero">
+  <div class="shell">
+    <nav class="topnav" aria-label="Navegação">
+      <a class="brand" href="real-learning-roadmap.html">← Como Realmente Aprender Programação</a>
+      <div class="navlinks"><a href="real-learning-notes.html">Caderno</a><a href="command-reference.md">Markdown / Notion</a><a href="index.html">Roadmap certificado</a></div>
+    </nav>
+    <p class="eyebrow">CAIXA DE FERRAMENTAS · REFERÊNCIA VIVA</p>
+    <h1>Command Reference</h1>
+    <p class="lead">Não decore comandos pouco usados. Comece pela pergunta, encontre a ferramenta, colete evidência.</p>
+    <input id="search" class="ref-search" type="search" placeholder="Buscar: git diff, profiler, encoding, processo, logs…" aria-label="Buscar comandos">
+    <p class="section-note copy-note">A versão <a href="command-reference.md">Markdown</a> foi mantida propositalmente limpa para copiar ao Notion.</p>
+  </div>
+</header>
+<main class="shell">
+  <section class="section">
+    <div class="section-head"><div><p class="eyebrow">COMECE PELA PERGUNTA</p><h2>Que evidência você precisa?</h2></div></div>
+    <div class="question-map searchable">
+      <div class="question"><strong>Não sei onde estou</strong><code>pwd</code> · <code>ls -la</code></div>
+      <div class="question"><strong>Programa parece travado</strong><code>ps</code> · <code>jobs</code> · <code>kill</code></div>
+      <div class="question"><strong>Programa terminou estranho</strong><code>echo $?</code></div>
+      <div class="question"><strong>Arquivo parece igual, mas quebra</strong><code>xxd</code> · <code>cmp</code> · <code>sha256sum</code></div>
+      <div class="question"><strong>Não sei o estado do Git</strong><code>git status</code> · <code>git diff</code></div>
+      <div class="question"><strong>Algo quebrou recentemente</strong><code>git log</code> · <code>git show</code> · <code>git diff HASH^ HASH</code></div>
+      <div class="question"><strong>Erro reproduzível</strong><code>python3 -m pdb app.py</code></div>
+      <div class="question"><strong>Bug aconteceu no passado</strong><code>grep</code> · <code>tail</code> · logs estruturados</div>
+      <div class="question"><strong>Programa está lento</strong><code>time</code> · <code>cProfile</code></div>
+    </div>
+
+    <div class="ref-grid">
+      <article class="ref-card searchable"><h3>00.1 · Terminal & Filesystem</h3><table><thead><tr><th>Comando</th><th>Uso</th></tr></thead><tbody>
+        <tr><td><code>pwd</code></td><td>Diretório atual.</td></tr><tr><td><code>ls</code> / <code>ls -la</code></td><td>Lista conteúdo; <code>-la</code> inclui detalhes e ocultos.</td></tr><tr><td><code>cd &lt;dir&gt;</code> / <code>cd ..</code></td><td>Navegação.</td></tr><tr><td><code>mkdir &lt;dir&gt;</code></td><td>Cria diretório.</td></tr><tr><td><code>touch arquivo</code></td><td>Cria arquivo vazio/atualiza timestamp.</td></tr><tr><td><code>cat arquivo</code></td><td>Mostra conteúdo em stdout.</td></tr><tr><td><code>echo "texto" &gt; arquivo</code></td><td>Sobrescreve arquivo.</td></tr><tr><td><code>echo "texto" &gt;&gt; arquivo</code></td><td>Acrescenta ao final.</td></tr><tr><td><code>cp origem destino</code></td><td>Copia.</td></tr><tr><td><code>mv origem destino</code></td><td>Move/renomeia.</td></tr><tr><td><code>rm arquivo</code></td><td>Remove arquivo.</td></tr><tr><td><code>rmdir dir</code></td><td>Remove diretório vazio.</td></tr><tr><td><code>which comando</code></td><td>Qual executável o PATH encontra.</td></tr><tr><td><code>echo $PATH</code></td><td>Diretórios de busca de executáveis.</td></tr>
+      </tbody></table></article>
+
+      <article class="ref-card searchable"><h3>00.2 · Processos, execução e I/O</h3><table><thead><tr><th>Comando</th><th>Uso</th></tr></thead><tbody>
+        <tr><td><code>ps</code> / <code>ps aux</code></td><td>Inspeciona processos.</td></tr><tr><td><code>sleep 100 &amp;</code></td><td>Processo em background para experimentos.</td></tr><tr><td><code>jobs</code></td><td>Jobs do shell.</td></tr><tr><td><code>kill &lt;PID&gt;</code></td><td>Envia sinal ao processo.</td></tr><tr><td><code>echo $$</code></td><td>PID do shell atual.</td></tr><tr><td><code>ps -o pid,ppid,cmd</code></td><td>PID, pai e comando.</td></tr><tr><td><code>echo $?</code></td><td>Exit code do último comando.</td></tr><tr><td><code>comando 2&gt; error.txt</code></td><td>Redireciona stderr.</td></tr><tr><td><code>comando1 | comando2</code></td><td>Pipe: stdout → stdin.</td></tr><tr><td><code>env</code></td><td>Variáveis de ambiente.</td></tr><tr><td><code>export APP_ENV=development</code></td><td>Exporta variável aos filhos.</td></tr><tr><td><code>chmod +x run.sh</code></td><td>Permissão de execução.</td></tr><tr><td><code>./run.sh</code> / <code>bash run.sh</code></td><td>Executa script.</td></tr>
+      </tbody></table></article>
+
+      <article class="ref-card searchable"><h3>00.3 · Bytes, texto e encoding</h3><table><thead><tr><th>Comando</th><th>Uso</th></tr></thead><tbody>
+        <tr><td><code>printf 'A' | xxd</code></td><td>Inspeciona bytes hexadecimais.</td></tr><tr><td><code>printf 'Olá 🙂' | wc -c</code></td><td>Conta bytes.</td></tr><tr><td><code>printf 'Olá 🙂' | wc -m</code></td><td>Conta caracteres.</td></tr><tr><td><code>file arquivo</code></td><td>Tenta identificar tipo/encoding.</td></tr><tr><td><code>xxd arquivo</code></td><td>Hex dump.</td></tr><tr><td><code>hexdump -C arquivo</code></td><td>Offset + bytes + texto.</td></tr><tr><td><code>diff a b</code></td><td>Diferença textual.</td></tr><tr><td><code>cmp a b</code></td><td>Comparação byte a byte.</td></tr><tr><td><code>sha256sum a b</code></td><td>Hash dos bytes.</td></tr><tr><td><code>printf 'linha1\nlinha2\n' &gt; lf.txt</code></td><td>Cria LF.</td></tr><tr><td><code>printf 'linha1\r\nlinha2\r\n' &gt; crlf.txt</code></td><td>Cria CRLF.</td></tr><tr><td><code>printf '\xEF\xBB\xBFhello\n' &gt; bom.txt</code></td><td>Cria UTF-8 com BOM.</td></tr>
+      </tbody></table></article>
+
+      <article class="ref-card searchable"><h3>00.4 · Git</h3><table><thead><tr><th>Comando</th><th>Pergunta que responde</th></tr></thead><tbody>
+        <tr><td><code>git init</code></td><td>Quero iniciar um repositório.</td></tr><tr><td><code>git status</code></td><td>Em que estado está working tree/staging?</td></tr><tr><td><code>git add &lt;arquivo&gt;</code></td><td>Que versão irá para o próximo snapshot?</td></tr><tr><td><code>git commit -m "mensagem"</code></td><td>Quero registrar este estado.</td></tr><tr><td><code>git diff</code></td><td>Working Tree × Staging.</td></tr><tr><td><code>git diff --staged</code></td><td>Staging × último commit.</td></tr><tr><td><code>git log --oneline</code></td><td>Qual é o histórico compacto?</td></tr><tr><td><code>git log --oneline --decorate</code></td><td>Onde estão HEAD e branches?</td></tr><tr><td><code>git show &lt;HASH&gt;</code></td><td>O que este commit fez?</td></tr><tr><td><code>git branch &lt;nome&gt;</code></td><td>Criar ponteiro de branch.</td></tr><tr><td><code>git switch &lt;branch&gt;</code></td><td>Trocar branch.</td></tr><tr><td><code>git switch -c &lt;branch&gt;</code></td><td>Criar e trocar.</td></tr><tr><td><code>git merge &lt;branch&gt;</code></td><td>Integrar histórico.</td></tr><tr><td><code>git clone &lt;URL&gt;</code></td><td>Criar clone local.</td></tr><tr><td><code>git pull</code></td><td>Buscar/integrar atualizações remotas.</td></tr>
+      </tbody></table></article>
+
+      <article class="ref-card searchable"><h3>Git · investigação de regressão</h3><table><thead><tr><th>Comando</th><th>Uso</th></tr></thead><tbody>
+        <tr><td><code>git log --oneline -- app.py</code></td><td>Histórico só daquele arquivo.</td></tr><tr><td><code>git show &lt;HASH&gt; -- app.py</code></td><td>Alteração do commit naquele arquivo.</td></tr><tr><td><code>git diff &lt;HASH&gt;^ &lt;HASH&gt; -- app.py</code></td><td>Commit suspeito × pai imediato.</td></tr>
+      </tbody></table><p><strong>Fluxo:</strong> reproduzir → medir → histórico → commit suspeito → diff → hipótese → correção → medir de novo.</p></article>
+
+      <article class="ref-card searchable"><h3>00.5 · Debugger / PDB</h3><table><thead><tr><th>Comando</th><th>Uso</th></tr></thead><tbody>
+        <tr><td><code>python3 -m pdb app.py</code></td><td>Executa sob debugger.</td></tr><tr><td><code>b &lt;função/linha&gt;</code></td><td>Breakpoint.</td></tr><tr><td><code>b</code></td><td>Lista breakpoints.</td></tr><tr><td><code>c</code></td><td>Continue.</td></tr><tr><td><code>n</code></td><td>Next sem entrar na chamada.</td></tr><tr><td><code>s</code></td><td>Step into.</td></tr><tr><td><code>p &lt;expr&gt;</code></td><td>Inspeciona expressão.</td></tr><tr><td><code>pp &lt;expr&gt;</code></td><td>Pretty print.</td></tr><tr><td><code>where</code> / <code>bt</code></td><td>Call stack.</td></tr><tr><td><code>up</code> / <code>down</code></td><td>Navega frames.</td></tr><tr><td><code>list</code></td><td>Código ao redor.</td></tr><tr><td><code>q</code></td><td>Sair.</td></tr>
+      </tbody></table></article>
+
+      <article class="ref-card searchable"><h3>00.6 · Logs</h3><table><thead><tr><th>Comando</th><th>Uso</th></tr></thead><tbody>
+        <tr><td><code>python3 app.py &gt; app.log 2&gt;&amp;1</code></td><td>Captura stdout + stderr.</td></tr><tr><td><code>grep checkout app.log</code></td><td>Filtra termo/evento.</td></tr><tr><td><code>grep ERROR app.log</code></td><td>Procura erros.</td></tr><tr><td><code>tail app.log</code></td><td>Últimas linhas.</td></tr><tr><td><code>tail -n 20 app.log</code></td><td>Últimas 20.</td></tr><tr><td><code>tail -f app.log</code></td><td>Acompanha em tempo real.</td></tr><tr><td><code>grep ERROR app.log | wc -l</code></td><td>Conta eventos de erro.</td></tr>
+      </tbody></table></article>
+
+      <article class="ref-card searchable"><h3>00.7 · Profiling</h3><table><thead><tr><th>Comando</th><th>Uso</th></tr></thead><tbody>
+        <tr><td><code>time python3 app.py</code></td><td>Baseline simples: real/user/sys.</td></tr><tr><td><code>time bash run.sh</code></td><td>Mede fluxo completo.</td></tr><tr><td><code>python3 -m cProfile app.py</code></td><td>Perfil de funções.</td></tr><tr><td><code>python3 -m cProfile -s cumulative app.py</code></td><td>Hotspots por tempo acumulado.</td></tr><tr><td><code>python3 -m cProfile -s calls app.py</code></td><td>Ordena por número de chamadas.</td></tr><tr><td><code>/usr/bin/time -v python3 app.py</code></td><td>Tempo + métricas extras + memória residente máxima.</td></tr><tr><td><code>top</code></td><td>CPU/memória de processos em tempo real.</td></tr><tr><td><code>htop</code></td><td>Alternativa amigável, se instalada.</td></tr>
+      </tbody></table></article>
+
+      <article class="ref-card searchable"><h3>00.8 · Lab integrador</h3><pre><code>git pull
+cd real-learning-labs/stage-00-integrator
+git switch -c stage-00-fix
+bash run.sh
+echo $?
+time bash run.sh
+python3 -m cProfile -s cumulative app.py
+git log --oneline -- app.py
+git show &lt;HASH&gt; -- app.py
+git diff &lt;HASH&gt;^ &lt;HASH&gt; -- app.py</code></pre><p><strong>Modelo:</strong> observação → evidência → hipótese → experimento → causa provada → correção → reteste → antes × depois.</p></article>
+    </div>
+  </section>
+</main>
+<footer class="footer"><div class="shell"><span>Software Formation Roadmap · Command Reference · 2026-09-06</span><div><a href="real-learning-notes.html">Caderno</a></div></div></footer>
+<script>
+const input=document.getElementById('search');
+const items=[...document.querySelectorAll('.searchable')];
+input.addEventListener('input',()=>{const q=input.value.trim().toLowerCase();items.forEach(el=>el.classList.toggle('hidden',q && !el.textContent.toLowerCase().includes(q)));});
+</script>
+</body>
+</html>
