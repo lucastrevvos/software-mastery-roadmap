@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-06T19:05:00-03:00",
+  "updatedAt": "2026-09-06T20:30:00-03:00",
   "courses": {
     "cs50x": {
       "status": "in-progress",
@@ -70,7 +70,8 @@
         "PSet 8 — Trivia implementado e testado manualmente em 2026-09-05; submissão final não confirmada no chat.",
         "PSet 8 — Homepage iniciado em 2026-09-05.",
         "Week 9 — Flask alcançada em 2026-09-06.",
-        "PSet 9 — Birthdays iniciado em 2026-09-06; foco atual em request GET/POST, Jinja, formulários e persistência SQLite."
+        "PSet 9 — Birthdays implementado e testado em 2026-09-06 com GET/POST, Jinja, formulário, validação e SQLite; submissão final não confirmada no chat.",
+        "PSet 9 — Finance iniciado em 2026-09-06."
       ]
     },
     "fcc-js-v10": {
@@ -173,6 +174,6 @@
     }
   },
   "current": "week-9-flask",
-  "currentTask": "birthdays",
-  "currentTaskUrl": "https://cs50.harvard.edu/x/psets/9/birthdays/"
+  "currentTask": "finance",
+  "currentTaskUrl": "https://cs50.harvard.edu/x/psets/9/finance/"
 }
