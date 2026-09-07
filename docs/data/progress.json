@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-06T22:07:00-03:00",
+  "updatedAt": "2026-09-06T23:10:00-03:00",
   "courses": {
     "cs50x": {
       "status": "in-progress",
@@ -28,9 +28,10 @@
         "problem-set-6",
         "week-6-python",
         "problem-set-7-songs",
-        "problem-set-9-birthdays"
+        "problem-set-9-birthdays",
+        "problem-set-9-finance"
       ],
-      "current": "week-9-flask",
+      "current": "final-project",
       "notes": [
         "Lecture 0 concluída.",
         "Projeto Scratch Bug vs Developer concluído, validado e submetido via CS50.",
@@ -72,7 +73,9 @@
         "PSet 8 — Homepage iniciado em 2026-09-05.",
         "Week 9 — Flask alcançada em 2026-09-06.",
         "PSet 9 — Birthdays concluído e submetido em 2026-09-06 com GET/POST, Jinja, formulário, validação e SQLite.",
-        "PSet 9 — Finance iniciado em 2026-09-06."
+        "PSet 9 — Finance iniciado em 2026-09-06.",
+        "PSet 9 — Finance concluído funcionalmente em 2026-09-06; submissão final não foi explicitamente confirmada no chat.",
+        "CS50x — Final Project alcançado em 2026-09-06."
       ]
     },
     "fcc-js-v10": {
@@ -174,7 +177,7 @@
       "note": "O lab completo foi preservado, mas foi adiado para um checkpoint cumulativo ou para o sprint de mastery pós-CS50. Durante o curso, o PSet oficial é a prática principal e só vazamentos conceituais relevantes serão retestados."
     }
   },
-  "current": "week-9-flask",
-  "currentTask": "finance",
-  "currentTaskUrl": "https://cs50.harvard.edu/x/psets/9/finance/"
+  "current": "final-project",
+  "currentTask": "final-project",
+  "currentTaskUrl": "https://cs50.harvard.edu/x/project/"
 }
