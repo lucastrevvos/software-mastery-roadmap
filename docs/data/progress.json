@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-06T20:30:00-03:00",
+  "updatedAt": "2026-09-06T22:07:00-03:00",
   "courses": {
     "cs50x": {
       "status": "in-progress",
@@ -27,7 +27,8 @@
         "problem-set-6-dna",
         "problem-set-6",
         "week-6-python",
-        "problem-set-7-songs"
+        "problem-set-7-songs",
+        "problem-set-9-birthdays"
       ],
       "current": "week-9-flask",
       "notes": [
@@ -70,7 +71,7 @@
         "PSet 8 — Trivia implementado e testado manualmente em 2026-09-05; submissão final não confirmada no chat.",
         "PSet 8 — Homepage iniciado em 2026-09-05.",
         "Week 9 — Flask alcançada em 2026-09-06.",
-        "PSet 9 — Birthdays implementado e testado em 2026-09-06 com GET/POST, Jinja, formulário, validação e SQLite; submissão final não confirmada no chat.",
+        "PSet 9 — Birthdays concluído e submetido em 2026-09-06 com GET/POST, Jinja, formulário, validação e SQLite.",
         "PSet 9 — Finance iniciado em 2026-09-06."
       ]
     },
