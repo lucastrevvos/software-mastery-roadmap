@@ -9,72 +9,105 @@
 </style></head>
 <body><header><div class="shell"><div class="eyebrow">ENGINEERING NOTEBOOK · RPG JOURNEY</div><h1>Caderno do Engenheiro</h1><p class="lead">Meu registro de descobertas enquanto reconstruo computação e engenharia de software a partir dos fundamentos.</p><div class="rule"><strong>Regra:</strong> não considero que aprendi porque li uma definição. Considero que comecei a aprender quando consigo observar o mecanismo, explicar o resultado e formular o próximo experimento.</div></div></header>
 <main class="shell">
-<section class="status"><div class="stat"><strong>Level 1</strong><span>Fundamentos</span></div><div class="stat"><strong>5 dias</strong><span>registrados</span></div><div class="stat"><strong>C + Linux</strong><span>trilha atual</span></div><div class="stat"><strong>Próximo</strong><span>ponteiros, lifetime e bugs de memória</span></div></section>
+<section class="status"><div class="stat"><strong>Level 1</strong><span>Fundamentos</span></div><div class="stat"><strong>6 dias</strong><span>registrados</span></div><div class="stat"><strong>C + Linux</strong><span>trilha atual</span></div><div class="stat"><strong>Próximo</strong><span>arquivos, bytes e file descriptors</span></div></section>
 <section class="day"><span class="day-tag">LEVEL 1 · DIA 1</span><h2>Do código-fonte ao kernel</h2><p>Compilei um Hello World, inspecionei o ELF e usei <code>strace</code> para descobrir que <code>printf()</code> termina em operações como <code>write()</code>. Aprendi que stdout é um fluxo, não “a tela”.</p><div class="commands"><div class="command"><code>gcc hello.c -o hello</code><span>Compilar C.</span></div><div class="command"><code>file hello</code><span>Inspecionar executável.</span></div><div class="command"><code>strace -e write ./hello</code><span>Observar system calls de escrita.</span></div><div class="command"><code>./hello &gt; teste.txt</code><span>Redirecionar stdout.</span></div></div><div class="discovery"><strong>Descobertas #1–2:</strong> bibliotecas escondem chamadas ao sistema; stdin/stdout/stderr são descritores e fluxos conectáveis.</div></section>
 <section class="day"><span class="day-tag">LEVEL 1 · DIA 2</span><h2>Programa ≠ processo</h2><p>Observei PID, PPID, descritores e estado por <code>/proc</code>. Duas execuções do mesmo executável viraram dois processos distintos.</p><div class="commands"><div class="command"><code>ps</code><span>Listar processos.</span></div><div class="command"><code>cat /proc/PID/status</code><span>Inspecionar estado.</span></div><div class="command"><code>ls -l /proc/PID/fd</code><span>Ver descritores.</span></div><div class="command"><code>kill PID</code><span>Enviar sinal.</span></div></div><div class="discovery"><strong>Descobertas #3–5:</strong> processo é uma instância viva gerenciada pelo kernel; o executável no disco é outra entidade.</div></section>
 <section class="day"><span class="day-tag">LEVEL 1 · DIA 3</span><h2>Scheduler e context switch</h2><p>Prendi processos CPU-bound ao mesmo core e observei que tarefas vivas não significam tarefas executando fisicamente ao mesmo tempo.</p><div class="commands"><div class="command"><code>nproc</code><span>Consultar CPUs.</span></div><div class="command"><code>top</code><span>Observar CPU.</span></div><div class="command"><code>taskset -c 0 ./cpu_hog</code><span>Fixar afinidade.</span></div><div class="command"><code>pidstat -w 1</code><span>Observar context switches.</span></div><div class="command"><code>nice -n 10 ./cpu_hog</code><span>Influenciar scheduling.</span></div></div><div class="discovery"><strong>Descobertas #6–9:</strong> scheduler decide quem recebe CPU; waiting, ready e running são estados diferentes; context switch preserva e restaura estado de execução.</div></section>
 <section class="day"><span class="day-tag">LEVEL 1 · DIA 4</span><h2>Memória virtual e isolamento</h2><p>Duas instâncias do mesmo programa alteraram suas variáveis independentemente. Com <code>/proc/PID/maps</code> e <code>pmap</code>, enxerguei o espaço de endereçamento virtual de cada processo.</p><div class="commands"><div class="command"><code>cat /proc/PID/maps</code><span>Ver regiões virtuais.</span></div><div class="command"><code>pmap PID</code><span>Resumir mapeamentos.</span></div></div><div class="discovery"><strong>Descobertas #10–12:</strong> ponteiros normalmente representam endereços virtuais no contexto de um processo; MMU e tabelas de páginas ligam esse espaço à memória física.</div><div class="mistake"><strong>Correção:</strong> isolamento virtual não implica ausência total de páginas físicas compartilhadas.</div></section>
-<section class="day"><span class="day-tag">LEVEL 1 · DIA 5</span><h2>Stack, heap e o que malloc realmente faz</h2><p>Para observar sem o compilador esconder demais o fenômeno, compilei com <code>-O0</code>. Criei uma variável local e uma alocação dinâmica, imprimi seus endereços e comparei com <code>/proc/PID/maps</code>.</p>
+<section class="day"><span class="day-tag">LEVEL 1 · DIA 5</span><h2>Stack, heap e malloc</h2><p>Separei a variável ponteiro do bloco apontado, observei stack frames e usei <code>strace</code> para ver que <code>malloc()</code> trabalha através de um alocador, que pode recorrer a <code>brk</code>/<code>mmap</code>. Criei também meu primeiro memory leak.</p><div class="commands"><div class="command"><code>gcc -O0 -g arquivo.c -o programa</code><span>Build pedagógica e de debug.</span></div><div class="command"><code>strace -e brk,mmap,munmap ./programa</code><span>Observar obtenção/mapeamento de memória.</span></div><div class="command"><code>valgrind --leak-check=full ./programa</code><span>Detectar leaks.</span></div></div><div class="discovery"><strong>Descobertas #13–16:</strong> ponteiro e objeto apontado têm lifetimes distintos; stack acompanha chamadas; heap permite lifetime dinâmico; <code>free()</code> normalmente devolve um bloco ao alocador, não necessariamente ao kernel imediatamente.</div></section>
+<section class="day"><span class="day-tag">LEVEL 1 · DIA 6</span><h2>Quando um ponteiro continua existindo, mas o objeto não</h2><p>Hoje eu quebrei memória de propósito. O objetivo foi separar três ideias: <strong>endereço existente</strong>, <strong>objeto ainda vivo</strong> e <strong>acesso permitido</strong>. Descobri que essas coisas não são equivalentes.</p>
+<h3>Experimento 1 — use-after-free</h3>
 <pre><code>#include &lt;stdio.h&gt;
 #include &lt;stdlib.h&gt;
-#include &lt;unistd.h&gt;
-
-int global = 7;
-
-void experimento(void) {
-    int local = 42;
-    int *dinamico = malloc(sizeof(int));
-    if (dinamico == NULL) exit(1);
-    *dinamico = 99;
-
-    printf("global   %p = %d\n", (void*)&amp;global, global);
-    printf("local    %p = %d\n", (void*)&amp;local, local);
-    printf("ponteiro %p\n", (void*)&amp;dinamico);
-    printf("heap     %p = %d\n", (void*)dinamico, *dinamico);
-
-    sleep(30);
-    free(dinamico);
-}
 
 int main(void) {
-    experimento();
+    int *p = malloc(sizeof *p);
+    if (!p) return 1;
+
+    *p = 42;
+    printf("antes do free: %d\n", *p);
+
+    free(p);
+
+    printf("depois do free: %d\n", *p); /* BUG */
     return 0;
 }</code></pre>
-<p>Resultado simulado:</p><pre><code>global   0x404040 = 7
-local    0x7ffd6d54b8ac = 42
-ponteiro 0x7ffd6d54b8a0
-heap     0x1f7d2a0 = 99</code></pre>
-<div class="discovery"><strong>Descoberta #13:</strong> a variável <code>dinamico</code> (o ponteiro) e o bloco para o qual ela aponta são coisas diferentes. O ponteiro local pode estar no frame da função enquanto os bytes obtidos por <code>malloc()</code> pertencem à memória dinâmica administrada pelo alocador.</div>
-<div class="discovery"><strong>Descoberta #14:</strong> stack está fortemente ligada a chamadas de função: frames carregam informações como locais, argumentos/temporários e estado necessário para retornar. Quando a função termina, seu frame deixa de estar válido. Isso explica o lifetime automático.</div>
-<div class="discovery"><strong>Descoberta #15:</strong> <code>malloc(n)</code> não significa “peça exatamente n bytes diretamente ao kernel”. Normalmente ele pede um bloco ao alocador da biblioteca; esse alocador reaproveita arenas/blocos e, quando precisa de mais memória virtual, pode recorrer a mecanismos do sistema como <code>brk</code> e/ou <code>mmap</code>. A estratégia é implementação-dependente.</div>
-<div class="discovery"><strong>Descoberta #16:</strong> <code>free(ptr)</code> devolve o bloco ao alocador para reutilização; isso não implica que a RAM correspondente seja imediatamente devolvida ao sistema operacional.</div>
-<h3>Experimento: observar o alocador conversando com o kernel</h3><div class="commands"><div class="command"><code>gcc -O0 -g memory_regions.c -o memory_regions</code><span>Compila sem otimização e inclui símbolos de debug.</span></div><div class="command"><code>strace -e brk,mmap,munmap ./memory_regions</code><span>Observa syscalls relacionadas a obtenção/mapeamento de memória virtual.</span></div><div class="command"><code>cat /proc/PID/maps</code><span>Compara endereços impressos com regiões como [heap] e [stack].</span></div><div class="command"><code>valgrind --leak-check=full ./memory_regions</code><span>Detecta vazamentos e vários usos inválidos de memória.</span></div></div>
-<p>Um <code>strace</code> simplificado mostrou chamadas como:</p><pre><code>brk(NULL) = 0x1f7b000
-brk(0x1f9c000) = 0x1f9c000
-mmap(NULL, 8192, PROT_READ|PROT_WRITE, ... ) = ...</code></pre>
-<div class="mistake"><strong>Correção importante:</strong> “variável local fica na stack” é um bom modelo inicial, mas não uma lei da linguagem C. Otimizações podem manter valores apenas em registradores, eliminar variáveis ou reorganizar armazenamento. Estou usando <code>-O0</code> para tornar o experimento pedagógico.</div>
-<h3>Primeiro bug deliberado: memory leak</h3><pre><code>void vazar(void) {
-    int *p = malloc(1000);
-    /* esqueci free(p); */
-}</code></pre><p>Ao repetir a função, continuo pedindo blocos ao alocador e perco a referência necessária para liberá-los. O processo pode acumular memória inutilizável até terminar.</p><div class="mental">STACK
-chamada de função
-   ↓
-frame
-├── estado de retorno
-├── locais / temporários (modelo inicial)
-└── termina junto com a chamada
+<p>Sem instrumentação, uma execução simulada chegou a imprimir <code>42</code> de novo. Em outra build poderia aparecer lixo ou o programa poderia falhar. A conclusão não é “funcionou”; a conclusão é que o programa fez algo que C não define.</p>
+<div class="discovery"><strong>Descoberta #17:</strong> <code>free(p)</code> encerra o direito do programa de usar aquele bloco através daquele ponteiro. O valor numérico do endereço pode continuar armazenado em <code>p</code>, mas o objeto alocado já terminou seu lifetime.</div>
+<div class="mistake"><strong>Correção importante:</strong> “se memória inválida for acessada, haverá segmentation fault” é falso. Muitos bugs de memória não falham imediatamente. O programa pode parecer correto e quebrar depois, em outra máquina ou com outra otimização.</div>
+<h3>AddressSanitizer entra no arsenal</h3>
+<div class="commands"><div class="command"><code>gcc -O0 -g -fsanitize=address -fno-omit-frame-pointer uaf.c -o uaf</code><span>Compila instrumentando acessos de memória para detectar vários erros em runtime.</span></div><div class="command"><code>./uaf</code><span>Executa a build instrumentada.</span></div></div>
+<p>Resultado simulado resumido:</p>
+<pre><code>ERROR: AddressSanitizer: heap-use-after-free
+READ of size 4
+...
+freed by thread T0 here:
+    free
+    main ... uaf.c
 
-HEAP / memória dinâmica
-malloc()
-   ↓
-alocador da libc
-   ↓
-bloco com lifetime controlado pelo programa
-   ↓
-free()
+previously allocated by thread T0 here:
+    malloc
+    main ... uaf.c</code></pre>
+<p>Esse relatório é quase uma autópsia: onde usei, onde liberei e onde originalmente aloquei.</p>
+<h3>Experimento 2 — endereço de variável local</h3>
+<pre><code>int *criar(void) {
+    int x = 99;
+    return &amp;x; /* errado */
+}</code></pre>
+<p>O compilador já me avisa que estou retornando o endereço de uma variável local. Quando a função retorna, o lifetime de <code>x</code> termina. O endereço numérico pode até permanecer em algum ponteiro, mas não existe mais um <code>int x</code> válido que eu possa continuar usando por esse endereço.</p>
+<div class="discovery"><strong>Descoberta #18:</strong> um ponteiro pode sobreviver ao objeto para o qual apontava. Esse ponteiro passa a ser um <em>dangling pointer</em>.</div>
+<h3>Experimento 3 — ultrapassar um buffer</h3>
+<pre><code>int main(void) {
+    int valores[3] = {10, 20, 30};
 
-malloc/free ≠ syscall direta a cada chamada</div>
-<div class="boss"><strong>Boss Fight:</strong> se uma função faz <code>int *p = malloc(100)</code>, existem duas entidades: a variável ponteiro <code>p</code> e o bloco apontado. O lifetime de <code>p</code> segue o escopo/armazenamento da variável; o bloco alocado continua existindo até ser liberado (ou o processo terminar), mesmo que eu perca o ponteiro — e aí nasce um leak.</div></section>
-<section class="day"><span class="day-tag">REFERÊNCIA RÁPIDA</span><h2>Comandos aprendidos</h2><div class="commands"><div class="command"><code>gcc -O0 -g arquivo.c -o programa</code><span>Build pedagógica/debug.</span></div><div class="command"><code>strace -e brk,mmap,munmap programa</code><span>Observar memória no limite usuário/kernel.</span></div><div class="command"><code>valgrind --leak-check=full programa</code><span>Investigar leaks e acessos inválidos.</span></div><div class="command"><code>/proc/PID/maps</code><span>Mapa de memória virtual.</span></div><div class="command"><code>pmap PID</code><span>Resumo de mapeamentos.</span></div><div class="command"><code>top / ps / pidstat</code><span>Observar processos.</span></div></div></section>
-<section class="day"><span class="day-tag">PRÓXIMA INVESTIGAÇÃO</span><h2>Ponteiros perigosos</h2><p>Minha próxima pergunta é: <strong>o que acontece quando uso memória depois de <code>free()</code>, retorno o endereço de uma variável local ou escrevo além do tamanho de um buffer?</strong></p><p class="small">Isso vai nos levar a dangling pointers, use-after-free, stack corruption e buffer overflow.</p></section>
+    valores[3] = 999; /* índice válido: 0..2 */
+
+    return 0;
+}</code></pre>
+<p>Eu estava acostumado a ler isso como “índice errado”. Agora penso em bytes: reservei espaço para três <code>int</code> contíguos e pedi ao processador que escrevesse além do objeto.</p>
+<p>Com AddressSanitizer, o resultado simulado foi:</p>
+<pre><code>ERROR: AddressSanitizer: stack-buffer-overflow
+WRITE of size 4
+...</code></pre>
+<div class="discovery"><strong>Descoberta #19:</strong> C não coloca automaticamente uma barreira lógica em volta de cada array a cada acesso. Escrever além do limite pode corromper outro dado existente naquela região de memória.</div>
+<h3>O conceito que une os três bugs</h3>
+<div class="mental">PONTEIRO / ENDEREÇO
+        ≠
+OBJETO VÁLIDO
+        ≠
+PERMISSÃO PARA ACESSAR
+
+malloc → objeto nasce
+free   → lifetime termina
+
+função entra → locais automáticos ganham lifetime
+função sai   → lifetime termina
+
+array[0..N-1] → região válida
+fora dela      → acesso fora do objeto</div>
+<h3>Comportamento indefinido</h3>
+<p>Encontro um conceito central de C: <strong>undefined behavior</strong>. Quando o programa viola certas regras da linguagem — como ler memória depois de <code>free()</code> ou acessar um array fora de seus limites — o padrão da linguagem deixa de prometer qual será o resultado.</p>
+<p>Isso explica por que um bug pode:</p>
+<pre><code>funcionar no debug
+quebrar em release
+funcionar hoje
+quebrar depois de uma mudança inocente
+imprimir o valor antigo
+imprimir lixo
+crashar</code></pre>
+<div class="discovery"><strong>Descoberta #20:</strong> bugs de memória são perigosos justamente porque o sintoma pode aparecer longe da causa. O erro pode acontecer numa escrita e a falha só surgir quando outro código usa os bytes corrompidos.</div>
+<h3>Segundo instrumento: Valgrind</h3>
+<div class="commands"><div class="command"><code>valgrind --track-origins=yes ./programa</code><span>Ajuda a localizar acessos inválidos e a origem de alguns valores problemáticos.</span></div></div>
+<p>Para um use-after-free, espero mensagens no estilo:</p>
+<pre><code>Invalid read of size 4
+Address ... is 0 bytes inside a block of size 4 free'd</code></pre>
+<h3>Terceiro instrumento: GDB</h3>
+<p>Agora entro pela primeira vez num debugger de verdade:</p>
+<div class="commands"><div class="command"><code>gdb ./programa</code><span>Abre o executável no GNU Debugger.</span></div><div class="command"><code>break main</code><span>Cria um breakpoint em main.</span></div><div class="command"><code>run</code><span>Inicia o processo controlado pelo debugger.</span></div><div class="command"><code>next</code><span>Avança uma linha sem entrar na função chamada.</span></div><div class="command"><code>step</code><span>Avança entrando na função.</span></div><div class="command"><code>print p</code><span>Inspeciona o valor do ponteiro.</span></div><div class="command"><code>print *p</code><span>Tenta inspecionar o objeto apontado enquanto ele é válido.</span></div><div class="command"><code>bt</code><span>Mostra a cadeia de chamadas (backtrace).</span></div></div>
+<p>O debugger muda minha forma de trabalhar. Até aqui eu alterava código, colocava <code>printf()</code> e rodava novamente. Agora posso pausar uma execução viva e interrogá-la.</p>
+<div class="discovery"><strong>Descoberta #21:</strong> debugging não é adivinhação. Posso parar o processo, observar stack frames, variáveis, endereços e a cadeia de chamadas exatamente no ponto em que o comportamento se desvia.</div>
+<div class="boss"><strong>Boss Fight:</strong> um ponteiro conter <code>0x1234...</code> não prova que existe ali um objeto válido para mim. Antes de dereferenciar, existe uma pergunta mais fundamental: o objeto ainda está vivo, esse endereço pertence a ele e esse acesso está dentro de seus limites?</div>
+</section>
+<section class="day"><span class="day-tag">REFERÊNCIA RÁPIDA</span><h2>Ferramentas de memória aprendidas</h2><div class="commands"><div class="command"><code>gcc -O0 -g ...</code><span>Build observável para debugging.</span></div><div class="command"><code>-fsanitize=address</code><span>Instrumentar erros de memória em runtime.</span></div><div class="command"><code>valgrind --leak-check=full</code><span>Detectar leaks e acessos inválidos.</span></div><div class="command"><code>valgrind --track-origins=yes</code><span>Investigar origem de valores problemáticos.</span></div><div class="command"><code>gdb ./programa</code><span>Depurar processo interativamente.</span></div><div class="command"><code>break / run / next / step / print / bt</code><span>Comandos básicos de GDB.</span></div><div class="command"><code>/proc/PID/maps</code><span>Mapa virtual do processo.</span></div><div class="command"><code>strace</code><span>Observar fronteira com o kernel.</span></div></div></section>
+<section class="day"><span class="day-tag">PRÓXIMA INVESTIGAÇÃO</span><h2>Arquivos não são magia</h2><p>Minha próxima pergunta é: <strong>se stdout é apenas um file descriptor e o Linux diz que “quase tudo é arquivo”, o que realmente acontece quando faço <code>open()</code>, <code>read()</code> e <code>write()</code>?</strong></p><p class="small">Isso vai ligar memória, processos, kernel, disco e depois sockets — preparando diretamente o caminho para redes e o servidor HTTP.</p></section>
 </main><footer><div class="shell">Software Mastery Roadmap · Engineering Notebook · Level 1</div></footer></body></html>
