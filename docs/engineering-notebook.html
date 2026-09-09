@@ -6,250 +6,67 @@
   <meta name="description" content="Caderno de engenharia da jornada RPG pelos fundamentos de software, sistemas e redes.">
   <title>Caderno do Engenheiro — Software Mastery Roadmap</title>
   <style>
-    :root {
-      color-scheme: dark;
-      --bg: #08111f;
-      --panel: #0f1b2d;
-      --panel-2: #14243a;
-      --text: #e7eef8;
-      --muted: #9fb0c7;
-      --accent: #67e8f9;
-      --accent-2: #a7f3d0;
-      --border: rgba(255,255,255,.10);
-      --code: #07101c;
-      --warning: #fde68a;
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top, #122642 0, var(--bg) 34rem);
-      color: var(--text);
-      line-height: 1.65;
-    }
-    a { color: var(--accent); }
-    .shell { width: min(1040px, calc(100% - 32px)); margin: 0 auto; }
-    header { padding: 56px 0 36px; border-bottom: 1px solid var(--border); }
-    .eyebrow { color: var(--accent); letter-spacing: .14em; font-weight: 800; font-size: .78rem; }
-    h1 { font-size: clamp(2rem, 6vw, 4.4rem); line-height: 1.02; margin: .4rem 0 1rem; }
-    h2 { margin-top: 0; font-size: clamp(1.5rem, 3vw, 2.2rem); }
-    h3 { margin-top: 1.6rem; }
-    .lead { max-width: 780px; color: var(--muted); font-size: 1.08rem; }
-    .rule { margin-top: 24px; padding: 16px 18px; border-left: 3px solid var(--accent); background: rgba(103,232,249,.06); border-radius: 0 10px 10px 0; }
-    main { padding: 38px 0 72px; }
-    .status, .card, .day { background: rgba(15,27,45,.88); border: 1px solid var(--border); border-radius: 18px; }
-    .status { display: grid; grid-template-columns: repeat(auto-fit,minmax(150px,1fr)); gap: 12px; padding: 18px; margin-bottom: 24px; }
-    .stat { background: var(--panel-2); padding: 14px; border-radius: 12px; }
-    .stat strong { display:block; font-size:1.15rem; color: var(--accent-2); }
-    .stat span { color: var(--muted); font-size:.9rem; }
-    .day { padding: clamp(20px,4vw,36px); margin: 24px 0; }
-    .day-tag { display:inline-block; color:var(--accent-2); font-weight:800; font-size:.8rem; letter-spacing:.08em; margin-bottom:8px; }
-    .discovery { margin: 18px 0; padding: 16px 18px; background: rgba(167,243,208,.06); border: 1px solid rgba(167,243,208,.18); border-radius: 12px; }
-    .discovery strong { color: var(--accent-2); }
-    .mistake { margin: 18px 0; padding: 16px 18px; background: rgba(253,230,138,.05); border: 1px solid rgba(253,230,138,.20); border-radius: 12px; }
-    .mistake strong { color: var(--warning); }
-    code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace; }
-    pre { overflow:auto; background: var(--code); border: 1px solid var(--border); border-radius: 12px; padding: 16px; line-height:1.45; }
-    .commands { display:grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap:12px; }
-    .command { background:var(--panel-2); border:1px solid var(--border); border-radius:12px; padding:14px; }
-    .command code { color:var(--accent); display:block; margin-bottom:6px; }
-    .command span { color:var(--muted); font-size:.92rem; }
-    .mental-model { font-family: "SFMono-Regular", Consolas, monospace; white-space:pre-wrap; background:var(--code); padding:18px; border-radius:12px; border:1px solid var(--border); }
-    .boss { border:1px dashed rgba(103,232,249,.35); padding:18px; border-radius:12px; margin-top:20px; }
-    footer { border-top:1px solid var(--border); padding:28px 0 48px; color:var(--muted); }
-    .small { color:var(--muted); font-size:.92rem; }
+    :root{color-scheme:dark;--bg:#08111f;--panel:#0f1b2d;--panel-2:#14243a;--text:#e7eef8;--muted:#9fb0c7;--accent:#67e8f9;--accent-2:#a7f3d0;--border:rgba(255,255,255,.10);--code:#07101c;--warning:#fde68a}
+    *{box-sizing:border-box} body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:radial-gradient(circle at top,#122642 0,var(--bg) 34rem);color:var(--text);line-height:1.65} a{color:var(--accent)}
+    .shell{width:min(1040px,calc(100% - 32px));margin:0 auto} header{padding:56px 0 36px;border-bottom:1px solid var(--border)} .eyebrow{color:var(--accent);letter-spacing:.14em;font-weight:800;font-size:.78rem} h1{font-size:clamp(2rem,6vw,4.4rem);line-height:1.02;margin:.4rem 0 1rem} h2{margin-top:0;font-size:clamp(1.5rem,3vw,2.2rem)} h3{margin-top:1.6rem} .lead{max-width:780px;color:var(--muted);font-size:1.08rem} .rule{margin-top:24px;padding:16px 18px;border-left:3px solid var(--accent);background:rgba(103,232,249,.06);border-radius:0 10px 10px 0} main{padding:38px 0 72px}
+    .status,.day{background:rgba(15,27,45,.88);border:1px solid var(--border);border-radius:18px}.status{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;padding:18px;margin-bottom:24px}.stat{background:var(--panel-2);padding:14px;border-radius:12px}.stat strong{display:block;font-size:1.15rem;color:var(--accent-2)}.stat span{color:var(--muted);font-size:.9rem}.day{padding:clamp(20px,4vw,36px);margin:24px 0}.day-tag{display:inline-block;color:var(--accent-2);font-weight:800;font-size:.8rem;letter-spacing:.08em;margin-bottom:8px}.discovery{margin:18px 0;padding:16px 18px;background:rgba(167,243,208,.06);border:1px solid rgba(167,243,208,.18);border-radius:12px}.discovery strong{color:var(--accent-2)}.mistake{margin:18px 0;padding:16px 18px;background:rgba(253,230,138,.05);border:1px solid rgba(253,230,138,.20);border-radius:12px}.mistake strong{color:var(--warning)}code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",monospace}pre{overflow:auto;background:var(--code);border:1px solid var(--border);border-radius:12px;padding:16px;line-height:1.45}.commands{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px}.command{background:var(--panel-2);border:1px solid var(--border);border-radius:12px;padding:14px}.command code{color:var(--accent);display:block;margin-bottom:6px}.command span{color:var(--muted);font-size:.92rem}.mental-model{font-family:"SFMono-Regular",Consolas,monospace;white-space:pre-wrap;background:var(--code);padding:18px;border-radius:12px;border:1px solid var(--border)}.boss{border:1px dashed rgba(103,232,249,.35);padding:18px;border-radius:12px;margin-top:20px}footer{border-top:1px solid var(--border);padding:28px 0 48px;color:var(--muted)}.small{color:var(--muted);font-size:.92rem}
   </style>
 </head>
 <body>
-<header>
-  <div class="shell">
-    <div class="eyebrow">ENGINEERING NOTEBOOK · RPG JOURNEY</div>
-    <h1>Caderno do Engenheiro</h1>
-    <p class="lead">Meu registro de descobertas enquanto reconstruo computação e engenharia de software a partir dos fundamentos. Aqui eu anoto o que observei, os comandos usados, os erros que corrigi e os modelos mentais que sobreviveram aos experimentos.</p>
-    <div class="rule"><strong>Regra:</strong> não considero que aprendi porque li uma definição. Considero que comecei a aprender quando consigo observar o mecanismo, explicar o resultado e formular o próximo experimento.</div>
-  </div>
-</header>
-
+<header><div class="shell"><div class="eyebrow">ENGINEERING NOTEBOOK · RPG JOURNEY</div><h1>Caderno do Engenheiro</h1><p class="lead">Meu registro de descobertas enquanto reconstruo computação e engenharia de software a partir dos fundamentos. Aqui eu anoto o que observei, os comandos usados, os erros que corrigi e os modelos mentais que sobreviveram aos experimentos.</p><div class="rule"><strong>Regra:</strong> não considero que aprendi porque li uma definição. Considero que comecei a aprender quando consigo observar o mecanismo, explicar o resultado e formular o próximo experimento.</div></div></header>
 <main class="shell">
-  <section class="status">
-    <div class="stat"><strong>Level 1</strong><span>Fundamentos</span></div>
-    <div class="stat"><strong>3 dias</strong><span>registrados</span></div>
-    <div class="stat"><strong>C + Linux</strong><span>trilha atual</span></div>
-    <div class="stat"><strong>Próximo</strong><span>memória de processos</span></div>
-  </section>
+<section class="status"><div class="stat"><strong>Level 1</strong><span>Fundamentos</span></div><div class="stat"><strong>4 dias</strong><span>registrados</span></div><div class="stat"><strong>C + Linux</strong><span>trilha atual</span></div><div class="stat"><strong>Próximo</strong><span>stack, heap e malloc</span></div></section>
 
-  <section class="day">
-    <span class="day-tag">LEVEL 1 · DIA 1</span>
-    <h2>Do código-fonte ao sistema operacional</h2>
-    <p>Comecei com um programa mínimo em C e me recusei a aceitar <code>printf()</code> como magia. Compilei, inspecionei o executável e observei as chamadas feitas ao kernel.</p>
-
-    <h3>Experimento inicial</h3>
-    <pre><code>#include &lt;stdio.h&gt;
-
-int main(void)
-{
+<section class="day"><span class="day-tag">LEVEL 1 · DIA 1</span><h2>Do código-fonte ao sistema operacional</h2><p>Comecei com um programa mínimo em C e me recusei a aceitar <code>printf()</code> como magia. Compilei, inspecionei o executável e observei as chamadas feitas ao kernel.</p><pre><code>#include &lt;stdio.h&gt;
+int main(void){
     printf("Hello, world!\n");
     return 0;
-}</code></pre>
+}</code></pre><div class="commands"><div class="command"><code>gcc hello.c -o hello</code><span>Compila C e gera um executável.</span></div><div class="command"><code>./hello</code><span>Executa o programa local.</span></div><div class="command"><code>file hello</code><span>Inspeciona formato do executável.</span></div><div class="command"><code>strace ./hello</code><span>Observa system calls.</span></div><div class="command"><code>strace -e write ./hello</code><span>Filtra chamadas write.</span></div><div class="command"><code>./hello &gt; teste.txt</code><span>Redireciona stdout.</span></div><div class="command"><code>cat teste.txt</code><span>Lê o arquivo.</span></div></div><div class="discovery"><strong>Descoberta #1:</strong> <code>printf()</code> não conversa diretamente com a tela; a biblioteca C eventualmente pede ao kernel uma escrita observável como <code>write(1,...)</code>.</div><div class="discovery"><strong>Descoberta #2:</strong> stdout é um fluxo, não sinônimo de monitor.</div><div class="mental-model">código-fonte → compilador → executável → processo → biblioteca C → system call → kernel</div></section>
 
-    <div class="commands">
-      <div class="command"><code>gcc hello.c -o hello</code><span>Compila o arquivo C e gera um executável.</span></div>
-      <div class="command"><code>./hello</code><span>Executa o programa presente no diretório atual.</span></div>
-      <div class="command"><code>ls</code><span>Lista arquivos do diretório; usei para confirmar a criação do executável.</span></div>
-      <div class="command"><code>file hello</code><span>Inspeciona o tipo do arquivo; revelou ELF, x86-64 e linking dinâmico.</span></div>
-      <div class="command"><code>strace ./hello</code><span>Mostra system calls realizadas pelo processo.</span></div>
-      <div class="command"><code>strace -e write ./hello</code><span>Filtra o rastreamento para observar apenas chamadas <code>write</code>.</span></div>
-      <div class="command"><code>./hello &gt; teste.txt</code><span>Redireciona stdout para um arquivo.</span></div>
-      <div class="command"><code>cat teste.txt</code><span>Lê o conteúdo do arquivo no terminal.</span></div>
-    </div>
-
-    <div class="discovery"><strong>Descoberta #1:</strong> <code>printf()</code> não conversa diretamente com a tela. A biblioteca C acaba pedindo ao sistema operacional uma operação de escrita, observável como <code>write(1, ...)</code>.</div>
-    <div class="discovery"><strong>Descoberta #2:</strong> <code>stdout</code> não significa “monitor”. É um fluxo. O shell pode conectá-lo ao terminal, a um arquivo ou a outro destino.</div>
-
-    <h3>Descritores padrão</h3>
-    <pre><code>0 = stdin
-1 = stdout
-2 = stderr</code></pre>
-
-    <h3>Modelo mental</h3>
-    <div class="mental-model">hello.c
-   ↓
-compilador
-   ↓
-executável
-   ↓
-sistema operacional carrega
-   ↓
-processo
-   ↓
-biblioteca C → system call → kernel → destino</div>
-
-    <div class="boss"><strong>Checkpoint:</strong> programa e código-fonte não são a mesma coisa; o arquivo <code>.c</code> é texto, o executável é outra representação, e o processo é a execução acontecendo.</div>
-  </section>
-
-  <section class="day">
-    <span class="day-tag">LEVEL 1 · DIA 2</span>
-    <h2>Programa ≠ processo</h2>
-    <p>Eu precisava enxergar um processo vivo. Fiz um programa permanecer em execução, imprimi seu PID e comecei a interrogá-lo pelo Linux.</p>
-
-    <pre><code>#include &lt;stdio.h&gt;
+<section class="day"><span class="day-tag">LEVEL 1 · DIA 2</span><h2>Programa ≠ processo</h2><p>Fiz um programa permanecer vivo, imprimi seu PID e interroguei o processo pelo Linux.</p><pre><code>#include &lt;stdio.h&gt;
 #include &lt;unistd.h&gt;
-
-int main(void)
-{
+int main(void){
     printf("Meu PID é %d\n", getpid());
-    while (1) sleep(1);
-    return 0;
-}</code></pre>
-
-    <div class="commands">
-      <div class="command"><code>ps</code><span>Lista processos associados ao terminal atual.</span></div>
-      <div class="command"><code>ls /proc/&lt;PID&gt;</code><span>Explora a representação virtual que o Linux expõe para um processo.</span></div>
-      <div class="command"><code>cat /proc/&lt;PID&gt;/status</code><span>Exibe PID, PPID, estado, memória, threads e outras informações.</span></div>
-      <div class="command"><code>kill &lt;PID&gt;</code><span>Envia um sinal ao processo; usei para encerrá-lo externamente.</span></div>
-      <div class="command"><code>ls /proc/&lt;PID&gt;/fd</code><span>Lista os file descriptors abertos pelo processo.</span></div>
-      <div class="command"><code>ls -l /proc/&lt;PID&gt;/fd</code><span>Mostra para onde cada descritor aponta.</span></div>
-      <div class="command"><code>ps -p &lt;PID&gt;</code><span>Consulta um processo específico.</span></div>
-      <div class="command"><code>rm process</code><span>Apaga o executável do diretório; usei para testar se o processo vivo sobreviveria.</span></div>
-    </div>
-
-    <div class="discovery"><strong>Descoberta #3:</strong> PID é a identidade atribuída pelo sistema operacional a uma instância em execução. Duas execuções do mesmo executável podem ter PIDs diferentes.</div>
-    <div class="discovery"><strong>Descoberta #4:</strong> PPID revelou que meu shell <code>bash</code> era o processo pai do programa iniciado a partir dele.</div>
-    <div class="discovery"><strong>Descoberta #5:</strong> apagar o arquivo executável enquanto o processo estava vivo não interrompeu imediatamente aquele processo. Isso tornou concreta a diferença entre executável no disco e processo em execução.</div>
-
-    <h3>Modelo mental</h3>
-    <div class="mental-model">PROCESSO
-│
+    while(1) sleep(1);
+}</code></pre><div class="commands"><div class="command"><code>ps</code><span>Lista processos.</span></div><div class="command"><code>ls /proc/&lt;PID&gt;</code><span>Explora a visão do processo exposta pelo procfs.</span></div><div class="command"><code>cat /proc/&lt;PID&gt;/status</code><span>Mostra PID, PPID, estado, memória e threads.</span></div><div class="command"><code>kill &lt;PID&gt;</code><span>Envia sinal ao processo.</span></div><div class="command"><code>ls -l /proc/&lt;PID&gt;/fd</code><span>Mostra file descriptors.</span></div><div class="command"><code>rm process</code><span>Remove o executável do diretório.</span></div></div><div class="discovery"><strong>Descoberta #3:</strong> PID identifica uma instância em execução.</div><div class="discovery"><strong>Descoberta #4:</strong> PPID revelou o shell como pai do processo iniciado por ele.</div><div class="discovery"><strong>Descoberta #5:</strong> apagar o executável no disco não tornou o processo vivo a mesma coisa que o arquivo apagado; programa e processo são entidades distintas.</div><div class="mental-model">PROCESSO
 ├── PID / PPID
 ├── memória
 ├── código em execução
 ├── file descriptors
 ├── estado
-├── usuário
-└── threads</div>
+└── threads</div></section>
 
-    <div class="boss"><strong>Checkpoint:</strong> programa é uma descrição armazenada; processo é uma instância viva gerenciada pelo kernel.</div>
-  </section>
-
-  <section class="day">
-    <span class="day-tag">LEVEL 1 · DIA 3</span>
-    <h2>Scheduler, concorrência e context switch</h2>
-    <p>Eu tinha centenas de processos e poucas CPUs lógicas. Então forcei processos CPU-bound a competir pelo mesmo core e observei o scheduler distribuindo tempo de execução.</p>
-
-    <pre><code>int main(void)
-{
-    while (1) { }
-    return 0;
-}</code></pre>
-
-    <div class="commands">
-      <div class="command"><code>nproc</code><span>Mostra a quantidade de unidades de processamento disponíveis ao sistema.</span></div>
-      <div class="command"><code>ps -e --no-headers | wc -l</code><span>Conta aproximadamente quantos processos estão listados.</span></div>
-      <div class="command"><code>top</code><span>Observa processos e uso de CPU em tempo real.</span></div>
-      <div class="command"><code>./cpu_hog &amp;</code><span>Executa o processo em background no shell.</span></div>
-      <div class="command"><code>taskset -c 0 ./cpu_hog</code><span>Restringe o processo à CPU lógica 0 para tornar a disputa observável.</span></div>
-      <div class="command"><code>pidstat -w 1</code><span>Observa trocas de contexto voluntárias e involuntárias por processo.</span></div>
-      <div class="command"><code>nice -n 10 ./cpu_hog</code><span>Inicia um processo com valor de nice alterado, influenciando sua prioridade de CPU.</span></div>
-      <div class="command"><code>taskset -c 0 nice -n 10 ./cpu_hog</code><span>Combina afinidade de CPU e nice para observar competição controlada.</span></div>
-    </div>
-
-    <div class="discovery"><strong>Descoberta #6:</strong> centenas de processos “vivos” não significam centenas de processos fisicamente executando ao mesmo tempo. O scheduler escolhe quais tarefas recebem CPU.</div>
-    <div class="discovery"><strong>Descoberta #7:</strong> quando dois processos CPU-bound foram presos ao mesmo core, cada um passou a receber aproximadamente uma fração do tempo disponível.</div>
-    <div class="discovery"><strong>Descoberta #8:</strong> um processo pode estar vivo sem consumir CPU de forma relevante porque pode estar dormindo ou aguardando I/O.</div>
-    <div class="discovery"><strong>Descoberta #9:</strong> uma troca de contexto envolve preservar o estado necessário de uma execução e restaurar o estado de outra para que cada uma continue de onde parou.</div>
-
-    <div class="mistake"><strong>Correção importante:</strong> eu inicialmente simplifiquei demais dizendo que “cada processo recebe alguns milissegundos e obrigatoriamente ocorre uma troca”. O comportamento real depende do scheduler, prioridades, carga, bloqueios e CPUs disponíveis.</div>
-
-    <h3>Estados — primeiro modelo</h3>
-    <div class="mental-model">READY
-  ↓
-RUNNING
-  ↓
-WAITING
-  ↓
-READY
+<section class="day"><span class="day-tag">LEVEL 1 · DIA 3</span><h2>Scheduler, concorrência e context switch</h2><p>Forcei processos CPU-bound a competir pelo mesmo core para observar como poucas CPUs sustentam muitas tarefas.</p><pre><code>int main(void){ while(1){} }</code></pre><div class="commands"><div class="command"><code>nproc</code><span>Mostra CPUs disponíveis.</span></div><div class="command"><code>ps -e --no-headers | wc -l</code><span>Conta processos listados.</span></div><div class="command"><code>top</code><span>Observa uso de CPU.</span></div><div class="command"><code>./cpu_hog &amp;</code><span>Executa em background.</span></div><div class="command"><code>taskset -c 0 ./cpu_hog</code><span>Prende a tarefa a uma CPU lógica.</span></div><div class="command"><code>pidstat -w 1</code><span>Observa trocas de contexto.</span></div><div class="command"><code>nice -n 10 ./cpu_hog</code><span>Altera o valor de nice.</span></div></div><div class="discovery"><strong>Descoberta #6:</strong> muitos processos vivos não significam muitos processos fisicamente executando ao mesmo tempo.</div><div class="discovery"><strong>Descoberta #7:</strong> dois processos CPU-bound presos ao mesmo core dividem tempo de CPU.</div><div class="discovery"><strong>Descoberta #8:</strong> um processo pode estar vivo e praticamente não usar CPU porque está dormindo ou esperando I/O.</div><div class="discovery"><strong>Descoberta #9:</strong> context switch preserva estado suficiente de uma execução e restaura o estado de outra.</div><div class="mistake"><strong>Correção:</strong> não existe um único intervalo universal em que todo processo obrigatoriamente é trocado; scheduling depende de política, prioridade, carga, bloqueios e CPUs disponíveis.</div><div class="mental-model">READY → RUNNING → WAITING → READY
 
 Ready   = quer CPU
-Running = está executando
-Waiting = aguarda algo; CPU não ajuda agora</div>
+Running = executa agora
+Waiting = aguarda algo</div></section>
 
-    <h3>Intuição nova</h3>
-    <p>“Simultâneo” é uma palavra perigosa. Agora eu separo: estar vivo, estar pronto, estar esperando e estar efetivamente executando numa CPU.</p>
+<section class="day"><span class="day-tag">LEVEL 1 · DIA 4</span><h2>Cada processo vive em seu próprio espaço de endereçamento</h2><p>Minha pergunta era: se eu iniciar duas cópias do mesmo programa, uma variável global de uma execução é a mesma variável da outra? Fiz duas instâncias manterem e alterarem seu próprio contador.</p><pre><code>#include &lt;stdio.h&gt;
+#include &lt;unistd.h&gt;
 
-    <div class="boss"><strong>Boss Fight:</strong> com 8 CPUs lógicas e 247 processos, apenas um conjunto limitado de threads pode executar fisicamente em cada instante. O sistema operacional agenda tarefas, interrompe, preserva estado e retoma execuções conforme sua política.</div>
-  </section>
+int contador = 10;
 
-  <section class="day">
-    <span class="day-tag">REFERÊNCIA RÁPIDA</span>
-    <h2>Comandos aprendidos até agora</h2>
-    <div class="commands">
-      <div class="command"><code>gcc arquivo.c -o programa</code><span>Compilar C.</span></div>
-      <div class="command"><code>./programa</code><span>Executar arquivo local.</span></div>
-      <div class="command"><code>file arquivo</code><span>Inspecionar tipo/formato.</span></div>
-      <div class="command"><code>strace programa</code><span>Rastrear system calls.</span></div>
-      <div class="command"><code>ps</code><span>Listar processos.</span></div>
-      <div class="command"><code>top</code><span>Monitorar processos/CPU.</span></div>
-      <div class="command"><code>kill PID</code><span>Enviar sinal a processo.</span></div>
-      <div class="command"><code>/proc/PID</code><span>Investigar processo pelo procfs.</span></div>
-      <div class="command"><code>nproc</code><span>Consultar CPUs disponíveis.</span></div>
-      <div class="command"><code>taskset</code><span>Controlar afinidade de CPU.</span></div>
-      <div class="command"><code>pidstat -w 1</code><span>Observar context switches.</span></div>
-      <div class="command"><code>nice</code><span>Influenciar prioridade de scheduling.</span></div>
-      <div class="command"><code>&gt;</code><span>Redirecionar stdout.</span></div>
-      <div class="command"><code>&amp;</code><span>Executar comando em background no shell.</span></div>
-    </div>
-  </section>
+int main(void){
+    printf("PID=%d contador=%d endereco=%p\n", getpid(), contador, (void*)&amp;contador);
+    contador += 100;
+    printf("PID=%d contador=%d\n", getpid(), contador);
+    sleep(30);
+    return 0;
+}</code></pre><p>Executei duas cópias. Ambas começaram com <code>contador = 10</code> e ambas chegaram a <code>110</code> independentemente. Alterar a variável de uma execução não alterou a da outra.</p><div class="commands"><div class="command"><code>./memory &amp;</code><span>Inicia uma instância em background; repeti para criar dois processos.</span></div><div class="command"><code>ps -C memory -o pid,cmd</code><span>Lista os PIDs das instâncias do programa.</span></div><div class="command"><code>cat /proc/&lt;PID&gt;/maps</code><span>Mostra regiões do espaço de endereçamento virtual do processo.</span></div><div class="command"><code>pmap &lt;PID&gt;</code><span>Exibe um mapa resumido das regiões de memória do processo.</span></div></div><div class="discovery"><strong>Descoberta #10:</strong> duas instâncias do mesmo executável têm, por padrão, estados de memória isolados. Alterar uma variável em um processo não altera automaticamente a variável do outro.</div><div class="discovery"><strong>Descoberta #11:</strong> os endereços usados pelo programa pertencem a um <em>espaço de endereçamento virtual</em>. O processo não manipula RAM física diretamente como se enxergasse toda a máquina.</div><div class="discovery"><strong>Descoberta #12:</strong> <code>/proc/PID/maps</code> revelou várias regiões: código do executável, bibliotecas, heap, stack e outros mapeamentos.</div><div class="mistake"><strong>Correção importante:</strong> “processos têm memória isolada” não significa que nenhum byte físico possa ser compartilhado. O sistema operacional pode compartilhar páginas de código, bibliotecas, arquivos mapeados ou memória explicitamente compartilhada. A abstração normal é que cada processo possui seu próprio espaço de endereçamento virtual protegido.</div><h3>Modelo mental</h3><div class="mental-model">Processo A                         Processo B
+endereço virtual 0x...             endereço virtual 0x...
+        │                                  │
+        └──── tabelas de páginas ──────────┘
+                     ↓
+                 memória física
 
-  <section class="day">
-    <span class="day-tag">PRÓXIMA INVESTIGAÇÃO</span>
-    <h2>Memória</h2>
-    <p>Minha próxima pergunta é: <strong>quando dois processos executam o mesmo programa, eles enxergam a mesma memória ou cada um vive em seu próprio universo?</strong></p>
-    <p class="small">O caderno continuará sendo atualizado conforme a jornada avança.</p>
-  </section>
+Cada processo enxerga seu próprio mapa virtual.
+O kernel/MMU controla como esse mapa chega à memória física.</div><div class="boss"><strong>Checkpoint:</strong> processo não é apenas “código usando CPU”; ele executa dentro de um espaço de endereçamento virtual que ajuda a dar isolamento, proteção e flexibilidade ao sistema operacional.</div></section>
+
+<section class="day"><span class="day-tag">REFERÊNCIA RÁPIDA</span><h2>Comandos aprendidos até agora</h2><div class="commands"><div class="command"><code>gcc arquivo.c -o programa</code><span>Compilar C.</span></div><div class="command"><code>./programa</code><span>Executar localmente.</span></div><div class="command"><code>file arquivo</code><span>Inspecionar formato.</span></div><div class="command"><code>strace programa</code><span>Rastrear system calls.</span></div><div class="command"><code>ps</code><span>Listar processos.</span></div><div class="command"><code>top</code><span>Monitorar processos/CPU.</span></div><div class="command"><code>kill PID</code><span>Enviar sinal.</span></div><div class="command"><code>/proc/PID</code><span>Investigar processo.</span></div><div class="command"><code>nproc</code><span>Consultar CPUs.</span></div><div class="command"><code>taskset</code><span>Controlar afinidade.</span></div><div class="command"><code>pidstat -w 1</code><span>Observar context switches.</span></div><div class="command"><code>nice</code><span>Influenciar scheduling.</span></div><div class="command"><code>pmap PID</code><span>Ver mapa de memória.</span></div><div class="command"><code>cat /proc/PID/maps</code><span>Inspecionar regiões virtuais.</span></div><div class="command"><code>&gt;</code><span>Redirecionar stdout.</span></div><div class="command"><code>&amp;</code><span>Executar em background.</span></div></div></section>
+
+<section class="day"><span class="day-tag">PRÓXIMA INVESTIGAÇÃO</span><h2>Stack, heap e malloc</h2><p>Agora que eu descobri que cada processo possui um espaço de endereçamento virtual, minha próxima pergunta é: <strong>dentro desse espaço, onde exatamente ficam variáveis locais, globais e memória criada dinamicamente?</strong></p><p class="small">O caderno continuará sendo atualizado conforme a jornada avança.</p></section>
 </main>
-
-<footer>
-  <div class="shell">Software Mastery Roadmap · Engineering Notebook · Level 1</div>
-</footer>
+<footer><div class="shell">Software Mastery Roadmap · Engineering Notebook · Level 1</div></footer>
 </body>
 </html>
