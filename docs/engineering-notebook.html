@@ -1,72 +1,80 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Caderno de engenharia da jornada RPG pelos fundamentos de software, sistemas e redes.">
-  <title>Caderno do Engenheiro — Software Mastery Roadmap</title>
-  <style>
-    :root{color-scheme:dark;--bg:#08111f;--panel:#0f1b2d;--panel-2:#14243a;--text:#e7eef8;--muted:#9fb0c7;--accent:#67e8f9;--accent-2:#a7f3d0;--border:rgba(255,255,255,.10);--code:#07101c;--warning:#fde68a}
-    *{box-sizing:border-box} body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:radial-gradient(circle at top,#122642 0,var(--bg) 34rem);color:var(--text);line-height:1.65} a{color:var(--accent)}
-    .shell{width:min(1040px,calc(100% - 32px));margin:0 auto} header{padding:56px 0 36px;border-bottom:1px solid var(--border)} .eyebrow{color:var(--accent);letter-spacing:.14em;font-weight:800;font-size:.78rem} h1{font-size:clamp(2rem,6vw,4.4rem);line-height:1.02;margin:.4rem 0 1rem} h2{margin-top:0;font-size:clamp(1.5rem,3vw,2.2rem)} h3{margin-top:1.6rem} .lead{max-width:780px;color:var(--muted);font-size:1.08rem} .rule{margin-top:24px;padding:16px 18px;border-left:3px solid var(--accent);background:rgba(103,232,249,.06);border-radius:0 10px 10px 0} main{padding:38px 0 72px}
-    .status,.day{background:rgba(15,27,45,.88);border:1px solid var(--border);border-radius:18px}.status{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;padding:18px;margin-bottom:24px}.stat{background:var(--panel-2);padding:14px;border-radius:12px}.stat strong{display:block;font-size:1.15rem;color:var(--accent-2)}.stat span{color:var(--muted);font-size:.9rem}.day{padding:clamp(20px,4vw,36px);margin:24px 0}.day-tag{display:inline-block;color:var(--accent-2);font-weight:800;font-size:.8rem;letter-spacing:.08em;margin-bottom:8px}.discovery{margin:18px 0;padding:16px 18px;background:rgba(167,243,208,.06);border:1px solid rgba(167,243,208,.18);border-radius:12px}.discovery strong{color:var(--accent-2)}.mistake{margin:18px 0;padding:16px 18px;background:rgba(253,230,138,.05);border:1px solid rgba(253,230,138,.20);border-radius:12px}.mistake strong{color:var(--warning)}code{font-family:"SFMono-Regular",Consolas,"Liberation Mono",monospace}pre{overflow:auto;background:var(--code);border:1px solid var(--border);border-radius:12px;padding:16px;line-height:1.45}.commands{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px}.command{background:var(--panel-2);border:1px solid var(--border);border-radius:12px;padding:14px}.command code{color:var(--accent);display:block;margin-bottom:6px}.command span{color:var(--muted);font-size:.92rem}.mental-model{font-family:"SFMono-Regular",Consolas,monospace;white-space:pre-wrap;background:var(--code);padding:18px;border-radius:12px;border:1px solid var(--border)}.boss{border:1px dashed rgba(103,232,249,.35);padding:18px;border-radius:12px;margin-top:20px}footer{border-top:1px solid var(--border);padding:28px 0 48px;color:var(--muted)}.small{color:var(--muted);font-size:.92rem}
-  </style>
-</head>
-<body>
-<header><div class="shell"><div class="eyebrow">ENGINEERING NOTEBOOK · RPG JOURNEY</div><h1>Caderno do Engenheiro</h1><p class="lead">Meu registro de descobertas enquanto reconstruo computação e engenharia de software a partir dos fundamentos. Aqui eu anoto o que observei, os comandos usados, os erros que corrigi e os modelos mentais que sobreviveram aos experimentos.</p><div class="rule"><strong>Regra:</strong> não considero que aprendi porque li uma definição. Considero que comecei a aprender quando consigo observar o mecanismo, explicar o resultado e formular o próximo experimento.</div></div></header>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Caderno de engenharia da jornada RPG pelos fundamentos de software, sistemas e redes.">
+<title>Caderno do Engenheiro — Software Mastery Roadmap</title>
+<style>
+:root{color-scheme:dark;--bg:#08111f;--panel:#0f1b2d;--panel2:#14243a;--text:#e7eef8;--muted:#9fb0c7;--accent:#67e8f9;--accent2:#a7f3d0;--border:rgba(255,255,255,.1);--code:#07101c;--warn:#fde68a}*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,sans-serif;background:radial-gradient(circle at top,#122642 0,var(--bg) 34rem);color:var(--text);line-height:1.65}.shell{width:min(1040px,calc(100% - 32px));margin:auto}header{padding:56px 0 36px;border-bottom:1px solid var(--border)}.eyebrow{color:var(--accent);font-weight:800;letter-spacing:.14em;font-size:.78rem}h1{font-size:clamp(2rem,6vw,4.4rem);line-height:1.02;margin:.4rem 0 1rem}h2{margin-top:0}.lead,.small{color:var(--muted)}.rule{padding:16px 18px;border-left:3px solid var(--accent);background:rgba(103,232,249,.06);border-radius:0 10px 10px 0}main{padding:38px 0 72px}.status,.day{background:rgba(15,27,45,.88);border:1px solid var(--border);border-radius:18px}.status{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;padding:18px}.stat{background:var(--panel2);padding:14px;border-radius:12px}.stat strong{display:block;color:var(--accent2)}.stat span{color:var(--muted);font-size:.9rem}.day{padding:clamp(20px,4vw,36px);margin:24px 0}.day-tag{color:var(--accent2);font-weight:800;font-size:.8rem;letter-spacing:.08em}.discovery,.mistake,.boss{margin:18px 0;padding:16px 18px;border-radius:12px}.discovery{background:rgba(167,243,208,.06);border:1px solid rgba(167,243,208,.18)}.mistake{background:rgba(253,230,138,.05);border:1px solid rgba(253,230,138,.2)}.boss{border:1px dashed rgba(103,232,249,.35)}code{font-family:Consolas,monospace}pre,.mental{overflow:auto;background:var(--code);border:1px solid var(--border);border-radius:12px;padding:16px;white-space:pre-wrap}.commands{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:12px}.command{background:var(--panel2);border:1px solid var(--border);border-radius:12px;padding:14px}.command code{color:var(--accent);display:block}.command span{color:var(--muted);font-size:.92rem}footer{border-top:1px solid var(--border);padding:28px 0 48px;color:var(--muted)}
+</style></head>
+<body><header><div class="shell"><div class="eyebrow">ENGINEERING NOTEBOOK · RPG JOURNEY</div><h1>Caderno do Engenheiro</h1><p class="lead">Meu registro de descobertas enquanto reconstruo computação e engenharia de software a partir dos fundamentos.</p><div class="rule"><strong>Regra:</strong> não considero que aprendi porque li uma definição. Considero que comecei a aprender quando consigo observar o mecanismo, explicar o resultado e formular o próximo experimento.</div></div></header>
 <main class="shell">
-<section class="status"><div class="stat"><strong>Level 1</strong><span>Fundamentos</span></div><div class="stat"><strong>4 dias</strong><span>registrados</span></div><div class="stat"><strong>C + Linux</strong><span>trilha atual</span></div><div class="stat"><strong>Próximo</strong><span>stack, heap e malloc</span></div></section>
-
-<section class="day"><span class="day-tag">LEVEL 1 · DIA 1</span><h2>Do código-fonte ao sistema operacional</h2><p>Comecei com um programa mínimo em C e me recusei a aceitar <code>printf()</code> como magia. Compilei, inspecionei o executável e observei as chamadas feitas ao kernel.</p><pre><code>#include &lt;stdio.h&gt;
-int main(void){
-    printf("Hello, world!\n");
-    return 0;
-}</code></pre><div class="commands"><div class="command"><code>gcc hello.c -o hello</code><span>Compila C e gera um executável.</span></div><div class="command"><code>./hello</code><span>Executa o programa local.</span></div><div class="command"><code>file hello</code><span>Inspeciona formato do executável.</span></div><div class="command"><code>strace ./hello</code><span>Observa system calls.</span></div><div class="command"><code>strace -e write ./hello</code><span>Filtra chamadas write.</span></div><div class="command"><code>./hello &gt; teste.txt</code><span>Redireciona stdout.</span></div><div class="command"><code>cat teste.txt</code><span>Lê o arquivo.</span></div></div><div class="discovery"><strong>Descoberta #1:</strong> <code>printf()</code> não conversa diretamente com a tela; a biblioteca C eventualmente pede ao kernel uma escrita observável como <code>write(1,...)</code>.</div><div class="discovery"><strong>Descoberta #2:</strong> stdout é um fluxo, não sinônimo de monitor.</div><div class="mental-model">código-fonte → compilador → executável → processo → biblioteca C → system call → kernel</div></section>
-
-<section class="day"><span class="day-tag">LEVEL 1 · DIA 2</span><h2>Programa ≠ processo</h2><p>Fiz um programa permanecer vivo, imprimi seu PID e interroguei o processo pelo Linux.</p><pre><code>#include &lt;stdio.h&gt;
-#include &lt;unistd.h&gt;
-int main(void){
-    printf("Meu PID é %d\n", getpid());
-    while(1) sleep(1);
-}</code></pre><div class="commands"><div class="command"><code>ps</code><span>Lista processos.</span></div><div class="command"><code>ls /proc/&lt;PID&gt;</code><span>Explora a visão do processo exposta pelo procfs.</span></div><div class="command"><code>cat /proc/&lt;PID&gt;/status</code><span>Mostra PID, PPID, estado, memória e threads.</span></div><div class="command"><code>kill &lt;PID&gt;</code><span>Envia sinal ao processo.</span></div><div class="command"><code>ls -l /proc/&lt;PID&gt;/fd</code><span>Mostra file descriptors.</span></div><div class="command"><code>rm process</code><span>Remove o executável do diretório.</span></div></div><div class="discovery"><strong>Descoberta #3:</strong> PID identifica uma instância em execução.</div><div class="discovery"><strong>Descoberta #4:</strong> PPID revelou o shell como pai do processo iniciado por ele.</div><div class="discovery"><strong>Descoberta #5:</strong> apagar o executável no disco não tornou o processo vivo a mesma coisa que o arquivo apagado; programa e processo são entidades distintas.</div><div class="mental-model">PROCESSO
-├── PID / PPID
-├── memória
-├── código em execução
-├── file descriptors
-├── estado
-└── threads</div></section>
-
-<section class="day"><span class="day-tag">LEVEL 1 · DIA 3</span><h2>Scheduler, concorrência e context switch</h2><p>Forcei processos CPU-bound a competir pelo mesmo core para observar como poucas CPUs sustentam muitas tarefas.</p><pre><code>int main(void){ while(1){} }</code></pre><div class="commands"><div class="command"><code>nproc</code><span>Mostra CPUs disponíveis.</span></div><div class="command"><code>ps -e --no-headers | wc -l</code><span>Conta processos listados.</span></div><div class="command"><code>top</code><span>Observa uso de CPU.</span></div><div class="command"><code>./cpu_hog &amp;</code><span>Executa em background.</span></div><div class="command"><code>taskset -c 0 ./cpu_hog</code><span>Prende a tarefa a uma CPU lógica.</span></div><div class="command"><code>pidstat -w 1</code><span>Observa trocas de contexto.</span></div><div class="command"><code>nice -n 10 ./cpu_hog</code><span>Altera o valor de nice.</span></div></div><div class="discovery"><strong>Descoberta #6:</strong> muitos processos vivos não significam muitos processos fisicamente executando ao mesmo tempo.</div><div class="discovery"><strong>Descoberta #7:</strong> dois processos CPU-bound presos ao mesmo core dividem tempo de CPU.</div><div class="discovery"><strong>Descoberta #8:</strong> um processo pode estar vivo e praticamente não usar CPU porque está dormindo ou esperando I/O.</div><div class="discovery"><strong>Descoberta #9:</strong> context switch preserva estado suficiente de uma execução e restaura o estado de outra.</div><div class="mistake"><strong>Correção:</strong> não existe um único intervalo universal em que todo processo obrigatoriamente é trocado; scheduling depende de política, prioridade, carga, bloqueios e CPUs disponíveis.</div><div class="mental-model">READY → RUNNING → WAITING → READY
-
-Ready   = quer CPU
-Running = executa agora
-Waiting = aguarda algo</div></section>
-
-<section class="day"><span class="day-tag">LEVEL 1 · DIA 4</span><h2>Cada processo vive em seu próprio espaço de endereçamento</h2><p>Minha pergunta era: se eu iniciar duas cópias do mesmo programa, uma variável global de uma execução é a mesma variável da outra? Fiz duas instâncias manterem e alterarem seu próprio contador.</p><pre><code>#include &lt;stdio.h&gt;
+<section class="status"><div class="stat"><strong>Level 1</strong><span>Fundamentos</span></div><div class="stat"><strong>5 dias</strong><span>registrados</span></div><div class="stat"><strong>C + Linux</strong><span>trilha atual</span></div><div class="stat"><strong>Próximo</strong><span>ponteiros, lifetime e bugs de memória</span></div></section>
+<section class="day"><span class="day-tag">LEVEL 1 · DIA 1</span><h2>Do código-fonte ao kernel</h2><p>Compilei um Hello World, inspecionei o ELF e usei <code>strace</code> para descobrir que <code>printf()</code> termina em operações como <code>write()</code>. Aprendi que stdout é um fluxo, não “a tela”.</p><div class="commands"><div class="command"><code>gcc hello.c -o hello</code><span>Compilar C.</span></div><div class="command"><code>file hello</code><span>Inspecionar executável.</span></div><div class="command"><code>strace -e write ./hello</code><span>Observar system calls de escrita.</span></div><div class="command"><code>./hello &gt; teste.txt</code><span>Redirecionar stdout.</span></div></div><div class="discovery"><strong>Descobertas #1–2:</strong> bibliotecas escondem chamadas ao sistema; stdin/stdout/stderr são descritores e fluxos conectáveis.</div></section>
+<section class="day"><span class="day-tag">LEVEL 1 · DIA 2</span><h2>Programa ≠ processo</h2><p>Observei PID, PPID, descritores e estado por <code>/proc</code>. Duas execuções do mesmo executável viraram dois processos distintos.</p><div class="commands"><div class="command"><code>ps</code><span>Listar processos.</span></div><div class="command"><code>cat /proc/PID/status</code><span>Inspecionar estado.</span></div><div class="command"><code>ls -l /proc/PID/fd</code><span>Ver descritores.</span></div><div class="command"><code>kill PID</code><span>Enviar sinal.</span></div></div><div class="discovery"><strong>Descobertas #3–5:</strong> processo é uma instância viva gerenciada pelo kernel; o executável no disco é outra entidade.</div></section>
+<section class="day"><span class="day-tag">LEVEL 1 · DIA 3</span><h2>Scheduler e context switch</h2><p>Prendi processos CPU-bound ao mesmo core e observei que tarefas vivas não significam tarefas executando fisicamente ao mesmo tempo.</p><div class="commands"><div class="command"><code>nproc</code><span>Consultar CPUs.</span></div><div class="command"><code>top</code><span>Observar CPU.</span></div><div class="command"><code>taskset -c 0 ./cpu_hog</code><span>Fixar afinidade.</span></div><div class="command"><code>pidstat -w 1</code><span>Observar context switches.</span></div><div class="command"><code>nice -n 10 ./cpu_hog</code><span>Influenciar scheduling.</span></div></div><div class="discovery"><strong>Descobertas #6–9:</strong> scheduler decide quem recebe CPU; waiting, ready e running são estados diferentes; context switch preserva e restaura estado de execução.</div></section>
+<section class="day"><span class="day-tag">LEVEL 1 · DIA 4</span><h2>Memória virtual e isolamento</h2><p>Duas instâncias do mesmo programa alteraram suas variáveis independentemente. Com <code>/proc/PID/maps</code> e <code>pmap</code>, enxerguei o espaço de endereçamento virtual de cada processo.</p><div class="commands"><div class="command"><code>cat /proc/PID/maps</code><span>Ver regiões virtuais.</span></div><div class="command"><code>pmap PID</code><span>Resumir mapeamentos.</span></div></div><div class="discovery"><strong>Descobertas #10–12:</strong> ponteiros normalmente representam endereços virtuais no contexto de um processo; MMU e tabelas de páginas ligam esse espaço à memória física.</div><div class="mistake"><strong>Correção:</strong> isolamento virtual não implica ausência total de páginas físicas compartilhadas.</div></section>
+<section class="day"><span class="day-tag">LEVEL 1 · DIA 5</span><h2>Stack, heap e o que malloc realmente faz</h2><p>Para observar sem o compilador esconder demais o fenômeno, compilei com <code>-O0</code>. Criei uma variável local e uma alocação dinâmica, imprimi seus endereços e comparei com <code>/proc/PID/maps</code>.</p>
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
 #include &lt;unistd.h&gt;
 
-int contador = 10;
+int global = 7;
 
-int main(void){
-    printf("PID=%d contador=%d endereco=%p\n", getpid(), contador, (void*)&amp;contador);
-    contador += 100;
-    printf("PID=%d contador=%d\n", getpid(), contador);
+void experimento(void) {
+    int local = 42;
+    int *dinamico = malloc(sizeof(int));
+    if (dinamico == NULL) exit(1);
+    *dinamico = 99;
+
+    printf("global   %p = %d\n", (void*)&amp;global, global);
+    printf("local    %p = %d\n", (void*)&amp;local, local);
+    printf("ponteiro %p\n", (void*)&amp;dinamico);
+    printf("heap     %p = %d\n", (void*)dinamico, *dinamico);
+
     sleep(30);
+    free(dinamico);
+}
+
+int main(void) {
+    experimento();
     return 0;
-}</code></pre><p>Executei duas cópias. Ambas começaram com <code>contador = 10</code> e ambas chegaram a <code>110</code> independentemente. Alterar a variável de uma execução não alterou a da outra.</p><div class="commands"><div class="command"><code>./memory &amp;</code><span>Inicia uma instância em background; repeti para criar dois processos.</span></div><div class="command"><code>ps -C memory -o pid,cmd</code><span>Lista os PIDs das instâncias do programa.</span></div><div class="command"><code>cat /proc/&lt;PID&gt;/maps</code><span>Mostra regiões do espaço de endereçamento virtual do processo.</span></div><div class="command"><code>pmap &lt;PID&gt;</code><span>Exibe um mapa resumido das regiões de memória do processo.</span></div></div><div class="discovery"><strong>Descoberta #10:</strong> duas instâncias do mesmo executável têm, por padrão, estados de memória isolados. Alterar uma variável em um processo não altera automaticamente a variável do outro.</div><div class="discovery"><strong>Descoberta #11:</strong> os endereços usados pelo programa pertencem a um <em>espaço de endereçamento virtual</em>. O processo não manipula RAM física diretamente como se enxergasse toda a máquina.</div><div class="discovery"><strong>Descoberta #12:</strong> <code>/proc/PID/maps</code> revelou várias regiões: código do executável, bibliotecas, heap, stack e outros mapeamentos.</div><div class="mistake"><strong>Correção importante:</strong> “processos têm memória isolada” não significa que nenhum byte físico possa ser compartilhado. O sistema operacional pode compartilhar páginas de código, bibliotecas, arquivos mapeados ou memória explicitamente compartilhada. A abstração normal é que cada processo possui seu próprio espaço de endereçamento virtual protegido.</div><h3>Modelo mental</h3><div class="mental-model">Processo A                         Processo B
-endereço virtual 0x...             endereço virtual 0x...
-        │                                  │
-        └──── tabelas de páginas ──────────┘
-                     ↓
-                 memória física
+}</code></pre>
+<p>Resultado simulado:</p><pre><code>global   0x404040 = 7
+local    0x7ffd6d54b8ac = 42
+ponteiro 0x7ffd6d54b8a0
+heap     0x1f7d2a0 = 99</code></pre>
+<div class="discovery"><strong>Descoberta #13:</strong> a variável <code>dinamico</code> (o ponteiro) e o bloco para o qual ela aponta são coisas diferentes. O ponteiro local pode estar no frame da função enquanto os bytes obtidos por <code>malloc()</code> pertencem à memória dinâmica administrada pelo alocador.</div>
+<div class="discovery"><strong>Descoberta #14:</strong> stack está fortemente ligada a chamadas de função: frames carregam informações como locais, argumentos/temporários e estado necessário para retornar. Quando a função termina, seu frame deixa de estar válido. Isso explica o lifetime automático.</div>
+<div class="discovery"><strong>Descoberta #15:</strong> <code>malloc(n)</code> não significa “peça exatamente n bytes diretamente ao kernel”. Normalmente ele pede um bloco ao alocador da biblioteca; esse alocador reaproveita arenas/blocos e, quando precisa de mais memória virtual, pode recorrer a mecanismos do sistema como <code>brk</code> e/ou <code>mmap</code>. A estratégia é implementação-dependente.</div>
+<div class="discovery"><strong>Descoberta #16:</strong> <code>free(ptr)</code> devolve o bloco ao alocador para reutilização; isso não implica que a RAM correspondente seja imediatamente devolvida ao sistema operacional.</div>
+<h3>Experimento: observar o alocador conversando com o kernel</h3><div class="commands"><div class="command"><code>gcc -O0 -g memory_regions.c -o memory_regions</code><span>Compila sem otimização e inclui símbolos de debug.</span></div><div class="command"><code>strace -e brk,mmap,munmap ./memory_regions</code><span>Observa syscalls relacionadas a obtenção/mapeamento de memória virtual.</span></div><div class="command"><code>cat /proc/PID/maps</code><span>Compara endereços impressos com regiões como [heap] e [stack].</span></div><div class="command"><code>valgrind --leak-check=full ./memory_regions</code><span>Detecta vazamentos e vários usos inválidos de memória.</span></div></div>
+<p>Um <code>strace</code> simplificado mostrou chamadas como:</p><pre><code>brk(NULL) = 0x1f7b000
+brk(0x1f9c000) = 0x1f9c000
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, ... ) = ...</code></pre>
+<div class="mistake"><strong>Correção importante:</strong> “variável local fica na stack” é um bom modelo inicial, mas não uma lei da linguagem C. Otimizações podem manter valores apenas em registradores, eliminar variáveis ou reorganizar armazenamento. Estou usando <code>-O0</code> para tornar o experimento pedagógico.</div>
+<h3>Primeiro bug deliberado: memory leak</h3><pre><code>void vazar(void) {
+    int *p = malloc(1000);
+    /* esqueci free(p); */
+}</code></pre><p>Ao repetir a função, continuo pedindo blocos ao alocador e perco a referência necessária para liberá-los. O processo pode acumular memória inutilizável até terminar.</p><div class="mental">STACK
+chamada de função
+   ↓
+frame
+├── estado de retorno
+├── locais / temporários (modelo inicial)
+└── termina junto com a chamada
 
-Cada processo enxerga seu próprio mapa virtual.
-O kernel/MMU controla como esse mapa chega à memória física.</div><div class="boss"><strong>Checkpoint:</strong> processo não é apenas “código usando CPU”; ele executa dentro de um espaço de endereçamento virtual que ajuda a dar isolamento, proteção e flexibilidade ao sistema operacional.</div></section>
+HEAP / memória dinâmica
+malloc()
+   ↓
+alocador da libc
+   ↓
+bloco com lifetime controlado pelo programa
+   ↓
+free()
 
-<section class="day"><span class="day-tag">REFERÊNCIA RÁPIDA</span><h2>Comandos aprendidos até agora</h2><div class="commands"><div class="command"><code>gcc arquivo.c -o programa</code><span>Compilar C.</span></div><div class="command"><code>./programa</code><span>Executar localmente.</span></div><div class="command"><code>file arquivo</code><span>Inspecionar formato.</span></div><div class="command"><code>strace programa</code><span>Rastrear system calls.</span></div><div class="command"><code>ps</code><span>Listar processos.</span></div><div class="command"><code>top</code><span>Monitorar processos/CPU.</span></div><div class="command"><code>kill PID</code><span>Enviar sinal.</span></div><div class="command"><code>/proc/PID</code><span>Investigar processo.</span></div><div class="command"><code>nproc</code><span>Consultar CPUs.</span></div><div class="command"><code>taskset</code><span>Controlar afinidade.</span></div><div class="command"><code>pidstat -w 1</code><span>Observar context switches.</span></div><div class="command"><code>nice</code><span>Influenciar scheduling.</span></div><div class="command"><code>pmap PID</code><span>Ver mapa de memória.</span></div><div class="command"><code>cat /proc/PID/maps</code><span>Inspecionar regiões virtuais.</span></div><div class="command"><code>&gt;</code><span>Redirecionar stdout.</span></div><div class="command"><code>&amp;</code><span>Executar em background.</span></div></div></section>
-
-<section class="day"><span class="day-tag">PRÓXIMA INVESTIGAÇÃO</span><h2>Stack, heap e malloc</h2><p>Agora que eu descobri que cada processo possui um espaço de endereçamento virtual, minha próxima pergunta é: <strong>dentro desse espaço, onde exatamente ficam variáveis locais, globais e memória criada dinamicamente?</strong></p><p class="small">O caderno continuará sendo atualizado conforme a jornada avança.</p></section>
-</main>
-<footer><div class="shell">Software Mastery Roadmap · Engineering Notebook · Level 1</div></footer>
-</body>
-</html>
+malloc/free ≠ syscall direta a cada chamada</div>
+<div class="boss"><strong>Boss Fight:</strong> se uma função faz <code>int *p = malloc(100)</code>, existem duas entidades: a variável ponteiro <code>p</code> e o bloco apontado. O lifetime de <code>p</code> segue o escopo/armazenamento da variável; o bloco alocado continua existindo até ser liberado (ou o processo terminar), mesmo que eu perca o ponteiro — e aí nasce um leak.</div></section>
+<section class="day"><span class="day-tag">REFERÊNCIA RÁPIDA</span><h2>Comandos aprendidos</h2><div class="commands"><div class="command"><code>gcc -O0 -g arquivo.c -o programa</code><span>Build pedagógica/debug.</span></div><div class="command"><code>strace -e brk,mmap,munmap programa</code><span>Observar memória no limite usuário/kernel.</span></div><div class="command"><code>valgrind --leak-check=full programa</code><span>Investigar leaks e acessos inválidos.</span></div><div class="command"><code>/proc/PID/maps</code><span>Mapa de memória virtual.</span></div><div class="command"><code>pmap PID</code><span>Resumo de mapeamentos.</span></div><div class="command"><code>top / ps / pidstat</code><span>Observar processos.</span></div></div></section>
+<section class="day"><span class="day-tag">PRÓXIMA INVESTIGAÇÃO</span><h2>Ponteiros perigosos</h2><p>Minha próxima pergunta é: <strong>o que acontece quando uso memória depois de <code>free()</code>, retorno o endereço de uma variável local ou escrevo além do tamanho de um buffer?</strong></p><p class="small">Isso vai nos levar a dangling pointers, use-after-free, stack corruption e buffer overflow.</p></section>
+</main><footer><div class="shell">Software Mastery Roadmap · Engineering Notebook · Level 1</div></footer></body></html>
