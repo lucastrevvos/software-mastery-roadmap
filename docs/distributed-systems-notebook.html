@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sistemas Distribuídos — Diário de Engenharia</title>
+<link rel="stylesheet" href="css/app.css?v=2.1.0">
+<style>
+body{line-height:1.65}.lab-nav{display:flex;gap:10px;flex-wrap:wrap;padding-top:28px}.lab-nav a{color:#8dc8ff;text-decoration:none;border:1px solid #26384c;border-radius:999px;padding:7px 11px}.lab-nav .active{color:#70f4b2}.lab-hero{padding-top:36px!important}.lab-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}.lab-card,.note,.tradeoff,.next{padding:16px;border-radius:12px}.lab-card{background:#14243a;border:1px solid #26384c}.note{background:#0a1724;border:1px solid #25425f}.tradeoff{background:#0a1724;border-left:3px solid #55e6a5}.next{background:#0a1724;border:1px dashed #8c6d39}pre{overflow:auto;background:#07101c;border:1px solid #22364b;border-radius:12px;padding:16px;white-space:pre-wrap}code{font-family:Consolas,monospace;color:#8dc8ff}.cmd{display:grid;gap:10px}.cmd div{padding:12px;background:#0a1624;border:1px solid #213448;border-radius:10px}.cmd span{display:block;color:#91a3b8;font-size:.88rem;margin-top:4px}table{width:100%;border-collapse:collapse}.table-wrap{overflow:auto}th,td{padding:11px;border-bottom:1px solid #22364b;text-align:left;vertical-align:top}th{color:#70f4b2}.done{color:#70f4b2}.pending{color:#f3c86b}
+</style>
+</head>
+<body>
+<nav class="shell lab-nav"><a href="index.html">← Roadmap</a><a class="active" href="distributed-systems-notebook.html">Sistemas Distribuídos</a><a href="engineering-notebook.html">Caderno do Engenheiro</a></nav>
+<header class="hero shell lab-hero"><div><p class="eyebrow">REAL LEARNING LAB</p><h1>Diário de Sistemas Distribuídos</h1><p class="hero-copy">Aprender construindo, quebrando e explicando: Node.js + NestJS + Docker, com cada trade-off registrado quando aparece na prática.</p></div><div class="hero-badge"><span>Estado atual</span><strong>HTTP</strong><small>Orders → Payments</small></div></header>
+<main class="shell">
+<section class="panel"><div class="section-head"><div><p class="eyebrow">MÉTODO</p><h2>Nossa nova forma de aprender</h2></div></div><div class="lab-grid"><div class="lab-card"><strong>1. Construir</strong><span class="muted">o mínimo funcionando</span></div><div class="lab-card"><strong>2. Quebrar</strong><span class="muted">uma hipótese de propósito</span></div><div class="lab-card"><strong>3. Observar</strong><span class="muted">erro, log e comportamento</span></div><div class="lab-card"><strong>4. Explicar</strong><span class="muted">o trade-off aprendido</span></div></div></section>
+
+<section class="panel" id="modelo"><p class="eyebrow">MODELO MENTAL #1</p><h2>Dois serviços = uma rede no meio</h2><pre>Cliente
+   ↓ HTTP
+Orders Service
+   ↓ HTTP / rede
+Payments Service</pre><div class="note"><strong>Descoberta #1:</strong> uma chamada remota pode falhar mesmo quando o serviço chamador está funcionando. Rede, disponibilidade e latência passam a fazer parte do problema.</div></section>
+
+<section class="panel" id="setup"><p class="eyebrow">ETAPA 1 · NESTJS</p><h2>Criando os serviços</h2><div class="cmd"><div><code>mkdir distributed-workshop</code><span>Cria o laboratório.</span></div><div><code>npx @nestjs/cli new orders-service --package-manager npm --skip-git</code><span>Cria Orders sem Git interno.</span></div><div><code>npx @nestjs/cli new payments-service --package-manager npm --skip-git</code><span>Cria Payments.</span></div></div><p>Decisões: <strong>@nestjs/observe = não</strong> por enquanto; <strong>ESM</strong> para usar <code>import/export</code>; Vitest veio junto com a opção ESM.</p><div class="note"><strong>CLI:</strong> <code>ng</code> é normalmente Angular CLI. No Nest usamos <code>nest</code> ou <code>npx @nestjs/cli</code>.</div></section>
+
+<section class="panel" id="docker"><p class="eyebrow">ETAPA 2 · DOCKER</p><h2>Um container para cada serviço</h2><pre>Docker Compose
+├── orders
+│   └── NestJS :3000
+└── payments
+    └── NestJS :3000</pre><p>No Compose usamos:</p><pre>build:
+  context: ./orders-service</pre><div class="note"><strong>Descoberta #2 — build context:</strong> essa pasta vira a raiz disponível para o build. Portanto <code>COPY . .</code> no Dockerfile copia a partir de <code>orders-service</code>.</div><div class="note"><strong>Descoberta #3 — localhost:</strong> dentro de Orders, <code>localhost</code> é o próprio container Orders. Para acessar Payments na rede do Compose usamos <code>http://payments:3000</code>.</div><pre>No host:
+localhost:3000 → orders:3000
+localhost:3001 → payments:3000
+
+Entre containers:
+orders → http://payments:3000 → payments</pre><div class="tradeoff"><strong>Trade-off:</strong> Docker adiciona configuração, mas entrega isolamento, reprodução do ambiente e uma rede explícita sem a complexidade de Kubernetes.</div></section>
+
+<section class="panel" id="http"><p class="eyebrow">ETAPA 3 · HTTP SÍNCRONO</p><h2>Orders chama Payments e espera</h2><pre>POST /orders
+   ↓
+Orders cria orderId
+   ↓
+POST /payments
+   ↓
+Payments responde APPROVED
+   ↓
+Orders responde ao cliente</pre><div class="cmd"><div><code>curl -X POST http://localhost:3000/orders -H "Content-Type: application/json" -d '{"amount":100}'</code><span>Happy path executado com sucesso.</span></div></div><div class="note"><strong>Descoberta #4 — dependência temporal:</strong> Orders precisa que Payments esteja disponível naquele momento para concluir a requisição.</div><div class="tradeoff"><strong>HTTP síncrono:</strong> simples e com resposta imediata; em troca, disponibilidade e latência de Payments afetam Orders.</div></section>
+
+<section class="panel" id="falha"><p class="eyebrow">ETAPA 4 · FAILURE LAB</p><h2>Desligamos Payments</h2><div class="cmd"><div><code>docker compose stop payments</code><span>Simula a dependência indisponível.</span></div><div><code>curl -X POST http://localhost:3000/orders -H "Content-Type: application/json" -d '{"amount":100}'</code><span>Repete a chamada.</span></div></div><p>Resultado observado:</p><pre>{"statusCode":500,"message":"Internal server error"}</pre><div class="note"><strong>Descoberta #5:</strong> Orders continuou no ar, mas a operação falhou porque Payments estava fora. Como ainda não tratamos a falha do <code>fetch()</code>, ela apareceu como 500 genérico.</div><div class="cmd"><div><code>docker compose logs orders --tail=30</code><span>Próximo comando de diagnóstico para enxergar a causa real no serviço.</span></div></div></section>
+
+<section class="panel" id="tradeoffs"><p class="eyebrow">CHECKPOINT</p><h2>Trade-offs absorvidos até aqui</h2><div class="table-wrap"><table><thead><tr><th>Decisão</th><th>Ganho</th><th>Custo</th></tr></thead><tbody><tr><td>2 serviços</td><td>Separação de responsabilidades</td><td>Rede e falhas remotas</td></tr><tr><td>HTTP síncrono</td><td>Simplicidade e resposta imediata</td><td>Acoplamento temporal</td></tr><tr><td>Docker por serviço</td><td>Isolamento e ambiente reproduzível</td><td>Mais configuração</td></tr><tr><td>PAYMENTS_URL</td><td>Endereço externo ao código</td><td>Configuração vira parte do deploy</td></tr></tbody></table></div></section>
+
+<section class="panel" id="comandos"><p class="eyebrow">CTRL+F · COMANDOS</p><h2>Comandos de bolso</h2><div class="cmd"><div><code>docker compose up --build</code><span>Build + sobe o laboratório.</span></div><div><code>docker compose stop payments</code><span>Para Payments.</span></div><div><code>docker compose start payments</code><span>Religa Payments.</span></div><div><code>docker compose logs orders --tail=30</code><span>Logs recentes de Orders.</span></div></div></section>
+
+<section class="panel" id="proximos"><p class="eyebrow">PRÓXIMOS EXPERIMENTOS</p><h2>Entram somente quando provocarmos o problema</h2><div class="table-wrap"><table><thead><tr><th>Status</th><th>Problema</th><th>Conceito</th></tr></thead><tbody><tr><td class="pending">Próximo</td><td>Payments demora demais</td><td>Timeout</td></tr><tr><td class="pending">Depois</td><td>Falha temporária</td><td>Retry + backoff</td></tr><tr><td class="pending">Depois</td><td>Operação repetida</td><td>Idempotência</td></tr><tr><td class="pending">Depois</td><td>Orders não deveria esperar</td><td>RabbitMQ / assíncrono</td></tr><tr><td class="pending">Depois</td><td>Mensagem falha ou duplica</td><td>ACK, retry, DLQ</td></tr><tr><td class="pending">Depois</td><td>Banco confirma e evento falha</td><td>Transactional Outbox</td></tr><tr><td class="pending">Depois</td><td>Fluxo cruza serviços</td><td>Saga</td></tr><tr><td class="pending">Depois</td><td>Escolher mensageria</td><td>RabbitMQ × Kafka × Pub/Sub</td></tr></tbody></table></div><div class="next"><strong>Regra:</strong> problema observado → solução → novo custo/trade-off. Nada entra apenas porque “é boa prática”.</div></section>
+</main>
+<footer class="shell footer"><span>Software Mastery Roadmap · Distributed Systems Lab</span><a href="https://github.com/lucastrevvos/software-mastery-roadmap">Repositório</a></footer>
+</body>
+</html>
