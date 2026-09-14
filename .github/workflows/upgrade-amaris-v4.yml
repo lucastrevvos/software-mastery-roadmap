@@ -1,0 +1,29 @@
+name: Upgrade Amaris Interview Copilot V4
+
+on:
+  push:
+    paths:
+      - 'tools/upgrade_amaris_v4.py'
+      - '.github/workflows/upgrade-amaris-v4.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  upgrade:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build V4
+        run: python tools/upgrade_amaris_v4.py
+      - name: Commit V4
+        run: |
+          if git diff --quiet -- docs/amaris-fullstack-interview.html; then
+            echo "No changes"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/amaris-fullstack-interview.html
+          git commit -m "feat: expand Amaris interview copilot to V4"
+          git push
