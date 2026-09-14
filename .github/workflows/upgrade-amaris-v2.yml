@@ -1,112 +1,22 @@
 name: Upgrade Amaris Interview Copilot V2
-
 on:
   push:
     paths:
       - '.github/workflows/upgrade-amaris-v2.yml'
-
 permissions:
   contents: write
-
 jobs:
   upgrade:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Upgrade interview page
-        shell: bash
+      - name: Upgrade page
+        run: python scripts/upgrade_amaris_v2.py
+      - name: Commit V2
         run: |
-          python - <<'PY'
-          from pathlib import Path
-          p = Path('docs/amaris-fullstack-interview.html')
-          s = p.read_text(encoding='utf-8')
-          if 'INTERVIEW COPILOT V2' in s:
-              raise SystemExit(0)
-
-          s = s.replace('<title>Amaris Full Stack Senior — Interview Quick Guide</title>', '<title>Amaris Full Stack Senior — Interview Copilot V2</title>')
-          s = s.replace('<h1>⚡ Amaris — Full Stack Senior Quick Guide</h1>', '<h1>⚡ Amaris — INTERVIEW COPILOT V2</h1>')
-          s = s.replace('<span id="count" class="count"></span>', '<button id="panicBtn" class="panic-btn" type="button" title="Atalho: P">🚨 Pânico</button><span id="count" class="count"></span>')
-          s = s.replace('<p><strong>Atalhos:</strong> <code>Ctrl+K</code> ou <code>/</code> foca a busca · <code>Esc</code> limpa · clique numa categoria para filtrar.</p>', '<p><strong>Atalhos:</strong> <code>Ctrl+K</code> ou <code>/</code> busca · <code>P</code> modo pânico · <code>Esc</code> limpa · clique numa categoria para filtrar.</p>')
-          s = s.replace('<p class="small">Estruturado para a vaga Senior Full Stack Node.js/NestJS + React, sistemas distribuídos, mensageria, Docker/Kubernetes, GCP, testes, SOLID e arquitetura.</p>', '<p class="small">INTERVIEW COPILOT V2 · busca por aliases PT/EN · respostas rápidas · aprofundamento · HOT ZONE da vaga · modo pânico.</p>')
-
-          css = r'''
-/* INTERVIEW COPILOT V2 */
-.panic-btn{border:1px solid #633846;background:#2a151d;color:#ffdce2;border-radius:10px;padding:9px 11px;font-weight:800;cursor:pointer;white-space:nowrap}.panic-btn.on{background:#751f30;border-color:#ff8094;color:#fff}.hotzone{border:1px solid #654820;background:rgba(74,45,12,.35);border-radius:16px;padding:14px;margin:0 0 18px}.hotzone h2{font-size:15px;margin:0 0 9px;color:#ffd199}.hotterms{display:flex;gap:7px;flex-wrap:wrap}.hotterm{border:1px solid #6e4c24;background:#291b0d;color:#ffd7a8;border-radius:999px;padding:6px 9px;font-size:12px;cursor:pointer}.hotterm:hover{border-color:#c98c44}.quick-block .label{color:#ff9aaa}.deep-block .label{color:#84aaff}.safe-block .label{color:#9bd8aa}.panic .deep-block,.panic .safe-block,.panic .meta{display:none}.panic .grid{grid-template-columns:1fr}.panic .card{padding:12px}.panic .card h2{margin-bottom:6px}.panic .hero,.panic .hotzone{display:none}.panic header h1:after{content:' · MODO PÂNICO';color:#ff8c9d}.search-note{font-size:12px;color:#8d9bb9;margin-top:8px}.score{float:right;font-size:10px;color:#62718f}.catline{display:flex;justify-content:space-between;gap:8px;align-items:center;margin-bottom:8px}.catbadge{font-size:11px;border:1px solid #35415f;border-radius:999px;padding:3px 7px;color:#9fb0d0}.panic .quick-block .label{margin-top:0}.card{transition:border-color .12s,transform .12s}.card:hover{border-color:#40517a;transform:translateY(-1px)}
-'''
-          s = s.replace('</style>', css + '\n</style>', 1)
-
-          hot_html = r'''
-<section class="hotzone" id="hotzone"><h2>🔥 HOT ZONE — maior aderência à vaga</h2><div id="hotterms" class="hotterms"></div><div class="search-note">Clique num termo ou digite apenas a pista que você ouviu. A busca expande sinônimos em português/inglês.</div></section>
-'''
-          s = s.replace('</section>\n<div id="grid"', '</section>\n' + hot_html + '<div id="grid"', 1)
-
-          extras = r'''
-,Q('JavaScript','O que é libuv?','É a biblioteca que dá ao Node event loop e abstrações assíncronas multiplataforma.','Ela coordena timers, I/O e um thread pool para certas operações; nem todo I/O usa thread pool.','libuv uv thread pool event loop node runtime')
-,Q('JavaScript','setImmediate vs setTimeout(0)?','Entram em fases diferentes do event loop e a ordem depende do contexto.','setImmediate roda na fase check; setTimeout entra em timers. Dentro de callbacks de I/O, setImmediate costuma ter precedência.','setImmediate setTimeout timer check phase node')
-,Q('JavaScript','process.nextTick vs Promise microtask?','Ambos executam antes de avançar o loop, mas nextTick tem fila própria no Node.','Abuso de nextTick ou microtasks pode causar starvation e atrasar I/O/timers.','nextTick microtask promise queue starvation node')
-,Q('JavaScript','Como investigar memory leak?','Procuro crescimento sustentado e comparo heap snapshots para achar objetos retidos.','Caches sem limite, listeners, timers e closures podem reter memória; RSS alto sozinho não prova leak de heap.','memory leak heap snapshot gc rss listener cache')
-,Q('TypeScript','Structural typing?','Compatibilidade é baseada na forma do tipo, não necessariamente no nome declarado.','Se um objeto possui a estrutura exigida, pode ser compatível mesmo sem implementar nominalmente aquela interface.','structural typing shape nominal typescript compatibility')
-,Q('TypeScript','Union discriminada?','É uma union com um campo que identifica cada variante e permite narrowing seguro.','É ótima para estados de domínio/UI e exhaustive checking em switch.','discriminated union narrowing exhaustive status typescript')
-,Q('API','Offset vs cursor pagination?','Offset é simples; cursor/keyset é mais estável e eficiente em grandes volumes mutáveis.','Offset pode ficar caro e sofrer com inserções concorrentes; cursor exige ordenação determinística.','pagination offset cursor keyset api database')
-,Q('API','Rate limiting?','Limito requisições por identidade/chave/IP conforme risco e negócio.','Token bucket é comum; em distribuído o estado pode ficar em gateway/Redis e retorno 429 quando excede.','rate limit throttling 429 token bucket redis')
-,Q('React','O que é stale closure em Hooks?','Um callback pode capturar valores antigos do render em que foi criado.','Corrijo dependências, updater functions ou refs quando semanticamente adequado; não removo dependência só para calar lint.','stale closure react hooks dependency effect callback')
-,Q('React','Server state vs client state?','Server state vem de fonte remota e precisa cache/sincronização; client state pertence à UI.','Server state envolve stale data, refetch, retry, dedupe e invalidation, por isso tem necessidades diferentes de Context.','server state client state react query cache')
-,Q('Distribuídos','Saga Pattern?','Coordena transação distribuída com transações locais e ações compensatórias.','Pode ser choreography por eventos ou orchestration por coordenador. Compensação não é rollback mágico.','saga orchestration choreography compensation distributed transaction')
-,Q('Distribuídos','Bulkhead Pattern?','Isola recursos para a falha de uma dependência não consumir toda a aplicação.','Pools/limites separados evitam que integração lenta esgote conexões ou workers do sistema inteiro.','bulkhead isolation resilience fault tolerance')
-,Q('Distribuídos','Distributed lock: quando evitar?','Evito quando constraint, operação atômica, idempotência ou particionamento resolvem melhor.','Lock distribuído traz leases, falhas parciais e complexidade; se usar, preciso entender expiração e fencing.','distributed lock redis redlock fencing lease')
-,Q('Distribuídos','Consistent hashing?','Distribui chaves reduzindo o remapeamento quando nós entram ou saem.','É útil em caches/particionamento; virtual nodes ajudam a distribuir carga.','consistent hashing sharding partition cache node')
-,Q('Distribuídos','Clock skew em sistemas distribuídos?','Relógios não são perfeitamente sincronizados; timestamp não deve ser minha única garantia de ordem.','Para ordem crítica prefiro sequence/version ou garantias do storage/broker. NTP reduz erro, não cria relógio global perfeito.','clock skew timestamp ordering sequence distributed')
-,Q('Mensageria','Inbox Pattern?','Persiste o identificador da mensagem recebida para deduplicar processamento.','Quando possível, gravo inbox e efeito de negócio atomicamente. Combina muito bem com Outbox.','inbox pattern consumer dedupe event id outbox')
-,Q('Mensageria','Kafka rebalance?','É a redistribuição de partitions entre consumers de um group.','Pode pausar/reorganizar consumo; processamento longo e configuração inadequada podem aumentar rebalances.','kafka rebalance consumer group partitions')
-,Q('Banco','EXPLAIN vs EXPLAIN ANALYZE?','EXPLAIN mostra o plano estimado; ANALYZE executa e traz tempos/linhas reais.','Comparo estimativa e realidade para achar cardinalidade errada, scans e joins caros.','explain analyze postgres query plan performance')
-,Q('Banco','Deadlock?','É um ciclo de transações esperando locks umas das outras.','O banco normalmente aborta uma delas; mitigo com ordem consistente de locks, transações curtas e retry seguro.','deadlock transaction lock retry database')
-,Q('Banco','Optimistic concurrency com version?','Atualizo somente se a versão ainda é a esperada e detecto conflito quando nenhuma linha muda.','Funciona bem quando conflitos são raros; posso retornar conflito ou retry conforme a regra de negócio.','optimistic concurrency version etag update conflict')
-,Q('Arquitetura','ADR: para que serve?','Registra contexto, decisão, alternativas e trade-offs de uma escolha arquitetural.','Preserva o porquê histórico de decisões como broker, banco, boundaries e estratégia de deploy.','ADR architecture decision record tradeoff')
-,Q('Arquitetura','CQRS exige Event Sourcing?','Não. São padrões independentes.','CQRS separa caminhos/modelos de leitura e escrita; Event Sourcing persiste eventos como fonte de verdade. Podem coexistir, mas não dependem um do outro.','cqrs event sourcing difference command query')
-,Q('Testes','Testcontainers?','Sobe dependências reais descartáveis para testes de integração.','É útil para Postgres, Redis e RabbitMQ quando mocks esconderiam diferenças importantes.','testcontainers docker integration postgres rabbitmq testing')
-,Q('Testes','Como testar idempotência?','Executo a mesma operação/evento várias vezes e valido um único efeito de negócio.','Também testo falha após commit antes do ACK e dois workers concorrentes processando o mesmo identificador.','idempotency test duplicate retry concurrency fault injection')
-,Q('DevOps','Blue/Green vs Canary?','Blue/Green troca ambientes; Canary libera gradualmente para parte do tráfego.','Canary reduz blast radius; Blue/Green facilita troca/rollback rápido. Banco precisa manter compatibilidade entre versões.','blue green canary deployment rollout')
-,Q('DevOps','Feature flag?','Desacopla deploy da ativação de funcionalidade.','Permite rollout gradual e kill switch, mas flags precisam owner e remoção para não virar dívida permanente.','feature flag toggle rollout kill switch')
-,Q('DevOps','Migration expand-and-contract?','Primeiro adiciono mudança compatível, depois migro uso/dados e só no fim removo legado.','É a estratégia clássica para schema compatível com rolling deploy e zero downtime.','expand contract migration backward compatible zero downtime')
-,Q('Observabilidade','SLI, SLO e SLA?','SLI mede; SLO define a meta; SLA é o compromisso contratual.','Error budget deriva do SLO e ajuda equilibrar confiabilidade e velocidade de mudança.','sli slo sla error budget reliability')
-,Q('Observabilidade','Golden Signals?','Latency, traffic, errors e saturation.','É um bom ponto de partida para monitorar serviços; complemento com métricas de negócio e backlog de filas.','golden signals latency traffic errors saturation')
-,Q('Segurança','OAuth2 vs OIDC?','OAuth2 trata autorização; OIDC adiciona uma camada de identidade/autenticação.','Authorization Code + PKCE é um fluxo comum para clientes públicos modernos.','oauth2 oidc pkce authorization authentication')
-,Q('Segurança','CSRF vs CORS?','CSRF é ataque que explora credenciais do navegador; CORS é política de acesso cross-origin do navegador.','CORS não substitui proteção CSRF. SameSite e CSRF tokens são mecanismos específicos conforme modelo de autenticação.','csrf cors sameSite cookie browser security')
-,Q('Segurança','XSS em React?','React escapa texto por padrão, mas HTML não confiável ainda é perigoso.','Evito dangerouslySetInnerHTML sem sanitização e uso CSP/escaping adequado por contexto.','xss react dangerouslySetInnerHTML csp sanitize')
-,Q('System Design','Como começar qualquer System Design?','Primeiro fecho requisitos: volume, latência, disponibilidade, consistência e padrões de acesso.','Depois desenho o caminho simples e evoluo para cache, filas, particionamento, HA e observabilidade conforme os gargalos reais.','system design requirements qps latency availability consistency')
-,Q('Coringas','Se eu não souber exatamente a tecnologia?','Eu separo o que sei do que preciso confirmar e raciocino a partir dos requisitos.','Posso dizer: “não usei nesse contexto em produção, mas implementei/testei este modelo e a decisão que eu avaliaria seria...”.','não sei branco rescue honest lab projeto tecnologia')
-'''
-          s = s.replace('\n];\nconst categories=', extras + '\n];\nconst categories=', 1)
-
-          old_card_start = "function card(x,i){return `"
-          a = s.index(old_card_start)
-          b = s.index("\nconst grid=", a)
-          new_card = r'''function card(x,i){return `<article class="card" data-i="${i}" data-cat="${esc(x.category)}" data-search="${esc((x.category+' '+x.q+' '+x.quick+' '+x.deep+' '+x.tags+' '+x.safe).toLowerCase())}"><div class="catline"><span class="catbadge">${esc(x.category)}</span><span class="score"></span></div><h2>${esc(x.q)}</h2><div class="meta">${x.tags.split(' ').slice(0,7).map(t=>`<span class="tag">${esc(t)}</span>`).join('')}</div><div class="quick-block"><div class="label">🚨 Agora</div><p class="answer">${esc(x.quick)}</p></div><div class="deep-block"><div class="label">🎯 Resposta / aprofundamento</div><p class="deep">${esc(x.deep)}</p></div>${x.safe?`<div class="safe-block"><div class="label">💼 Como puxar para prática</div><p class="safe">${esc(x.safe)}</p></div>`:''}</article>`}'''
-          s = s[:a] + new_card + s[b:]
-
-          old_filter_start = 'function filter(){'
-          a = s.index(old_filter_start)
-          b = s.index("\ndocument.getElementById('search').addEventListener", a)
-          new_filter = r'''const synonymMap={fila:'queue broker rabbitmq kafka pubsub mensageria',queue:'fila broker rabbitmq kafka pubsub',erro:'error exception failure falha',falha:'failure error retry resilience',evento:'event message broker kafka pubsub',mensagem:'message event broker queue',bloqueio:'lock blocking event loop',concorrencia:'concurrency race lock atomic',transacao:'transaction acid database outbox',indice:'index btree database explain',container:'docker pod kubernetes',pod:'kubernetes container deployment',nuvem:'cloud gcp run gke functions',autenticacao:'authentication auth jwt oauth oidc',autorizacao:'authorization permission guard iam',teste:'test jest testing rtl e2e integration',cache:'redis ttl invalidation stampede',observabilidade:'observability logs metrics traces telemetry',microservico:'microservices distributed service',microservicos:'microservices distributed service',distribuido:'distributed messaging consistency retry idempotency',distribuidos:'distributed messaging consistency retry idempotency'};
-function expandTerms(raw){const base=normalize(raw).split(/\s+/).filter(Boolean),out=[...base];base.forEach(t=>{if(synonymMap[t])out.push(...normalize(synonymMap[t]).split(/\s+/))});return [...new Set(out)]}
-function filter(){const raw=document.getElementById('search').value,exact=normalize(raw),terms=expandTerms(raw);let n=0;const cards=[...document.querySelectorAll('.card')];cards.forEach(el=>{const hay=normalize(el.dataset.search),okCat=active==='Todos'||el.dataset.cat===active;let score=0;if(!exact)score=1;else{if(hay.includes(exact))score+=120;const title=normalize(el.querySelector('h2').textContent);if(title.includes(exact))score+=120;terms.forEach(t=>{if(title.includes(t))score+=28;if(hay.includes(t))score+=6})}const ok=okCat&&(!exact||score>0);el.classList.toggle('hidden',!ok);el.style.order=ok?-score:0;const badge=el.querySelector('.score');if(badge)badge.textContent=exact&&ok?`relevância ${score}`:'';if(ok)n++});document.getElementById('count').textContent=`${n}/${questions.length}`;document.getElementById('empty').style.display=n?'none':'block'}'''
-          s = s[:a] + new_filter + s[b:]
-
-          a = s.index("document.getElementById('search').addEventListener")
-          b = s.index('renderChips();filter();', a)
-          new_events = r'''const searchEl=document.getElementById('search'),panicBtn=document.getElementById('panicBtn');let panic=false;
-searchEl.addEventListener('input',filter);panicBtn.addEventListener('click',()=>{panic=!panic;document.body.classList.toggle('panic',panic);panicBtn.classList.toggle('on',panic);panicBtn.textContent=panic?'✅ Normal':'🚨 Pânico';searchEl.focus()});
-const hotTerms=['event loop','NestJS','API REST','idempotência','RabbitMQ','Kafka','Pub/Sub','retry','DLQ','Outbox','race condition','React Hooks','useEffect','Context API','SOLID','microserviços','Docker','Kubernetes','Cloud Run','GKE','CI/CD','system design','FOR UPDATE SKIP LOCKED','timeout','circuit breaker','índice','transação','Jest','observabilidade','JWT'];
-document.getElementById('hotterms').innerHTML=hotTerms.map(t=>`<button class="hotterm" data-hot="${esc(t)}">${esc(t)}</button>`).join('');document.getElementById('hotterms').addEventListener('click',e=>{const b=e.target.closest('[data-hot]');if(!b)return;active='Todos';renderChips();searchEl.value=b.dataset.hot;searchEl.focus();filter()});
-document.addEventListener('keydown',e=>{const typing=document.activeElement===searchEl;if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='k'){e.preventDefault();searchEl.focus();searchEl.select()}else if(e.key==='/'&&!typing){e.preventDefault();searchEl.focus()}else if(e.key.toLowerCase()==='p'&&!typing){panic=!panic;document.body.classList.toggle('panic',panic);panicBtn.classList.toggle('on',panic);panicBtn.textContent=panic?'✅ Normal':'🚨 Pânico'}else if(e.key==='Escape'){searchEl.value='';searchEl.blur();active='Todos';renderChips();filter()}});
-'''
-          s = s[:a] + new_events + s[b:]
-          p.write_text(s, encoding='utf-8')
-          PY
-
-          rm -f .github/workflows/upgrade-amaris-v2.yml
+          rm -f scripts/upgrade_amaris_v2.py .github/workflows/upgrade-amaris-v2.yml
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/amaris-fullstack-interview.html .github/workflows/upgrade-amaris-v2.yml
+          git add docs/amaris-fullstack-interview.html scripts/upgrade_amaris_v2.py .github/workflows/upgrade-amaris-v2.yml
           git commit -m "feat: upgrade Amaris interview copilot to V2"
           git push
