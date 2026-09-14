@@ -14,6 +14,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Normalize V3 marker for V4 upgrader
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('tools/upgrade_amaris_v4.py')
+          s = p.read_text(encoding='utf-8')
+          s = s.replace("marker = '\\n];\\nconst shortOverrides='", "marker = '\\n];\\n\\nconst shortOverrides='")
+          p.write_text(s, encoding='utf-8')
+          PY
       - name: Build V4
         run: python tools/upgrade_amaris_v4.py
       - name: Commit V4
