@@ -1,0 +1,29 @@
+name: Fix Amaris Interview Copilot V4.3 Syntax
+
+on:
+  push:
+    paths:
+      - 'tools/fix_amaris_v43_syntax.py'
+      - '.github/workflows/fix-amaris-v43-syntax.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Repair V4.3 syntax
+        run: python tools/fix_amaris_v43_syntax.py
+      - name: Commit repair
+        run: |
+          if git diff --quiet -- docs/amaris-fullstack-interview.html; then
+            echo "No changes"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/amaris-fullstack-interview.html
+          git commit -m "fix: repair Amaris V4.3 question array syntax"
+          git push
