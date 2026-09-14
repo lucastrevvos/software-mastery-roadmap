@@ -1,0 +1,84 @@
+from pathlib import Path
+
+p = Path('docs/amaris-fullstack-interview.html')
+s = p.read_text(encoding='utf-8')
+
+if 'Interview Copilot V4.5' in s or 'INTERVIEW COPILOT V4.5' in s:
+    raise SystemExit(0)
+
+s = s.replace('Interview Copilot V4.4', 'Interview Copilot V4.5')
+s = s.replace('INTERVIEW COPILOT V4.4', 'INTERVIEW COPILOT V4.5')
+s = s.replace('<span class="priority">V4.4:</span>', '<span class="priority">V4.5:</span>')
+
+# Make existing React answer more natural and useful under interview pressure.
+old_react = "Q('React','Como evitar renders desnecessários?','Primeiro meço. Depois reduzo estado compartilhado, mantenho referências estáveis quando necessário, uso memo com critério e separo componentes.','Otimização sem profiling pode piorar legibilidade sem ganho real.','react performance rerender memo profiling'),"
+new_react = "Q('React','Como evitar renders desnecessários?','Primeiro eu confirmo se existe um problema usando o React DevTools Profiler. Se houver, tento manter o estado o mais local possível, evitar Context amplo demais, separar componentes e só então uso React.memo, useMemo ou useCallback onde referências estáveis realmente evitarem trabalho.','Render não significa necessariamente atualização do DOM. Eu evito memoização por hábito porque ela também tem custo e aumenta complexidade; meço antes e depois para provar que houve ganho.','react performance rerender memo profiler react memo usememo usecallback context render desnecessario'),"
+if old_react in s:
+    s = s.replace(old_react, new_react, 1)
+
+# Split the ambiguous webhook card into outbound delivery and add a separate inbound receiver design.
+old_webhook = "Q('System Design','Projete um serviço de webhook.','Persisto eventos, entrego assíncrono com assinatura, retry/backoff e DLQ.','Consumidor precisa idempotência e eu preciso status de entrega, rotação de segredo e observabilidade.','system design webhook retry signature dlq')"
+new_webhook = "Q('System Design','Projete um serviço que entrega webhooks para clientes.','Eu persisto o evento e uma entrega por endpoint, processo assíncrono, assino o payload com HMAC, uso timeout, retry com backoff/jitter para falhas transitórias e DLQ após o limite. Também mantenho status de entrega e um eventId estável.','Eu trataria rotação de segredo, rate limit por endpoint, observabilidade, replay manual controlado e proteção para não deixar um cliente lento ou fora do ar degradar os demais. O consumidor deve conseguir deduplicar usando o eventId.','system design outbound webhook delivery assinatura hmac retry backoff jitter dlq delivery status secret rotation eventid')"
+if old_webhook in s:
+    s = s.replace(old_webhook, new_webhook, 1)
+
+extras = r'''
+,Q('Node','V8, Node.js e libuv: qual é a diferença?','V8 é a engine que executa JavaScript. Node.js é o runtime que combina V8 com APIs nativas, bindings e libuv. A libuv fornece o Event Loop e abstrações para I/O assíncrono, além de um thread pool usado por algumas operações.','Eu evitaria dizer que “o runtime é o V8”. O V8 executa o JavaScript; Node adiciona todo o ambiente de servidor ao redor dele. Rede costuma usar mecanismos assíncronos do sistema operacional, enquanto algumas operações como fs, crypto e DNS podem usar o thread pool do libuv.','v8 node runtime libuv engine javascript event loop thread pool runtime nodejs')
+,Q('Node','Worker Threads ou fila: como escolher?','Worker Threads fazem sentido quando eu preciso paralelizar CPU dentro do processo e ainda quero uma resposta relativamente próxima. Fila faz mais sentido quando o trabalho pode ser assíncrono, precisa sobreviver a restart, ter retry, controlar concorrência e distribuir processamento entre instâncias.','Eu decidiria pelo requisito, não pela tecnologia. Num exemplo hipotético de geração ou compressão pesada de PDF: se o usuário precisa da resposta naquele request e o cálculo cabe no processo, posso avaliar Worker Threads; se pode receber um jobId e consultar depois, uma fila costuma dar isolamento, resiliência e escala melhores.','worker threads fila queue cpu bound paralelismo background job pdf escolha tradeoff')
+,Q('Senioridade','E se eu nunca tiver passado por esse cenário em produção?','Eu diria isso de forma direta e depois mostraria meu raciocínio: “não tive exatamente esse caso em produção, mas eu avaliaria assim...” e explicaria requisitos, alternativas, riscos e como validaria a decisão.','É melhor demonstrar modelo mental e honestidade do que inventar experiência. Posso conectar com um laboratório ou projeto próprio que realmente fiz, deixando claro o contexto.','nunca usei em produção não passei por isso resposta entrevista honestidade cenário hipotético senioridade')
+,Q('Distribuídos','Como você garantiria idempotência nesse worker?','Eu usaria um identificador estável da mensagem ou da operação e uma garantia persistente no banco, normalmente uma UNIQUE constraint. O processamento e o registro de que aquela mensagem já foi aplicada ficam na mesma transação quando possível. Se ela chegar de novo, trato como já processada e não repito o efeito.','Em at-least-once eu assumo redelivery. Um padrão comum é uma tabela inbox/processed_messages com eventId UNIQUE: começo a transação, tento registrar o eventId, aplico o efeito de negócio e commit. Só depois faço ACK. Se o processo cair depois do commit e antes do ACK, a mensagem volta, a constraint detecta a duplicata e o consumer pode confirmar sem repetir o efeito.','idempotencia worker consumer eventId unique constraint processed messages inbox ack redelivery duplicate transacao')
+,Q('Distribuídos','Idempotência fica no código ou no banco?','Nos dois, mas com responsabilidades diferentes: o código coordena o fluxo e trata duplicatas; o banco fornece a garantia atômica com UNIQUE constraint ou outra regra de consistência.','Só fazer “SELECT para ver se existe” no código não é suficiente, porque duas instâncias podem passar pelo check ao mesmo tempo. A constraint no banco fecha essa race condition.','idempotencia banco codigo unique constraint race condition select exists duplicate consumer')
+,Q('Distribuídos','Como uma UNIQUE constraint ajuda na idempotência?','Eu coloco uma chave única como eventId, idempotencyKey ou chave natural da operação. A primeira execução grava; uma repetição colide com a constraint e é tratada como duplicata em vez de repetir o efeito.','A melhor chave depende do domínio. Para mensagem uso eventId; para criação via API posso usar idempotencyKey associada ao cliente e ao resultado. O importante é que a regra seja persistente e atômica.','unique constraint idempotency key eventid duplicate database idempotencia chave unica')
+,Q('System Design','Projete um receptor de webhook de pagamentos.','Eu valido autenticação/assinatura usando o payload bruto, verifico timestamp para reduzir replay, deduplico pelo eventId do provedor, persisto o evento de forma durável e respondo 2xx rápido. O processamento de negócio segue assíncrono.','Depois eu tenho worker idempotente, retry interno para falhas transitórias, DLQ/quarentena para poison messages, status de processamento, logs com correlationId e métricas. Eu separo claramente “recebi do provedor” de “processei com sucesso” para não forçar o provedor a esperar meu fluxo inteiro.','inbound webhook pagamento payment webhook receiver signature hmac raw body timestamp replay eventid persist async 2xx idempotency')
+,Q('Segurança','Como evitar replay de um webhook assinado?','Além de validar a assinatura, eu valido um timestamp/nonce dentro de uma janela aceitável e deduplico o identificador do evento.','Assinatura prova integridade/autenticidade do payload, mas sozinha não impede alguém de reenviar exatamente a mesma requisição válida capturada anteriormente.','webhook replay attack timestamp nonce signature hmac eventid segurança')
+'''
+
+marker = '\nconst shortOverrides={'
+idx = s.find(marker)
+if idx < 0:
+    raise SystemExit('shortOverrides marker not found')
+arr_end = s.rfind('\n];', 0, idx)
+if arr_end < 0:
+    raise SystemExit('questions array end not found')
+s = s[:arr_end] + extras + s[arr_end:]
+
+# Add polished 20-40 second answers for the new/high-pressure questions.
+long_marker = 'const longAnswers={\n'
+long_add = r'''\
+'V8, Node.js e libuv: qual é a diferença?':`Eu separaria os papéis. V8 é a engine que compila e executa JavaScript. Node.js é o runtime de servidor: ele embute o V8 e adiciona módulos nativos, bindings e integração com o sistema operacional. A libuv é uma parte central desse runtime e fornece o Event Loop e abstrações de I/O assíncrono; para algumas operações também usa um thread pool. Então eu não diria que V8 é o runtime inteiro: ele é a engine JavaScript dentro do Node.`,
+'Worker Threads ou fila: como escolher?':`Eu começo pelo requisito. Worker Threads me dão paralelismo de CPU dentro do processo e são úteis quando o trabalho precisa permanecer perto do request ou compartilhar o ciclo de vida da aplicação. Uma fila desacopla: o job pode sobreviver a restart, ser reprocessado, ter backoff/DLQ e ser distribuído entre várias instâncias. Se eu nunca tivesse vivido o caso em produção, eu diria isso e usaria um exemplo hipotético: uma geração pesada de PDF. Se for síncrona e curta, eu avaliaria Worker; se pode ser job assíncrono com status, eu tenderia a fila pela resiliência e escala.`,
+'E se eu nunca tiver passado por esse cenário em produção?':`Eu não inventaria um case. Eu responderia: “não tive exatamente esse cenário em produção, então não quero fingir que tive. Mas meu raciocínio seria este...”. Aí eu explicaria requisitos, opções, trade-offs, como faria um spike ou teste de carga e quais métricas usaria para decidir. Se eu tiver um laboratório ou projeto próprio relacionado, eu conecto dizendo explicitamente que foi nesse contexto. Isso mostra honestidade e capacidade de engenharia ao mesmo tempo.`,
+'Como você garantiria idempotência nesse worker?':`Eu parto do princípio de que a mensagem pode ser entregue mais de uma vez. Uso um eventId ou idempotencyKey estável e levo a garantia para uma transação no banco. Por exemplo, uma tabela processed_messages com eventId UNIQUE: tento registrar esse ID e aplicar o efeito de negócio na mesma transação. Depois do commit eu faço ACK. Se eu cair depois do commit e antes do ACK, a mensagem será entregue novamente, mas a UNIQUE constraint me diz que o efeito já foi aplicado e eu apenas trato como duplicata.`,
+'Idempotência fica no código ou no banco?':`Eu colocaria a decisão de fluxo no código e a garantia de unicidade no banco. O código sabe o que significa uma duplicata e qual resposta devolver; o banco é quem consegue arbitrar atomicamente entre várias instâncias concorrentes. Um check do tipo SELECT exists seguido de INSERT é vulnerável a race condition, porque dois consumers podem ler “não existe” ao mesmo tempo. Uma UNIQUE constraint ou operação atômica fecha essa janela.`,
+'Projete um receptor de webhook de pagamentos.':`Na entrada eu validaria assinatura sobre o raw body e timestamp para reduzir replay. Depois uso o eventId do provedor para deduplicação, persisto o payload e metadados de forma durável e devolvo 2xx o mais rápido possível. A partir daí processo assíncrono: worker idempotente, retries internos com backoff, DLQ para mensagens problemáticas e status separado de recebido/processado. Isso evita prender a disponibilidade do provedor ao meu processamento interno.`,
+'Projete um serviço que entrega webhooks para clientes.':`Eu modelaria evento e tentativas de entrega. Persisto primeiro, enfileiro por endpoint e cada worker assina o payload com HMAC e envia com timeout. Falha transitória recebe retry com exponential backoff e jitter; depois do limite vai para DLQ ou estado de falha, mantendo histórico e status consultável. Eu também pensaria em rotação de segredo, rate limit por cliente, circuit breaking para endpoint ruim, replay manual controlado e um eventId estável para o consumidor deduplicar.`,
+'Como evitar renders desnecessários?':`Eu começo medindo no React DevTools Profiler, porque render extra nem sempre é gargalo e render não significa necessariamente mutação no DOM. Se houver custo real, primeiro tento reduzir a área afetada: estado mais local, componentes menores e Context menos amplo. Depois estabilizo props quando necessário e uso React.memo, useMemo ou useCallback com critério. No fim eu comparo o profiling antes e depois; memoização sem medição pode só trocar CPU por complexidade e memória.`,
+'''
+if long_marker in s:
+    s = s.replace(long_marker, long_marker + long_add, 1)
+else:
+    raise SystemExit('longAnswers marker not found')
+
+# Likely follow-ups discovered in the live mock interview.
+hints_marker = 'const nextHints={\n'
+hints = r'''\
+'V8, Node.js e libuv: qual é a diferença?':'Quais operações realmente usam o thread pool do libuv?',
+'Worker Threads ou fila: como escolher?':'E se você nunca tiver usado Worker Threads em produção?',
+'E se eu nunca tiver passado por esse cenário em produção?':'Como você validaria sua hipótese antes de levar a solução para produção?',
+'Como você garantiria idempotência nesse worker?':'E se duas instâncias receberem a mesma mensagem ao mesmo tempo?',
+'Idempotência fica no código ou no banco?':'Por que um SELECT antes do INSERT não resolve a concorrência?',
+'Projete um receptor de webhook de pagamentos.':'O que acontece se você persistir, responder 2xx e cair antes de processar?',
+'Projete um serviço que entrega webhooks para clientes.':'Como você impediria um endpoint ruim de consumir todos os workers?',
+'Como evitar renders desnecessários?':'Como você provaria pelo Profiler que a otimização realmente melhorou?',
+'''
+if hints_marker in s:
+    s = s.replace(hints_marker, hints_marker + hints, 1)
+
+# Make the discoveries easy to find during the interview.
+s = s.replace("const hotTerms=['OO'", "const hotTerms=['webhook','Worker Threads','concorrência','OO'", 1)
+
+# Ensure Alexandre Mode can jump from its existing Worker-vs-queue question to the new searchable card.
+s = s.replace("['Worker Threads ou fila: como escolhe?','Worker é paralelismo dentro do processo; fila desacopla execução, dá retry e distribuição entre processos. Escolho pelo ciclo de vida e resiliência do trabalho.','worker threads']", "['Worker Threads ou fila: como escolhe?','Worker é paralelismo dentro do processo; fila desacopla execução, dá retry e distribuição entre processos. Escolho pelo ciclo de vida e resiliência do trabalho.','Worker Threads ou fila']", 1)
+
+p.write_text(s, encoding='utf-8')
+print('V4.5 applied')
