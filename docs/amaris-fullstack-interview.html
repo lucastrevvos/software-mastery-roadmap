@@ -509,7 +509,6 @@ const shortOverrides={
 'At-least-once, at-most-once e exactly-once?':'At-least-once aceita duplicação, at-most-once aceita perda e exactly-once depende muito do escopo. Em aplicações distribuídas eu geralmente projeto para at-least-once + idempotência.'
 };
 const longAnswers={
-\
 'V8, Node.js e libuv: qual é a diferença?':`Eu separaria os papéis. V8 é a engine que compila e executa JavaScript. Node.js é o runtime de servidor: ele embute o V8 e adiciona módulos nativos, bindings e integração com o sistema operacional. A libuv é uma parte central desse runtime e fornece o Event Loop e abstrações de I/O assíncrono; para algumas operações também usa um thread pool. Então eu não diria que V8 é o runtime inteiro: ele é a engine JavaScript dentro do Node.`,
 'Worker Threads ou fila: como escolher?':`Eu começo pelo requisito. Worker Threads me dão paralelismo de CPU dentro do processo e são úteis quando o trabalho precisa permanecer perto do request ou compartilhar o ciclo de vida da aplicação. Uma fila desacopla: o job pode sobreviver a restart, ser reprocessado, ter backoff/DLQ e ser distribuído entre várias instâncias. Se eu nunca tivesse vivido o caso em produção, eu diria isso e usaria um exemplo hipotético: uma geração pesada de PDF. Se for síncrona e curta, eu avaliaria Worker; se pode ser job assíncrono com status, eu tenderia a fila pela resiliência e escala.`,
 'E se eu nunca tiver passado por esse cenário em produção?':`Eu não inventaria um case. Eu responderia: “não tive exatamente esse cenário em produção, então não quero fingir que tive. Mas meu raciocínio seria este...”. Aí eu explicaria requisitos, opções, trade-offs, como faria um spike ou teste de carga e quais métricas usaria para decidir. Se eu tiver um laboratório ou projeto próprio relacionado, eu conecto dizendo explicitamente que foi nesse contexto. Isso mostra honestidade e capacidade de engenharia ao mesmo tempo.`,
@@ -566,7 +565,6 @@ const esc=s=>s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&q
 function renderChips(){const c=document.getElementById('chips');c.innerHTML=categories.map(x=>`<button class="chip ${x===active?'active':''}" data-cat="${esc(x)}">${esc(x)}</button>`).join('');c.querySelectorAll('.chip').forEach(b=>b.onclick=()=>{active=b.dataset.cat;renderChips();filter()})}
 
 const nextHints={
-\
 'V8, Node.js e libuv: qual é a diferença?':'Quais operações realmente usam o thread pool do libuv?',
 'Worker Threads ou fila: como escolher?':'E se você nunca tiver usado Worker Threads em produção?',
 'E se eu nunca tiver passado por esse cenário em produção?':'Como você validaria sua hipótese antes de levar a solução para produção?',
