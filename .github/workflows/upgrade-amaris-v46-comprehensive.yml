@@ -1,0 +1,59 @@
+name: Upgrade Amaris Interview Copilot V4.6
+
+on:
+  push:
+    paths:
+      - 'tools/upgrade_amaris_v46_comprehensive.py'
+      - '.github/workflows/upgrade-amaris-v46-comprehensive.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  upgrade:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Build V4.6
+        run: python tools/upgrade_amaris_v46_comprehensive.py
+      - name: Validate required coverage
+        run: |
+          grep -q 'Interview Copilot V4.6' docs/amaris-fullstack-interview.html
+          grep -q 'Quais problemas novos Event-Driven traz?' docs/amaris-fullstack-interview.html
+          grep -q 'O Event Loop executa I/O?' docs/amaris-fullstack-interview.html
+          grep -q 'POST precisa ser idempotente?' docs/amaris-fullstack-interview.html
+          grep -q 'O que realmente dispara render no React?' docs/amaris-fullstack-interview.html
+          grep -q 'FOR UPDATE SKIP LOCKED resolve o quê?' docs/amaris-fullstack-interview.html
+          grep -q 'Como começar uma pergunta de system design?' docs/amaris-fullstack-interview.html
+      - name: Parse JavaScript
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+          s=Path('docs/amaris-fullstack-interview.html').read_text(encoding='utf-8')
+          parts=re.findall(r'<script>([\s\S]*?)</script>',s)
+          if not parts:
+              raise SystemExit('script tag not found')
+          Path('/tmp/copilot.js').write_text('\n'.join(parts),encoding='utf-8')
+          PY
+          node --check /tmp/copilot.js
+      - name: Commit V4.6
+        run: |
+          if git diff --quiet; then
+            echo 'No changes'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/amaris-fullstack-interview.html
+          git commit -m 'feat: expand interview copilot with comprehensive follow-ups'
+          git push
