@@ -1,5 +1,6 @@
 from pathlib import Path
 
+# Triggered patch: render Alexandre data only after alexandreRounds is initialized.
 p = Path('docs/amaris-fullstack-interview.html')
 s = p.read_text(encoding='utf-8')
 
