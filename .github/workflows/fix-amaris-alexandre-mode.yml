@@ -1,0 +1,29 @@
+name: Fix Amaris Alexandre Mode
+
+on:
+  push:
+    paths:
+      - 'tools/fix_amaris_alexandre_mode.py'
+      - '.github/workflows/fix-amaris-alexandre-mode.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Apply Alexandre Mode fix
+        run: python tools/fix_amaris_alexandre_mode.py
+      - name: Commit fix
+        run: |
+          if git diff --quiet -- docs/amaris-fullstack-interview.html; then
+            echo "No changes"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/amaris-fullstack-interview.html
+          git commit -m "fix: render Alexandre Mode after data initialization"
+          git push
