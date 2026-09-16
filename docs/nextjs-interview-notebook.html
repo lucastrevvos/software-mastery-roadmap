@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Next.js — Interview Lab</title>
+<link rel="stylesheet" href="css/app.css?v=2.1.0">
+<style>
+body{line-height:1.65}.lab-nav{display:flex;gap:10px;flex-wrap:wrap;padding-top:28px}.lab-nav a{color:#8dc8ff;text-decoration:none;border:1px solid #26384c;border-radius:999px;padding:7px 11px}.lab-nav .active{color:#70f4b2}.lab-hero{padding-top:36px!important}.lab-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}.lab-card,.note,.tradeoff,.next{padding:16px;border-radius:12px}.lab-card{background:#14243a;border:1px solid #26384c}.note{background:#0a1724;border:1px solid #25425f}.tradeoff{background:#0a1724;border-left:3px solid #55e6a5}.next{background:#0a1724;border:1px dashed #8c6d39}pre{overflow:auto;background:#07101c;border:1px solid #22364b;border-radius:12px;padding:16px;white-space:pre-wrap}code{font-family:Consolas,monospace;color:#8dc8ff}table{width:100%;border-collapse:collapse}.table-wrap{overflow:auto}th,td{padding:11px;border-bottom:1px solid #22364b;text-align:left;vertical-align:top}th{color:#70f4b2}.done{color:#70f4b2}.pending{color:#f3c86b}.tag{display:inline-block;padding:2px 8px;border:1px solid #31506e;border-radius:999px;margin:2px 5px 2px 0;color:#9fc9ed;font-size:.85rem}
+</style>
+</head>
+<body>
+<nav class="shell lab-nav"><a href="index.html">← Roadmap</a><a href="distributed-systems-notebook.html">Sistemas Distribuídos</a><a class="active" href="nextjs-interview-notebook.html">Next.js</a></nav>
+<header class="hero shell lab-hero"><div><p class="eyebrow">INTERVIEW REFRESH LAB</p><h1>Next.js — entender, quebrar, corrigir e explicar</h1><p class="hero-copy">Pausa estratégica no laboratório distribuído para revisar React/Next.js com foco em entrevista sênior: rendering, Server/Client Components, cache, hidratação, BFF e conexão com sistemas distribuídos.</p></div><div class="hero-badge"><span>Estado atual</span><strong>Planejado</strong><small>nenhum experimento deste caderno foi marcado como executado ainda</small></div></header>
+<main class="shell">
+<section class="panel"><p class="eyebrow">CONTEXTO DA VAGA</p><h2>Prioridade correta</h2><p>A vaga usada como referência exige React.js, Hooks, Context API, NestJS, TypeScript, microsserviços, mensageria, Docker/Kubernetes e GCP. Next.js não aparece explicitamente. Portanto, React continua sendo requisito direto; Next.js entra como revisão estratégica de React moderno e arquitetura web.</p><div class="note"><strong>Regra de entrevista:</strong> não afirmar que a empresa usa Next.js sem evidência. Se perguntarem, explicar experiência e decisões com Next.js, mas separar isso dos requisitos documentados da vaga.</div></section>
+
+<section class="panel"><p class="eyebrow">POR QUE EMPRESAS ADOTAM NEXT.JS</p><h2>Não é só “React com rotas”</h2><div class="lab-grid"><div class="lab-card"><strong>Convenções</strong><span class="muted">routing, layouts, bundling e otimizações integradas reduzem decisões repetitivas.</span></div><div class="lab-card"><strong>Rendering</strong><span class="muted">permite combinar renderização estática, dinâmica, streaming e componentes de servidor.</span></div><div class="lab-card"><strong>Menos JavaScript</strong><span class="muted">Server Components permitem manter partes da árvore no servidor e mandar menos JS ao browser.</span></div><div class="lab-card"><strong>SEO e performance</strong><span class="muted">HTML pode existir antes da execução de JavaScript no cliente.</span></div><div class="lab-card"><strong>Full-stack/BFF</strong><span class="muted">Route Handlers e Server Actions permitem lógica server-side próxima da UI.</span></div><div class="lab-card"><strong>Padronização de equipe</strong><span class="muted">uma arquitetura comum para projetos React reduz variações entre times.</span></div></div></section>
+
+<section class="panel"><p class="eyebrow">MODELO MENTAL</p><h2>React x Next.js</h2><pre>React
+  └─ biblioteca/modelo de componentes e UI
+
+Next.js
+  └─ framework em cima de React
+      ├─ routing
+      ├─ rendering no servidor
+      ├─ Server Components
+      ├─ cache/revalidation
+      ├─ Route Handlers
+      ├─ build/bundling
+      └─ deployment/runtime conventions</pre><div class="tradeoff"><strong>Importante:</strong> Server Components e SSR não são sinônimos. Server Components definem onde um componente executa e quanto JS vai ao cliente; SSR descreve a geração de HTML no servidor. Podem trabalhar juntos.</div></section>
+
+<section class="panel"><p class="eyebrow">RENDERING · OBRIGATÓRIO</p><h2>O que precisa sair de cabeça na entrevista</h2><div class="table-wrap"><table><thead><tr><th>Estratégia</th><th>Quando</th><th>Trade-off</th></tr></thead><tbody>
+<tr><td>CSR</td><td>UI altamente interativa; dados podem chegar após carregar o shell</td><td>mais trabalho/JS no browser; conteúdo inicial pode chegar depois</td></tr>
+<tr><td>SSR / dynamic rendering</td><td>dados personalizados ou muito frescos por request</td><td>mais computação/latência no servidor</td></tr>
+<tr><td>SSG / prerender</td><td>conteúdo igual para muitos usuários e pouco mutável</td><td>excelente custo/performance; pode ficar desatualizado</td></tr>
+<tr><td>ISR / revalidation</td><td>queremos velocidade estática com atualização periódica/on-demand</td><td>aceita uma janela de staleness</td></tr>
+<tr><td>Streaming / Suspense</td><td>uma parte da tela é lenta mas não deve bloquear tudo</td><td>mais estados e boundaries para projetar</td></tr>
+</tbody></table></div></section>
+
+<section class="panel"><p class="eyebrow">SERVER x CLIENT COMPONENTS</p><h2>A boundary que mais cai em Next moderno</h2><pre>Server Component (default no App Router)
+├─ pode buscar DB/API no servidor
+├─ pode usar secrets server-side
+├─ reduz JS enviado ao browser
+└─ não usa useState/useEffect/window/localStorage
+
+Client Component ('use client')
+├─ state
+├─ event handlers
+├─ effects
+├─ browser APIs
+└─ custom hooks client-side</pre><div class="note"><strong>Heurística:</strong> deixar a maior árvore possível no servidor e empurrar <code>'use client'</code> para ilhas realmente interativas, em vez de transformar páginas inteiras em Client Components.</div></section>
+
+<section class="panel"><p class="eyebrow">NEXT.JS + SISTEMAS DISTRIBUÍDOS</p><h2>Eles se encontram na borda do sistema</h2><pre>Browser
+   ↓
+Next.js
+   ├─ SSR / Server Components
+   ├─ BFF / Route Handlers
+   ├─ auth/session
+   ├─ cache
+   └─ agregação de dados
+          ↓
+   NestJS / APIs / microsserviços
+      ├─ Orders
+      ├─ Payments
+      └─ outros serviços</pre><p>Next.js não substitui RabbitMQ nem torna automaticamente um sistema distribuído. Porém, quando roda como servidor, pode ser mais um serviço distribuído: terá réplicas, falhas, caches locais, chamadas de rede, timeouts e observabilidade.</p><div class="tradeoff"><strong>Conexão importante:</strong> cache em memória de uma instância Next não é automaticamente compartilhado com outra instância. Em ambientes com múltiplas réplicas, decisões de cache também viram decisões distribuídas.</div></section>
+
+<section class="panel"><p class="eyebrow">PLANO PRÁTICO</p><h2>Construir → quebrar → observar → explicar</h2><div class="table-wrap"><table><thead><tr><th>Status</th><th>Experimento</th><th>Problema provocado</th><th>O que prova</th></tr></thead><tbody>
+<tr><td class="pending">Agora</td><td>Next Payments Dashboard</td><td>Server Component usando hook/client API</td><td>Server/Client boundary e <code>'use client'</code></td></tr>
+<tr><td class="pending">Depois</td><td>SSR vs CSR</td><td>dados carregam tarde no browser</td><td>onde buscar dados e impacto no HTML inicial</td></tr>
+<tr><td class="pending">Depois</td><td>Cache stale</td><td>pagamento mudou no backend mas dashboard mostra valor antigo</td><td>cache, freshness e revalidation</td></tr>
+<tr><td class="pending">Depois</td><td>Hydration mismatch</td><td>HTML do servidor diverge do primeiro render do cliente</td><td>hidratação e código não determinístico/browser-only</td></tr>
+<tr><td class="pending">Depois</td><td>Route Handler como BFF</td><td>browser acessa backend diretamente e expõe acoplamento/credenciais</td><td>BFF, auth, proxy e separação de responsabilidades</td></tr>
+<tr><td class="pending">Depois</td><td>Duas réplicas Next</td><td>cache local diverge entre instâncias</td><td>estado local x estado distribuído, cache compartilhado ou rendering uncached</td></tr>
+</tbody></table></div></section>
+
+<section class="panel"><p class="eyebrow">HISTÓRIA DE ENTREVISTA A CONSTRUIR</p><h2>Não decorar API: defender decisões</h2><pre>"Num laboratório recente, integrei um dashboard Next.js a um backend distribuído.
+Primeiro provoquei erros de boundary entre Server e Client Components.
+Depois provoquei dado stale por cache e, por fim, rodei múltiplas instâncias para observar que cache local não é estado compartilhado.
+A correção dependeu do requisito de freshness: para dados transacionais preferi leitura dinâmica/uncached; para dados tolerantes a staleness, cache + revalidation."
+</pre><div class="note"><strong>Honestidade:</strong> descrever como laboratório/projeto prático. Não apresentar como incidente de produção de uma empresa se isso não aconteceu.</div></section>
+
+<section class="panel"><p class="eyebrow">CHECKLIST DE ENTREVISTA</p><h2>Domínio mínimo antes de voltar ao RabbitMQ</h2><p><span class="tag">App Router</span><span class="tag">Server Components</span><span class="tag">Client Components</span><span class="tag">use client</span><span class="tag">hydration</span><span class="tag">SSR</span><span class="tag">SSG</span><span class="tag">ISR</span><span class="tag">streaming</span><span class="tag">Suspense</span><span class="tag">cache/revalidation</span><span class="tag">Route Handlers</span><span class="tag">Server Actions</span><span class="tag">loading/error boundaries</span><span class="tag">auth/security</span><span class="tag">performance</span><span class="tag">deployment replicas</span></p></section>
+
+<div class="next"><strong>Próximo experimento:</strong> criar um pequeno <code>next-payments-dashboard</code> consumindo o Payments/Orders lab. Primeiro vamos quebrar deliberadamente a boundary Server/Client; depois usaremos a mesma tela para os experimentos de SSR, cache stale e múltiplas réplicas.</div>
+</main>
+<footer class="shell footer"><span>Software Mastery Roadmap · Next.js Interview Lab</span><a href="https://github.com/lucastrevvos/software-mastery-roadmap">Repositório</a></footer>
+</body>
+</html>
