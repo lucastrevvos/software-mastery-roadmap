@@ -10,9 +10,25 @@ body{line-height:1.65}.lab-nav{display:flex;gap:10px;flex-wrap:wrap;padding-top:
 </head>
 <body>
 <nav class="shell lab-nav"><a href="index.html">← Roadmap</a><a href="distributed-systems-notebook.html">Sistemas Distribuídos</a><a class="active" href="nextjs-interview-notebook.html">Next.js</a></nav>
-<header class="hero shell lab-hero"><div><p class="eyebrow">INTERVIEW REFRESH LAB</p><h1>Next.js — entender, quebrar, corrigir e explicar</h1><p class="hero-copy">Pausa estratégica no laboratório distribuído para revisar React/Next.js com foco em entrevista sênior: rendering, Server/Client Components, cache, hidratação, BFF e conexão com sistemas distribuídos.</p></div><div class="hero-badge"><span>Estado atual</span><strong>Planejado</strong><small>nenhum experimento deste caderno foi marcado como executado ainda</small></div></header>
+<header class="hero shell lab-hero"><div><p class="eyebrow">INTERVIEW REFRESH LAB</p><h1>Next.js + Arquitetura Web Moderna</h1><p class="hero-copy">Pausa estratégica no laboratório distribuído para atualizar o vocabulário e a prática: browser/server, rendering, Server/Client Components, cache, hidratação, BFF, microfrontends, Module Federation e a ligação com sistemas distribuídos.</p></div><div class="hero-badge"><span>Estado atual</span><strong>Fundamentos modernos</strong><small>microfrontends entram depois dos fundamentos de rendering e boundaries</small></div></header>
 <main class="shell">
-<section class="panel"><p class="eyebrow">CONTEXTO DA VAGA</p><h2>Prioridade correta</h2><p>A vaga usada como referência exige React.js, Hooks, Context API, NestJS, TypeScript, microsserviços, mensageria, Docker/Kubernetes e GCP. Next.js não aparece explicitamente. Portanto, React continua sendo requisito direto; Next.js entra como revisão estratégica de React moderno e arquitetura web.</p><div class="note"><strong>Regra de entrevista:</strong> não afirmar que a empresa usa Next.js sem evidência. Se perguntarem, explicar experiência e decisões com Next.js, mas separar isso dos requisitos documentados da vaga.</div></section>
+<section class="panel"><p class="eyebrow">CONTEXTO DA VAGA</p><h2>Prioridade correta</h2><p>A vaga usada como referência exige React.js, Hooks, Context API, NestJS, TypeScript, microsserviços, mensageria, Docker/Kubernetes e GCP. Next.js e microfrontends não aparecem explicitamente. Portanto, React continua sendo requisito direto; Next.js e microfrontends entram como atualização estratégica de arquitetura web moderna.</p><div class="note"><strong>Regra de entrevista:</strong> não afirmar que a empresa usa Next.js ou microfrontends sem evidência. Se perguntarem, explicar domínio conceitual, experiência prática e trade-offs.</div></section>
+
+<section class="panel" id="modern-map"><p class="eyebrow">MAPA DO ZERO</p><h2>Os termos modernos em ordem de dependência</h2><pre>Browser ↔ rede ↔ servidor
+        ↓
+CSR / SSR / SSG / ISR
+        ↓
+hydration + streaming
+        ↓
+Server Components / Client Components
+        ↓
+BFF / API Gateway
+        ↓
+frontend monolith x microfrontend
+        ↓
+Module Federation / composição / deploy independente
+        ↓
+cache, observabilidade, contratos e falhas entre partes</pre><div class="note"><strong>Objetivo:</strong> não memorizar siglas isoladas. Cada conceito entra porque resolve um problema concreto do conceito anterior.</div></section>
 
 <section class="panel"><p class="eyebrow">POR QUE EMPRESAS ADOTAM NEXT.JS</p><h2>Não é só “React com rotas”</h2><div class="lab-grid"><div class="lab-card"><strong>Convenções</strong><span class="muted">routing, layouts, bundling e otimizações integradas reduzem decisões repetitivas.</span></div><div class="lab-card"><strong>Rendering</strong><span class="muted">permite combinar renderização estática, dinâmica, streaming e componentes de servidor.</span></div><div class="lab-card"><strong>Menos JavaScript</strong><span class="muted">Server Components permitem manter partes da árvore no servidor e mandar menos JS ao browser.</span></div><div class="lab-card"><strong>SEO e performance</strong><span class="muted">HTML pode existir antes da execução de JavaScript no cliente.</span></div><div class="lab-card"><strong>Full-stack/BFF</strong><span class="muted">Route Handlers e Server Actions permitem lógica server-side próxima da UI.</span></div><div class="lab-card"><strong>Padronização de equipe</strong><span class="muted">uma arquitetura comum para projetos React reduz variações entre times.</span></div></div></section>
 
@@ -27,15 +43,15 @@ Next.js
       ├─ cache/revalidation
       ├─ Route Handlers
       ├─ build/bundling
-      └─ deployment/runtime conventions</pre><div class="tradeoff"><strong>Importante:</strong> Server Components e SSR não são sinônimos. Server Components definem onde um componente executa e quanto JS vai ao cliente; SSR descreve a geração de HTML no servidor. Podem trabalhar juntos.</div></section>
+      └─ deployment/runtime conventions</pre><div class="tradeoff"><strong>Importante:</strong> Server Components e SSR não são sinônimos. Server Components definem onde um componente executa e quanto JS vai ao cliente; SSR descreve a geração de HTML no servidor.</div></section>
 
-<section class="panel"><p class="eyebrow">RENDERING · OBRIGATÓRIO</p><h2>O que precisa sair de cabeça na entrevista</h2><div class="table-wrap"><table><thead><tr><th>Estratégia</th><th>Quando</th><th>Trade-off</th></tr></thead><tbody>
-<tr><td>CSR</td><td>UI altamente interativa; dados podem chegar após carregar o shell</td><td>mais trabalho/JS no browser; conteúdo inicial pode chegar depois</td></tr>
-<tr><td>SSR / dynamic rendering</td><td>dados personalizados ou muito frescos por request</td><td>mais computação/latência no servidor</td></tr>
-<tr><td>SSG / prerender</td><td>conteúdo igual para muitos usuários e pouco mutável</td><td>excelente custo/performance; pode ficar desatualizado</td></tr>
-<tr><td>ISR / revalidation</td><td>queremos velocidade estática com atualização periódica/on-demand</td><td>aceita uma janela de staleness</td></tr>
-<tr><td>Streaming / Suspense</td><td>uma parte da tela é lenta mas não deve bloquear tudo</td><td>mais estados e boundaries para projetar</td></tr>
-</tbody></table></div></section>
+<section class="panel"><p class="eyebrow">RENDERING · OBRIGATÓRIO</p><h2>O que precisa sair de cabeça na entrevista</h2><div class="table-wrap"><table><thead><tr><th>Estratégia</th><th>Modelo mental</th><th>Trade-off</th></tr></thead><tbody>
+<tr><td>CSR</td><td>browser executa React e busca/renderiza boa parte do conteúdo</td><td>mais trabalho/JS no browser; conteúdo pode aparecer depois</td></tr>
+<tr><td>SSR / dynamic rendering</td><td>HTML é produzido no servidor para a requisição</td><td>dados frescos/personalizados; aumenta trabalho e latência no servidor</td></tr>
+<tr><td>SSG / prerender</td><td>HTML é preparado antes das requisições, geralmente no build</td><td>rápido/barato; pode ficar stale</td></tr>
+<tr><td>ISR / revalidation</td><td>conteúdo estático pode ser regenerado sem rebuild total</td><td>equilibra velocidade e freshness; admite janela de staleness</td></tr>
+<tr><td>Streaming / Suspense</td><td>servidor envia partes prontas enquanto outras ainda carregam</td><td>evita bloquear a tela inteira; exige boas boundaries</td></tr>
+</tbody></table></div><div class="note"><strong>Hydration:</strong> depois que HTML renderizado no servidor chega ao browser, React conecta comportamento/interatividade ao markup. Divergências entre HTML inicial e o primeiro render client-side podem causar hydration mismatch.</div></section>
 
 <section class="panel"><p class="eyebrow">SERVER x CLIENT COMPONENTS</p><h2>A boundary que mais cai em Next moderno</h2><pre>Server Component (default no App Router)
 ├─ pode buscar DB/API no servidor
@@ -48,7 +64,39 @@ Client Component ('use client')
 ├─ event handlers
 ├─ effects
 ├─ browser APIs
-└─ custom hooks client-side</pre><div class="note"><strong>Heurística:</strong> deixar a maior árvore possível no servidor e empurrar <code>'use client'</code> para ilhas realmente interativas, em vez de transformar páginas inteiras em Client Components.</div></section>
+└─ custom hooks client-side</pre><div class="note"><strong>Heurística:</strong> deixar a maior árvore possível no servidor e empurrar <code>'use client'</code> para ilhas realmente interativas.</div></section>
+
+<section class="panel" id="bff"><p class="eyebrow">BFF</p><h2>Backend for Frontend</h2><pre>Browser Web ──→ Web BFF ──→ Orders / Payments / Customers
+Mobile App  ──→ Mobile BFF ──→ mesmos serviços de domínio</pre><p>O BFF é uma camada backend criada para as necessidades específicas de uma interface. Pode agregar respostas, adaptar formatos, lidar com cookies/tokens e reduzir acoplamento entre UI e vários serviços internos.</p><div class="tradeoff"><strong>Não é obrigatório:</strong> adiciona deploy, observabilidade e um salto de rede. Faz sentido quando clientes diferentes têm necessidades diferentes ou quando a UI precisa compor muitos serviços.</div></section>
+
+<section class="panel" id="microfrontends"><p class="eyebrow">MICROFRONTENDS</p><h2>O equivalente conceitual dos microsserviços no frontend — com ressalvas</h2><pre>Frontend monolítico
+└─ uma aplicação React
+   └─ um build/deploy principal
+
+Microfrontend
+└─ produto composto por aplicações frontend independentes
+   ├─ Orders MFE
+   ├─ Payments MFE
+   └─ Account MFE
+
+Shell / Host
+├─ compõe navegação/layout
+├─ carrega os MFEs
+└─ entrega ao usuário uma experiência única</pre><p>A motivação principal não é “performance” nem “usar tecnologia moderna”. É permitir que partes do produto, normalmente alinhadas a domínios e equipes, possam evoluir e ser implantadas de forma independente.</p><div class="tradeoff"><strong>Custos:</strong> dependências duplicadas, consistência visual, roteamento entre aplicações, autenticação, contratos, comunicação entre MFEs, observabilidade, testes integrados e maior complexidade operacional.</div></section>
+
+<section class="panel" id="module-federation"><p class="eyebrow">MODULE FEDERATION</p><h2>Uma forma de compor microfrontends em runtime</h2><pre>Host / Shell
+  ├─ carrega remote Orders
+  ├─ carrega remote Payments
+  └─ compartilha dependências selecionadas (ex.: React)</pre><p>Module Federation permite que uma aplicação exponha módulos e outra os consuma, inclusive de builds/deploys separados. É uma ferramenta possível para microfrontends, não a definição de microfrontend.</p><div class="note"><strong>Distinção de entrevista:</strong> microfrontend é a arquitetura/organização; Module Federation é uma técnica de composição e compartilhamento de módulos.</div></section>
+
+<section class="panel"><p class="eyebrow">MICROFRONTEND + BACKEND DISTRIBUÍDO</p><h2>Onde as duas arquiteturas realmente se encontram</h2><pre>Browser
+  ↓
+Shell
+  ├─ Orders MFE ──→ Orders BFF ──→ Orders Service
+  ├─ Payments MFE → Payments BFF → Payments Service
+  └─ Account MFE ─→ Account BFF ─→ Account Service
+                                      ↓
+                              eventos / mensageria</pre><p>Uma organização pode alinhar uma equipe vertical a um domínio: UI + BFF + serviço de domínio + banco/infra. Isso aumenta autonomia, mas só vale o custo quando produto e organização realmente precisam dessa independência.</p></section>
 
 <section class="panel"><p class="eyebrow">NEXT.JS + SISTEMAS DISTRIBUÍDOS</p><h2>Eles se encontram na borda do sistema</h2><pre>Browser
    ↓
@@ -59,29 +107,22 @@ Next.js
    ├─ cache
    └─ agregação de dados
           ↓
-   NestJS / APIs / microsserviços
-      ├─ Orders
-      ├─ Payments
-      └─ outros serviços</pre><p>Next.js não substitui RabbitMQ nem torna automaticamente um sistema distribuído. Porém, quando roda como servidor, pode ser mais um serviço distribuído: terá réplicas, falhas, caches locais, chamadas de rede, timeouts e observabilidade.</p><div class="tradeoff"><strong>Conexão importante:</strong> cache em memória de uma instância Next não é automaticamente compartilhado com outra instância. Em ambientes com múltiplas réplicas, decisões de cache também viram decisões distribuídas.</div></section>
+   NestJS / APIs / microsserviços</pre><p>Next.js não substitui RabbitMQ nem torna automaticamente um sistema distribuído. Porém, quando roda como servidor, também terá réplicas, falhas, caches locais, chamadas de rede, timeouts e observabilidade.</p><div class="tradeoff"><strong>Conexão importante:</strong> estado/cache local de uma instância não deve ser presumido como estado global compartilhado.</div></section>
 
 <section class="panel"><p class="eyebrow">PLANO PRÁTICO</p><h2>Construir → quebrar → observar → explicar</h2><div class="table-wrap"><table><thead><tr><th>Status</th><th>Experimento</th><th>Problema provocado</th><th>O que prova</th></tr></thead><tbody>
 <tr><td class="pending">Agora</td><td>Next Payments Dashboard</td><td>Server Component usando hook/client API</td><td>Server/Client boundary e <code>'use client'</code></td></tr>
-<tr><td class="pending">Depois</td><td>SSR vs CSR</td><td>dados carregam tarde no browser</td><td>onde buscar dados e impacto no HTML inicial</td></tr>
-<tr><td class="pending">Depois</td><td>Cache stale</td><td>pagamento mudou no backend mas dashboard mostra valor antigo</td><td>cache, freshness e revalidation</td></tr>
-<tr><td class="pending">Depois</td><td>Hydration mismatch</td><td>HTML do servidor diverge do primeiro render do cliente</td><td>hidratação e código não determinístico/browser-only</td></tr>
-<tr><td class="pending">Depois</td><td>Route Handler como BFF</td><td>browser acessa backend diretamente e expõe acoplamento/credenciais</td><td>BFF, auth, proxy e separação de responsabilidades</td></tr>
-<tr><td class="pending">Depois</td><td>Duas réplicas Next</td><td>cache local diverge entre instâncias</td><td>estado local x estado distribuído, cache compartilhado ou rendering uncached</td></tr>
+<tr><td class="pending">Depois</td><td>SSR vs CSR</td><td>dados carregam tarde no browser</td><td>onde renderizar e buscar dados</td></tr>
+<tr><td class="pending">Depois</td><td>Cache stale</td><td>pagamento muda no backend mas dashboard mostra valor antigo</td><td>cache, freshness e revalidation</td></tr>
+<tr><td class="pending">Depois</td><td>Hydration mismatch</td><td>HTML do servidor diverge do primeiro render do cliente</td><td>hidratação e determinismo</td></tr>
+<tr><td class="pending">Depois</td><td>Route Handler como BFF</td><td>UI precisa agregar/proteger acesso a serviços</td><td>BFF e separação de responsabilidades</td></tr>
+<tr><td class="pending">Depois</td><td>Duas réplicas Next</td><td>estado/cache local diverge</td><td>fronteira com sistemas distribuídos</td></tr>
+<tr><td class="pending">Capstone</td><td>Shell + 2 microfrontends</td><td>deploy separado e integração entre partes</td><td>autonomia, composição, contratos e custo operacional</td></tr>
+<tr><td class="pending">Capstone</td><td>Module Federation</td><td>host carrega remote independentemente</td><td>runtime composition e shared dependencies</td></tr>
 </tbody></table></div></section>
 
-<section class="panel"><p class="eyebrow">HISTÓRIA DE ENTREVISTA A CONSTRUIR</p><h2>Não decorar API: defender decisões</h2><pre>"Num laboratório recente, integrei um dashboard Next.js a um backend distribuído.
-Primeiro provoquei erros de boundary entre Server e Client Components.
-Depois provoquei dado stale por cache e, por fim, rodei múltiplas instâncias para observar que cache local não é estado compartilhado.
-A correção dependeu do requisito de freshness: para dados transacionais preferi leitura dinâmica/uncached; para dados tolerantes a staleness, cache + revalidation."
-</pre><div class="note"><strong>Honestidade:</strong> descrever como laboratório/projeto prático. Não apresentar como incidente de produção de uma empresa se isso não aconteceu.</div></section>
+<section class="panel"><p class="eyebrow">CHECKLIST DE ENTREVISTA</p><h2>Vocabulário que deve virar modelo mental</h2><p><span class="tag">Browser/Server boundary</span><span class="tag">CSR</span><span class="tag">SSR</span><span class="tag">SSG</span><span class="tag">ISR</span><span class="tag">hydration</span><span class="tag">streaming</span><span class="tag">App Router</span><span class="tag">Server Components</span><span class="tag">Client Components</span><span class="tag">cache/revalidation</span><span class="tag">BFF</span><span class="tag">API Gateway</span><span class="tag">microfrontend</span><span class="tag">shell/host</span><span class="tag">remote</span><span class="tag">Module Federation</span><span class="tag">independent deployment</span><span class="tag">contracts</span><span class="tag">observability</span></p></section>
 
-<section class="panel"><p class="eyebrow">CHECKLIST DE ENTREVISTA</p><h2>Domínio mínimo antes de voltar ao RabbitMQ</h2><p><span class="tag">App Router</span><span class="tag">Server Components</span><span class="tag">Client Components</span><span class="tag">use client</span><span class="tag">hydration</span><span class="tag">SSR</span><span class="tag">SSG</span><span class="tag">ISR</span><span class="tag">streaming</span><span class="tag">Suspense</span><span class="tag">cache/revalidation</span><span class="tag">Route Handlers</span><span class="tag">Server Actions</span><span class="tag">loading/error boundaries</span><span class="tag">auth/security</span><span class="tag">performance</span><span class="tag">deployment replicas</span></p></section>
-
-<div class="next"><strong>Próximo experimento:</strong> criar um pequeno <code>next-payments-dashboard</code> consumindo o Payments/Orders lab. Primeiro vamos quebrar deliberadamente a boundary Server/Client; depois usaremos a mesma tela para os experimentos de SSR, cache stale e múltiplas réplicas.</div>
+<div class="next"><strong>Próximo experimento:</strong> começar do fundamento: criar <code>next-payments-dashboard</code>, comparar CSR e rendering no servidor, provocar um problema concreto e só depois avançar para BFF e microfrontends. O capstone será um shell com módulos de Orders e Payments independentes.</div>
 </main>
 <footer class="shell footer"><span>Software Mastery Roadmap · Next.js Interview Lab</span><a href="https://github.com/lucastrevvos/software-mastery-roadmap">Repositório</a></footer>
 </body>
