@@ -1,8 +1,8 @@
 {
   "meta": {
     "title": "Full Stack Software Architect & Cloud Engineer",
-    "version": "2.0.0",
-    "updatedAt": "2026-08-31",
+    "version": "2.0.1",
+    "updatedAt": "2026-09-17",
     "principles": [
       "Fundamentos fortes antes de especialização",
       "Priorizar certificados oficiais e verificáveis",
@@ -26,27 +26,34 @@
           "provider": "Harvard University",
           "credential": "CS50 Certificate",
           "cost": "free",
-          "status": "in-progress",
-          "priority": "core"
-        },
-        {
-          "id": "foundational-csharp",
-          "order": 2,
-          "title": "Foundational C# with Microsoft",
-          "provider": "Microsoft + freeCodeCamp",
-          "credential": "Foundational C# Certification",
-          "cost": "free",
-          "status": "not-started",
-          "priority": "core"
+          "status": "completed",
+          "priority": "core",
+          "completedAt": "2026-09-17",
+          "credentialUrl": "https://certificates.cs50.io/45c5bcfe-b8cc-4aac-ad26-96b3f4824997.pdf?size=letter",
+          "evidence": {
+            "finalProject": "LifeBoard",
+            "repository": "https://github.com/lucastrevvos/lifeboard",
+            "video": "https://youtu.be/9Tg2Lx1C2bk"
+          }
         },
         {
           "id": "fcc-js-v10",
-          "order": 3,
+          "order": 2,
           "title": "JavaScript Certification",
           "provider": "freeCodeCamp",
           "credential": "JavaScript Certification",
           "cost": "free",
           "status": "in-progress",
+          "priority": "core"
+        },
+        {
+          "id": "foundational-csharp",
+          "order": 3,
+          "title": "Foundational C# with Microsoft",
+          "provider": "Microsoft + freeCodeCamp",
+          "credential": "Foundational C# Certification",
+          "cost": "free",
+          "status": "not-started",
           "priority": "core"
         },
         {
@@ -882,7 +889,7 @@
         "Não medir progresso por quantidade bruta de problemas.",
         "Competitive programming é ferramenta de raciocínio, não objetivo profissional."
       ],
-      "currentApplication": "Durante CS50x, priorizar exercícios oficiais. Após blocos estruturais, usar poucos problemas externos seletivos. Na Week 5, aproximadamente 3–5 problemas compatíveis de DSA após o trabalho oficial.",
+      "currentApplication": "CS50x concluído. A trilha principal ativa agora é a freeCodeCamp JavaScript Certification: priorizar exercícios e projetos oficiais, manter o LAB-FCC-JS após o núcleo de Data Types + Review + Quiz e usar checkpoints cumulativos sem bloquear o avanço. Foundational C# vem em seguida.",
       "algorithmGymStart": "Após CS50P"
     }
   }
