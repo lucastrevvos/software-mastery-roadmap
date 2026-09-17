@@ -1,8 +1,8 @@
 {
-  "updatedAt": "2026-09-06T23:10:00-03:00",
+  "updatedAt": "2026-09-17T18:22:00-03:00",
   "courses": {
     "cs50x": {
-      "status": "in-progress",
+      "status": "completed",
       "started": true,
       "completed": [
         "lecture-0",
@@ -29,9 +29,11 @@
         "week-6-python",
         "problem-set-7-songs",
         "problem-set-9-birthdays",
-        "problem-set-9-finance"
+        "problem-set-9-finance",
+        "final-project-lifeboard",
+        "cs50x-complete"
       ],
-      "current": "final-project",
+      "current": null,
       "notes": [
         "Lecture 0 concluída.",
         "Projeto Scratch Bug vs Developer concluído, validado e submetido via CS50.",
@@ -75,8 +77,18 @@
         "PSet 9 — Birthdays concluído e submetido em 2026-09-06 com GET/POST, Jinja, formulário, validação e SQLite.",
         "PSet 9 — Finance iniciado em 2026-09-06.",
         "PSet 9 — Finance concluído funcionalmente em 2026-09-06; submissão final não foi explicitamente confirmada no chat.",
-        "CS50x — Final Project alcançado em 2026-09-06."
-      ]
+        "CS50x — Final Project alcançado em 2026-09-06.",
+        "Final Project — LifeBoard concluído e submetido em 2026-09-17; repositório: https://github.com/lucastrevvos/lifeboard; demo: https://youtu.be/9Tg2Lx1C2bk.",
+        "CS50x concluído oficialmente em 2026-09-17. Certificado: https://certificates.cs50.io/45c5bcfe-b8cc-4aac-ad26-96b3f4824997.pdf?size=letter.",
+        "A conclusão oficial no gradebook/certificado supera as notas históricas em que algumas submissões ainda apareciam como não confirmadas no chat. Curso concluído continua separado de Mastery/Retention no laboratório."
+      ],
+      "completedAt": "2026-09-17",
+      "certificateUrl": "https://certificates.cs50.io/45c5bcfe-b8cc-4aac-ad26-96b3f4824997.pdf?size=letter",
+      "finalProject": {
+        "title": "LifeBoard",
+        "repository": "https://github.com/lucastrevvos/lifeboard",
+        "video": "https://youtu.be/9Tg2Lx1C2bk"
+      }
     },
     "fcc-js-v10": {
       "status": "in-progress",
@@ -97,7 +109,8 @@
       "notes": [
         "Posição confirmada por captura em 2026-08-21.",
         "Próximo exercício: Build a Sentence Maker.",
-        "Primeiro LAB-FCC-JS será aberto após o núcleo de Data Types + Review + Quiz, para avaliar um bloco de competência completo em vez de cada exercício isolado."
+        "Primeiro LAB-FCC-JS será aberto após o núcleo de Data Types + Review + Quiz, para avaliar um bloco de competência completo em vez de cada exercício isolado.",
+        "Retomado como trilha principal em 2026-09-17 após a conclusão oficial do CS50x."
       ]
     },
     "foundational-csharp": {
@@ -177,7 +190,7 @@
       "note": "O lab completo foi preservado, mas foi adiado para um checkpoint cumulativo ou para o sprint de mastery pós-CS50. Durante o curso, o PSet oficial é a prática principal e só vazamentos conceituais relevantes serão retestados."
     }
   },
-  "current": "final-project",
-  "currentTask": "final-project",
-  "currentTaskUrl": "https://cs50.harvard.edu/x/project/"
+  "current": "fcc-js-v10",
+  "currentTask": "variables-and-strings/build-a-sentence-maker",
+  "currentTaskUrl": "https://www.freecodecamp.org/learn/full-stack-developer/lab-sentence-maker/build-a-sentence-maker"
 }
