@@ -16,7 +16,8 @@ Este repositório é a fonte da verdade para quatro coisas diferentes:
 
 - **CS50x:** concluído em 17/09/2026 — certificado oficial: https://certificates.cs50.io/45c5bcfe-b8cc-4aac-ad26-96b3f4824997.pdf?size=letter. Final Project: **LifeBoard** — https://github.com/lucastrevvos/lifeboard · demo: https://youtu.be/9Tg2Lx1C2bk.
 - **freeCodeCamp JavaScript Certification:** em andamento e agora é a **trilha principal ativa**. Posição registrada: Variables and Strings; próximo exercício: Build a Sentence Maker.
-- **Foundational C# with Microsoft:** não iniciado; passa a vir depois da conclusão da trilha JavaScript.
+- **CS50's Introduction to Databases with SQL:** em andamento em paralelo desde 18/09/2026; etapa atual: Week 0 — Querying — https://cs50.harvard.edu/sql/weeks/0/.
+- **Foundational C# with Microsoft:** não iniciado; continua como próxima trilha sequencial após JavaScript.
 - **Programming Mastery Lab:** ativo em modo de checkpoints cumulativos. A conclusão do CS50x registra progresso externo, mas não promove automaticamente competências para Mastery 7.
 - **Engineering Impact:** trilha transversal ativa para transformar maturidade técnica em projetos, documentação, open source e contribuição pública quando fizer sentido.
 - **Método Especial JCI:** camada transversal ativa; Japão = profundidade, China = treino deliberado, Índia = aplicação/empregabilidade. Ver [JCI_METHOD.md](JCI_METHOD.md).
