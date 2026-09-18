@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-17T18:22:00-03:00",
+  "updatedAt": "2026-09-18T12:09:00-03:00",
   "courses": {
     "cs50x": {
       "status": "completed",
@@ -119,9 +119,15 @@
       "completed": []
     },
     "cs50-sql": {
-      "status": "not-started",
-      "started": false,
-      "completed": []
+      "status": "in-progress",
+      "started": true,
+      "completed": [],
+      "current": "week-0-querying",
+      "notes": [
+        "CS50 SQL retomado em paralelo em 2026-09-18. Início oficial: Week 0 — Querying."
+      ],
+      "courseUrl": "https://cs50.harvard.edu/sql/",
+      "currentTaskUrl": "https://cs50.harvard.edu/sql/weeks/0/"
     },
     "cs50p": {
       "status": "not-started",
