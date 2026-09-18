@@ -182,6 +182,43 @@ function roadmapDescription(item){
   return item.description||roadmapDescriptions[item.id]||item.note||'';
 }
 
+function accessStatusLabel(status){
+  return ({
+    available:'disponível',
+    optional:'opcional',
+    internal:'interno',
+    'materials-only':'material/autoestudo',
+    none:'não existe'
+  }[status]||status||'a definir');
+}
+
+function renderAccessEntry(label,info){
+  if(!info) return '';
+  const link=info.url
+    ? `<a href="${escapeHtml(info.url)}" target="_blank" rel="noopener noreferrer">Abrir ↗</a>`
+    : '';
+  const platform=info.platform? `<strong>${escapeHtml(info.platform)}</strong>` : '<strong>Sem plataforma externa</strong>';
+  const cost=info.cost? `<span class="roadmap-access-cost">${escapeHtml(info.cost)}</span>` : '';
+  return `
+    <div class="roadmap-access-row roadmap-access-${escapeHtml(info.status||'none')}">
+      <span class="roadmap-access-label">${label}</span>
+      <div class="roadmap-access-body">
+        <div class="roadmap-access-platform">${platform}<span class="roadmap-access-status">${escapeHtml(accessStatusLabel(info.status))}</span></div>
+        <div class="roadmap-access-kind">${escapeHtml(info.kind||'')}</div>
+        <div class="roadmap-access-footer">${cost}${link}</div>
+      </div>
+    </div>`;
+}
+
+function renderAccess(item){
+  if(!item.access) return '';
+  return `
+    <div class="roadmap-access">
+      ${renderAccessEntry('ESTUDO',item.access.learning)}
+      ${renderAccessEntry('CREDENCIAL',item.access.credential)}
+    </div>`;
+}
+
 function renderCourseNotes(notes=[]){
   if(!notes.length) return '';
   return `
@@ -227,6 +264,7 @@ function renderRoadmap(roadmap,courseNotes){
               ${roadmapDescription(item)?`<p class="roadmap-description">${roadmapDescription(item)}</p>`:''}
               <small>${item.provider} · ${item.credential}</small>
               ${paidPrice(item)}
+              ${renderAccess(item)}
               ${renderCourseNotes(courseNotes?.courses?.[item.id]||[])}
             </div>
             <span class="${statusClass(item.status)}">${statusLabel(item.status)}</span>
