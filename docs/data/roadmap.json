@@ -259,7 +259,7 @@
           "priceSource": "https://www.cisco.com/site/us/en/learn/training-certifications/exams/ccst-networking.html",
           "status": "not-started",
           "priority": "optional-credential-target",
-          "note": "Alvo opcional depois do Networking Basics. Comprar a prova apenas com domínio suficiente e quando houver ROI, voucher ou utilidade clara para o mercado.",
+          "note": "Alvo opcional depois do Networking Basics. A preparação oficial gratuita pode ser feita pela Network Technician Career Path da Cisco Networking Academy (~70h). O exame 100-150 CCST Networking custa US$125 e é entregue por Pearson VUE ou Certiport. Certificações CCST obtidas em ou após 15/07/2025 têm validade de 5 anos. Comprar a prova apenas com domínio suficiente e quando houver ROI, voucher ou utilidade clara para o mercado.",
           "access": {
             "learning": {
               "status": "available",
