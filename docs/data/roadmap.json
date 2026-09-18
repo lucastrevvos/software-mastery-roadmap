@@ -1,8 +1,8 @@
 {
   "meta": {
     "title": "Full Stack Software Architect & Cloud Engineer",
-    "version": "2.0.1",
-    "updatedAt": "2026-09-17",
+    "version": "2.0.2",
+    "updatedAt": "2026-09-18",
     "principles": [
       "Fundamentos fortes antes de especialização",
       "Priorizar certificados oficiais e verificáveis",
@@ -63,8 +63,10 @@
           "provider": "Harvard University",
           "credential": "CS50 Certificate",
           "cost": "free",
-          "status": "not-started",
-          "priority": "core"
+          "status": "in-progress",
+          "priority": "core",
+          "source": "https://cs50.harvard.edu/sql/",
+          "note": "Em paralelo com a freeCodeCamp JavaScript Certification a partir de 2026-09-18. Início: Week 0 — Querying."
         },
         {
           "id": "cs50p",
@@ -889,7 +891,7 @@
         "Não medir progresso por quantidade bruta de problemas.",
         "Competitive programming é ferramenta de raciocínio, não objetivo profissional."
       ],
-      "currentApplication": "CS50x concluído. A trilha principal ativa agora é a freeCodeCamp JavaScript Certification: priorizar exercícios e projetos oficiais, manter o LAB-FCC-JS após o núcleo de Data Types + Review + Quiz e usar checkpoints cumulativos sem bloquear o avanço. Foundational C# vem em seguida.",
+      "currentApplication": "CS50x concluído. Trilha principal ativa: freeCodeCamp JavaScript Certification. Em paralelo, CS50 SQL foi retomado pela Week 0 — Querying. Foundational C# continua como próxima trilha sequencial após JavaScript; manter paralelismo controlado para não transformar o roadmap em múltiplas grades simultâneas.",
       "algorithmGymStart": "Após CS50P"
     }
   }
