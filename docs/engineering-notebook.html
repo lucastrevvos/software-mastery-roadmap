@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Caderno do Engenheiro</title><style>body{font-family:system-ui,sans-serif;background:#08111f;color:#e7eef8;line-height:1.6;margin:0}main,header,footer{max-width:980px;margin:auto;padding:28px}.card{background:#0f1b2d;border:1px solid #26364d;border-radius:16px;padding:22px;margin:20px 0}code,pre{font-family:Consolas,monospace}pre{background:#07101c;padding:16px;border-radius:10px;overflow:auto}.tag{color:#a7f3d0;font-weight:700}.muted{color:#9fb0c7}.note{border-left:3px solid #67e8f9;padding-left:14px}</style></head><body><header><div class="tag">ENGINEERING NOTEBOOK · LEVEL 1</div><h1>Caderno do Engenheiro</h1><p class="muted">Registro da jornada de fundamentos: observar, quebrar, explicar e só então avançar.</p></header><main><section class="card"><h2>Status</h2><p><strong>12 dias registrados.</strong> Trilha atual: C + Linux + sistemas. Próximo: sockets, endereços IP e portas.</p></section><section class="card"><div class="tag">DIA 1</div><h2>Código-fonte → processo → kernel</h2><p>Usei <code>gcc</code>, <code>file</code> e <code>strace</code>. Descobri que <code>printf()</code> termina em operações como <code>write()</code> e que stdout é um fluxo.</p></section><section class="card"><div class="tag">DIA 2</div><h2>Programa ≠ processo</h2><p>Observei PID, PPID, <code>/proc/PID/status</code> e file descriptors. Duas execuções do mesmo executável viraram processos independentes.</p></section><section class="card"><div class="tag">DIA 3</div><h2>Scheduler e context switch</h2><p>Usei <code>top</code>, <code>taskset</code>, <code>pidstat</code> e <code>nice</code>. Entendi a diferença entre tarefa viva, pronta, esperando e realmente executando.</p></section><section class="card"><div class="tag">DIA 4</div><h2>Memória virtual</h2><p>Com <code>/proc/PID/maps</code> e <code>pmap</code>, observei que cada processo trabalha em seu próprio espaço de endereçamento virtual.</p></section><section class="card"><div class="tag">DIA 5</div><h2>Stack, heap e malloc</h2><p>Separei ponteiro de objeto apontado, estudei stack frames e acompanhei <code>malloc()</code>, <code>free()</code>, <code>brk</code> e <code>mmap</code>. Usei Valgrind para observar leaks.</p></section><section class="card"><div class="tag">DIA 6</div><h2>Lifetime e debugging</h2><p>Aprendi que endereço existente não garante objeto válido. Entrei em GDB e passei a observar a execução com <code>break</code>, <code>run</code>, <code>next</code>, <code>step</code>, <code>print</code> e <code>bt</code>.</p></section><section class="card"><div class="tag">DIA 7</div><h2>Arquivos, bytes e file descriptors</h2><p>Hoje abandonei temporariamente <code>fopen()</code> e fui para a interface mais próxima do kernel: <code>open()</code>, <code>read()</code>, <code>write()</code> e <code>close()</code>.</p><pre><code>#include &lt;fcntl.h&gt;
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Caderno do Engenheiro</title><style>body{font-family:system-ui,sans-serif;background:#08111f;color:#e7eef8;line-height:1.6;margin:0}main,header,footer{max-width:980px;margin:auto;padding:28px}.card{background:#0f1b2d;border:1px solid #26364d;border-radius:16px;padding:22px;margin:20px 0}code,pre{font-family:Consolas,monospace}pre{background:#07101c;padding:16px;border-radius:10px;overflow:auto}.tag{color:#a7f3d0;font-weight:700}.muted{color:#9fb0c7}.note{border-left:3px solid #67e8f9;padding-left:14px}</style></head><body><header><div class="tag">ENGINEERING NOTEBOOK · LEVEL 1</div><h1>Caderno do Engenheiro</h1><p class="muted">Registro da jornada de fundamentos: observar, quebrar, explicar e só então avançar.</p></header><main><section class="card"><h2>Status</h2><p><strong>13 dias registrados.</strong> Trilha atual: C + Linux + redes. Próximo: connect(), accept() e o primeiro fluxo TCP.</p></section><section class="card"><div class="tag">DIA 1</div><h2>Código-fonte → processo → kernel</h2><p>Usei <code>gcc</code>, <code>file</code> e <code>strace</code>. Descobri que <code>printf()</code> termina em operações como <code>write()</code> e que stdout é um fluxo.</p></section><section class="card"><div class="tag">DIA 2</div><h2>Programa ≠ processo</h2><p>Observei PID, PPID, <code>/proc/PID/status</code> e file descriptors. Duas execuções do mesmo executável viraram processos independentes.</p></section><section class="card"><div class="tag">DIA 3</div><h2>Scheduler e context switch</h2><p>Usei <code>top</code>, <code>taskset</code>, <code>pidstat</code> e <code>nice</code>. Entendi a diferença entre tarefa viva, pronta, esperando e realmente executando.</p></section><section class="card"><div class="tag">DIA 4</div><h2>Memória virtual</h2><p>Com <code>/proc/PID/maps</code> e <code>pmap</code>, observei que cada processo trabalha em seu próprio espaço de endereçamento virtual.</p></section><section class="card"><div class="tag">DIA 5</div><h2>Stack, heap e malloc</h2><p>Separei ponteiro de objeto apontado, estudei stack frames e acompanhei <code>malloc()</code>, <code>free()</code>, <code>brk</code> e <code>mmap</code>. Usei Valgrind para observar leaks.</p></section><section class="card"><div class="tag">DIA 6</div><h2>Lifetime e debugging</h2><p>Aprendi que endereço existente não garante objeto válido. Entrei em GDB e passei a observar a execução com <code>break</code>, <code>run</code>, <code>next</code>, <code>step</code>, <code>print</code> e <code>bt</code>.</p></section><section class="card"><div class="tag">DIA 7</div><h2>Arquivos, bytes e file descriptors</h2><p>Hoje abandonei temporariamente <code>fopen()</code> e fui para a interface mais próxima do kernel: <code>open()</code>, <code>read()</code>, <code>write()</code> e <code>close()</code>.</p><pre><code>#include &lt;fcntl.h&gt;
 #include &lt;unistd.h&gt;
 #include &lt;stdio.h&gt;
 
@@ -259,4 +259,77 @@ EINTR
 SA_RESTART
 kill -INT PID
 kill -TERM PID
-strace -e trace=read,write,rt_sigaction,rt_sigreturn</code></pre><p class="note"><strong>Modelo mental:</strong> sinal = evento assíncrono entregue ao processo; handler = reação curta e restrita; fluxo principal = lugar para executar trabalho complexo e cleanup. Syscalls bloqueantes podem interagir com sinais através de <code>EINTR</code> ou reinício automático.</p></section><section class="card"><div class="tag">PRÓXIMO</div><h2>Primeiro socket</h2><p>Agora finalmente vou criar um file descriptor que não representa arquivo nem pipe, mas um endpoint de rede. A próxima pergunta é: o que <code>socket()</code> cria e como IP + porta identificam onde os bytes devem chegar?</p></section></main><footer class="muted">Software Mastery Roadmap · Engineering Notebook · Level 1</footer></body></html>
+strace -e trace=read,write,rt_sigaction,rt_sigreturn</code></pre><p class="note"><strong>Modelo mental:</strong> sinal = evento assíncrono entregue ao processo; handler = reação curta e restrita; fluxo principal = lugar para executar trabalho complexo e cleanup. Syscalls bloqueantes podem interagir com sinais através de <code>EINTR</code> ou reinício automático.</p></section><section class="card"><div class="tag">DIA 13</div><h2>Primeiro socket: IP, porta e endpoint</h2><p>Criei meu primeiro socket TCP IPv4 com <code>socket(AF_INET, SOCK_STREAM, 0)</code>. O retorno foi apenas um inteiro, como nos arquivos e pipes: outro file descriptor apontando para um objeto mantido pelo kernel.</p><pre><code>#include &lt;arpa/inet.h&gt;
+#include &lt;netinet/in.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;sys/socket.h&gt;
+#include &lt;unistd.h&gt;
+
+int main(void) {
+    int fd = socket(AF_INET, SOCK_STREAM, 0);
+    if (fd == -1) {
+        perror("socket");
+        return 1;
+    }
+
+    struct sockaddr_in addr = {0};
+    addr.sin_family = AF_INET;
+    addr.sin_port = htons(8080);
+
+    if (inet_pton(AF_INET, "127.0.0.1", &amp;addr.sin_addr) != 1) {
+        perror("inet_pton");
+        close(fd);
+        return 1;
+    }
+
+    if (bind(fd, (struct sockaddr *)&amp;addr, sizeof addr) == -1) {
+        perror("bind");
+        close(fd);
+        return 1;
+    }
+
+    if (listen(fd, 8) == -1) {
+        perror("listen");
+        close(fd);
+        return 1;
+    }
+
+    printf("PID=%d fd=%d escutando em 127.0.0.1:8080\n",
+           getpid(), fd);
+
+    sleep(30);
+    close(fd);
+    return 0;
+}</code></pre><p class="note"><strong>Descoberta #51:</strong> <code>socket()</code> cria um objeto de socket no kernel e devolve um descritor local ao processo. Nesse momento ele ainda não representa automaticamente uma conexão com alguém.</p><h3>bind(): dar um endereço local ao socket</h3><p><code>bind()</code> associou o socket ao endereço local <code>127.0.0.1:8080</code>. O IP identifica a interface/endereço local escolhido; a porta identifica um endpoint de transporte dentro daquela máquina.</p><pre><code>127.0.0.1 : 8080
+    IP       porta</code></pre><p><code>127.0.0.1</code> é loopback: tráfego destinado a ele permanece na própria máquina. Isso é ótimo para laboratório porque não expõe o serviço para a rede externa.</p><p class="note"><strong>Descoberta #52:</strong> porta não é “a aplicação”. Um processo pode possuir vários sockets/portas, e o kernel usa endereços e estado de transporte para encaminhar os bytes ao socket correto.</p><h3>Por que htons(8080)?</h3><p>O campo de porta no protocolo usa ordem de bytes de rede. <code>htons()</code> converte um inteiro de 16 bits da ordem do host para network byte order. Não devo gravar o número cru e assumir que toda arquitetura representa bytes da mesma forma.</p><p class="note"><strong>Descoberta #53:</strong> protocolos precisam de uma representação compartilhada entre máquinas; network byte order evita que endianness local vire parte acidental do protocolo.</p><h3>listen(): agora o socket é passivo</h3><p><code>listen(fd, 8)</code> não aceita cliente ainda. Ele coloca o socket TCP em modo de escuta e informa ao kernel que conexões de entrada podem ser enfileiradas até serem tratadas pela aplicação. O valor de backlog é uma solicitação sujeita às regras e limites do sistema.</p><p class="note"><strong>Descoberta #54:</strong> socket de escuta e socket de conexão não são a mesma coisa. O descritor que fica em <code>LISTEN</code> será usado para produzir novos sockets conectados quando eu chegar em <code>accept()</code>.</p><h3>Observando o kernel</h3><pre><code>ls -l /proc/PID/fd
+3 -&gt; socket:[123456]
+
+ss -ltnp
+LISTEN 0 8 127.0.0.1:8080 0.0.0.0:* users:(("first_socket",pid=...,fd=3))</code></pre><p>O arquivo em <code>/proc/PID/fd/3</code> não aponta para um caminho no disco; mostra uma referência ao socket. Já <code>ss</code> revela o estado de rede que o kernel mantém.</p><h3>strace</h3><pre><code>strace -e socket,bind,listen,close ./first_socket</code></pre><p>Rastreamento conceitual:</p><pre><code>socket(AF_INET, SOCK_STREAM, IPPROTO_IP) = 3
+bind(3, {AF_INET, port=htons(8080), addr=127.0.0.1}, ...) = 0
+listen(3, 8) = 0
+close(3) = 0</code></pre><p class="note"><strong>Descoberta #55:</strong> a API de sockets encaixa no mesmo modelo de I/O que já construí: processo → file descriptor → objeto do kernel. A novidade é que esse objeto participa da pilha de rede.</p><h3>Modelo mental</h3><pre><code>PROCESSO
+   |
+   | fd 3
+   v
+SOCKET TCP no kernel
+   |
+   +-- família: IPv4
+   +-- tipo: stream
+   +-- endereço local: 127.0.0.1
+   +-- porta local: 8080
+   +-- estado: LISTEN
+
+ainda não existe:
+cliente aceito
+dados da aplicação
+HTTP</code></pre><h3>Comandos/APIs novos</h3><pre><code>socket()
+bind()
+listen()
+inet_pton()
+htons()
+AF_INET
+SOCK_STREAM
+sockaddr_in
+ss -ltnp
+/proc/PID/fd</code></pre></section><section class="card"><div class="tag">PRÓXIMO</div><h2>Primeira conexão TCP</h2><p>Agora vou colocar dois processos frente a frente: um cliente usando <code>connect()</code> e um servidor usando <code>accept()</code>. Quero observar por que o socket de escuta continua aberto enquanto <code>accept()</code> devolve um novo file descriptor para cada conexão.</p></section></main><footer class="muted">Software Mastery Roadmap · Engineering Notebook · Level 1</footer></body></html>
