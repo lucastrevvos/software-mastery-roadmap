@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Caderno do Engenheiro</title><style>body{font-family:system-ui,sans-serif;background:#08111f;color:#e7eef8;line-height:1.6;margin:0}main,header,footer{max-width:980px;margin:auto;padding:28px}.card{background:#0f1b2d;border:1px solid #26364d;border-radius:16px;padding:22px;margin:20px 0}code,pre{font-family:Consolas,monospace}pre{background:#07101c;padding:16px;border-radius:10px;overflow:auto}.tag{color:#a7f3d0;font-weight:700}.muted{color:#9fb0c7}.note{border-left:3px solid #67e8f9;padding-left:14px}</style></head><body><header><div class="tag">ENGINEERING NOTEBOOK · LEVEL 1</div><h1>Caderno do Engenheiro</h1><p class="muted">Registro da jornada de fundamentos: observar, quebrar, explicar e só então avançar.</p></header><main><section class="card"><h2>Status</h2><p><strong>11 dias registrados.</strong> Trilha atual: C + Linux + sistemas. Próximo: sinais em profundidade e início da transição para sockets.</p></section><section class="card"><div class="tag">DIA 1</div><h2>Código-fonte → processo → kernel</h2><p>Usei <code>gcc</code>, <code>file</code> e <code>strace</code>. Descobri que <code>printf()</code> termina em operações como <code>write()</code> e que stdout é um fluxo.</p></section><section class="card"><div class="tag">DIA 2</div><h2>Programa ≠ processo</h2><p>Observei PID, PPID, <code>/proc/PID/status</code> e file descriptors. Duas execuções do mesmo executável viraram processos independentes.</p></section><section class="card"><div class="tag">DIA 3</div><h2>Scheduler e context switch</h2><p>Usei <code>top</code>, <code>taskset</code>, <code>pidstat</code> e <code>nice</code>. Entendi a diferença entre tarefa viva, pronta, esperando e realmente executando.</p></section><section class="card"><div class="tag">DIA 4</div><h2>Memória virtual</h2><p>Com <code>/proc/PID/maps</code> e <code>pmap</code>, observei que cada processo trabalha em seu próprio espaço de endereçamento virtual.</p></section><section class="card"><div class="tag">DIA 5</div><h2>Stack, heap e malloc</h2><p>Separei ponteiro de objeto apontado, estudei stack frames e acompanhei <code>malloc()</code>, <code>free()</code>, <code>brk</code> e <code>mmap</code>. Usei Valgrind para observar leaks.</p></section><section class="card"><div class="tag">DIA 6</div><h2>Lifetime e debugging</h2><p>Aprendi que endereço existente não garante objeto válido. Entrei em GDB e passei a observar a execução com <code>break</code>, <code>run</code>, <code>next</code>, <code>step</code>, <code>print</code> e <code>bt</code>.</p></section><section class="card"><div class="tag">DIA 7</div><h2>Arquivos, bytes e file descriptors</h2><p>Hoje abandonei temporariamente <code>fopen()</code> e fui para a interface mais próxima do kernel: <code>open()</code>, <code>read()</code>, <code>write()</code> e <code>close()</code>.</p><pre><code>#include &lt;fcntl.h&gt;
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Caderno do Engenheiro</title><style>body{font-family:system-ui,sans-serif;background:#08111f;color:#e7eef8;line-height:1.6;margin:0}main,header,footer{max-width:980px;margin:auto;padding:28px}.card{background:#0f1b2d;border:1px solid #26364d;border-radius:16px;padding:22px;margin:20px 0}code,pre{font-family:Consolas,monospace}pre{background:#07101c;padding:16px;border-radius:10px;overflow:auto}.tag{color:#a7f3d0;font-weight:700}.muted{color:#9fb0c7}.note{border-left:3px solid #67e8f9;padding-left:14px}</style></head><body><header><div class="tag">ENGINEERING NOTEBOOK · LEVEL 1</div><h1>Caderno do Engenheiro</h1><p class="muted">Registro da jornada de fundamentos: observar, quebrar, explicar e só então avançar.</p></header><main><section class="card"><h2>Status</h2><p><strong>12 dias registrados.</strong> Trilha atual: C + Linux + sistemas. Próximo: sockets, endereços IP e portas.</p></section><section class="card"><div class="tag">DIA 1</div><h2>Código-fonte → processo → kernel</h2><p>Usei <code>gcc</code>, <code>file</code> e <code>strace</code>. Descobri que <code>printf()</code> termina em operações como <code>write()</code> e que stdout é um fluxo.</p></section><section class="card"><div class="tag">DIA 2</div><h2>Programa ≠ processo</h2><p>Observei PID, PPID, <code>/proc/PID/status</code> e file descriptors. Duas execuções do mesmo executável viraram processos independentes.</p></section><section class="card"><div class="tag">DIA 3</div><h2>Scheduler e context switch</h2><p>Usei <code>top</code>, <code>taskset</code>, <code>pidstat</code> e <code>nice</code>. Entendi a diferença entre tarefa viva, pronta, esperando e realmente executando.</p></section><section class="card"><div class="tag">DIA 4</div><h2>Memória virtual</h2><p>Com <code>/proc/PID/maps</code> e <code>pmap</code>, observei que cada processo trabalha em seu próprio espaço de endereçamento virtual.</p></section><section class="card"><div class="tag">DIA 5</div><h2>Stack, heap e malloc</h2><p>Separei ponteiro de objeto apontado, estudei stack frames e acompanhei <code>malloc()</code>, <code>free()</code>, <code>brk</code> e <code>mmap</code>. Usei Valgrind para observar leaks.</p></section><section class="card"><div class="tag">DIA 6</div><h2>Lifetime e debugging</h2><p>Aprendi que endereço existente não garante objeto válido. Entrei em GDB e passei a observar a execução com <code>break</code>, <code>run</code>, <code>next</code>, <code>step</code>, <code>print</code> e <code>bt</code>.</p></section><section class="card"><div class="tag">DIA 7</div><h2>Arquivos, bytes e file descriptors</h2><p>Hoje abandonei temporariamente <code>fopen()</code> e fui para a interface mais próxima do kernel: <code>open()</code>, <code>read()</code>, <code>write()</code> e <code>close()</code>.</p><pre><code>#include &lt;fcntl.h&gt;
 #include &lt;unistd.h&gt;
 #include &lt;stdio.h&gt;
 
@@ -190,4 +190,73 @@ SIGCHLD
 SIGTERM
 SIGKILL
 ps -o pid,ppid,state,stat,cmd
-echo $?</code></pre><p class="note"><strong>Modelo mental:</strong> processo executa → termina → kernel preserva status → pai coleta com wait/waitpid → entrada é removida. Se o pai morrer antes, o filho vivo é reparentado; se o filho morrer antes e não for coletado, fica zombie.</p></section><section class="card"><div class="tag">PRÓXIMO</div><h2>Sinais sem magia — e então sockets</h2><p>Quero observar sinais chegando, handlers, interrupção de syscalls e por que servidores precisam lidar com encerramento gracioso. Depois disso, começo a transformar file descriptors em conexões de rede.</p></section></main><footer class="muted">Software Mastery Roadmap · Engineering Notebook · Level 1</footer></body></html>
+echo $?</code></pre><p class="note"><strong>Modelo mental:</strong> processo executa → termina → kernel preserva status → pai coleta com wait/waitpid → entrada é removida. Se o pai morrer antes, o filho vivo é reparentado; se o filho morrer antes e não for coletado, fica zombie.</p></section><section class="card"><div class="tag">DIA 12</div><h2>Sinais, handlers e syscalls interrompidas</h2><p>Instalei handlers com <code>sigaction()</code> e descobri que um sinal pode chegar de forma assíncrona enquanto o processo está executando outra coisa ou bloqueado numa syscall.</p><pre><code>#include &lt;signal.h&gt;
+#include &lt;errno.h&gt;
+#include &lt;unistd.h&gt;
+
+static volatile sig_atomic_t parar = 0;
+
+static void on_signal(int signo) {
+    (void) signo;
+    parar = 1;
+}
+
+int main(void) {
+    struct sigaction sa = {0};
+    sa.sa_handler = on_signal;
+    sigemptyset(&amp;sa.sa_mask);
+    sa.sa_flags = 0;
+
+    sigaction(SIGINT, &amp;sa, NULL);
+    sigaction(SIGTERM, &amp;sa, NULL);
+
+    char buf[128];
+
+    while (!parar) {
+        ssize_t n = read(STDIN_FILENO, buf, sizeof buf);
+
+        if (n == -1) {
+            if (errno == EINTR)
+                continue;
+            break;
+        }
+
+        if (n == 0)
+            break;
+
+        write(STDOUT_FILENO, buf, n);
+    }
+
+    return 0;
+}</code></pre><p class="note"><strong>Descoberta #47:</strong> handler de sinal pode interromper o fluxo normal em um ponto imprevisível. Por isso ele deve fazer o mínimo possível.</p><h3>Cagada do dia: printf dentro do handler</h3><p>Minha primeira versão chamava <code>printf()</code> no handler. Corrigi: muitas funções da libc não são async-signal-safe; podem estar manipulando estado interno justamente quando o sinal chega. Para comunicação simples com o fluxo principal, usei um <code>volatile sig_atomic_t</code>.</p><p class="note"><strong>Descoberta #48:</strong> código executado em contexto de sinal tem regras mais restritas que código comum. O padrão seguro é frequentemente registrar um estado mínimo no handler e deixar o fluxo normal realizar a limpeza.</p><h3>read() pode voltar antes de receber dados</h3><p>Com o processo bloqueado em <code>read()</code>, enviei <code>SIGINT</code>. Sem reinício automático daquela chamada, o retorno observado foi <code>-1</code> com <code>errno == EINTR</code>.</p><pre><code>read(...)
+    |
+    | processo dorme esperando I/O
+    |
+SIGINT chega
+    |
+handler executa
+    |
+read() pode retornar -1 / EINTR</code></pre><p class="note"><strong>Descoberta #49:</strong> erro não significa sempre “operação falhou definitivamente”. <code>EINTR</code> significa que a syscall foi interrompida por um sinal antes de completar; o programa precisa decidir se repete, encerra ou toma outra ação.</p><h3>SA_RESTART</h3><p>Ao usar <code>sa.sa_flags = SA_RESTART</code>, várias syscalls bloqueantes podem ser reiniciadas automaticamente depois do handler. Isso não vale universalmente para toda syscall/situação, então ainda preciso entender o contrato de cada operação.</p><p class="note"><strong>Descoberta #50:</strong> sinais e I/O se cruzam. Um servidor robusto não pode assumir que toda syscall bloqueante só retorna por sucesso, EOF ou erro permanente.</p><h3>Encerramento gracioso</h3><p>O modelo que quero levar para servidores é:</p><pre><code>SIGTERM
+   |
+   v
+handler: parar = 1
+   |
+   v
+fluxo principal percebe
+   |
+   +-- para de aceitar trabalho novo
+   +-- termina trabalho em andamento
+   +-- fecha descritores
+   +-- libera recursos
+   +-- exit</code></pre><p>Isso é diferente de <code>SIGKILL</code>, no qual o processo não ganha oportunidade de executar handler nem sua lógica de shutdown.</p><h3>Observação com strace</h3><pre><code>strace -e trace=read,write,rt_sigaction,rt_sigreturn ./signal_lab</code></pre><p>O rastreamento permite ver a instalação do handler, a syscall bloqueante, a entrega do sinal e o retorno ao fluxo do processo.</p><h3>Comandos/APIs novos</h3><pre><code>sigaction()
+sigemptyset()
+SIGINT
+SIGTERM
+SIGKILL
+sig_atomic_t
+errno
+EINTR
+SA_RESTART
+kill -INT PID
+kill -TERM PID
+strace -e trace=read,write,rt_sigaction,rt_sigreturn</code></pre><p class="note"><strong>Modelo mental:</strong> sinal = evento assíncrono entregue ao processo; handler = reação curta e restrita; fluxo principal = lugar para executar trabalho complexo e cleanup. Syscalls bloqueantes podem interagir com sinais através de <code>EINTR</code> ou reinício automático.</p></section><section class="card"><div class="tag">PRÓXIMO</div><h2>Primeiro socket</h2><p>Agora finalmente vou criar um file descriptor que não representa arquivo nem pipe, mas um endpoint de rede. A próxima pergunta é: o que <code>socket()</code> cria e como IP + porta identificam onde os bytes devem chegar?</p></section></main><footer class="muted">Software Mastery Roadmap · Engineering Notebook · Level 1</footer></body></html>
