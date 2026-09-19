@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Caderno do Engenheiro</title><style>body{font-family:system-ui,sans-serif;background:#08111f;color:#e7eef8;line-height:1.6;margin:0}main,header,footer{max-width:980px;margin:auto;padding:28px}.card{background:#0f1b2d;border:1px solid #26364d;border-radius:16px;padding:22px;margin:20px 0}code,pre{font-family:Consolas,monospace}pre{background:#07101c;padding:16px;border-radius:10px;overflow:auto}.tag{color:#a7f3d0;font-weight:700}.muted{color:#9fb0c7}.note{border-left:3px solid #67e8f9;padding-left:14px}</style></head><body><header><div class="tag">ENGINEERING NOTEBOOK · LEVEL 1</div><h1>Caderno do Engenheiro</h1><p class="muted">Registro da jornada de fundamentos: observar, quebrar, explicar e só então avançar.</p></header><main><section class="card"><h2>Status</h2><p><strong>13 dias registrados.</strong> Trilha atual: C + Linux + redes. Próximo: connect(), accept() e o primeiro fluxo TCP.</p></section><section class="card"><div class="tag">DIA 1</div><h2>Código-fonte → processo → kernel</h2><p>Usei <code>gcc</code>, <code>file</code> e <code>strace</code>. Descobri que <code>printf()</code> termina em operações como <code>write()</code> e que stdout é um fluxo.</p></section><section class="card"><div class="tag">DIA 2</div><h2>Programa ≠ processo</h2><p>Observei PID, PPID, <code>/proc/PID/status</code> e file descriptors. Duas execuções do mesmo executável viraram processos independentes.</p></section><section class="card"><div class="tag">DIA 3</div><h2>Scheduler e context switch</h2><p>Usei <code>top</code>, <code>taskset</code>, <code>pidstat</code> e <code>nice</code>. Entendi a diferença entre tarefa viva, pronta, esperando e realmente executando.</p></section><section class="card"><div class="tag">DIA 4</div><h2>Memória virtual</h2><p>Com <code>/proc/PID/maps</code> e <code>pmap</code>, observei que cada processo trabalha em seu próprio espaço de endereçamento virtual.</p></section><section class="card"><div class="tag">DIA 5</div><h2>Stack, heap e malloc</h2><p>Separei ponteiro de objeto apontado, estudei stack frames e acompanhei <code>malloc()</code>, <code>free()</code>, <code>brk</code> e <code>mmap</code>. Usei Valgrind para observar leaks.</p></section><section class="card"><div class="tag">DIA 6</div><h2>Lifetime e debugging</h2><p>Aprendi que endereço existente não garante objeto válido. Entrei em GDB e passei a observar a execução com <code>break</code>, <code>run</code>, <code>next</code>, <code>step</code>, <code>print</code> e <code>bt</code>.</p></section><section class="card"><div class="tag">DIA 7</div><h2>Arquivos, bytes e file descriptors</h2><p>Hoje abandonei temporariamente <code>fopen()</code> e fui para a interface mais próxima do kernel: <code>open()</code>, <code>read()</code>, <code>write()</code> e <code>close()</code>.</p><pre><code>#include &lt;fcntl.h&gt;
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Caderno do Engenheiro</title><style>body{font-family:system-ui,sans-serif;background:#08111f;color:#e7eef8;line-height:1.6;margin:0}main,header,footer{max-width:980px;margin:auto;padding:28px}.card{background:#0f1b2d;border:1px solid #26364d;border-radius:16px;padding:22px;margin:20px 0}code,pre{font-family:Consolas,monospace}pre{background:#07101c;padding:16px;border-radius:10px;overflow:auto}.tag{color:#a7f3d0;font-weight:700}.muted{color:#9fb0c7}.note{border-left:3px solid #67e8f9;padding-left:14px}</style></head><body><header><div class="tag">ENGINEERING NOTEBOOK · LEVEL 1</div><h1>Caderno do Engenheiro</h1><p class="muted">Registro da jornada de fundamentos: observar, quebrar, explicar e só então avançar.</p></header><main><section class="card"><h2>Status</h2><p><strong>14 dias registrados.</strong> Trilha atual: C + Linux + redes. Próximo: handshake TCP, estados e o que a conexão realmente garante.</p></section><section class="card"><div class="tag">DIA 1</div><h2>Código-fonte → processo → kernel</h2><p>Usei <code>gcc</code>, <code>file</code> e <code>strace</code>. Descobri que <code>printf()</code> termina em operações como <code>write()</code> e que stdout é um fluxo.</p></section><section class="card"><div class="tag">DIA 2</div><h2>Programa ≠ processo</h2><p>Observei PID, PPID, <code>/proc/PID/status</code> e file descriptors. Duas execuções do mesmo executável viraram processos independentes.</p></section><section class="card"><div class="tag">DIA 3</div><h2>Scheduler e context switch</h2><p>Usei <code>top</code>, <code>taskset</code>, <code>pidstat</code> e <code>nice</code>. Entendi a diferença entre tarefa viva, pronta, esperando e realmente executando.</p></section><section class="card"><div class="tag">DIA 4</div><h2>Memória virtual</h2><p>Com <code>/proc/PID/maps</code> e <code>pmap</code>, observei que cada processo trabalha em seu próprio espaço de endereçamento virtual.</p></section><section class="card"><div class="tag">DIA 5</div><h2>Stack, heap e malloc</h2><p>Separei ponteiro de objeto apontado, estudei stack frames e acompanhei <code>malloc()</code>, <code>free()</code>, <code>brk</code> e <code>mmap</code>. Usei Valgrind para observar leaks.</p></section><section class="card"><div class="tag">DIA 6</div><h2>Lifetime e debugging</h2><p>Aprendi que endereço existente não garante objeto válido. Entrei em GDB e passei a observar a execução com <code>break</code>, <code>run</code>, <code>next</code>, <code>step</code>, <code>print</code> e <code>bt</code>.</p></section><section class="card"><div class="tag">DIA 7</div><h2>Arquivos, bytes e file descriptors</h2><p>Hoje abandonei temporariamente <code>fopen()</code> e fui para a interface mais próxima do kernel: <code>open()</code>, <code>read()</code>, <code>write()</code> e <code>close()</code>.</p><pre><code>#include &lt;fcntl.h&gt;
 #include &lt;unistd.h&gt;
 #include &lt;stdio.h&gt;
 
@@ -332,4 +332,74 @@ AF_INET
 SOCK_STREAM
 sockaddr_in
 ss -ltnp
-/proc/PID/fd</code></pre></section><section class="card"><div class="tag">PRÓXIMO</div><h2>Primeira conexão TCP</h2><p>Agora vou colocar dois processos frente a frente: um cliente usando <code>connect()</code> e um servidor usando <code>accept()</code>. Quero observar por que o socket de escuta continua aberto enquanto <code>accept()</code> devolve um novo file descriptor para cada conexão.</p></section></main><footer class="muted">Software Mastery Roadmap · Engineering Notebook · Level 1</footer></body></html>
+/proc/PID/fd</code></pre></section><section class="card"><div class="tag">DIA 14</div><h2>connect(), accept() e a primeira conexão TCP</h2><p>Coloquei dois processos frente a frente. O servidor manteve o socket de escuta em <code>fd 3</code>; quando o cliente chamou <code>connect()</code>, o <code>accept()</code> do servidor devolveu outro descritor, por exemplo <code>fd 4</code>, dedicado àquela conexão.</p><pre><code>servidor:
+fd 3 -&gt; LISTEN 127.0.0.1:8080
+fd 4 -&gt; conexão com 127.0.0.1:porta-efêmera
+
+cliente:
+fd 3 -&gt; conexão local:porta-efêmera -&gt; 127.0.0.1:8080</code></pre><p class="note"><strong>Descoberta #56:</strong> o socket de escuta não vira a conexão do cliente. Ele continua disponível para novas conexões; <code>accept()</code> cria/devolve um novo socket conectado.</p><h3>Servidor mínimo</h3><pre><code>int listen_fd = socket(AF_INET, SOCK_STREAM, 0);
+/* bind + listen omitidos aqui */
+
+struct sockaddr_in peer;
+socklen_t peer_len = sizeof peer;
+
+int client_fd = accept(
+    listen_fd,
+    (struct sockaddr *)&amp;peer,
+    &amp;peer_len
+);
+
+char buf[64];
+ssize_t n = read(client_fd, buf, sizeof buf);
+
+if (n &gt; 0) {
+    write(STDOUT_FILENO, buf, n);
+    write(client_fd, "pong\n", 5);
+}
+
+close(client_fd);
+close(listen_fd);</code></pre><h3>Cliente mínimo</h3><pre><code>int fd = socket(AF_INET, SOCK_STREAM, 0);
+
+struct sockaddr_in server = {0};
+server.sin_family = AF_INET;
+server.sin_port = htons(8080);
+inet_pton(AF_INET, "127.0.0.1", &amp;server.sin_addr);
+
+connect(fd, (struct sockaddr *)&amp;server, sizeof server);
+
+write(fd, "ping\n", 5);
+
+char buf[64];
+ssize_t n = read(fd, buf, sizeof buf);
+
+if (n &gt; 0)
+    write(STDOUT_FILENO, buf, n);
+
+close(fd);</code></pre><p>Resultado simulado:</p><pre><code>servidor:
+ping
+
+cliente:
+pong</code></pre><p class="note"><strong>Descoberta #57:</strong> depois da conexão, socket TCP entra no mesmo modelo de I/O já conhecido: bytes entram e saem usando descritores e operações como <code>read()</code>/<code>write()</code>. TCP não entrega “HTTP”; entrega um fluxo de bytes.</p><h3>A porta efêmera do cliente</h3><p>O cliente não chamou <code>bind()</code>. Ao conectar, o kernel escolheu automaticamente um endereço local adequado e uma porta efêmera, por exemplo <code>127.0.0.1:49152</code>.</p><pre><code>cliente                       servidor
+127.0.0.1:49152  --------&gt;   127.0.0.1:8080</code></pre><p class="note"><strong>Descoberta #58:</strong> uma conexão TCP é distinguida pelo protocolo e pelo conjunto de endereços/portas das duas pontas; a porta 8080 pode participar de muitas conexões simultâneas porque o par remoto muda.</p><h3>Observando com ss</h3><pre><code>ss -tnp
+
+ESTAB 0 0 127.0.0.1:49152 127.0.0.1:8080 ...
+ESTAB 0 0 127.0.0.1:8080  127.0.0.1:49152 ...</code></pre><p>Enquanto isso, o servidor ainda aparece com:</p><pre><code>LISTEN 0 8 127.0.0.1:8080 0.0.0.0:*</code></pre><p>Ou seja, coexistem um socket em <code>LISTEN</code> e outro em estado de conexão estabelecida.</p><h3>accept() bloqueia</h3><p>Sem cliente pendente, <code>accept()</code> em modo bloqueante faz o processo esperar. Quando uma conexão fica disponível para a aplicação, a chamada retorna um novo fd.</p><p class="note"><strong>Descoberta #59:</strong> o padrão servidor bloqueante inicial é literalmente: esperar em <code>accept()</code>, receber um fd conectado, conversar por esse fd, fechar e voltar a aceitar. Isso funciona, mas mais tarde vou quebrá-lo com múltiplos clientes.</p><h3>strace dos dois lados</h3><pre><code>servidor:
+socket(...) = 3
+bind(3, ...) = 0
+listen(3, 8) = 0
+accept(3, ...) = 4
+read(4, "ping\n", ...) = 5
+write(4, "pong\n", 5) = 5
+
+cliente:
+socket(...) = 3
+connect(3, 127.0.0.1:8080, ...) = 0
+write(3, "ping\n", 5) = 5
+read(3, "pong\n", ...) = 5</code></pre><p class="note"><strong>Descoberta #60:</strong> <code>connect()</code> e <code>accept()</code> são as duas faces visíveis para a aplicação de uma conexão TCP. O kernel mantém muito mais estado por baixo; vou abrir essa caixa no próximo experimento.</p><h3>Cuidado: TCP é stream</h3><p>Para este laboratório usei mensagens minúsculas e código deliberadamente simples. Não devo concluir que um <code>write(fd, ..., 100)</code> do remetente corresponde obrigatoriamente a um único <code>read(..., 100)</code> do receptor, nem que <code>write()</code> sempre envia tudo de uma vez. TCP é um fluxo de bytes e os retornos das syscalls continuam fazendo parte do contrato.</p><h3>Comandos/APIs novos</h3><pre><code>connect()
+accept()
+getsockname()
+getpeername()
+ntohs()
+inet_ntop()
+ss -tnp
+strace -e socket,bind,listen,accept,connect,read,write,close</code></pre><p class="note"><strong>Modelo mental:</strong> listening socket identifica o ponto de entrada; cada conexão aceita recebe seu próprio socket. Um cliente é distinguido pela combinação dos endereços e portas das duas pontas, não apenas pela porta do servidor.</p></section><section class="card"><div class="tag">PRÓXIMO</div><h2>O que aconteceu dentro do TCP?</h2><p><code>connect()</code> retornou 0 e <code>accept()</code> devolveu um fd, mas isso escondeu uma conversa entre os kernels. Vou investigar SYN, SYN-ACK, ACK, estados como <code>LISTEN</code>/<code>ESTABLISHED</code> e o que TCP realmente promete — antes de colocar HTTP por cima.</p></section></main><footer class="muted">Software Mastery Roadmap · Engineering Notebook · Level 1</footer></body></html>
