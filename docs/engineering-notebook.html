@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Caderno do Engenheiro</title><style>body{font-family:system-ui,sans-serif;background:#08111f;color:#e7eef8;line-height:1.6;margin:0}main,header,footer{max-width:980px;margin:auto;padding:28px}.card{background:#0f1b2d;border:1px solid #26364d;border-radius:16px;padding:22px;margin:20px 0}code,pre{font-family:Consolas,monospace}pre{background:#07101c;padding:16px;border-radius:10px;overflow:auto}.tag{color:#a7f3d0;font-weight:700}.muted{color:#9fb0c7}.note{border-left:3px solid #67e8f9;padding-left:14px}</style></head><body><header><div class="tag">ENGINEERING NOTEBOOK · LEVEL 1</div><h1>Caderno do Engenheiro</h1><p class="muted">Registro da jornada de fundamentos: observar, quebrar, explicar e só então avançar.</p></header><main><section class="card"><h2>Status</h2><p><strong>8 dias registrados.</strong> Trilha atual: C + Linux + sistemas. Próximo: pipes, redirecionamento e composição entre processos.</p></section><section class="card"><div class="tag">DIA 1</div><h2>Código-fonte → processo → kernel</h2><p>Usei <code>gcc</code>, <code>file</code> e <code>strace</code>. Descobri que <code>printf()</code> termina em operações como <code>write()</code> e que stdout é um fluxo.</p></section><section class="card"><div class="tag">DIA 2</div><h2>Programa ≠ processo</h2><p>Observei PID, PPID, <code>/proc/PID/status</code> e file descriptors. Duas execuções do mesmo executável viraram processos independentes.</p></section><section class="card"><div class="tag">DIA 3</div><h2>Scheduler e context switch</h2><p>Usei <code>top</code>, <code>taskset</code>, <code>pidstat</code> e <code>nice</code>. Entendi a diferença entre tarefa viva, pronta, esperando e realmente executando.</p></section><section class="card"><div class="tag">DIA 4</div><h2>Memória virtual</h2><p>Com <code>/proc/PID/maps</code> e <code>pmap</code>, observei que cada processo trabalha em seu próprio espaço de endereçamento virtual.</p></section><section class="card"><div class="tag">DIA 5</div><h2>Stack, heap e malloc</h2><p>Separei ponteiro de objeto apontado, estudei stack frames e acompanhei <code>malloc()</code>, <code>free()</code>, <code>brk</code> e <code>mmap</code>. Usei Valgrind para observar leaks.</p></section><section class="card"><div class="tag">DIA 6</div><h2>Lifetime e debugging</h2><p>Aprendi que endereço existente não garante objeto válido. Entrei em GDB e passei a observar a execução com <code>break</code>, <code>run</code>, <code>next</code>, <code>step</code>, <code>print</code> e <code>bt</code>.</p></section><section class="card"><div class="tag">DIA 7</div><h2>Arquivos, bytes e file descriptors</h2><p>Hoje abandonei temporariamente <code>fopen()</code> e fui para a interface mais próxima do kernel: <code>open()</code>, <code>read()</code>, <code>write()</code> e <code>close()</code>.</p><pre><code>#include &lt;fcntl.h&gt;
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Caderno do Engenheiro</title><style>body{font-family:system-ui,sans-serif;background:#08111f;color:#e7eef8;line-height:1.6;margin:0}main,header,footer{max-width:980px;margin:auto;padding:28px}.card{background:#0f1b2d;border:1px solid #26364d;border-radius:16px;padding:22px;margin:20px 0}code,pre{font-family:Consolas,monospace}pre{background:#07101c;padding:16px;border-radius:10px;overflow:auto}.tag{color:#a7f3d0;font-weight:700}.muted{color:#9fb0c7}.note{border-left:3px solid #67e8f9;padding-left:14px}</style></head><body><header><div class="tag">ENGINEERING NOTEBOOK · LEVEL 1</div><h1>Caderno do Engenheiro</h1><p class="muted">Registro da jornada de fundamentos: observar, quebrar, explicar e só então avançar.</p></header><main><section class="card"><h2>Status</h2><p><strong>9 dias registrados.</strong> Trilha atual: C + Linux + sistemas. Próximo: exec(), criação de processos e como o shell inicia programas.</p></section><section class="card"><div class="tag">DIA 1</div><h2>Código-fonte → processo → kernel</h2><p>Usei <code>gcc</code>, <code>file</code> e <code>strace</code>. Descobri que <code>printf()</code> termina em operações como <code>write()</code> e que stdout é um fluxo.</p></section><section class="card"><div class="tag">DIA 2</div><h2>Programa ≠ processo</h2><p>Observei PID, PPID, <code>/proc/PID/status</code> e file descriptors. Duas execuções do mesmo executável viraram processos independentes.</p></section><section class="card"><div class="tag">DIA 3</div><h2>Scheduler e context switch</h2><p>Usei <code>top</code>, <code>taskset</code>, <code>pidstat</code> e <code>nice</code>. Entendi a diferença entre tarefa viva, pronta, esperando e realmente executando.</p></section><section class="card"><div class="tag">DIA 4</div><h2>Memória virtual</h2><p>Com <code>/proc/PID/maps</code> e <code>pmap</code>, observei que cada processo trabalha em seu próprio espaço de endereçamento virtual.</p></section><section class="card"><div class="tag">DIA 5</div><h2>Stack, heap e malloc</h2><p>Separei ponteiro de objeto apontado, estudei stack frames e acompanhei <code>malloc()</code>, <code>free()</code>, <code>brk</code> e <code>mmap</code>. Usei Valgrind para observar leaks.</p></section><section class="card"><div class="tag">DIA 6</div><h2>Lifetime e debugging</h2><p>Aprendi que endereço existente não garante objeto válido. Entrei em GDB e passei a observar a execução com <code>break</code>, <code>run</code>, <code>next</code>, <code>step</code>, <code>print</code> e <code>bt</code>.</p></section><section class="card"><div class="tag">DIA 7</div><h2>Arquivos, bytes e file descriptors</h2><p>Hoje abandonei temporariamente <code>fopen()</code> e fui para a interface mais próxima do kernel: <code>open()</code>, <code>read()</code>, <code>write()</code> e <code>close()</code>.</p><pre><code>#include &lt;fcntl.h&gt;
 #include &lt;unistd.h&gt;
 #include &lt;stdio.h&gt;
 
@@ -88,4 +88,47 @@ fflush()
 fileno()
 setvbuf()
 strace -e write ./programa
-time ./programa</code></pre><p class="note"><strong>Modelo mental:</strong> código → stdio/libc → buffer em user space → write() → kernel → recurso. A biblioteca existe para oferecer conveniência e também para amortizar operações caras.</p></section><section class="card"><div class="tag">PRÓXIMO</div><h2>Pipes e composição entre processos</h2><p>Se stdout e stdin são descritores, então o shell pode ligar a saída de um processo à entrada de outro. Vou investigar <code>|</code>, <code>pipe()</code>, herança de file descriptors e como processos começam a conversar entre si.</p></section></main><footer class="muted">Software Mastery Roadmap · Engineering Notebook · Level 1</footer></body></html>
+time ./programa</code></pre><p class="note"><strong>Modelo mental:</strong> código → stdio/libc → buffer em user space → write() → kernel → recurso. A biblioteca existe para oferecer conveniência e também para amortizar operações caras.</p></section><section class="card"><div class="tag">DIA 9</div><h2>Pipes, fork e processos conversando</h2><p>Investiguei o que o shell monta ao executar <code>cat arquivo.txt | grep erro</code>. A peça central é <code>pipe()</code>, que cria dois descritores: uma ponta de leitura e uma ponta de escrita.</p><pre><code>int fds[2];
+pipe(fds);
+
+fds[0] = leitura
+fds[1] = escrita</code></pre><p class="note"><strong>Descoberta #33:</strong> pipe é um canal de bytes mantido pelo kernel. Um processo escreve em uma ponta e outro lê da outra; não há arquivo temporário no meio.</p><p>Em seguida usei <code>fork()</code>. O processo filho nasceu com cópias dos descritores abertos do pai. Esses descritores podem apontar para as mesmas estruturas abertas no kernel.</p><p class="note"><strong>Descoberta #34:</strong> após <code>fork()</code>, pai e filho têm espaços de endereçamento virtuais separados, mas podem herdar referências para os mesmos recursos do kernel, incluindo pipes e arquivos abertos.</p><p>Montei uma comunicação simples:</p><pre><code>int fds[2];
+pipe(fds);
+
+pid_t pid = fork();
+
+if (pid == 0) {
+    close(fds[1]);
+
+    char buf[64];
+    ssize_t n = read(fds[0], buf, sizeof buf);
+    write(STDOUT_FILENO, buf, n);
+
+    close(fds[0]);
+} else {
+    close(fds[0]);
+
+    write(fds[1], "ola do pai\n", 11);
+    close(fds[1]);
+
+    wait(NULL);
+}</code></pre><p class="note"><strong>Descoberta #35:</strong> fechar pontas não usadas é parte da semântica do pipe. Se algum processo ainda mantiver a ponta de escrita aberta, o leitor pode continuar esperando em vez de receber EOF.</p><h3>Como o shell implementa <code>|</code></h3><pre><code>shell
+  |
+  +-- pipe()
+  |
+  +-- fork() -> filho A
+  |      dup2(pipe_write, STDOUT_FILENO)
+  |      exec(cat ...)
+  |
+  +-- fork() -> filho B
+         dup2(pipe_read, STDIN_FILENO)
+         exec(grep ...)</code></pre><p><code>dup2()</code> permite fazer um descritor existente assumir o número 0 ou 1. Assim, os programas não precisam saber que estão ligados a um pipe: <code>cat</code> continua escrevendo em stdout e <code>grep</code> continua lendo de stdin.</p><p class="note"><strong>Descoberta #36:</strong> redirecionamento no Unix funciona em grande parte porque programas usam stdin/stdout de forma abstrata, enquanto o shell rearranja os descritores antes de executar o programa.</p><h3>EOF e bloqueio</h3><p>Quando o buffer do pipe está vazio, <code>read()</code> pode bloquear esperando dados. Quando todas as pontas de escrita são fechadas, uma leitura que já consumiu os bytes pendentes retorna 0: EOF.</p><p class="note"><strong>Descoberta #37:</strong> EOF em pipe não significa “não há bytes neste instante”; significa que não existem mais escritores capazes de produzir novos bytes naquele canal.</p><h3>Comandos/APIs novos</h3><pre><code>pipe()
+fork()
+dup2()
+wait()
+waitpid()
+exec*()
+ps --forest
+pstree
+strace -f
+strace -f -e pipe,pipe2,clone,fork,vfork,dup2,execve,read,write,close</code></pre><p class="note"><strong>Modelo mental:</strong> processo A → write(fd) → buffer do pipe no kernel → read(fd) → processo B. O shell compõe programas rearranjando descritores e depois substituindo os filhos pelos executáveis desejados.</p></section><section class="card"><div class="tag">PRÓXIMO</div><h2>O que fork() e exec() realmente fazem?</h2><p>Agora que vi o shell criar filhos e conectá-los com pipes, quero separar duas operações que parecem uma só: criar um processo com <code>fork()</code> e substituir sua imagem de programa com <code>exec()</code>.</p></section></main><footer class="muted">Software Mastery Roadmap · Engineering Notebook · Level 1</footer></body></html>
