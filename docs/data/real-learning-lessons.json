@@ -2,7 +2,14 @@
   "meta": {
     "title": "Caderno de Aulas — Como Realmente Aprender Programação",
     "updatedAt": "2026-09-02",
-    "principle": "Registrar o que precisa ser recuperável, não transcrever a aula inteira."
+    "principle": "Registrar o que precisa ser recuperável, não transcrever a aula inteira.",
+    "currentRun": {
+      "startedAt": "2026-09-19",
+      "environment": "Kali Linux VM",
+      "mode": "restart-from-zero",
+      "currentLesson": "00.1",
+      "rule": "Executar todos os laboratórios exclusivamente na VM Kali; preservar o histórico anterior como referência, sem pular fundamentos."
+    }
   },
   "stages": [
     {
