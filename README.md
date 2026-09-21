@@ -17,10 +17,38 @@ Este repositório é a fonte da verdade para quatro coisas diferentes:
 - **CS50x:** concluído em 17/09/2026 — certificado oficial: https://certificates.cs50.io/45c5bcfe-b8cc-4aac-ad26-96b3f4824997.pdf?size=letter. Final Project: **LifeBoard** — https://github.com/lucastrevvos/lifeboard · demo: https://youtu.be/9Tg2Lx1C2bk.
 - **freeCodeCamp JavaScript Certification:** em andamento e agora é a **trilha principal ativa**. Posição registrada: Variables and Strings; próximo exercício: Build a Sentence Maker.
 - **CS50's Introduction to Databases with SQL:** em andamento em paralelo desde 18/09/2026; etapa atual: Week 0 — Querying — https://cs50.harvard.edu/sql/weeks/0/.
-- **Foundational C# with Microsoft:** não iniciado; continua como próxima trilha sequencial após JavaScript.
+- **Foundational C# with Microsoft:** não iniciado e intencionalmente adiado para a segunda grande janela de backend, depois da consolidação Node/Nest + Full Stack Open + profundidade de backend.
 - **Programming Mastery Lab:** ativo em modo de checkpoints cumulativos. A conclusão do CS50x registra progresso externo, mas não promove automaticamente competências para Mastery 7.
 - **Engineering Impact:** trilha transversal ativa para transformar maturidade técnica em projetos, documentação, open source e contribuição pública quando fizer sentido.
 - **Método Especial JCI:** camada transversal ativa; Japão = profundidade, China = treino deliberado, Índia = aplicação/empregabilidade. Ver [JCI_METHOD.md](JCI_METHOD.md).
+
+
+## Estratégia de execução — Employment First
+
+O roadmap é executado em **janelas de imersão**, não como uma lista de tecnologias estudadas em paralelo.
+
+Regra operacional:
+
+- no máximo **2 cursos ativos** ao mesmo tempo;
+- **1 principal** (~70–80% do esforço);
+- **1 complementar** (~20–30%);
+- uma nova stack só abre quando a janela anterior atingiu um ponto claro de uso profissional.
+
+Ordem estratégica atual:
+
+1. **JavaScript + SQL** — fechar os fundamentos ativos.
+2. **Node.js + NestJS** — atingir empregabilidade real como backend TypeScript.
+3. **Full Stack Open + React** — ampliar candidaturas para full stack sem abandonar a identidade backend.
+4. **Backend Senior Depth** — Linux, networking, Nest avançado, DDD, arquitetura, sistemas distribuídos, observabilidade e AWS.
+5. **AI-Enabled Backend** — Python just-in-time, LLM apps, RAG, agentes e LLMOps.
+6. **C#/.NET + Azure** — segunda grande janela de backend, reaplicando conceitos já dominados.
+7. **Frontend Specialization** — Next.js e Angular com profundidade.
+8. **AI/Data/Security avançados + Capstone** — especialização e credenciais de longo prazo.
+
+> Empregabilidade Gate #1: ao concluir Node.js Core + NestJS Fundamentals + projeto backend profissional, iniciar candidaturas para vagas Node.js/TypeScript/NestJS sem esperar cloud ou arquitetura avançadas.
+
+> Empregabilidade Gate #2: após o Full Stack Open, ampliar candidaturas para posições Node/React/TypeScript Full Stack.
+
 
 ## Método do laboratório
 
