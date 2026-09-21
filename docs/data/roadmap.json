@@ -343,6 +343,102 @@
           "provider": "NestJS",
           "credential": "Official NestJS Certificate of Completion",
           "cost": "paid-course",
+          "coursePrice": "US$129.99 standard; promotional pricing may apply",
+          "priceAsOf": "2026-09-21",
+          "priceSource": "https://learn.nestjs.com/p/fundamentals",
+          "status": "not-started",
+          "priority": "stack",
+          "source": "https://learn.nestjs.com/p/fundamentals",
+          "estimatedHours": "~5h / 80 lessons",
+          "note": "Curso oficial do NestJS. Certificado oficial de conclusão; não é certificação profissional independente por exame.",
+          "access": {
+            "learning": {
+              "status": "available",
+              "platform": "Official NestJS Courses",
+              "kind": "Curso oficial Fundamentals",
+              "url": "https://learn.nestjs.com/p/fundamentals",
+              "cost": "Pago; acesso vitalício"
+            },
+            "credential": {
+              "status": "available",
+              "platform": "NestJS",
+              "kind": "Official NestJS Certificate of Completion",
+              "url": "https://courses.nestjs.com/",
+              "cost": "Incluído no curso; sem exame profissional separado"
+            }
+          }
+        },
+        {
+          "id": "nestjs-official-microservices",
+          "order": 12,
+          "title": "NestJS Official — Microservices",
+          "provider": "NestJS",
+          "credential": "Official NestJS Certificate of Completion",
+          "cost": "paid-course",
+          "coursePrice": "US$59.99 standard; promotional pricing may apply",
+          "priceAsOf": "2026-09-21",
+          "priceSource": "https://learn.nestjs.com/p/microservices",
+          "status": "not-started",
+          "priority": "stack",
+          "source": "https://learn.nestjs.com/p/microservices",
+          "estimatedHours": "~2h / 20 lessons",
+          "note": "Curso oficial focado em microsserviços, mensageria e padrões de confiabilidade.",
+          "access": {
+            "learning": {
+              "status": "available",
+              "platform": "Official NestJS Courses",
+              "kind": "Curso oficial de Microservices",
+              "url": "https://learn.nestjs.com/p/microservices",
+              "cost": "Pago; acesso vitalício"
+            },
+            "credential": {
+              "status": "available",
+              "platform": "NestJS",
+              "kind": "Official NestJS Certificate of Completion",
+              "url": "https://courses.nestjs.com/",
+              "cost": "Incluído no curso; sem exame profissional separado"
+            }
+          }
+        },
+        {
+          "id": "nestjs-official-architecture",
+          "order": 13,
+          "title": "NestJS Official — Architecture & Advanced Patterns",
+          "provider": "NestJS",
+          "credential": "Official NestJS Certificate of Completion",
+          "cost": "paid-course",
+          "coursePrice": "US$94.99 standard; promotional pricing may apply",
+          "priceAsOf": "2026-09-21",
+          "priceSource": "https://learn.nestjs.com/p/architecture-and-advanced-patterns",
+          "status": "not-started",
+          "priority": "architecture-stack",
+          "source": "https://learn.nestjs.com/p/architecture-and-advanced-patterns",
+          "estimatedHours": "~2.5h / 21 lessons",
+          "note": "Curso oficial avançado alinhado ao eixo de arquitetura do roadmap.",
+          "access": {
+            "learning": {
+              "status": "available",
+              "platform": "Official NestJS Courses",
+              "kind": "Curso oficial de arquitetura e padrões avançados",
+              "url": "https://learn.nestjs.com/p/architecture-and-advanced-patterns",
+              "cost": "Pago; acesso vitalício"
+            },
+            "credential": {
+              "status": "available",
+              "platform": "NestJS",
+              "kind": "Official NestJS Certificate of Completion",
+              "url": "https://courses.nestjs.com/",
+              "cost": "Incluído no curso; sem exame profissional separado"
+            }
+          }
+        },
+        {
+          "id": "nestjs-official-fundamentals",
+          "order": 14,
+          "title": "NestJS Official — Fundamentals",
+          "provider": "NestJS",
+          "credential": "Official NestJS Certificate of Completion",
+          "cost": "paid-course",
           "coursePrice": "US$129.99 standard; official site may show promotional pricing",
           "priceAsOf": "2026-09-21",
           "priceSource": "https://learn.nestjs.com/p/fundamentals",
@@ -381,7 +477,7 @@
         },
         {
           "id": "nestjs-official-microservices",
-          "order": 12,
+          "order": 15,
           "title": "NestJS Official — Microservices",
           "provider": "NestJS",
           "credential": "Official NestJS Certificate of Completion",
@@ -422,7 +518,7 @@
         },
         {
           "id": "nestjs-official-architecture",
-          "order": 13,
+          "order": 16,
           "title": "NestJS Official — Architecture & Advanced Patterns",
           "provider": "NestJS",
           "credential": "Official NestJS Certificate of Completion",
@@ -465,7 +561,7 @@
         },
         {
           "id": "angular-official-essentials",
-          "order": 14,
+          "order": 17,
           "title": "Angular Official — Essentials + First App",
           "provider": "Angular Team / angular.dev",
           "credential": "Official learning path; no external certificate",
@@ -501,7 +597,7 @@
         },
         {
           "id": "angular-official-core",
-          "order": 15,
+          "order": 18,
           "title": "Angular Official — Components, Templates, Signals & Dependency Injection",
           "provider": "Angular Team / angular.dev",
           "credential": "Official documentation + Mastery evidence",
@@ -537,7 +633,7 @@
         },
         {
           "id": "angular-official-app-engineering",
-          "order": 16,
+          "order": 19,
           "title": "Angular Official — Routing, HTTP, Forms & Application Data Flow",
           "provider": "Angular Team / angular.dev",
           "credential": "Official documentation + applied project",
@@ -575,7 +671,7 @@
         },
         {
           "id": "angular-official-testing-debugging",
-          "order": 17,
+          "order": 20,
           "title": "Angular Official — Testing & Debugging",
           "provider": "Angular Team / angular.dev",
           "credential": "Official documentation + Mastery evidence",
@@ -610,7 +706,7 @@
         },
         {
           "id": "angular-official-performance-ssr",
-          "order": 18,
+          "order": 21,
           "title": "Angular Official — Performance, SSR/SSG, Hydration & Zoneless",
           "provider": "Angular Team / angular.dev",
           "credential": "Official documentation + applied project",
@@ -647,7 +743,7 @@
         },
         {
           "id": "angular-mastery-project",
-          "order": 19,
+          "order": 22,
           "title": "Angular Applied Project + Mastery Gate",
           "provider": "Programming Mastery Lab",
           "credential": "Internal Mastery Gate + public portfolio evidence",
@@ -674,7 +770,7 @@
         },
         {
           "id": "hackerrank-angular-basic",
-          "order": 20,
+          "order": 23,
           "title": "Angular (Basic) Skills Certification",
           "provider": "HackerRank",
           "credential": "HackerRank Angular (Basic) Certificate",
@@ -702,7 +798,7 @@
         },
         {
           "id": "hackerrank-angular-intermediate",
-          "order": 21,
+          "order": 24,
           "title": "Angular (Intermediate) Skills Certification",
           "provider": "HackerRank",
           "credential": "HackerRank Angular (Intermediate) Certificate",
@@ -730,7 +826,7 @@
         },
         {
           "id": "dotnet-backend",
-          "order": 22,
+          "order": 25,
           "title": ".NET/C# Backend Engineering",
           "provider": "Microsoft Learn + Mastery Lab",
           "credential": "Applied portfolio + badges where available",
@@ -763,7 +859,7 @@
       "items": [
         {
           "id": "cs50-web",
-          "order": 23,
+          "order": 26,
           "title": "CS50's Web Programming with Python and JavaScript",
           "provider": "Harvard University",
           "credential": "CS50 Certificate",
@@ -789,7 +885,7 @@
         },
         {
           "id": "harvard-data-science-python",
-          "order": 24,
+          "order": 27,
           "title": "Introduction to Data Science with Python",
           "provider": "Harvard University / HarvardX",
           "credential": "Verified Certificate (edX, optional)",
@@ -832,7 +928,7 @@
         },
         {
           "id": "elements-of-ai",
-          "order": 25,
+          "order": 28,
           "title": "Elements of AI — Introduction to AI",
           "provider": "University of Helsinki + MinnaLearn",
           "credential": "Free Digital Certificate",
@@ -870,7 +966,7 @@
         },
         {
           "id": "ibm-ai-foundations-understanding",
-          "order": 26,
+          "order": 29,
           "title": "AI Fundamentals: Foundations for Understanding AI",
           "provider": "IBM SkillsBuild",
           "credential": "IBM SkillsBuild Digital Credential / Credly badge",
@@ -906,7 +1002,7 @@
         },
         {
           "id": "ibm-artificial-intelligence-fundamentals",
-          "order": 27,
+          "order": 30,
           "title": "Artificial Intelligence Fundamentals",
           "provider": "IBM SkillsBuild",
           "credential": "IBM SkillsBuild Digital Credential",
@@ -941,7 +1037,7 @@
         },
         {
           "id": "umd-ai-career-empowerment",
-          "order": 28,
+          "order": 31,
           "title": "AI and Career Empowerment",
           "provider": "University of Maryland — Robert H. Smith School of Business",
           "credential": "Free Certificate of Completion",
@@ -977,7 +1073,7 @@
         },
         {
           "id": "alteryx-ml-fundamentals",
-          "order": 29,
+          "order": 32,
           "title": "Machine Learning Fundamentals Micro-Credential",
           "provider": "Alteryx",
           "credential": "Alteryx Machine Learning Fundamentals Micro-Credential / Credly",
@@ -1011,7 +1107,7 @@
         },
         {
           "id": "cs50-ai",
-          "order": 30,
+          "order": 33,
           "title": "CS50's Introduction to Artificial Intelligence with Python",
           "provider": "Harvard University",
           "credential": "CS50 Certificate",
@@ -1037,7 +1133,7 @@
         },
         {
           "id": "cs50-cyber",
-          "order": 31,
+          "order": 34,
           "title": "CS50's Introduction to Cybersecurity",
           "provider": "Harvard University",
           "credential": "CS50 Certificate",
@@ -1063,7 +1159,7 @@
         },
         {
           "id": "python-ai-engineering",
-          "order": 32,
+          "order": 35,
           "title": "Python para Engenharia de IA",
           "provider": "Mastery Lab",
           "credential": "Portfolio + Mastery Gate",
@@ -1096,7 +1192,7 @@
       "items": [
         {
           "id": "azure-foundations",
-          "order": 33,
+          "order": 36,
           "title": "Azure Fundamentals (AZ-900)",
           "provider": "Microsoft Learn",
           "credential": "Microsoft Certified: Azure Fundamentals",
@@ -1126,7 +1222,7 @@
         },
         {
           "id": "azure-developer",
-          "order": 34,
+          "order": 37,
           "title": "Azure AI Cloud Developer Associate (AI-200)",
           "provider": "Microsoft Learn",
           "credential": "Microsoft Certified: Azure AI Cloud Developer Associate",
@@ -1156,7 +1252,7 @@
         },
         {
           "id": "azure-administrator",
-          "order": 35,
+          "order": 38,
           "title": "Azure Administrator Associate (AZ-104)",
           "provider": "Microsoft Learn",
           "credential": "Microsoft Certified: Azure Administrator Associate",
@@ -1193,7 +1289,7 @@
         },
         {
           "id": "azure-solutions-architect",
-          "order": 36,
+          "order": 39,
           "title": "Designing Microsoft Azure Infrastructure Solutions (AZ-305)",
           "provider": "Microsoft Learn",
           "credential": "AZ-305 exam; with Azure Administrator Associate leads to Microsoft Certified: Azure Solutions Architect Expert",
@@ -1229,7 +1325,7 @@
         },
         {
           "id": "aws-foundations",
-          "order": 37,
+          "order": 40,
           "title": "AWS Cloud Foundations + Certified Cloud Practitioner",
           "provider": "AWS Educate / AWS Skill Builder",
           "credential": "AWS Certified Cloud Practitioner (CLF-C02) target + free AWS learning badges",
@@ -1259,7 +1355,7 @@
         },
         {
           "id": "aws-solutions-architect-associate",
-          "order": 38,
+          "order": 41,
           "title": "AWS Certified Solutions Architect — Associate (SAA-C03)",
           "provider": "AWS Training and Certification",
           "credential": "AWS Certified Solutions Architect — Associate",
@@ -1296,7 +1392,7 @@
         },
         {
           "id": "oci-foundations",
-          "order": 39,
+          "order": 42,
           "title": "OCI Foundations (2026)",
           "provider": "Oracle University",
           "credential": "Oracle Cloud Infrastructure 2026 Foundations Associate (1Z0-1085-26)",
@@ -1331,7 +1427,7 @@
       "items": [
         {
           "id": "isaqb-cpsa-f-curriculum",
-          "order": 40,
+          "order": 43,
           "title": "iSAQB CPSA-F — Official Curriculum, Glossary & Mock Exam",
           "provider": "iSAQB",
           "credential": "Official CPSA-F curriculum preparation; certification exam optional later",
@@ -1368,7 +1464,7 @@
         },
         {
           "id": "architecture-foundations",
-          "order": 41,
+          "order": 44,
           "title": "Software Architecture Foundations — Mastery Lab",
           "provider": "Programming Mastery Lab + iSAQB curriculum",
           "credential": "Architecture Mastery Gate",
@@ -1404,7 +1500,7 @@
         },
         {
           "id": "architecture-documentation",
-          "order": 42,
+          "order": 45,
           "title": "Architecture Documentation — C4, ADRs, Quality Scenarios & Architecture Communication",
           "provider": "iSAQB-aligned + Programming Mastery Lab",
           "credential": "Applied architecture documentation portfolio",
@@ -1438,7 +1534,7 @@
         },
         {
           "id": "ddd-clean-hexagonal",
-          "order": 43,
+          "order": 46,
           "title": "DDD, Clean Architecture & Hexagonal Architecture",
           "provider": "Programming Mastery Lab + primary references",
           "credential": "Applied architecture project",
@@ -1472,7 +1568,7 @@
         },
         {
           "id": "distributed-systems",
-          "order": 44,
+          "order": 47,
           "title": "Distributed Systems, Messaging & Resilience",
           "provider": "Programming Mastery Lab + vendor-neutral references",
           "credential": "Applied architecture project",
@@ -1509,7 +1605,7 @@
         },
         {
           "id": "observability-platform",
-          "order": 45,
+          "order": 48,
           "title": "Observability, CI/CD, Containers & Platform Engineering",
           "provider": "Programming Mastery Lab + cloud providers",
           "credential": "Portfolio + provider badges",
@@ -1535,7 +1631,7 @@
         },
         {
           "id": "architecture-mastery-defense",
-          "order": 46,
+          "order": 49,
           "title": "Software Architecture Mastery Gate & Architecture Defense",
           "provider": "Programming Mastery Lab",
           "credential": "Internal architecture defense + public architecture portfolio",
@@ -1569,7 +1665,7 @@
         },
         {
           "id": "isaqb-cpsa-f-exam",
-          "order": 47,
+          "order": 50,
           "title": "iSAQB Certified Professional for Software Architecture — Foundation Level (CPSA-F)",
           "provider": "iSAQB",
           "credential": "CPSA-F",
@@ -1600,7 +1696,7 @@
         },
         {
           "id": "sei-software-architecture-professional",
-          "order": 48,
+          "order": 51,
           "title": "SEI Software Architecture Professional Certificate",
           "provider": "Carnegie Mellon University — Software Engineering Institute",
           "credential": "SEI Software Architecture Professional Certificate",
@@ -1646,7 +1742,7 @@
       "items": [
         {
           "id": "llm-apps",
-          "order": 49,
+          "order": 52,
           "title": "LLM Application Engineering",
           "provider": "Mastery Lab",
           "credential": "AI application portfolio",
@@ -1672,7 +1768,7 @@
         },
         {
           "id": "rag-agents",
-          "order": 50,
+          "order": 53,
           "title": "RAG, Agents & Tool Use",
           "provider": "Mastery Lab",
           "credential": "AI systems Mastery Gate",
@@ -1698,7 +1794,7 @@
         },
         {
           "id": "llmops",
-          "order": 51,
+          "order": 54,
           "title": "Evaluation, LLMOps, Safety & Observability",
           "provider": "Mastery Lab",
           "credential": "Production AI architecture project",
@@ -1731,7 +1827,7 @@
       "items": [
         {
           "id": "capstone-system",
-          "order": 52,
+          "order": 55,
           "title": "Capstone Full Stack + Cloud + AI",
           "provider": "Programming Mastery Lab",
           "credential": "Final Mastery Gate + public portfolio",
@@ -1757,7 +1853,7 @@
         },
         {
           "id": "architecture-defense",
-          "order": 53,
+          "order": 56,
           "title": "Architecture Defense",
           "provider": "Programming Mastery Lab",
           "credential": "Oral/written architecture defense",
