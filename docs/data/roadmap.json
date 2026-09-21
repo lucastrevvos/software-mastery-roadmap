@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Full Stack Software Architect & Cloud Engineer",
-    "version": "3.0.0",
+    "version": "3.0.1",
     "updatedAt": "2026-09-21",
     "principles": [
       "Fundamentos fortes antes de especialização",
@@ -250,14 +250,14 @@
         },
         {
           "id": "node-nest-employability-project",
-          "title": "Node/Nest Backend Employability Project + Gate",
+          "title": "KM One — Node/Nest Backend Employability Project + Gate",
           "provider": "Programming Mastery Lab",
           "credential": "Internal Employability Gate",
           "cost": "free",
           "status": "not-started",
           "priority": "employment",
           "source": "./mastery-gates/",
-          "description": "Construir e defender um backend profissional em TypeScript/NestJS antes de abrir a janela full stack.",
+          "description": "Usar o backend real do KM One como projeto de empregabilidade em TypeScript/NestJS, mantendo a hospedagem na Azure e evitando um projeto artificial só para cumprir o Gate.",
           "focus": [
             "REST API design",
             "NestJS modules, controllers, providers and DI",
@@ -273,7 +273,7 @@
             "deployment",
             "README and architecture notes"
           ],
-          "note": "Empregabilidade Gate #1. Ao concluir, iniciar candidaturas para Node.js, TypeScript e NestJS backend sem esperar arquitetura/cloud avançadas.",
+          "note": "Empregabilidade Gate #1 baseado no produto real KM One. Ao concluir um backend profissional implantado e defensável tecnicamente, iniciar candidaturas para Node.js, TypeScript e NestJS backend sem esperar arquitetura/cloud avançadas.",
           "access": {
             "learning": {
               "status": "internal",
@@ -290,7 +290,55 @@
               "cost": "Grátis"
             }
           },
-          "order": 7
+          "order": 7,
+          "project": {
+            "name": "KM One",
+            "role": "Real product used as Node/Nest Employability Gate",
+            "backend": "Node.js + TypeScript + NestJS",
+            "database": "PostgreSQL / Neon",
+            "cloud": "Azure",
+            "deploymentCandidates": [
+              "Azure Container Apps",
+              "Azure App Service"
+            ],
+            "platformServices": [
+              "Azure Key Vault",
+              "Application Insights",
+              "Azure Storage when required",
+              "CI/CD"
+            ]
+          },
+          "architectureDecision": {
+            "status": "accepted",
+            "date": "2026-09-21",
+            "decision": "Reconsider KM One backend from .NET to Node.js/TypeScript/NestJS while keeping Azure as the cloud platform.",
+            "rationale": [
+              "Turn the roadmap employability gate into a real product instead of an artificial portfolio exercise",
+              "Create one deeply practiced, marketable backend stack before opening the .NET window",
+              "Preserve Azure knowledge and cloud continuity",
+              "Keep .NET reserved for the later second-backend-ecosystem window",
+              "Allow future comparison of the same architectural concepts across NestJS and .NET"
+            ],
+            "boundaries": [
+              "KM One backend becomes the primary Node/Nest real-world project",
+              "Trevvos Platform Core remains the candidate .NET system for the future .NET/Azure window",
+              "Do not front-load advanced architecture patterns before the product needs them"
+            ]
+          },
+          "deliverySequence": [
+            "NestJS modules, controllers, services/providers and DTO validation",
+            "PostgreSQL / Neon and migrations",
+            "Authentication and authorization",
+            "Automated tests",
+            "Docker",
+            "Logging and health checks",
+            "CI/CD",
+            "Azure deployment",
+            "Cache / Redis only when justified",
+            "Asynchronous jobs or messaging only when justified",
+            "Observability improvements",
+            "Advanced patterns such as Outbox, events, DDD/CQRS only when there is a real product need"
+          ]
         }
       ]
     },
