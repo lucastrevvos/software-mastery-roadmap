@@ -1,0 +1,439 @@
+{
+  "trackId": "physical-ai",
+  "title": "Edge AI · Robotics Software · Physical AI",
+  "subtitle": "Transição lateral de Software/Distributed Systems para software que percebe, decide e atua no mundo físico.",
+  "version": "1.0",
+  "updatedAt": "2026-09-21",
+  "status": "not-started",
+  "targetRoles": [
+    "Edge Software Engineer",
+    "IoT / Edge Engineer",
+    "Robotics Platform Engineer",
+    "Robotics Software Engineer",
+    "Edge AI Engineer",
+    "Autonomous Systems Software Engineer"
+  ],
+  "rules": [
+    "Priorizar documentação, cursos e learning paths oficiais.",
+    "Certificação só entra quando valida uma competência útil; não colecionar badges.",
+    "Nenhum hardware caro é obrigatório no início.",
+    "Cada fase termina com um Mastery Gate prático.",
+    "Começar candidaturas antes de concluir toda a trilha.",
+    "Isaac Sim é especialização avançada, não pré-requisito."
+  ],
+  "phases": [
+    {
+      "order": 1,
+      "title": "Fundamentos de Edge AI e IoT",
+      "duration": "1–2 semanas",
+      "goal": "Entender o modelo mental device → edge → cloud e construir a primeira telemetria ponta a ponta.",
+      "officialLearning": [
+        {
+          "title": "Edge AI Fundamentals",
+          "provider": "Edge Impulse",
+          "url": "https://docs.edgeimpulse.com/knowledge/courses/edge-ai-fundamentals",
+          "credential": "Certificado digital gratuito após teste final",
+          "priority": "required"
+        },
+        {
+          "title": "MQTT fundamentals + broker local",
+          "provider": "MQTT.org / Eclipse Mosquitto",
+          "url": "https://mqtt.org/",
+          "credential": "Sem certificação prioritária",
+          "priority": "required"
+        }
+      ],
+      "skills": [
+        "edge vs cloud",
+        "telemetria",
+        "MQTT",
+        "topics",
+        "QoS",
+        "retained messages",
+        "device identity"
+      ],
+      "lab": "Sensor simulado → MQTT → serviço .NET/Node → persistência/evento.",
+      "gate": "Explicar e implementar publisher/subscriber, QoS, queda/reconexão e justificar quando processar no edge.",
+      "hardware": "Nenhum"
+    },
+    {
+      "order": 2,
+      "title": "Dispositivo real sem virar engenheiro eletrônico",
+      "duration": "1–2 semanas",
+      "goal": "Aprender o suficiente de embedded para conversar com dispositivos e integrar sensores.",
+      "officialLearning": [
+        {
+          "title": "ESP-IDF Get Started",
+          "provider": "Espressif",
+          "url": "https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/",
+          "credential": "Documentação oficial; sem certificado relevante",
+          "priority": "required-when-hardware"
+        }
+      ],
+      "skills": [
+        "GPIO básico",
+        "Wi‑Fi",
+        "firmware",
+        "serial monitor",
+        "JSON/telemetria",
+        "reconnect"
+      ],
+      "lab": "ESP32 envia temperatura/vibração simulada ou real via MQTT ao laboratório da fase 1.",
+      "gate": "Flashear, depurar e reconectar um ESP32 sem tutorial passo a passo.",
+      "hardware": "ESP32 barato; pode ser adiado e simulado"
+    },
+    {
+      "order": 3,
+      "title": "Inferência de IA no Edge",
+      "duration": "3–5 semanas",
+      "goal": "Passar de telemetria bruta para inferência local.",
+      "officialLearning": [
+        {
+          "title": "ONNX Runtime Documentation / Tutorials",
+          "provider": "Microsoft / ONNX Runtime",
+          "url": "https://onnxruntime.ai/docs/",
+          "credential": "Sem certificação oficial prioritária",
+          "priority": "required"
+        },
+        {
+          "title": "Edge Impulse Studio hands-on",
+          "provider": "Edge Impulse",
+          "url": "https://docs.edgeimpulse.com/",
+          "credential": "Projeto prático complementando o certificado da Fase 1",
+          "priority": "required"
+        }
+      ],
+      "skills": [
+        "Python para inferência",
+        "NumPy",
+        "model input/output",
+        "ONNX",
+        "quantização conceitual",
+        "latência",
+        "CPU vs accelerator"
+      ],
+      "lab": "Modelo de anomalia ou classificação roda localmente e publica somente o evento relevante via MQTT.",
+      "gate": "Medir latência, explicar input/output do modelo e integrar inferência sem depender de chamada cloud.",
+      "hardware": "PC atual"
+    },
+    {
+      "order": 4,
+      "title": "ROS 2 — middleware de robótica",
+      "duration": "4–6 semanas",
+      "goal": "Transformar conhecimento de sistemas distribuídos em software robótico.",
+      "officialLearning": [
+        {
+          "title": "ROS 2 Lyrical Luth Tutorials",
+          "provider": "Open Robotics / ROS",
+          "url": "https://docs.ros.org/en/lyrical/Tutorials.html",
+          "credential": "Sem certificação ROS oficial prioritária; evidência será o projeto",
+          "priority": "required"
+        }
+      ],
+      "skills": [
+        "nodes",
+        "topics",
+        "services",
+        "actions",
+        "parameters",
+        "launch",
+        "QoS",
+        "DDS",
+        "rclpy",
+        "rclcpp",
+        "URDF básico"
+      ],
+      "lab": "Nodes separados para sensor, percepção, decisão e ação; primeiro em Python, depois pelo menos um node em C++.",
+      "gate": "Construir e depurar um sistema ROS 2 multi-node do zero e explicar QoS/DDS comparando com mensageria tradicional.",
+      "hardware": "Nenhum",
+      "platform": "Preferência oficial: ROS 2 Lyrical Luth, LTS até maio/2031"
+    },
+    {
+      "order": 5,
+      "title": "Robótica simulada com Gazebo",
+      "duration": "3–5 semanas",
+      "goal": "Controlar um robô e sensores virtuais sem comprar robô nem GPU topo de linha.",
+      "officialLearning": [
+        {
+          "title": "Gazebo Jetty + ROS 2 integration",
+          "provider": "Open Robotics / Gazebo",
+          "url": "https://gazebosim.org/docs/latest/ros2_integration/",
+          "credential": "Sem certificação; Mastery Gate + portfólio",
+          "priority": "required"
+        }
+      ],
+      "skills": [
+        "Gazebo",
+        "ros_gz_bridge",
+        "câmera",
+        "LiDAR",
+        "IMU",
+        "cmd_vel",
+        "TF",
+        "RViz",
+        "URDF/SDF"
+      ],
+      "lab": "Robô virtual recebe sensores, identifica condição e executa movimento/ação via ROS 2.",
+      "gate": "Subir mundo + robô + sensores, bridge ROS/Gazebo e uma ação autônoma reproduzível.",
+      "hardware": "PC comum; reduzir complexidade gráfica se necessário",
+      "platform": "Pareamento oficial: ROS 2 Lyrical + Gazebo Jetty",
+      "careerCheckpoint": "INICIAR CANDIDATURAS para IoT/Edge, Robotics Platform e Robotics Software com foco em integração."
+    },
+    {
+      "order": 6,
+      "title": "Computer Vision para Edge",
+      "duration": "4–6 semanas",
+      "goal": "Fazer uma câmera deixar de enviar pixels e começar a publicar significado.",
+      "officialLearning": [
+        {
+          "title": "NVIDIA DLI — trilha de Edge AI / visão",
+          "provider": "NVIDIA Deep Learning Institute",
+          "url": "https://www.nvidia.com/pt-br/training/online/",
+          "credential": "Selecionar cursos com Certificate Available; priorizar os que oferecem laboratório cloud",
+          "priority": "recommended"
+        }
+      ],
+      "skills": [
+        "OpenCV",
+        "object detection",
+        "tracking básico",
+        "PyTorch suficiente para deployment",
+        "ONNX",
+        "FPS",
+        "latência",
+        "pré/pós-processamento"
+      ],
+      "lab": "Webcam ou vídeo → modelo de visão → ROS 2 topic → decisão → evento MQTT/backend.",
+      "gate": "Executar visão em tempo real, medir FPS/latência e desacoplar percepção de decisão.",
+      "hardware": "Webcam opcional; vídeo gravado serve"
+    },
+    {
+      "order": 7,
+      "title": "Containers e Kubernetes no Edge",
+      "duration": "3–6 semanas (acelerável pela experiência prévia)",
+      "goal": "Operar workloads distribuídos no edge de forma profissional.",
+      "officialLearning": [
+        {
+          "title": "Certified Kubernetes Application Developer — CKAD",
+          "provider": "CNCF + Linux Foundation",
+          "url": "https://www.cncf.io/training/certification/ckad/",
+          "credential": "Certificação oficial performance-based",
+          "priority": "recommended-certification"
+        }
+      ],
+      "skills": [
+        "Docker",
+        "Kubernetes/K3s",
+        "deployments",
+        "services",
+        "config/secrets",
+        "observability",
+        "resource limits",
+        "offline operation"
+      ],
+      "lab": "Broker MQTT + serviço de inferência + backend local em K3s; reinício e falha controlados.",
+      "gate": "Recuperar o stack de falhas e demonstrar operação local sem cloud.",
+      "hardware": "PC atual"
+    },
+    {
+      "order": 8,
+      "title": "Industrial Edge + Cloud",
+      "duration": "3–5 semanas",
+      "goal": "Conectar edge, ativos industriais e cloud sem transformar a cloud em dependência de tempo real.",
+      "officialLearning": [
+        {
+          "title": "Azure IoT Operations — Quickstarts e documentação",
+          "provider": "Microsoft Learn",
+          "url": "https://learn.microsoft.com/azure/iot-operations/",
+          "credential": "Microsoft Learn achievements; não há certificação IoT dedicada que seja pré-requisito desta trilha",
+          "priority": "required-primary-cloud"
+        },
+        {
+          "title": "AWS IoT Greengrass",
+          "provider": "AWS",
+          "url": "https://aws.amazon.com/greengrass/",
+          "credential": "Trilha opcional para segunda cloud",
+          "priority": "optional"
+        }
+      ],
+      "skills": [
+        "industrial MQTT",
+        "OPC UA conceito/prática",
+        "Azure Arc",
+        "edge data flows",
+        "offline-first",
+        "fleet/device management"
+      ],
+      "lab": "Edge continua operando sem internet e sincroniza eventos/contexto quando a cloud volta.",
+      "gate": "Explicar e demonstrar o que precisa ficar local, o que pode ir à cloud e como degradar com segurança.",
+      "hardware": "PC/Codespaces primeiro"
+    },
+    {
+      "order": 9,
+      "title": "Jetson + TensorRT — hardware especializado",
+      "duration": "4–8 semanas",
+      "goal": "Levar a solução para uma plataforma real de Edge AI acelerada por GPU.",
+      "officialLearning": [
+        {
+          "title": "Jetson AI Fundamentals / DLI",
+          "provider": "NVIDIA",
+          "url": "https://developer.nvidia.com/embedded/learn/tutorials",
+          "credential": "Cursos selecionados oferecem certificados",
+          "priority": "required-when-jetson"
+        },
+        {
+          "title": "NVIDIA Jetson AI Specialist",
+          "provider": "NVIDIA",
+          "url": "https://www.nvidia.com/pt-br/learn/credentials/",
+          "credential": "Credencial prática baseada em projeto",
+          "priority": "target-credential"
+        }
+      ],
+      "skills": [
+        "JetPack",
+        "GPU edge",
+        "TensorRT",
+        "DeepStream conceito",
+        "profiling",
+        "deployment",
+        "camera pipeline"
+      ],
+      "lab": "Migrar a inferência da Fase 6 para Jetson e comparar latência/FPS/consumo.",
+      "gate": "Projeto elegível para portfólio Jetson AI Specialist.",
+      "hardware": "Comprar/alugar Jetson somente aqui; antes disso é desnecessário"
+    },
+    {
+      "order": 10,
+      "title": "Physical AI avançada — Isaac",
+      "duration": "6+ semanas, após base profissional",
+      "goal": "Entrar em sim-to-real, digital twins, políticas robóticas e stack NVIDIA de Physical AI.",
+      "officialLearning": [
+        {
+          "title": "NVIDIA Physical AI Learning",
+          "provider": "NVIDIA",
+          "url": "https://docs.nvidia.com/learning/physical-ai/",
+          "credential": "Cursos oficiais self-paced; usar cloud quando GPU local não for suficiente",
+          "priority": "advanced"
+        },
+        {
+          "title": "NVIDIA Certified Professional — OpenUSD Development",
+          "provider": "NVIDIA",
+          "url": "https://www.nvidia.com/pt-br/learn/certification/openusd-development-professional/",
+          "credential": "Opcional; só se especialização envolver digital twins/OpenUSD",
+          "priority": "optional-specialization"
+        }
+      ],
+      "skills": [
+        "Isaac Sim",
+        "Isaac ROS",
+        "Isaac Lab",
+        "OpenUSD",
+        "sim-to-real",
+        "synthetic data",
+        "robot policy basics",
+        "Physical AI safety"
+      ],
+      "lab": "Migrar uma cena/tarefa do Gazebo para Isaac ou construir novo cenário Physical AI em ambiente cloud.",
+      "gate": "Demonstrar uma tarefa simulada com percepção + decisão + ação e explicar a estratégia sim-to-real.",
+      "hardware": "GPU local forte NÃO é pré-requisito; usar NVIDIA Brev/cloud quando necessário"
+    }
+  ],
+  "credentials": [
+    {
+      "priority": 1,
+      "name": "Edge AI Fundamentals Certificate",
+      "provider": "Edge Impulse",
+      "when": "Fase 1",
+      "cost": "gratuito",
+      "value": "Primeira evidência formal específica de Edge AI"
+    },
+    {
+      "priority": 2,
+      "name": "CKAD",
+      "provider": "CNCF + Linux Foundation",
+      "when": "Fase 7",
+      "cost": "pago",
+      "value": "Valida operação de aplicações cloud-native/edge; especialmente útil no caminho Platform/Edge"
+    },
+    {
+      "priority": 3,
+      "name": "NVIDIA DLI certificates",
+      "provider": "NVIDIA",
+      "when": "Fases 6–9",
+      "cost": "há opções gratuitas e pagas",
+      "value": "Valida treinamento oficial em visão/edge/NVIDIA"
+    },
+    {
+      "priority": 4,
+      "name": "NVIDIA Jetson AI Specialist",
+      "provider": "NVIDIA",
+      "when": "Fase 9",
+      "cost": "programa prático",
+      "value": "Evidência diretamente alinhada a Jetson + visão computacional"
+    },
+    {
+      "priority": 5,
+      "name": "NCP OpenUSD Development",
+      "provider": "NVIDIA",
+      "when": "Fase 10 apenas se fizer sentido",
+      "cost": "pago",
+      "value": "Especialização em digital twins/OpenUSD; não é requisito para Robotics Software"
+    }
+  ],
+  "portfolioProject": {
+    "name": "Trevvos PhysicalOps",
+    "purpose": "Um único projeto evolutivo que prova integração entre sensores, edge, IA, ROS 2, simulação, cloud e eventualmente hardware.",
+    "evolution": [
+      "V1 sensor simulado + MQTT",
+      "V2 inferência ONNX local",
+      "V3 ESP32 opcional",
+      "V4 ROS 2 multi-node",
+      "V5 Gazebo Jetty + robô/sensores",
+      "V6 computer vision",
+      "V7 K3s + observabilidade",
+      "V8 Azure IoT Operations / cloud sync",
+      "V9 Jetson + TensorRT",
+      "V10 Isaac / Physical AI"
+    ]
+  },
+  "applicationMilestones": [
+    {
+      "afterPhase": 5,
+      "action": "Começar candidaturas",
+      "roles": [
+        "IoT/Edge Engineer",
+        "Edge Software Engineer",
+        "Robotics Platform Engineer",
+        "Robotics Software Engineer (integration/platform)"
+      ]
+    },
+    {
+      "afterPhase": 6,
+      "action": "Ampliar candidaturas",
+      "roles": [
+        "Edge AI Engineer",
+        "Computer Vision Edge Engineer",
+        "Perception Software Engineer júnior/lateral"
+      ]
+    },
+    {
+      "afterPhase": 9,
+      "action": "Mirar vagas NVIDIA-stack",
+      "roles": [
+        "Jetson / Embedded AI Engineer",
+        "Robotics Software Engineer",
+        "Autonomous Systems Software Engineer"
+      ]
+    }
+  ],
+  "instructorProtocol": {
+    "mode": "step-by-step",
+    "rules": [
+      "Não avançar automaticamente só porque um curso foi concluído.",
+      "Cada fase exige tentativa prática, revisão e Mastery Gate.",
+      "Atualizar este roadmap/progresso no GitHub após avanço real.",
+      "Registrar erros recorrentes no Error Ledger.",
+      "Usar documentação oficial como fonte primária; material de terceiros só para destravar lacunas."
+    ]
+  }
+}
