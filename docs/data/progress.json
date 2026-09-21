@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-21T18:55:00-03:00",
+  "updatedAt": "2026-09-21T19:05:00-03:00",
   "courses": {
     "cs50x": {
       "status": "completed",
@@ -210,6 +210,15 @@
     "currentPrimary": "fcc-js-v10",
     "currentComplementary": "cs50-sql",
     "nextWindow": "nodejs-nestjs-backend-employability",
-    "secondBackendWindow": "dotnet-azure"
+    "secondBackendWindow": "dotnet-azure",
+    "nodeNestEmployabilityProject": {
+      "name": "KM One",
+      "backend": "Node.js + TypeScript + NestJS",
+      "database": "PostgreSQL / Neon",
+      "cloud": "Azure",
+      "status": "planned",
+      "decisionDate": "2026-09-21",
+      "note": "KM One replaces an artificial Node/Nest gate project. .NET is intentionally reserved for the later second-backend window; Trevvos Platform Core remains the candidate .NET system."
+    }
   }
 }
