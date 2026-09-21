@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Full Stack Software Architect & Cloud Engineer",
-    "version": "2.3.0",
+    "version": "3.0.0",
     "updatedAt": "2026-09-21",
     "principles": [
       "Fundamentos fortes antes de especialização",
@@ -10,15 +10,20 @@
       "Curso concluído não implica domínio",
       "Projetos e Mastery Gates comprovam habilidade prática",
       "Toda credencial paga deve exibir preço e data-base; quando o valor variar por país ou provedor, registrar a faixa ou regra de preço",
-      "Método Especial JCI: profundidade japonesa, treino deliberado chinês e empregabilidade indiana como camada transversal"
+      "Método Especial JCI: profundidade japonesa, treino deliberado chinês e empregabilidade indiana como camada transversal",
+      "Empregabilidade primeiro: atingir um ponto real de candidatura antes de perseguir profundidade total",
+      "No máximo 2 cursos ativos: 1 principal e 1 complementar",
+      "Aprender em janelas de imersão: Node/TypeScript primeiro, .NET depois, frontend profundo em etapa própria",
+      "Arquitetura, cloud e IA devem reforçar uma stack já utilizável, não atrasar a entrada no mercado"
     ],
-    "platformMetadata": "Cada item informa onde estudar e onde obter a credencial; ausência de curso/certificação externa é indicada explicitamente."
+    "platformMetadata": "Cada item informa onde estudar e onde obter a credencial; ausência de curso/certificação externa é indicada explicitamente.",
+    "executionStrategy": "Employment-first immersion windows: JavaScript/SQL → Node/Nest backend → Full Stack Open/React → backend senior depth → AI-enabled backend → .NET/Azure → frontend specialization → advanced credentials/capstone."
   },
   "phases": [
     {
       "id": "phase-01",
-      "title": "Fundamentos Certificados",
-      "goal": "Construir base sólida de ciência da computação, programação, JavaScript, C#, SQL, Python, Linux e networking com credenciais fortes.",
+      "title": "Fundamentos Ativos — JavaScript & SQL",
+      "goal": "Fechar os fundamentos que estão ativos agora sem abrir novas stacks. Regra operacional: no máximo 2 cursos ativos — 1 principal e 1 complementar.",
       "items": [
         {
           "id": "cs50x",
@@ -80,34 +85,8 @@
           }
         },
         {
-          "id": "foundational-csharp",
-          "order": 3,
-          "title": "Foundational C# with Microsoft",
-          "provider": "Microsoft + freeCodeCamp",
-          "credential": "Foundational C# Certification",
-          "cost": "free",
-          "status": "not-started",
-          "priority": "core",
-          "access": {
-            "learning": {
-              "status": "available",
-              "platform": "freeCodeCamp + Microsoft Learn",
-              "kind": "Trilha oficial integrada; parte do conteúdo é feita no Microsoft Learn e validada no freeCodeCamp",
-              "url": "https://www.freecodecamp.org/learn/foundational-c-sharp-with-microsoft/",
-              "cost": "Grátis"
-            },
-            "credential": {
-              "status": "available",
-              "platform": "freeCodeCamp + Microsoft",
-              "kind": "Foundational C# Certification",
-              "url": "https://www.freecodecamp.org/learn/foundational-c-sharp-with-microsoft/",
-              "cost": "Grátis"
-            }
-          }
-        },
-        {
           "id": "cs50-sql",
-          "order": 4,
+          "order": 3,
           "title": "CS50's Introduction to Databases with SQL",
           "provider": "Harvard University",
           "credential": "CS50 Certificate",
@@ -132,36 +111,256 @@
               "cost": "Grátis no CS50; edX opcional pago"
             }
           }
+        }
+      ]
+    },
+    {
+      "id": "phase-02",
+      "title": "Node.js & NestJS — Backend Employability",
+      "goal": "Transformar JavaScript/TypeScript em uma stack backend profissional antes de aprofundar arquitetura. O objetivo é atingir rapidamente um ponto real de candidatura para vagas Node.js, TypeScript e NestJS.",
+      "items": [
+        {
+          "id": "nodejs-core-fundamentals",
+          "order": 4,
+          "title": "Node.js Core Fundamentals",
+          "provider": "Node.js official documentation + Programming Mastery Lab",
+          "credential": "No official Node.js certification; practical mastery evidence",
+          "cost": "free",
+          "status": "not-started",
+          "priority": "core",
+          "source": "https://nodejs.org/en/learn",
+          "description": "Fundamentos do runtime Node.js antes de frameworks: Event Loop, async I/O, módulos, Events, Streams, Buffers, filesystem, HTTP, process, workers, debugging e comportamento de produção.",
+          "focus": [
+            "Node.js runtime and V8 mental model",
+            "Event Loop and non-blocking I/O",
+            "callbacks, Promises and async/await",
+            "CommonJS and ES Modules",
+            "npm and package.json",
+            "EventEmitter",
+            "Buffers",
+            "Streams and backpressure",
+            "filesystem and path",
+            "HTTP core",
+            "process, environment variables and signals",
+            "child processes and worker threads",
+            "graceful shutdown",
+            "error handling",
+            "debugging and basic profiling"
+          ],
+          "note": "Bloco de fundamentos do runtime. Não existe certificação oficial Node.js ativa atualmente; a validação externa seguinte será HackerRank Node (Basic).",
+          "access": {
+            "learning": {
+              "status": "available",
+              "platform": "nodejs.org Learn + Node.js API Documentation",
+              "kind": "Documentação e guias oficiais do projeto Node.js, complementados por labs do Programming Mastery Lab",
+              "url": "https://nodejs.org/en/learn",
+              "cost": "Grátis"
+            },
+            "credential": {
+              "status": "none",
+              "platform": null,
+              "kind": "Não há certificação oficial Node.js/OpenJS ativa. Evidência por labs/Mastery Gate e, em seguida, HackerRank Node (Basic).",
+              "url": null,
+              "cost": null
+            }
+          }
         },
         {
-          "id": "cs50p",
+          "id": "hackerrank-node-basic",
           "order": 5,
-          "title": "CS50's Introduction to Programming with Python",
-          "provider": "Harvard University",
-          "credential": "CS50 Certificate",
+          "title": "Node (Basic) Skills Certification",
+          "provider": "HackerRank",
+          "credential": "HackerRank Node (Basic) Certificate",
+          "cost": "free-assessment",
+          "status": "not-started",
+          "priority": "credential-checkpoint",
+          "source": "https://www.hackerrank.com/skills-verification/nodejs_basic",
+          "description": "Avaliação externa de fundamentos de Node.js após o bloco de Node Core: módulos/packages, callbacks, Event Loop, EventEmitter, Buffers, Streams, filesystem e npm.",
+          "assessment": "1 hour; 2 questions",
+          "focus": [
+            "Package and Modules Management",
+            "Callbacks",
+            "Event Loop",
+            "EventEmitter",
+            "Buffers",
+            "Streams",
+            "File System",
+            "NPM"
+          ],
+          "note": "Certificação de skill do HackerRank, não certificação oficial do projeto Node.js/OpenJS. Usar como checkpoint externo antes de avançar para frameworks.",
+          "access": {
+            "learning": {
+              "status": "none",
+              "platform": null,
+              "kind": "Não é um curso. A preparação vem do bloco Node.js Core Fundamentals e de prática própria.",
+              "url": null,
+              "cost": null
+            },
+            "credential": {
+              "status": "available",
+              "platform": "HackerRank Skills Certification",
+              "kind": "Node (Basic) Skills Certification Test; certificado HackerRank após aprovação",
+              "url": "https://www.hackerrank.com/skills-verification/nodejs_basic",
+              "cost": "Sem taxa indicada na página oficial"
+            }
+          }
+        },
+        {
+          "id": "nestjs-official-fundamentals",
+          "order": 6,
+          "title": "NestJS Official — Fundamentals",
+          "provider": "NestJS",
+          "credential": "Official NestJS Certificate of Completion",
+          "cost": "paid-course",
+          "coursePrice": "US$129.99 standard; official site may show promotional pricing",
+          "priceAsOf": "2026-09-21",
+          "priceSource": "https://learn.nestjs.com/p/fundamentals",
+          "status": "not-started",
+          "priority": "stack",
+          "source": "https://learn.nestjs.com/p/fundamentals",
+          "estimatedHours": "~5h / 80 lessons",
+          "focus": [
+            "NestJS application structure",
+            "controllers and routing",
+            "providers and dependency injection",
+            "REST APIs",
+            "PostgreSQL / TypeORM",
+            "configuration",
+            "OpenAPI",
+            "testing",
+            "MongoDB / Mongoose"
+          ],
+          "note": "Curso oficial ministrado pelo criador do NestJS, Kamil Myśliwiec, e Mark Pieszak do core team. Certificado oficial de conclusão; não é certificação profissional independente baseada em exame.",
+          "access": {
+            "learning": {
+              "status": "available",
+              "platform": "Official NestJS Courses / learn.nestjs.com",
+              "kind": "Curso oficial Fundamentals com projeto REST, bancos, DI, OpenAPI e testes",
+              "url": "https://learn.nestjs.com/p/fundamentals",
+              "cost": "Pago; acesso vitalício e atualizações incluídas"
+            },
+            "credential": {
+              "status": "available",
+              "platform": "NestJS",
+              "kind": "Official NestJS Certificate of Completion",
+              "url": "https://courses.nestjs.com/",
+              "cost": "Incluído no curso; certificado de conclusão, sem exame profissional separado"
+            }
+          }
+        },
+        {
+          "id": "node-nest-employability-project",
+          "title": "Node/Nest Backend Employability Project + Gate",
+          "provider": "Programming Mastery Lab",
+          "credential": "Internal Employability Gate",
+          "cost": "free",
+          "status": "not-started",
+          "priority": "employment",
+          "source": "./mastery-gates/",
+          "description": "Construir e defender um backend profissional em TypeScript/NestJS antes de abrir a janela full stack.",
+          "focus": [
+            "REST API design",
+            "NestJS modules, controllers, providers and DI",
+            "PostgreSQL and migrations",
+            "authentication and authorization",
+            "validation and error contracts",
+            "automated tests",
+            "Docker",
+            "cache and basic Redis usage",
+            "basic messaging or asynchronous job processing",
+            "logging and health checks",
+            "CI/CD basics",
+            "deployment",
+            "README and architecture notes"
+          ],
+          "note": "Empregabilidade Gate #1. Ao concluir, iniciar candidaturas para Node.js, TypeScript e NestJS backend sem esperar arquitetura/cloud avançadas.",
+          "access": {
+            "learning": {
+              "status": "internal",
+              "platform": "Programming Mastery Lab",
+              "kind": "Projeto profissional guiado por requisitos e critérios de domínio",
+              "url": null,
+              "cost": "Grátis"
+            },
+            "credential": {
+              "status": "internal",
+              "platform": "Programming Mastery Lab",
+              "kind": "Mastery/Employability Gate interno; evidência principal é projeto, código, testes, deploy e defesa técnica",
+              "url": null,
+              "cost": "Grátis"
+            }
+          },
+          "order": 7
+        }
+      ]
+    },
+    {
+      "id": "phase-03",
+      "title": "Full Stack Employability — React + Helsinki",
+      "goal": "Adicionar React e capacidade ponta a ponta sem abandonar a identidade backend. Esta janela amplia os tipos de vaga possíveis antes do mergulho em backend sênior.",
+      "items": [
+        {
+          "id": "full-stack-open-core",
+          "order": 8,
+          "title": "Full Stack Open — Core 0–7",
+          "provider": "University of Helsinki",
+          "credential": "University certificate / ECTS where applicable",
           "cost": "free",
           "status": "not-started",
           "priority": "core",
           "access": {
             "learning": {
               "status": "available",
-              "platform": "CS50 OpenCourseWare",
-              "kind": "Curso oficial completo",
-              "url": "https://cs50.harvard.edu/python/",
+              "platform": "Full Stack Open — University of Helsinki",
+              "kind": "Curso oficial online, partes 0–7",
+              "url": "https://fullstackopen.com/ptbr/",
               "cost": "Grátis"
             },
             "credential": {
               "status": "available",
-              "platform": "CS50",
-              "kind": "Certificado gratuito do CS50; edX verificado é opcional",
-              "url": "https://cs50.me/cs50p",
-              "cost": "Grátis no CS50; edX opcional pago"
+              "platform": "Full Stack Open submission system / University of Helsinki",
+              "kind": "Certificado gratuito; ECTS opcionais também podem ser obtidos gratuitamente mediante requisitos adicionais",
+              "url": "https://fullstackopen.com/en/part0/general_info/",
+              "cost": "Grátis"
             }
           }
         },
         {
+          "id": "full-stack-open-extensions",
+          "order": 9,
+          "title": "Full Stack Open — extensões relevantes",
+          "provider": "University of Helsinki",
+          "credential": "University certificate / ECTS where applicable",
+          "cost": "free",
+          "status": "not-started",
+          "priority": "recommended",
+          "access": {
+            "learning": {
+              "status": "available",
+              "platform": "Full Stack Open + MOOC.fi",
+              "kind": "Extensões oficiais; várias partes usam courses.mooc.fi",
+              "url": "https://fullstackopen.com/en/part0/general_info/",
+              "cost": "Grátis"
+            },
+            "credential": {
+              "status": "available",
+              "platform": "University of Helsinki / submission system",
+              "kind": "Certificados separados por extensão; ECTS quando aplicável",
+              "url": "https://fullstackopen.com/en/part0/general_info/",
+              "cost": "Grátis"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "phase-04",
+      "title": "Backend Senior Depth — Production, Architecture, Distributed Systems & AWS",
+      "goal": "Voltar ao backend com profundidade: Linux, networking, NestJS avançado, arquitetura vendor-neutral, sistemas distribuídos, observabilidade, containers e AWS.",
+      "items": [
+        {
           "id": "linux-essentials",
-          "order": 6,
+          "order": 10,
           "title": "Linux Fundamentals — Linux Essentials",
           "provider": "Linux Professional Institute (LPI)",
           "credential": "LPI Linux Essentials 010-160 target",
@@ -209,7 +408,7 @@
         },
         {
           "id": "cisco-networking-basics",
-          "order": 7,
+          "order": 11,
           "title": "Networking Fundamentals — Cisco Networking Basics",
           "provider": "Cisco Networking Academy",
           "credential": "Cisco Networking Academy Digital Badge",
@@ -249,7 +448,7 @@
         },
         {
           "id": "cisco-ccst-networking",
-          "order": 8,
+          "order": 12,
           "title": "Cisco Certified Support Technician (CCST) Networking",
           "provider": "Cisco",
           "credential": "Cisco Certified Support Technician (CCST) Networking",
@@ -276,198 +475,10 @@
               "cost": "US$125"
             }
           }
-        }
-      ]
-    },
-    {
-      "id": "phase-02",
-      "title": "Full Stack Moderno",
-      "goal": "Consolidar desenvolvimento web moderno, Node.js como runtime, APIs, testes, containers e integração ponta a ponta, com trilhas oficiais de NestJS e Angular onde houver material oficial relevante.",
-      "items": [
-        {
-          "id": "nodejs-core-fundamentals",
-          "order": 9,
-          "title": "Node.js Core Fundamentals",
-          "provider": "Node.js official documentation + Programming Mastery Lab",
-          "credential": "No official Node.js certification; practical mastery evidence",
-          "cost": "free",
-          "status": "not-started",
-          "priority": "core",
-          "source": "https://nodejs.org/en/learn",
-          "description": "Fundamentos do runtime Node.js antes de frameworks: Event Loop, async I/O, módulos, Events, Streams, Buffers, filesystem, HTTP, process, workers, debugging e comportamento de produção.",
-          "focus": [
-            "Node.js runtime and V8 mental model",
-            "Event Loop and non-blocking I/O",
-            "callbacks, Promises and async/await",
-            "CommonJS and ES Modules",
-            "npm and package.json",
-            "EventEmitter",
-            "Buffers",
-            "Streams and backpressure",
-            "filesystem and path",
-            "HTTP core",
-            "process, environment variables and signals",
-            "child processes and worker threads",
-            "graceful shutdown",
-            "error handling",
-            "debugging and basic profiling"
-          ],
-          "note": "Bloco de fundamentos do runtime. Não existe certificação oficial Node.js ativa atualmente; a validação externa seguinte será HackerRank Node (Basic).",
-          "access": {
-            "learning": {
-              "status": "available",
-              "platform": "nodejs.org Learn + Node.js API Documentation",
-              "kind": "Documentação e guias oficiais do projeto Node.js, complementados por labs do Programming Mastery Lab",
-              "url": "https://nodejs.org/en/learn",
-              "cost": "Grátis"
-            },
-            "credential": {
-              "status": "none",
-              "platform": null,
-              "kind": "Não há certificação oficial Node.js/OpenJS ativa. Evidência por labs/Mastery Gate e, em seguida, HackerRank Node (Basic).",
-              "url": null,
-              "cost": null
-            }
-          }
-        },
-        {
-          "id": "hackerrank-node-basic",
-          "order": 10,
-          "title": "Node (Basic) Skills Certification",
-          "provider": "HackerRank",
-          "credential": "HackerRank Node (Basic) Certificate",
-          "cost": "free-assessment",
-          "status": "not-started",
-          "priority": "credential-checkpoint",
-          "source": "https://www.hackerrank.com/skills-verification/nodejs_basic",
-          "description": "Avaliação externa de fundamentos de Node.js após o bloco de Node Core: módulos/packages, callbacks, Event Loop, EventEmitter, Buffers, Streams, filesystem e npm.",
-          "assessment": "1 hour; 2 questions",
-          "focus": [
-            "Package and Modules Management",
-            "Callbacks",
-            "Event Loop",
-            "EventEmitter",
-            "Buffers",
-            "Streams",
-            "File System",
-            "NPM"
-          ],
-          "note": "Certificação de skill do HackerRank, não certificação oficial do projeto Node.js/OpenJS. Usar como checkpoint externo antes de avançar para frameworks.",
-          "access": {
-            "learning": {
-              "status": "none",
-              "platform": null,
-              "kind": "Não é um curso. A preparação vem do bloco Node.js Core Fundamentals e de prática própria.",
-              "url": null,
-              "cost": null
-            },
-            "credential": {
-              "status": "available",
-              "platform": "HackerRank Skills Certification",
-              "kind": "Node (Basic) Skills Certification Test; certificado HackerRank após aprovação",
-              "url": "https://www.hackerrank.com/skills-verification/nodejs_basic",
-              "cost": "Sem taxa indicada na página oficial"
-            }
-          }
-        },
-        {
-          "id": "full-stack-open-core",
-          "order": 11,
-          "title": "Full Stack Open — Core 0–7",
-          "provider": "University of Helsinki",
-          "credential": "University certificate / ECTS where applicable",
-          "cost": "free",
-          "status": "not-started",
-          "priority": "core",
-          "access": {
-            "learning": {
-              "status": "available",
-              "platform": "Full Stack Open — University of Helsinki",
-              "kind": "Curso oficial online, partes 0–7",
-              "url": "https://fullstackopen.com/ptbr/",
-              "cost": "Grátis"
-            },
-            "credential": {
-              "status": "available",
-              "platform": "Full Stack Open submission system / University of Helsinki",
-              "kind": "Certificado gratuito; ECTS opcionais também podem ser obtidos gratuitamente mediante requisitos adicionais",
-              "url": "https://fullstackopen.com/en/part0/general_info/",
-              "cost": "Grátis"
-            }
-          }
-        },
-        {
-          "id": "full-stack-open-extensions",
-          "order": 12,
-          "title": "Full Stack Open — extensões relevantes",
-          "provider": "University of Helsinki",
-          "credential": "University certificate / ECTS where applicable",
-          "cost": "free",
-          "status": "not-started",
-          "priority": "recommended",
-          "access": {
-            "learning": {
-              "status": "available",
-              "platform": "Full Stack Open + MOOC.fi",
-              "kind": "Extensões oficiais; várias partes usam courses.mooc.fi",
-              "url": "https://fullstackopen.com/en/part0/general_info/",
-              "cost": "Grátis"
-            },
-            "credential": {
-              "status": "available",
-              "platform": "University of Helsinki / submission system",
-              "kind": "Certificados separados por extensão; ECTS quando aplicável",
-              "url": "https://fullstackopen.com/en/part0/general_info/",
-              "cost": "Grátis"
-            }
-          }
-        },
-        {
-          "id": "nestjs-official-fundamentals",
-          "order": 13,
-          "title": "NestJS Official — Fundamentals",
-          "provider": "NestJS",
-          "credential": "Official NestJS Certificate of Completion",
-          "cost": "paid-course",
-          "coursePrice": "US$129.99 standard; official site may show promotional pricing",
-          "priceAsOf": "2026-09-21",
-          "priceSource": "https://learn.nestjs.com/p/fundamentals",
-          "status": "not-started",
-          "priority": "stack",
-          "source": "https://learn.nestjs.com/p/fundamentals",
-          "estimatedHours": "~5h / 80 lessons",
-          "focus": [
-            "NestJS application structure",
-            "controllers and routing",
-            "providers and dependency injection",
-            "REST APIs",
-            "PostgreSQL / TypeORM",
-            "configuration",
-            "OpenAPI",
-            "testing",
-            "MongoDB / Mongoose"
-          ],
-          "note": "Curso oficial ministrado pelo criador do NestJS, Kamil Myśliwiec, e Mark Pieszak do core team. Certificado oficial de conclusão; não é certificação profissional independente baseada em exame.",
-          "access": {
-            "learning": {
-              "status": "available",
-              "platform": "Official NestJS Courses / learn.nestjs.com",
-              "kind": "Curso oficial Fundamentals com projeto REST, bancos, DI, OpenAPI e testes",
-              "url": "https://learn.nestjs.com/p/fundamentals",
-              "cost": "Pago; acesso vitalício e atualizações incluídas"
-            },
-            "credential": {
-              "status": "available",
-              "platform": "NestJS",
-              "kind": "Official NestJS Certificate of Completion",
-              "url": "https://courses.nestjs.com/",
-              "cost": "Incluído no curso; certificado de conclusão, sem exame profissional separado"
-            }
-          }
         },
         {
           "id": "nestjs-official-microservices",
-          "order": 14,
+          "order": 13,
           "title": "NestJS Official — Microservices",
           "provider": "NestJS",
           "credential": "Official NestJS Certificate of Completion",
@@ -508,7 +519,7 @@
         },
         {
           "id": "nestjs-official-architecture",
-          "order": 15,
+          "order": 14,
           "title": "NestJS Official — Architecture & Advanced Patterns",
           "provider": "NestJS",
           "credential": "Official NestJS Certificate of Completion",
@@ -550,8 +561,759 @@
           }
         },
         {
-          "id": "angular-official-essentials",
+          "id": "isaqb-cpsa-f-curriculum",
+          "order": 15,
+          "title": "iSAQB CPSA-F — Official Curriculum, Glossary & Mock Exam",
+          "provider": "iSAQB",
+          "credential": "Official CPSA-F curriculum preparation; certification exam optional later",
+          "cost": "free-study",
+          "status": "not-started",
+          "priority": "core",
+          "source": "https://www.isaqb.org/certifications/cpsa-certifications/",
+          "focus": [
+            "software architecture fundamentals",
+            "architecture design",
+            "quality requirements",
+            "architecture documentation",
+            "communication",
+            "design decisions",
+            "tools and examples"
+          ],
+          "note": "Usar o material oficial gratuito como referência externa principal. A prova paga fica para quando houver ROI/voucher e domínio suficiente para passar de primeira.",
+          "access": {
+            "learning": {
+              "status": "materials-only",
+              "platform": "iSAQB",
+              "kind": "Currículo, glossário e mock exam oficiais; não há uma plataforma única de curso do próprio iSAQB",
+              "url": "https://www.isaqb.org/certifications/cpsa-certifications/cpsa-foundation-level/",
+              "cost": "Material oficial gratuito; treinamentos credenciados normalmente são pagos"
+            },
+            "credential": {
+              "status": "optional",
+              "platform": "Certification Bodies reconhecidos pelo iSAQB",
+              "kind": "Exame CPSA-F opcional; o iSAQB não aplica o exame diretamente",
+              "url": "https://www.isaqb.org/certifications/certification-bodies/",
+              "cost": "Pago; preço varia por organismo/país"
+            }
+          }
+        },
+        {
+          "id": "architecture-foundations",
           "order": 16,
+          "title": "Software Architecture Foundations — Mastery Lab",
+          "provider": "Programming Mastery Lab + iSAQB curriculum",
+          "credential": "Architecture Mastery Gate",
+          "cost": "free",
+          "status": "not-started",
+          "priority": "core",
+          "focus": [
+            "architectural drivers",
+            "quality attributes",
+            "constraints",
+            "trade-offs",
+            "coupling/cohesion",
+            "architecture styles",
+            "design decisions"
+          ],
+          "note": "Camada prática: transformar o currículo iSAQB em capacidade demonstrável de explicar, desenhar, criticar e defender uma arquitetura.",
+          "access": {
+            "learning": {
+              "status": "internal",
+              "platform": "Programming Mastery Lab + currículo iSAQB",
+              "kind": "Laboratório próprio baseado em referência oficial; não há curso externo obrigatório",
+              "url": "https://www.isaqb.org/certifications/cpsa-certifications/cpsa-foundation-level/",
+              "cost": "Grátis"
+            },
+            "credential": {
+              "status": "internal",
+              "platform": "Programming Mastery Lab",
+              "kind": "Architecture Mastery Gate",
+              "url": null,
+              "cost": "Grátis"
+            }
+          }
+        },
+        {
+          "id": "architecture-documentation",
+          "order": 17,
+          "title": "Architecture Documentation — C4, ADRs, Quality Scenarios & Architecture Communication",
+          "provider": "iSAQB-aligned + Programming Mastery Lab",
+          "credential": "Applied architecture documentation portfolio",
+          "cost": "free",
+          "status": "not-started",
+          "priority": "core",
+          "focus": [
+            "C4 diagrams",
+            "ADRs",
+            "quality scenarios",
+            "views and viewpoints",
+            "architecture communication",
+            "decision rationale"
+          ],
+          "access": {
+            "learning": {
+              "status": "internal",
+              "platform": "Programming Mastery Lab + referências iSAQB",
+              "kind": "Não há curso único obrigatório; estudo por currículo/referências + prática",
+              "url": "https://www.isaqb.org/",
+              "cost": "Grátis-first"
+            },
+            "credential": {
+              "status": "internal",
+              "platform": "Programming Mastery Lab",
+              "kind": "Portfólio de documentação arquitetural",
+              "url": null,
+              "cost": "Grátis"
+            }
+          }
+        },
+        {
+          "id": "ddd-clean-hexagonal",
+          "order": 18,
+          "title": "DDD, Clean Architecture & Hexagonal Architecture",
+          "provider": "Programming Mastery Lab + primary references",
+          "credential": "Applied architecture project",
+          "cost": "free-first",
+          "status": "not-started",
+          "priority": "core",
+          "focus": [
+            "bounded contexts",
+            "domain modeling",
+            "ports and adapters",
+            "dependency direction",
+            "modularity",
+            "testability"
+          ],
+          "access": {
+            "learning": {
+              "status": "materials-only",
+              "platform": "Programming Mastery Lab + referências primárias",
+              "kind": "Não há uma plataforma oficial única; estudo é curado por referências e laboratório",
+              "url": null,
+              "cost": "Grátis-first"
+            },
+            "credential": {
+              "status": "internal",
+              "platform": "Programming Mastery Lab",
+              "kind": "Projeto aplicado; sem certificação externa obrigatória",
+              "url": null,
+              "cost": "Grátis-first"
+            }
+          }
+        },
+        {
+          "id": "distributed-systems",
+          "order": 19,
+          "title": "Distributed Systems, Messaging & Resilience",
+          "provider": "Programming Mastery Lab + vendor-neutral references",
+          "credential": "Applied architecture project",
+          "cost": "free-first",
+          "status": "not-started",
+          "priority": "core",
+          "focus": [
+            "distributed systems fundamentals",
+            "messaging",
+            "consistency",
+            "idempotency",
+            "retries",
+            "timeouts",
+            "circuit breakers",
+            "resilience",
+            "event-driven architecture"
+          ],
+          "access": {
+            "learning": {
+              "status": "materials-only",
+              "platform": "Programming Mastery Lab + referências vendor-neutral",
+              "kind": "Não há curso oficial único; conteúdo entra por laboratórios e referências selecionadas",
+              "url": null,
+              "cost": "Grátis-first"
+            },
+            "credential": {
+              "status": "internal",
+              "platform": "Programming Mastery Lab",
+              "kind": "Projeto aplicado de sistemas distribuídos",
+              "url": null,
+              "cost": "Grátis-first"
+            }
+          }
+        },
+        {
+          "id": "observability-platform",
+          "order": 20,
+          "title": "Observability, CI/CD, Containers & Platform Engineering",
+          "provider": "Programming Mastery Lab + cloud providers",
+          "credential": "Portfolio + provider badges",
+          "cost": "free-first",
+          "status": "not-started",
+          "priority": "core",
+          "access": {
+            "learning": {
+              "status": "materials-only",
+              "platform": "Programming Mastery Lab + plataformas dos provedores",
+              "kind": "Sem curso único; aprendizado por labs e módulos oficiais de ferramentas/cloud",
+              "url": null,
+              "cost": "Grátis-first"
+            },
+            "credential": {
+              "status": "internal",
+              "platform": "Portfólio + badges dos provedores quando existirem",
+              "kind": "Sem uma certificação externa única para este item",
+              "url": null,
+              "cost": "Varia"
+            }
+          }
+        },
+        {
+          "id": "aws-foundations",
+          "order": 21,
+          "title": "AWS Cloud Foundations + Certified Cloud Practitioner",
+          "provider": "AWS Educate / AWS Skill Builder",
+          "credential": "AWS Certified Cloud Practitioner (CLF-C02) target + free AWS learning badges",
+          "cost": "mixed-free-study-paid-exam",
+          "examPrice": "US$100 + impostos aplicáveis",
+          "priceAsOf": "2026-08-25",
+          "priceSource": "https://aws.amazon.com/pt/certification/certified-cloud-practitioner/",
+          "status": "not-started",
+          "priority": "core",
+          "note": "Treinamento e vários badges podem ser gratuitos; a certificação AWS Certified Cloud Practitioner é paga. Após obter uma AWS Certification, a AWS oferece 50% de desconto em outro exame de certificação elegível.",
+          "access": {
+            "learning": {
+              "status": "available",
+              "platform": "AWS Skill Builder / AWS Educate",
+              "kind": "Learning plans e preparação oficial",
+              "url": "https://skillbuilder.aws/",
+              "cost": "Há conteúdo gratuito; alguns recursos são pagos"
+            },
+            "credential": {
+              "status": "available",
+              "platform": "AWS Certification / Pearson VUE",
+              "kind": "AWS Certified Cloud Practitioner — CLF-C02",
+              "url": "https://aws.amazon.com/pt/certification/certified-cloud-practitioner/",
+              "cost": "Exame pago"
+            }
+          }
+        },
+        {
+          "id": "aws-solutions-architect-associate",
+          "order": 22,
+          "title": "AWS Certified Solutions Architect — Associate (SAA-C03)",
+          "provider": "AWS Training and Certification",
+          "credential": "AWS Certified Solutions Architect — Associate",
+          "cost": "paid-exam",
+          "examPrice": "US$150 + impostos aplicáveis",
+          "priceAsOf": "2026-08-25",
+          "priceSource": "https://aws.amazon.com/pt/certification/certified-solutions-architect-associate/",
+          "status": "not-started",
+          "priority": "architecture-target",
+          "focus": [
+            "secure architectures",
+            "resilient architectures",
+            "high-performing architectures",
+            "cost-optimized architectures",
+            "AWS architecture trade-offs"
+          ],
+          "note": "Principal alvo de arquitetura AWS no nível Associate. Fazer depois dos fundamentos AWS e de prática suficiente com serviços reais.",
+          "access": {
+            "learning": {
+              "status": "available",
+              "platform": "AWS Skill Builder",
+              "kind": "Preparação oficial e labs",
+              "url": "https://skillbuilder.aws/",
+              "cost": "Há conteúdo gratuito; alguns recursos são pagos"
+            },
+            "credential": {
+              "status": "available",
+              "platform": "AWS Certification / Pearson VUE",
+              "kind": "AWS Certified Solutions Architect — Associate — SAA-C03",
+              "url": "https://aws.amazon.com/pt/certification/certified-solutions-architect-associate/",
+              "cost": "Exame pago"
+            }
+          }
+        },
+        {
+          "id": "architecture-mastery-defense",
+          "order": 23,
+          "title": "Software Architecture Mastery Gate & Architecture Defense",
+          "provider": "Programming Mastery Lab",
+          "credential": "Internal architecture defense + public architecture portfolio",
+          "cost": "free",
+          "status": "not-started",
+          "priority": "core",
+          "focus": [
+            "design from requirements",
+            "trade-off analysis",
+            "architecture review",
+            "documentation",
+            "defense of decisions",
+            "evolution strategy"
+          ],
+          "access": {
+            "learning": {
+              "status": "internal",
+              "platform": "Programming Mastery Lab",
+              "kind": "Preparação por projeto, revisão e defesa; não é curso externo",
+              "url": null,
+              "cost": "Grátis"
+            },
+            "credential": {
+              "status": "internal",
+              "platform": "Programming Mastery Lab",
+              "kind": "Architecture Defense interna + portfólio público",
+              "url": null,
+              "cost": "Grátis"
+            }
+          }
+        },
+        {
+          "id": "isaqb-cpsa-f-exam",
+          "order": 24,
+          "title": "iSAQB Certified Professional for Software Architecture — Foundation Level (CPSA-F)",
+          "provider": "iSAQB",
+          "credential": "CPSA-F",
+          "cost": "paid-when-justified",
+          "examPrice": "Varia por país e organismo certificador; exemplos autorizados em 2026: €180–265 + IVA; iSQI também exibe ofertas na faixa de ~US$317",
+          "priceAsOf": "2026-08-25",
+          "priceSource": "https://www.isaqb.org/certifications/cpsa-exams/foundation-level-exam/",
+          "priceExampleSource": "https://www.gasq.org/en/certification/exam-booking/details/isaqb-de-2461-43704.html",
+          "status": "not-started",
+          "priority": "credential-target",
+          "note": "O iSAQB não fixa um preço mundial para o CPSA-F: a prova é realizada por organismos certificadores independentes e o preço varia por país. Treinamento não é obrigatório para autodidatas.",
+          "access": {
+            "learning": {
+              "status": "materials-only",
+              "platform": "iSAQB + Accredited Training Providers",
+              "kind": "Pode estudar sozinho com currículo/literatura ou contratar treinamento acreditado; treinamento não é obrigatório",
+              "url": "https://www.isaqb.org/trainings/accredited-training-providers/",
+              "cost": "Autoestudo pode ser barato/grátis; treinamentos são pagos"
+            },
+            "credential": {
+              "status": "available",
+              "platform": "Certification Bodies reconhecidos pelo iSAQB",
+              "kind": "CPSA-F — exame remoto/online ou por provedor autorizado",
+              "url": "https://www.isaqb.org/certifications/certification-bodies/",
+              "cost": "Pago; varia por organismo/país"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "phase-05",
+      "title": "AI-Enabled Backend — Python, LLM Apps & Agents",
+      "goal": "Adicionar IA ao repertório de engenharia sem transformar a trilha em uma formação de cientista de dados. Python entra just-in-time para aplicações de IA, RAG, agentes, avaliação e LLMOps.",
+      "items": [
+        {
+          "id": "cs50p",
+          "order": 25,
+          "title": "CS50's Introduction to Programming with Python",
+          "provider": "Harvard University",
+          "credential": "CS50 Certificate",
+          "cost": "free",
+          "status": "not-started",
+          "priority": "core",
+          "access": {
+            "learning": {
+              "status": "available",
+              "platform": "CS50 OpenCourseWare",
+              "kind": "Curso oficial completo",
+              "url": "https://cs50.harvard.edu/python/",
+              "cost": "Grátis"
+            },
+            "credential": {
+              "status": "available",
+              "platform": "CS50",
+              "kind": "Certificado gratuito do CS50; edX verificado é opcional",
+              "url": "https://cs50.me/cs50p",
+              "cost": "Grátis no CS50; edX opcional pago"
+            }
+          }
+        },
+        {
+          "id": "elements-of-ai",
+          "order": 26,
+          "title": "Elements of AI — Introduction to AI",
+          "provider": "University of Helsinki + MinnaLearn",
+          "credential": "Free Digital Certificate",
+          "cost": "free",
+          "status": "not-started",
+          "priority": "core",
+          "source": "https://www.elementsofai.com/",
+          "estimatedHours": "~30h",
+          "description": "Introdução acessível e conceitualmente sólida à IA, cobrindo o que é IA, resolução de problemas, busca, probabilidade, machine learning, redes neurais e implicações sociais.",
+          "focus": [
+            "what artificial intelligence is and is not",
+            "problem solving and search",
+            "probability and uncertainty",
+            "machine learning fundamentals",
+            "neural networks basics",
+            "societal implications of AI"
+          ],
+          "note": "Novo núcleo introdutório de IA da trilha. Curso e certificado digital da parte Introduction to AI são gratuitos. Entra antes dos blocos mais aplicados de ML/IA.",
+          "access": {
+            "learning": {
+              "status": "available",
+              "platform": "Elements of AI",
+              "kind": "Curso oficial da University of Helsinki + MinnaLearn",
+              "url": "https://www.elementsofai.com/",
+              "cost": "Grátis"
+            },
+            "credential": {
+              "status": "available",
+              "platform": "Elements of AI / University of Helsinki",
+              "kind": "Certificado digital de conclusão",
+              "url": "https://www.elementsofai.com/",
+              "cost": "Grátis"
+            }
+          }
+        },
+        {
+          "id": "python-ai-engineering",
+          "order": 27,
+          "title": "Python para Engenharia de IA",
+          "provider": "Mastery Lab",
+          "credential": "Portfolio + Mastery Gate",
+          "cost": "free",
+          "status": "not-started",
+          "priority": "stack",
+          "access": {
+            "learning": {
+              "status": "internal",
+              "platform": "Programming Mastery Lab",
+              "kind": "Trilha aplicada interna; não é curso externo",
+              "url": null,
+              "cost": "Grátis"
+            },
+            "credential": {
+              "status": "internal",
+              "platform": "Programming Mastery Lab",
+              "kind": "Portfolio + Mastery Gate",
+              "url": null,
+              "cost": "Grátis"
+            }
+          }
+        },
+        {
+          "id": "llm-apps",
+          "order": 28,
+          "title": "LLM Application Engineering",
+          "provider": "Mastery Lab",
+          "credential": "AI application portfolio",
+          "cost": "free-first",
+          "status": "not-started",
+          "priority": "core",
+          "access": {
+            "learning": {
+              "status": "internal",
+              "platform": "Programming Mastery Lab",
+              "kind": "Trilha prática interna; sem curso externo único obrigatório",
+              "url": null,
+              "cost": "Grátis-first"
+            },
+            "credential": {
+              "status": "internal",
+              "platform": "Programming Mastery Lab",
+              "kind": "AI application portfolio",
+              "url": null,
+              "cost": "Grátis-first"
+            }
+          }
+        },
+        {
+          "id": "rag-agents",
+          "order": 29,
+          "title": "RAG, Agents & Tool Use",
+          "provider": "Mastery Lab",
+          "credential": "AI systems Mastery Gate",
+          "cost": "free-first",
+          "status": "not-started",
+          "priority": "core",
+          "access": {
+            "learning": {
+              "status": "internal",
+              "platform": "Programming Mastery Lab",
+              "kind": "Trilha prática interna; referências entram conforme necessidade",
+              "url": null,
+              "cost": "Grátis-first"
+            },
+            "credential": {
+              "status": "internal",
+              "platform": "Programming Mastery Lab",
+              "kind": "AI Systems Mastery Gate",
+              "url": null,
+              "cost": "Grátis-first"
+            }
+          }
+        },
+        {
+          "id": "llmops",
+          "order": 30,
+          "title": "Evaluation, LLMOps, Safety & Observability",
+          "provider": "Mastery Lab",
+          "credential": "Production AI architecture project",
+          "cost": "free-first",
+          "status": "not-started",
+          "priority": "core",
+          "access": {
+            "learning": {
+              "status": "internal",
+              "platform": "Programming Mastery Lab",
+              "kind": "Trilha prática interna com ferramentas de avaliação, segurança e observabilidade",
+              "url": null,
+              "cost": "Grátis-first"
+            },
+            "credential": {
+              "status": "internal",
+              "platform": "Programming Mastery Lab",
+              "kind": "Production AI architecture project",
+              "url": null,
+              "cost": "Grátis-first"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "phase-06",
+      "title": ".NET & Azure — Second Backend Ecosystem",
+      "goal": "Abrir a segunda grande janela somente depois de consolidar backend em Node. Reaplicar os mesmos conceitos de engenharia e arquitetura em C#/.NET e aprofundar Azure.",
+      "items": [
+        {
+          "id": "foundational-csharp",
+          "order": 31,
+          "title": "Foundational C# with Microsoft",
+          "provider": "Microsoft + freeCodeCamp",
+          "credential": "Foundational C# Certification",
+          "cost": "free",
+          "status": "not-started",
+          "priority": "core",
+          "access": {
+            "learning": {
+              "status": "available",
+              "platform": "freeCodeCamp + Microsoft Learn",
+              "kind": "Trilha oficial integrada; parte do conteúdo é feita no Microsoft Learn e validada no freeCodeCamp",
+              "url": "https://www.freecodecamp.org/learn/foundational-c-sharp-with-microsoft/",
+              "cost": "Grátis"
+            },
+            "credential": {
+              "status": "available",
+              "platform": "freeCodeCamp + Microsoft",
+              "kind": "Foundational C# Certification",
+              "url": "https://www.freecodecamp.org/learn/foundational-c-sharp-with-microsoft/",
+              "cost": "Grátis"
+            }
+          }
+        },
+        {
+          "id": "dotnet-backend",
+          "order": 32,
+          "title": ".NET/C# Backend Engineering",
+          "provider": "Microsoft Learn + Mastery Lab",
+          "credential": "Applied portfolio + badges where available",
+          "cost": "free",
+          "status": "not-started",
+          "priority": "stack",
+          "access": {
+            "learning": {
+              "status": "available",
+              "platform": "Microsoft Learn + Programming Mastery Lab",
+              "kind": "Módulos oficiais selecionados + laboratório aplicado; não é um único curso fechado",
+              "url": "https://learn.microsoft.com/training/",
+              "cost": "Grátis"
+            },
+            "credential": {
+              "status": "internal",
+              "platform": "Microsoft Learn + portfólio",
+              "kind": "Badges/achievements onde disponíveis + evidência prática; não há uma certificação .NET única para este item",
+              "url": "https://learn.microsoft.com/credentials/",
+              "cost": "Grátis para estudo; exames específicos podem ser pagos"
+            }
+          }
+        },
+        {
+          "id": "azure-foundations",
+          "order": 33,
+          "title": "Azure Fundamentals (AZ-900)",
+          "provider": "Microsoft Learn",
+          "credential": "Microsoft Certified: Azure Fundamentals",
+          "cost": "paid-exam",
+          "examPrice": "US$59 (Brasil)",
+          "priceAsOf": "2026-08-25",
+          "priceSource": "https://learn.microsoft.com/pt-br/credentials/certifications/azure-fundamentals/",
+          "status": "not-started",
+          "priority": "core",
+          "note": "Preço regional exibido pela Microsoft para o Brasil; pode ser alterado pelo provedor.",
+          "access": {
+            "learning": {
+              "status": "available",
+              "platform": "Microsoft Learn",
+              "kind": "Learning paths oficiais para AZ-900",
+              "url": "https://learn.microsoft.com/training/azure/",
+              "cost": "Grátis"
+            },
+            "credential": {
+              "status": "available",
+              "platform": "Microsoft Credentials / Pearson VUE (ou Certiport para elegíveis)",
+              "kind": "Microsoft Certified: Azure Fundamentals — exame AZ-900",
+              "url": "https://learn.microsoft.com/pt-br/credentials/certifications/azure-fundamentals/",
+              "cost": "Exame pago"
+            }
+          }
+        },
+        {
+          "id": "azure-developer",
+          "order": 34,
+          "title": "Azure AI Cloud Developer Associate (AI-200)",
+          "provider": "Microsoft Learn",
+          "credential": "Microsoft Certified: Azure AI Cloud Developer Associate",
+          "cost": "paid-exam",
+          "examPrice": "US$99 (Brasil)",
+          "priceAsOf": "2026-08-25",
+          "priceSource": "https://learn.microsoft.com/pt-br/credentials/certifications/azure-ai-cloud-developer-associate/",
+          "status": "not-started",
+          "priority": "core",
+          "note": "Substitui oficialmente Azure Developer Associate / AZ-204, aposentada em 31/07/2026. O AI-200 mantém desenvolvimento cloud/back-end, com maior integração de IA, containers, dados, mensageria, segurança e observabilidade.",
+          "access": {
+            "learning": {
+              "status": "available",
+              "platform": "Microsoft Learn",
+              "kind": "Treinamento oficial alinhado ao AI-200",
+              "url": "https://learn.microsoft.com/training/",
+              "cost": "Grátis"
+            },
+            "credential": {
+              "status": "available",
+              "platform": "Microsoft Credentials / Pearson VUE",
+              "kind": "Microsoft Certified: Azure AI Cloud Developer Associate — AI-200",
+              "url": "https://learn.microsoft.com/pt-br/credentials/certifications/azure-ai-cloud-developer-associate/",
+              "cost": "Exame pago"
+            }
+          }
+        },
+        {
+          "id": "azure-administrator",
+          "order": 35,
+          "title": "Azure Administrator Associate (AZ-104)",
+          "provider": "Microsoft Learn",
+          "credential": "Microsoft Certified: Azure Administrator Associate",
+          "cost": "paid-exam",
+          "examPrice": "US$99 (Brasil)",
+          "priceAsOf": "2026-08-25",
+          "priceSource": "https://learn.microsoft.com/pt-br/credentials/certifications/azure-administrator/",
+          "status": "not-started",
+          "priority": "core",
+          "focus": [
+            "Azure identities and governance",
+            "storage",
+            "compute",
+            "virtual networking",
+            "monitoring and maintenance"
+          ],
+          "note": "Parte do caminho para Azure Solutions Architect Expert e importante para dominar a operação real da plataforma antes de desenhar soluções de arquitetura.",
+          "access": {
+            "learning": {
+              "status": "available",
+              "platform": "Microsoft Learn",
+              "kind": "Learning paths oficiais da série AZ-104",
+              "url": "https://learn.microsoft.com/pt-br/training/paths/az-104-administrator-prerequisites/",
+              "cost": "Grátis"
+            },
+            "credential": {
+              "status": "available",
+              "platform": "Microsoft Credentials / Pearson VUE",
+              "kind": "Microsoft Certified: Azure Administrator Associate — AZ-104",
+              "url": "https://learn.microsoft.com/pt-br/credentials/certifications/azure-administrator/",
+              "cost": "Exame pago"
+            }
+          }
+        },
+        {
+          "id": "azure-solutions-architect",
+          "order": 36,
+          "title": "Designing Microsoft Azure Infrastructure Solutions (AZ-305)",
+          "provider": "Microsoft Learn",
+          "credential": "AZ-305 exam; with Azure Administrator Associate leads to Microsoft Certified: Azure Solutions Architect Expert",
+          "cost": "paid-exam",
+          "examPrice": "US$99 (Brasil)",
+          "priceAsOf": "2026-08-25",
+          "priceSource": "https://learn.microsoft.com/pt-br/credentials/certifications/azure-solutions-architect/",
+          "status": "not-started",
+          "priority": "architecture-target",
+          "focus": [
+            "identity and governance architecture",
+            "data storage architecture",
+            "business continuity architecture",
+            "infrastructure architecture"
+          ],
+          "note": "Alvo de arquitetura Azure. A credencial Azure Solutions Architect Expert exige Azure Administrator Associate mais o exame AZ-305.",
+          "access": {
+            "learning": {
+              "status": "available",
+              "platform": "Microsoft Learn",
+              "kind": "Learning paths oficiais para AZ-305",
+              "url": "https://learn.microsoft.com/pt-br/training/paths/design-infranstructure-solutions/",
+              "cost": "Grátis"
+            },
+            "credential": {
+              "status": "available",
+              "platform": "Microsoft Credentials / Pearson VUE",
+              "kind": "Exame AZ-305; combinado com Azure Administrator Associate leva a Solutions Architect Expert",
+              "url": "https://learn.microsoft.com/pt-br/credentials/certifications/azure-solutions-architect/",
+              "cost": "Exame pago"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "phase-07",
+      "title": "Frontend Specialization — Next.js, Angular & Web",
+      "goal": "Depois de React no Full Stack Open e de duas janelas de backend, aprofundar frameworks de frontend sem fragmentar o foco inicial.",
+      "items": [
+        {
+          "id": "nextjs-official",
+          "title": "Next.js Official — App Router & Production",
+          "provider": "Vercel / Next.js",
+          "credential": "No official external certification",
+          "cost": "free",
+          "status": "not-started",
+          "priority": "frontend",
+          "source": "https://nextjs.org/learn",
+          "description": "Aprofundar Next.js somente depois da janela backend e da base React do Full Stack Open.",
+          "focus": [
+            "App Router",
+            "server and client components",
+            "routing and layouts",
+            "data fetching and mutations",
+            "caching and revalidation",
+            "authentication integration",
+            "rendering strategies",
+            "error handling",
+            "performance",
+            "production deployment"
+          ],
+          "note": "React é consolidado antes no Full Stack Open. Next.js entra depois como especialização oficial de framework, sem bloquear a profundidade backend.",
+          "access": {
+            "learning": {
+              "status": "available",
+              "platform": "Next.js Learn + official documentation",
+              "kind": "Curso/guias oficiais do Next.js",
+              "url": "https://nextjs.org/learn",
+              "cost": "Grátis"
+            },
+            "credential": {
+              "status": "none",
+              "platform": null,
+              "kind": "Não há certificação oficial externa vinculada a esta etapa; comprovação por projeto e Mastery Gate.",
+              "url": null,
+              "cost": null
+            }
+          },
+          "order": 37
+        },
+        {
+          "id": "angular-official-essentials",
+          "order": 38,
           "title": "Angular Official — Essentials + First App",
           "provider": "Angular Team / angular.dev",
           "credential": "Official learning path; no external certificate",
@@ -587,7 +1349,7 @@
         },
         {
           "id": "angular-official-core",
-          "order": 17,
+          "order": 39,
           "title": "Angular Official — Components, Templates, Signals & Dependency Injection",
           "provider": "Angular Team / angular.dev",
           "credential": "Official documentation + Mastery evidence",
@@ -623,7 +1385,7 @@
         },
         {
           "id": "angular-official-app-engineering",
-          "order": 18,
+          "order": 40,
           "title": "Angular Official — Routing, HTTP, Forms & Application Data Flow",
           "provider": "Angular Team / angular.dev",
           "credential": "Official documentation + applied project",
@@ -661,7 +1423,7 @@
         },
         {
           "id": "angular-official-testing-debugging",
-          "order": 19,
+          "order": 41,
           "title": "Angular Official — Testing & Debugging",
           "provider": "Angular Team / angular.dev",
           "credential": "Official documentation + Mastery evidence",
@@ -696,7 +1458,7 @@
         },
         {
           "id": "angular-official-performance-ssr",
-          "order": 20,
+          "order": 42,
           "title": "Angular Official — Performance, SSR/SSG, Hydration & Zoneless",
           "provider": "Angular Team / angular.dev",
           "credential": "Official documentation + applied project",
@@ -733,7 +1495,7 @@
         },
         {
           "id": "angular-mastery-project",
-          "order": 21,
+          "order": 43,
           "title": "Angular Applied Project + Mastery Gate",
           "provider": "Programming Mastery Lab",
           "credential": "Internal Mastery Gate + public portfolio evidence",
@@ -760,7 +1522,7 @@
         },
         {
           "id": "hackerrank-angular-basic",
-          "order": 22,
+          "order": 44,
           "title": "Angular (Basic) Skills Certification",
           "provider": "HackerRank",
           "credential": "HackerRank Angular (Basic) Certificate",
@@ -788,7 +1550,7 @@
         },
         {
           "id": "hackerrank-angular-intermediate",
-          "order": 23,
+          "order": 45,
           "title": "Angular (Intermediate) Skills Certification",
           "provider": "HackerRank",
           "credential": "HackerRank Angular (Intermediate) Certificate",
@@ -815,41 +1577,8 @@
           }
         },
         {
-          "id": "dotnet-backend",
-          "order": 24,
-          "title": ".NET/C# Backend Engineering",
-          "provider": "Microsoft Learn + Mastery Lab",
-          "credential": "Applied portfolio + badges where available",
-          "cost": "free",
-          "status": "not-started",
-          "priority": "stack",
-          "access": {
-            "learning": {
-              "status": "available",
-              "platform": "Microsoft Learn + Programming Mastery Lab",
-              "kind": "Módulos oficiais selecionados + laboratório aplicado; não é um único curso fechado",
-              "url": "https://learn.microsoft.com/training/",
-              "cost": "Grátis"
-            },
-            "credential": {
-              "status": "internal",
-              "platform": "Microsoft Learn + portfólio",
-              "kind": "Badges/achievements onde disponíveis + evidência prática; não há uma certificação .NET única para este item",
-              "url": "https://learn.microsoft.com/credentials/",
-              "cost": "Grátis para estudo; exames específicos podem ser pagos"
-            }
-          }
-        }
-      ]
-    },
-    {
-      "id": "phase-03",
-      "title": "Web, Dados, Fundamentos de IA e Segurança",
-      "goal": "Expandir para aplicações web avançadas, construir base prática em dados com Python e consolidar fundamentos de IA/ML com uma sequência principal enxuta, mantendo credenciais complementares gratuitas como opcionais.",
-      "items": [
-        {
           "id": "cs50-web",
-          "order": 25,
+          "order": 46,
           "title": "CS50's Web Programming with Python and JavaScript",
           "provider": "Harvard University",
           "credential": "CS50 Certificate",
@@ -872,10 +1601,17 @@
               "cost": "Grátis no CS50; edX opcional pago"
             }
           }
-        },
+        }
+      ]
+    },
+    {
+      "id": "phase-08",
+      "title": "AI, Data & Security — Advanced Depth & Optional Credentials",
+      "goal": "Aprofundar fundamentos acadêmicos e credenciais complementares de dados, ML, IA e segurança depois que a base profissional principal estiver sólida.",
+      "items": [
         {
           "id": "harvard-data-science-python",
-          "order": 26,
+          "order": 47,
           "title": "Introduction to Data Science with Python",
           "provider": "Harvard University / HarvardX",
           "credential": "Verified Certificate (edX, optional)",
@@ -917,46 +1653,8 @@
           }
         },
         {
-          "id": "elements-of-ai",
-          "order": 27,
-          "title": "Elements of AI — Introduction to AI",
-          "provider": "University of Helsinki + MinnaLearn",
-          "credential": "Free Digital Certificate",
-          "cost": "free",
-          "status": "not-started",
-          "priority": "core",
-          "source": "https://www.elementsofai.com/",
-          "estimatedHours": "~30h",
-          "description": "Introdução acessível e conceitualmente sólida à IA, cobrindo o que é IA, resolução de problemas, busca, probabilidade, machine learning, redes neurais e implicações sociais.",
-          "focus": [
-            "what artificial intelligence is and is not",
-            "problem solving and search",
-            "probability and uncertainty",
-            "machine learning fundamentals",
-            "neural networks basics",
-            "societal implications of AI"
-          ],
-          "note": "Novo núcleo introdutório de IA da trilha. Curso e certificado digital da parte Introduction to AI são gratuitos. Entra antes dos blocos mais aplicados de ML/IA.",
-          "access": {
-            "learning": {
-              "status": "available",
-              "platform": "Elements of AI",
-              "kind": "Curso oficial da University of Helsinki + MinnaLearn",
-              "url": "https://www.elementsofai.com/",
-              "cost": "Grátis"
-            },
-            "credential": {
-              "status": "available",
-              "platform": "Elements of AI / University of Helsinki",
-              "kind": "Certificado digital de conclusão",
-              "url": "https://www.elementsofai.com/",
-              "cost": "Grátis"
-            }
-          }
-        },
-        {
           "id": "ibm-ai-foundations-understanding",
-          "order": 28,
+          "order": 48,
           "title": "AI Fundamentals: Foundations for Understanding AI",
           "provider": "IBM SkillsBuild",
           "credential": "IBM SkillsBuild Digital Credential / Credly badge",
@@ -992,7 +1690,7 @@
         },
         {
           "id": "ibm-artificial-intelligence-fundamentals",
-          "order": 29,
+          "order": 49,
           "title": "Artificial Intelligence Fundamentals",
           "provider": "IBM SkillsBuild",
           "credential": "IBM SkillsBuild Digital Credential",
@@ -1027,7 +1725,7 @@
         },
         {
           "id": "umd-ai-career-empowerment",
-          "order": 30,
+          "order": 50,
           "title": "AI and Career Empowerment",
           "provider": "University of Maryland — Robert H. Smith School of Business",
           "credential": "Free Certificate of Completion",
@@ -1063,7 +1761,7 @@
         },
         {
           "id": "alteryx-ml-fundamentals",
-          "order": 31,
+          "order": 51,
           "title": "Machine Learning Fundamentals Micro-Credential",
           "provider": "Alteryx",
           "credential": "Alteryx Machine Learning Fundamentals Micro-Credential / Credly",
@@ -1097,7 +1795,7 @@
         },
         {
           "id": "cs50-ai",
-          "order": 32,
+          "order": 52,
           "title": "CS50's Introduction to Artificial Intelligence with Python",
           "provider": "Harvard University",
           "credential": "CS50 Certificate",
@@ -1123,7 +1821,7 @@
         },
         {
           "id": "cs50-cyber",
-          "order": 33,
+          "order": 53,
           "title": "CS50's Introduction to Cybersecurity",
           "provider": "Harvard University",
           "credential": "CS50 Certificate",
@@ -1146,243 +1844,17 @@
               "cost": "Grátis no CS50; edX opcional pago"
             }
           }
-        },
-        {
-          "id": "python-ai-engineering",
-          "order": 34,
-          "title": "Python para Engenharia de IA",
-          "provider": "Mastery Lab",
-          "credential": "Portfolio + Mastery Gate",
-          "cost": "free",
-          "status": "not-started",
-          "priority": "stack",
-          "access": {
-            "learning": {
-              "status": "internal",
-              "platform": "Programming Mastery Lab",
-              "kind": "Trilha aplicada interna; não é curso externo",
-              "url": null,
-              "cost": "Grátis"
-            },
-            "credential": {
-              "status": "internal",
-              "platform": "Programming Mastery Lab",
-              "kind": "Portfolio + Mastery Gate",
-              "url": null,
-              "cost": "Grátis"
-            }
-          }
         }
       ]
     },
     {
-      "id": "phase-04",
-      "title": "Cloud Engineer & Cloud Architecture",
-      "goal": "Dominar fundamentos cloud, desenvolvimento, administração, segurança, observabilidade e arquitetura em provedores relevantes, mantendo a arquitetura cloud separada da formação vendor-neutral de Software Architecture.",
+      "id": "phase-09",
+      "title": "Advanced Credentials & Capstone Architect",
+      "goal": "Fechar a formação com breadth cloud adicional, credenciais avançadas e um sistema capstone que integre backend, frontend, cloud, segurança, dados e IA com defesa arquitetural.",
       "items": [
         {
-          "id": "azure-foundations",
-          "order": 35,
-          "title": "Azure Fundamentals (AZ-900)",
-          "provider": "Microsoft Learn",
-          "credential": "Microsoft Certified: Azure Fundamentals",
-          "cost": "paid-exam",
-          "examPrice": "US$59 (Brasil)",
-          "priceAsOf": "2026-08-25",
-          "priceSource": "https://learn.microsoft.com/pt-br/credentials/certifications/azure-fundamentals/",
-          "status": "not-started",
-          "priority": "core",
-          "note": "Preço regional exibido pela Microsoft para o Brasil; pode ser alterado pelo provedor.",
-          "access": {
-            "learning": {
-              "status": "available",
-              "platform": "Microsoft Learn",
-              "kind": "Learning paths oficiais para AZ-900",
-              "url": "https://learn.microsoft.com/training/azure/",
-              "cost": "Grátis"
-            },
-            "credential": {
-              "status": "available",
-              "platform": "Microsoft Credentials / Pearson VUE (ou Certiport para elegíveis)",
-              "kind": "Microsoft Certified: Azure Fundamentals — exame AZ-900",
-              "url": "https://learn.microsoft.com/pt-br/credentials/certifications/azure-fundamentals/",
-              "cost": "Exame pago"
-            }
-          }
-        },
-        {
-          "id": "azure-developer",
-          "order": 36,
-          "title": "Azure AI Cloud Developer Associate (AI-200)",
-          "provider": "Microsoft Learn",
-          "credential": "Microsoft Certified: Azure AI Cloud Developer Associate",
-          "cost": "paid-exam",
-          "examPrice": "US$99 (Brasil)",
-          "priceAsOf": "2026-08-25",
-          "priceSource": "https://learn.microsoft.com/pt-br/credentials/certifications/azure-ai-cloud-developer-associate/",
-          "status": "not-started",
-          "priority": "core",
-          "note": "Substitui oficialmente Azure Developer Associate / AZ-204, aposentada em 31/07/2026. O AI-200 mantém desenvolvimento cloud/back-end, com maior integração de IA, containers, dados, mensageria, segurança e observabilidade.",
-          "access": {
-            "learning": {
-              "status": "available",
-              "platform": "Microsoft Learn",
-              "kind": "Treinamento oficial alinhado ao AI-200",
-              "url": "https://learn.microsoft.com/training/",
-              "cost": "Grátis"
-            },
-            "credential": {
-              "status": "available",
-              "platform": "Microsoft Credentials / Pearson VUE",
-              "kind": "Microsoft Certified: Azure AI Cloud Developer Associate — AI-200",
-              "url": "https://learn.microsoft.com/pt-br/credentials/certifications/azure-ai-cloud-developer-associate/",
-              "cost": "Exame pago"
-            }
-          }
-        },
-        {
-          "id": "azure-administrator",
-          "order": 37,
-          "title": "Azure Administrator Associate (AZ-104)",
-          "provider": "Microsoft Learn",
-          "credential": "Microsoft Certified: Azure Administrator Associate",
-          "cost": "paid-exam",
-          "examPrice": "US$99 (Brasil)",
-          "priceAsOf": "2026-08-25",
-          "priceSource": "https://learn.microsoft.com/pt-br/credentials/certifications/azure-administrator/",
-          "status": "not-started",
-          "priority": "core",
-          "focus": [
-            "Azure identities and governance",
-            "storage",
-            "compute",
-            "virtual networking",
-            "monitoring and maintenance"
-          ],
-          "note": "Parte do caminho para Azure Solutions Architect Expert e importante para dominar a operação real da plataforma antes de desenhar soluções de arquitetura.",
-          "access": {
-            "learning": {
-              "status": "available",
-              "platform": "Microsoft Learn",
-              "kind": "Learning paths oficiais da série AZ-104",
-              "url": "https://learn.microsoft.com/pt-br/training/paths/az-104-administrator-prerequisites/",
-              "cost": "Grátis"
-            },
-            "credential": {
-              "status": "available",
-              "platform": "Microsoft Credentials / Pearson VUE",
-              "kind": "Microsoft Certified: Azure Administrator Associate — AZ-104",
-              "url": "https://learn.microsoft.com/pt-br/credentials/certifications/azure-administrator/",
-              "cost": "Exame pago"
-            }
-          }
-        },
-        {
-          "id": "azure-solutions-architect",
-          "order": 38,
-          "title": "Designing Microsoft Azure Infrastructure Solutions (AZ-305)",
-          "provider": "Microsoft Learn",
-          "credential": "AZ-305 exam; with Azure Administrator Associate leads to Microsoft Certified: Azure Solutions Architect Expert",
-          "cost": "paid-exam",
-          "examPrice": "US$99 (Brasil)",
-          "priceAsOf": "2026-08-25",
-          "priceSource": "https://learn.microsoft.com/pt-br/credentials/certifications/azure-solutions-architect/",
-          "status": "not-started",
-          "priority": "architecture-target",
-          "focus": [
-            "identity and governance architecture",
-            "data storage architecture",
-            "business continuity architecture",
-            "infrastructure architecture"
-          ],
-          "note": "Alvo de arquitetura Azure. A credencial Azure Solutions Architect Expert exige Azure Administrator Associate mais o exame AZ-305.",
-          "access": {
-            "learning": {
-              "status": "available",
-              "platform": "Microsoft Learn",
-              "kind": "Learning paths oficiais para AZ-305",
-              "url": "https://learn.microsoft.com/pt-br/training/paths/design-infranstructure-solutions/",
-              "cost": "Grátis"
-            },
-            "credential": {
-              "status": "available",
-              "platform": "Microsoft Credentials / Pearson VUE",
-              "kind": "Exame AZ-305; combinado com Azure Administrator Associate leva a Solutions Architect Expert",
-              "url": "https://learn.microsoft.com/pt-br/credentials/certifications/azure-solutions-architect/",
-              "cost": "Exame pago"
-            }
-          }
-        },
-        {
-          "id": "aws-foundations",
-          "order": 39,
-          "title": "AWS Cloud Foundations + Certified Cloud Practitioner",
-          "provider": "AWS Educate / AWS Skill Builder",
-          "credential": "AWS Certified Cloud Practitioner (CLF-C02) target + free AWS learning badges",
-          "cost": "mixed-free-study-paid-exam",
-          "examPrice": "US$100 + impostos aplicáveis",
-          "priceAsOf": "2026-08-25",
-          "priceSource": "https://aws.amazon.com/pt/certification/certified-cloud-practitioner/",
-          "status": "not-started",
-          "priority": "core",
-          "note": "Treinamento e vários badges podem ser gratuitos; a certificação AWS Certified Cloud Practitioner é paga. Após obter uma AWS Certification, a AWS oferece 50% de desconto em outro exame de certificação elegível.",
-          "access": {
-            "learning": {
-              "status": "available",
-              "platform": "AWS Skill Builder / AWS Educate",
-              "kind": "Learning plans e preparação oficial",
-              "url": "https://skillbuilder.aws/",
-              "cost": "Há conteúdo gratuito; alguns recursos são pagos"
-            },
-            "credential": {
-              "status": "available",
-              "platform": "AWS Certification / Pearson VUE",
-              "kind": "AWS Certified Cloud Practitioner — CLF-C02",
-              "url": "https://aws.amazon.com/pt/certification/certified-cloud-practitioner/",
-              "cost": "Exame pago"
-            }
-          }
-        },
-        {
-          "id": "aws-solutions-architect-associate",
-          "order": 40,
-          "title": "AWS Certified Solutions Architect — Associate (SAA-C03)",
-          "provider": "AWS Training and Certification",
-          "credential": "AWS Certified Solutions Architect — Associate",
-          "cost": "paid-exam",
-          "examPrice": "US$150 + impostos aplicáveis",
-          "priceAsOf": "2026-08-25",
-          "priceSource": "https://aws.amazon.com/pt/certification/certified-solutions-architect-associate/",
-          "status": "not-started",
-          "priority": "architecture-target",
-          "focus": [
-            "secure architectures",
-            "resilient architectures",
-            "high-performing architectures",
-            "cost-optimized architectures",
-            "AWS architecture trade-offs"
-          ],
-          "note": "Principal alvo de arquitetura AWS no nível Associate. Fazer depois dos fundamentos AWS e de prática suficiente com serviços reais.",
-          "access": {
-            "learning": {
-              "status": "available",
-              "platform": "AWS Skill Builder",
-              "kind": "Preparação oficial e labs",
-              "url": "https://skillbuilder.aws/",
-              "cost": "Há conteúdo gratuito; alguns recursos são pagos"
-            },
-            "credential": {
-              "status": "available",
-              "platform": "AWS Certification / Pearson VUE",
-              "kind": "AWS Certified Solutions Architect — Associate — SAA-C03",
-              "url": "https://aws.amazon.com/pt/certification/certified-solutions-architect-associate/",
-              "cost": "Exame pago"
-            }
-          }
-        },
-        {
           "id": "oci-foundations",
-          "order": 41,
+          "order": 54,
           "title": "OCI Foundations (2026)",
           "provider": "Oracle University",
           "credential": "Oracle Cloud Infrastructure 2026 Foundations Associate (1Z0-1085-26)",
@@ -1407,286 +1879,10 @@
               "cost": "Grátis para Foundations em 2026"
             }
           }
-        }
-      ]
-    },
-    {
-      "id": "phase-05",
-      "title": "Software Architecture",
-      "goal": "Formar arquitetura de software vendor-neutral usando o currículo oficial iSAQB CPSA-F como espinha dorsal externa, com projetos e Mastery Gates para comprovar design, documentação, trade-offs, qualidade e sistemas distribuídos.",
-      "items": [
-        {
-          "id": "isaqb-cpsa-f-curriculum",
-          "order": 42,
-          "title": "iSAQB CPSA-F — Official Curriculum, Glossary & Mock Exam",
-          "provider": "iSAQB",
-          "credential": "Official CPSA-F curriculum preparation; certification exam optional later",
-          "cost": "free-study",
-          "status": "not-started",
-          "priority": "core",
-          "source": "https://www.isaqb.org/certifications/cpsa-certifications/",
-          "focus": [
-            "software architecture fundamentals",
-            "architecture design",
-            "quality requirements",
-            "architecture documentation",
-            "communication",
-            "design decisions",
-            "tools and examples"
-          ],
-          "note": "Usar o material oficial gratuito como referência externa principal. A prova paga fica para quando houver ROI/voucher e domínio suficiente para passar de primeira.",
-          "access": {
-            "learning": {
-              "status": "materials-only",
-              "platform": "iSAQB",
-              "kind": "Currículo, glossário e mock exam oficiais; não há uma plataforma única de curso do próprio iSAQB",
-              "url": "https://www.isaqb.org/certifications/cpsa-certifications/cpsa-foundation-level/",
-              "cost": "Material oficial gratuito; treinamentos credenciados normalmente são pagos"
-            },
-            "credential": {
-              "status": "optional",
-              "platform": "Certification Bodies reconhecidos pelo iSAQB",
-              "kind": "Exame CPSA-F opcional; o iSAQB não aplica o exame diretamente",
-              "url": "https://www.isaqb.org/certifications/certification-bodies/",
-              "cost": "Pago; preço varia por organismo/país"
-            }
-          }
-        },
-        {
-          "id": "architecture-foundations",
-          "order": 43,
-          "title": "Software Architecture Foundations — Mastery Lab",
-          "provider": "Programming Mastery Lab + iSAQB curriculum",
-          "credential": "Architecture Mastery Gate",
-          "cost": "free",
-          "status": "not-started",
-          "priority": "core",
-          "focus": [
-            "architectural drivers",
-            "quality attributes",
-            "constraints",
-            "trade-offs",
-            "coupling/cohesion",
-            "architecture styles",
-            "design decisions"
-          ],
-          "note": "Camada prática: transformar o currículo iSAQB em capacidade demonstrável de explicar, desenhar, criticar e defender uma arquitetura.",
-          "access": {
-            "learning": {
-              "status": "internal",
-              "platform": "Programming Mastery Lab + currículo iSAQB",
-              "kind": "Laboratório próprio baseado em referência oficial; não há curso externo obrigatório",
-              "url": "https://www.isaqb.org/certifications/cpsa-certifications/cpsa-foundation-level/",
-              "cost": "Grátis"
-            },
-            "credential": {
-              "status": "internal",
-              "platform": "Programming Mastery Lab",
-              "kind": "Architecture Mastery Gate",
-              "url": null,
-              "cost": "Grátis"
-            }
-          }
-        },
-        {
-          "id": "architecture-documentation",
-          "order": 44,
-          "title": "Architecture Documentation — C4, ADRs, Quality Scenarios & Architecture Communication",
-          "provider": "iSAQB-aligned + Programming Mastery Lab",
-          "credential": "Applied architecture documentation portfolio",
-          "cost": "free",
-          "status": "not-started",
-          "priority": "core",
-          "focus": [
-            "C4 diagrams",
-            "ADRs",
-            "quality scenarios",
-            "views and viewpoints",
-            "architecture communication",
-            "decision rationale"
-          ],
-          "access": {
-            "learning": {
-              "status": "internal",
-              "platform": "Programming Mastery Lab + referências iSAQB",
-              "kind": "Não há curso único obrigatório; estudo por currículo/referências + prática",
-              "url": "https://www.isaqb.org/",
-              "cost": "Grátis-first"
-            },
-            "credential": {
-              "status": "internal",
-              "platform": "Programming Mastery Lab",
-              "kind": "Portfólio de documentação arquitetural",
-              "url": null,
-              "cost": "Grátis"
-            }
-          }
-        },
-        {
-          "id": "ddd-clean-hexagonal",
-          "order": 45,
-          "title": "DDD, Clean Architecture & Hexagonal Architecture",
-          "provider": "Programming Mastery Lab + primary references",
-          "credential": "Applied architecture project",
-          "cost": "free-first",
-          "status": "not-started",
-          "priority": "core",
-          "focus": [
-            "bounded contexts",
-            "domain modeling",
-            "ports and adapters",
-            "dependency direction",
-            "modularity",
-            "testability"
-          ],
-          "access": {
-            "learning": {
-              "status": "materials-only",
-              "platform": "Programming Mastery Lab + referências primárias",
-              "kind": "Não há uma plataforma oficial única; estudo é curado por referências e laboratório",
-              "url": null,
-              "cost": "Grátis-first"
-            },
-            "credential": {
-              "status": "internal",
-              "platform": "Programming Mastery Lab",
-              "kind": "Projeto aplicado; sem certificação externa obrigatória",
-              "url": null,
-              "cost": "Grátis-first"
-            }
-          }
-        },
-        {
-          "id": "distributed-systems",
-          "order": 46,
-          "title": "Distributed Systems, Messaging & Resilience",
-          "provider": "Programming Mastery Lab + vendor-neutral references",
-          "credential": "Applied architecture project",
-          "cost": "free-first",
-          "status": "not-started",
-          "priority": "core",
-          "focus": [
-            "distributed systems fundamentals",
-            "messaging",
-            "consistency",
-            "idempotency",
-            "retries",
-            "timeouts",
-            "circuit breakers",
-            "resilience",
-            "event-driven architecture"
-          ],
-          "access": {
-            "learning": {
-              "status": "materials-only",
-              "platform": "Programming Mastery Lab + referências vendor-neutral",
-              "kind": "Não há curso oficial único; conteúdo entra por laboratórios e referências selecionadas",
-              "url": null,
-              "cost": "Grátis-first"
-            },
-            "credential": {
-              "status": "internal",
-              "platform": "Programming Mastery Lab",
-              "kind": "Projeto aplicado de sistemas distribuídos",
-              "url": null,
-              "cost": "Grátis-first"
-            }
-          }
-        },
-        {
-          "id": "observability-platform",
-          "order": 47,
-          "title": "Observability, CI/CD, Containers & Platform Engineering",
-          "provider": "Programming Mastery Lab + cloud providers",
-          "credential": "Portfolio + provider badges",
-          "cost": "free-first",
-          "status": "not-started",
-          "priority": "core",
-          "access": {
-            "learning": {
-              "status": "materials-only",
-              "platform": "Programming Mastery Lab + plataformas dos provedores",
-              "kind": "Sem curso único; aprendizado por labs e módulos oficiais de ferramentas/cloud",
-              "url": null,
-              "cost": "Grátis-first"
-            },
-            "credential": {
-              "status": "internal",
-              "platform": "Portfólio + badges dos provedores quando existirem",
-              "kind": "Sem uma certificação externa única para este item",
-              "url": null,
-              "cost": "Varia"
-            }
-          }
-        },
-        {
-          "id": "architecture-mastery-defense",
-          "order": 48,
-          "title": "Software Architecture Mastery Gate & Architecture Defense",
-          "provider": "Programming Mastery Lab",
-          "credential": "Internal architecture defense + public architecture portfolio",
-          "cost": "free",
-          "status": "not-started",
-          "priority": "core",
-          "focus": [
-            "design from requirements",
-            "trade-off analysis",
-            "architecture review",
-            "documentation",
-            "defense of decisions",
-            "evolution strategy"
-          ],
-          "access": {
-            "learning": {
-              "status": "internal",
-              "platform": "Programming Mastery Lab",
-              "kind": "Preparação por projeto, revisão e defesa; não é curso externo",
-              "url": null,
-              "cost": "Grátis"
-            },
-            "credential": {
-              "status": "internal",
-              "platform": "Programming Mastery Lab",
-              "kind": "Architecture Defense interna + portfólio público",
-              "url": null,
-              "cost": "Grátis"
-            }
-          }
-        },
-        {
-          "id": "isaqb-cpsa-f-exam",
-          "order": 49,
-          "title": "iSAQB Certified Professional for Software Architecture — Foundation Level (CPSA-F)",
-          "provider": "iSAQB",
-          "credential": "CPSA-F",
-          "cost": "paid-when-justified",
-          "examPrice": "Varia por país e organismo certificador; exemplos autorizados em 2026: €180–265 + IVA; iSQI também exibe ofertas na faixa de ~US$317",
-          "priceAsOf": "2026-08-25",
-          "priceSource": "https://www.isaqb.org/certifications/cpsa-exams/foundation-level-exam/",
-          "priceExampleSource": "https://www.gasq.org/en/certification/exam-booking/details/isaqb-de-2461-43704.html",
-          "status": "not-started",
-          "priority": "credential-target",
-          "note": "O iSAQB não fixa um preço mundial para o CPSA-F: a prova é realizada por organismos certificadores independentes e o preço varia por país. Treinamento não é obrigatório para autodidatas.",
-          "access": {
-            "learning": {
-              "status": "materials-only",
-              "platform": "iSAQB + Accredited Training Providers",
-              "kind": "Pode estudar sozinho com currículo/literatura ou contratar treinamento acreditado; treinamento não é obrigatório",
-              "url": "https://www.isaqb.org/trainings/accredited-training-providers/",
-              "cost": "Autoestudo pode ser barato/grátis; treinamentos são pagos"
-            },
-            "credential": {
-              "status": "available",
-              "platform": "Certification Bodies reconhecidos pelo iSAQB",
-              "kind": "CPSA-F — exame remoto/online ou por provedor autorizado",
-              "url": "https://www.isaqb.org/certifications/certification-bodies/",
-              "cost": "Pago; varia por organismo/país"
-            }
-          }
         },
         {
           "id": "sei-software-architecture-professional",
-          "order": 50,
+          "order": 55,
           "title": "SEI Software Architecture Professional Certificate",
           "provider": "Carnegie Mellon University — Software Engineering Institute",
           "credential": "SEI Software Architecture Professional Certificate",
@@ -1722,102 +1918,10 @@
               "cost": "Pago"
             }
           }
-        }
-      ]
-    },
-    {
-      "id": "phase-06",
-      "title": "AI-Native Software Architect",
-      "goal": "Projetar sistemas modernos com LLMs, RAG, agentes, avaliação, segurança e LLMOps sem abandonar fundamentos de engenharia.",
-      "items": [
-        {
-          "id": "llm-apps",
-          "order": 51,
-          "title": "LLM Application Engineering",
-          "provider": "Mastery Lab",
-          "credential": "AI application portfolio",
-          "cost": "free-first",
-          "status": "not-started",
-          "priority": "core",
-          "access": {
-            "learning": {
-              "status": "internal",
-              "platform": "Programming Mastery Lab",
-              "kind": "Trilha prática interna; sem curso externo único obrigatório",
-              "url": null,
-              "cost": "Grátis-first"
-            },
-            "credential": {
-              "status": "internal",
-              "platform": "Programming Mastery Lab",
-              "kind": "AI application portfolio",
-              "url": null,
-              "cost": "Grátis-first"
-            }
-          }
         },
-        {
-          "id": "rag-agents",
-          "order": 52,
-          "title": "RAG, Agents & Tool Use",
-          "provider": "Mastery Lab",
-          "credential": "AI systems Mastery Gate",
-          "cost": "free-first",
-          "status": "not-started",
-          "priority": "core",
-          "access": {
-            "learning": {
-              "status": "internal",
-              "platform": "Programming Mastery Lab",
-              "kind": "Trilha prática interna; referências entram conforme necessidade",
-              "url": null,
-              "cost": "Grátis-first"
-            },
-            "credential": {
-              "status": "internal",
-              "platform": "Programming Mastery Lab",
-              "kind": "AI Systems Mastery Gate",
-              "url": null,
-              "cost": "Grátis-first"
-            }
-          }
-        },
-        {
-          "id": "llmops",
-          "order": 53,
-          "title": "Evaluation, LLMOps, Safety & Observability",
-          "provider": "Mastery Lab",
-          "credential": "Production AI architecture project",
-          "cost": "free-first",
-          "status": "not-started",
-          "priority": "core",
-          "access": {
-            "learning": {
-              "status": "internal",
-              "platform": "Programming Mastery Lab",
-              "kind": "Trilha prática interna com ferramentas de avaliação, segurança e observabilidade",
-              "url": null,
-              "cost": "Grátis-first"
-            },
-            "credential": {
-              "status": "internal",
-              "platform": "Programming Mastery Lab",
-              "kind": "Production AI architecture project",
-              "url": null,
-              "cost": "Grátis-first"
-            }
-          }
-        }
-      ]
-    },
-    {
-      "id": "phase-07",
-      "title": "Capstone Architect",
-      "goal": "Integrar software, frontend, backend, cloud, dados, segurança e IA em sistemas de portfólio com documentação arquitetural profissional.",
-      "items": [
         {
           "id": "capstone-system",
-          "order": 54,
+          "order": 56,
           "title": "Capstone Full Stack + Cloud + AI",
           "provider": "Programming Mastery Lab",
           "credential": "Final Mastery Gate + public portfolio",
@@ -1843,7 +1947,7 @@
         },
         {
           "id": "architecture-defense",
-          "order": 55,
+          "order": 57,
           "title": "Architecture Defense",
           "provider": "Programming Mastery Lab",
           "credential": "Oral/written architecture defense",
