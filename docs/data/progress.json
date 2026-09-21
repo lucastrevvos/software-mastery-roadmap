@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-18T12:09:00-03:00",
+  "updatedAt": "2026-09-21T18:55:00-03:00",
   "courses": {
     "cs50x": {
       "status": "completed",
@@ -116,7 +116,10 @@
     "foundational-csharp": {
       "status": "not-started",
       "started": false,
-      "completed": []
+      "completed": [],
+      "notes": [
+        "Adiado estrategicamente em 2026-09-21 para a segunda grande janela de backend. Antes dele: JavaScript/SQL → Node/Nest empregável → Full Stack Open/React → profundidade de backend."
+      ]
     },
     "cs50-sql": {
       "status": "in-progress",
@@ -198,5 +201,15 @@
   },
   "current": "fcc-js-v10",
   "currentTask": "variables-and-strings/build-a-sentence-maker",
-  "currentTaskUrl": "https://www.freecodecamp.org/learn/full-stack-developer/lab-sentence-maker/build-a-sentence-maker"
+  "currentTaskUrl": "https://www.freecodecamp.org/learn/full-stack-developer/lab-sentence-maker/build-a-sentence-maker",
+  "strategy": {
+    "mode": "employment-first-immersion-windows",
+    "maxActiveCourses": 2,
+    "primaryShare": "70-80%",
+    "complementaryShare": "20-30%",
+    "currentPrimary": "fcc-js-v10",
+    "currentComplementary": "cs50-sql",
+    "nextWindow": "nodejs-nestjs-backend-employability",
+    "secondBackendWindow": "dotnet-azure"
+  }
 }
