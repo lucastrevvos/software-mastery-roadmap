@@ -109,7 +109,7 @@ function renderErrors(ledger){
 }
 
 function paidPrice(item){
-  const price=item.examPrice||item.programPrice;
+  const price=item.examPrice||item.programPrice||item.coursePrice;
   if(!price) return '';
   const base=item.priceAsOf?` · base ${item.priceAsOf}`:'';
   return `<small class="roadmap-price"><strong>Preço:</strong> ${price}${base}</small>`;
