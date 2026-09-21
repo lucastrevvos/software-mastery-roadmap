@@ -282,7 +282,7 @@
     {
       "id": "phase-02",
       "title": "Full Stack Moderno",
-      "goal": "Consolidar desenvolvimento web moderno, APIs, testes, containers e integração ponta a ponta, com uma trilha Angular baseada prioritariamente nas fontes oficiais.",
+      "goal": "Consolidar desenvolvimento web moderno, APIs, testes, containers e integração ponta a ponta, com trilhas oficiais de NestJS e Angular onde houver material oficial relevante.",
       "items": [
         {
           "id": "full-stack-open-core",
