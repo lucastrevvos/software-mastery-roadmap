@@ -45,7 +45,7 @@ Ordem estratégica atual:
 7. **Frontend Specialization** — Next.js e Angular com profundidade.
 8. **AI/Data/Security avançados + Capstone** — especialização e credenciais de longo prazo.
 
-> Empregabilidade Gate #1: ao concluir Node.js Core + NestJS Fundamentals + projeto backend profissional, iniciar candidaturas para vagas Node.js/TypeScript/NestJS sem esperar cloud ou arquitetura avançadas.
+> Empregabilidade Gate #1: **KM One** será o projeto backend real em Node.js + TypeScript + NestJS, com PostgreSQL/Neon e deploy na Azure. Ao concluir um backend profissional e defensável tecnicamente, iniciar candidaturas para vagas Node.js/TypeScript/NestJS sem esperar cloud ou arquitetura avançadas. Decisão detalhada em [projects/KM_ONE_NODE_NEST_GATE.md](projects/KM_ONE_NODE_NEST_GATE.md).
 
 > Empregabilidade Gate #2: após o Full Stack Open, ampliar candidaturas para posições Node/React/TypeScript Full Stack.
 
