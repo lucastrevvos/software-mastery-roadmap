@@ -139,6 +139,8 @@ const roadmapDescriptions={
   'cisco-ccst-networking':'Certificação de entrada que valida suporte e fundamentos de redes, endereçamento IP, conectividade, switching/routing, troubleshooting e segurança básica.',
   'full-stack-open-core':'Engenharia web full stack moderna com React, Node.js/Express, APIs REST, testes, gerenciamento de estado e integração frontend-backend.',
   'full-stack-open-extensions':'Aprofundamentos selecionados do Full Stack Open, como TypeScript, GraphQL, CI/CD, containers, bancos relacionais e outros tópicos de produção.',
+  'node-nest-employability-project':'Projeto profissional de backend em Node.js/TypeScript/NestJS usado como Employability Gate antes da janela full stack.',
+  'nextjs-official':'Aprofundamento oficial em Next.js depois da base React do Full Stack Open, com App Router, rendering, data fetching, cache e produção.',
   'nestjs-official-fundamentals':'Curso oficial do NestJS para consolidar controllers, providers, dependency injection, REST APIs, persistência, configuração, OpenAPI e testes.',
   'nestjs-official-microservices':'Curso oficial do NestJS sobre microsserviços, escalabilidade, comunicação request-response e event-driven, NATS, RabbitMQ e padrões Inbox/Outbox.',
   'nestjs-official-architecture':'Curso oficial avançado sobre DDD, Hexagonal/Onion Architecture, Event-Driven Architecture, CQRS, Event Sourcing, CAP theorem e trade-offs arquiteturais.',
