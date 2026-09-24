@@ -1,4 +1,6 @@
 # Programming Mastery Lab — Protocol
+> **AMS — Adaptive Mastery Scaffolding:** a regra oficial para escolher automaticamente navegador, ambiente local, arquivo, ZIP ou repositório está documentada em [AMS_METHOD.md](AMS_METHOD.md). O AMS deve ser aplicado sempre que o aluno pedir “use AMS”.
+
 
 ## 1. Objetivo
 
