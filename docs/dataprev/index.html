@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Ambiente AMS de preparação para a prova Dataprev/FGV.">
+  <title>Dataprev Mastery Learning — AMS</title>
+  <link rel="stylesheet" href="../learning/styles.css?v=0.1.1">
+</head>
+<body>
+  <header class="topbar">
+    <button id="sidebarToggle" class="icon-button mobile-only" aria-label="Abrir currículo">☰</button>
+    <a class="brand" href="../index.html">Dataprev Mastery</a>
+    <div class="topbar-center">
+      <span id="courseTitle">Carregando curso…</span>
+    </div>
+    <div class="topbar-actions">
+      <button id="exportProgress" class="ghost-button">Exportar</button>
+      <label class="ghost-button import-label">
+        Importar
+        <input id="importProgress" type="file" accept="application/json">
+      </label>
+    </div>
+  </header>
+
+  <div class="app-shell">
+    <aside id="sidebar" class="sidebar" aria-label="Currículo">
+      <div class="sidebar-header">
+        <p class="eyebrow">CURRÍCULO</p>
+        <div class="progress-summary">
+          <strong id="progressPercent">0%</strong>
+          <span id="progressText">0 de 0 etapas</span>
+        </div>
+        <div class="progress-track" aria-hidden="true">
+          <div id="progressBar" class="progress-bar"></div>
+        </div>
+      </div>
+      <nav id="curriculum" class="curriculum"></nav>
+    </aside>
+
+    <main class="lesson-shell">
+      <div id="lessonStatus" class="lesson-status"></div>
+      <article id="lesson" class="lesson-card">
+        <div class="loading">Carregando conteúdo…</div>
+      </article>
+
+      <footer class="lesson-nav">
+        <button id="prevButton" class="nav-button secondary">← Anterior</button>
+        <button id="completeButton" class="nav-button primary">Concluir e continuar →</button>
+      </footer>
+    </main>
+  </div>
+
+  <dialog id="resultDialog" class="result-dialog">
+    <div id="resultContent"></div>
+    <form method="dialog">
+      <button class="nav-button primary">Continuar</button>
+    </form>
+  </dialog>
+
+  <script src="app.js?v=1.0.0" defer></script>
+</body>
+</html>
