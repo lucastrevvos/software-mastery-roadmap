@@ -1,0 +1,531 @@
+{
+  "course": {
+    "id": "dataprev-ams",
+    "title": "Dataprev 2026 — Português & Raciocínio Lógico-Matemático",
+    "subtitle": "Adaptive Mastery Scaffolding · FGV",
+    "version": 1,
+    "masteryProtocol": [
+      "Theory",
+      "Checkpoint",
+      "Workshop",
+      "Lab",
+      "Review",
+      "Quiz",
+      "Project/Gate"
+    ]
+  },
+  "modules": [
+    {
+      "id": "phase-01",
+      "number": "01",
+      "label": "RLM · EM ESTUDO",
+      "title": "Proposições, negação e equivalências",
+      "available": true,
+      "description": "Dominar a linguagem proposicional e as transformações que a FGV cobra.",
+      "lessons": [
+        {
+          "id": "phase-01-001-theory",
+          "type": "theory",
+          "title": "001 · Theory: modelo mental",
+          "lead": "Aprenda só o necessário para começar a operar. Papel e caneta são o ambiente principal deste tema.",
+          "blocks": [
+            {
+              "type": "heading",
+              "text": "1. Proposição"
+            },
+            {
+              "type": "paragraph",
+              "text": "Proposição é uma frase declarativa à qual podemos atribuir valor lógico verdadeiro (V) ou falso (F). Uma frase falsa continua sendo proposição. Ordens, perguntas e exclamações não são proposições."
+            },
+            {
+              "type": "callout",
+              "text": "Sentença aberta depende de variável livre. Ex.: `x + 2 = 5` não tem valor lógico definido enquanto `x` não estiver determinado."
+            },
+            {
+              "type": "heading",
+              "text": "2. Conectivos"
+            },
+            {
+              "type": "bullets",
+              "items": [
+                "`p ∧ q` (E): só é V quando os dois são V.",
+                "`p ∨ q` (OU inclusivo): só é F quando os dois são F.",
+                "`¬p` (NÃO): inverte o valor lógico.",
+                "`p → q` (SE... ENTÃO): só é F em V → F.",
+                "`p ↔ q` (SE E SOMENTE SE): é V quando p e q têm o mesmo valor."
+              ]
+            },
+            {
+              "type": "heading",
+              "text": "3. Negações que precisam virar reflexo"
+            },
+            {
+              "type": "code",
+              "code": "¬(p ∧ q) ≡ ¬p ∨ ¬q\n¬(p ∨ q) ≡ ¬p ∧ ¬q\n¬(p → q) ≡ p ∧ ¬q"
+            },
+            {
+              "type": "heading",
+              "text": "4. Equivalências centrais"
+            },
+            {
+              "type": "code",
+              "code": "p → q ≡ ¬p ∨ q\np → q ≡ ¬q → ¬p\np ↔ q ≡ (p → q) ∧ (q → p)"
+            },
+            {
+              "type": "callout",
+              "text": "FGV: não confunda contrapositiva (`¬q → ¬p`) com inversa (`¬p → ¬q`). A contrapositiva é equivalente; a inversa, em geral, não."
+            }
+          ]
+        },
+        {
+          "id": "phase-01-001-checkpoint",
+          "type": "checkpoint",
+          "title": "001 · Checkpoint: reconhecimento",
+          "passPercent": 67,
+          "lead": "Três checagens curtas antes da prática. Se errar, volte somente à regra específica.",
+          "questions": [
+            {
+              "id": "cp1",
+              "question": "A frase “Feche a porta.” é uma proposição?",
+              "options": [
+                "Sim, verdadeira.",
+                "Sim, falsa.",
+                "Não, porque é uma ordem.",
+                "Não, porque toda frase no imperativo é falsa."
+              ],
+              "answer": 2,
+              "explanation": "Ordens não recebem valor lógico V/F; portanto não são proposições."
+            },
+            {
+              "id": "cp2",
+              "question": "Se p = V e q = F, qual é o valor de p → q?",
+              "options": [
+                "V",
+                "F",
+                "Indeterminado",
+                "Não é proposição"
+              ],
+              "answer": 1,
+              "explanation": "A condicional só é falsa no caso V → F."
+            },
+            {
+              "id": "cp3",
+              "question": "Qual é a negação correta de p ∨ q?",
+              "options": [
+                "¬p ∨ ¬q",
+                "¬p ∧ ¬q",
+                "p ∧ q",
+                "p → ¬q"
+              ],
+              "answer": 1,
+              "explanation": "Pela lei de De Morgan, ao negar o OU negamos cada parcela e trocamos OU por E."
+            }
+          ]
+        },
+        {
+          "id": "phase-01-001-workshop",
+          "type": "workshop",
+          "title": "001 · Workshop: trace no papel",
+          "lead": "Agora você prevê, transforma e explica. Não pule direto para a resposta.",
+          "steps": [
+            {
+              "title": "1. Monte o alfabeto lógico",
+              "text": "No caderno, escreva uma linha para cada conectivo e a única condição que o torna V ou F.",
+              "code": "∧   ∨   ¬   →   ↔"
+            },
+            {
+              "title": "2. Trace valores",
+              "text": "Resolva da esquerda para a direita respeitando a negação primeiro. Diga em voz alta a regra aplicada.",
+              "code": "p = V, q = F\n¬p ∨ q\np → ¬q\n¬p ↔ q"
+            },
+            {
+              "title": "3. Negue frases",
+              "text": "Faça a transformação estrutural, não apenas uma frase que pareça oposta.",
+              "code": "Ana estuda e Bruno trabalha.\nCarlos viaja ou Maria trabalha.\nSe o sistema falha, então o alerta dispara."
+            },
+            {
+              "title": "4. Gere equivalentes",
+              "text": "Para cada condicional, produza a forma `¬p ∨ q` e a contrapositiva `¬q → ¬p`.",
+              "code": "Se João corre, então João cansa.\nSe o serviço está online, então a API responde."
+            },
+            {
+              "title": "5. Explique a pegadinha",
+              "text": "Escreva por que `¬p → ¬q` não é, em geral, equivalente a `p → q`."
+            }
+          ],
+          "criteria": [
+            "Você consegue aplicar as regras sem olhar uma tabela pronta.",
+            "Consegue distinguir negação de equivalência.",
+            "Consegue produzir a contrapositiva sem trocar a direção errada.",
+            "Explica cada transformação em palavras."
+          ]
+        },
+        {
+          "id": "phase-01-001-lab",
+          "type": "lab",
+          "title": "001 · Lab: desmontando uma questão FGV",
+          "lead": "Prática autêntica: simule o que você precisa fazer na prova, no papel, sem ferramenta externa.",
+          "scenario": "Uma questão FGV apresenta a proposição “Se o sistema está disponível, então os usuários conseguem acessar a aplicação” e oferece alternativas com negação, inversa, conversa e contrapositiva.",
+          "tasks": [
+            "Defina p e q para a frase.",
+            "Escreva a proposição em símbolos.",
+            "Produza a contrapositiva.",
+            "Produza a forma equivalente usando OU.",
+            "Produza a negação da proposição.",
+            "Crie uma alternativa errada baseada na inversa e explique por que ela engana.",
+            "Monte a tabela-verdade de p → q e confirme que as duas formas equivalentes têm as mesmas quatro linhas."
+          ],
+          "criteria": [
+            "Você chega à contrapositiva `¬q → ¬p` sem consultar.",
+            "Você chega a `¬p ∨ q` sem consultar.",
+            "Você nega a condicional como `p ∧ ¬q`.",
+            "Você consegue provar equivalência por tabela-verdade.",
+            "Consegue explicar a diferença entre contrapositiva e inversa."
+          ]
+        },
+        {
+          "id": "phase-01-001-review",
+          "type": "review",
+          "title": "001 · Review: folha de uma página",
+          "lead": "Recupere primeiro da memória; só depois confira.",
+          "blocks": [
+            {
+              "type": "bullets",
+              "items": [
+                "Proposição: frase declarativa com valor V ou F.",
+                "Sentença aberta: depende de variável livre.",
+                "E: só V em VV.",
+                "OU: só F em FF.",
+                "SE... ENTÃO: só F em VF.",
+                "SE E SOMENTE SE: V quando os valores são iguais.",
+                "Negação de E troca para OU; negação de OU troca para E.",
+                "Negação de `p → q`: `p ∧ ¬q`.",
+                "Equivalente de `p → q`: `¬p ∨ q`.",
+                "Contrapositiva: `¬q → ¬p`."
+              ]
+            },
+            {
+              "type": "callout",
+              "text": "Feche esta tela e tente reconstruir as dez linhas acima no caderno. O que faltar vira Repair; não releia tudo."
+            }
+          ]
+        },
+        {
+          "id": "phase-01-001-quiz",
+          "type": "quiz",
+          "title": "001 · Quiz FGV: 10 questões",
+          "passPercent": 80,
+          "lead": "Gate objetivo: pelo menos 8/10. Questões deliberadamente próximas do estilo de cobrança da FGV.",
+          "questions": [
+            {
+              "id": "q1",
+              "question": "Considere: “Se o sistema está disponível, então os usuários conseguem acessar a aplicação.” Uma proposição logicamente equivalente é:",
+              "options": [
+                "Se o sistema não está disponível, então os usuários não conseguem acessar a aplicação.",
+                "O sistema está disponível e os usuários conseguem acessar a aplicação.",
+                "Se os usuários não conseguem acessar a aplicação, então o sistema não está disponível.",
+                "Se os usuários conseguem acessar a aplicação, então o sistema está disponível.",
+                "O sistema não está disponível e os usuários não conseguem acessar a aplicação."
+              ],
+              "answer": 2,
+              "explanation": "A contrapositiva de p → q é ¬q → ¬p."
+            },
+            {
+              "id": "q2",
+              "question": "A negação de “João trabalha e Maria estuda” é:",
+              "options": [
+                "João não trabalha e Maria não estuda.",
+                "João não trabalha ou Maria não estuda.",
+                "João trabalha ou Maria estuda.",
+                "Se João não trabalha, então Maria não estuda.",
+                "João trabalha se e somente se Maria estuda."
+              ],
+              "answer": 1,
+              "explanation": "¬(p ∧ q) ≡ ¬p ∨ ¬q."
+            },
+            {
+              "id": "q3",
+              "question": "A negação de “Carlos viaja ou Ana trabalha” é:",
+              "options": [
+                "Carlos não viaja ou Ana não trabalha.",
+                "Carlos não viaja e Ana não trabalha.",
+                "Carlos viaja e Ana trabalha.",
+                "Se Carlos não viaja, então Ana não trabalha.",
+                "Carlos viaja se e somente se Ana trabalha."
+              ],
+              "answer": 1,
+              "explanation": "¬(p ∨ q) ≡ ¬p ∧ ¬q."
+            },
+            {
+              "id": "q4",
+              "question": "A negação de “Se Pedro estuda, então Pedro passa” é:",
+              "options": [
+                "Pedro não estuda ou Pedro passa.",
+                "Pedro estuda e Pedro não passa.",
+                "Se Pedro não passa, então Pedro não estuda.",
+                "Pedro não estuda e Pedro não passa.",
+                "Se Pedro passa, então Pedro estuda."
+              ],
+              "answer": 1,
+              "explanation": "Negar p → q produz p ∧ ¬q."
+            },
+            {
+              "id": "q5",
+              "question": "Uma proposição equivalente a p → q é:",
+              "options": [
+                "p ∧ q",
+                "¬p ∧ q",
+                "¬p ∨ q",
+                "p ∨ ¬q",
+                "q → p"
+              ],
+              "answer": 2,
+              "explanation": "A equivalência fundamental é p → q ≡ ¬p ∨ q."
+            },
+            {
+              "id": "q6",
+              "question": "A contrapositiva de “Se Ana trabalha, então Ana recebe” é:",
+              "options": [
+                "Se Ana não trabalha, então Ana não recebe.",
+                "Se Ana recebe, então Ana trabalha.",
+                "Se Ana não recebe, então Ana não trabalha.",
+                "Ana não trabalha ou Ana não recebe.",
+                "Ana trabalha se e somente se recebe."
+              ],
+              "answer": 2,
+              "explanation": "Troca-se a ordem e negam-se as duas proposições: ¬q → ¬p."
+            },
+            {
+              "id": "q7",
+              "question": "Se p = V e q = F, o valor lógico de ¬p ∨ q é:",
+              "options": [
+                "V",
+                "F",
+                "Indeterminado",
+                "Não é proposição",
+                "Depende de p ↔ q"
+              ],
+              "answer": 1,
+              "explanation": "¬p = F e q = F; F ∨ F = F."
+            },
+            {
+              "id": "q8",
+              "question": "Se p = F e q = F, o valor lógico de p → q é:",
+              "options": [
+                "V",
+                "F",
+                "Indeterminado",
+                "Não é proposição",
+                "Depende de ¬p"
+              ],
+              "answer": 0,
+              "explanation": "A única linha falsa da condicional é V → F; portanto F → F é V."
+            },
+            {
+              "id": "q9",
+              "question": "A bicondicional p ↔ q é verdadeira quando:",
+              "options": [
+                "p é verdadeira, independentemente de q.",
+                "q é falsa, independentemente de p.",
+                "p e q têm valores diferentes.",
+                "p e q têm o mesmo valor lógico.",
+                "p → q é falsa."
+              ],
+              "answer": 3,
+              "explanation": "A bicondicional é verdadeira em VV e FF."
+            },
+            {
+              "id": "q10",
+              "question": "A proposição ¬(p ↔ q) é verdadeira quando:",
+              "options": [
+                "p e q são ambas verdadeiras.",
+                "p e q são ambas falsas.",
+                "p e q têm valores diferentes.",
+                "p e q têm o mesmo valor.",
+                "p → q é sempre verdadeira."
+              ],
+              "answer": 2,
+              "explanation": "Negar a bicondicional significa exigir valores diferentes."
+            }
+          ]
+        },
+        {
+          "id": "phase-01-001-project",
+          "type": "project",
+          "title": "001 · Mastery Gate: prove que domina",
+          "lead": "O tema só termina quando você produz a regra, a prova e a transferência sem apoio.",
+          "scenario": "No caderno, crie uma miniquestão inédita no estilo FGV envolvendo uma condicional. Depois resolva e defenda cada alternativa.",
+          "tasks": [
+            "Crie uma proposição condicional p → q em linguagem natural.",
+            "Escreva sua negação.",
+            "Escreva a contrapositiva.",
+            "Escreva a equivalente em forma de disjunção.",
+            "Monte uma alternativa com a inversa para funcionar como distrator.",
+            "Construa a tabela-verdade e use-a para verificar as equivalências.",
+            "Explique em voz alta por que V → F é o único caso falso.",
+            "Após um intervalo, refaça o quiz sem revisar antes."
+          ],
+          "criteria": [
+            "Quiz ≥ 80%.",
+            "Você cria e resolve uma questão nova sem consultar regra.",
+            "Você distingue negação, inversa, conversa e contrapositiva.",
+            "Consegue provar equivalência por tabela-verdade.",
+            "Consegue explicar o raciocínio, não apenas apontar a alternativa."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "phase-02",
+      "number": "02",
+      "label": "PORTUGUÊS",
+      "title": "Interpretação + semântica",
+      "available": false,
+      "description": "Sentido, inferência, pressupostos, ironia, paradoxo e relações semânticas."
+    },
+    {
+      "id": "phase-03",
+      "number": "03",
+      "label": "RLM",
+      "title": "Álgebra e equações",
+      "available": false,
+      "description": "Transformar enunciados em equações e manipular relações algébricas."
+    },
+    {
+      "id": "phase-04",
+      "number": "04",
+      "label": "PORTUGUÊS",
+      "title": "Sintaxe e funções",
+      "available": false,
+      "description": "Funções sintáticas, estrutura do período e função do se."
+    },
+    {
+      "id": "phase-05",
+      "number": "05",
+      "label": "RLM",
+      "title": "Porcentagem, razão e proporção",
+      "available": false,
+      "description": "Taxas, aumentos, descontos e divisão proporcional."
+    },
+    {
+      "id": "phase-06",
+      "number": "06",
+      "label": "PORTUGUÊS",
+      "title": "Reescrita mantendo sentido",
+      "available": false,
+      "description": "Transformações estruturais sem alteração semântica."
+    },
+    {
+      "id": "phase-07",
+      "number": "07",
+      "label": "RLM",
+      "title": "Contagem e combinatória",
+      "available": false,
+      "description": "Princípios de contagem, arranjos, combinações e problemas disfarçados."
+    },
+    {
+      "id": "phase-08",
+      "number": "08",
+      "label": "PORTUGUÊS",
+      "title": "Conectores e relações semânticas",
+      "available": false,
+      "description": "Causa, consequência, condição, concessão, oposição e conclusão."
+    },
+    {
+      "id": "phase-09",
+      "number": "09",
+      "label": "RLM",
+      "title": "Probabilidade",
+      "available": false,
+      "description": "Espaço amostral, eventos e probabilidade básica."
+    },
+    {
+      "id": "phase-10",
+      "number": "10",
+      "label": "PORTUGUÊS",
+      "title": "Concordância",
+      "available": false,
+      "description": "Concordância verbal e nominal em padrões recorrentes da FGV."
+    },
+    {
+      "id": "phase-11",
+      "number": "11",
+      "label": "RLM",
+      "title": "Geometria",
+      "available": false,
+      "description": "Áreas, perímetros, razões geométricas e plano cartesiano."
+    },
+    {
+      "id": "phase-12",
+      "number": "12",
+      "label": "PORTUGUÊS",
+      "title": "Regência",
+      "available": false,
+      "description": "Regência verbal/nominal e efeitos sobre complementos e crase."
+    },
+    {
+      "id": "phase-13",
+      "number": "13",
+      "label": "RLM",
+      "title": "Médias",
+      "available": false,
+      "description": "Média simples, ponderada e taxas médias equivalentes."
+    },
+    {
+      "id": "phase-14",
+      "number": "14",
+      "label": "PORTUGUÊS",
+      "title": "Pontuação",
+      "available": false,
+      "description": "Vírgulas por estrutura sintática, termos deslocados e intercalações."
+    },
+    {
+      "id": "phase-15",
+      "number": "15",
+      "label": "RLM",
+      "title": "Diagramas lógicos e lógica de 1ª ordem",
+      "available": false,
+      "description": "Quantificadores, relações e diagramas."
+    },
+    {
+      "id": "phase-16",
+      "number": "16",
+      "label": "PORTUGUÊS",
+      "title": "Classes de palavras",
+      "available": false,
+      "description": "Classes gramaticais em função e contexto."
+    },
+    {
+      "id": "phase-17",
+      "number": "17",
+      "label": "RLM",
+      "title": "Matrizes e sistemas",
+      "available": false,
+      "description": "Problemas matriciais previstos no edital e sistemas básicos."
+    },
+    {
+      "id": "phase-18",
+      "number": "18",
+      "label": "PORTUGUÊS",
+      "title": "Crase",
+      "available": false,
+      "description": "Ocorrência, proibição e casos facultativos."
+    },
+    {
+      "id": "phase-19",
+      "number": "19",
+      "label": "RLM",
+      "title": "Sequências e padrões",
+      "available": false,
+      "description": "Regularidades, recorrências e padrões numéricos."
+    },
+    {
+      "id": "phase-20",
+      "number": "20",
+      "label": "PORTUGUÊS",
+      "title": "Colocação pronominal e ortografia",
+      "available": false,
+      "description": "Pontos de menor incidência para fechamento do edital."
+    }
+  ]
+}
