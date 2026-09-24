@@ -3,7 +3,7 @@
     "id": "dataprev-ams",
     "title": "Dataprev 2026 — Português & Raciocínio Lógico-Matemático",
     "subtitle": "Adaptive Mastery Scaffolding · FGV",
-    "version": 2,
+    "version": 3,
     "masteryProtocol": [
       "Theory",
       "Checkpoint",
@@ -746,10 +746,387 @@
     {
       "id": "phase-03",
       "number": "03",
-      "label": "RLM",
+      "label": "RLM · EM ESTUDO",
       "title": "Álgebra e equações",
-      "available": false,
-      "description": "Transformar enunciados em equações e manipular relações algébricas."
+      "available": true,
+      "description": "Traduzir enunciados em equações, manipular expressões algébricas e resolver problemas típicos da FGV sem depender de tentativa e erro.",
+      "lessons": [
+        {
+          "id": "phase-03-001-theory",
+          "type": "theory",
+          "title": "003 · Theory: transformar texto em equação",
+          "lead": "Álgebra de prova não é decorar fórmulas: é converter relações escritas em linguagem matemática e preservar a igualdade a cada passo.",
+          "blocks": [
+            {
+              "type": "heading",
+              "text": "1. A incógnita representa o que você ainda não sabe"
+            },
+            {
+              "type": "paragraph",
+              "text": "Defina uma variável para a quantidade desconhecida e traduza cada relação do enunciado. A etapa mais importante costuma ser montar a equação corretamente; a conta vem depois."
+            },
+            {
+              "type": "callout",
+              "text": "Antes de calcular, escreva: `x = ...`. Isso reduz erros de interpretação e deixa claro o que sua resposta representa."
+            },
+            {
+              "type": "heading",
+              "text": "2. Igualdade é uma balança"
+            },
+            {
+              "type": "paragraph",
+              "text": "Tudo o que você faz de um lado da equação deve ser feito do outro. Somar, subtrair, multiplicar ou dividir os dois membros pelo mesmo valor não altera a igualdade, desde que a operação seja válida."
+            },
+            {
+              "type": "code",
+              "code": "3x + 5 = 20\n3x = 15\nx = 5"
+            },
+            {
+              "type": "heading",
+              "text": "3. Traduções recorrentes"
+            },
+            {
+              "type": "bullets",
+              "items": [
+                "`o dobro de x` → `2x`",
+                "`o triplo de x menos 4` → `3x - 4`",
+                "`a metade de x` → `x/2`",
+                "`x aumentado em 20%` → `1,2x`",
+                "`x diminuído de 15%` → `0,85x`",
+                "`a soma de dois números é 30` → `x + y = 30`",
+                "`um número é 7 maior que o outro` → `x = y + 7`"
+              ]
+            },
+            {
+              "type": "heading",
+              "text": "4. Sistemas simples"
+            },
+            {
+              "type": "paragraph",
+              "text": "Quando o problema envolve duas incógnitas e fornece duas relações independentes, normalmente temos um sistema. Substituição e eliminação são os métodos mais úteis em prova."
+            },
+            {
+              "type": "code",
+              "code": "x + y = 18\nx - y = 4\n\nSomando as equações:\n2x = 22\nx = 11\nLogo, y = 7"
+            },
+            {
+              "type": "heading",
+              "text": "5. Identidades úteis"
+            },
+            {
+              "type": "paragraph",
+              "text": "Algumas questões escondem expressões clássicas. Em especial, quando aparecem soma e soma dos quadrados, vale lembrar a identidade abaixo."
+            },
+            {
+              "type": "code",
+              "code": "(x + y)² = x² + 2xy + y²\n\nSe você conhece x + y e x² + y², então:\n2xy = (x + y)² - (x² + y²)"
+            },
+            {
+              "type": "callout",
+              "text": "FGV gosta de transformar um problema verbal em uma expressão curta. O ganho vem de reconhecer a estrutura antes de calcular."
+            }
+          ]
+        },
+        {
+          "id": "phase-03-001-checkpoint",
+          "type": "checkpoint",
+          "title": "003 · Checkpoint: tradução algébrica",
+          "passPercent": 67,
+          "lead": "Três perguntas para validar se você está traduzindo o texto corretamente antes de seguir.",
+          "questions": [
+            {
+              "id": "cp1",
+              "question": "“O triplo de um número, aumentado de 5, é igual a 26.” Qual equação representa corretamente a frase?",
+              "options": [
+                "3(x + 5) = 26",
+                "3x + 5 = 26",
+                "x + 15 = 26",
+                "5x + 3 = 26"
+              ],
+              "answer": 1,
+              "explanation": "O triplo do número é 3x; depois acrescentamos 5."
+            },
+            {
+              "id": "cp2",
+              "question": "Se x + y = 20 e x - y = 6, o valor de x é:",
+              "options": [
+                "7",
+                "13",
+                "14",
+                "26"
+              ],
+              "answer": 1,
+              "explanation": "Somando as equações, 2x = 26, então x = 13."
+            },
+            {
+              "id": "cp3",
+              "question": "Se x + y = 10 e x² + y² = 58, então xy vale:",
+              "options": [
+                "21",
+                "42",
+                "58",
+                "100"
+              ],
+              "answer": 0,
+              "explanation": "(x+y)² = x² + 2xy + y². Logo, 100 = 58 + 2xy, então 2xy = 42 e xy = 21."
+            }
+          ]
+        },
+        {
+          "id": "phase-03-001-workshop",
+          "type": "workshop",
+          "title": "003 · Workshop: do enunciado à equação",
+          "lead": "Agora a regra é: primeiro modele, depois calcule. Nada de pular direto para a conta.",
+          "steps": [
+            {
+              "title": "1. Defina a incógnita",
+              "text": "Para cada enunciado, escreva primeiro o que x representa.",
+              "code": "A idade de Ana daqui a 5 anos será 32.\nO dobro de um número menos 7 é igual a 19."
+            },
+            {
+              "title": "2. Traduza sem resolver",
+              "text": "Converta cada frase em equação e pare antes de calcular.",
+              "code": "A soma de dois números consecutivos é 41.\nUm número é 8 maior que outro e a soma deles é 50."
+            },
+            {
+              "title": "3. Resolva preservando a igualdade",
+              "text": "Mostre cada transformação em uma linha. Evite 'passar para o outro lado trocando o sinal' sem saber por quê.",
+              "code": "5x - 8 = 27\n2(x + 3) = 18"
+            },
+            {
+              "title": "4. Sistema por eliminação",
+              "text": "Resolva sem adivinhar valores.",
+              "code": "x + y = 27\nx - y = 9"
+            },
+            {
+              "title": "5. Estrutura escondida",
+              "text": "Use identidade algébrica em vez de procurar x e y separadamente.",
+              "code": "x + y = 14\nx² + y² = 116\nCalcule xy."
+            }
+          ],
+          "criteria": [
+            "Você sempre define o que a incógnita representa.",
+            "Você traduz a frase antes de calcular.",
+            "Consegue justificar cada transformação de uma equação.",
+            "Resolve sistemas simples por eliminação ou substituição.",
+            "Reconhece quando uma identidade evita trabalho desnecessário."
+          ]
+        },
+        {
+          "id": "phase-03-001-lab",
+          "type": "lab",
+          "title": "003 · Lab: modelagem de problemas FGV",
+          "lead": "Este laboratório simula a parte mais importante da prova: transformar texto em estrutura matemática.",
+          "scenario": "Uma turma tem homens e mulheres. Há 8 mulheres a mais que homens e o total é 44 pessoas.",
+          "tasks": [
+            "Defina as incógnitas.",
+            "Monte um sistema com as duas relações do enunciado.",
+            "Resolva o sistema por eliminação.",
+            "Confira a resposta substituindo os valores nas duas equações.",
+            "Reescreva o mesmo problema usando apenas uma incógnita.",
+            "Compare os dois modelos e diga qual ficou mais rápido.",
+            "Crie um novo problema com a mesma estrutura, mas números diferentes.",
+            "Resolva seu próprio problema sem alterar a estrutura."
+          ],
+          "criteria": [
+            "O sistema representa fielmente as duas relações.",
+            "Você verifica a solução no enunciado original.",
+            "Consegue resolver o mesmo problema com uma ou duas incógnitas.",
+            "Consegue transferir a estrutura para um enunciado novo."
+          ]
+        },
+        {
+          "id": "phase-03-001-review",
+          "type": "review",
+          "title": "003 · Review: mapa mental de álgebra",
+          "lead": "Tente reconstruir tudo no papel antes de abrir a lista abaixo.",
+          "blocks": [
+            {
+              "type": "bullets",
+              "items": [
+                "Defina a incógnita antes de montar a equação.",
+                "Traduza relações do enunciado uma por uma.",
+                "Igualdade funciona como balança: preserve os dois lados.",
+                "Parênteses mudam a estrutura; distribua com atenção.",
+                "Duas incógnitas + duas relações independentes geralmente formam um sistema.",
+                "Eliminação é eficiente quando os coeficientes permitem somar ou subtrair equações.",
+                "Substituição é eficiente quando uma variável já está isolada.",
+                "Sempre confira a solução no enunciado.",
+                "`(x+y)² = x² + 2xy + y²` pode ligar soma e soma dos quadrados.",
+                "Não procure valores individuais quando a questão pede apenas uma combinação como xy."
+              ]
+            },
+            {
+              "type": "callout",
+              "text": "Se você travar, identifique se o problema é de tradução, manipulação ou escolha de estratégia. O Repair deve atacar exatamente essa etapa."
+            }
+          ]
+        },
+        {
+          "id": "phase-03-001-quiz",
+          "type": "quiz",
+          "title": "003 · Quiz FGV: álgebra e equações",
+          "passPercent": 80,
+          "lead": "Dez questões. Gate objetivo: pelo menos 8/10.",
+          "questions": [
+            {
+              "id": "q1",
+              "question": "O dobro de um número, acrescido de 9, é igual a 35. Esse número é:",
+              "options": [
+                "11",
+                "12",
+                "13",
+                "14",
+                "17"
+              ],
+              "answer": 2,
+              "explanation": "2x + 9 = 35 ⇒ 2x = 26 ⇒ x = 13."
+            },
+            {
+              "id": "q2",
+              "question": "A soma de dois números consecutivos é 57. O maior deles é:",
+              "options": [
+                "27",
+                "28",
+                "29",
+                "30",
+                "31"
+              ],
+              "answer": 2,
+              "explanation": "x + (x+1) = 57 ⇒ 2x = 56 ⇒ x = 28; o maior é 29."
+            },
+            {
+              "id": "q3",
+              "question": "Se x + y = 32 e x - y = 10, então y vale:",
+              "options": [
+                "9",
+                "10",
+                "11",
+                "21",
+                "22"
+              ],
+              "answer": 2,
+              "explanation": "Somando: 2x = 42 ⇒ x = 21. Então y = 11."
+            },
+            {
+              "id": "q4",
+              "question": "Um número é 6 maior que outro. A soma dos dois é 40. O menor número é:",
+              "options": [
+                "14",
+                "16",
+                "17",
+                "20",
+                "23"
+              ],
+              "answer": 2,
+              "explanation": "Se o menor é x, o maior é x+6. Então 2x+6=40 ⇒ x=17."
+            },
+            {
+              "id": "q5",
+              "question": "Se 3(x - 2) = 24, então x é igual a:",
+              "options": [
+                "6",
+                "8",
+                "10",
+                "12",
+                "14"
+              ],
+              "answer": 2,
+              "explanation": "x - 2 = 8 ⇒ x = 10."
+            },
+            {
+              "id": "q6",
+              "question": "Se x + y = 12 e x² + y² = 74, então xy é igual a:",
+              "options": [
+                "25",
+                "30",
+                "35",
+                "70",
+                "74"
+              ],
+              "answer": 2,
+              "explanation": "144 = 74 + 2xy ⇒ 2xy = 70 ⇒ xy = 35."
+            },
+            {
+              "id": "q7",
+              "question": "A idade de Carlos é o triplo da idade de Pedro. Juntos, eles têm 48 anos. A idade de Pedro é:",
+              "options": [
+                "10",
+                "12",
+                "14",
+                "16",
+                "36"
+              ],
+              "answer": 1,
+              "explanation": "p + 3p = 48 ⇒ 4p = 48 ⇒ p = 12."
+            },
+            {
+              "id": "q8",
+              "question": "Em uma caixa há bolas azuis e vermelhas. O número de azuis é 4 a menos que o dobro do número de vermelhas. Se há 26 bolas ao todo, quantas são vermelhas?",
+              "options": [
+                "8",
+                "9",
+                "10",
+                "11",
+                "12"
+              ],
+              "answer": 2,
+              "explanation": "Se v é o número de vermelhas, azuis = 2v - 4. Então v + 2v - 4 = 26 ⇒ 3v = 30 ⇒ v = 10."
+            },
+            {
+              "id": "q9",
+              "question": "Se x/3 + 5 = 12, então x vale:",
+              "options": [
+                "7",
+                "18",
+                "21",
+                "24",
+                "36"
+              ],
+              "answer": 2,
+              "explanation": "x/3 = 7 ⇒ x = 21."
+            },
+            {
+              "id": "q10",
+              "question": "Dois números têm soma 18 e produto 77. Esses números são:",
+              "options": [
+                "5 e 13",
+                "6 e 12",
+                "7 e 11",
+                "8 e 10",
+                "9 e 9"
+              ],
+              "answer": 2,
+              "explanation": "7 + 11 = 18 e 7 × 11 = 77."
+            }
+          ]
+        },
+        {
+          "id": "phase-03-001-project",
+          "type": "project",
+          "title": "003 · Mastery Gate: modele sem ajuda",
+          "lead": "Você fecha o tema quando consegue sair do texto, montar o modelo, resolver e validar sem suporte.",
+          "scenario": "Crie uma questão inédita de álgebra no estilo FGV que envolva duas relações e exija montar uma equação ou sistema.",
+          "tasks": [
+            "Defina quais grandezas serão desconhecidas.",
+            "Escreva o enunciado sem entregar a estrutura matemática.",
+            "Crie cinco alternativas plausíveis.",
+            "Resolva por um método algébrico completo.",
+            "Resolva novamente por uma estratégia diferente, quando possível.",
+            "Explique qual erro gera cada distrator.",
+            "Confira a solução substituindo no enunciado.",
+            "Depois de um intervalo, refaça o quiz sem revisar antes."
+          ],
+          "criteria": [
+            "Quiz ≥ 80%.",
+            "Você traduz enunciados em equações sem ajuda.",
+            "Consegue resolver equações e sistemas simples.",
+            "Consegue reconhecer e usar uma identidade algébrica quando isso simplifica o problema.",
+            "Valida a resposta no problema original.",
+            "Consegue criar e desmontar distratores no estilo FGV."
+          ]
+        }
+      ]
     },
     {
       "id": "phase-04",
