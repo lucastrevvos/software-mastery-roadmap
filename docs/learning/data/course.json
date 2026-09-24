@@ -148,28 +148,52 @@
           "id": "phase-00-lab-01",
           "type": "lab",
           "title": "Lab: diagnóstico sem tutorial",
-          "lead": "Sem roteiro passo a passo. Você recebe o cenário e precisa investigar.",
-          "scenario": "Um colega diz: “o programa não roda”. O comando usado é `python tools/report.py`, mas o terminal responde que o arquivo não foi encontrado.",
+          "lead": "Prática local guiada. Este laboratório não precisa de starter: criar e navegar pelo ambiente faz parte da habilidade.",
+          "scenario": "Você vai criar uma pequena estrutura no seu próprio terminal, provocar um erro de caminho relativo e diagnosticá-lo usando apenas evidências do filesystem.",
           "tasks": [
-            "Baixe e extraia o starter ZIP desta tarefa.",
-            "Abra a pasta `phase-00-lab-01/workspace` no terminal ou VS Code.",
-            "Descubra o diretório de trabalho atual.",
-            "Inspecione a estrutura sem mover arquivos.",
-            "Execute o cenário, observe a falha e descubra a causa.",
-            "Preencha `notes/diagnosis.md` com evidências e conclusão.",
-            "Rode `python verify.py` até obter `MASTERED: Phase 00 Lab 01`."
+            "Explique por que `cat data/users.txt` falhou.",
+            "Explique de onde o caminho relativo foi resolvido.",
+            "Sem mudar os arquivos de lugar, mostre um comando válido que leia `users.txt`.",
+            "Repita o exercício começando um nível acima e observe como o caminho necessário muda."
           ],
           "criteria": [
-            "Você usa evidência antes de tentar correções aleatórias.",
-            "Sua explicação menciona diretório de trabalho e resolução de caminho.",
-            "A solução não depende de mover arquivos sem necessidade."
+            "Você executou a atividade no terminal real.",
+            "Consegue prever de onde um caminho relativo será resolvido.",
+            "Usa `pwd`, listagem ou busca como evidência antes de corrigir.",
+            "Consegue corrigir o comando sem mover arquivos desnecessariamente."
           ],
-          "download": {
-            "label": "Baixar starter ZIP",
-            "href": "./assets/labs/phase-00-lab-01-diagnostico.zip",
-            "filename": "phase-00-lab-01-diagnostico.zip",
-            "note": "Baixe o pacote, extraia-o, abra a pasta no seu ambiente real e execute a missão descrita no README.md."
-          }
+          "steps": [
+            {
+              "title": "1. Crie um sandbox seguro",
+              "text": "Escolha uma pasta de estudos e crie um diretório descartável para o laboratório.",
+              "code": "mkdir phase-00-lab-01\ncd phase-00-lab-01"
+            },
+            {
+              "title": "2. Confirme o contexto",
+              "text": "Antes de fazer qualquer outra coisa, descubra o diretório de trabalho atual.",
+              "code": "pwd"
+            },
+            {
+              "title": "3. Crie uma estrutura simples",
+              "text": "Monte uma árvore pequena e crie um arquivo nela.",
+              "code": "mkdir -p app/data\necho \"Ada\" > app/data/users.txt"
+            },
+            {
+              "title": "4. Provoque a falha",
+              "text": "Tente acessar o arquivo usando um caminho relativo incorreto e leia a mensagem retornada.",
+              "code": "cat data/users.txt"
+            },
+            {
+              "title": "5. Investigue",
+              "text": "Inspecione o que realmente existe antes de corrigir.",
+              "code": "find . -maxdepth 3 -type f"
+            },
+            {
+              "title": "6. Corrija pela evidência",
+              "text": "Use o caminho relativo correto a partir do diretório atual.",
+              "code": "cat app/data/users.txt"
+            }
+          ]
         },
         {
           "id": "phase-00-review-01",
