@@ -1,4 +1,4 @@
-const DATA_URL = "./data/course.json?v=1.0.2";
+const DATA_URL = "./data/course.json?v=1.0.3";
 const STORAGE_KEY = "dataprev-ams-learning-progress-v1";
 
 let courseData = null;
