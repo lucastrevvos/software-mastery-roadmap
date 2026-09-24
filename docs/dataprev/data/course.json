@@ -3,7 +3,7 @@
     "id": "dataprev-ams",
     "title": "Dataprev 2026 — Português & Raciocínio Lógico-Matemático",
     "subtitle": "Adaptive Mastery Scaffolding · FGV",
-    "version": 3,
+    "version": 4,
     "masteryProtocol": [
       "Theory",
       "Checkpoint",
@@ -1131,10 +1131,419 @@
     {
       "id": "phase-04",
       "number": "04",
-      "label": "PORTUGUÊS",
+      "label": "PORTUGUÊS · EM ESTUDO",
       "title": "Sintaxe e funções",
-      "available": false,
-      "description": "Funções sintáticas, estrutura do período e função do se."
+      "available": true,
+      "description": "Reconhecer funções sintáticas, relações entre termos, oração subordinada e o papel do “se” em construções típicas da FGV.",
+      "lessons": [
+        {
+          "id": "phase-04-001-theory",
+          "type": "theory",
+          "title": "004 · Theory: enxergar a estrutura da frase",
+          "lead": "Sintaxe não é decorar nomes isolados. É descobrir quem se relaciona com quem dentro da oração e qual função cada termo exerce.",
+          "blocks": [
+            {
+              "type": "heading",
+              "text": "1. Comece pelo verbo"
+            },
+            {
+              "type": "paragraph",
+              "text": "O verbo organiza a oração. Primeiro identifique o verbo; depois pergunte quem pratica/sofre o processo, quais termos completam o verbo e quais apenas acrescentam circunstâncias."
+            },
+            {
+              "type": "callout",
+              "text": "Protocolo: `verbo → sujeito → complementos → termos acessórios`. Essa ordem reduz bastante a chance de classificar um termo pelo “jeito” em vez da função."
+            },
+            {
+              "type": "heading",
+              "text": "2. Sujeito e predicado"
+            },
+            {
+              "type": "bullets",
+              "items": [
+                "Sujeito: termo sobre o qual se declara algo.",
+                "Predicado: aquilo que se declara a respeito do sujeito.",
+                "Sujeito simples: possui um núcleo.",
+                "Sujeito composto: possui mais de um núcleo.",
+                "Sujeito oculto/desinencial: não aparece expresso, mas é recuperado pela forma verbal ou pelo contexto.",
+                "Sujeito indeterminado: existe, mas não é identificado."
+              ]
+            },
+            {
+              "type": "heading",
+              "text": "3. Complementos verbais"
+            },
+            {
+              "type": "paragraph",
+              "text": "Verbos podem pedir complementos. Quando o complemento vem sem preposição exigida pelo verbo, temos objeto direto. Quando o verbo exige preposição, temos objeto indireto."
+            },
+            {
+              "type": "code",
+              "code": "A equipe analisou os logs.\n→ analisou o quê? os logs = objeto direto\n\nA equipe precisa de analistas.\n→ precisa de quê? de analistas = objeto indireto"
+            },
+            {
+              "type": "heading",
+              "text": "4. Adjunto adnominal x complemento nominal"
+            },
+            {
+              "type": "paragraph",
+              "text": "Adjunto adnominal acompanha um substantivo para caracterizar, determinar, especificar ou indicar posse/agente. Complemento nominal completa o sentido de um nome abstrato, adjetivo ou advérbio e normalmente vem com preposição."
+            },
+            {
+              "type": "code",
+              "code": "amor de mãe\n→ “de mãe” pode indicar agente/possuidor do amor = adjunto adnominal\n\namor à mãe\n→ “à mãe” é alvo do sentimento = complemento nominal"
+            },
+            {
+              "type": "heading",
+              "text": "5. Adjunto adverbial"
+            },
+            {
+              "type": "paragraph",
+              "text": "Indica circunstância: tempo, lugar, modo, causa, finalidade, condição, intensidade etc. Pode modificar verbo, adjetivo ou advérbio."
+            },
+            {
+              "type": "code",
+              "code": "A equipe respondeu rapidamente.\n→ rapidamente = modo\n\nApós a revisão, o sistema voltou ao ar.\n→ após a revisão = tempo"
+            },
+            {
+              "type": "heading",
+              "text": "6. O “se” que a FGV adora"
+            },
+            {
+              "type": "bullets",
+              "items": [
+                "Partícula apassivadora: com verbo transitivo direto (ou direto e indireto), forma voz passiva sintética. O verbo concorda com o sujeito paciente.",
+                "Índice de indeterminação do sujeito: com verbo transitivo indireto, intransitivo ou de ligação. O verbo fica na 3ª pessoa do singular.",
+                "Pronome reflexivo/recíproco: o sujeito pratica e recebe a ação, ou os sujeitos praticam a ação entre si.",
+                "Conjunção condicional: introduz condição, como em `Se chover, ficaremos em casa`."
+              ]
+            },
+            {
+              "type": "code",
+              "code": "Registraram-se inconsistências.\n→ inconsistências = sujeito paciente\n→ equivalente: inconsistências foram registradas\n\nPrecisa-se de analistas.\n→ “de analistas” = objeto indireto\n→ sujeito indeterminado\n→ verbo no singular\n\nTrata-se de um problema complexo.\n→ construção com sujeito indeterminado; verbo no singular"
+            },
+            {
+              "type": "callout",
+              "text": "Teste rápido para o `se`: tente transformar em voz passiva analítica. Se `X foi/foram + particípio` funcionar sem distorcer a estrutura, há forte indício de partícula apassivadora."
+            },
+            {
+              "type": "heading",
+              "text": "7. Orações subordinadas: função dentro de outra oração"
+            },
+            {
+              "type": "paragraph",
+              "text": "Uma oração subordinada pode desempenhar função típica de substantivo, adjetivo ou advérbio. Em prova, antes de decorar o nome completo, descubra o papel que ela exerce em relação à oração principal."
+            },
+            {
+              "type": "code",
+              "code": "É necessário que todos participem.\n→ “que todos participem” funciona como sujeito\n\nO relatório que você enviou chegou.\n→ “que você enviou” caracteriza “relatório”\n\nQuando a reunião terminou, fomos embora.\n→ “Quando a reunião terminou” indica tempo"
+            }
+          ]
+        },
+        {
+          "id": "phase-04-001-checkpoint",
+          "type": "checkpoint",
+          "title": "004 · Checkpoint: função sintática",
+          "passPercent": 67,
+          "lead": "Três decisões rápidas antes da prática.",
+          "questions": [
+            {
+              "id": "cp1",
+              "question": "Em “A equipe analisou os relatórios”, o termo “os relatórios” exerce função de:",
+              "options": [
+                "Sujeito",
+                "Objeto direto",
+                "Objeto indireto",
+                "Adjunto adverbial"
+              ],
+              "answer": 1,
+              "explanation": "O verbo “analisar” é transitivo direto: analisou o quê? os relatórios."
+            },
+            {
+              "id": "cp2",
+              "question": "Em “Precisa-se de profissionais experientes”, o “se” funciona como:",
+              "options": [
+                "Partícula apassivadora",
+                "Índice de indeterminação do sujeito",
+                "Pronome reflexivo",
+                "Conjunção condicional"
+              ],
+              "answer": 1,
+              "explanation": "“Precisar de” é transitivo indireto; por isso o se indetermina o sujeito e o verbo fica no singular."
+            },
+            {
+              "id": "cp3",
+              "question": "Em “Registraram-se várias inconsistências”, o verbo está no plural porque:",
+              "options": [
+                "Concorda com um sujeito oculto.",
+                "O “se” é índice de indeterminação do sujeito.",
+                "“Várias inconsistências” é sujeito paciente.",
+                "Todo verbo acompanhado de “se” deve ir ao plural."
+              ],
+              "answer": 2,
+              "explanation": "É voz passiva sintética: várias inconsistências foram registradas."
+            }
+          ]
+        },
+        {
+          "id": "phase-04-001-workshop",
+          "type": "workshop",
+          "title": "004 · Workshop: desmonte a oração",
+          "lead": "Não classifique por intuição. Siga sempre verbo → sujeito → complementos → acessórios.",
+          "steps": [
+            {
+              "title": "1. Ache o verbo",
+              "text": "Sublinhe o verbo e só depois procure o sujeito.",
+              "code": "Os analistas revisaram cuidadosamente o relatório.\nChegaram ontem os novos equipamentos."
+            },
+            {
+              "title": "2. Faça perguntas ao verbo",
+              "text": "Para cada oração, pergunte `quem?`, `o quê?`, `de quê?`, `a quem?` e separe sujeito de complemento.",
+              "code": "A diretoria aprovou o projeto.\nOs servidores necessitam de manutenção."
+            },
+            {
+              "title": "3. Identifique os acessórios",
+              "text": "Classifique os termos destacados por função, não por posição.",
+              "code": "A equipe respondeu RAPIDAMENTE.\nOS NOVOS servidores chegaram.\nA análise DO SISTEMA terminou."
+            },
+            {
+              "title": "4. Diagnostique o “se”",
+              "text": "Para cada frase, tente converter em voz passiva analítica. Se der certo, verifique a concordância.",
+              "code": "Divulgaram-se os resultados.\nPrecisa-se de suporte técnico.\nAlugam-se salas comerciais.\nTrata-se de uma questão delicada."
+            },
+            {
+              "title": "5. Classifique a oração subordinada pela função",
+              "text": "Primeiro diga o papel da oração destacada; depois, se souber, dê o nome completo.",
+              "code": "É importante QUE VOCÊ COMPAREÇA.\nO arquivo QUE FOI ENVIADO está corrompido.\nQUANDO O TESTE TERMINOU, a equipe saiu."
+            }
+          ],
+          "criteria": [
+            "Você começa pelo verbo em vez de chutar a função.",
+            "Distingue sujeito de objeto.",
+            "Distingue adjunto adnominal de complemento nominal em casos básicos.",
+            "Identifica partícula apassivadora e índice de indeterminação do sujeito.",
+            "Reconhece a função de uma oração subordinada antes de decorar o rótulo."
+          ]
+        },
+        {
+          "id": "phase-04-001-lab",
+          "type": "lab",
+          "title": "004 · Lab: perícia sintática",
+          "lead": "O objetivo é justificar cada classificação como se você estivesse desmontando uma questão da FGV.",
+          "scenario": "Analise a frase: “Após a revisão dos registros, identificaram-se falhas graves no sistema.”",
+          "tasks": [
+            "Identifique o verbo principal.",
+            "Explique a função do “se”.",
+            "Identifique o sujeito da oração.",
+            "Transforme a oração principal em voz passiva analítica.",
+            "Classifique “Após a revisão dos registros”.",
+            "Dentro de “revisão dos registros”, investigue a função de “dos registros” e justifique pelo sentido.",
+            "Explique por que “falhas graves” não é objeto direto.",
+            "Crie uma versão parecida em que o “se” passe a ser índice de indeterminação do sujeito.",
+            "Compare as duas versões e explique por que a concordância verbal muda."
+          ],
+          "criteria": [
+            "Você prova a função do “se” pela estrutura verbal.",
+            "Reconhece o sujeito paciente em voz passiva sintética.",
+            "Consegue transformar passiva sintética em analítica.",
+            "Distingue circunstância de complemento.",
+            "Consegue criar uma frase paralela mudando a função sintática."
+          ]
+        },
+        {
+          "id": "phase-04-001-review",
+          "type": "review",
+          "title": "004 · Review: protocolo sintático",
+          "lead": "Reconstrua no papel primeiro; use esta tela apenas para conferir.",
+          "blocks": [
+            {
+              "type": "bullets",
+              "items": [
+                "Comece pelo verbo.",
+                "Pergunte quem pratica/sofre o processo para localizar o sujeito.",
+                "Objeto direto completa verbo sem preposição exigida.",
+                "Objeto indireto completa verbo com preposição exigida.",
+                "Adjunto adverbial indica circunstância.",
+                "Adjunto adnominal acompanha substantivo e pode indicar determinação, característica, posse ou agente.",
+                "Complemento nominal completa nome abstrato, adjetivo ou advérbio e costuma representar alvo/paciente.",
+                "Partícula apassivadora: verbo concorda com o sujeito paciente.",
+                "Índice de indeterminação: verbo fica no singular.",
+                "Oração subordinada deve ser entendida pela função que exerce na oração maior."
+              ]
+            },
+            {
+              "type": "callout",
+              "text": "Atalho perigoso: classificar pelo formato. O mesmo `de + substantivo` pode cumprir funções diferentes. A função depende da relação sintática e semântica."
+            }
+          ]
+        },
+        {
+          "id": "phase-04-001-quiz",
+          "type": "quiz",
+          "title": "004 · Quiz FGV: sintaxe e função do “se”",
+          "passPercent": 80,
+          "lead": "Dez questões. Gate objetivo: pelo menos 8/10.",
+          "questions": [
+            {
+              "id": "q1",
+              "question": "Em “Os técnicos corrigiram o problema”, o termo “o problema” exerce a função de:",
+              "options": [
+                "Sujeito",
+                "Objeto direto",
+                "Objeto indireto",
+                "Predicativo",
+                "Adjunto adverbial"
+              ],
+              "answer": 1,
+              "explanation": "“Corrigir” é transitivo direto: corrigiram o quê? o problema."
+            },
+            {
+              "id": "q2",
+              "question": "Em “Os técnicos precisam de treinamento”, o termo “de treinamento” é:",
+              "options": [
+                "Objeto direto",
+                "Objeto indireto",
+                "Adjunto adnominal",
+                "Sujeito",
+                "Aposto"
+              ],
+              "answer": 1,
+              "explanation": "O verbo “precisar” exige a preposição “de”: objeto indireto."
+            },
+            {
+              "id": "q3",
+              "question": "Assinale a frase em que o “se” é partícula apassivadora.",
+              "options": [
+                "Precisa-se de programadores.",
+                "Trata-se de um caso raro.",
+                "Divulgaram-se os resultados.",
+                "Vive-se bem aqui.",
+                "Se chover, ficaremos em casa."
+              ],
+              "answer": 2,
+              "explanation": "“Os resultados foram divulgados” é uma passiva analítica possível; “os resultados” é sujeito paciente."
+            },
+            {
+              "id": "q4",
+              "question": "Assinale a frase correta quanto à concordância.",
+              "options": [
+                "Identificou-se falhas no sistema.",
+                "Identificaram-se falhas no sistema.",
+                "Precisam-se de analistas.",
+                "Tratam-se de problemas antigos.",
+                "Necessitam-se de ajustes."
+              ],
+              "answer": 1,
+              "explanation": "Em “identificaram-se falhas”, o se é apassivador e o verbo concorda com “falhas”. Nas construções com verbo transitivo indireto, o verbo permanece no singular."
+            },
+            {
+              "id": "q5",
+              "question": "Em “Precisa-se de analistas experientes”, é correto afirmar que:",
+              "options": [
+                "“analistas experientes” é sujeito paciente.",
+                "O verbo deveria estar no plural.",
+                "O “se” indetermina o sujeito.",
+                "A frase está na voz passiva sintética.",
+                "“de analistas experientes” é adjunto adverbial."
+              ],
+              "answer": 2,
+              "explanation": "Como “precisar de” é transitivo indireto, o se é índice de indeterminação do sujeito."
+            },
+            {
+              "id": "q6",
+              "question": "Em “A rápida resposta da equipe evitou atrasos”, o termo “rápida” exerce função de:",
+              "options": [
+                "Objeto direto",
+                "Adjunto adnominal",
+                "Adjunto adverbial",
+                "Complemento nominal",
+                "Predicativo"
+              ],
+              "answer": 1,
+              "explanation": "“Rápida” caracteriza o substantivo “resposta”, funcionando como adjunto adnominal."
+            },
+            {
+              "id": "q7",
+              "question": "Em “A necessidade de apoio ficou evidente”, o termo “de apoio” completa o sentido do nome abstrato “necessidade” e funciona como:",
+              "options": [
+                "Adjunto adnominal",
+                "Objeto indireto",
+                "Complemento nominal",
+                "Adjunto adverbial",
+                "Aposto"
+              ],
+              "answer": 2,
+              "explanation": "O termo completa o sentido do substantivo abstrato “necessidade”."
+            },
+            {
+              "id": "q8",
+              "question": "Em “Quando o teste terminou, a equipe deixou a sala”, a oração “Quando o teste terminou” exerce valor de:",
+              "options": [
+                "Causa",
+                "Tempo",
+                "Finalidade",
+                "Condição",
+                "Concessão"
+              ],
+              "answer": 1,
+              "explanation": "A oração situa temporalmente o fato expresso na oração principal."
+            },
+            {
+              "id": "q9",
+              "question": "Em “É necessário que todos participem”, a oração “que todos participem” exerce função equivalente a:",
+              "options": [
+                "Objeto direto",
+                "Sujeito",
+                "Adjunto adverbial",
+                "Predicativo do objeto",
+                "Aposto"
+              ],
+              "answer": 1,
+              "explanation": "A oração subordinada substantiva funciona como sujeito de “é necessário”."
+            },
+            {
+              "id": "q10",
+              "question": "Assinale a alternativa em que a análise do “se” está correta.",
+              "options": [
+                "Alugam-se apartamentos — índice de indeterminação do sujeito.",
+                "Precisa-se de ajuda — partícula apassivadora.",
+                "Vendem-se ingressos — partícula apassivadora.",
+                "Trata-se de um erro — pronome reflexivo.",
+                "Se ele chegar, avise — partícula apassivadora."
+              ],
+              "answer": 2,
+              "explanation": "“Ingressos são vendidos” confirma a voz passiva sintética."
+            }
+          ]
+        },
+        {
+          "id": "phase-04-001-project",
+          "type": "project",
+          "title": "004 · Mastery Gate: análise sintática sem chute",
+          "lead": "Você fecha o tema quando consegue justificar cada função e diagnosticar o “se” pela estrutura.",
+          "scenario": "Crie um pequeno conjunto de cinco frases no estilo FGV contendo funções sintáticas diferentes.",
+          "tasks": [
+            "Inclua uma frase com objeto direto e outra com objeto indireto.",
+            "Inclua um caso de adjunto adnominal e um de complemento nominal.",
+            "Inclua uma voz passiva sintética com `se`.",
+            "Inclua uma oração com sujeito indeterminado por `se`.",
+            "Inclua uma oração subordinada com função substantiva, adjetiva ou adverbial.",
+            "Para cada frase, faça a análise completa começando pelo verbo.",
+            "Transforme a passiva sintética em passiva analítica.",
+            "Explique por que o verbo concorda em uma construção com `se` e permanece no singular em outra.",
+            "Depois de um intervalo, refaça o quiz sem revisar antes."
+          ],
+          "criteria": [
+            "Quiz ≥ 80%.",
+            "Você encontra sujeito e complementos a partir do verbo.",
+            "Distingue objeto direto de indireto.",
+            "Distingue adjunto adnominal de complemento nominal em casos recorrentes.",
+            "Distingue partícula apassivadora de índice de indeterminação.",
+            "Analisa uma oração subordinada pela função.",
+            "Consegue justificar a classificação sem depender apenas de nomenclatura decorada."
+          ]
+        }
+      ]
     },
     {
       "id": "phase-05",
