@@ -410,10 +410,12 @@ function getCurrentLesson() {
 }
 
 function showCompletion() {
+  const lesson = getCurrentLesson();
+  const module = courseData.modules.find((item) => item.id === lesson?.moduleId);
   el("resultContent").innerHTML =
     '<p class="eyebrow">MASTERY GATE</p>' +
-    '<h2>Proposições, negação e equivalências</h2>' +
-    '<p>O ciclo AMS deste tema foi concluído: Theory → Checkpoint → Workshop → Lab → Review → Quiz → Gate. O próximo tema entra em estudo ativo somente quando você decidir avançar.</p>';
+    '<h2>' + escapeHtml(module?.title || "Tema concluído") + '</h2>' +
+    '<p>O ciclo AMS deste tema foi concluído: Theory → Checkpoint → Workshop → Lab → Review → Quiz → Gate.</p>';
   el("resultDialog").showModal();
 }
 
