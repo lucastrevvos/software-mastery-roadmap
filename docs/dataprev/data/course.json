@@ -3,7 +3,7 @@
     "id": "dataprev-ams",
     "title": "Dataprev 2026 — Português & Raciocínio Lógico-Matemático",
     "subtitle": "Adaptive Mastery Scaffolding · FGV",
-    "version": 4,
+    "version": 5,
     "masteryProtocol": [
       "Theory",
       "Checkpoint",
@@ -1548,10 +1548,421 @@
     {
       "id": "phase-05",
       "number": "05",
-      "label": "RLM",
+      "label": "RLM · EM ESTUDO",
       "title": "Porcentagem, razão e proporção",
-      "available": false,
-      "description": "Taxas, aumentos, descontos e divisão proporcional."
+      "available": true,
+      "description": "Dominar porcentagem, razão, proporção, divisão proporcional, variações sucessivas e taxas sem cair em atalhos que distorcem a base de cálculo.",
+      "lessons": [
+        {
+          "id": "phase-05-001-theory",
+          "type": "theory",
+          "title": "005 · Theory: porcentagem, razão e proporção",
+          "lead": "O ponto central não é decorar fórmulas: é saber qual quantidade serve de base, qual relação está sendo comparada e como a variação altera essa base.",
+          "blocks": [
+            {
+              "type": "heading",
+              "text": "1. Porcentagem é uma razão por 100"
+            },
+            {
+              "type": "paragraph",
+              "text": "`p%` significa `p/100`. Para calcular uma porcentagem de uma quantidade, multiplique a quantidade pela forma decimal da porcentagem."
+            },
+            {
+              "type": "code",
+              "code": "20% de 350 = 0,20 × 350 = 70\n7,5% de 240 = 0,075 × 240 = 18"
+            },
+            {
+              "type": "heading",
+              "text": "2. A base importa"
+            },
+            {
+              "type": "paragraph",
+              "text": "A mesma porcentagem aplicada sobre bases diferentes produz valores diferentes. Por isso, aumento de 20% seguido de desconto de 20% não devolve o valor inicial."
+            },
+            {
+              "type": "code",
+              "code": "100 → +20% = 120\n120 → -20% = 96\n\nResultado final: queda de 4% em relação ao valor inicial"
+            },
+            {
+              "type": "callout",
+              "text": "Em variações sucessivas, multiplique fatores: `+a% → ×(1+a)` e `-b% → ×(1-b)` usando a forma decimal."
+            },
+            {
+              "type": "heading",
+              "text": "3. Razão"
+            },
+            {
+              "type": "paragraph",
+              "text": "Razão compara duas grandezas por divisão. Se uma turma tem 12 homens e 18 mulheres, a razão homens:mulheres é `12:18 = 2:3`."
+            },
+            {
+              "type": "heading",
+              "text": "4. Proporção"
+            },
+            {
+              "type": "paragraph",
+              "text": "Uma proporção afirma que duas razões são iguais. O produto dos meios é igual ao produto dos extremos."
+            },
+            {
+              "type": "code",
+              "code": "a/b = c/d  ⇒  a·d = b·c\n\n3/5 = x/20\n3·20 = 5x\nx = 12"
+            },
+            {
+              "type": "heading",
+              "text": "5. Regra de três"
+            },
+            {
+              "type": "paragraph",
+              "text": "Regra de três não é uma fórmula mágica; ela é uma maneira prática de resolver proporções. Antes de montar, determine se as grandezas variam diretamente ou inversamente."
+            },
+            {
+              "type": "bullets",
+              "items": [
+                "Diretamente proporcionais: uma aumenta e a outra também aumenta na mesma relação.",
+                "Inversamente proporcionais: uma aumenta enquanto a outra diminui na mesma relação."
+              ]
+            },
+            {
+              "type": "code",
+              "code": "4 pessoas fazem uma tarefa em 6 horas.\n8 pessoas, no mesmo ritmo, fariam em 3 horas.\n\nMais pessoas → menos tempo = relação inversa."
+            },
+            {
+              "type": "heading",
+              "text": "6. Divisão proporcional"
+            },
+            {
+              "type": "paragraph",
+              "text": "Para dividir um total em partes proporcionais a `a:b:c`, some os pesos e distribua o total segundo cada fração."
+            },
+            {
+              "type": "code",
+              "code": "Dividir 600 na razão 2:3:5\nSoma dos pesos = 10\n\n2/10 × 600 = 120\n3/10 × 600 = 180\n5/10 × 600 = 300"
+            },
+            {
+              "type": "heading",
+              "text": "7. Taxa acumulada"
+            },
+            {
+              "type": "paragraph",
+              "text": "Taxas sucessivas não devem ser simplesmente somadas, salvo aproximações muito específicas. O procedimento exato é multiplicar os fatores de crescimento."
+            },
+            {
+              "type": "code",
+              "code": "+10% e depois +20%\n1,10 × 1,20 = 1,32\n→ aumento acumulado de 32%"
+            },
+            {
+              "type": "callout",
+              "text": "Atalho seguro de prova: pergunte sempre `qual é a base desta porcentagem?` e `as grandezas são diretas ou inversas?`."
+            }
+          ]
+        },
+        {
+          "id": "phase-05-001-checkpoint",
+          "type": "checkpoint",
+          "title": "005 · Checkpoint: base e proporção",
+          "passPercent": 67,
+          "lead": "Três checagens rápidas para garantir que a estrutura está correta antes da prática.",
+          "questions": [
+            {
+              "id": "cp1",
+              "question": "Um produto de R$ 200 recebe aumento de 15%. O novo preço é:",
+              "options": [
+                "R$ 215",
+                "R$ 225",
+                "R$ 230",
+                "R$ 235"
+              ],
+              "answer": 2,
+              "explanation": "15% de 200 = 30; portanto, 200 + 30 = 230."
+            },
+            {
+              "id": "cp2",
+              "question": "A razão 18:24, na forma simplificada, é:",
+              "options": [
+                "2:3",
+                "3:4",
+                "4:3",
+                "6:8"
+              ],
+              "answer": 1,
+              "explanation": "Dividindo os dois termos por 6, obtemos 3:4."
+            },
+            {
+              "id": "cp3",
+              "question": "Se 6 máquinas produzem 900 peças no mesmo período e com a mesma produtividade, 10 máquinas produzem:",
+              "options": [
+                "1.200",
+                "1.350",
+                "1.500",
+                "1.800"
+              ],
+              "answer": 2,
+              "explanation": "A relação é direta: 900/6 = 150 peças por máquina; 10 × 150 = 1.500."
+            }
+          ]
+        },
+        {
+          "id": "phase-05-001-workshop",
+          "type": "workshop",
+          "title": "005 · Workshop: identifique a base antes da conta",
+          "lead": "Não faça a operação enquanto não souber sobre qual quantidade a taxa está sendo aplicada.",
+          "steps": [
+            {
+              "title": "1. Porcentagem direta",
+              "text": "Calcule no papel e diga qual é a base em cada caso.",
+              "code": "25% de 480\n12% de 750\n2,5% de 320"
+            },
+            {
+              "title": "2. Aumento e desconto",
+              "text": "Resolva de duas formas: calculando a parcela percentual e usando fator multiplicativo.",
+              "code": "R$ 800 com aumento de 12%\nR$ 450 com desconto de 18%"
+            },
+            {
+              "title": "3. Variação sucessiva",
+              "text": "Preveja antes: o valor volta ao original ou não? Depois calcule.",
+              "code": "R$ 500 → +20% → -20%"
+            },
+            {
+              "title": "4. Razão e proporção",
+              "text": "Simplifique e resolva a incógnita.",
+              "code": "42:56\n7/9 = x/45"
+            },
+            {
+              "title": "5. Direta ou inversa?",
+              "text": "Antes de montar regra de três, classifique a relação.",
+              "code": "Mais litros comprados → maior preço total\nMais trabalhadores iguais → menor tempo para a mesma tarefa\nMaior velocidade → menor tempo para a mesma distância"
+            },
+            {
+              "title": "6. Divisão proporcional",
+              "text": "Divida o total usando os pesos.",
+              "code": "Dividir 1.200 na razão 2:3:7"
+            }
+          ],
+          "criteria": [
+            "Você identifica a base da porcentagem antes de calcular.",
+            "Consegue usar fator multiplicativo para aumento e desconto.",
+            "Não soma taxas sucessivas automaticamente.",
+            "Distingue grandezas diretamente e inversamente proporcionais.",
+            "Consegue fazer divisão proporcional sem tentativa e erro."
+          ]
+        },
+        {
+          "id": "phase-05-001-lab",
+          "type": "lab",
+          "title": "005 · Lab: problema composto de prova",
+          "lead": "Agora você vai combinar porcentagem e proporção em uma cadeia curta, como ocorre em prova.",
+          "scenario": "Uma empresa distribui um bônus total de R$ 18.000 entre três equipes na razão 2:3:4. Depois, cada equipe destina 10% do próprio bônus a treinamento.",
+          "tasks": [
+            "Calcule o bônus inicial de cada equipe.",
+            "Explique por que a divisão é proporcional a 2:3:4.",
+            "Calcule 10% do bônus de cada equipe.",
+            "Calcule quanto sobra em cada equipe após a destinação.",
+            "Mostre que aplicar 10% depois da divisão equivale a aplicar 90% a cada parcela.",
+            "Calcule quanto foi destinado ao treinamento no total.",
+            "Crie uma nova versão do problema com quatro equipes e outra razão.",
+            "Resolva o problema criado por você."
+          ],
+          "criteria": [
+            "Você distribui o total corretamente pelos pesos.",
+            "Mantém a base correta ao aplicar a porcentagem.",
+            "Consegue conferir o total somando as parcelas.",
+            "Reconhece equivalências de cálculo por fator multiplicativo.",
+            "Transfere o método para uma estrutura nova."
+          ]
+        },
+        {
+          "id": "phase-05-001-review",
+          "type": "review",
+          "title": "005 · Review: protocolo de porcentagem e proporção",
+          "lead": "Reconstrua primeiro no papel; depois confira somente o que faltou.",
+          "blocks": [
+            {
+              "type": "bullets",
+              "items": [
+                "`p% = p/100`.",
+                "Porcentagem sempre é calculada sobre alguma base.",
+                "Aumento de `p%` = multiplicar por `1 + p/100`.",
+                "Desconto de `p%` = multiplicar por `1 - p/100`.",
+                "Taxas sucessivas = multiplicação de fatores, não soma automática.",
+                "Razão compara grandezas por divisão.",
+                "Proporção é igualdade entre razões.",
+                "Regra de três é uma aplicação de proporção.",
+                "Antes da regra de três, determine se a relação é direta ou inversa.",
+                "Divisão proporcional distribui o total conforme pesos relativos."
+              ]
+            },
+            {
+              "type": "callout",
+              "text": "Erro clássico: usar a porcentagem certa sobre a base errada. Se houver aumento, desconto ou comparação em etapas, escreva explicitamente a base de cada etapa."
+            }
+          ]
+        },
+        {
+          "id": "phase-05-001-quiz",
+          "type": "quiz",
+          "title": "005 · Quiz FGV: porcentagem, razão e proporção",
+          "passPercent": 80,
+          "lead": "Dez questões. Gate objetivo: pelo menos 8/10.",
+          "questions": [
+            {
+              "id": "q1",
+              "question": "Um valor de R$ 640 recebe desconto de 25%. O valor final é:",
+              "options": [
+                "R$ 420",
+                "R$ 460",
+                "R$ 480",
+                "R$ 500",
+                "R$ 520"
+              ],
+              "answer": 2,
+              "explanation": "25% de 640 = 160; 640 - 160 = 480."
+            },
+            {
+              "id": "q2",
+              "question": "Após um aumento de 20%, um preço de R$ 250 passa a ser:",
+              "options": [
+                "R$ 270",
+                "R$ 280",
+                "R$ 290",
+                "R$ 300",
+                "R$ 320"
+              ],
+              "answer": 3,
+              "explanation": "250 × 1,20 = 300."
+            },
+            {
+              "id": "q3",
+              "question": "Um preço aumenta 20% e, em seguida, sofre desconto de 20%. Em relação ao preço inicial, o preço final:",
+              "options": [
+                "Permanece igual.",
+                "Aumenta 4%.",
+                "Diminui 4%.",
+                "Diminui 20%.",
+                "Aumenta 20%."
+              ],
+              "answer": 2,
+              "explanation": "1,20 × 0,80 = 0,96; o valor final é 96% do inicial, ou seja, 4% menor."
+            },
+            {
+              "id": "q4",
+              "question": "A razão entre 45 e 60, na forma irredutível, é:",
+              "options": [
+                "2:3",
+                "3:4",
+                "4:5",
+                "5:6",
+                "9:12"
+              ],
+              "answer": 1,
+              "explanation": "Dividindo 45 e 60 por 15, obtemos 3:4."
+            },
+            {
+              "id": "q5",
+              "question": "Se 5/8 = x/40, então x é igual a:",
+              "options": [
+                "20",
+                "24",
+                "25",
+                "30",
+                "32"
+              ],
+              "answer": 2,
+              "explanation": "5 × 40 = 8x ⇒ 200 = 8x ⇒ x = 25."
+            },
+            {
+              "id": "q6",
+              "question": "Um total de R$ 900 é dividido na razão 2:3:4. A maior parcela vale:",
+              "options": [
+                "R$ 200",
+                "R$ 250",
+                "R$ 300",
+                "R$ 350",
+                "R$ 400"
+              ],
+              "answer": 4,
+              "explanation": "Soma dos pesos = 9. A maior parcela é 4/9 de 900 = 400."
+            },
+            {
+              "id": "q7",
+              "question": "Quatro trabalhadores executam uma tarefa em 15 dias. Mantidas as mesmas condições e produtividade, dez trabalhadores executariam a mesma tarefa em:",
+              "options": [
+                "4 dias",
+                "5 dias",
+                "6 dias",
+                "8 dias",
+                "10 dias"
+              ],
+              "answer": 2,
+              "explanation": "A relação é inversa: 4 × 15 = 10 × d ⇒ d = 6."
+            },
+            {
+              "id": "q8",
+              "question": "Uma população cresce 10% em um ano e 10% no ano seguinte. O crescimento acumulado é:",
+              "options": [
+                "20%",
+                "21%",
+                "22%",
+                "19%",
+                "10%"
+              ],
+              "answer": 1,
+              "explanation": "1,10 × 1,10 = 1,21; crescimento acumulado de 21%."
+            },
+            {
+              "id": "q9",
+              "question": "Uma quantidade passa de 80 para 100. O aumento percentual foi de:",
+              "options": [
+                "20%",
+                "22,5%",
+                "25%",
+                "30%",
+                "40%"
+              ],
+              "answer": 2,
+              "explanation": "O aumento foi 20 sobre base 80: 20/80 = 0,25 = 25%."
+            },
+            {
+              "id": "q10",
+              "question": "Em uma mistura, a razão entre água e concentrado é 5:2. Se há 14 litros no total, a quantidade de concentrado é:",
+              "options": [
+                "2 L",
+                "4 L",
+                "5 L",
+                "7 L",
+                "10 L"
+              ],
+              "answer": 1,
+              "explanation": "São 7 partes no total; 2/7 de 14 = 4 litros."
+            }
+          ]
+        },
+        {
+          "id": "phase-05-001-project",
+          "type": "project",
+          "title": "005 · Mastery Gate: taxas sem atalhos perigosos",
+          "lead": "Você fecha o tema quando consegue modelar, calcular, verificar e explicar qual base ou proporção foi usada.",
+          "scenario": "Crie uma questão inédita no estilo FGV que combine pelo menos duas destas ideias: porcentagem, proporção, divisão proporcional, taxa sucessiva ou regra de três.",
+          "tasks": [
+            "Defina claramente as grandezas e a base de cada porcentagem.",
+            "Escreva cinco alternativas plausíveis.",
+            "Resolva pela forma mais direta.",
+            "Resolva novamente usando fator multiplicativo ou proporção, quando aplicável.",
+            "Inclua um distrator baseado em somar taxas sucessivas incorretamente.",
+            "Inclua um distrator baseado em usar a base errada.",
+            "Explique qual erro gera cada distrator.",
+            "Faça uma verificação final por estimativa ou soma das parcelas.",
+            "Depois de um intervalo, refaça o quiz sem revisar antes."
+          ],
+          "criteria": [
+            "Quiz ≥ 80%.",
+            "Você identifica corretamente a base percentual.",
+            "Consegue resolver aumentos e descontos sucessivos.",
+            "Distingue relação direta de inversa.",
+            "Resolve proporções e divisões proporcionais.",
+            "Consegue explicar e diagnosticar erros típicos de prova."
+          ]
+        }
+      ]
     },
     {
       "id": "phase-06",
