@@ -1,4 +1,4 @@
-const DATA_URL = "./data/course.json?v=1.0.5";
+const DATA_URL = "./data/course.json?v=1.0.6";
 const STORAGE_KEY = "dataprev-ams-learning-progress-v1";
 
 let courseData = null;
@@ -189,6 +189,7 @@ function renderLesson(lesson) {
     (lesson.lead ? '<p class="lead">' + inlineCode(lesson.lead) + '</p>' : "");
 
   if (lesson.blocks) body += lesson.blocks.map(renderBlock).join("");
+  if (lesson.workedQuestions) body += renderWorkedQuestions(lesson.workedQuestions);
   if (lesson.steps) body += '<h2>Roteiro</h2>' + lesson.steps.map(renderStep).join("");
   if (lesson.scenario) {
     body += '<div class="callout"><strong>Cenário</strong><br>' + inlineCode(lesson.scenario) + '</div>';
@@ -247,6 +248,32 @@ function renderStep(step) {
   );
 }
 
+function renderWorkedQuestions(questions) {
+  return (
+    '<h2>10 questões estilo FGV · resolução comentada</h2><div class="questions">' +
+    questions.map((question, index) => {
+      const options = question.options
+        .map((option, optionIndex) =>
+          '<div class="option"><span><strong>' +
+          String.fromCharCode(65 + optionIndex) +
+          ')</strong> ' + inlineCode(option) + '</span></div>'
+        )
+        .join("");
+      const correct = question.options[question.answer];
+      return (
+        '<section class="question-card worked-question"><strong>' +
+        (index + 1) + '. ' + escapeHtml(question.question) +
+        '</strong><div class="options">' + options + '</div>' +
+        '<div class="feedback show ok"><strong>Resposta: ' +
+        String.fromCharCode(65 + question.answer) + ')</strong> ' +
+        inlineCode(correct) + '<br><strong>Por quê:</strong> ' +
+        inlineCode(question.solution) + '</div></section>'
+      );
+    }).join("") +
+    '</div>'
+  );
+}
+
 function renderQuestions(lesson) {
   const questions = lesson.questions
     .map((question, index) => {
@@ -277,11 +304,18 @@ function renderQuestions(lesson) {
     })
     .join("");
 
+  const actionLabel =
+    lesson.type === "lab"
+      ? "Submeter avaliação"
+      : lesson.type === "quiz"
+        ? "Corrigir quiz"
+        : "Corrigir checkpoint";
+
   return (
     '<div class="questions">' +
     questions +
-    '</div><button class="check-answer" id="gradeQuestions">Corrigir ' +
-    (lesson.type === "quiz" ? "quiz" : "checkpoint") +
+    '</div><button class="check-answer" id="gradeQuestions">' +
+    actionLabel +
     '</button><div id="scoreResult"></div>'
   );
 }
@@ -295,6 +329,7 @@ function wireLessonInteractions(lesson) {
 function gradeLesson(lesson) {
   let correct = 0;
   let answered = 0;
+  const isLab = lesson.type === "lab";
 
   lesson.questions.forEach((question) => {
     const card = document.querySelector(
@@ -302,12 +337,23 @@ function gradeLesson(lesson) {
     );
     const selected = card.querySelector("input:checked");
     const feedback = card.querySelector("[data-feedback]");
+    const correctText = question.options[question.answer];
+    const correctLetter = String.fromCharCode(65 + question.answer);
 
     feedback.className = "feedback show";
 
     if (!selected) {
-      feedback.classList.add("bad");
-      feedback.textContent = "Selecione uma resposta antes de concluir.";
+      if (isLab) {
+        feedback.classList.add("bad");
+        feedback.innerHTML =
+          "<strong>Sem resposta.</strong> Resposta correta: <strong>" +
+          correctLetter + ") " + escapeHtml(correctText) +
+          "</strong><br><strong>Por quê:</strong> " +
+          escapeHtml(question.explanation);
+      } else {
+        feedback.classList.add("bad");
+        feedback.textContent = "Selecione uma resposta antes de concluir.";
+      }
       return;
     }
 
@@ -317,17 +363,26 @@ function gradeLesson(lesson) {
     if (selectedIndex === question.answer) {
       correct += 1;
       feedback.classList.add("ok");
-      feedback.textContent = question.explanation;
+      feedback.innerHTML =
+        "<strong>Correto: " + correctLetter + ") " +
+        escapeHtml(correctText) +
+        "</strong><br><strong>Por quê:</strong> " +
+        escapeHtml(question.explanation);
     } else {
       feedback.classList.add("bad");
-      feedback.textContent = "Ainda não. " + question.explanation;
+      feedback.innerHTML =
+        "<strong>Sua resposta não é a correta.</strong> Resposta correta: <strong>" +
+        correctLetter + ") " + escapeHtml(correctText) +
+        "</strong><br><strong>Por quê:</strong> " +
+        escapeHtml(question.explanation);
     }
   });
 
   const percent = Math.round((correct / lesson.questions.length) * 100);
-  const passed =
-    answered === lesson.questions.length &&
-    percent >= (lesson.passPercent || 100);
+  const passed = isLab
+    ? true
+    : answered === lesson.questions.length &&
+      percent >= (lesson.passPercent || 100);
 
   sessionScores[lesson.id] = {
     correct,
@@ -339,18 +394,17 @@ function gradeLesson(lesson) {
   progress.scores[lesson.id] = sessionScores[lesson.id];
   localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
 
-  el("scoreResult").innerHTML =
-    '<div class="score-card"><strong>' +
-    correct +
-    "/" +
-    lesson.questions.length +
-    " · " +
-    percent +
-    '%</strong><br>' +
-    (passed
-      ? "Gate atingido. Você pode continuar."
-      : "Gate ainda não atingido. Revise os erros e tente novamente.") +
-    '</div>';
+  el("scoreResult").innerHTML = isLab
+    ? '<div class="score-card"><strong>' +
+      correct + "/" + lesson.questions.length + " · " + percent +
+      '%</strong><br>Avaliação submetida. A correção e a explicação estão abertas em cada questão.</div>'
+    : '<div class="score-card"><strong>' +
+      correct + "/" + lesson.questions.length + " · " + percent +
+      '%</strong><br>' +
+      (passed
+        ? "Gate atingido. Você pode continuar."
+        : "Gate ainda não atingido. Revise os erros e tente novamente.") +
+      '</div>';
 
   updateNavigationButtons(lesson);
 }
@@ -475,8 +529,8 @@ function typeLabel(type) {
     {
       theory: "Teoria",
       checkpoint: "3 perguntas",
-      workshop: "Workshop",
-      lab: "Laboratório",
+      workshop: "10 resolvidas",
+      lab: "10 questões",
       review: "Review",
       quiz: "Quiz",
       project: "Gate"
