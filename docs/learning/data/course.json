@@ -151,17 +151,25 @@
           "lead": "Sem roteiro passo a passo. Você recebe o cenário e precisa investigar.",
           "scenario": "Um colega diz: “o programa não roda”. O comando usado é `python tools/report.py`, mas o terminal responde que o arquivo não foi encontrado.",
           "tasks": [
+            "Baixe e extraia o starter ZIP desta tarefa.",
+            "Abra a pasta `phase-00-lab-01/workspace` no terminal ou VS Code.",
             "Descubra o diretório de trabalho atual.",
-            "Verifique se existe uma pasta `tools` naquele contexto.",
-            "Localize `report.py` sem alterar arquivos.",
-            "Explique por que o comando falhou.",
-            "Execute o programa usando um caminho válido."
+            "Inspecione a estrutura sem mover arquivos.",
+            "Execute o cenário, observe a falha e descubra a causa.",
+            "Preencha `notes/diagnosis.md` com evidências e conclusão.",
+            "Rode `python verify.py` até obter `MASTERED: Phase 00 Lab 01`."
           ],
           "criteria": [
             "Você usa evidência antes de tentar correções aleatórias.",
             "Sua explicação menciona diretório de trabalho e resolução de caminho.",
             "A solução não depende de mover arquivos sem necessidade."
-          ]
+          ],
+          "download": {
+            "label": "Baixar starter ZIP",
+            "href": "./assets/labs/phase-00-lab-01-diagnostico.zip",
+            "filename": "phase-00-lab-01-diagnostico.zip",
+            "note": "Baixe o pacote, extraia-o, abra a pasta no seu ambiente real e execute a missão descrita no README.md."
+          }
         },
         {
           "id": "phase-00-review-01",
