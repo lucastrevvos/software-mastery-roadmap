@@ -3,7 +3,7 @@
     "id": "dataprev-ams",
     "title": "Dataprev 2026 — Português & Raciocínio Lógico-Matemático",
     "subtitle": "Adaptive Mastery Scaffolding · FGV",
-    "version": 1,
+    "version": 2,
     "masteryProtocol": [
       "Theory",
       "Checkpoint",
@@ -378,10 +378,370 @@
     {
       "id": "phase-02",
       "number": "02",
-      "label": "PORTUGUÊS",
+      "label": "PORTUGUÊS · EM ESTUDO",
       "title": "Interpretação + semântica",
-      "available": false,
-      "description": "Sentido, inferência, pressupostos, ironia, paradoxo e relações semânticas."
+      "available": true,
+      "description": "Interpretar o que o texto diz, sugere e pressupõe; reconhecer relações de sentido, ironia, paradoxo e inferências no estilo FGV.",
+      "lessons": [
+        {
+          "id": "phase-02-001-theory",
+          "type": "theory",
+          "title": "002 · Theory: sentido antes da gramática",
+          "lead": "Na FGV, interpretar não é 'achar bonito' nem adivinhar intenção. É localizar evidências linguísticas que sustentam um sentido.",
+          "blocks": [
+            {
+              "type": "heading",
+              "text": "1. O que o texto diz x o que permite concluir"
+            },
+            {
+              "type": "paragraph",
+              "text": "Separe três camadas: informação explícita, inferência autorizada e extrapolação. A resposta correta precisa ser sustentada pelo texto; uma alternativa pode parecer plausível no mundo real e ainda assim estar errada."
+            },
+            {
+              "type": "callout",
+              "text": "Pergunta-chave: `Consigo apontar a palavra, construção ou relação textual que prova minha resposta?` Se não, provavelmente você está extrapolando."
+            },
+            {
+              "type": "heading",
+              "text": "2. Relações semânticas"
+            },
+            {
+              "type": "bullets",
+              "items": [
+                "Causa: apresenta o motivo de um fato.",
+                "Consequência: apresenta o resultado de um fato.",
+                "Condição: estabelece requisito para que algo ocorra.",
+                "Concessão: admite um fato que não impede o outro.",
+                "Finalidade: apresenta objetivo.",
+                "Oposição/contraste: coloca ideias em direção contrária.",
+                "Conclusão: deriva uma consequência argumentativa do que veio antes."
+              ]
+            },
+            {
+              "type": "heading",
+              "text": "3. Paradoxo, ironia e contraste"
+            },
+            {
+              "type": "paragraph",
+              "text": "Paradoxo aproxima ideias aparentemente incompatíveis para produzir um sentido. Ironia faz o enunciado apontar para um sentido diferente — muitas vezes contrário — ao literal. Contraste apenas põe ideias em oposição; não exige contradição aparente."
+            },
+            {
+              "type": "heading",
+              "text": "4. Palavra em contexto"
+            },
+            {
+              "type": "paragraph",
+              "text": "A FGV frequentemente pergunta o valor de uma palavra ou expressão dentro daquele trecho. Não responda pelo primeiro significado de dicionário: substitua mentalmente a expressão e verifique qual sentido preserva a frase."
+            },
+            {
+              "type": "heading",
+              "text": "5. Método de prova"
+            },
+            {
+              "type": "code",
+              "code": "1. Leia o comando antes das alternativas.\n2. Localize o trecho-alvo.\n3. Diga com suas palavras o que ele afirma.\n4. Identifique a relação de sentido.\n5. Elimine alternativas que adicionam, exageram ou invertem informação.\n6. Volte ao texto para provar a escolha."
+            },
+            {
+              "type": "callout",
+              "text": "Na Dataprev/FGV, apareceram diretamente interpretação de versos, paradoxo e valor semântico de `de modo que`. Este módulo treina exatamente esse mecanismo."
+            }
+          ]
+        },
+        {
+          "id": "phase-02-001-checkpoint",
+          "type": "checkpoint",
+          "title": "002 · Checkpoint: fato, inferência ou extrapolação?",
+          "passPercent": 67,
+          "lead": "Três decisões rápidas antes da prática guiada.",
+          "questions": [
+            {
+              "id": "cp1",
+              "question": "Texto: “A rua amanheceu molhada e várias pessoas caminhavam com guarda-chuvas fechados.” Qual conclusão é autorizada?",
+              "options": [
+                "Choveu obrigatoriamente durante toda a madrugada.",
+                "É possível que tenha chovido antes daquele momento.",
+                "A prefeitura lavou a rua.",
+                "As pessoas estavam voltando do trabalho."
+              ],
+              "answer": 1,
+              "explanation": "A rua molhada permite inferir chuva anterior como possibilidade, mas não prova duração, causa única nem rotina das pessoas."
+            },
+            {
+              "id": "cp2",
+              "question": "Em “Ele treinou tanto que terminou a prova exausto”, a relação predominante entre as partes é de:",
+              "options": [
+                "Causa",
+                "Consequência",
+                "Concessão",
+                "Finalidade"
+              ],
+              "answer": 1,
+              "explanation": "A exaustão é apresentada como resultado do treinamento intenso."
+            },
+            {
+              "id": "cp3",
+              "question": "Em “Embora estivesse cansada, continuou estudando”, a relação estabelecida por “embora” é de:",
+              "options": [
+                "Conclusão",
+                "Concessão",
+                "Finalidade",
+                "Explicação"
+              ],
+              "answer": 1,
+              "explanation": "O cansaço é admitido, mas não impede a continuação do estudo."
+            }
+          ]
+        },
+        {
+          "id": "phase-02-001-workshop",
+          "type": "workshop",
+          "title": "002 · Workshop: prove o sentido pelo texto",
+          "lead": "Agora você não só marca a resposta: precisa apontar a evidência que a sustenta.",
+          "steps": [
+            {
+              "title": "1. Separe literal e inferido",
+              "text": "No caderno, faça duas colunas: `o texto afirma` e `eu posso inferir`. Use o trecho abaixo.",
+              "code": "“Quando abriu a janela, Ana encontrou a calçada coberta de folhas e galhos.”"
+            },
+            {
+              "title": "2. Detecte exagero",
+              "text": "Escreva uma inferência legítima e uma extrapolação sobre o mesmo trecho. Depois sublinhe qual palavra da extrapolação foi além da evidência."
+            },
+            {
+              "title": "3. Nomeie a relação",
+              "text": "Classifique a relação semântica de cada construção antes de reescrevê-la.",
+              "code": "Estudou muito, portanto foi bem.\nSe houver tempo, revisarei.\nEmbora estivesse nervoso, apresentou o projeto.\nSaiu cedo para evitar trânsito."
+            },
+            {
+              "title": "4. Teste substituição",
+              "text": "Troque o conector por outro que preserve o sentido. Se o sentido mudar, explique exatamente o que mudou."
+            },
+            {
+              "title": "5. Explique paradoxo",
+              "text": "Leia: `Quanto mais aprendia, mais percebia o quanto não sabia.` Explique por que a frase não é simplesmente uma contradição sem sentido."
+            }
+          ],
+          "criteria": [
+            "Você distingue informação explícita de inferência.",
+            "Você identifica quando uma alternativa exagera ou adiciona informação.",
+            "Você nomeia relações semânticas pela função no contexto.",
+            "Você explica paradoxo sem depender de definição decorada."
+          ]
+        },
+        {
+          "id": "phase-02-001-lab",
+          "type": "lab",
+          "title": "002 · Lab: engenharia reversa de alternativas",
+          "lead": "A prática real de interpretação FGV é eliminar alternativas pela evidência. Papel e caneta são suficientes.",
+          "scenario": "Trecho: “A felicidade é tão oposta à vida, que estando nela, a gente esquece que vive.”",
+          "tasks": [
+            "Reescreva o trecho com suas palavras sem interpretar além do que ele permite.",
+            "Identifique a tensão entre as ideias centrais.",
+            "Explique por que a leitura `é impossível ser feliz e viver` exagera o que o trecho diz.",
+            "Explique por que `há uma relação paradoxal entre felicidade e vida` descreve melhor a construção.",
+            "Crie duas alternativas distratoras: uma por exagero e outra por inversão.",
+            "Para cada alternativa, escreva a palavra ou ideia do texto que a confirma ou derruba."
+          ],
+          "criteria": [
+            "Você consegue defender a resposta com evidência textual.",
+            "Você detecta exagero, inversão e informação inventada.",
+            "Você identifica paradoxo como efeito de sentido.",
+            "Você produz distratores plausíveis e sabe explicar por que estão errados."
+          ]
+        },
+        {
+          "id": "phase-02-001-review",
+          "type": "review",
+          "title": "002 · Review: protocolo de interpretação",
+          "lead": "Tente reconstruir primeiro sem olhar. Depois confira apenas o que faltou.",
+          "blocks": [
+            {
+              "type": "bullets",
+              "items": [
+                "Explícito: está dito diretamente.",
+                "Inferência: conclusão sustentada por pistas do texto.",
+                "Extrapolação: acrescenta algo que o texto não garante.",
+                "Alternativas FGV erradas frequentemente exageram, restringem demais, generalizam, invertem ou introduzem causa inexistente.",
+                "Causa ≠ consequência; condição ≠ causa; concessão ≠ oposição simples.",
+                "Paradoxo aproxima ideias aparentemente incompatíveis para construir sentido.",
+                "Ironia exige diferença entre o sentido literal e o efetivamente produzido.",
+                "Conector deve ser interpretado pela relação que exerce no contexto.",
+                "Palavra em contexto vale pelo sentido naquela frase, não por uma definição isolada.",
+                "Resposta boa é a que você consegue provar apontando o texto."
+              ]
+            },
+            {
+              "type": "callout",
+              "text": "Regra de ouro: `texto > conhecimento de mundo > intuição`. O conhecimento de mundo ajuda a compreender, mas não pode substituir a evidência textual."
+            }
+          ]
+        },
+        {
+          "id": "phase-02-001-quiz",
+          "type": "quiz",
+          "title": "002 · Quiz FGV: interpretação e semântica",
+          "passPercent": 80,
+          "lead": "Dez questões. Para o gate, pelo menos 8/10.",
+          "questions": [
+            {
+              "id": "q1",
+              "question": "Leia: “Mesmo cercado de pessoas, sentia-se sozinho.” O efeito de sentido predominante decorre de:",
+              "options": [
+                "Uma relação de causa direta entre multidão e solidão.",
+                "Um contraste entre presença física e sentimento de isolamento.",
+                "Uma finalidade associada à convivência.",
+                "Uma conclusão lógica necessária.",
+                "Uma enumeração de fatos equivalentes."
+              ],
+              "answer": 1,
+              "explanation": "O trecho contrapõe estar cercado de pessoas e sentir solidão."
+            },
+            {
+              "id": "q2",
+              "question": "Em “A equipe revisou o sistema para reduzir as falhas”, a expressão “para reduzir as falhas” introduz ideia de:",
+              "options": [
+                "Causa",
+                "Consequência",
+                "Finalidade",
+                "Concessão",
+                "Condição"
+              ],
+              "answer": 2,
+              "explanation": "A redução das falhas é apresentada como objetivo da revisão."
+            },
+            {
+              "id": "q3",
+              "question": "Leia: “O céu escureceu rapidamente; por isso, os moradores recolheram as roupas do varal.” A expressão “por isso” introduz:",
+              "options": [
+                "Conclusão/consequência",
+                "Concessão",
+                "Condição",
+                "Finalidade",
+                "Comparação"
+              ],
+              "answer": 0,
+              "explanation": "O segundo fato é apresentado como consequência/conclusão em relação ao primeiro."
+            },
+            {
+              "id": "q4",
+              "question": "Texto: “Marina saiu de casa com um casaco pesado, embora o sol estivesse forte.” O termo “embora” indica:",
+              "options": [
+                "Causa",
+                "Concessão",
+                "Finalidade",
+                "Explicação",
+                "Proporção"
+              ],
+              "answer": 1,
+              "explanation": "O sol forte cria uma expectativa contrária ao uso do casaco, mas não impede o fato."
+            },
+            {
+              "id": "q5",
+              "question": "Leia: “Quanto mais avançava na pesquisa, mais dúvidas surgiam.” É correto afirmar que o trecho:",
+              "options": [
+                "Defende que pesquisar é inútil.",
+                "Apresenta um paradoxo aparente entre avanço e aumento de dúvidas.",
+                "Afirma que toda dúvida impede o conhecimento.",
+                "Estabelece uma causa exclusivamente psicológica.",
+                "Nega a existência de progresso."
+              ],
+              "answer": 1,
+              "explanation": "O avanço coexistindo com mais dúvidas cria uma tensão semântica produtiva, sem negar o progresso."
+            },
+            {
+              "id": "q6",
+              "question": "Texto: “Paulo chegou à reunião cinco minutos antes do horário marcado.” Qual afirmação extrapola o texto?",
+              "options": [
+                "Paulo chegou antes do horário.",
+                "Paulo não se atrasou.",
+                "Paulo é uma pessoa extremamente pontual em todas as situações.",
+                "A reunião tinha horário marcado.",
+                "A diferença entre a chegada e o horário era de cinco minutos."
+              ],
+              "answer": 2,
+              "explanation": "Um único episódio não autoriza generalizar o comportamento de Paulo em todas as situações."
+            },
+            {
+              "id": "q7",
+              "question": "Em “De modo que todos compreenderam a explicação”, a locução “de modo que”, quando introduz o resultado do que foi dito antes, exprime:",
+              "options": [
+                "Causa",
+                "Consequência",
+                "Finalidade",
+                "Tempo",
+                "Concessão"
+              ],
+              "answer": 1,
+              "explanation": "No uso apresentado, a locução introduz o resultado/consequência."
+            },
+            {
+              "id": "q8",
+              "question": "Texto: “Ele prometeu chegar cedo. Às onze da noite, finalmente apareceu.” A leitura irônica depende principalmente:",
+              "options": [
+                "Da confirmação literal da promessa.",
+                "Do contraste entre a promessa de chegar cedo e o horário muito tardio.",
+                "De uma relação de finalidade.",
+                "Da ausência de qualquer informação temporal.",
+                "Da equivalência entre cedo e tarde."
+              ],
+              "answer": 1,
+              "explanation": "O contraste entre a promessa e o resultado tardio produz o efeito irônico."
+            },
+            {
+              "id": "q9",
+              "question": "Leia: “Se os servidores forem atualizados, o serviço poderá ficar mais estável.” O trecho permite concluir que:",
+              "options": [
+                "A atualização garante estabilidade total.",
+                "Sem atualização, o serviço necessariamente ficará instável.",
+                "A atualização é apresentada como condição associada a uma possibilidade de maior estabilidade.",
+                "O serviço já está completamente estável.",
+                "A atualização é consequência da estabilidade."
+              ],
+              "answer": 2,
+              "explanation": "O modal “poderá” impede transformar a possibilidade em garantia."
+            },
+            {
+              "id": "q10",
+              "question": "Texto: “O relatório é curto, mas extremamente detalhado.” O conectivo “mas” estabelece:",
+              "options": [
+                "Adição neutra",
+                "Contraste",
+                "Causa",
+                "Finalidade",
+                "Condição"
+              ],
+              "answer": 1,
+              "explanation": "O conectivo contrapõe a expectativa associada a 'curto' ao fato de ser extremamente detalhado."
+            }
+          ]
+        },
+        {
+          "id": "phase-02-001-project",
+          "type": "project",
+          "title": "002 · Mastery Gate: interpretação com prova textual",
+          "lead": "Você só fecha o tema se conseguir justificar o sentido, desmontar distratores e transferir o método para um texto novo.",
+          "scenario": "Escolha um parágrafo curto de notícia, crônica, ensaio ou questão FGV. Não procure gabarito antes.",
+          "tasks": [
+            "Escreva em uma frase a ideia central do trecho.",
+            "Liste duas informações explícitas.",
+            "Produza duas inferências autorizadas.",
+            "Produza deliberadamente uma extrapolação e explique por que é inválida.",
+            "Identifique ao menos uma relação semântica presente no trecho.",
+            "Crie uma questão de cinco alternativas no estilo FGV.",
+            "Inclua distratores por exagero, inversão e informação acrescentada.",
+            "Justifique a correta e derrube cada distrator citando a evidência textual.",
+            "Depois de um intervalo, refaça o quiz sem revisar antes."
+          ],
+          "criteria": [
+            "Quiz ≥ 80%.",
+            "Você distingue fato, inferência e extrapolação.",
+            "Você identifica relações semânticas em contexto.",
+            "Você explica paradoxo/ironia quando presentes.",
+            "Você consegue justificar a resposta com o texto, não apenas por sensação.",
+            "Você cria e desmonta alternativas no padrão FGV."
+          ]
+        }
+      ]
     },
     {
       "id": "phase-03",
