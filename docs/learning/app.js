@@ -195,6 +195,18 @@ function renderLesson(lesson) {
   if (lesson.scenario) {
     body += '<div class="callout"><strong>Cenário</strong><br>' + inlineCode(lesson.scenario) + '</div>';
   }
+  if (lesson.download) {
+    body +=
+      '<section class="step-card"><strong>Starter files</strong><p>' +
+      inlineCode(lesson.download.note || "Baixe os arquivos desta atividade e trabalhe no seu ambiente local.") +
+      '</p><p><a class="nav-button primary" href="' +
+      escapeHtml(lesson.download.href) +
+      '" download="' +
+      escapeHtml(lesson.download.filename || "") +
+      '">' +
+      escapeHtml(lesson.download.label || "Baixar arquivos") +
+      '</a></p></section>';
+  }
   if (lesson.tasks) {
     body += '<h2>Tarefas</h2><ol>' +
       lesson.tasks.map((item) => '<li>' + inlineCode(item) + '</li>').join("") +
