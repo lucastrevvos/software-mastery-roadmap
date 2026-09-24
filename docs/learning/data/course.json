@@ -1,0 +1,451 @@
+{
+  "course": {
+    "id": "real-learning-roadmap",
+    "title": "Como Realmente Aprender Programação",
+    "subtitle": "Software Formation Roadmap",
+    "version": 1,
+    "masteryProtocol": [
+      "Theory",
+      "Checkpoint",
+      "Workshop",
+      "Lab",
+      "Review",
+      "Quiz",
+      "Project"
+    ]
+  },
+  "modules": [
+    {
+      "id": "phase-00",
+      "number": "00",
+      "label": "ORIENTAÇÃO",
+      "title": "Computador como instrumento",
+      "available": true,
+      "description": "Antes de aprender uma stack, aprenda a observar o ambiente onde o programa vive.",
+      "lessons": [
+        {
+          "id": "phase-00-theory-01",
+          "type": "theory",
+          "title": "Terminal, filesystem e processos",
+          "lead": "Seu programa nunca existe sozinho: ele vive em um diretório, é iniciado por um processo, recebe entradas, produz saídas e pode falhar em algum ponto desse caminho.",
+          "blocks": [
+            {
+              "type": "heading",
+              "text": "O modelo mental"
+            },
+            {
+              "type": "paragraph",
+              "text": "Pense no computador como um ambiente observável. O terminal é uma interface para pedir ações ao sistema; o filesystem organiza arquivos e diretórios; um processo é uma instância de um programa em execução."
+            },
+            {
+              "type": "bullets",
+              "items": [
+                "Programa: conjunto de instruções armazenado, normalmente em arquivo.",
+                "Processo: programa em execução, com estado e recursos próprios.",
+                "Diretório de trabalho: ponto do filesystem a partir do qual caminhos relativos são resolvidos.",
+                "Entrada, saída e erro: canais pelos quais o processo conversa com o ambiente."
+              ]
+            },
+            {
+              "type": "callout",
+              "text": "Regra do curso: antes de pesquisar um erro, descubra onde você está, qual comando executou, qual processo foi iniciado e qual mensagem ele devolveu."
+            },
+            {
+              "type": "heading",
+              "text": "Um exemplo mínimo"
+            },
+            {
+              "type": "code",
+              "language": "bash",
+              "code": "pwd\nls\npython app.py\necho $?"
+            }
+          ]
+        },
+        {
+          "id": "phase-00-checkpoint-01",
+          "type": "checkpoint",
+          "title": "Checkpoint: ambiente de execução",
+          "passPercent": 67,
+          "lead": "Três perguntas curtas antes de continuar.",
+          "questions": [
+            {
+              "id": "q1",
+              "question": "Qual definição descreve melhor um processo?",
+              "options": [
+                "Um arquivo de código-fonte salvo no disco.",
+                "Uma instância de um programa em execução.",
+                "Um diretório usado pelo sistema operacional.",
+                "Um histórico de comandos do terminal."
+              ],
+              "answer": 1,
+              "explanation": "Processo é a execução ativa de um programa, com estado e recursos associados."
+            },
+            {
+              "id": "q2",
+              "question": "Ao executar um caminho relativo, o sistema o interpreta principalmente a partir de quê?",
+              "options": [
+                "Do diretório de trabalho atual.",
+                "Da pasta Downloads do usuário.",
+                "Da memória RAM disponível.",
+                "Do histórico do Git."
+              ],
+              "answer": 0,
+              "explanation": "Caminhos relativos são resolvidos a partir do diretório de trabalho atual."
+            },
+            {
+              "id": "q3",
+              "question": "Qual ação vem primeiro no nosso protocolo quando um comando falha?",
+              "options": [
+                "Copiar a mensagem para uma IA imediatamente.",
+                "Reinstalar a ferramenta.",
+                "Observar contexto, comando e mensagem de erro.",
+                "Apagar o projeto e começar novamente."
+              ],
+              "answer": 2,
+              "explanation": "O objetivo é formar diagnóstico: contexto, ação e evidência antes de buscar uma solução."
+            }
+          ]
+        },
+        {
+          "id": "phase-00-workshop-01",
+          "type": "workshop",
+          "title": "Workshop: siga um programa pelo sistema",
+          "lead": "Agora vamos construir o hábito com ajuda. Execute o roteiro em uma pasta descartável.",
+          "steps": [
+            {
+              "title": "1. Descubra onde você está",
+              "text": "No terminal, mostre o diretório atual e liste o conteúdo.",
+              "code": "pwd\nls"
+            },
+            {
+              "title": "2. Crie um pequeno artefato",
+              "text": "Crie uma pasta e um arquivo de texto dentro dela.",
+              "code": "mkdir mastery-sandbox\ncd mastery-sandbox\necho \"hello process\" > input.txt\nls"
+            },
+            {
+              "title": "3. Observe entrada e saída",
+              "text": "Leia o arquivo pelo terminal e redirecione a saída para outro arquivo.",
+              "code": "cat input.txt\ncat input.txt > output.txt\ncat output.txt"
+            },
+            {
+              "title": "4. Provoque uma falha",
+              "text": "Tente ler um arquivo que não existe. Não corrija imediatamente: leia a mensagem e descreva o que ela prova.",
+              "code": "cat missing.txt"
+            },
+            {
+              "title": "5. Limpe conscientemente",
+              "text": "Volte um nível e remova apenas a pasta criada neste workshop.",
+              "code": "cd ..\nrm -rf mastery-sandbox"
+            }
+          ],
+          "criteria": [
+            "Você sabe dizer em qual diretório cada comando executou.",
+            "Você distingue arquivo, programa e processo.",
+            "Você consegue explicar a falha sem depender da solução pronta."
+          ]
+        },
+        {
+          "id": "phase-00-lab-01",
+          "type": "lab",
+          "title": "Lab: diagnóstico sem tutorial",
+          "lead": "Sem roteiro passo a passo. Você recebe o cenário e precisa investigar.",
+          "scenario": "Um colega diz: “o programa não roda”. O comando usado é `python tools/report.py`, mas o terminal responde que o arquivo não foi encontrado.",
+          "tasks": [
+            "Descubra o diretório de trabalho atual.",
+            "Verifique se existe uma pasta `tools` naquele contexto.",
+            "Localize `report.py` sem alterar arquivos.",
+            "Explique por que o comando falhou.",
+            "Execute o programa usando um caminho válido."
+          ],
+          "criteria": [
+            "Você usa evidência antes de tentar correções aleatórias.",
+            "Sua explicação menciona diretório de trabalho e resolução de caminho.",
+            "A solução não depende de mover arquivos sem necessidade."
+          ]
+        },
+        {
+          "id": "phase-00-review-01",
+          "type": "review",
+          "title": "Review: computador como instrumento",
+          "lead": "Recupere o modelo mental antes da avaliação.",
+          "blocks": [
+            {
+              "type": "bullets",
+              "items": [
+                "Terminal é uma interface para interagir com o sistema; não é o sistema operacional inteiro.",
+                "Filesystem organiza arquivos e diretórios em caminhos.",
+                "Diretório de trabalho influencia caminhos relativos.",
+                "Programa armazenado e processo em execução são conceitos diferentes.",
+                "Mensagens de erro são evidência do estado observado.",
+                "Debugging começa pela reprodução e pela coleta de contexto.",
+                "Git registra histórico; ele não substitui compreender o estado atual do filesystem."
+              ]
+            },
+            {
+              "type": "callout",
+              "text": "Tente explicar cada item em voz alta sem reler. Se travar, volte somente ao conceito que faltou."
+            }
+          ]
+        },
+        {
+          "id": "phase-00-quiz-01",
+          "type": "quiz",
+          "title": "Quiz: orientação",
+          "passPercent": 80,
+          "lead": "Você precisa de pelo menos 80% para liberar o projeto.",
+          "questions": [
+            {
+              "id": "q1",
+              "question": "O que `pwd` informa em um shell Unix-like?",
+              "options": [
+                "O PID do shell.",
+                "O diretório de trabalho atual.",
+                "A senha do usuário.",
+                "A lista de processos."
+              ],
+              "answer": 1,
+              "explanation": "`pwd` mostra o caminho do diretório de trabalho atual."
+            },
+            {
+              "id": "q2",
+              "question": "Qual situação representa um caminho relativo?",
+              "options": [
+                "/home/lucas/app.py",
+                "C:\\Users\\lucas\\app.py",
+                "tools/report.py",
+                "https://example.com/app.py"
+              ],
+              "answer": 2,
+              "explanation": "`tools/report.py` não começa pela raiz nem por uma unidade absoluta; depende do diretório atual."
+            },
+            {
+              "id": "q3",
+              "question": "Qual frase distingue corretamente programa e processo?",
+              "options": [
+                "Programa e processo são sinônimos.",
+                "Programa é código armazenado; processo é uma execução desse programa.",
+                "Processo só existe para programas compilados.",
+                "Programa existe apenas enquanto está em execução."
+              ],
+              "answer": 1,
+              "explanation": "Um mesmo programa armazenado pode originar uma ou várias execuções, isto é, processos."
+            },
+            {
+              "id": "q4",
+              "question": "Um comando relata “file not found”. Qual hipótese deve ser verificada cedo?",
+              "options": [
+                "O monitor está com resolução errada.",
+                "O caminho foi resolvido a partir de um diretório inesperado.",
+                "A CPU não suporta Git.",
+                "O teclado está em outro idioma."
+              ],
+              "answer": 1,
+              "explanation": "Erros de arquivo inexistente frequentemente envolvem caminho ou diretório de trabalho."
+            },
+            {
+              "id": "q5",
+              "question": "Por que ler o stack trace antes de pesquisar ajuda no aprendizado?",
+              "options": [
+                "Porque ele sempre contém a correção completa.",
+                "Porque fornece evidências sobre onde e como a falha ocorreu.",
+                "Porque elimina a necessidade de testes.",
+                "Porque impede qualquer erro futuro."
+              ],
+              "answer": 1,
+              "explanation": "O stack trace é evidência para formular hipóteses; não garante a correção pronta."
+            },
+            {
+              "id": "q6",
+              "question": "Qual comando normalmente lista arquivos de um diretório em Unix-like?",
+              "options": [
+                "ls",
+                "pwd",
+                "ps",
+                "kill"
+              ],
+              "answer": 0,
+              "explanation": "`ls` lista entradas do diretório; os demais têm outras funções."
+            },
+            {
+              "id": "q7",
+              "question": "O que muda ao usar `cd` para entrar em outro diretório?",
+              "options": [
+                "O código-fonte é recompilado.",
+                "O diretório de trabalho do shell muda.",
+                "Todos os processos do sistema encerram.",
+                "O repositório Git é apagado."
+              ],
+              "answer": 1,
+              "explanation": "`cd` altera o diretório de trabalho do shell atual."
+            },
+            {
+              "id": "q8",
+              "question": "Qual é a melhor primeira descrição de debugging?",
+              "options": [
+                "Tentativa aleatória até funcionar.",
+                "Processo de observar, formular hipóteses, testar e corrigir causas.",
+                "Uso obrigatório de um debugger gráfico.",
+                "Pesquisa de mensagens de erro sem reproduzir o problema."
+              ],
+              "answer": 1,
+              "explanation": "Debugging é investigação sistemática apoiada em evidências."
+            },
+            {
+              "id": "q9",
+              "question": "Para que o Git é especialmente útil nesta fase?",
+              "options": [
+                "Substituir o filesystem.",
+                "Registrar histórico e permitir voltar a estados anteriores do código.",
+                "Executar processos em segundo plano.",
+                "Medir uso de RAM."
+              ],
+              "answer": 1,
+              "explanation": "Versionamento dá histórico e reversibilidade ao trabalho."
+            },
+            {
+              "id": "q10",
+              "question": "Qual comportamento mais combina com o gate desta fase?",
+              "options": [
+                "Conseguir copiar um tutorial inteiro.",
+                "Saber localizar execução, falha e histórico sem tutorial passo a passo.",
+                "Memorizar todos os comandos de Linux.",
+                "Nunca precisar consultar documentação."
+              ],
+              "answer": 1,
+              "explanation": "O gate mede autonomia operacional e diagnóstico, não memorização total."
+            }
+          ]
+        },
+        {
+          "id": "phase-00-project-01",
+          "type": "project",
+          "title": "Projeto: mapa operacional de um programa",
+          "lead": "Feche a fase produzindo uma pequena evidência de domínio.",
+          "scenario": "Escolha um programa simples que você já tenha no computador ou crie um script mínimo. Sua tarefa é documentar o caminho completo entre arquivo e execução.",
+          "tasks": [
+            "Mostre onde o arquivo está no filesystem.",
+            "Registre o comando usado para executá-lo.",
+            "Identifique o processo durante a execução, quando aplicável.",
+            "Provoque uma falha controlada e registre a mensagem.",
+            "Explique a causa da falha e corrija-a.",
+            "Faça um commit Git com o artefato e uma nota curta sobre o diagnóstico."
+          ],
+          "criteria": [
+            "Você consegue repetir o processo sem tutorial.",
+            "Consegue explicar cada comando utilizado.",
+            "A falha e a correção são justificadas por evidência.",
+            "O histórico Git permite identificar o estado entregue."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "phase-01",
+      "number": "01",
+      "label": "FLUÊNCIA",
+      "title": "Programação fundamental",
+      "available": false,
+      "description": "Valores, tipos, expressões, condições, iteração, funções, coleções e testes.",
+      "lessons": []
+    },
+    {
+      "id": "phase-02",
+      "number": "02",
+      "label": "ABSTRAÇÃO",
+      "title": "Abstração, paradigmas e complexidade",
+      "available": false,
+      "description": "Pensar acima da sintaxe.",
+      "lessons": []
+    },
+    {
+      "id": "phase-03",
+      "number": "03",
+      "label": "PROBLEM SOLVING",
+      "title": "Estruturas de dados e algoritmos",
+      "available": false,
+      "description": "Estrutura, custo e invariantes.",
+      "lessons": []
+    },
+    {
+      "id": "phase-04",
+      "number": "04",
+      "label": "SISTEMAS",
+      "title": "O que existe abaixo do código",
+      "available": false,
+      "description": "C, memória, CPU, processos e concorrência.",
+      "lessons": []
+    },
+    {
+      "id": "phase-05",
+      "number": "05",
+      "label": "DADOS",
+      "title": "Persistência e bancos por dentro",
+      "available": false,
+      "description": "Modelagem, storage, índices e transações.",
+      "lessons": []
+    },
+    {
+      "id": "phase-06",
+      "number": "06",
+      "label": "REDES",
+      "title": "Software que conversa",
+      "available": false,
+      "description": "Protocolos, bytes, latência e falhas.",
+      "lessons": []
+    },
+    {
+      "id": "phase-07",
+      "number": "07",
+      "label": "ENGENHARIA",
+      "title": "Construir software com outras pessoas",
+      "available": false,
+      "description": "Código que sobrevive a mudança, equipe e tempo.",
+      "lessons": []
+    },
+    {
+      "id": "phase-08",
+      "number": "08",
+      "label": "PRODUÇÃO",
+      "title": "Entregar, observar e recuperar",
+      "available": false,
+      "description": "CI/CD, observabilidade, carga e incidentes.",
+      "lessons": []
+    },
+    {
+      "id": "phase-09",
+      "number": "09",
+      "label": "ADVERSARIAL",
+      "title": "Segurança e pensamento de atacante",
+      "available": false,
+      "description": "Trust boundaries, abuso e defesa.",
+      "lessons": []
+    },
+    {
+      "id": "phase-10",
+      "number": "10",
+      "label": "DISTRIBUIÇÃO",
+      "title": "Concorrência e sistemas distribuídos",
+      "available": false,
+      "description": "Ordem, tempo, consistência e falhas parciais.",
+      "lessons": []
+    },
+    {
+      "id": "phase-11",
+      "number": "11",
+      "label": "ESPECIALIZAÇÃO",
+      "title": "Especializar sem perder a base",
+      "available": false,
+      "description": "Agora sim: stack e domínio aplicado.",
+      "lessons": []
+    },
+    {
+      "id": "phase-12",
+      "number": "12",
+      "label": "OWNERSHIP",
+      "title": "Capstone: possuir o sistema",
+      "available": false,
+      "description": "Integrar, entregar, operar e defender um sistema.",
+      "lessons": []
+    }
+  ]
+}
