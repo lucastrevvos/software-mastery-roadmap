@@ -3,7 +3,7 @@
     "id": "dataprev-ams",
     "title": "Dataprev 2026 — Português & Raciocínio Lógico-Matemático",
     "subtitle": "Adaptive Mastery Scaffolding · FGV",
-    "version": 5,
+    "version": 6,
     "masteryProtocol": [
       "Theory",
       "Checkpoint",
@@ -12,7 +12,11 @@
       "Review",
       "Quiz",
       "Project/Gate"
-    ]
+    ],
+    "contestPracticePattern": {
+      "workshop": "10 questões estilo FGV com solução explicada",
+      "lab": "10 questões livres; correção e explicação reveladas ao submeter"
+    }
   },
   "modules": [
     {
@@ -125,62 +129,268 @@
         {
           "id": "phase-01-001-workshop",
           "type": "workshop",
-          "title": "001 · Workshop: trace no papel",
-          "lead": "Agora você prevê, transforma e explica. Não pule direto para a resposta.",
-          "steps": [
+          "title": "001 · Workshop: 10 questões FGV resolvidas",
+          "lead": "Veja como cada questão é desmontada. Leia o enunciado, tente prever a resposta e só então confira a solução explicada.",
+          "workedQuestions": [
             {
-              "title": "1. Monte o alfabeto lógico",
-              "text": "No caderno, escreva uma linha para cada conectivo e a única condição que o torna V ou F.",
-              "code": "∧   ∨   ¬   →   ↔"
+              "question": "Considere: “Se o servidor está ativo, então a API responde”. Uma proposição logicamente equivalente é:",
+              "options": [
+                "Se o servidor não está ativo, então a API não responde.",
+                "Se a API não responde, então o servidor não está ativo.",
+                "Se a API responde, então o servidor está ativo.",
+                "O servidor está ativo e a API responde.",
+                "O servidor não está ativo e a API não responde."
+              ],
+              "answer": 1,
+              "solution": "Defina p = “servidor ativo” e q = “API responde”. A condicional p → q é equivalente à contrapositiva ¬q → ¬p. Logo: “Se a API não responde, então o servidor não está ativo”."
             },
             {
-              "title": "2. Trace valores",
-              "text": "Resolva da esquerda para a direita respeitando a negação primeiro. Diga em voz alta a regra aplicada.",
-              "code": "p = V, q = F\n¬p ∨ q\np → ¬q\n¬p ↔ q"
+              "question": "A negação de “Ana estuda e Bruno trabalha” é:",
+              "options": [
+                "Ana não estuda e Bruno não trabalha.",
+                "Ana não estuda ou Bruno não trabalha.",
+                "Ana estuda ou Bruno trabalha.",
+                "Se Ana não estuda, Bruno não trabalha.",
+                "Ana estuda se e somente se Bruno trabalha."
+              ],
+              "answer": 1,
+              "solution": "Pela lei de De Morgan, ¬(p ∧ q) ≡ ¬p ∨ ¬q. Negamos as duas proposições e trocamos E por OU."
             },
             {
-              "title": "3. Negue frases",
-              "text": "Faça a transformação estrutural, não apenas uma frase que pareça oposta.",
-              "code": "Ana estuda e Bruno trabalha.\nCarlos viaja ou Maria trabalha.\nSe o sistema falha, então o alerta dispara."
+              "question": "A negação de “Carlos viaja ou Maria trabalha” é:",
+              "options": [
+                "Carlos não viaja ou Maria não trabalha.",
+                "Carlos não viaja e Maria não trabalha.",
+                "Carlos viaja e Maria trabalha.",
+                "Se Carlos viaja, Maria trabalha.",
+                "Carlos não viaja se e somente se Maria não trabalha."
+              ],
+              "answer": 1,
+              "solution": "Pela outra forma de De Morgan, ¬(p ∨ q) ≡ ¬p ∧ ¬q. Negamos as parcelas e trocamos OU por E."
             },
             {
-              "title": "4. Gere equivalentes",
-              "text": "Para cada condicional, produza a forma `¬p ∨ q` e a contrapositiva `¬q → ¬p`.",
-              "code": "Se João corre, então João cansa.\nSe o serviço está online, então a API responde."
+              "question": "A negação de “Se Pedro estuda, então Pedro passa” é:",
+              "options": [
+                "Pedro não estuda ou Pedro passa.",
+                "Pedro estuda e Pedro não passa.",
+                "Se Pedro não passa, então Pedro não estuda.",
+                "Pedro não estuda e Pedro não passa.",
+                "Se Pedro passa, então Pedro estuda."
+              ],
+              "answer": 1,
+              "solution": "A condicional só é falsa quando o antecedente é verdadeiro e o consequente é falso. Por isso, ¬(p → q) ≡ p ∧ ¬q."
             },
             {
-              "title": "5. Explique a pegadinha",
-              "text": "Escreva por que `¬p → ¬q` não é, em geral, equivalente a `p → q`."
+              "question": "Se p = V e q = F, o valor lógico de ¬p ∨ q é:",
+              "options": [
+                "V",
+                "F",
+                "Indeterminado",
+                "Não é proposição",
+                "Depende de p ↔ q"
+              ],
+              "answer": 1,
+              "solution": "Como p = V, temos ¬p = F. Então ¬p ∨ q = F ∨ F = F. O OU só é falso quando os dois lados são falsos."
+            },
+            {
+              "question": "A proposição p ↔ q é verdadeira quando:",
+              "options": [
+                "p é verdadeira.",
+                "q é falsa.",
+                "p e q têm valores diferentes.",
+                "p e q têm o mesmo valor lógico.",
+                "p → q é falsa."
+              ],
+              "answer": 3,
+              "solution": "A bicondicional expressa equivalência entre os dois lados. Ela é verdadeira em VV e FF, e falsa em VF e FV."
+            },
+            {
+              "question": "A contrapositiva de “Se João trabalha, então recebe salário” é:",
+              "options": [
+                "Se João não trabalha, então não recebe salário.",
+                "Se João recebe salário, então trabalha.",
+                "Se João não recebe salário, então não trabalha.",
+                "João não trabalha ou recebe salário.",
+                "João trabalha se e somente se recebe salário."
+              ],
+              "answer": 2,
+              "solution": "Na contrapositiva, negamos as duas proposições e invertemos a ordem: p → q equivale a ¬q → ¬p."
+            },
+            {
+              "question": "Qual alternativa representa a inversa de p → q?",
+              "options": [
+                "q → p",
+                "¬q → ¬p",
+                "¬p → ¬q",
+                "¬p ∨ q",
+                "p ∧ ¬q"
+              ],
+              "answer": 2,
+              "solution": "A inversa nega antecedente e consequente sem inverter a ordem: ¬p → ¬q. Ela não é, em geral, equivalente à proposição original."
+            },
+            {
+              "question": "A frase “Lucas viaja se e somente se está de férias” equivale a:",
+              "options": [
+                "Se Lucas viaja, está de férias.",
+                "Se está de férias, Lucas viaja.",
+                "Se Lucas viaja, está de férias, e se está de férias, Lucas viaja.",
+                "Lucas não viaja ou está de férias.",
+                "Lucas viaja e não está de férias."
+              ],
+              "answer": 2,
+              "solution": "Uma bicondicional p ↔ q equivale à conjunção de duas condicionais: (p → q) ∧ (q → p)."
+            },
+            {
+              "question": "Uma proposição equivalente a p → q é:",
+              "options": [
+                "p ∧ q",
+                "¬p ∧ q",
+                "¬p ∨ q",
+                "p ∨ ¬q",
+                "q → p"
+              ],
+              "answer": 2,
+              "solution": "A equivalência clássica é p → q ≡ ¬p ∨ q. Ela reproduz exatamente a mesma tabela-verdade da condicional."
             }
-          ],
-          "criteria": [
-            "Você consegue aplicar as regras sem olhar uma tabela pronta.",
-            "Consegue distinguir negação de equivalência.",
-            "Consegue produzir a contrapositiva sem trocar a direção errada.",
-            "Explica cada transformação em palavras."
           ]
         },
         {
           "id": "phase-01-001-lab",
           "type": "lab",
-          "title": "001 · Lab: desmontando uma questão FGV",
-          "lead": "Prática autêntica: simule o que você precisa fazer na prova, no papel, sem ferramenta externa.",
-          "scenario": "Uma questão FGV apresenta a proposição “Se o sistema está disponível, então os usuários conseguem acessar a aplicação” e oferece alternativas com negação, inversa, conversa e contrapositiva.",
-          "tasks": [
-            "Defina p e q para a frase.",
-            "Escreva a proposição em símbolos.",
-            "Produza a contrapositiva.",
-            "Produza a forma equivalente usando OU.",
-            "Produza a negação da proposição.",
-            "Crie uma alternativa errada baseada na inversa e explique por que ela engana.",
-            "Monte a tabela-verdade de p → q e confirme que as duas formas equivalentes têm as mesmas quatro linhas."
-          ],
-          "criteria": [
-            "Você chega à contrapositiva `¬q → ¬p` sem consultar.",
-            "Você chega a `¬p ∨ q` sem consultar.",
-            "Você nega a condicional como `p ∧ ¬q`.",
-            "Você consegue provar equivalência por tabela-verdade.",
-            "Consegue explicar a diferença entre contrapositiva e inversa."
+          "title": "001 · Lab: 10 questões para responder",
+          "lead": "Responda livremente. Ao submeter a avaliação, o sistema mostra a alternativa correta e explica o porquê em cada questão.",
+          "passPercent": 0,
+          "questions": [
+            {
+              "id": "lab1",
+              "question": "Qual das frases abaixo é uma proposição?",
+              "options": [
+                "Feche a janela.",
+                "Que horas são?",
+                "7 é maior que 3.",
+                "Tomara que chova.",
+                "x + 2 = 7, sem valor definido para x."
+              ],
+              "answer": 2,
+              "explanation": "“7 é maior que 3” é declarativa e tem valor lógico definido. As demais são ordem, pergunta, desejo ou sentença aberta."
+            },
+            {
+              "id": "lab2",
+              "question": "Se p = F e q = V, o valor de p ∧ q é:",
+              "options": [
+                "V",
+                "F",
+                "Indeterminado",
+                "Não é proposição",
+                "Depende de ¬p"
+              ],
+              "answer": 1,
+              "explanation": "A conjunção só é verdadeira em V ∧ V; como p é falso, o resultado é falso."
+            },
+            {
+              "id": "lab3",
+              "question": "Se p = F e q = F, o valor de p → q é:",
+              "options": [
+                "V",
+                "F",
+                "Indeterminado",
+                "Não é proposição",
+                "Depende de p ∨ q"
+              ],
+              "answer": 0,
+              "explanation": "A condicional só é falsa em V → F. Portanto F → F é verdadeira."
+            },
+            {
+              "id": "lab4",
+              "question": "A negação de “Paulo trabalha ou Renata estuda” é:",
+              "options": [
+                "Paulo não trabalha ou Renata não estuda.",
+                "Paulo não trabalha e Renata não estuda.",
+                "Paulo trabalha e Renata estuda.",
+                "Se Paulo não trabalha, Renata não estuda.",
+                "Paulo trabalha se e somente se Renata estuda."
+              ],
+              "answer": 1,
+              "explanation": "¬(p ∨ q) ≡ ¬p ∧ ¬q."
+            },
+            {
+              "id": "lab5",
+              "question": "A negação de “Se o banco está online, então a transação é processada” é:",
+              "options": [
+                "O banco não está online e a transação não é processada.",
+                "O banco está online e a transação não é processada.",
+                "Se a transação não é processada, o banco não está online.",
+                "O banco não está online ou a transação é processada.",
+                "A transação é processada e o banco está online."
+              ],
+              "answer": 1,
+              "explanation": "Negar p → q produz p ∧ ¬q: antecedente verdadeiro e consequente falso."
+            },
+            {
+              "id": "lab6",
+              "question": "Uma proposição equivalente a “Se Ana estuda, então Ana passa” é:",
+              "options": [
+                "Ana estuda e passa.",
+                "Ana não estuda ou passa.",
+                "Ana não estuda e não passa.",
+                "Se Ana passa, então estuda.",
+                "Se Ana não estuda, então não passa."
+              ],
+              "answer": 1,
+              "explanation": "p → q ≡ ¬p ∨ q."
+            },
+            {
+              "id": "lab7",
+              "question": "A contrapositiva de “Se chove, então a rua molha” é:",
+              "options": [
+                "Se não chove, então a rua não molha.",
+                "Se a rua molha, então chove.",
+                "Se a rua não molha, então não chove.",
+                "Não chove ou a rua não molha.",
+                "Chove se e somente se a rua molha."
+              ],
+              "answer": 2,
+              "explanation": "Contrapositiva: ¬q → ¬p."
+            },
+            {
+              "id": "lab8",
+              "question": "Se p = V e q = V, o valor de ¬p ↔ q é:",
+              "options": [
+                "V",
+                "F",
+                "Indeterminado",
+                "Não é proposição",
+                "Depende de p → q"
+              ],
+              "answer": 1,
+              "explanation": "¬p = F e q = V. A bicondicional é falsa quando os valores são diferentes."
+            },
+            {
+              "id": "lab9",
+              "question": "A negação de p ↔ q é verdadeira quando:",
+              "options": [
+                "p e q são ambos verdadeiros.",
+                "p e q são ambos falsos.",
+                "p e q têm valores diferentes.",
+                "p e q têm valores iguais.",
+                "p é sempre verdadeiro."
+              ],
+              "answer": 2,
+              "explanation": "¬(p ↔ q) é verdadeira exatamente nos casos VF e FV."
+            },
+            {
+              "id": "lab10",
+              "question": "Qual alternativa NÃO é equivalente a p → q?",
+              "options": [
+                "¬p ∨ q",
+                "¬q → ¬p",
+                "Se não q, então não p",
+                "¬p → ¬q",
+                "A contrapositiva de p → q"
+              ],
+              "answer": 3,
+              "explanation": "¬p → ¬q é a inversa, não a contrapositiva; em geral não é equivalente a p → q."
+            }
           ]
         },
         {
@@ -495,58 +705,268 @@
         {
           "id": "phase-02-001-workshop",
           "type": "workshop",
-          "title": "002 · Workshop: prove o sentido pelo texto",
-          "lead": "Agora você não só marca a resposta: precisa apontar a evidência que a sustenta.",
-          "steps": [
+          "title": "002 · Workshop: 10 questões FGV resolvidas",
+          "lead": "Interpretação se aprende comparando evidência textual com distratores. Tente responder antes de ler a solução explicada.",
+          "workedQuestions": [
             {
-              "title": "1. Separe literal e inferido",
-              "text": "No caderno, faça duas colunas: `o texto afirma` e `eu posso inferir`. Use o trecho abaixo.",
-              "code": "“Quando abriu a janela, Ana encontrou a calçada coberta de folhas e galhos.”"
+              "question": "Leia: “Paulo saiu de casa com guarda-chuva. Minutos depois, começou a chover.” O texto permite concluir que:",
+              "options": [
+                "Paulo sabia com certeza que choveria.",
+                "Paulo levou guarda-chuva antes do início da chuva.",
+                "Paulo sempre acompanha a previsão do tempo.",
+                "A chuva durou o dia inteiro.",
+                "Paulo saiu porque começou a chover."
+              ],
+              "answer": 1,
+              "solution": "A única informação garantida é a sequência temporal: Paulo saiu com o guarda-chuva e, depois, começou a chover. As demais acrescentam causa, hábito ou duração não informados."
             },
             {
-              "title": "2. Detecte exagero",
-              "text": "Escreva uma inferência legítima e uma extrapolação sobre o mesmo trecho. Depois sublinhe qual palavra da extrapolação foi além da evidência."
+              "question": "Em “Embora estivesse cansada, continuou trabalhando”, a relação semântica introduzida por “embora” é de:",
+              "options": [
+                "Causa",
+                "Consequência",
+                "Concessão",
+                "Finalidade",
+                "Conclusão"
+              ],
+              "answer": 2,
+              "solution": "A oração admite um fato — o cansaço — que poderia levar ao resultado oposto, mas não impede a continuidade do trabalho. Isso é concessão."
             },
             {
-              "title": "3. Nomeie a relação",
-              "text": "Classifique a relação semântica de cada construção antes de reescrevê-la.",
-              "code": "Estudou muito, portanto foi bem.\nSe houver tempo, revisarei.\nEmbora estivesse nervoso, apresentou o projeto.\nSaiu cedo para evitar trânsito."
+              "question": "Em “Estudou bastante, portanto obteve bom resultado”, “portanto” exprime:",
+              "options": [
+                "Causa",
+                "Conclusão",
+                "Concessão",
+                "Condição",
+                "Finalidade"
+              ],
+              "answer": 1,
+              "solution": "“Portanto” apresenta uma conclusão decorrente do que foi dito anteriormente."
             },
             {
-              "title": "4. Teste substituição",
-              "text": "Troque o conector por outro que preserve o sentido. Se o sentido mudar, explique exatamente o que mudou."
+              "question": "Leia: “O relatório é curto, mas detalhado.” O conectivo “mas” estabelece:",
+              "options": [
+                "Adição neutra",
+                "Contraste",
+                "Causa",
+                "Finalidade",
+                "Condição"
+              ],
+              "answer": 1,
+              "solution": "O texto contrapõe a expectativa de que um relatório curto talvez tenha pouco detalhe ao fato de ele ser detalhado."
             },
             {
-              "title": "5. Explique paradoxo",
-              "text": "Leia: `Quanto mais aprendia, mais percebia o quanto não sabia.` Explique por que a frase não é simplesmente uma contradição sem sentido."
+              "question": "Leia: “Quanto mais aprendia, mais percebia o quanto ignorava.” O efeito central é de:",
+              "options": [
+                "Contradição sem sentido",
+                "Paradoxo aparente",
+                "Causa física",
+                "Comparação literal",
+                "Enumeração"
+              ],
+              "answer": 1,
+              "solution": "O avanço do conhecimento faz crescer a percepção da própria ignorância. As ideias parecem incompatíveis à primeira vista, mas juntas constroem um sentido coerente: trata-se de paradoxo aparente."
+            },
+            {
+              "question": "Texto: “Marina chegou dez minutos antes da reunião.” Qual alternativa extrapola o texto?",
+              "options": [
+                "Marina não chegou atrasada.",
+                "A reunião tinha horário marcado.",
+                "Marina chegou antes do horário.",
+                "Marina é sempre pontual em qualquer compromisso.",
+                "A diferença entre sua chegada e o horário era de dez minutos."
+              ],
+              "answer": 3,
+              "solution": "Um episódio específico não permite concluir um traço permanente de comportamento. “Sempre” generaliza além da evidência."
+            },
+            {
+              "question": "Em “A equipe revisou o código para reduzir falhas”, o trecho “para reduzir falhas” indica:",
+              "options": [
+                "Causa",
+                "Finalidade",
+                "Consequência",
+                "Concessão",
+                "Condição"
+              ],
+              "answer": 1,
+              "solution": "A redução de falhas é o objetivo da revisão, logo temos finalidade."
+            },
+            {
+              "question": "Leia: “Ele prometeu chegar cedo. Às onze da noite, finalmente apareceu.” O efeito irônico nasce principalmente:",
+              "options": [
+                "Da ausência de informação temporal.",
+                "Da coincidência entre promessa e ação.",
+                "Do contraste entre “cedo” e o horário efetivo.",
+                "De uma relação de causa.",
+                "Da ideia de finalidade."
+              ],
+              "answer": 2,
+              "solution": "A expectativa criada por “chegar cedo” entra em choque com “às onze da noite”. Esse contraste sustenta o efeito irônico."
+            },
+            {
+              "question": "Em “Se houver tempo, revisaremos o relatório”, a oração inicial exprime:",
+              "options": [
+                "Causa",
+                "Condição",
+                "Finalidade",
+                "Conclusão",
+                "Concessão"
+              ],
+              "answer": 1,
+              "solution": "A revisão depende da ocorrência de uma condição: haver tempo."
+            },
+            {
+              "question": "Texto: “O sistema pode apresentar melhora após a atualização.” É correto afirmar que:",
+              "options": [
+                "A melhora é garantida.",
+                "A atualização é inútil.",
+                "Há possibilidade de melhora, não certeza.",
+                "O sistema já melhorou.",
+                "A atualização causará falha."
+              ],
+              "answer": 2,
+              "solution": "O verbo modal “pode” marca possibilidade. Transformá-lo em certeza seria extrapolar o texto."
             }
-          ],
-          "criteria": [
-            "Você distingue informação explícita de inferência.",
-            "Você identifica quando uma alternativa exagera ou adiciona informação.",
-            "Você nomeia relações semânticas pela função no contexto.",
-            "Você explica paradoxo sem depender de definição decorada."
           ]
         },
         {
           "id": "phase-02-001-lab",
           "type": "lab",
-          "title": "002 · Lab: engenharia reversa de alternativas",
-          "lead": "A prática real de interpretação FGV é eliminar alternativas pela evidência. Papel e caneta são suficientes.",
-          "scenario": "Trecho: “A felicidade é tão oposta à vida, que estando nela, a gente esquece que vive.”",
-          "tasks": [
-            "Reescreva o trecho com suas palavras sem interpretar além do que ele permite.",
-            "Identifique a tensão entre as ideias centrais.",
-            "Explique por que a leitura `é impossível ser feliz e viver` exagera o que o trecho diz.",
-            "Explique por que `há uma relação paradoxal entre felicidade e vida` descreve melhor a construção.",
-            "Crie duas alternativas distratoras: uma por exagero e outra por inversão.",
-            "Para cada alternativa, escreva a palavra ou ideia do texto que a confirma ou derruba."
-          ],
-          "criteria": [
-            "Você consegue defender a resposta com evidência textual.",
-            "Você detecta exagero, inversão e informação inventada.",
-            "Você identifica paradoxo como efeito de sentido.",
-            "Você produz distratores plausíveis e sabe explicar por que estão errados."
+          "title": "002 · Lab: 10 questões para responder",
+          "lead": "Responda as 10 questões. Ao submeter, você verá a resposta correta e a justificativa de cada item.",
+          "passPercent": 0,
+          "questions": [
+            {
+              "id": "lab1",
+              "question": "Leia: “A sala estava vazia quando o professor chegou.” O texto permite afirmar que:",
+              "options": [
+                "Nenhum aluno compareceu naquele dia.",
+                "No momento da chegada do professor, não havia pessoas na sala.",
+                "Os alunos chegaram atrasados.",
+                "A aula foi cancelada.",
+                "O professor chegou cedo."
+              ],
+              "answer": 1,
+              "explanation": "O texto só garante o estado da sala naquele momento. As demais alternativas acrescentam causas ou acontecimentos não informados."
+            },
+            {
+              "id": "lab2",
+              "question": "Em “Como perdeu o ônibus, chegou atrasado”, a relação predominante é de:",
+              "options": [
+                "Causa",
+                "Finalidade",
+                "Concessão",
+                "Condição",
+                "Comparação"
+              ],
+              "answer": 0,
+              "explanation": "Perder o ônibus é apresentado como causa do atraso."
+            },
+            {
+              "id": "lab3",
+              "question": "Em “Trabalhou tanto que terminou exausto”, a segunda oração exprime:",
+              "options": [
+                "Causa",
+                "Consequência",
+                "Condição",
+                "Concessão",
+                "Finalidade"
+              ],
+              "answer": 1,
+              "explanation": "A exaustão é o resultado do trabalho intenso."
+            },
+            {
+              "id": "lab4",
+              "question": "Em “Mesmo com pouco tempo, terminou o relatório”, a relação é de:",
+              "options": [
+                "Conclusão",
+                "Concessão",
+                "Finalidade",
+                "Causa",
+                "Explicação"
+              ],
+              "answer": 1,
+              "explanation": "A limitação de tempo é admitida, mas não impede a conclusão do relatório."
+            },
+            {
+              "id": "lab5",
+              "question": "Texto: “João comprou um livro de 600 páginas.” Qual alternativa extrapola?",
+              "options": [
+                "João comprou um livro.",
+                "O livro tem 600 páginas.",
+                "João gosta muito de literatura longa.",
+                "O objeto comprado é um livro.",
+                "O número de páginas é informado."
+              ],
+              "answer": 2,
+              "explanation": "O texto não fornece informação sobre gosto pessoal de João."
+            },
+            {
+              "id": "lab6",
+              "question": "Leia: “Era o silêncio mais barulhento que já ouvira.” A construção apresenta:",
+              "options": [
+                "Pleonasmo sem efeito",
+                "Paradoxo",
+                "Causa",
+                "Finalidade",
+                "Condição"
+              ],
+              "answer": 1,
+              "explanation": "“Silêncio” e “barulhento” parecem incompatíveis, mas a aproximação cria um efeito expressivo: paradoxo."
+            },
+            {
+              "id": "lab7",
+              "question": "Em “Fechou a janela porque começou a chover”, “porque” introduz:",
+              "options": [
+                "Causa",
+                "Consequência",
+                "Finalidade",
+                "Condição",
+                "Concessão"
+              ],
+              "answer": 0,
+              "explanation": "A chuva é apresentada como motivo para fechar a janela."
+            },
+            {
+              "id": "lab8",
+              "question": "Texto: “Talvez a mudança reduza os custos.” A palavra “talvez” indica:",
+              "options": [
+                "Certeza",
+                "Negação",
+                "Possibilidade",
+                "Obrigação",
+                "Conclusão"
+              ],
+              "answer": 2,
+              "explanation": "“Talvez” modaliza o enunciado como possibilidade, não como certeza."
+            },
+            {
+              "id": "lab9",
+              "question": "Em “O código era simples, porém eficiente”, “porém” estabelece:",
+              "options": [
+                "Adição",
+                "Contraste",
+                "Causa",
+                "Finalidade",
+                "Tempo"
+              ],
+              "answer": 1,
+              "explanation": "“Porém” é adversativo e estabelece contraste entre as ideias."
+            },
+            {
+              "id": "lab10",
+              "question": "Leia: “Ana fechou o notebook e saiu do escritório.” O texto NÃO permite concluir que:",
+              "options": [
+                "Ana fechou o notebook.",
+                "Ana saiu do escritório.",
+                "As duas ações são apresentadas em sequência.",
+                "Ana saiu porque estava irritada.",
+                "Houve uma ação de fechar antes da saída na ordem textual."
+              ],
+              "answer": 3,
+              "explanation": "Nenhum motivo emocional é informado; atribuir irritação seria acrescentar informação."
+            }
           ]
         },
         {
@@ -875,64 +1295,268 @@
         {
           "id": "phase-03-001-workshop",
           "type": "workshop",
-          "title": "003 · Workshop: do enunciado à equação",
-          "lead": "Agora a regra é: primeiro modele, depois calcule. Nada de pular direto para a conta.",
-          "steps": [
+          "title": "003 · Workshop: 10 questões FGV resolvidas",
+          "lead": "Modele cada problema antes de conferir. As soluções mostram a tradução do enunciado para a equação e a resolução.",
+          "workedQuestions": [
             {
-              "title": "1. Defina a incógnita",
-              "text": "Para cada enunciado, escreva primeiro o que x representa.",
-              "code": "A idade de Ana daqui a 5 anos será 32.\nO dobro de um número menos 7 é igual a 19."
+              "question": "O dobro de um número, acrescido de 7, é igual a 31. O número é:",
+              "options": [
+                "10",
+                "11",
+                "12",
+                "13",
+                "19"
+              ],
+              "answer": 2,
+              "solution": "Se x é o número, 2x + 7 = 31. Então 2x = 24 e x = 12."
             },
             {
-              "title": "2. Traduza sem resolver",
-              "text": "Converta cada frase em equação e pare antes de calcular.",
-              "code": "A soma de dois números consecutivos é 41.\nUm número é 8 maior que outro e a soma deles é 50."
+              "question": "A soma de dois números consecutivos é 73. O maior deles é:",
+              "options": [
+                "35",
+                "36",
+                "37",
+                "38",
+                "39"
+              ],
+              "answer": 2,
+              "solution": "Se o menor é x, o maior é x+1. Então x + (x+1) = 73 → 2x = 72 → x = 36. O maior é 37."
             },
             {
-              "title": "3. Resolva preservando a igualdade",
-              "text": "Mostre cada transformação em uma linha. Evite 'passar para o outro lado trocando o sinal' sem saber por quê.",
-              "code": "5x - 8 = 27\n2(x + 3) = 18"
+              "question": "Se x + y = 28 e x - y = 6, o valor de x é:",
+              "options": [
+                "11",
+                "17",
+                "22",
+                "28",
+                "34"
+              ],
+              "answer": 1,
+              "solution": "Somando as equações: 2x = 34. Logo x = 17."
             },
             {
-              "title": "4. Sistema por eliminação",
-              "text": "Resolva sem adivinhar valores.",
-              "code": "x + y = 27\nx - y = 9"
+              "question": "Um número é 8 maior que outro e a soma deles é 50. O menor é:",
+              "options": [
+                "18",
+                "20",
+                "21",
+                "29",
+                "42"
+              ],
+              "answer": 2,
+              "solution": "Se o menor é x, o maior é x+8. Então x + x + 8 = 50 → 2x = 42 → x = 21."
             },
             {
-              "title": "5. Estrutura escondida",
-              "text": "Use identidade algébrica em vez de procurar x e y separadamente.",
-              "code": "x + y = 14\nx² + y² = 116\nCalcule xy."
+              "question": "Se 4(x - 3) = 28, então x vale:",
+              "options": [
+                "7",
+                "8",
+                "9",
+                "10",
+                "12"
+              ],
+              "answer": 3,
+              "solution": "Dividindo ambos os lados por 4: x - 3 = 7. Somando 3: x = 10."
+            },
+            {
+              "question": "Se x + y = 16 e x² + y² = 136, então xy vale:",
+              "options": [
+                "50",
+                "60",
+                "64",
+                "68",
+                "120"
+              ],
+              "answer": 1,
+              "solution": "(x+y)² = x² + 2xy + y². Então 256 = 136 + 2xy → 2xy = 120 → xy = 60."
+            },
+            {
+              "question": "A idade de Carlos é o triplo da idade de Pedro. Juntos têm 52 anos. A idade de Pedro é:",
+              "options": [
+                "10",
+                "12",
+                "13",
+                "16",
+                "39"
+              ],
+              "answer": 2,
+              "solution": "Se Pedro tem p, Carlos tem 3p. Então p + 3p = 52 → 4p = 52 → p = 13."
+            },
+            {
+              "question": "Em uma caixa, há 5 bolas azuis a mais que vermelhas. Ao todo são 29 bolas. Quantas são vermelhas?",
+              "options": [
+                "10",
+                "11",
+                "12",
+                "17",
+                "24"
+              ],
+              "answer": 2,
+              "solution": "Se v é o número de vermelhas, azuis = v+5. Então v + v + 5 = 29 → 2v = 24 → v = 12."
+            },
+            {
+              "question": "Se x/4 + 3 = 10, então x é:",
+              "options": [
+                "7",
+                "13",
+                "24",
+                "28",
+                "40"
+              ],
+              "answer": 3,
+              "solution": "x/4 = 7. Multiplicando os dois lados por 4, x = 28."
+            },
+            {
+              "question": "Dois números têm soma 20 e produto 96. Esses números são:",
+              "options": [
+                "6 e 14",
+                "8 e 12",
+                "9 e 11",
+                "4 e 16",
+                "10 e 10"
+              ],
+              "answer": 1,
+              "solution": "Testando a estrutura soma/produto, 8 + 12 = 20 e 8 × 12 = 96. Logo são 8 e 12."
             }
-          ],
-          "criteria": [
-            "Você sempre define o que a incógnita representa.",
-            "Você traduz a frase antes de calcular.",
-            "Consegue justificar cada transformação de uma equação.",
-            "Resolve sistemas simples por eliminação ou substituição.",
-            "Reconhece quando uma identidade evita trabalho desnecessário."
           ]
         },
         {
           "id": "phase-03-001-lab",
           "type": "lab",
-          "title": "003 · Lab: modelagem de problemas FGV",
-          "lead": "Este laboratório simula a parte mais importante da prova: transformar texto em estrutura matemática.",
-          "scenario": "Uma turma tem homens e mulheres. Há 8 mulheres a mais que homens e o total é 44 pessoas.",
-          "tasks": [
-            "Defina as incógnitas.",
-            "Monte um sistema com as duas relações do enunciado.",
-            "Resolva o sistema por eliminação.",
-            "Confira a resposta substituindo os valores nas duas equações.",
-            "Reescreva o mesmo problema usando apenas uma incógnita.",
-            "Compare os dois modelos e diga qual ficou mais rápido.",
-            "Crie um novo problema com a mesma estrutura, mas números diferentes.",
-            "Resolva seu próprio problema sem alterar a estrutura."
-          ],
-          "criteria": [
-            "O sistema representa fielmente as duas relações.",
-            "Você verifica a solução no enunciado original.",
-            "Consegue resolver o mesmo problema com uma ou duas incógnitas.",
-            "Consegue transferir a estrutura para um enunciado novo."
+          "title": "003 · Lab: 10 questões para responder",
+          "lead": "Resolva sem olhar a teoria. Ao submeter, o sistema revela a resposta correta e explica a resolução questão por questão.",
+          "passPercent": 0,
+          "questions": [
+            {
+              "id": "lab1",
+              "question": "O triplo de um número menos 4 é igual a 29. O número é:",
+              "options": [
+                "9",
+                "10",
+                "11",
+                "12",
+                "13"
+              ],
+              "answer": 2,
+              "explanation": "3x - 4 = 29 → 3x = 33 → x = 11."
+            },
+            {
+              "id": "lab2",
+              "question": "A soma de dois números consecutivos é 91. O menor é:",
+              "options": [
+                "44",
+                "45",
+                "46",
+                "47",
+                "48"
+              ],
+              "answer": 1,
+              "explanation": "x + (x+1) = 91 → 2x = 90 → x = 45."
+            },
+            {
+              "id": "lab3",
+              "question": "Se x + y = 36 e x - y = 8, então y vale:",
+              "options": [
+                "12",
+                "14",
+                "16",
+                "22",
+                "28"
+              ],
+              "answer": 1,
+              "explanation": "Somando: 2x = 44 → x = 22. Então y = 36 - 22 = 14."
+            },
+            {
+              "id": "lab4",
+              "question": "Um número é 10 maior que outro. A soma é 54. O maior é:",
+              "options": [
+                "22",
+                "27",
+                "32",
+                "44",
+                "64"
+              ],
+              "answer": 2,
+              "explanation": "Menor = x, maior = x+10. 2x+10=54 → x=22 → maior=32."
+            },
+            {
+              "id": "lab5",
+              "question": "Se 5(x + 2) = 45, x vale:",
+              "options": [
+                "5",
+                "7",
+                "9",
+                "11",
+                "13"
+              ],
+              "answer": 1,
+              "explanation": "x+2=9 → x=7."
+            },
+            {
+              "id": "lab6",
+              "question": "Se x + y = 18 e x² + y² = 170, xy vale:",
+              "options": [
+                "70",
+                "77",
+                "81",
+                "85",
+                "153"
+              ],
+              "answer": 1,
+              "explanation": "324 = 170 + 2xy → 2xy = 154 → xy = 77."
+            },
+            {
+              "id": "lab7",
+              "question": "A idade de Ana é o dobro da idade de Bia. Juntas têm 45 anos. Bia tem:",
+              "options": [
+                "10",
+                "12",
+                "15",
+                "20",
+                "30"
+              ],
+              "answer": 2,
+              "explanation": "b + 2b = 45 → 3b = 45 → b = 15."
+            },
+            {
+              "id": "lab8",
+              "question": "Há 3 canetas pretas a menos que o dobro das azuis. Ao todo há 24 canetas. Quantas são azuis?",
+              "options": [
+                "7",
+                "8",
+                "9",
+                "10",
+                "11"
+              ],
+              "answer": 2,
+              "explanation": "Se a é o número de azuis, pretas = 2a - 3. Então a + 2a - 3 = 24 → 3a = 27 → a = 9."
+            },
+            {
+              "id": "lab9",
+              "question": "Se x/5 - 2 = 4, então x é:",
+              "options": [
+                "10",
+                "20",
+                "25",
+                "30",
+                "40"
+              ],
+              "answer": 3,
+              "explanation": "x/5 = 6 → x = 30."
+            },
+            {
+              "id": "lab10",
+              "question": "Dois números têm soma 22 e produto 120. Eles são:",
+              "options": [
+                "8 e 14",
+                "10 e 12",
+                "9 e 13",
+                "6 e 16",
+                "11 e 11"
+              ],
+              "answer": 1,
+              "explanation": "10 + 12 = 22 e 10 × 12 = 120."
+            }
           ]
         },
         {
