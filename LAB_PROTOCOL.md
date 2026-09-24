@@ -34,6 +34,70 @@ Aplicar o mesmo princípio em um problema diferente.
 ### Retest
 Reavaliar depois de um intervalo para medir retenção.
 
+## 3.1. Regra oficial de ambiente e Starter Pack
+
+O meio de execução é escolhido pelo objetivo cognitivo da atividade. O aluno não precisa decidir se um tópico exige ZIP, editor web, terminal, banco, repositório ou apenas uma folha de exercício.
+
+**Regra-base: usar o menor scaffolding que preserve prática autêntica.** ZIP não é o padrão. Quiz também não substitui prática quando a competência é procedural, técnica ou de resolução de problemas.
+
+### Sem download — padrão
+
+Usar a própria página + ambiente local quando:
+
+- a configuração faz parte da habilidade que deve ser aprendida;
+- o exercício pode ser criado em poucos comandos;
+- não há estado inicial complexo a preservar;
+- não há múltiplos arquivos, fixtures ou dependências relevantes;
+- o objetivo é praticar comandos, raciocínio, cálculo, modelagem ou uma transformação simples.
+
+Exemplos: navegação em filesystem, comandos básicos de shell, matemática, exercícios conceituais de arquitetura, pequenos snippets, Git inicial quando criar o repositório é parte da aprendizagem.
+
+### Arquivo único
+
+Fornecer um único arquivo quando a atividade depende de um dataset, log, CSV, script, configuração ou documento específico e não há benefício em empacotar um projeto inteiro.
+
+### Starter ZIP
+
+Fornecer ZIP somente quando o estado inicial é parte necessária do problema e recriá-lo manualmente seria ruído, não aprendizagem.
+
+Gatilhos fortes para ZIP:
+
+- dois ou mais arquivos coordenados são necessários para iniciar;
+- existe código quebrado que deve ser diagnosticado;
+- há fixtures, testes automatizados ou checker local;
+- existe banco pré-populado, dataset ou estrutura de diretórios relevante;
+- Docker/Compose, serviços, configurações ou dependências precisam nascer em um estado conhecido;
+- o laboratório exige reproduzir exatamente uma falha;
+- o objetivo é modificar um sistema existente em vez de aprender a criá-lo do zero.
+
+### Repositório Git em vez de ZIP
+
+Quando histórico, branches, commits, tags, merge, rebase ou conflito forem parte do problema, entregar um repositório Git/clonável. ZIP elimina o histórico e, portanto, destrói justamente o estado que deve ser estudado.
+
+### Ambiente interativo no navegador
+
+Preferir o navegador quando a competência pode ser validada com baixo atrito e sem depender de ambiente real: quizzes, matemática, pequenas expressões, trace, ordenação, associação, respostas curtas e exercícios autocontidos.
+
+### Projeto do zero
+
+Não entregar starter quando construir a estrutura inicial é parte explícita da competência. Exemplos: iniciar um pequeno projeto, criar um repositório, desenhar um schema simples ou configurar uma ferramenta que o aluno precisa saber configurar sozinho.
+
+### Critério de decisão
+
+Antes de criar uma atividade prática, responder nesta ordem:
+
+1. A habilidade precisa ser executada ou apenas reconhecida?
+2. O ambiente real acrescenta aprendizagem?
+3. O setup é parte da competência?
+4. Existe estado inicial complexo que precisa ser reproduzido fielmente?
+5. Um arquivo único basta?
+6. O histórico Git é parte do estado?
+7. Há algo objetivamente verificável que justifique checker/testes?
+
+Escolher então: navegador → ambiente local sem starter → arquivo único → ZIP → repositório Git, usando o primeiro formato que preserve a experiência real.
+
+**Nunca adicionar ZIP apenas para tornar o laboratório mais sofisticado.**
+
 ## 4. Velocity Mode — certificações e cursos longos
 
 Quando a prioridade operacional for concluir uma certificação ou curso oficial sem sacrificar aprendizado real, usar **Velocity Mode**.
