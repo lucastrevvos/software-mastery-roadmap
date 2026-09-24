@@ -83,9 +83,7 @@ function saveProgress() {
 }
 
 function isLocked(lessonId) {
-  const index = flatLessons.findIndex((lesson) => lesson.id === lessonId);
-  if (index <= 0) return false;
-  return !progress.completed.includes(flatLessons[index - 1].id);
+  return false;
 }
 
 function renderCurriculum() {
