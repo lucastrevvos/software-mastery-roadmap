@@ -3,7 +3,7 @@
     "id": "real-learning-roadmap",
     "title": "Como Realmente Aprender Programação",
     "subtitle": "Software Formation Roadmap",
-    "version": 1,
+    "version": 2,
     "masteryProtocol": [
       "Theory",
       "Checkpoint",
@@ -376,9 +376,323 @@
       "number": "01",
       "label": "FLUÊNCIA",
       "title": "Programação fundamental",
-      "available": false,
-      "description": "Valores, tipos, expressões, condições, iteração, funções, coleções e testes.",
-      "lessons": []
+      "available": true,
+      "description": "Transformar valores e regras em programas pequenos, legíveis e testáveis. Python é usado como linguagem-veículo.",
+      "lessons": [
+        {
+          "id": "phase-01-001-theory",
+          "type": "theory",
+          "title": "001 · Valores, tipos e expressões",
+          "lead": "Antes de controlar fluxo ou criar funções, você precisa entender o que o programa manipula e como uma expressão é avaliada.",
+          "blocks": [
+            {
+              "type": "heading",
+              "text": "Valor não é a mesma coisa que representação"
+            },
+            {
+              "type": "paragraph",
+              "text": "`42`, `42.0`, `\"42\"` e `True` podem parecer próximos para uma pessoa, mas representam valores de tipos diferentes para o programa. O tipo define quais operações fazem sentido e como o runtime interpreta aquele valor."
+            },
+            {
+              "type": "code",
+              "language": "python",
+              "code": "print(type(42))       # int\nprint(type(42.0))     # float\nprint(type(\"42\"))     # str\nprint(type(True))     # bool"
+            },
+            {
+              "type": "heading",
+              "text": "Expressões produzem valores"
+            },
+            {
+              "type": "paragraph",
+              "text": "Uma expressão combina valores e operadores e é avaliada para produzir outro valor. Em `2 + 3 * 4`, a multiplicação é avaliada antes da soma, então o resultado é `14`."
+            },
+            {
+              "type": "code",
+              "language": "python",
+              "code": "print(2 + 3 * 4)        # 14\nprint((2 + 3) * 4)      # 20\nprint(10 / 4)           # 2.5\nprint(10 // 4)          # 2\nprint(10 % 4)           # 2"
+            },
+            {
+              "type": "heading",
+              "text": "Operações dependem do tipo"
+            },
+            {
+              "type": "paragraph",
+              "text": "O operador `+` soma números, mas concatena strings. Isso não significa que o operador seja mágico: a operação disponível depende dos tipos envolvidos."
+            },
+            {
+              "type": "code",
+              "language": "python",
+              "code": "print(20 + 22)          # 42\nprint(\"20\" + \"22\")      # 2022"
+            },
+            {
+              "type": "callout",
+              "text": "Modelo mental: leia uma expressão de dentro para fora. Identifique os valores, seus tipos, o operador aplicado e o valor produzido antes de passar para a próxima operação."
+            }
+          ]
+        },
+        {
+          "id": "phase-01-001-checkpoint",
+          "type": "checkpoint",
+          "title": "001 · Checkpoint: valores e expressões",
+          "passPercent": 67,
+          "lead": "Três perguntas para verificar o modelo mental antes da prática.",
+          "questions": [
+            {
+              "id": "q1",
+              "question": "Qual é o tipo do valor produzido por `10 / 4` em Python 3?",
+              "options": [
+                "int",
+                "float",
+                "str",
+                "bool"
+              ],
+              "answer": 1,
+              "explanation": "Em Python 3, `/` realiza divisão verdadeira e produz `2.5`, que é `float`."
+            },
+            {
+              "id": "q2",
+              "question": "Qual valor é produzido por `2 + 3 * 4`?",
+              "options": [
+                "20",
+                "14",
+                "24",
+                "11"
+              ],
+              "answer": 1,
+              "explanation": "A multiplicação é avaliada primeiro: `3 * 4 = 12`; depois `2 + 12 = 14`."
+            },
+            {
+              "id": "q3",
+              "question": "O que acontece em `\"10\" + \"5\"`?",
+              "options": [
+                "Produz 15.",
+                "Produz 10.5.",
+                "Produz \"105\".",
+                "Gera erro de tipo."
+              ],
+              "answer": 2,
+              "explanation": "As duas entradas são strings; `+` concatena e produz a string `\"105\"`."
+            }
+          ]
+        },
+        {
+          "id": "phase-01-001-workshop",
+          "type": "workshop",
+          "title": "001 · Workshop: trace de expressões",
+          "lead": "Agora você vai prever antes de executar. O objetivo não é acertar por sorte, mas conseguir explicar cada etapa.",
+          "steps": [
+            {
+              "title": "1. Abra um arquivo de treino",
+              "text": "Crie `expressions.py` em uma pasta de estudos. Não há starter: criar e executar um arquivo simples faz parte desta competência.",
+              "code": "touch expressions.py"
+            },
+            {
+              "title": "2. Trace antes de executar",
+              "text": "Para cada expressão abaixo, anote primeiro o valor esperado e o tipo esperado. Só depois coloque no arquivo e execute.",
+              "code": "7 + 2 * 5\n(7 + 2) * 5\n9 / 2\n9 // 2\n9 % 2\n\"7\" + \"2\""
+            },
+            {
+              "title": "3. Faça o runtime revelar o tipo",
+              "text": "Use `type()` para comparar sua previsão com o que Python realmente produziu.",
+              "code": "print(7 + 2 * 5, type(7 + 2 * 5))\nprint(9 / 2, type(9 / 2))\nprint(\"7\" + \"2\", type(\"7\" + \"2\"))"
+            },
+            {
+              "title": "4. Provoque uma incompatibilidade",
+              "text": "Execute esta expressão. Leia o erro e explique quais dois tipos participaram da operação.",
+              "code": "print(\"7\" + 2)"
+            },
+            {
+              "title": "5. Corrija conscientemente",
+              "text": "Produza duas correções diferentes: uma que resulte numericamente em `9` e outra que resulte na string `\"72\"`. Explique por que as duas são válidas para objetivos diferentes.",
+              "code": "# escreva suas duas versões aqui"
+            }
+          ],
+          "criteria": [
+            "Você prevê valor e tipo antes de executar.",
+            "Consegue explicar a precedência usada numa expressão.",
+            "Consegue distinguir soma numérica de concatenação.",
+            "Ao encontrar um TypeError, identifica os tipos incompatíveis antes de alterar o código."
+          ]
+        },
+        {
+          "id": "phase-01-001-lab",
+          "type": "lab",
+          "title": "001 · Lab: transforme dados em resultado",
+          "lead": "Sem ZIP. Você vai criar o programa do zero porque criar, executar e observar um arquivo simples faz parte da habilidade.",
+          "scenario": "Uma pequena loja precisa calcular o total de uma compra sem condições, loops ou funções. Você recebeu apenas os valores: preço unitário = 37.50, quantidade = 4, desconto fixo = 12.00 e frete = 18.50.",
+          "tasks": [
+            "Crie um arquivo `purchase.py`.",
+            "Represente preço unitário, quantidade, desconto e frete em valores de tipos adequados.",
+            "Calcule o subtotal usando uma expressão.",
+            "Calcule o total final como `subtotal - desconto + frete`.",
+            "Mostre no terminal o subtotal e o total final.",
+            "Mostre também o tipo de cada resultado usando `type()`.",
+            "Antes de executar, anote em comentário quais valores e tipos você espera obter.",
+            "Execute o programa e compare a previsão com o resultado real."
+          ],
+          "criteria": [
+            "O subtotal produzido é `150.0`.",
+            "O total final produzido é `156.5`.",
+            "Você consegue justificar por que os resultados são `float`.",
+            "Não usou condições, loops ou funções para esconder uma expressão que ainda deve ser compreendida diretamente.",
+            "Consegue explicar a ordem em que a expressão do total é avaliada."
+          ]
+        },
+        {
+          "id": "phase-01-001-review",
+          "type": "review",
+          "title": "001 · Review: valores, tipos e expressões",
+          "lead": "Recupere o modelo mental sem executar código primeiro.",
+          "blocks": [
+            {
+              "type": "bullets",
+              "items": [
+                "Valor é o dado manipulado; tipo descreve como esse valor é interpretado e quais operações suporta.",
+                "`int`, `float`, `str` e `bool` representam categorias diferentes de valores.",
+                "Expressões são avaliadas e produzem valores.",
+                "Parênteses podem alterar a ordem de avaliação.",
+                "`/` e `//` têm comportamentos diferentes em Python.",
+                "`%` produz o resto de uma divisão inteira.",
+                "`+` pode significar soma numérica ou concatenação dependendo dos operandos.",
+                "Um erro de tipo é evidência sobre a operação e os valores envolvidos."
+              ]
+            },
+            {
+              "type": "callout",
+              "text": "Sem executar: explique por que `\"5\" + \"2\"`, `5 + 2` e `5 / 2` produzem resultados de natureza diferente."
+            }
+          ]
+        },
+        {
+          "id": "phase-01-001-quiz",
+          "type": "quiz",
+          "title": "001 · Quiz: valores, tipos e expressões",
+          "passPercent": 80,
+          "lead": "Gate do tópico 001: pelo menos 80%.",
+          "questions": [
+            {
+              "id": "q1",
+              "question": "Qual valor resulta de `(4 + 2) * 3`?",
+              "options": [
+                "10",
+                "14",
+                "18",
+                "24"
+              ],
+              "answer": 2,
+              "explanation": "Os parênteses forçam `4 + 2 = 6`; depois `6 * 3 = 18`."
+            },
+            {
+              "id": "q2",
+              "question": "Qual valor resulta de `17 // 5`?",
+              "options": [
+                "2",
+                "3",
+                "3.4",
+                "5"
+              ],
+              "answer": 1,
+              "explanation": "`//` faz divisão inteira/floor division; `17 // 5` produz `3`."
+            },
+            {
+              "id": "q3",
+              "question": "Qual valor resulta de `17 % 5`?",
+              "options": [
+                "2",
+                "3",
+                "3.4",
+                "5"
+              ],
+              "answer": 0,
+              "explanation": "`%` devolve o resto; `17 = 5 * 3 + 2`."
+            },
+            {
+              "id": "q4",
+              "question": "Qual é o tipo de `3.0`?",
+              "options": [
+                "int",
+                "float",
+                "str",
+                "bool"
+              ],
+              "answer": 1,
+              "explanation": "A presença da parte decimal faz `3.0` ser um `float`."
+            },
+            {
+              "id": "q5",
+              "question": "Qual expressão produz a string `\"84\"`?",
+              "options": [
+                "8 + 4",
+                "\"8\" + \"4\"",
+                "8 * 4",
+                "84 / 1"
+              ],
+              "answer": 1,
+              "explanation": "Somar duas strings com `+` concatena seus conteúdos e produz `\"84\"`."
+            },
+            {
+              "id": "q6",
+              "question": "Qual valor resulta de `2 ** 3 + 1`?",
+              "options": [
+                "7",
+                "8",
+                "9",
+                "16"
+              ],
+              "answer": 2,
+              "explanation": "A exponenciação ocorre antes da soma: `2 ** 3 = 8`; depois `8 + 1 = 9`."
+            },
+            {
+              "id": "q7",
+              "question": "Por que `\"3\" + 2` falha em Python?",
+              "options": [
+                "Porque strings não podem conter dígitos.",
+                "Porque `+` não recebe diretamente uma string e um inteiro como operandos compatíveis.",
+                "Porque o número 2 precisa ser float.",
+                "Porque concatenação só funciona com três strings."
+              ],
+              "answer": 1,
+              "explanation": "Os operandos são `str` e `int`; Python não escolhe implicitamente entre soma numérica e concatenação."
+            },
+            {
+              "id": "q8",
+              "question": "Qual é o resultado de `10 / 2` em Python 3?",
+              "options": [
+                "5",
+                "5.0",
+                "\"5\"",
+                "True"
+              ],
+              "answer": 1,
+              "explanation": "O operador `/` produz divisão verdadeira; aqui o resultado é o `float` `5.0`."
+            },
+            {
+              "id": "q9",
+              "question": "Qual expressão produz `20`?",
+              "options": [
+                "2 + 3 * 4",
+                "(2 + 3) * 4",
+                "2 * 3 + 4",
+                "2 ** 3 + 4"
+              ],
+              "answer": 1,
+              "explanation": "`(2 + 3) * 4` avalia primeiro os parênteses, resultando em `5 * 4 = 20`."
+            },
+            {
+              "id": "q10",
+              "question": "Ao prever uma expressão manualmente, qual procedimento combina melhor com o modelo desta fase?",
+              "options": [
+                "Executar primeiro e memorizar o resultado.",
+                "Identificar valores, tipos, operadores e ordem de avaliação.",
+                "Converter tudo para string.",
+                "Ignorar tipos enquanto o código não falhar."
+              ],
+              "answer": 1,
+              "explanation": "O objetivo é conseguir traçar a avaliação conscientemente antes de depender do runtime."
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "phase-02",
