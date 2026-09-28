@@ -1,8 +1,8 @@
 {
   "meta": {
     "title": "Full Stack Software Architect & Cloud Engineer",
-    "version": "3.0.1",
-    "updatedAt": "2026-09-21",
+    "version": "3.1.0",
+    "updatedAt": "2026-09-28",
     "principles": [
       "Fundamentos fortes antes de especialização",
       "Priorizar certificados oficiais e verificáveis",
@@ -13,11 +13,11 @@
       "Método Especial JCI: profundidade japonesa, treino deliberado chinês e empregabilidade indiana como camada transversal",
       "Empregabilidade primeiro: atingir um ponto real de candidatura antes de perseguir profundidade total",
       "No máximo 2 cursos ativos: 1 principal e 1 complementar",
-      "Aprender em janelas de imersão: Node/TypeScript primeiro, .NET depois, frontend profundo em etapa própria",
+      "Sequenciamento adaptativo: oportunidades reais de mercado podem antecipar uma janela de stack sem abandonar os fundamentos; a prioridade imediata é o menor caminho para competência demonstrável e empregabilidade.",
       "Arquitetura, cloud e IA devem reforçar uma stack já utilizável, não atrasar a entrada no mercado"
     ],
     "platformMetadata": "Cada item informa onde estudar e onde obter a credencial; ausência de curso/certificação externa é indicada explicitamente.",
-    "executionStrategy": "Employment-first immersion windows: JavaScript/SQL → Node/Nest backend → Full Stack Open/React → backend senior depth → AI-enabled backend → .NET/Azure → frontend specialization → advanced credentials/capstone."
+    "executionStrategy": "Adaptive employment-first roadmap: the .NET 10 / financial distributed-systems window was pulled forward because of active BTG/XP opportunities. Immediate gate: XP System Design interview on 2026-09-30 at 14:00 BRT using Excalidraw; after the interview, continue the Financial Distributed Systems Lab while rebalancing the paused JavaScript/SQL tracks."
   },
   "phases": [
     {
@@ -65,7 +65,7 @@
           "provider": "freeCodeCamp",
           "credential": "JavaScript Certification",
           "cost": "free",
-          "status": "in-progress",
+          "status": "paused",
           "priority": "core",
           "access": {
             "learning": {
@@ -82,7 +82,9 @@
               "url": "https://www.freecodecamp.org/learn/",
               "cost": "Grátis"
             }
-          }
+          },
+          "pauseReason": "Pausa tática para o sprint de System Design da XP.",
+          "resumeAfter": "2026-09-30"
         },
         {
           "id": "cs50-sql",
@@ -91,7 +93,7 @@
           "provider": "Harvard University",
           "credential": "CS50 Certificate",
           "cost": "free",
-          "status": "in-progress",
+          "status": "paused",
           "priority": "core",
           "source": "https://cs50.harvard.edu/sql/",
           "note": "Em paralelo com a freeCodeCamp JavaScript Certification a partir de 2026-09-18. Início: Week 0 — Querying.",
@@ -110,7 +112,9 @@
               "url": "https://cs50.me/cs50sql",
               "cost": "Grátis no CS50; edX opcional pago"
             }
-          }
+          },
+          "pauseReason": "Pausa tática para o sprint de System Design da XP.",
+          "resumeAfter": "2026-09-30"
         }
       ]
     },
@@ -1123,8 +1127,8 @@
     },
     {
       "id": "phase-06",
-      "title": ".NET & Azure — Second Backend Ecosystem",
-      "goal": "Abrir a segunda grande janela somente depois de consolidar backend em Node. Reaplicar os mesmos conceitos de engenharia e arquitetura em C#/.NET e aprofundar Azure.",
+      "title": ".NET 10 & Financial Distributed Systems — Active Backend Window",
+      "goal": "A janela .NET foi antecipada por oportunidades reais em sistemas financeiros. Consolidar C#/.NET 10 em backend e sistemas distribuídos, praticar defesa arquitetural e system design, e manter Azure como eixo cloud da trilha. O laboratório deve introduzir padrões porque o problema exige, não como checklist.",
       "items": [
         {
           "id": "foundational-csharp",
@@ -1133,7 +1137,7 @@
           "provider": "Microsoft + freeCodeCamp",
           "credential": "Foundational C# Certification",
           "cost": "free",
-          "status": "not-started",
+          "status": "completed",
           "priority": "core",
           "access": {
             "learning": {
@@ -1147,10 +1151,13 @@
               "status": "available",
               "platform": "freeCodeCamp + Microsoft",
               "kind": "Foundational C# Certification",
-              "url": "https://www.freecodecamp.org/learn/foundational-c-sharp-with-microsoft/",
+              "url": "https://www.freecodecamp.org/certification/lucas-do-amaral-santos/foundational-c-sharp-with-microsoft",
               "cost": "Grátis"
             }
-          }
+          },
+          "completedAt": "2026-09-28",
+          "credentialUrl": "https://www.freecodecamp.org/certification/lucas-do-amaral-santos/foundational-c-sharp-with-microsoft",
+          "note": "Concluído e certificado em 2026-09-28. Usado como revisão/validação formal da linguagem antes da janela .NET 10 focada em backend, sistemas distribuídos e system design."
         },
         {
           "id": "dotnet-backend",
@@ -1159,8 +1166,8 @@
           "provider": "Microsoft Learn + Mastery Lab",
           "credential": "Applied portfolio + badges where available",
           "cost": "free",
-          "status": "not-started",
-          "priority": "stack",
+          "status": "in-progress",
+          "priority": "active-senior-interview",
           "access": {
             "learning": {
               "status": "available",
@@ -1176,6 +1183,46 @@
               "url": "https://learn.microsoft.com/credentials/",
               "cost": "Grátis para estudo; exames específicos podem ser pagos"
             }
+          },
+          "startedAt": "2026-09-28",
+          "description": "Financial Distributed Systems Lab em .NET 10: ASP.NET Core, testes, DDD, Clean Architecture, CQRS quando justificado, PostgreSQL, RabbitMQ, confiabilidade distribuída, containers, Kubernetes, observabilidade, CI/CD e defesa arquitetural.",
+          "currentFocus": [
+            ".NET 10 / ASP.NET Core",
+            "TDD, unit, integration and architecture tests",
+            "DDD and domain invariants",
+            "Clean Architecture / Ports and Adapters when justified",
+            "CQRS when read/write models genuinely diverge",
+            "PostgreSQL",
+            "RabbitMQ with explicit ACK/NACK, prefetch and redelivery semantics",
+            "Idempotency, Inbox, Transactional Outbox, Retry and DLQ",
+            "Eventual consistency, Saga/Process Manager and compensation",
+            "Resilience, timeouts and circuit breakers",
+            "Docker and local Kubernetes",
+            "OpenTelemetry, logs, metrics and traces",
+            "CI/CD and production-readiness",
+            "Architecture-defense drills under changing constraints"
+          ],
+          "activeSprint": {
+            "title": "XP System Design Interview Sprint",
+            "status": "in-progress",
+            "deadline": "2026-09-30T14:00:00-03:00",
+            "tool": "Excalidraw",
+            "format": "Live system design + architecture defense with senior interviewers",
+            "domains": [
+              "credit",
+              "collections",
+              "payments"
+            ],
+            "objective": "Desenhar uma solução enquanto explica decisões, limites de consistência, source of truth, integração síncrona/assíncrona, escalabilidade, duplicidade, falhas, observabilidade e trade-offs.",
+            "questionPressure": [
+              "Why RabbitMQ instead of Kafka or synchronous HTTP?",
+              "What is the source of truth?",
+              "What happens if the same event arrives twice?",
+              "What happens if the database commits and the broker is unavailable?",
+              "Where is strong consistency required and where is eventual consistency acceptable?",
+              "How does the system scale and how is it observed in production?",
+              "Does this need CQRS or microservices at all?"
+            ]
           }
         },
         {

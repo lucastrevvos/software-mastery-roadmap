@@ -7,7 +7,7 @@ async function loadJson(path){
 }
 
 function statusLabel(status){
-  return ({'in-progress':'em andamento','not-started':'não iniciado','completed':'concluído','mastered':'dominado'}[status]||status);
+  return ({'in-progress':'em andamento','not-started':'não iniciado','completed':'concluído','mastered':'dominado','paused':'pausado'}[status]||status);
 }
 
 function statusClass(status){return `status status-${status}`;}
@@ -23,7 +23,7 @@ function renderCurrent(progress){
   $('#current-courses').innerHTML=courses.map(([id,c])=>`
     <article class="course-card">
       <span class="${statusClass(c.status)}">${statusLabel(c.status)}</span>
-      <h3>${id==='cs50x'?'CS50x':id==='fcc-js-v10'?'freeCodeCamp JavaScript':id}</h3>
+      <h3>${id==='cs50x'?'CS50x':id==='fcc-js-v10'?'freeCodeCamp JavaScript':id==='cs50-sql'?'CS50 SQL':id==='foundational-csharp'?'Foundational C# with Microsoft':id==='dotnet-backend'?'.NET 10 · Financial Distributed Systems Lab':id}</h3>
       <p class="muted">Atual: ${c.current||'a definir'}</p>
       ${c.completed?.length?`<small>${c.completed.length} marco(s) registrado(s)</small>`:''}
     </article>`).join('');

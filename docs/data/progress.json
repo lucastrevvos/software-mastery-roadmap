@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-21T19:05:00-03:00",
+  "updatedAt": "2026-09-28T11:16:04-03:00",
   "courses": {
     "cs50x": {
       "status": "completed",
@@ -91,7 +91,7 @@
       }
     },
     "fcc-js-v10": {
-      "status": "in-progress",
+      "status": "paused",
       "started": true,
       "completed": [
         "variables-and-strings/introduction-to-javascript",
@@ -110,24 +110,35 @@
         "Posição confirmada por captura em 2026-08-21.",
         "Próximo exercício: Build a Sentence Maker.",
         "Primeiro LAB-FCC-JS será aberto após o núcleo de Data Types + Review + Quiz, para avaliar um bloco de competência completo em vez de cada exercício isolado.",
-        "Retomado como trilha principal em 2026-09-17 após a conclusão oficial do CS50x."
+        "Retomado como trilha principal em 2026-09-17 após a conclusão oficial do CS50x.",
+        "Pausa tática em 2026-09-28 até a entrevista técnica da XP em 2026-09-30 às 14h; retomar após o sprint de System Design."
       ]
     },
     "foundational-csharp": {
-      "status": "not-started",
-      "started": false,
-      "completed": [],
+      "status": "completed",
+      "started": true,
+      "completed": [
+        "course-complete",
+        "certification-exam-passed"
+      ],
       "notes": [
-        "Adiado estrategicamente em 2026-09-21 para a segunda grande janela de backend. Antes dele: JavaScript/SQL → Node/Nest empregável → Full Stack Open/React → profundidade de backend."
-      ]
+        "A janela C# foi antecipada devido a processos seletivos .NET em sistemas financeiros.",
+        "Foundational C# with Microsoft concluído em 2026-09-28.",
+        "Certificação verificável: https://www.freecodecamp.org/certification/lucas-do-amaral-santos/foundational-c-sharp-with-microsoft",
+        "Conclusão do curso é evidência de validação formal; domínio aplicado será comprovado no Financial Distributed Systems Lab."
+      ],
+      "current": null,
+      "completedAt": "2026-09-28",
+      "certificateUrl": "https://www.freecodecamp.org/certification/lucas-do-amaral-santos/foundational-c-sharp-with-microsoft"
     },
     "cs50-sql": {
-      "status": "in-progress",
+      "status": "paused",
       "started": true,
       "completed": [],
       "current": "week-0-querying",
       "notes": [
-        "CS50 SQL retomado em paralelo em 2026-09-18. Início oficial: Week 0 — Querying."
+        "CS50 SQL retomado em paralelo em 2026-09-18. Início oficial: Week 0 — Querying.",
+        "Pausa tática em 2026-09-28 até a entrevista técnica da XP em 2026-09-30 às 14h; retomar após o sprint de System Design."
       ],
       "courseUrl": "https://cs50.harvard.edu/sql/",
       "currentTaskUrl": "https://cs50.harvard.edu/sql/weeks/0/"
@@ -136,6 +147,31 @@
       "status": "not-started",
       "started": false,
       "completed": []
+    },
+    "dotnet-backend": {
+      "status": "in-progress",
+      "started": true,
+      "startedAt": "2026-09-28",
+      "completed": [],
+      "current": "XP System Design Interview Sprint — architecture defense in Excalidraw",
+      "notes": [
+        "Financial Distributed Systems Lab em .NET 10 iniciado como trilha aplicada de senioridade.",
+        "Prioridade imediata: entrevista técnica da XP em 2026-09-30 às 14h.",
+        "Formato esperado: desenhar system design no Excalidraw e defender decisões/trade-offs sob questionamento de seniors.",
+        "Domínios de treino: crédito, cobrança e pagamentos."
+      ],
+      "interview": {
+        "company": "XP",
+        "type": "technical-system-design",
+        "scheduledAt": "2026-09-30T14:00:00-03:00",
+        "tool": "Excalidraw",
+        "status": "scheduled"
+      },
+      "lab": {
+        "title": "Financial Distributed Systems Lab — .NET 10",
+        "method": "AMS — Adaptive Mastery Scaffolding",
+        "status": "in-progress"
+      }
     }
   },
   "labs": {
@@ -199,16 +235,16 @@
       "note": "O lab completo foi preservado, mas foi adiado para um checkpoint cumulativo ou para o sprint de mastery pós-CS50. Durante o curso, o PSet oficial é a prática principal e só vazamentos conceituais relevantes serão retestados."
     }
   },
-  "current": "fcc-js-v10",
-  "currentTask": "variables-and-strings/build-a-sentence-maker",
-  "currentTaskUrl": "https://www.freecodecamp.org/learn/full-stack-developer/lab-sentence-maker/build-a-sentence-maker",
+  "current": "dotnet-backend",
+  "currentTask": "XP System Design Interview Sprint — Excalidraw architecture defense",
+  "currentTaskUrl": null,
   "strategy": {
-    "mode": "employment-first-immersion-windows",
+    "mode": "adaptive-employment-first",
     "maxActiveCourses": 2,
     "primaryShare": "70-80%",
     "complementaryShare": "20-30%",
-    "currentPrimary": "fcc-js-v10",
-    "currentComplementary": "cs50-sql",
+    "currentPrimary": "dotnet-backend",
+    "currentComplementary": null,
     "nextWindow": "nodejs-nestjs-backend-employability",
     "secondBackendWindow": "dotnet-azure",
     "nodeNestEmployabilityProject": {
@@ -219,6 +255,17 @@
       "status": "planned",
       "decisionDate": "2026-09-21",
       "note": "KM One replaces an artificial Node/Nest gate project. .NET is intentionally reserved for the later second-backend window; Trevvos Platform Core remains the candidate .NET system."
-    }
+    },
+    "immediateGate": {
+      "title": "XP — entrevista técnica de System Design",
+      "scheduledAt": "2026-09-30T14:00:00-03:00",
+      "tool": "Excalidraw",
+      "focus": "System Design + architecture defense"
+    },
+    "pausedUntilGate": [
+      "fcc-js-v10",
+      "cs50-sql"
+    ],
+    "afterGate": "Continue Financial Distributed Systems Lab in .NET 10 and rebalance JavaScript/SQL according to interview outcome and active opportunities."
   }
 }
