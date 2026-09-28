@@ -1,0 +1,52 @@
+name: Update Roadmap — C# + XP System Design
+
+on:
+  push:
+    paths:
+      - 'tools/update_roadmap_2026_09_28_csharp_xp.py'
+      - '.github/workflows/update-roadmap-csharp-xp.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-roadmap:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Apply roadmap update
+        run: python tools/update_roadmap_2026_09_28_csharp_xp.py
+      - name: Validate C# credential and XP sprint
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          roadmap=json.loads(Path('docs/data/roadmap.json').read_text(encoding='utf-8'))
+          progress=json.loads(Path('docs/data/progress.json').read_text(encoding='utf-8'))
+          items={i['id']:i for p in roadmap['phases'] for i in p.get('items',[])}
+          assert items['foundational-csharp']['status']=='completed'
+          assert items['foundational-csharp']['credentialUrl'].endswith('/foundational-c-sharp-with-microsoft')
+          assert items['dotnet-backend']['status']=='in-progress'
+          assert items['dotnet-backend']['activeSprint']['deadline']=='2026-09-30T14:00:00-03:00'
+          assert progress['current']=='dotnet-backend'
+          assert progress['courses']['dotnet-backend']['interview']['tool']=='Excalidraw'
+          print('Validation OK')
+          PY
+      - name: Commit roadmap state
+        run: |
+          if git diff --quiet; then
+            echo 'No changes'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/data/roadmap.json docs/data/progress.json docs/js/app.js
+          git commit -m 'feat: mark C# complete and activate XP system design sprint'
+          git push
