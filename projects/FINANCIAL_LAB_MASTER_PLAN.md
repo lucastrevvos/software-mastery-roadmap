@@ -2,9 +2,9 @@
 
 ## Purpose
 
-Financial Lab is the integrator project for Lucas Amaral's active backend window. Its goal is not to repeat many isolated business rules, but to complete one realistic end-to-end financial flow and then evolve the same system into a distributed microservices lab.
+Financial Lab is the integrator project for Lucas Amaral's active backend window. Its goal is not to repeat many isolated business rules, but to complete one realistic end-to-end financial flow and then evolve the same system into a production-style backend and distributed microservices lab.
 
-The project is intentionally split into two passes so it can deliver a complete engineering experience without indefinitely delaying the certification roadmap.
+The project is intentionally split into three passes so it can deliver a complete engineering experience without indefinitely delaying the certification roadmap.
 
 ---
 
@@ -19,6 +19,7 @@ Use AMS, but optimize for a complete vertical flow.
 - Code is primary. Diagrams are used only when they materially clarify a decision.
 - Patterns and tools must emerge from concrete problems; do not add abstractions ceremonially.
 - Work in small steps in Visual Studio and wait for `go` before advancing.
+- The system should evolve from one working vertical flow rather than from many isolated exercises.
 
 Canonical development rhythm when useful:
 
@@ -113,6 +114,9 @@ Later in Pass 1, add ASP.NET Core Web API as a second presentation adapter witho
 - end-to-end local execution
 - ASP.NET Core Web API as a short second presentation pass
 - local idempotency through duplicate payment protection
+- basic API input validation
+- basic authentication / authorization concepts at the API boundary when the API pass begins
+- configuration and secrets kept outside source code
 
 ### Business rule budget
 
@@ -158,8 +162,157 @@ Pass 1 is complete when the project demonstrates:
 - [ ] integration test
 - [ ] complete local execution
 - [ ] short ASP.NET Core Web API adapter pass
+- [ ] basic API validation / auth boundary concepts
+- [ ] secrets / configuration outside code
 
-After this gate, resume the certification roadmap before deepening the distributed architecture unless there is a deliberate scheduling decision to continue immediately.
+After this gate, the normal plan is to resume the certification roadmap unless there is a deliberate scheduling decision to continue immediately into Pass 1.5.
+
+---
+
+# PASS 1.5 — Production backend hardening
+
+## Goal
+
+Before splitting the system into microservices, make the same application look and behave more like a production backend. This pass is intentionally compact: it exists to prevent an artificial jump from a local SQLite application directly to distributed infrastructure.
+
+## Required topics
+
+### 1. PostgreSQL transition
+
+Move persistence from SQLite to PostgreSQL and observe the practical differences that matter for a backend service.
+
+Cover:
+
+- provider configuration
+- migrations
+- connection configuration
+- data inspection
+- constraints
+- indexes when justified
+
+### 2. Modular monolith and bounded contexts
+
+Before extracting services, identify domain/module boundaries inside the monolith.
+
+Candidate contexts:
+
+- Credit
+- Billing / Collections
+- Payments
+
+Teach explicitly:
+
+```text
+module boundary first
+        ↓
+independent deployability later
+```
+
+Do not create microservices merely because the system has multiple folders.
+
+### 3. Architecture documentation
+
+Use lightweight documentation for important decisions:
+
+- small C4-style views when useful
+- ADRs for meaningful architectural decisions
+- record the reason, alternatives and trade-offs, not just the final choice
+
+### 4. API security and configuration
+
+Cover the backend concerns a financial API cannot ignore, without turning the lab into a security specialization:
+
+- authentication and authorization
+- JWT / OAuth concepts at the appropriate depth
+- authorization policies where justified
+- input validation
+- rate limiting
+- secrets outside source code
+- environment-specific configuration
+
+### 5. HTTP resilience
+
+Cover failure handling outside RabbitMQ:
+
+- timeout
+- cancellation
+- `CancellationToken`
+- retry only where semantically safe
+- circuit breaker
+- resilience pipelines
+
+Do not add retries blindly to non-idempotent operations.
+
+### 6. Testing strategy
+
+Expand the testing pyramid / portfolio beyond unit tests:
+
+```text
+unit
+  ↓
+integration
+  ↓
+contract
+  ↓
+end-to-end
+  ↓
+architecture tests
+```
+
+Use Testcontainers where it provides realistic PostgreSQL / RabbitMQ integration without requiring permanently installed shared infrastructure.
+
+Architecture tests should protect important dependency rules such as Domain not depending on Infrastructure.
+
+### 7. Performance and profiling
+
+Create at least one measurable performance exercise rather than discussing performance only in theory.
+
+Observe and reason about:
+
+- latency
+- throughput
+- CPU / memory where relevant
+- connection pool behavior
+- slow queries
+- indexes
+- concurrency
+- before / after measurements
+
+Use profiling / diagnostic tools only when they make a real bottleneck observable.
+
+### 8. Financial correctness: audit, ledger and reconciliation
+
+Add a compact but meaningful financial-correctness pass so the project is more than a generic CRUD with financial naming.
+
+Cover at a practical level:
+
+- audit trail
+- immutable / append-oriented financial records where appropriate
+- ledger concepts
+- reconciliation
+- detecting mismatches rather than silently overwriting them
+
+Do not attempt to build a full banking core or full accounting engine.
+
+## Pass 1.5 gate
+
+- [ ] PostgreSQL
+- [ ] modular monolith view
+- [ ] bounded contexts identified
+- [ ] ADRs for meaningful decisions
+- [ ] lightweight architecture diagram / C4 view where useful
+- [ ] authentication / authorization basics
+- [ ] configuration / secrets discipline
+- [ ] validation / rate limiting
+- [ ] HTTP timeout / cancellation
+- [ ] retry / circuit breaker where justified
+- [ ] unit + integration + contract + E2E strategy
+- [ ] architecture tests
+- [ ] Testcontainers where useful
+- [ ] performance / profiling exercise
+- [ ] audit trail
+- [ ] ledger concepts
+- [ ] reconciliation exercise
 
 ---
 
@@ -204,13 +357,19 @@ Exact service boundaries may evolve as the domain becomes clearer, but the archi
 
 ### 1. Microservice extraction
 
-Evolve the modular / monolithic Pass 1 system into independently deployable services, initially around:
+Extract services from the modular monolith only after the boundaries are understood.
+
+Initial candidates:
 
 - Credit
 - Billing / Collections
 - Payments
 
 Prefer database-per-service when the services are actually separated.
+
+The learning question is not only "how to create a microservice?" but also:
+
+> Why should this boundary be independently deployable?
 
 ### 2. CQRS
 
@@ -282,6 +441,7 @@ Teach:
 - versioning
 - backward compatibility
 - schema evolution
+- contract testing across .NET and NestJS
 
 Do not share a `.NET Domain.dll` as an integration contract.
 
@@ -441,6 +601,8 @@ Introduce Argo CD only after the Kubernetes deployment model is understood manua
 - [ ] RabbitMQ
 - [ ] .NET producer
 - [ ] NestJS consumer
+- [ ] language-independent event contracts
+- [ ] contract testing across services
 - [ ] explicit ACK / NACK
 - [ ] prefetch / redelivery
 - [ ] retry strategy
@@ -459,6 +621,119 @@ Introduce Argo CD only after the Kubernetes deployment model is understood manua
 - [ ] Terraform locally where useful
 - [ ] CI with GitHub Actions
 - [ ] CD / GitOps / Argo CD after manual Kubernetes mastery
+
+---
+
+# MASTER GATE — Architecture Defense
+
+The Financial Lab is not considered truly complete merely because the code runs.
+
+At the end, Lucas must be able to defend the architecture without relying on the code being open in front of him.
+
+Practice scenarios should include questions such as:
+
+- What happens if RabbitMQ is unavailable after the database commits?
+- What happens if the same event is delivered twice?
+- What happens if a consumer dies before ACK?
+- What happens if three replicas process work concurrently?
+- What happens if a downstream HTTP dependency is slow?
+- How do you trace one request across services?
+- How do you evolve an event contract without breaking NestJS consumers?
+- Why is a given boundary a microservice instead of a module?
+- Where is strong consistency required and where is eventual consistency acceptable?
+- What would be rolled back or compensated after a partial failure?
+- How would the system be deployed and recovered?
+- How would a financial mismatch be reconciled?
+- What would you measure before claiming a performance improvement?
+
+Final evidence should include architecture reasoning, trade-offs, failure handling, operations and testing strategy — not only source code.
+
+---
+
+# Explicitly out of scope unless a concrete need appears
+
+These technologies / patterns must not be added just to inflate the stack:
+
+```text
+Event Sourcing  -> no, unless a real requirement justifies it
+Kafka           -> no; RabbitMQ is sufficient for the planned learning goals
+Redis / cache   -> only if a measured performance / read problem justifies it
+GraphQL         -> no planned value for this lab
+Service Mesh    -> not in the current scope
+Cloud hosting   -> not required; local Kubernetes / Terraform comes first
+MediatR         -> only if it solves a concrete coordination problem
+AutoMapper      -> only if it removes a real mapping burden
+extra business rules -> no repetition just to make the domain look larger
+```
+
+New technologies do not enter the plan automatically. A tool must close a concrete learning or engineering gap.
+
+---
+
+# Final learning progression
+
+```text
+PASS 1 — Software Engineering
+C# / .NET 10
+TDD
+DDD fundamentals
+Clean Architecture
+EF Core
+SQLite
+Console
+ASP.NET Core
+DI
+Repository
+integration
+local idempotency
+basic API security / configuration
+complete financial flow
+
+        ↓
+
+PASS 1.5 — Production Backend
+PostgreSQL
+modular monolith
+bounded contexts
+ADRs / architecture docs
+API security
+HTTP resilience
+Testcontainers
+contract / architecture tests
+performance / profiling
+audit trail
+ledger concepts
+reconciliation
+
+        ↓
+
+PASS 2 — Distributed Systems
+Microservices
+CQRS
+RabbitMQ
+.NET producer
+NestJS consumer
+Outbox
+Inbox
+at-least-once delivery
+ACK / NACK
+retry / DLQ
+eventual consistency
+Saga when justified
+concurrency
+cross-language contract testing
+OpenTelemetry
+Docker
+Kubernetes / k3d
+Terraform
+CI / CD
+GitOps / Argo CD
+
+        ↓
+
+MASTER GATE
+Architecture Defense
+```
 
 ---
 
