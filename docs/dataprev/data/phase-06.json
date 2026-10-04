@@ -1,0 +1,156 @@
+{
+  "id": "phase-06",
+  "number": "06",
+  "label": "PORTUGUÊS · EM ESTUDO",
+  "title": "Reescrita mantendo sentido",
+  "available": true,
+  "description": "Reconhecer quando uma reformulação preserva ou altera o sentido, as relações lógicas, a referência, o tempo verbal e a modalidade.",
+  "lessons": [
+    {
+      "id": "phase-06-001-theory",
+      "type": "theory",
+      "title": "006 · Theory: mudar a forma sem mudar a mensagem",
+      "lead": "Na FGV, reescrita não é procurar uma frase parecida. É verificar se a nova construção conserva as mesmas relações de sentido do original.",
+      "blocks": [
+        {"type": "heading", "text": "1. O que precisa permanecer"},
+        {"type": "bullets", "items": [
+          "Quem pratica a ação e quem a recebe.",
+          "Tempo e aspecto verbal.",
+          "Modalidade: certeza, possibilidade, obrigação ou hipótese.",
+          "Relação lógica: causa, consequência, condição, concessão, oposição ou finalidade.",
+          "Referência dos pronomes.",
+          "Quantidade e alcance de palavras como todo, algum, nenhum, apenas e não."
+        ]},
+        {"type": "callout", "text": "Teste FGV: a nova frase permite concluir exatamente o mesmo que a original? Se acrescentar, retirar, inverter ou fortalecer uma informação, o sentido mudou."},
+        {"type": "heading", "text": "2. Voz ativa e passiva"},
+        {"type": "paragraph", "text": "Com verbo transitivo direto, ativa e passiva podem preservar o conteúdo: `A equipe corrigiu as falhas` → `As falhas foram corrigidas pela equipe`. O objeto direto da ativa vira sujeito paciente da passiva."},
+        {"type": "heading", "text": "3. Conectores"},
+        {"type": "bullets", "items": [
+          "`embora` / `ainda que` / `apesar de` podem manter concessão.",
+          "`portanto` / `logo` / `por isso` podem manter conclusão ou consequência.",
+          "`se` / `caso` podem manter condição, com ajuste verbal.",
+          "Trocar um conector por outro de relação diferente altera o sentido."
+        ]},
+        {"type": "heading", "text": "4. Modalidade e quantidade"},
+        {"type": "bullets", "items": [
+          "`pode ocorrer` não equivale a `ocorrerá`.",
+          "`alguns` não equivale a `todos`.",
+          "`não fez tudo` não equivale a `não fez nada`.",
+          "`somente X` restringe o conjunto autorizado."
+        ]},
+        {"type": "heading", "text": "5. Discurso direto e indireto"},
+        {"type": "paragraph", "text": "Na passagem ao discurso indireto, pessoa, tempo verbal e referências de tempo/lugar podem precisar mudar: `Ana disse: “Entregarei amanhã”` → `Ana disse que entregaria no dia seguinte`."},
+        {"type": "callout", "text": "Protocolo: compare participantes, tempo, modalidade, relação lógica, referência e quantidade/negação."}
+      ]
+    },
+    {
+      "id": "phase-06-001-checkpoint",
+      "type": "checkpoint",
+      "title": "006 · Checkpoint: o sentido sobreviveu?",
+      "passPercent": 67,
+      "lead": "Três checagens rápidas antes das questões completas.",
+      "questions": [
+        {"id": "cp1", "question": "A reescrita equivalente a “A equipe corrigiu as falhas” é:", "options": ["As falhas corrigiram a equipe.", "As falhas foram corrigidas pela equipe.", "A equipe foi corrigida pelas falhas.", "As falhas poderiam ser corrigidas pela equipe."], "answer": 1, "explanation": "A passiva mantém agente, paciente e tempo verbal."},
+        {"id": "cp2", "question": "Mantém a concessão de “Embora estivesse cansado, continuou trabalhando”:", "options": ["Porque estava cansado, continuou trabalhando.", "Se estivesse cansado, continuaria trabalhando.", "Apesar de estar cansado, continuou trabalhando.", "Para ficar cansado, continuou trabalhando."], "answer": 2, "explanation": "‘Apesar de’ preserva a relação concessiva."},
+        {"id": "cp3", "question": "“O sistema pode falhar” NÃO equivale a:", "options": ["É possível que o sistema falhe.", "Há possibilidade de falha do sistema.", "O sistema falhará.", "A falha do sistema é possível."], "answer": 2, "explanation": "‘Pode falhar’ indica possibilidade; ‘falhará’ indica certeza."}
+      ]
+    },
+    {
+      "id": "phase-06-001-workshop",
+      "type": "workshop",
+      "title": "006 · Workshop: 10 questões FGV resolvidas",
+      "lead": "Tente decidir antes de ler a solução. A explicação mostra qual elemento do sentido foi preservado ou alterado.",
+      "workedQuestions": [
+        {"question": "“Os técnicos atualizaram o servidor.” Mantém o sentido:", "options": ["O servidor atualizou os técnicos.", "O servidor foi atualizado pelos técnicos.", "Os técnicos poderiam atualizar o servidor.", "O servidor será atualizado pelos técnicos.", "Os técnicos foram atualizados pelo servidor."], "answer": 1, "solution": "A passiva correta conserva agente, paciente e pretérito: o servidor recebe a ação praticada pelos técnicos."},
+        {"question": "“Embora o prazo fosse curto, a equipe concluiu o trabalho.” É equivalente a:", "options": ["Como o prazo era curto, a equipe concluiu o trabalho.", "Apesar de o prazo ser curto, a equipe concluiu o trabalho.", "Para que o prazo fosse curto, a equipe concluiu o trabalho.", "Se o prazo fosse curto, a equipe concluiria o trabalho.", "Logo o prazo era curto."], "answer": 1, "solution": "‘Embora’ e ‘apesar de’ expressam concessão; as outras opções mudam a relação lógica."},
+        {"question": "“Se houver instabilidade, o serviço será reiniciado.” Mantém o sentido:", "options": ["Como houve instabilidade, o serviço foi reiniciado.", "Caso haja instabilidade, o serviço será reiniciado.", "Embora haja instabilidade, o serviço será reiniciado.", "O serviço foi reiniciado porque houve instabilidade.", "O serviço certamente será reiniciado."], "answer": 1, "solution": "‘Caso’ preserva a condição expressa por ‘se’."},
+        {"question": "“O sistema pode apresentar lentidão.” É equivalente a:", "options": ["O sistema apresentará lentidão.", "É impossível que haja lentidão.", "É possível que o sistema apresente lentidão.", "O sistema apresenta lentidão sempre.", "O sistema apresentou lentidão."], "answer": 2, "solution": "‘Pode’ e ‘é possível’ mantêm o mesmo grau de possibilidade."},
+        {"question": "“A equipe não analisou todos os registros.” Qual opção altera o sentido?", "options": ["Nem todos os registros foram analisados.", "Houve registros não analisados.", "A análise não abrangeu a totalidade.", "A equipe não analisou registro algum.", "Parte dos registros ficou fora da análise."], "answer": 3, "solution": "‘Não analisou todos’ não significa ‘não analisou nenhum’. A negação da totalidade é diferente da negação absoluta."},
+        {"question": "“Após a conclusão da auditoria, o relatório foi enviado.” Mantém o sentido:", "options": ["O relatório foi enviado antes do fim da auditoria.", "Concluída a auditoria, o relatório foi enviado depois.", "A auditoria terminou porque o relatório foi enviado.", "O relatório foi enviado para concluir a auditoria.", "O relatório foi enviado durante a auditoria."], "answer": 1, "solution": "A ordem temporal é preservada: conclusão da auditoria primeiro, envio depois."},
+        {"question": "Ana disse: “Entregarei o documento amanhã.” Em discurso indireto:", "options": ["Ana disse que eu entregarei amanhã.", "Ana disse que entregaria o documento no dia seguinte.", "Ana disse que entregou ontem.", "Ana disse que talvez não entregasse.", "Ana disse que entrega agora."], "answer": 1, "solution": "A pessoa, o tempo verbal e a referência temporal são ajustados ao momento do relato."},
+        {"question": "“Como o banco estava indisponível, a aplicação falhou.” Mantém o sentido:", "options": ["A aplicação falhou em razão da indisponibilidade do banco.", "A aplicação falhou apesar da disponibilidade do banco.", "Se o banco estivesse indisponível, talvez falhasse.", "A aplicação falhou para tornar o banco indisponível.", "O banco ficou indisponível depois da falha."], "answer": 0, "solution": "A causa é nominalizada sem ser alterada: a indisponibilidade continua sendo a razão da falha."},
+        {"question": "“Somente os administradores podem alterar a configuração.” Mantém o sentido:", "options": ["Todos podem alterar a configuração.", "A alteração é permitida apenas aos administradores.", "Os administradores devem alterar a configuração.", "Nenhum administrador pode alterar.", "Talvez qualquer usuário possa alterar."], "answer": 1, "solution": "‘Somente’ e ‘apenas’ preservam a restrição sem transformar permissão em obrigação."},
+        {"question": "“O relatório foi revisado antes de ser publicado.” Qual opção altera o sentido?", "options": ["Antes da publicação, o relatório foi revisado.", "A revisão antecedeu a publicação.", "Primeiro houve revisão; depois, publicação.", "O relatório foi publicado antes de ser revisado.", "A publicação ocorreu após a revisão."], "answer": 3, "solution": "A alternativa D inverte a ordem temporal dos fatos."}
+      ]
+    },
+    {
+      "id": "phase-06-001-lab",
+      "type": "lab",
+      "title": "006 · Lab: 10 questões para responder",
+      "lead": "Resolva sozinho. Ao submeter, cada item revela a alternativa correta e explica o porquê.",
+      "passPercent": 0,
+      "questions": [
+        {"id": "lab1", "question": "“A empresa divulgou os resultados.” Mantém o sentido:", "options": ["Os resultados foram divulgados pela empresa.", "A empresa será divulgada pelos resultados.", "Os resultados poderiam ser divulgados.", "A empresa divulgará os resultados.", "Os resultados divulgaram a empresa."], "answer": 0, "explanation": "A passiva conserva agente, paciente e pretérito."},
+        {"id": "lab2", "question": "“Ainda que estivesse nervoso, apresentou o projeto.” É equivalente a:", "options": ["Porque estava nervoso, apresentou o projeto.", "Apesar de estar nervoso, apresentou o projeto.", "Para ficar nervoso, apresentou o projeto.", "Se estivesse nervoso, apresentaria o projeto.", "Logo ficou nervoso."], "answer": 1, "explanation": "‘Ainda que’ e ‘apesar de’ expressam concessão."},
+        {"id": "lab3", "question": "“Caso o arquivo esteja corrompido, o processamento será interrompido.” Mantém o sentido:", "options": ["Porque o arquivo está corrompido, o processamento parou.", "Se o arquivo estiver corrompido, o processamento será interrompido.", "Embora o arquivo esteja corrompido, continuará.", "O processamento será interrompido para corromper o arquivo.", "O arquivo está certamente corrompido."], "answer": 1, "explanation": "‘Caso’ e ‘se’ preservam a relação condicional."},
+        {"id": "lab4", "question": "“O candidato talvez seja convocado.” NÃO equivale a:", "options": ["É possível que seja convocado.", "Pode ser convocado.", "Há possibilidade de convocação.", "Será convocado.", "A convocação é possível."], "answer": 3, "explanation": "‘Talvez’ indica possibilidade; ‘será’ indica certeza."},
+        {"id": "lab5", "question": "“Nem todos os usuários concluíram o cadastro.” É equivalente a:", "options": ["Nenhum usuário concluiu.", "Todos deixaram de concluir.", "Ao menos um usuário não concluiu.", "Todos concluíram.", "Somente um concluiu."], "answer": 2, "explanation": "Negar a totalidade significa que pelo menos um ficou fora, não que nenhum concluiu."},
+        {"id": "lab6", "question": "“Em razão da chuva, o evento foi adiado.” Mantém o sentido:", "options": ["Embora chovesse, o evento ocorreu.", "O evento foi adiado porque choveu.", "Se chovesse, talvez fosse adiado.", "O evento foi adiado para provocar chuva.", "A chuva ocorreu depois do adiamento."], "answer": 1, "explanation": "A relação causal é preservada."},
+        {"id": "lab7", "question": "Carlos disse: “Estou trabalhando agora.” Em discurso indireto:", "options": ["Carlos disse que estava trabalhando naquele momento.", "Carlos disse que eu estou trabalhando agora.", "Carlos disse que trabalharia amanhã.", "Carlos disse que não trabalhava.", "Carlos disse que trabalhou ontem."], "answer": 0, "explanation": "Tempo verbal e referência temporal são ajustados ao relato."},
+        {"id": "lab8", "question": "“Apenas os gestores receberam o relatório.” Mantém o sentido:", "options": ["Todos receberam o relatório.", "O relatório foi recebido exclusivamente pelos gestores.", "Nenhum gestor recebeu.", "Os gestores deveriam receber.", "Talvez não gestores tenham recebido."], "answer": 1, "explanation": "‘Apenas’ e ‘exclusivamente’ mantêm a restrição."},
+        {"id": "lab9", "question": "“Depois que terminou a reunião, Ana enviou o e-mail.” É equivalente a:", "options": ["Ana enviou antes do término.", "O envio ocorreu após o término da reunião.", "Ana encerrou a reunião para enviar.", "O e-mail causou o término.", "Ana enviou durante a reunião."], "answer": 1, "explanation": "A ordem temporal é mantida: término primeiro, envio depois."},
+        {"id": "lab10", "question": "“O analista verificou alguns registros.” Qual opção altera o sentido?", "options": ["Alguns registros foram verificados.", "Parte dos registros foi verificada.", "Houve registros verificados pelo analista.", "O analista verificou todos os registros.", "Parte passou pela verificação."], "answer": 3, "explanation": "‘Alguns’ não autoriza ampliar a informação para ‘todos’."}
+      ]
+    },
+    {
+      "id": "phase-06-001-review",
+      "type": "review",
+      "title": "006 · Review: checklist de equivalência",
+      "lead": "Antes de marcar uma alternativa de reescrita, faça esta varredura mental.",
+      "blocks": [
+        {"type": "bullets", "items": [
+          "Agente e paciente continuam os mesmos?",
+          "O tempo verbal permanece equivalente?",
+          "Possibilidade, certeza, obrigação e hipótese foram preservadas?",
+          "O conector mantém a mesma relação lógica?",
+          "Os pronomes apontam para o mesmo referente?",
+          "Todo, algum, nenhum, apenas e não mantêm o mesmo alcance?",
+          "A ordem temporal foi preservada?",
+          "A alternativa acrescentou informação inexistente?"
+        ]},
+        {"type": "callout", "text": "Distratores FGV costumam mudar uma única engrenagem: `pode` vira `vai`, `alguns` vira `todos`, `embora` vira `porque`, ou a ordem dos fatos é invertida."}
+      ]
+    },
+    {
+      "id": "phase-06-001-quiz",
+      "type": "quiz",
+      "title": "006 · Quiz FGV: reescrita mantendo sentido",
+      "passPercent": 80,
+      "lead": "Dez questões de retenção e transferência. Gate objetivo: pelo menos 8/10.",
+      "questions": [
+        {"id": "q1", "question": "“Os pesquisadores publicaram o estudo.” A forma passiva equivalente é:", "options": ["O estudo publicou os pesquisadores.", "O estudo foi publicado pelos pesquisadores.", "O estudo seria publicado.", "Os pesquisadores foram publicados.", "O estudo será publicado."], "answer": 1, "explanation": "Mantêm-se agente, paciente e pretérito."},
+        {"id": "q2", "question": "“Apesar da dificuldade, concluiu a tarefa.” É equivalente a:", "options": ["Porque houve dificuldade, concluiu.", "Embora houvesse dificuldade, concluiu.", "Se houvesse dificuldade, concluiria.", "Concluiu para criar dificuldade.", "Logo não houve dificuldade."], "answer": 1, "explanation": "As duas construções expressam concessão."},
+        {"id": "q3", "question": "“O serviço talvez volte hoje.” Qual altera o grau de certeza?", "options": ["É possível que volte.", "Pode voltar.", "Há possibilidade de retorno.", "Voltará hoje.", "O retorno é possível."], "answer": 3, "explanation": "‘Voltará’ apresenta certeza; o original apresenta possibilidade."},
+        {"id": "q4", "question": "“Se o pagamento for confirmado, o pedido será liberado.” É equivalente a:", "options": ["Caso o pagamento seja confirmado, o pedido será liberado.", "Porque foi confirmado, foi liberado.", "Embora seja confirmado, não será liberado.", "Será liberado para confirmar.", "O pagamento será confirmado pelo pedido."], "answer": 0, "explanation": "‘Caso’ preserva a condição de ‘se’."},
+        {"id": "q5", "question": "“Não são todos os servidores que apresentam falha.” Significa que:", "options": ["Nenhum apresenta falha.", "Pelo menos um não apresenta falha.", "Todos apresentam falha.", "Somente um apresenta falha.", "Nenhum funciona."], "answer": 1, "explanation": "A negação recai sobre a totalidade."},
+        {"id": "q6", "question": "“Por causa do atraso, a reunião foi remarcada.” Mantém o sentido:", "options": ["A reunião foi remarcada porque houve atraso.", "Apesar do atraso, ocorreu no horário.", "Foi remarcada para gerar atraso.", "Se houvesse atraso, talvez fosse remarcada.", "O atraso ocorreu por causa da remarcação."], "answer": 0, "explanation": "A relação causal é preservada."},
+        {"id": "q7", "question": "Maria disse: “Voltarei aqui amanhã.” Em discurso indireto:", "options": ["Maria disse que voltaria ali no dia seguinte.", "Maria disse que volto aqui amanhã.", "Maria disse que voltou ontem.", "Maria disse que talvez nunca voltasse.", "Maria disse que volta agora."], "answer": 0, "explanation": "Pessoa, tempo e referências de lugar/tempo são ajustados."},
+        {"id": "q8", "question": "“Somente os inscritos poderão entrar.” É equivalente a:", "options": ["A entrada será permitida exclusivamente aos inscritos.", "Todos poderão entrar.", "Os inscritos deverão entrar.", "Nenhum inscrito poderá entrar.", "Talvez os não inscritos entrem."], "answer": 0, "explanation": "‘Somente’ e ‘exclusivamente’ preservam a restrição."},
+        {"id": "q9", "question": "“Antes de enviar o arquivo, João o revisou.” Mantém o sentido:", "options": ["João enviou e depois revisou.", "A revisão ocorreu antes do envio.", "Revisou porque já havia enviado.", "O envio permitiu revisão posterior.", "Não revisou antes do envio."], "answer": 1, "explanation": "A ordem revisão → envio é preservada."},
+        {"id": "q10", "question": "“Alguns candidatos recorreram.” NÃO equivale a:", "options": ["Houve candidatos que recorreram.", "Parte dos candidatos recorreu.", "Alguns apresentaram recurso.", "Todos os candidatos recorreram.", "Há candidatos no conjunto dos recorrentes."], "answer": 3, "explanation": "‘Alguns’ não permite ampliar para ‘todos’."}
+      ]
+    },
+    {
+      "id": "phase-06-001-project",
+      "type": "project",
+      "title": "006 · Mastery Gate: preserve o sentido sob transformação",
+      "lead": "O tema fecha quando você consegue justificar equivalência e apontar exatamente qual mudança quebra o sentido.",
+      "scenario": "Crie cinco frases e, para cada uma, uma reescrita equivalente e um distrator quase correto.",
+      "tasks": [
+        "Inclua uma transformação ativa/passiva.",
+        "Inclua uma troca de conector preservando a relação lógica.",
+        "Inclua uma frase com possibilidade ou certeza.",
+        "Inclua uma frase com quantificador: todo, algum, nenhum ou apenas.",
+        "Inclua uma transformação de discurso direto para indireto.",
+        "Explique qual engrenagem muda em cada distrator.",
+        "Refaça o Quiz depois de um intervalo sem consultar a Theory."
+      ],
+      "criteria": [
+        "Quiz ≥ 80%.",
+        "Distingue equivalência de mera semelhança lexical.",
+        "Preserva agente, tempo, modalidade, relação lógica e quantidade.",
+        "Justifica por que uma reescrita é equivalente ou não."
+      ]
+    }
+  ]
+}
