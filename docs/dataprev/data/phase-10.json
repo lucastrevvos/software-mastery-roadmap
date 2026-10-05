@@ -1,0 +1,161 @@
+{
+  "id": "phase-10",
+  "number": "10",
+  "label": "PORTUGUÊS · EM ESTUDO",
+  "title": "Concordância",
+  "available": true,
+  "description": "Dominar concordância verbal e nominal em construções típicas da FGV, com atenção a sujeito posposto, verbos impessoais, pronome se e expressões que atraem erro.",
+  "lessons": [
+    {
+      "id": "phase-10-001-theory",
+      "type": "theory",
+      "title": "010 · Theory: concordância sem chute",
+      "lead": "A concordância fica muito mais simples quando você encontra primeiro o núcleo do sujeito e só depois olha para o verbo ou para o termo que deve concordar.",
+      "blocks": [
+        {"type":"heading","text":"1. Regra-base da concordância verbal"},
+        {"type":"paragraph","text":"O verbo concorda com o núcleo do sujeito em número e pessoa. A ordem da frase não muda a regra: em `Chegaram os relatórios`, o sujeito é `os relatórios`, por isso o verbo fica no plural."},
+        {"type":"callout","text":"Procedimento de prova: ache o verbo → pergunte `quem/o que pratica ou sofre isso?` → encontre o núcleo do sujeito → só então verifique a concordância."},
+        {"type":"heading","text":"2. O pronome se: duas estruturas que a FGV adora"},
+        {"type":"bullets","items":[
+          "Partícula apassivadora: com verbo transitivo direto, o termo paciente vira sujeito e o verbo concorda com ele. Ex.: `Registraram-se inconsistências` = inconsistências foram registradas.",
+          "Índice de indeterminação do sujeito: com verbo transitivo indireto, intransitivo ou de ligação, o verbo fica na 3ª pessoa do singular. Ex.: `Precisa-se de analistas`.",
+          "A expressão `trata-se de` permanece no singular: `Trata-se de problemas antigos`."
+        ]},
+        {"type":"heading","text":"3. Verbos impessoais"},
+        {"type":"bullets","items":[
+          "`Haver` no sentido de existir permanece no singular: `Havia muitos candidatos`.",
+          "`Fazer` indicando tempo decorrido ou fenômeno climático permanece no singular: `Faz três anos`.",
+          "Em locução verbal, a impessoalidade passa ao auxiliar: `Deve haver vagas`, e não `devem haver vagas`."
+        ]},
+        {"type":"heading","text":"4. Concordância nominal"},
+        {"type":"bullets","items":[
+          "Adjetivo, artigo, numeral e pronome adjetivo concordam com o substantivo a que se referem.",
+          "`anexo`, `incluso`, `obrigado`, `mesmo` variam quando funcionam como adjetivos: `documentos anexos`, `ela mesma`, `obrigada`.",
+          "`menos` é invariável: `menos falhas`, nunca `menas falhas`.",
+          "`meio` é invariável quando significa `um pouco`: `ela está meio cansada`; varia quando significa metade: `meia hora`.",
+          "`bastante` varia quando equivale a `muitos/muitas`: `bastantes questões`; fica invariável quando equivale a `muito`: `estudaram bastante`."
+        ]},
+        {"type":"heading","text":"5. Expressões com artigo"},
+        {"type":"paragraph","text":"Em construções como `É proibida a entrada`, o artigo torna `entrada` determinado e o predicativo concorda. Sem determinante, é comum a forma invariável: `É proibido entrada`. Em prova, observe a presença do artigo."},
+        {"type":"heading","text":"6. Armadilhas de distância"},
+        {"type":"paragraph","text":"A FGV frequentemente separa sujeito e verbo com termos intercalados para induzir concordância com a palavra mais próxima. Ignore a distância: a concordância continua sendo feita com o núcleo do sujeito."},
+        {"type":"callout","text":"Regra de ouro: não concorde com a palavra vizinha; concorde com o termo sintaticamente responsável."}
+      ]
+    },
+    {
+      "id": "phase-10-001-checkpoint",
+      "type": "checkpoint",
+      "title": "010 · Checkpoint: encontre quem manda na concordância",
+      "passPercent": 67,
+      "lead": "Três checagens rápidas antes da bateria de questões.",
+      "questions": [
+        {"id":"cp1","question":"Assinale a frase correta:","options":["Haviam muitas falhas no sistema.","Havia muitas falhas no sistema.","Houveram muitas falhas no sistema.","Devem haver muitas falhas no sistema."],"answer":1,"explanation":"`Haver` com sentido de existir é impessoal e permanece no singular: `havia`."},
+        {"id":"cp2","question":"Assinale a forma correta:","options":["Registrou-se inconsistências.","Registraram-se inconsistências.","Registraram-se de inconsistências.","Se registrou inconsistências, obrigatoriamente no singular."],"answer":1,"explanation":"Em `registraram-se inconsistências`, o `se` é partícula apassivadora e `inconsistências` é sujeito paciente plural."},
+        {"id":"cp3","question":"Assinale a frase correta:","options":["As candidatas estavam meias nervosas.","As candidatas estavam meio nervosas.","As candidatas estavam menos nervosa.","As candidatas estavam bastantes nervosa."],"answer":1,"explanation":"`Meio`, com sentido de `um pouco`, é advérbio e fica invariável: `meio nervosas`."}
+      ]
+    },
+    {
+      "id": "phase-10-001-workshop",
+      "type": "workshop",
+      "title": "010 · Workshop: 10 questões FGV resolvidas",
+      "lead": "Tente localizar sujeito, núcleo e função do termo antes de ler a resolução. A solução mostra o caminho, não apenas o gabarito.",
+      "workedQuestions": [
+        {"question":"Assinale a frase em conformidade com a norma-padrão:","options":["Haviam vários erros no relatório.","Havia vários erros no relatório.","Houveram vários erros no relatório.","Existia vários erros no relatório.","Devem haver vários erros no relatório."],"answer":1,"solution":"`Haver` no sentido de existir é impessoal: fica sempre na 3ª pessoa do singular. Por isso, `Havia vários erros`."},
+        {"question":"Assinale a opção correta:","options":["Fazem dois anos que o sistema mudou.","Faz dois anos que o sistema mudou.","Fizeram dois anos que o sistema mudou.","Fazem dois anos que o sistema mudaram.","Faziam dois anos que o sistema mudou, obrigatoriamente."],"answer":1,"solution":"`Fazer` indicando tempo decorrido é impessoal e fica no singular: `Faz dois anos`."},
+        {"question":"Assinale a frase correta:","options":["Registrou-se falhas graves.","Registraram-se falhas graves.","Registraram-se de falhas graves.","Se registrou falhas graves porque o verbo deve ficar singular.","Registrou-se de falhas graves."],"answer":1,"solution":"`Registrar` é transitivo direto. Com `se` apassivador, `falhas graves` é sujeito paciente plural: `Registraram-se falhas graves`."},
+        {"question":"Assinale a construção correta:","options":["Precisam-se de especialistas.","Precisa-se de especialistas.","Precisam-se especialistas de segurança.","Precisaram-se de especialistas, sempre no plural.","Precisam de-se especialistas."],"answer":1,"solution":"`Precisar de` é transitivo indireto. O `se` indetermina o sujeito; o verbo fica na 3ª pessoa do singular: `Precisa-se de especialistas`."},
+        {"question":"Assinale a frase correta:","options":["Tratam-se de problemas antigos.","Trata-se de problemas antigos.","Tratam-se problemas antigos.","Se tratam de problemas antigos.","Tratarem-se de problemas antigos."],"answer":1,"solution":"Na expressão `trata-se de`, o verbo permanece no singular. Não há sujeito plural com o qual ele deva concordar."},
+        {"question":"Assinale a opção correta:","options":["Segue anexas as planilhas.","Seguem anexa as planilhas.","Seguem anexas as planilhas.","Segue anexo as planilhas.","Seguem anexo a planilha."],"answer":2,"solution":"O verbo concorda com `as planilhas` e o adjetivo `anexas` também: `Seguem anexas as planilhas`."},
+        {"question":"Assinale a frase correta:","options":["Ela mesmo revisou os dados.","Ela mesma revisou os dados.","Ela mesmos revisou os dados.","Ela mesma revisaram os dados.","Ela próprio revisou os dados."],"answer":1,"solution":"`Mesmo`, com valor de reforço equivalente a `próprio`, funciona como adjetivo e concorda: `ela mesma`."},
+        {"question":"Assinale a opção correta:","options":["Havia menas inconsistências nesta versão.","Haviam menos inconsistências nesta versão.","Havia menos inconsistências nesta versão.","Havia menos inconsistência nesta versão, obrigatoriamente.","Haviam menas inconsistências nesta versão."],"answer":2,"solution":"`Menos` é invariável e `haver` com sentido de existir é impessoal: `Havia menos inconsistências`."},
+        {"question":"Assinale a frase correta:","options":["As analistas ficaram meias preocupadas.","As analistas ficaram meio preocupadas.","As analistas ficaram meios preocupadas.","As analistas ficaram meia preocupada.","As analistas ficou meio preocupadas."],"answer":1,"solution":"`Meio`, com sentido de `um pouco`, é advérbio e não varia. O adjetivo `preocupadas` concorda com `analistas`."},
+        {"question":"Assinale a opção correta:","options":["É proibido a entrada sem identificação.","É proibida a entrada sem identificação.","São proibido a entrada sem identificação.","É proibidas a entrada sem identificação.","É proibida entrada sem identificação, obrigatoriamente."],"answer":1,"solution":"Com o artigo `a`, o substantivo está determinado e o predicativo concorda: `É proibida a entrada`."}
+      ]
+    },
+    {
+      "id": "phase-10-001-lab",
+      "type": "lab",
+      "title": "010 · Lab: 10 questões para responder",
+      "lead": "Responda sem consultar a teoria. Ao submeter, cada questão mostra a resposta correta e explica exatamente qual termo determina a concordância.",
+      "passPercent": 0,
+      "questions": [
+        {"id":"lab1","question":"Assinale a frase correta:","options":["Existem muita dúvida sobre o resultado.","Existe muitas dúvidas sobre o resultado.","Existem muitas dúvidas sobre o resultado.","Haviam muitas dúvidas sobre o resultado.","Devem haver muitas dúvidas sobre o resultado."],"answer":2,"explanation":"`Existir` é verbo pessoal e concorda com o sujeito plural `muitas dúvidas`: `Existem muitas dúvidas`."},
+        {"id":"lab2","question":"Assinale a opção correta:","options":["Fazem cinco meses desde a atualização.","Faz cinco meses desde a atualização.","Fizeram cinco meses desde a atualização.","Fazem cinco mês desde a atualização.","Faz cinco mês desde a atualização."],"answer":1,"explanation":"`Fazer` indicando tempo decorrido é impessoal e permanece no singular."},
+        {"id":"lab3","question":"Assinale a frase correta:","options":["Identificou-se duas falhas.","Identificaram-se duas falhas.","Identificaram-se de duas falhas.","Se identificou duas falhas porque todo `se` exige singular.","Identificou-se de duas falhas."],"answer":1,"explanation":"Com verbo transitivo direto e `se` apassivador, `duas falhas` é sujeito paciente plural: `Identificaram-se duas falhas`."},
+        {"id":"lab4","question":"Assinale a construção correta:","options":["Necessitam-se de programadores.","Necessita-se de programadores.","Necessitam-se programadores de experiência.","Necessita-se programador, obrigatoriamente singular.","Necessitam de-se programadores."],"answer":1,"explanation":"`Necessitar de` é transitivo indireto; com índice de indeterminação do sujeito, o verbo fica no singular."},
+        {"id":"lab5","question":"Assinale a frase correta:","options":["Devem haver novas vagas.","Deve haver novas vagas.","Devem haver nova vaga.","Deve haverem novas vagas.","Deverão haverem novas vagas."],"answer":1,"explanation":"A impessoalidade de `haver` passa ao auxiliar da locução: `Deve haver`."},
+        {"id":"lab6","question":"Assinale a opção correta:","options":["As informações seguem incluso.","As informações segue inclusas.","As informações seguem inclusas.","As informações seguem inclusos.","As informação seguem inclusas."],"answer":2,"explanation":"O verbo e o adjetivo concordam com `as informações`: `seguem inclusas`."},
+        {"id":"lab7","question":"Assinale a frase correta:","options":["Os candidatos estudaram bastantes.","Os candidatos estudaram bastante.","Os candidatos estudou bastante.","Os candidatos estudaram bastantes horas, e nesse uso `bastantes` seria sempre errado.","Os candidato estudaram bastante."],"answer":1,"explanation":"Aqui `bastante` modifica o verbo `estudaram`, equivale a `muito` e é advérbio invariável."},
+        {"id":"lab8","question":"Assinale a opção correta:","options":["Havia bastantes questões difíceis.","Havia bastante questões difíceis.","Haviam bastantes questões difíceis.","Haviam bastante questões difíceis.","Havia bastantes questão difíceis."],"answer":0,"explanation":"Aqui `bastantes` equivale a `muitas` e concorda com `questões`; `haver` existencial permanece no singular."},
+        {"id":"lab9","question":"Assinale a frase correta:","options":["Foi encontrado os documentos.","Foram encontrados os documentos.","Foi encontrados os documentos.","Foram encontrado os documentos.","Foram encontrados o documento."],"answer":1,"explanation":"Na voz passiva analítica, auxiliar e particípio concordam com o sujeito plural `os documentos`: `Foram encontrados`."},
+        {"id":"lab10","question":"Assinale a opção correta:","options":["É necessária paciência.","É necessário a paciência.","É necessária a paciência.","São necessária a paciência.","É necessários a paciência."],"answer":2,"explanation":"Com o artigo `a`, o substantivo está determinado; o predicativo concorda no feminino: `É necessária a paciência`."}
+      ]
+    },
+    {
+      "id": "phase-10-001-review",
+      "type": "review",
+      "title": "010 · Review: protocolo de concordância",
+      "lead": "Reconstrua as regras no papel antes de conferir esta lista.",
+      "blocks": [
+        {"type":"bullets","items":[
+          "Verbo concorda com o núcleo do sujeito, não com a palavra mais próxima.",
+          "Sujeito posposto continua comandando a concordância.",
+          "Com `se` apassivador + verbo transitivo direto, o verbo concorda com o sujeito paciente.",
+          "Com `se` indeterminador + verbo transitivo indireto/intransitivo/de ligação, o verbo fica no singular.",
+          "`Trata-se de` fica no singular.",
+          "`Haver` = existir → singular.",
+          "`Fazer` = tempo decorrido → singular.",
+          "Em locução com verbo impessoal, o auxiliar também fica no singular.",
+          "`menos` é invariável; `meio` = um pouco é invariável.",
+          "`bastante` varia como adjetivo/pronome e não varia como advérbio.",
+          "`anexo`, `incluso`, `mesmo`, `obrigado` variam quando adjetivos.",
+          "Com artigo/determinante, expressões como `é proibida a entrada` fazem concordância nominal."
+        ]},
+        {"type":"callout","text":"Seu checklist de prova: sujeito → núcleo → tipo de verbo → função do `se` → termo que deve concordar. Só depois julgue a forma verbal ou nominal."}
+      ]
+    },
+    {
+      "id": "phase-10-001-quiz",
+      "type": "quiz",
+      "title": "010 · Quiz FGV: concordância verbal e nominal",
+      "passPercent": 80,
+      "lead": "Dez questões. Gate objetivo: pelo menos 8/10.",
+      "questions": [
+        {"id":"q1","question":"Assinale a frase correta:","options":["Houveram problemas ontem.","Houve problemas ontem.","Haviam ocorrido um problema.","Devem haver problemas.","Houveram ocorrido problemas."],"answer":1,"explanation":"`Haver` no sentido de existir é impessoal: `Houve problemas`."},
+        {"id":"q2","question":"Assinale a opção correta:","options":["Fazem dez dias que ele saiu.","Faz dez dias que ele saiu.","Fizeram dez dias que ele saiu.","Fazem dez dia que ele saiu.","Faz dez dia que ele saiu."],"answer":1,"explanation":"`Fazer` indicando tempo decorrido fica no singular."},
+        {"id":"q3","question":"Assinale a frase correta:","options":["Vendeu-se três ingressos.","Venderam-se três ingressos.","Venderam-se de três ingressos.","Se vendeu três ingressos porque o verbo é impessoal.","Vendeu-se de três ingressos."],"answer":1,"explanation":"`Vender` é transitivo direto; `três ingressos` é sujeito paciente plural."},
+        {"id":"q4","question":"Assinale a construção correta:","options":["Precisa-se de soluções rápidas.","Precisam-se de soluções rápidas.","Precisam-se soluções rápidas de urgência.","Se precisam de soluções rápidas, pela norma-padrão obrigatoriamente.","Precisam de-se soluções rápidas."],"answer":0,"explanation":"`Precisar de` é transitivo indireto; o `se` indetermina o sujeito e o verbo permanece no singular."},
+        {"id":"q5","question":"Assinale a frase correta:","options":["Tratam-se de medidas urgentes.","Trata-se de medidas urgentes.","Tratam-se medidas urgentes.","Se tratam de medidas urgentes.","Trataram-se de medidas urgentes, obrigatoriamente."],"answer":1,"explanation":"A expressão `trata-se de` fica no singular."},
+        {"id":"q6","question":"Assinale a opção correta:","options":["Segue anexo os documentos.","Seguem anexos os documentos.","Seguem anexo os documentos.","Segue anexos os documentos.","Seguem anexas os documentos."],"answer":1,"explanation":"Verbo e adjetivo concordam com `os documentos`: `Seguem anexos`."},
+        {"id":"q7","question":"Assinale a frase correta:","options":["Ela ficou meia cansada.","Ela ficou meio cansada.","Ela ficou meios cansada.","Ela ficaram meio cansada.","Ela ficou meia cansado."],"answer":1,"explanation":"`Meio` = `um pouco` é advérbio e permanece invariável."},
+        {"id":"q8","question":"Assinale a opção correta:","options":["Existia muitos candidatos na sala.","Existiam muitos candidatos na sala.","Haviam muitos candidatos na sala.","Devem haver muitos candidatos na sala.","Houveram muitos candidatos na sala."],"answer":1,"explanation":"Diferentemente de `haver`, `existir` é pessoal e concorda com `muitos candidatos`."},
+        {"id":"q9","question":"Assinale a frase correta:","options":["É proibido a entrada.","É proibida a entrada.","É proibidas a entrada.","São proibida a entrada.","É proibido as entradas."],"answer":1,"explanation":"Com artigo, o predicativo concorda com `a entrada`: `É proibida a entrada`."},
+        {"id":"q10","question":"Assinale a opção correta:","options":["A equipe, apesar dos problemas, decidiram continuar.","A equipe, apesar dos problemas, decidiu continuar.","A equipe, apesar dos problemas, decidiram continuarem.","A equipe, apesar dos problemas, decidir continuar.","A equipe, apesar dos problemas, decidiriam continuar, obrigatoriamente."],"answer":1,"explanation":"O núcleo do sujeito é `equipe`, singular. O termo intercalado `dos problemas` não interfere na concordância."}
+      ]
+    },
+    {
+      "id": "phase-10-001-project",
+      "type": "project",
+      "title": "010 · Mastery Gate: concordância sob pressão",
+      "lead": "Você fecha o tema quando consegue justificar a concordância pela estrutura sintática, sem depender apenas de `soar certo`.",
+      "scenario": "Crie cinco frases no estilo FGV, cada uma explorando uma armadilha diferente de concordância.",
+      "tasks": [
+        "Crie uma frase com sujeito posposto.",
+        "Crie uma frase com `haver` no sentido de existir.",
+        "Crie uma com `se` apassivador e sujeito paciente plural.",
+        "Crie uma com `se` indeterminador e verbo transitivo indireto.",
+        "Crie uma de concordância nominal com `meio`, `bastante`, `anexo` ou `proibido`.",
+        "Para cada frase, produza uma versão errada plausível e explique o erro.",
+        "Depois de um intervalo, refaça o Lab ou o Quiz sem consultar a teoria."
+      ],
+      "criteria": [
+        "Quiz ≥ 80%.",
+        "Você encontra o núcleo do sujeito antes de decidir a forma verbal.",
+        "Distingue `se` apassivador de índice de indeterminação.",
+        "Reconhece `haver` e `fazer` impessoais.",
+        "Resolve concordância nominal sem depender apenas da intuição sonora.",
+        "Consegue explicar por que cada alternativa errada está errada."
+      ]
+    }
+  ]
+}
