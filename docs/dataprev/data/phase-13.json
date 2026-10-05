@@ -1,0 +1,148 @@
+{
+  "id": "phase-13",
+  "number": "13",
+  "label": "RLM · EM ESTUDO",
+  "title": "Médias",
+  "available": true,
+  "description": "Resolver problemas com média aritmética simples, média ponderada, média combinada e atualização de médias, reconhecendo quando a FGV esconde a soma total por trás da média.",
+  "lessons": [
+    {
+      "id": "phase-13-001-theory",
+      "type": "theory",
+      "title": "013 · Theory: média é soma escondida",
+      "lead": "A ideia central é simples: toda média carrega uma soma por trás. Em prova, recuperar essa soma costuma ser o caminho mais rápido.",
+      "blocks": [
+        {"type":"heading","text":"1. Média aritmética simples"},
+        {"type":"code","code":"média = soma dos valores / quantidade de valores\n\nLogo:\nsoma = média × quantidade"},
+        {"type":"paragraph","text":"Se 8 valores têm média 12, a soma desses valores é `8 × 12 = 96`. Essa volta da média para a soma resolve grande parte das questões."},
+        {"type":"heading","text":"2. Adicionar ou retirar um valor"},
+        {"type":"paragraph","text":"Recupere a soma antiga, altere a soma e a quantidade, e só então calcule a nova média. Evite tentar ajustar a média diretamente por intuição."},
+        {"type":"code","code":"5 valores com média 10 → soma = 50\nAdicionar 20 → nova soma = 70\nQuantidade = 6\nNova média = 70/6"},
+        {"type":"heading","text":"3. Média ponderada"},
+        {"type":"code","code":"média ponderada = (x₁p₁ + x₂p₂ + ...)/(p₁+p₂+...)"},
+        {"type":"paragraph","text":"O peso indica quantas vezes ou com que importância cada valor participa. Não faça a média das notas ignorando os pesos."},
+        {"type":"heading","text":"4. Média de grupos"},
+        {"type":"paragraph","text":"A média de duas médias só pode ser feita diretamente quando os grupos têm o mesmo tamanho. Se os tamanhos forem diferentes, converta cada média em soma e combine as somas."},
+        {"type":"code","code":"Grupo A: 20 pessoas, média 8 → soma 160\nGrupo B: 30 pessoas, média 6 → soma 180\nMédia conjunta = 340/50 = 6,8"},
+        {"type":"heading","text":"5. Encontrar valor faltante"},
+        {"type":"paragraph","text":"Se a média final é conhecida, descubra a soma total necessária. Depois subtraia os valores já conhecidos."},
+        {"type":"heading","text":"6. Média não é taxa equivalente"},
+        {"type":"paragraph","text":"Em variações percentuais sucessivas, não use média aritmética das taxas para achar taxa equivalente. Esse tema aparece em outro contexto; aqui, mantenha separado o conceito de média de valores."},
+        {"type":"callout","text":"Protocolo FGV: média → transforme em soma; mexa na soma e na quantidade; só no final volte para a média."}
+      ]
+    },
+    {
+      "id": "phase-13-001-checkpoint",
+      "type": "checkpoint",
+      "title": "013 · Checkpoint: enxergue a soma",
+      "passPercent": 67,
+      "lead": "Três checagens rápidas antes da prática completa.",
+      "questions": [
+        {"id":"cp1","question":"A média de 6 números é 14. A soma desses números é:","options":["20","42","84","196"],"answer":2,"explanation":"Soma = média × quantidade = 14 × 6 = 84."},
+        {"id":"cp2","question":"Quatro notas têm média 7. A soma das quatro notas é:","options":["11","21","28","49"],"answer":2,"explanation":"4 × 7 = 28."},
+        {"id":"cp3","question":"Uma nota 8 tem peso 2 e uma nota 6 tem peso 1. A média ponderada é:","options":["6,0","6,67","7,0","7,33"],"answer":3,"explanation":"(8×2 + 6×1)/(2+1) = 22/3 ≈ 7,33."}
+      ]
+    },
+    {
+      "id": "phase-13-001-workshop",
+      "type": "workshop",
+      "title": "013 · Workshop: 10 questões FGV resolvidas",
+      "lead": "Tente sempre recuperar a soma antes de conferir a solução comentada.",
+      "workedQuestions": [
+        {"question":"A média de 5 números é 18. A soma desses números é:","options":["23","72","90","108","180"],"answer":2,"solution":"Soma = média × quantidade = 18 × 5 = 90."},
+        {"question":"A média de 4 notas é 7,5. Se três delas são 6, 8 e 9, a quarta é:","options":["5","6","7","8","9"],"answer":2,"solution":"A soma total deve ser 4 × 7,5 = 30. As três conhecidas somam 23. Logo, falta 7."},
+        {"question":"Seis valores têm média 12. Ao acrescentar o valor 19, a nova média passa a ser:","options":["12","13","14","15","16"],"answer":1,"solution":"Soma antiga = 6 × 12 = 72. Nova soma = 91 e nova quantidade = 7. Média = 91/7 = 13."},
+        {"question":"Cinco números têm média 20. Se um deles, igual a 30, é retirado, a média dos quatro restantes é:","options":["15","16","17,5","18","20"],"answer":2,"solution":"Soma original = 100. Retirando 30, restam 70. Nova média = 70/4 = 17,5."},
+        {"question":"Uma prova vale peso 2 e outra vale peso 3. Um aluno tirou 7 e 9, respectivamente. Sua média ponderada é:","options":["7,8","8,0","8,2","8,5","8,8"],"answer":2,"solution":"(7×2 + 9×3)/(2+3) = (14+27)/5 = 41/5 = 8,2."},
+        {"question":"Uma turma de 20 alunos tem média 7, e outra de 30 alunos tem média 8. A média conjunta é:","options":["7,2","7,4","7,5","7,6","8,0"],"answer":3,"solution":"Somas: 20×7=140 e 30×8=240. Soma total 380 para 50 alunos. Média = 380/50 = 7,6."},
+        {"question":"A média de 10 números é 15. Se um número igual a 24 é substituído por 34, a nova média é:","options":["15","16","17","18","19"],"answer":1,"solution":"A soma aumenta em 10. A média aumenta em 10/10 = 1. Nova média = 16."},
+        {"question":"A média de 8 valores é 11. Se um nono valor é acrescentado e a nova média passa a 12, o valor acrescentado é:","options":["12","16","20","24","28"],"answer":2,"solution":"Soma antiga = 8×11=88. Nova soma necessária = 9×12=108. Valor novo = 108−88=20."},
+        {"question":"Três funcionários têm salários médios de R$ 4.000 em um grupo de 5 pessoas e R$ 6.000 em outro grupo de 5 pessoas. A média dos 10 salários é:","options":["R$ 4.500","R$ 5.000","R$ 5.500","R$ 6.000","R$ 10.000"],"answer":1,"solution":"Como os grupos têm o mesmo tamanho, a média conjunta é a média das duas médias: (4000+6000)/2 = 5000."},
+        {"question":"A média de 12 números é 9. Se a soma de 11 deles é 101, o número faltante é:","options":["5","6","7","8","9"],"answer":2,"solution":"A soma total deve ser 12×9 = 108. Valor faltante = 108−101 = 7."}
+      ]
+    },
+    {
+      "id": "phase-13-001-lab",
+      "type": "lab",
+      "title": "013 · Lab: 10 questões para responder",
+      "lead": "Resolva no papel. Ao submeter, cada item mostra a alternativa correta e explica a solução.",
+      "passPercent": 0,
+      "questions": [
+        {"id":"lab1","question":"A média de 7 números é 13. A soma desses números é:","options":["20","78","91","104","169"],"answer":2,"explanation":"Soma = 7×13 = 91."},
+        {"id":"lab2","question":"A média de 5 notas é 8. Quatro delas são 7, 8, 9 e 10. A quinta nota é:","options":["4","5","6","7","8"],"answer":2,"explanation":"Soma total = 5×8 = 40. As quatro somam 34. A quinta é 6."},
+        {"id":"lab3","question":"Quatro valores têm média 15. Ao acrescentar 25, a nova média é:","options":["16","17","18","19","20"],"answer":1,"explanation":"Soma antiga = 60. Nova soma = 85. Média = 85/5 = 17."},
+        {"id":"lab4","question":"Seis números têm média 10. Retirando-se um número igual a 20, a média dos cinco restantes é:","options":["6","7","8","9","10"],"answer":2,"explanation":"Soma = 60. Restam 40. Média = 40/5 = 8."},
+        {"id":"lab5","question":"Uma nota 6 tem peso 1, uma nota 8 tem peso 2 e uma nota 9 tem peso 3. A média ponderada é:","options":["7,0","7,5","8,0","8,17","8,5"],"answer":3,"explanation":"(6×1 + 8×2 + 9×3)/6 = 49/6 ≈ 8,17."},
+        {"id":"lab6","question":"Um grupo de 10 pessoas tem média 12 e outro de 20 pessoas tem média 15. A média conjunta é:","options":["13","13,5","14","14,5","15"],"answer":2,"explanation":"Somas: 120 e 300. Total 420/30 = 14."},
+        {"id":"lab7","question":"A média de 8 números é 20. Se o número 16 é substituído por 24, a nova média é:","options":["20","21","22","23","24"],"answer":1,"explanation":"A soma aumenta 8; dividindo por 8, a média aumenta 1. Nova média = 21."},
+        {"id":"lab8","question":"A média de 9 valores é 14. Ao acrescentar um décimo valor, a média passa a 15. O novo valor é:","options":["15","18","20","24","30"],"answer":3,"explanation":"Soma antiga = 126. Nova soma = 150. Valor acrescentado = 24."},
+        {"id":"lab9","question":"Dois grupos têm a mesma quantidade de pessoas e médias 10 e 16. A média conjunta é:","options":["12","13","14","15","26"],"answer":1,"explanation":"Com tamanhos iguais, a média conjunta é (10+16)/2 = 13."},
+        {"id":"lab10","question":"A média de 15 números é 6. Se 14 deles somam 82, o valor faltante é:","options":["6","7","8","9","10"],"answer":2,"explanation":"Soma total = 15×6 = 90. Faltante = 90−82 = 8."}
+      ]
+    },
+    {
+      "id": "phase-13-001-review",
+      "type": "review",
+      "title": "013 · Review: mapa rápido de médias",
+      "lead": "Reconstrua estas relações no papel antes de conferir.",
+      "blocks": [
+        {"type":"bullets","items":[
+          "Média simples = soma/quantidade.",
+          "Soma = média × quantidade.",
+          "Adicionar valor: some ao total e aumente a quantidade em 1.",
+          "Retirar valor: subtraia do total e diminua a quantidade em 1.",
+          "Substituir valor: altere a soma pela diferença entre novo e antigo.",
+          "Média ponderada: some valor×peso e divida pela soma dos pesos.",
+          "Média conjunta de grupos: some os totais dos grupos e divida pela quantidade total.",
+          "Não faça média das médias quando os grupos têm tamanhos diferentes.",
+          "Valor faltante = soma total exigida − soma dos conhecidos.",
+          "Quase toda questão fica mais fácil quando você abandona a média temporariamente e trabalha com a soma."
+        ]},
+        {"type":"callout","text":"Pergunta-reflexo: se eu sei a média e a quantidade, qual é a soma escondida?"}
+      ]
+    },
+    {
+      "id": "phase-13-001-quiz",
+      "type": "quiz",
+      "title": "013 · Quiz FGV: médias",
+      "passPercent": 80,
+      "lead": "Dez questões. Gate objetivo: pelo menos 8/10.",
+      "questions": [
+        {"id":"q1","question":"A média de 9 valores é 12. A soma é:","options":["21","96","108","120","144"],"answer":2,"explanation":"9×12=108."},
+        {"id":"q2","question":"A média de 4 números é 18. Três são 12, 20 e 22. O quarto é:","options":["14","16","18","20","22"],"answer":2,"explanation":"Soma total 72; conhecidos somam 54; faltante 18."},
+        {"id":"q3","question":"Cinco valores têm média 14. Acrescentando 20, a nova média é:","options":["14","15","16","17","18"],"answer":1,"explanation":"Soma antiga 70; nova 90; 90/6=15."},
+        {"id":"q4","question":"Oito números têm média 11. Retirando 18, a média dos sete restantes é:","options":["9","10","11","12","13"],"answer":1,"explanation":"Soma 88; restam 70; 70/7=10."},
+        {"id":"q5","question":"Notas 5 e 9 têm pesos 1 e 3. A média ponderada é:","options":["6","7","8","8,5","9"],"answer":2,"explanation":"(5+27)/4=8."},
+        {"id":"q6","question":"Um grupo de 25 pessoas tem média 6 e outro de 25 tem média 8. A média conjunta é:","options":["6,5","7","7,5","8","14"],"answer":1,"explanation":"Grupos iguais: (6+8)/2=7."},
+        {"id":"q7","question":"Um grupo de 10 pessoas tem média 5 e outro de 30 tem média 9. A média conjunta é:","options":["6","7","8","8,5","9"],"answer":2,"explanation":"(10×5 + 30×9)/40 = 320/40 = 8."},
+        {"id":"q8","question":"A média de 6 valores é 20. Um valor 14 é trocado por 26. A nova média é:","options":["20","21","22","23","24"],"answer":2,"explanation":"A soma aumenta 12; dividindo por 6, a média aumenta 2. Nova média 22."},
+        {"id":"q9","question":"A média de 7 valores é 9. Ao acrescentar um oitavo valor, a média passa a 10. O valor acrescentado é:","options":["10","13","15","17","20"],"answer":3,"explanation":"Soma antiga 63; nova soma 80; novo valor 17."},
+        {"id":"q10","question":"A média de 20 números é 4. Se 19 deles somam 77, o valor faltante é:","options":["1","2","3","4","5"],"answer":2,"explanation":"Soma total 80; faltante 3."}
+      ]
+    },
+    {
+      "id": "phase-13-001-project",
+      "type": "project",
+      "title": "013 · Mastery Gate: recupere a soma escondida",
+      "lead": "Você fecha o tema quando consegue modelar médias sem depender de fórmula decorada.",
+      "scenario": "Crie uma questão inédita no estilo FGV envolvendo média inicial e pelo menos uma alteração: entrada, saída, substituição ou junção de grupos.",
+      "tasks": [
+        "Defina a média e a quantidade iniciais.",
+        "Converta a média em soma total.",
+        "Introduza uma alteração no conjunto.",
+        "Monte cinco alternativas plausíveis.",
+        "Resolva mostrando a mudança na soma e na quantidade.",
+        "Explique qual erro de raciocínio gera cada distrator.",
+        "Refaça o quiz depois de um intervalo sem consultar a teoria."
+      ],
+      "criteria": [
+        "Quiz ≥ 80%.",
+        "Converte média em soma sem hesitar.",
+        "Resolve entrada, saída e substituição de valores.",
+        "Calcula média ponderada corretamente.",
+        "Combina grupos de tamanhos diferentes sem fazer média das médias.",
+        "Consegue criar e explicar distratores típicos de prova."
+      ]
+    }
+  ]
+}
