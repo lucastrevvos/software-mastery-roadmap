@@ -1,0 +1,343 @@
+{
+  "id": "phase-07",
+  "number": "07",
+  "label": "RLM · EM ESTUDO",
+  "title": "Contagem e combinatória",
+  "available": true,
+  "description": "Resolver problemas de contagem reconhecendo quando multiplicar, somar, permutar, arranjar, combinar ou contar pelo complemento, com foco no padrão FGV.",
+  "lessons": [
+    {
+      "id": "phase-07-001-theory",
+      "type": "theory",
+      "title": "007 · Theory: contar sem listar tudo",
+      "lead": "Combinatória começa pela pergunta certa: a ordem importa? há etapas sucessivas? posso repetir? Antes da fórmula, identifique a estrutura.",
+      "blocks": [
+        {"type": "heading", "text": "1. Princípio fundamental da contagem"},
+        {"type": "paragraph", "text": "Se uma escolha ocorre em etapas sucessivas e independentes, multiplicamos o número de possibilidades de cada etapa. Ex.: 3 camisas e 4 calças produzem `3 × 4 = 12` combinações."},
+        {"type": "callout", "text": "Palavra-chave mental: `E depois`. Se escolho uma coisa E depois outra, normalmente aparece multiplicação."},
+        {"type": "heading", "text": "2. Regra da soma"},
+        {"type": "paragraph", "text": "Se os casos são alternativas mutuamente exclusivas, somamos. Ex.: 5 caminhos de ônibus OU 3 de metrô, sem sobreposição, dão `5 + 3 = 8` possibilidades."},
+        {"type": "heading", "text": "3. Permutação"},
+        {"type": "paragraph", "text": "Quando usamos todos os elementos e a ordem importa, temos permutação simples: `n!`."},
+        {"type": "code", "code": "5 pessoas em fila: 5! = 5×4×3×2×1 = 120"},
+        {"type": "heading", "text": "4. Arranjo x combinação"},
+        {"type": "bullets", "items": [
+          "Arranjo: escolhemos parte dos elementos e a ordem importa. Ex.: presidente e vice.",
+          "Combinação: escolhemos parte dos elementos e a ordem não importa. Ex.: comissão de 3 pessoas.",
+          "Pergunta decisiva: trocar a ordem cria um resultado novo? Se sim, ordem importa."
+        ]},
+        {"type": "code", "code": "Arranjo: A(n,p) = n!/(n-p)!\nCombinação: C(n,p) = n!/[p!(n-p)!]"},
+        {"type": "heading", "text": "5. Repetição"},
+        {"type": "paragraph", "text": "Se cada posição pode receber novamente uma opção já usada, a repetição muda a contagem. Uma senha de 4 dígitos usando 10 algarismos, com repetição permitida, tem `10⁴` possibilidades."},
+        {"type": "heading", "text": "6. Complemento"},
+        {"type": "paragraph", "text": "Quando o enunciado pede `pelo menos um`, frequentemente é mais rápido contar o total e retirar o caso em que nenhum atende à condição."},
+        {"type": "code", "code": "pelo menos um = total − nenhum"},
+        {"type": "heading", "text": "7. Restrições"},
+        {"type": "paragraph", "text": "Condições como `juntos`, `separados`, `número par`, `começa por`, `sem repetição` mudam a estrutura. Resolva a restrição antes de aplicar a contagem."},
+        {"type": "callout", "text": "FGV costuma esconder combinatória em caminhos, equipes, senhas, cargos e escolhas com restrição. Não comece procurando fórmula: modele as decisões."}
+      ]
+    },
+    {
+      "id": "phase-07-001-checkpoint",
+      "type": "checkpoint",
+      "title": "007 · Checkpoint: a ordem importa?",
+      "passPercent": 67,
+      "lead": "Três checagens rápidas antes das questões completas.",
+      "questions": [
+        {
+          "id": "cp1",
+          "question": "De 8 pessoas, serão escolhidas 3 para formar uma comissão sem cargos. A ordem dos escolhidos importa?",
+          "options": ["Sim, sempre.", "Não; trata-se de combinação.", "Sim; trata-se de permutação.", "Depende do nome das pessoas."],
+          "answer": 1,
+          "explanation": "Uma comissão sem cargos é o mesmo grupo independentemente da ordem em que os nomes são escolhidos."
+        },
+        {
+          "id": "cp2",
+          "question": "Uma placa é formada por 2 letras seguidas de 3 algarismos. Há 26 opções para cada letra e 10 para cada algarismo, com repetição permitida. O total é:",
+          "options": ["26 + 26 + 10 + 10 + 10", "26² × 10³", "26! × 10!", "C(26,2) × C(10,3)"],
+          "answer": 1,
+          "explanation": "São cinco etapas sucessivas: 26 × 26 × 10 × 10 × 10 = 26² × 10³."
+        },
+        {
+          "id": "cp3",
+          "question": "Ao escolher presidente e vice entre 7 pessoas, trocar os dois escolhidos de cargo gera um resultado diferente. Portanto:",
+          "options": ["A ordem não importa.", "É uma combinação.", "A ordem importa.", "Devemos apenas somar 7 + 6."],
+          "answer": 2,
+          "explanation": "Presidente e vice são funções distintas; trocar os ocupantes produz outra escolha."
+        }
+      ]
+    },
+    {
+      "id": "phase-07-001-workshop",
+      "type": "workshop",
+      "title": "007 · Workshop: 10 questões FGV resolvidas",
+      "lead": "Tente montar a estrutura antes de ler a solução. O objetivo é reconhecer qual princípio de contagem está escondido em cada enunciado.",
+      "workedQuestions": [
+        {
+          "question": "Uma pessoa possui 4 camisas e 3 calças diferentes. Quantos trajes distintos pode formar usando uma camisa e uma calça?",
+          "options": ["7", "12", "16", "24", "64"],
+          "answer": 1,
+          "solution": "Há 4 escolhas para a camisa e, para cada uma, 3 escolhas de calça. Pelo princípio multiplicativo: 4 × 3 = 12."
+        },
+        {
+          "question": "De uma cidade A até B há 3 estradas e de B até C há 4 estradas. Quantos percursos A→B→C existem?",
+          "options": ["7", "12", "16", "24", "81"],
+          "answer": 1,
+          "solution": "Escolhemos uma das 3 estradas A→B e depois uma das 4 estradas B→C. São etapas sucessivas: 3 × 4 = 12."
+        },
+        {
+          "question": "Cinco pessoas distintas devem formar uma fila. Quantas filas diferentes podem ser formadas?",
+          "options": ["20", "25", "60", "120", "125"],
+          "answer": 3,
+          "solution": "Usamos todas as 5 pessoas e a ordem importa: 5! = 120."
+        },
+        {
+          "question": "Entre 8 candidatos, serão escolhidos um presidente e um vice-presidente. Quantas escolhas são possíveis?",
+          "options": ["28", "48", "56", "64", "40320"],
+          "answer": 2,
+          "solution": "Há 8 escolhas para presidente e, depois, 7 para vice. Como os cargos são distintos: 8 × 7 = 56."
+        },
+        {
+          "question": "De 8 pessoas, quantas comissões diferentes de 2 pessoas podem ser formadas, sem cargos?",
+          "options": ["16", "28", "48", "56", "64"],
+          "answer": 1,
+          "solution": "A ordem não importa. C(8,2) = 8×7/(2×1) = 28."
+        },
+        {
+          "question": "Uma senha possui 3 algarismos, cada um podendo ser qualquer dígito de 0 a 9, com repetição permitida. Quantas senhas existem?",
+          "options": ["30", "100", "720", "900", "1000"],
+          "answer": 4,
+          "solution": "Cada uma das 3 posições tem 10 possibilidades independentes: 10 × 10 × 10 = 1000."
+        },
+        {
+          "question": "Quantos números de três algarismos distintos podem ser formados com 1, 2, 3, 4 e 5?",
+          "options": ["10", "20", "30", "60", "125"],
+          "answer": 3,
+          "solution": "São 5 escolhas para a centena, 4 para a dezena e 3 para a unidade: 5 × 4 × 3 = 60."
+        },
+        {
+          "question": "De 6 homens e 4 mulheres, deseja-se formar uma dupla com exatamente uma pessoa de cada sexo. Quantas duplas são possíveis?",
+          "options": ["10", "20", "24", "30", "60"],
+          "answer": 2,
+          "solution": "Escolhemos 1 dos 6 homens e 1 das 4 mulheres: 6 × 4 = 24."
+        },
+        {
+          "question": "Uma equipe de 3 pessoas será escolhida entre 7 funcionários. Quantas equipes diferentes existem?",
+          "options": ["21", "35", "42", "105", "210"],
+          "answer": 1,
+          "solution": "Equipe sem cargos: ordem não importa. C(7,3) = 7×6×5/(3×2×1) = 35."
+        },
+        {
+          "question": "Uma moeda é lançada 4 vezes. Quantas sequências possíveis de resultados existem?",
+          "options": ["8", "12", "16", "24", "32"],
+          "answer": 2,
+          "solution": "Cada lançamento tem 2 resultados possíveis e os 4 lançamentos formam etapas: 2⁴ = 16 sequências."
+        }
+      ]
+    },
+    {
+      "id": "phase-07-001-lab",
+      "type": "lab",
+      "title": "007 · Lab: 10 questões para responder",
+      "lead": "Resolva sem olhar as respostas. Ao submeter, o sistema mostrará a alternativa correta e explicará a estrutura de contagem.",
+      "passPercent": 0,
+      "questions": [
+        {
+          "id": "lab1",
+          "question": "Uma lanchonete oferece 5 tipos de sanduíche e 4 tipos de bebida. Escolhendo um sanduíche e uma bebida, quantos pedidos distintos são possíveis?",
+          "options": ["9", "16", "20", "25", "40"],
+          "answer": 2,
+          "explanation": "São duas etapas sucessivas: 5 escolhas × 4 escolhas = 20."
+        },
+        {
+          "id": "lab2",
+          "question": "Seis livros distintos serão colocados lado a lado em uma estante. Quantas ordens diferentes são possíveis?",
+          "options": ["36", "120", "360", "720", "1296"],
+          "answer": 3,
+          "explanation": "Usamos todos os 6 livros e a ordem importa: 6! = 720."
+        },
+        {
+          "id": "lab3",
+          "question": "Entre 9 pessoas, serão escolhidos um coordenador e um secretário. Quantas escolhas diferentes existem?",
+          "options": ["36", "72", "81", "90", "362880"],
+          "answer": 1,
+          "explanation": "9 escolhas para coordenador e 8 para secretário: 9 × 8 = 72."
+        },
+        {
+          "id": "lab4",
+          "question": "De 9 pessoas, será formada uma comissão de 2 integrantes, sem cargos. Quantas comissões são possíveis?",
+          "options": ["18", "36", "45", "72", "81"],
+          "answer": 1,
+          "explanation": "C(9,2) = 9×8/2 = 36. A ordem não importa."
+        },
+        {
+          "id": "lab5",
+          "question": "Quantos códigos de 4 letras podem ser formados usando as letras A, B e C, com repetição permitida?",
+          "options": ["12", "24", "64", "81", "256"],
+          "answer": 3,
+          "explanation": "Cada uma das 4 posições tem 3 escolhas: 3⁴ = 81."
+        },
+        {
+          "id": "lab6",
+          "question": "Quantos números de 2 algarismos distintos podem ser formados com os dígitos 1, 2, 3, 4, 5 e 6?",
+          "options": ["12", "15", "24", "30", "36"],
+          "answer": 3,
+          "explanation": "6 escolhas para a dezena e 5 para a unidade, sem repetição: 6 × 5 = 30."
+        },
+        {
+          "id": "lab7",
+          "question": "Uma equipe de 4 pessoas será escolhida entre 8 funcionários. Quantas equipes diferentes podem ser formadas?",
+          "options": ["32", "56", "70", "168", "1680"],
+          "answer": 2,
+          "explanation": "Como a ordem não importa: C(8,4) = 70."
+        },
+        {
+          "id": "lab8",
+          "question": "Há 4 caminhos de A até B e 5 caminhos de B até C. Quantos trajetos A→B→C existem?",
+          "options": ["9", "16", "20", "25", "40"],
+          "answer": 2,
+          "explanation": "Escolhemos um caminho em cada trecho: 4 × 5 = 20."
+        },
+        {
+          "id": "lab9",
+          "question": "Um dado é lançado 3 vezes. Quantas sequências possíveis de resultados existem?",
+          "options": ["18", "36", "108", "216", "729"],
+          "answer": 3,
+          "explanation": "Cada lançamento tem 6 possibilidades: 6³ = 216."
+        },
+        {
+          "id": "lab10",
+          "question": "De 5 homens e 3 mulheres, quantas duplas com uma pessoa de cada sexo podem ser formadas?",
+          "options": ["8", "10", "15", "20", "30"],
+          "answer": 2,
+          "explanation": "Escolhemos 1 dos 5 homens e 1 das 3 mulheres: 5 × 3 = 15."
+        }
+      ]
+    },
+    {
+      "id": "phase-07-001-review",
+      "type": "review",
+      "title": "007 · Review: protocolo de contagem",
+      "lead": "Antes de olhar, tente reconstruir no papel as perguntas que você deve fazer em qualquer problema de combinatória.",
+      "blocks": [
+        {"type": "bullets", "items": [
+          "Há etapas sucessivas? Multiplique as possibilidades.",
+          "Há casos alternativos e exclusivos? Some os casos.",
+          "Uso todos os elementos e a ordem importa? Permutação.",
+          "Escolho parte e a ordem importa? Arranjo ou princípio multiplicativo.",
+          "Escolho parte e a ordem não importa? Combinação.",
+          "Há repetição permitida? Não reduza automaticamente o número de opções da posição seguinte.",
+          "Há restrição? Resolva-a antes da fórmula.",
+          "`Pelo menos um` pode ser mais simples por complemento: total − nenhum.",
+          "Cargos diferentes tornam a ordem relevante.",
+          "Grupo/comissão sem cargos normalmente torna a ordem irrelevante."
+        ]},
+        {"type": "callout", "text": "Pergunta de ouro: se eu trocar dois escolhidos de posição, obtenho um resultado novo? Essa resposta separa muitos problemas de arranjo e combinação."}
+      ]
+    },
+    {
+      "id": "phase-07-001-quiz",
+      "type": "quiz",
+      "title": "007 · Quiz FGV: contagem e combinatória",
+      "passPercent": 80,
+      "lead": "Dez questões para Retest. Gate objetivo: pelo menos 8/10.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Uma refeição é composta por uma entrada entre 3 opções, um prato principal entre 5 e uma sobremesa entre 4. Quantas refeições distintas podem ser montadas?",
+          "options": ["12", "20", "32", "60", "120"],
+          "answer": 3,
+          "explanation": "São etapas sucessivas: 3 × 5 × 4 = 60."
+        },
+        {
+          "id": "q2",
+          "question": "Sete pessoas distintas devem ocupar sete cadeiras alinhadas. O número de disposições é:",
+          "options": ["49", "210", "720", "2520", "5040"],
+          "answer": 4,
+          "explanation": "Permutação das 7 pessoas: 7! = 5040."
+        },
+        {
+          "id": "q3",
+          "question": "Entre 10 pessoas serão escolhidos líder e vice-líder. Quantas escolhas são possíveis?",
+          "options": ["45", "90", "100", "180", "720"],
+          "answer": 1,
+          "explanation": "10 escolhas para líder e 9 para vice: 10 × 9 = 90."
+        },
+        {
+          "id": "q4",
+          "question": "Uma comissão de 3 integrantes será formada entre 10 pessoas. Quantas comissões são possíveis?",
+          "options": ["30", "60", "90", "120", "720"],
+          "answer": 3,
+          "explanation": "C(10,3) = 10×9×8/(3×2×1) = 120."
+        },
+        {
+          "id": "q5",
+          "question": "Uma senha possui 5 dígitos e cada posição pode receber qualquer algarismo de 0 a 9, com repetição. O total de senhas é:",
+          "options": ["50", "1000", "10000", "100000", "1000000"],
+          "answer": 3,
+          "explanation": "10 possibilidades em cada uma das 5 posições: 10⁵ = 100000."
+        },
+        {
+          "id": "q6",
+          "question": "Quantos números de 3 algarismos distintos podem ser formados com os dígitos 2, 4, 6 e 8?",
+          "options": ["12", "16", "20", "24", "64"],
+          "answer": 3,
+          "explanation": "4 escolhas para a primeira posição, 3 para a segunda e 2 para a terceira: 4 × 3 × 2 = 24."
+        },
+        {
+          "id": "q7",
+          "question": "De 7 mulheres e 5 homens, deseja-se formar uma dupla com uma mulher e um homem. Quantas duplas são possíveis?",
+          "options": ["12", "25", "30", "35", "42"],
+          "answer": 3,
+          "explanation": "7 escolhas de mulher × 5 escolhas de homem = 35."
+        },
+        {
+          "id": "q8",
+          "question": "Há 2 rotas de A até B, 3 de B até C e 4 de C até D. Quantos trajetos A→B→C→D existem?",
+          "options": ["9", "12", "18", "24", "36"],
+          "answer": 3,
+          "explanation": "2 × 3 × 4 = 24 trajetos."
+        },
+        {
+          "id": "q9",
+          "question": "Uma moeda é lançada 5 vezes. Quantas sequências de cara/coroa podem ocorrer?",
+          "options": ["10", "16", "25", "32", "64"],
+          "answer": 3,
+          "explanation": "Dois resultados possíveis em cada lançamento: 2⁵ = 32."
+        },
+        {
+          "id": "q10",
+          "question": "Entre 6 pessoas, serão escolhidas 2 para representar a equipe, sem distinção de função. Quantas escolhas são possíveis?",
+          "options": ["12", "15", "20", "30", "36"],
+          "answer": 1,
+          "explanation": "Sem cargos, a ordem não importa: C(6,2) = 15."
+        }
+      ]
+    },
+    {
+      "id": "phase-07-001-project",
+      "type": "project",
+      "title": "007 · Mastery Gate: escolha o modelo de contagem",
+      "lead": "Você fecha o tema quando identifica a estrutura antes da fórmula e consegue justificar por que a ordem importa ou não.",
+      "scenario": "Crie cinco problemas curtos de contagem no estilo FGV, cada um com uma estrutura diferente.",
+      "tasks": [
+        "Crie um problema de princípio multiplicativo.",
+        "Crie um problema de permutação.",
+        "Crie um problema em que cargos tornem a ordem relevante.",
+        "Crie um problema de combinação sem cargos.",
+        "Crie um problema com repetição ou restrição.",
+        "Para cada problema, escreva cinco alternativas plausíveis.",
+        "Explique qual erro conceitual poderia gerar cada distrator.",
+        "Refaça o Quiz depois de um intervalo sem revisar antes."
+      ],
+      "criteria": [
+        "Quiz ≥ 80%.",
+        "Você decide se deve somar ou multiplicar sem tentativa e erro.",
+        "Você distingue permutação, arranjo e combinação.",
+        "Você identifica quando a ordem importa.",
+        "Você trata repetição e restrições corretamente.",
+        "Você consegue explicar a solução sem apenas citar uma fórmula."
+      ]
+    }
+  ]
+}
