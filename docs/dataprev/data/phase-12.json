@@ -1,0 +1,164 @@
+{
+  "id": "phase-12",
+  "number": "12",
+  "label": "PORTUGUÊS · EM ESTUDO",
+  "title": "Regência",
+  "available": true,
+  "description": "Dominar regência verbal e nominal, reconhecer a preposição exigida pelo termo regente e evitar trocas de sentido típicas da FGV.",
+  "lessons": [
+    {
+      "id": "phase-12-001-theory",
+      "type": "theory",
+      "title": "012 · Theory: quem exige qual preposição?",
+      "lead": "Regência é a relação entre um termo regente e seu complemento. Na prova, o ponto central é saber se o verbo ou nome exige preposição e perceber quando uma troca muda o sentido.",
+      "blocks": [
+        {"type":"heading","text":"1. Regência verbal"},
+        {"type":"paragraph","text":"Alguns verbos ligam-se diretamente ao complemento; outros exigem preposição. Compare: `comprar algo` e `gostar de algo`. A preposição não é decorativa: faz parte da construção exigida pelo verbo."},
+        {"type":"heading","text":"2. Verbos muito cobrados"},
+        {"type":"bullets","items":[
+          "Assistir = ver/presenciar: `assistir a algo`; = prestar assistência: `assistir alguém`.",
+          "Aspirar = desejar: `aspirar a algo`; = sorver/inalar: `aspirar algo`.",
+          "Visar = almejar: `visar a algo`; = mirar ou pôr visto: `visar algo`.",
+          "Obedecer/desobedecer: `obedecer a algo/alguém`.",
+          "Preferir: `preferir X a Y`; evite `preferir mais X do que Y`.",
+          "Chegar/ir: na norma-padrão, `chegar a`, `ir a/para` conforme o sentido.",
+          "Simpatizar/antipatizar: `simpatizar com`; não são pronominais.",
+          "Namorar: tradicionalmente transitivo direto: `namorar alguém`.",
+          "Implicar = acarretar: `implicar algo`; = antipatizar: `implicar com alguém`.",
+          "Proceder = dar início: `proceder a`; = ter fundamento/origem: usos específicos sem a mesma regência."
+        ]},
+        {"type":"heading","text":"3. Lembrar e esquecer"},
+        {"type":"paragraph","text":"Sem pronome: `lembrar algo`, `esquecer algo`. Com pronome: `lembrar-se de algo`, `esquecer-se de algo`. A FGV gosta de misturar as duas estruturas."},
+        {"type":"heading","text":"4. Informar, avisar, comunicar"},
+        {"type":"paragraph","text":"Há mais de uma construção possível, desde que a estrutura seja coerente. Ex.: `informar algo a alguém` ou `informar alguém de/sobre algo`. O erro surge ao misturar esquemas incompatíveis."},
+        {"type":"heading","text":"5. Pagar e perdoar"},
+        {"type":"paragraph","text":"Tradicionalmente, a coisa paga/perdoada é objeto direto e a pessoa é objeto indireto: `paguei a dívida ao banco`; `perdoei o erro ao colega`."},
+        {"type":"heading","text":"6. Regência nominal"},
+        {"type":"bullets","items":[
+          "favorável a, contrário a, obediente a, fiel a",
+          "necessidade de, medo de, certeza de",
+          "capaz de, incapaz de",
+          "compatível com, relacionado a/com conforme a construção",
+          "respeito a/por, referência a, acesso a"
+        ]},
+        {"type":"heading","text":"7. Regência e sentido"},
+        {"type":"paragraph","text":"Não decore apenas pares verbo-preposição. Alguns verbos mudam de regência quando mudam de significado. A pergunta certa é: `qual é o sentido do verbo nesta frase?`"},
+        {"type":"callout","text":"Protocolo FGV: identifique o termo regente, descubra o sentido usado, pergunte se ele exige preposição e só depois julgue a construção."}
+      ]
+    },
+    {
+      "id": "phase-12-001-checkpoint",
+      "type": "checkpoint",
+      "title": "012 · Checkpoint: a preposição é exigida?",
+      "passPercent": 67,
+      "lead": "Três checagens rápidas antes da prática completa.",
+      "questions": [
+        {"id":"cp1","question":"Na norma-padrão, em sentido de ver/presenciar, a forma adequada é:","options":["Assistimos o filme.","Assistimos ao filme.","Assistimos no filme.","Assistimos pelo filme."],"answer":1,"explanation":"No sentido de ver/presenciar, `assistir` rege a preposição `a`: assistir ao filme."},
+        {"id":"cp2","question":"Assinale a construção adequada:","options":["Prefiro café do que chá.","Prefiro mais café que chá.","Prefiro café a chá.","Prefiro ao café o chá mais."],"answer":2,"explanation":"Na norma-padrão, `preferir` estrutura-se como `preferir X a Y`."},
+        {"id":"cp3","question":"Assinale a forma adequada:","options":["Lembro-me o fato.","Lembro-me do fato.","Lembro do fato-me.","Me lembro o fato."],"answer":1,"explanation":"Com pronome, `lembrar-se` rege `de`: lembrar-se do fato."}
+      ]
+    },
+    {
+      "id": "phase-12-001-workshop",
+      "type": "workshop",
+      "title": "012 · Workshop: 10 questões FGV resolvidas",
+      "lead": "Leia cada frase tentando identificar primeiro o sentido do verbo e só depois confira a solução comentada.",
+      "workedQuestions": [
+        {"question":"Assinale a frase correta segundo a norma-padrão:","options":["Os candidatos assistiram o debate.","Os candidatos assistiram ao debate.","Os candidatos assistiram no debate.","Os candidatos assistiram pelo debate.","Os candidatos assistiram do debate."],"answer":1,"solution":"`Assistir`, no sentido de ver/presenciar, rege a preposição `a`: `assistiram ao debate`."},
+        {"question":"Assinale a opção em que `aspirar` está corretamente empregado no sentido de desejar:","options":["Ele aspira um cargo melhor.","Ele aspira ao cargo melhor.","Ele aspira no cargo melhor.","Ele aspira pelo cargo melhor.","Ele aspira do cargo melhor."],"answer":1,"solution":"No sentido de desejar, `aspirar` é transitivo indireto e rege `a`: `aspirar ao cargo`."},
+        {"question":"Em qual frase `visar` foi corretamente empregado no sentido de ter por objetivo?", "options":["A medida visa reduzir custos.","A medida visa a reduzir custos.","A medida visa com reduzir custos.","A medida visa de reduzir custos.","A medida visa por reduzir custos."],"answer":1,"solution":"No uso tradicional da norma-padrão, `visar`, no sentido de almejar/ter por objetivo, rege `a`: `visa a reduzir custos`."},
+        {"question":"Assinale a construção correta:","options":["Os servidores obedeceram as normas.","Os servidores obedeceram às normas.","Os servidores obedeceram com as normas.","Os servidores obedeceram das normas.","Os servidores obedeceram pelas normas."],"answer":1,"solution":"`Obedecer` rege a preposição `a`. Como `normas` admite artigo `as`, ocorre `a + as = às`."},
+        {"question":"Assinale a frase adequada:","options":["Prefiro trabalhar remoto do que presencial.","Prefiro mais trabalhar remoto a presencial.","Prefiro trabalhar remotamente a trabalhar presencialmente.","Prefiro antes remoto que presencial.","Prefiro mais remoto do que presencial."],"answer":2,"solution":"A estrutura normativa é `preferir X a Y`, sem `mais` e sem `do que`."},
+        {"question":"Assinale a opção correta:","options":["Cheguei no escritório às oito.","Cheguei ao escritório às oito.","Cheguei para o escritório às oito.","Cheguei do escritório às oito.","Cheguei pelo escritório às oito."],"answer":1,"solution":"Na norma-padrão, o verbo `chegar` rege a preposição `a`: `chegar ao escritório`."},
+        {"question":"Assinale a frase correta:","options":["Ela se esqueceu o compromisso.","Ela esqueceu-se do compromisso.","Ela esqueceu-se o compromisso.","Ela esqueceu do compromisso-se.","Ela se esqueceu ao compromisso."],"answer":1,"solution":"Com pronome, `esquecer-se` rege `de`: `esqueceu-se do compromisso`."},
+        {"question":"Assinale a construção adequada:","options":["O gerente informou os funcionários da mudança.","O gerente informou aos funcionários da mudança.","O gerente informou dos funcionários a mudança.","O gerente informou com os funcionários a mudança.","O gerente informou pela mudança os funcionários."],"answer":0,"solution":"Uma construção aceita é `informar alguém de algo`: `informou os funcionários da mudança`. Outra possibilidade seria `informou a mudança aos funcionários`."},
+        {"question":"Assinale a frase em que `implicar` significa acarretar e está adequadamente empregado:","options":["A falha implicou em atraso.","A falha implicou atraso.","A falha implicou com atraso.","A falha implicou ao atraso.","A falha implicou do atraso."],"answer":1,"solution":"No sentido de acarretar, a regência tradicional de `implicar` é direta: `implicar atraso`."},
+        {"question":"Assinale a opção correta:","options":["A decisão é favorável com os servidores.","A decisão é favorável aos servidores.","A decisão é favorável dos servidores.","A decisão é favorável pelos servidores.","A decisão é favorável nos servidores."],"answer":1,"solution":"O adjetivo `favorável` rege a preposição `a`: `favorável aos servidores`. Aqui temos regência nominal."}
+      ]
+    },
+    {
+      "id": "phase-12-001-lab",
+      "type": "lab",
+      "title": "012 · Lab: 10 questões para responder",
+      "lead": "Responda sem consultar a teoria. Ao submeter, cada questão mostra a resposta correta e explica a regência.",
+      "passPercent": 0,
+      "questions": [
+        {"id":"lab1","question":"Assinale a frase correta:","options":["Assistimos a palestra.","Assistimos à palestra.","Assistimos na palestra.","Assistimos da palestra.","Assistimos pela palestra."],"answer":1,"explanation":"No sentido de ver, `assistir` rege `a`; com o artigo feminino `a`, ocorre crase: `à palestra`."},
+        {"id":"lab2","question":"Assinale a opção correta:","options":["Ele aspira uma posição melhor.","Ele aspira a uma posição melhor.","Ele aspira numa posição melhor.","Ele aspira por uma posição melhor.","Ele aspira de uma posição melhor."],"answer":1,"explanation":"No sentido de desejar, `aspirar` rege `a`: aspirar a uma posição."},
+        {"id":"lab3","question":"Assinale a frase adequada:","options":["A norma visa a segurança do sistema.","A norma visa à segurança do sistema.","A norma visa com a segurança do sistema.","A norma visa da segurança do sistema.","A norma visa pela segurança do sistema."],"answer":1,"explanation":"No sentido de almejar, `visar` rege `a`; com artigo feminino, `à segurança`."},
+        {"id":"lab4","question":"Assinale a construção correta:","options":["Ele desobedeceu o regulamento.","Ele desobedeceu ao regulamento.","Ele desobedeceu no regulamento.","Ele desobedeceu do regulamento.","Ele desobedeceu pelo regulamento."],"answer":1,"explanation":"`Desobedecer` rege a preposição `a`: desobedecer ao regulamento."},
+        {"id":"lab5","question":"Assinale a frase adequada:","options":["Prefiro cinema do que teatro.","Prefiro mais cinema a teatro.","Prefiro cinema a teatro.","Prefiro ao cinema do que teatro.","Prefiro cinema que teatro mais."],"answer":2,"explanation":"A estrutura correta é `preferir X a Y`."},
+        {"id":"lab6","question":"Assinale a forma correta segundo a norma-padrão:","options":["Chegamos no local cedo.","Chegamos ao local cedo.","Chegamos do local cedo.","Chegamos com o local cedo.","Chegamos pelo local cedo."],"answer":1,"explanation":"`Chegar` rege `a`: chegar ao local."},
+        {"id":"lab7","question":"Assinale a frase correta:","options":["Lembrei-me a senha.","Lembrei-me da senha.","Lembrei-me na senha.","Lembrei da senha-me.","Lembrei-me pela senha."],"answer":1,"explanation":"Com pronome, `lembrar-se` rege `de`: lembrar-se da senha."},
+        {"id":"lab8","question":"Assinale a construção adequada:","options":["Informei o problema ao gerente.","Informei do problema o gerente.","Informei no problema ao gerente.","Informei pelo problema o gerente.","Informei com o problema o gerente."],"answer":0,"explanation":"`Informar algo a alguém` é uma das estruturas corretas: informar o problema ao gerente."},
+        {"id":"lab9","question":"No sentido de acarretar, assinale a frase correta:","options":["A mudança implicará em custos.","A mudança implicará custos.","A mudança implicará com custos.","A mudança implicará aos custos.","A mudança implicará dos custos."],"answer":1,"explanation":"No sentido de acarretar, `implicar` é tradicionalmente transitivo direto: implicar custos."},
+        {"id":"lab10","question":"Assinale a opção correta quanto à regência nominal:","options":["Ele é contrário com a proposta.","Ele é contrário à proposta.","Ele é contrário da proposta.","Ele é contrário pela proposta.","Ele é contrário na proposta."],"answer":1,"explanation":"`Contrário` rege a preposição `a`; com artigo `a`, forma-se `à proposta`."}
+      ]
+    },
+    {
+      "id": "phase-12-001-review",
+      "type": "review",
+      "title": "012 · Review: mapa rápido de regência",
+      "lead": "Tente reconstruir os pares no papel antes de conferir.",
+      "blocks": [
+        {"type":"bullets","items":[
+          "assistir a = ver; assistir alguém = prestar assistência",
+          "aspirar a = desejar; aspirar algo = inalar",
+          "visar a = almejar; visar algo = mirar/pôr visto",
+          "obedecer/desobedecer a",
+          "preferir X a Y",
+          "chegar a; ir a/para",
+          "lembrar algo / lembrar-se de algo",
+          "esquecer algo / esquecer-se de algo",
+          "implicar algo = acarretar; implicar com alguém = antipatizar",
+          "favorável a, contrário a, obediente a, necessidade de, capaz de"
+        ]},
+        {"type":"callout","text":"Se a preposição mudar, verifique se mudou também o sentido do verbo. Regência e semântica caminham juntas."}
+      ]
+    },
+    {
+      "id": "phase-12-001-quiz",
+      "type": "quiz",
+      "title": "012 · Quiz FGV: regência",
+      "passPercent": 80,
+      "lead": "Dez questões. Gate objetivo: pelo menos 8/10.",
+      "questions": [
+        {"id":"q1","question":"Assinale a frase correta:","options":["Assistimos o espetáculo.","Assistimos ao espetáculo.","Assistimos no espetáculo.","Assistimos do espetáculo.","Assistimos pelo espetáculo."],"answer":1,"explanation":"No sentido de ver, `assistir` rege `a`."},
+        {"id":"q2","question":"No sentido de desejar, assinale a forma correta:","options":["Aspiro uma promoção.","Aspiro a uma promoção.","Aspiro numa promoção.","Aspiro pela promoção.","Aspiro da promoção."],"answer":1,"explanation":"`Aspirar`, no sentido de desejar, rege `a`."},
+        {"id":"q3","question":"Assinale a construção adequada:","options":["Visamos melhorar o serviço.","Visamos a melhorar o serviço.","Visamos com melhorar o serviço.","Visamos de melhorar o serviço.","Visamos por melhorar o serviço."],"answer":1,"explanation":"No sentido de ter por objetivo, a regência tradicional é `visar a`."},
+        {"id":"q4","question":"Assinale a frase correta:","options":["Obedecemos as regras.","Obedecemos às regras.","Obedecemos com as regras.","Obedecemos pelas regras.","Obedecemos das regras."],"answer":1,"explanation":"`Obedecer` rege `a`; com artigo plural feminino, `às regras`."},
+        {"id":"q5","question":"Assinale a opção adequada:","options":["Prefiro estudar de manhã do que à noite.","Prefiro mais estudar de manhã que à noite.","Prefiro estudar de manhã a estudar à noite.","Prefiro antes manhã do que noite.","Prefiro mais manhã a noite."],"answer":2,"explanation":"`Preferir` pede a estrutura `preferir X a Y`."},
+        {"id":"q6","question":"Assinale a frase correta:","options":["Cheguei no prédio às nove.","Cheguei ao prédio às nove.","Cheguei do prédio às nove.","Cheguei com o prédio às nove.","Cheguei pelo prédio às nove."],"answer":1,"explanation":"Na norma-padrão, `chegar` rege `a`."},
+        {"id":"q7","question":"Assinale a forma correta:","options":["Esqueci-me a senha.","Esqueci-me da senha.","Esqueci da senha-me.","Esqueci-me na senha.","Esqueci-me pela senha."],"answer":1,"explanation":"Com pronome, `esquecer-se` rege `de`."},
+        {"id":"q8","question":"Assinale a construção correta:","options":["Informei a decisão aos candidatos.","Informei da decisão aos candidatos.","Informei na decisão os candidatos.","Informei pelos candidatos a decisão.","Informei com a decisão aos candidatos."],"answer":0,"explanation":"Uma estrutura correta é `informar algo a alguém`."},
+        {"id":"q9","question":"No sentido de acarretar, assinale a frase adequada:","options":["A pane implicou em atraso.","A pane implicou atraso.","A pane implicou com atraso.","A pane implicou ao atraso.","A pane implicou do atraso."],"answer":1,"explanation":"No sentido de acarretar, `implicar` é tradicionalmente transitivo direto."},
+        {"id":"q10","question":"Assinale a opção correta:","options":["A medida é favorável com os usuários.","A medida é favorável aos usuários.","A medida é favorável dos usuários.","A medida é favorável pelos usuários.","A medida é favorável nos usuários."],"answer":1,"explanation":"O adjetivo `favorável` rege a preposição `a`."}
+      ]
+    },
+    {
+      "id": "phase-12-001-project",
+      "type": "project",
+      "title": "012 · Mastery Gate: regência sem decorar cegamente",
+      "lead": "Você fecha o tema quando consegue justificar a preposição pelo sentido do verbo ou nome e identificar quando a troca altera a estrutura.",
+      "scenario": "Crie cinco frases no estilo FGV usando verbos de regência diferente e duas construções de regência nominal.",
+      "tasks": [
+        "Inclua pelo menos um verbo que mude de regência conforme o sentido.",
+        "Crie uma frase correta e uma incorreta com `assistir`.",
+        "Crie uma frase correta com `preferir`.",
+        "Crie um par com `lembrar` e `lembrar-se`.",
+        "Inclua uma construção de regência nominal.",
+        "Explique a preposição exigida em cada caso.",
+        "Crie cinco alternativas para uma das frases, com apenas uma correta.",
+        "Depois de um intervalo, refaça o quiz sem consultar a teoria."
+      ],
+      "criteria": [
+        "Quiz ≥ 80%.",
+        "Você identifica o termo regente.",
+        "Você reconhece a preposição exigida.",
+        "Você percebe mudança de sentido associada à mudança de regência.",
+        "Você distingue regência verbal de nominal.",
+        "Você consegue justificar a resposta sem depender só de memorização."
+      ]
+    }
+  ]
+}
