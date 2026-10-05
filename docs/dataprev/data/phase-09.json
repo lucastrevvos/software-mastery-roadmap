@@ -1,0 +1,150 @@
+{
+  "id": "phase-09",
+  "number": "09",
+  "label": "RLM · EM ESTUDO",
+  "title": "Probabilidade",
+  "available": true,
+  "description": "Resolver problemas de probabilidade identificando espaço amostral, casos favoráveis, complemento, independência, dependência e sorteios sem reposição, com foco no padrão FGV.",
+  "lessons": [
+    {
+      "id": "phase-09-001-theory",
+      "type": "theory",
+      "title": "009 · Theory: probabilidade sem chute",
+      "lead": "Probabilidade de prova começa contando corretamente o que pode acontecer. Antes da fórmula, descubra o espaço amostral e o evento pedido.",
+      "blocks": [
+        {"type":"heading","text":"1. Espaço amostral e evento"},
+        {"type":"paragraph","text":"O espaço amostral é o conjunto de resultados possíveis. O evento é o subconjunto que interessa. Quando todos os resultados elementares são equiprováveis, usamos `P(A) = casos favoráveis / casos possíveis`."},
+        {"type":"callout","text":"Primeira pergunta de prova: `quais resultados estou contando como igualmente prováveis?` Se essa base estiver errada, toda a conta estará errada."},
+        {"type":"heading","text":"2. Probabilidade do complemento"},
+        {"type":"paragraph","text":"Quando a questão pede `pelo menos um`, `ao menos um`, `não ocorrer nenhum` ou algo parecido, muitas vezes é mais rápido usar o complemento: `P(A) = 1 - P(não A)`."},
+        {"type":"code","code":"P(Aᶜ) = 1 - P(A)\n\nP(pelo menos um sucesso) = 1 - P(nenhum sucesso)"},
+        {"type":"heading","text":"3. Eventos independentes"},
+        {"type":"paragraph","text":"Se a ocorrência de um evento não altera a probabilidade do outro, podemos multiplicar: `P(A e B) = P(A) × P(B)`. Ex.: dois lançamentos independentes de uma moeda."},
+        {"type":"heading","text":"4. Sem reposição: a probabilidade muda"},
+        {"type":"paragraph","text":"Em sorteios sem reposição, o primeiro resultado altera o total disponível para o segundo. O denominador muda e, dependendo do caso, o numerador também."},
+        {"type":"code","code":"Urna: 3 vermelhas e 2 azuis.\nP(duas vermelhas sem reposição) = 3/5 × 2/4 = 6/20 = 3/10"},
+        {"type":"heading","text":"5. União de eventos"},
+        {"type":"paragraph","text":"Para calcular a probabilidade de `A ou B`, some as probabilidades e retire a interseção contada duas vezes: `P(A ∪ B) = P(A) + P(B) - P(A ∩ B)`. Se os eventos forem mutuamente exclusivos, a interseção é zero."},
+        {"type":"heading","text":"6. Probabilidade condicional"},
+        {"type":"paragraph","text":"Quando o enunciado diz `sabendo que`, o espaço amostral foi restringido. A probabilidade condicional é `P(A|B) = P(A ∩ B) / P(B)`. Em muitos problemas simples, basta reconstruir a contagem considerando apenas os casos em B."},
+        {"type":"heading","text":"7. Fração, decimal e porcentagem"},
+        {"type":"paragraph","text":"As três formas representam a mesma probabilidade. Ex.: `1/4 = 0,25 = 25%`. Em prova, mantenha a fração enquanto puder: isso reduz arredondamentos e costuma simplificar contas."},
+        {"type":"callout","text":"Atalho seguro: escreva `favoráveis / possíveis`; se houver etapas, desenhe cada etapa e pergunte se há reposição. Se aparecer `pelo menos um`, teste primeiro o complemento."}
+      ]
+    },
+    {
+      "id": "phase-09-001-checkpoint",
+      "type": "checkpoint",
+      "title": "009 · Checkpoint: monte o espaço amostral",
+      "passPercent": 67,
+      "lead": "Três checagens rápidas antes das questões completas.",
+      "questions": [
+        {"id":"cp1","question":"Ao lançar um dado honesto de seis faces, a probabilidade de sair número par é:","options":["1/6","1/3","1/2","2/3"],"answer":2,"explanation":"Os casos favoráveis são 2, 4 e 6: 3 resultados em 6 possíveis, então 3/6 = 1/2."},
+        {"id":"cp2","question":"Se P(A) = 0,35, então P(Aᶜ) é:","options":["0,35","0,50","0,65","1,35"],"answer":2,"explanation":"P(Aᶜ) = 1 - 0,35 = 0,65."},
+        {"id":"cp3","question":"Uma urna tem 4 bolas brancas e 1 preta. Duas bolas são retiradas sem reposição. A probabilidade da segunda retirada é afetada pela primeira?","options":["Não, pois toda retirada é independente.","Sim, pois a composição da urna muda.","Não, porque o total inicial era 5.","Só se a primeira for preta."],"answer":1,"explanation":"Sem reposição, a primeira retirada altera o número e a composição das bolas restantes; os eventos são dependentes."}
+      ]
+    },
+    {
+      "id": "phase-09-001-workshop",
+      "type": "workshop",
+      "title": "009 · Workshop: 10 questões FGV resolvidas",
+      "lead": "Tente resolver cada item antes de ler a solução. O objetivo é identificar a estrutura: contagem, complemento, independência ou sorteio sem reposição.",
+      "workedQuestions": [
+        {"question":"Um dado honesto é lançado uma vez. A probabilidade de obter um número maior que 4 é:","options":["1/6","1/3","1/2","2/3","5/6"],"answer":1,"solution":"Resultados possíveis: 1,2,3,4,5,6. Favoráveis: 5 e 6, dois casos. Logo `2/6 = 1/3`."},
+        {"question":"Uma moeda honesta é lançada duas vezes. A probabilidade de sair cara nas duas é:","options":["1/2","1/3","1/4","2/3","3/4"],"answer":2,"solution":"Os lançamentos são independentes: `1/2 × 1/2 = 1/4`. Também podemos listar CC, CK, KC, KK; apenas CC é favorável."},
+        {"question":"Uma moeda honesta é lançada três vezes. A probabilidade de sair pelo menos uma cara é:","options":["1/8","3/8","1/2","5/8","7/8"],"answer":4,"solution":"É mais rápido usar o complemento. `P(nenhuma cara) = P(três coroas) = (1/2)^3 = 1/8`. Então `1 - 1/8 = 7/8`."},
+        {"question":"Uma urna contém 3 bolas vermelhas e 2 azuis. Retiram-se duas bolas sem reposição. A probabilidade de ambas serem vermelhas é:","options":["1/5","3/10","2/5","1/2","3/5"],"answer":1,"solution":"Primeira vermelha: `3/5`. Restam 2 vermelhas entre 4 bolas: `2/4`. Multiplicando: `3/5 × 2/4 = 6/20 = 3/10`."},
+        {"question":"Escolhendo ao acaso um número inteiro de 1 a 20, a probabilidade de ele ser múltiplo de 5 é:","options":["1/10","1/5","1/4","2/5","1/2"],"answer":1,"solution":"Múltiplos de 5 no intervalo: 5,10,15,20, total de 4. Há 20 números possíveis. `4/20 = 1/5`."},
+        {"question":"Em uma turma com 12 mulheres e 8 homens, escolhe-se uma pessoa ao acaso. A probabilidade de escolher uma mulher é:","options":["2/5","1/2","3/5","2/3","3/4"],"answer":2,"solution":"Há 20 pessoas no total e 12 casos favoráveis. `12/20 = 3/5`."},
+        {"question":"Dois dados honestos são lançados. A probabilidade de a soma ser 7 é:","options":["1/12","1/9","1/6","1/4","1/3"],"answer":2,"solution":"Há 36 pares ordenados equiprováveis. Soma 7 ocorre em (1,6),(2,5),(3,4),(4,3),(5,2),(6,1): 6 casos. `6/36 = 1/6`."},
+        {"question":"Uma carta é escolhida de um baralho padrão de 52 cartas. A probabilidade de sair um ás ou um rei é:","options":["1/13","2/13","1/4","4/13","8/13"],"answer":1,"solution":"Há 4 ases e 4 reis, eventos mutuamente exclusivos em uma única carta. São 8 favoráveis em 52: `8/52 = 2/13`."},
+        {"question":"Em uma caixa há 5 peças boas e 2 defeituosas. Escolhe-se uma peça ao acaso. A probabilidade de não escolher uma defeituosa é:","options":["2/7","3/7","4/7","5/7","6/7"],"answer":3,"solution":"`Não defeituosa` significa boa. Há 5 boas em 7 peças: `5/7`. Pelo complemento também seria `1 - 2/7 = 5/7`."},
+        {"question":"Entre os números de 1 a 10, escolhe-se um ao acaso. Sabendo que o número escolhido é par, a probabilidade de ele ser maior que 6 é:","options":["1/5","2/5","1/2","3/5","4/5"],"answer":1,"solution":"A condição restringe o espaço amostral aos pares: {2,4,6,8,10}, cinco casos. Maiores que 6: {8,10}, dois casos. Logo `2/5`."}
+      ]
+    },
+    {
+      "id": "phase-09-001-lab",
+      "type": "lab",
+      "title": "009 · Lab: 10 questões para responder",
+      "lead": "Resolva sem consultar as soluções. Ao submeter, cada item mostrará a resposta correta e a explicação.",
+      "passPercent": 0,
+      "questions": [
+        {"id":"lab1","question":"Ao lançar um dado honesto, a probabilidade de sair um número ímpar é:","options":["1/6","1/3","1/2","2/3","5/6"],"answer":2,"explanation":"Ímpares: 1,3,5. São 3 casos favoráveis em 6 possíveis: `3/6 = 1/2`."},
+        {"id":"lab2","question":"Uma moeda honesta é lançada duas vezes. A probabilidade de sair exatamente uma cara é:","options":["1/4","1/3","1/2","2/3","3/4"],"answer":2,"explanation":"Resultados: CC, CK, KC, KK. Exatamente uma cara ocorre em CK e KC: 2 de 4, logo `1/2`."},
+        {"id":"lab3","question":"Se P(A) = 0,72, então a probabilidade de A não ocorrer é:","options":["0,18","0,28","0,38","0,72","1,72"],"answer":1,"explanation":"P(Aᶜ) = 1 - 0,72 = 0,28."},
+        {"id":"lab4","question":"Uma urna possui 4 bolas verdes e 6 amarelas. Uma bola é retirada ao acaso. A probabilidade de sair verde é:","options":["1/5","2/5","1/2","3/5","4/5"],"answer":1,"explanation":"São 4 verdes em 10 bolas: `4/10 = 2/5`."},
+        {"id":"lab5","question":"Uma urna tem 2 bolas brancas e 3 pretas. Duas são retiradas sem reposição. A probabilidade de ambas serem brancas é:","options":["1/10","1/5","2/5","1/2","3/5"],"answer":0,"explanation":"`2/5 × 1/4 = 2/20 = 1/10`."},
+        {"id":"lab6","question":"Dois dados honestos são lançados. A probabilidade de a soma ser 12 é:","options":["1/36","1/18","1/12","1/6","1/3"],"answer":0,"explanation":"Entre 36 pares ordenados possíveis, apenas (6,6) soma 12. Logo `1/36`."},
+        {"id":"lab7","question":"Escolhe-se ao acaso um inteiro de 1 a 30. A probabilidade de ele ser múltiplo de 3 é:","options":["1/6","1/5","1/3","2/5","1/2"],"answer":2,"explanation":"Há 10 múltiplos de 3 entre 1 e 30. `10/30 = 1/3`."},
+        {"id":"lab8","question":"Uma carta é retirada de um baralho de 52 cartas. A probabilidade de ser de copas é:","options":["1/13","1/4","1/3","1/2","3/4"],"answer":1,"explanation":"Há 13 cartas de copas em 52. `13/52 = 1/4`."},
+        {"id":"lab9","question":"Três moedas honestas são lançadas. A probabilidade de não sair nenhuma cara é:","options":["1/8","1/4","3/8","1/2","7/8"],"answer":0,"explanation":"Não sair nenhuma cara significa três coroas: `(1/2)^3 = 1/8`."},
+        {"id":"lab10","question":"Entre os números de 1 a 12, escolhe-se um ao acaso. Sabendo que ele é par, a probabilidade de ser múltiplo de 3 é:","options":["1/6","1/4","1/3","1/2","2/3"],"answer":2,"explanation":"Condicionando aos pares: {2,4,6,8,10,12}. Favoráveis, também múltiplos de 3: {6,12}. São 2 de 6, logo `1/3`."}
+      ]
+    },
+    {
+      "id": "phase-09-001-review",
+      "type": "review",
+      "title": "009 · Review: protocolo de probabilidade",
+      "lead": "Antes de conferir, tente reconstruir este roteiro no papel.",
+      "blocks": [
+        {"type":"bullets","items":[
+          "Defina o espaço amostral antes de calcular.",
+          "Quando os casos são equiprováveis: probabilidade = favoráveis / possíveis.",
+          "Complemento: `P(Aᶜ) = 1 - P(A)`.",
+          "`Pelo menos um` costuma ficar mais fácil pelo complemento de `nenhum`.",
+          "Eventos independentes: multiplique probabilidades para `A e B`.",
+          "Sem reposição: o total disponível muda a cada retirada.",
+          "Para `A ou B`: some e retire a interseção contada duas vezes.",
+          "Eventos mutuamente exclusivos não têm interseção.",
+          "`Sabendo que` restringe o espaço amostral.",
+          "Mantenha frações até o final quando possível."
+        ]},
+        {"type":"callout","text":"Erro clássico: multiplicar probabilidades como se as retiradas fossem independentes quando o enunciado diz `sem reposição`."}
+      ]
+    },
+    {
+      "id": "phase-09-001-quiz",
+      "type": "quiz",
+      "title": "009 · Quiz FGV: probabilidade",
+      "passPercent": 80,
+      "lead": "Dez questões. Gate objetivo: pelo menos 8/10.",
+      "questions": [
+        {"id":"q1","question":"Uma urna contém 7 bolas azuis e 3 vermelhas. Uma bola é escolhida ao acaso. A probabilidade de ser vermelha é:","options":["1/10","3/10","1/3","7/10","3/7"],"answer":1,"explanation":"São 3 vermelhas em 10 bolas: `3/10`."},
+        {"id":"q2","question":"Uma moeda honesta é lançada três vezes. A probabilidade de obter três caras é:","options":["1/8","1/4","3/8","1/2","3/4"],"answer":0,"explanation":"Lançamentos independentes: `(1/2)^3 = 1/8`."},
+        {"id":"q3","question":"Se a probabilidade de um equipamento falhar é 0,08, a probabilidade de ele não falhar é:","options":["0,08","0,18","0,82","0,92","1,08"],"answer":3,"explanation":"Complemento: `1 - 0,08 = 0,92`."},
+        {"id":"q4","question":"Dois dados honestos são lançados. A probabilidade de a soma ser 2 é:","options":["1/36","1/18","1/12","1/6","1/3"],"answer":0,"explanation":"Apenas o par (1,1) produz soma 2 entre 36 pares possíveis."},
+        {"id":"q5","question":"Uma urna tem 5 bolas brancas e 5 pretas. Duas são retiradas sem reposição. A probabilidade de as duas serem brancas é:","options":["1/5","2/9","1/4","5/18","1/2"],"answer":1,"explanation":"`5/10 × 4/9 = 20/90 = 2/9`."},
+        {"id":"q6","question":"Escolhendo um inteiro de 1 a 15, a probabilidade de ele ser múltiplo de 5 é:","options":["1/15","1/10","1/5","1/3","2/5"],"answer":2,"explanation":"Múltiplos: 5,10,15. `3/15 = 1/5`."},
+        {"id":"q7","question":"A probabilidade de chover em um dia é 30%. A probabilidade de não chover é:","options":["30%","50%","60%","70%","130%"],"answer":3,"explanation":"Complemento de 30%: `100% - 30% = 70%`."},
+        {"id":"q8","question":"Uma moeda é lançada quatro vezes. A probabilidade de sair pelo menos uma cara é:","options":["1/16","4/16","8/16","15/16","1"],"answer":3,"explanation":"Complemento de nenhuma cara: `1 - (1/2)^4 = 1 - 1/16 = 15/16`."},
+        {"id":"q9","question":"Em um grupo de 9 pessoas, 6 usam óculos. Uma pessoa é escolhida ao acaso. A probabilidade de ela não usar óculos é:","options":["1/9","1/3","1/2","2/3","8/9"],"answer":1,"explanation":"Há 3 pessoas sem óculos em 9: `3/9 = 1/3`."},
+        {"id":"q10","question":"Entre os números de 1 a 20, sabendo que o escolhido é múltiplo de 2, a probabilidade de também ser múltiplo de 5 é:","options":["1/10","1/5","2/5","1/2","3/5"],"answer":1,"explanation":"Pares: 10 números. Entre eles, múltiplos de 5 são 10 e 20: 2 casos. `2/10 = 1/5`."}
+      ]
+    },
+    {
+      "id": "phase-09-001-project",
+      "type": "project",
+      "title": "009 · Mastery Gate: modele a incerteza",
+      "lead": "Você fecha o tema quando consegue identificar o espaço amostral, escolher a estratégia e justificar a conta sem depender de fórmula decorada.",
+      "scenario": "Crie uma questão inédita no estilo FGV envolvendo duas etapas aleatórias e pelo menos uma destas ideias: complemento, sorteio sem reposição ou probabilidade condicional.",
+      "tasks": [
+        "Defina claramente o espaço amostral.",
+        "Identifique o evento pedido.",
+        "Resolva a questão por uma estratégia principal.",
+        "Quando possível, confira por uma segunda estratégia ou contagem direta.",
+        "Crie cinco alternativas plausíveis.",
+        "Explique qual erro de raciocínio gera cada distrator.",
+        "Inclua uma variação do problema alterando `com reposição` para `sem reposição` ou vice-versa e explique o que muda.",
+        "Depois de um intervalo, refaça o quiz sem revisar antes."
+      ],
+      "criteria": [
+        "Quiz ≥ 80%.",
+        "Você identifica corretamente casos favoráveis e possíveis.",
+        "Usa complemento quando ele simplifica o problema.",
+        "Distingue eventos independentes de retiradas sem reposição.",
+        "Interpreta corretamente expressões como `pelo menos um` e `sabendo que`.",
+        "Consegue explicar a estratégia antes de executar a conta."
+      ]
+    }
+  ]
+}
