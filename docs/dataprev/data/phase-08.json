@@ -1,0 +1,157 @@
+{
+  "id": "phase-08",
+  "number": "08",
+  "label": "PORTUGUÊS · EM ESTUDO",
+  "title": "Conectores e relações semânticas",
+  "available": true,
+  "description": "Reconhecer a relação de sentido produzida por conectores e locuções, distinguir causa, consequência, condição, concessão, oposição, finalidade, conclusão, tempo e proporção, e avaliar substituições no estilo FGV.",
+  "lessons": [
+    {
+      "id": "phase-08-001-theory",
+      "type": "theory",
+      "title": "008 · Theory: o conector vale pelo sentido que cria",
+      "lead": "Na FGV, não basta decorar uma lista de conjunções. O mesmo conector pode assumir valores diferentes conforme o contexto; sua tarefa é descobrir a relação entre as ideias.",
+      "blocks": [
+        {"type":"heading","text":"1. Pergunte qual é a relação entre as duas partes"},
+        {"type":"paragraph","text":"Antes de classificar o conector, leia as duas ideias separadamente e pergunte: a segunda explica a primeira? é resultado? depende de uma condição? admite um obstáculo? apresenta objetivo? conclui algo?"},
+        {"type":"heading","text":"2. Relações mais cobradas"},
+        {"type":"bullets","items":[
+          "Causa: motivo de um fato — porque, já que, visto que, como.",
+          "Consequência: resultado — tão... que, de modo que, de forma que.",
+          "Condição: requisito — se, caso, contanto que, desde que.",
+          "Concessão: obstáculo que não impede o fato — embora, ainda que, mesmo que, apesar de.",
+          "Oposição/adversidade: contraste — mas, porém, contudo, todavia, entretanto.",
+          "Finalidade: objetivo — para que, a fim de que.",
+          "Conclusão: resultado argumentativo — portanto, logo, assim, por conseguinte.",
+          "Explicação: justificativa de uma ordem/afirmação — porque, que, pois.",
+          "Tempo: quando, enquanto, assim que, logo que.",
+          "Proporção: à medida que, à proporção que, quanto mais... mais."
+        ]},
+        {"type":"callout","text":"Não classifique pela palavra isolada. `Pois`, por exemplo, pode explicar ou concluir dependendo da posição e do contexto."},
+        {"type":"heading","text":"3. Causa x explicação"},
+        {"type":"paragraph","text":"Em `Ele faltou porque estava doente`, a doença é causa da falta. Em `Feche a janela, porque vai chover`, a oração com porque justifica a ordem dada; funciona como explicação."},
+        {"type":"heading","text":"4. Causa x consequência"},
+        {"type":"paragraph","text":"A direção importa. Em `Choveu tanto que a rua alagou`, a chuva intensa é causa e o alagamento é consequência. Se a questão pedir a relação da oração iniciada por `que`, a resposta é consequência."},
+        {"type":"heading","text":"5. Concessão x oposição"},
+        {"type":"paragraph","text":"`Embora estivesse cansado, continuou` é concessão: o cansaço poderia impedir a ação, mas não impediu. `Estava cansado, mas continuou` apresenta oposição entre as duas ideias. São próximas, mas a estrutura semântica não é idêntica."},
+        {"type":"heading","text":"6. Substituição de conectores"},
+        {"type":"paragraph","text":"Para saber se um conector pode substituir outro, preserve não só a gramática, mas a relação lógica. Trocar `embora` por `porque`, por exemplo, muda concessão para causa e altera o sentido."},
+        {"type":"callout","text":"Atalho de prova: risque o conector e descreva a relação entre as orações com suas palavras. Só depois olhe as alternativas."}
+      ]
+    },
+    {
+      "id": "phase-08-001-checkpoint",
+      "type": "checkpoint",
+      "title": "008 · Checkpoint: qual relação foi criada?",
+      "passPercent": 67,
+      "lead": "Três decisões rápidas antes das questões completas.",
+      "questions": [
+        {"id":"cp1","question":"Em “Embora estivesse chovendo, saíram para caminhar”, a relação é de:","options":["Causa","Concessão","Finalidade","Conclusão"],"answer":1,"explanation":"A chuva é um obstáculo admitido que não impede a caminhada; isso caracteriza concessão."},
+        {"id":"cp2","question":"Em “Estudou bastante, portanto foi aprovado”, “portanto” introduz:","options":["Condição","Conclusão","Causa","Tempo"],"answer":1,"explanation":"A aprovação é apresentada como conclusão decorrente do que veio antes."},
+        {"id":"cp3","question":"Em “Treinou tanto que terminou exausto”, a oração iniciada por “que” exprime:","options":["Causa","Consequência","Concessão","Finalidade"],"answer":1,"explanation":"A exaustão é o resultado do treinamento intenso."}
+      ]
+    },
+    {
+      "id": "phase-08-001-workshop",
+      "type": "workshop",
+      "title": "008 · Workshop: 10 questões FGV resolvidas",
+      "lead": "Tente identificar a relação antes de abrir a solução. A meta é aprender a enxergar o vínculo entre as ideias, não decorar palavras.",
+      "workedQuestions": [
+        {"question":"Em “Como o sistema apresentou falhas, a equipe iniciou uma revisão”, o termo “como” exprime:","options":["Comparação","Causa","Condição","Concessão","Finalidade"],"answer":1,"solution":"A falha do sistema é apresentada como motivo para iniciar a revisão. Nesse contexto, `como` tem valor causal, não comparativo."},
+        {"question":"Em “O sistema apresentou tantas falhas que precisou ser interrompido”, a oração iniciada por “que” exprime:","options":["Causa","Consequência","Finalidade","Condição","Explicação"],"answer":1,"solution":"A interrupção é o resultado da intensidade indicada por `tantas`. A estrutura `tão/tanto/tamanho... que` marca consequência."},
+        {"question":"Em “Caso o servidor volte a responder, o processamento será retomado”, “caso” introduz:","options":["Tempo","Condição","Conclusão","Oposição","Causa"],"answer":1,"solution":"A retomada do processamento depende de o servidor voltar a responder. É uma condição."},
+        {"question":"Em “Embora o prazo fosse curto, a equipe entregou o projeto”, a relação entre as orações é de:","options":["Causa","Concessão","Finalidade","Conclusão","Proporção"],"answer":1,"solution":"O prazo curto poderia impedir a entrega, mas isso não ocorre. A oração concessiva admite o obstáculo sem invalidar o fato principal."},
+        {"question":"Em “O relatório é breve, porém contém todos os dados necessários”, “porém” estabelece:","options":["Conclusão","Oposição","Condição","Finalidade","Tempo"],"answer":1,"solution":"Há contraste entre ser breve e, apesar disso, conter todos os dados necessários. `Porém` é adversativo."},
+        {"question":"Em “A equipe automatizou a rotina para que os erros fossem reduzidos”, a oração destacada exprime:","options":["Causa","Consequência","Finalidade","Concessão","Conclusão"],"answer":2,"solution":"A redução dos erros é o objetivo da automatização. `Para que` introduz finalidade."},
+        {"question":"Em “Os testes foram concluídos; logo, a versão pode ser publicada”, “logo” indica:","options":["Causa","Explicação","Conclusão","Condição","Tempo"],"answer":2,"solution":"A publicação é apresentada como conclusão derivada do término dos testes."},
+        {"question":"Em “Não execute o comando, porque ele apagará os dados”, a oração com “porque” funciona principalmente como:","options":["Causa de um fato já ocorrido","Explicação/justificativa da ordem","Consequência","Concessão","Condição"],"answer":1,"solution":"A segunda oração justifica a ordem `não execute`. Em construções imperativas, esse `porque` costuma ter valor explicativo."},
+        {"question":"Em “À medida que os acessos aumentavam, o tempo de resposta piorava”, a locução expressa:","options":["Finalidade","Proporção","Concessão","Causa exclusiva","Conclusão"],"answer":1,"solution":"As duas grandezas variam paralelamente. `À medida que` marca relação proporcional."},
+        {"question":"Em “Ele revisou o texto e, em seguida, enviou o arquivo”, a expressão “em seguida” exprime:","options":["Tempo/sequência","Causa","Concessão","Condição","Finalidade"],"answer":0,"solution":"A expressão organiza os eventos em sequência temporal: primeiro revisão, depois envio."}
+      ]
+    },
+    {
+      "id": "phase-08-001-lab",
+      "type": "lab",
+      "title": "008 · Lab: 10 questões para responder",
+      "lead": "Responda sem consultar a teoria. Ao submeter, cada questão mostra a alternativa correta e explica a relação semântica.",
+      "passPercent": 0,
+      "questions": [
+        {"id":"lab1","question":"Em “Já que todos concordaram, a proposta foi aprovada”, a locução “já que” exprime:","options":["Causa","Condição","Concessão","Finalidade","Proporção"],"answer":0,"explanation":"A concordância é apresentada como motivo da aprovação; `já que` tem valor causal."},
+        {"id":"lab2","question":"Em “O tráfego cresceu tanto que o serviço ficou lento”, a segunda oração exprime:","options":["Causa","Consequência","Concessão","Condição","Explicação"],"answer":1,"explanation":"A lentidão é resultado do crescimento intenso do tráfego."},
+        {"id":"lab3","question":"Em “Se o arquivo chegar hoje, o processamento começará à noite”, a primeira oração exprime:","options":["Conclusão","Condição","Causa","Finalidade","Oposição"],"answer":1,"explanation":"O início do processamento depende de o arquivo chegar hoje."},
+        {"id":"lab4","question":"Em “Ainda que o custo aumente, o projeto continuará”, “ainda que” introduz:","options":["Causa","Concessão","Tempo","Conclusão","Finalidade"],"answer":1,"explanation":"O aumento de custo é um obstáculo admitido que não impede a continuidade do projeto."},
+        {"id":"lab5","question":"Em “A solução é simples, contudo exige atenção”, “contudo” estabelece:","options":["Oposição","Causa","Finalidade","Condição","Conclusão"],"answer":0,"explanation":"`Contudo` é adversativo e introduz contraste entre simplicidade e exigência de atenção."},
+        {"id":"lab6","question":"Em “Ele salvou uma cópia a fim de que pudesse recuperar os dados”, a locução exprime:","options":["Consequência","Finalidade","Concessão","Causa","Proporção"],"answer":1,"explanation":"Recuperar os dados é o objetivo de salvar a cópia."},
+        {"id":"lab7","question":"Em “O prazo terminou; por conseguinte, novas inscrições não serão aceitas”, a expressão destacada indica:","options":["Conclusão","Condição","Explicação","Tempo","Concessão"],"answer":0,"explanation":"A não aceitação de inscrições é apresentada como conclusão decorrente do fim do prazo."},
+        {"id":"lab8","question":"Em “Apresse-se, pois o portão fechará em cinco minutos”, “pois” tem valor de:","options":["Conclusão","Explicação","Concessão","Proporção","Condição"],"answer":1,"explanation":"A oração com `pois` justifica a ordem `apresse-se`; portanto, é explicativa."},
+        {"id":"lab9","question":"Em “Quanto mais praticava, mais rápido resolvia as questões”, a relação é de:","options":["Causa simples","Proporção","Concessão","Finalidade","Conclusão"],"answer":1,"explanation":"As duas grandezas evoluem paralelamente; a construção `quanto mais... mais` é proporcional."},
+        {"id":"lab10","question":"Em “Assim que terminar a prova, entregarei o cartão-resposta”, a locução “assim que” exprime:","options":["Tempo","Causa","Condição","Concessão","Conclusão"],"answer":0,"explanation":"A entrega é situada temporalmente imediatamente após o término da prova."}
+      ]
+    },
+    {
+      "id": "phase-08-001-review",
+      "type": "review",
+      "title": "008 · Review: mapa das relações semânticas",
+      "lead": "Tente reconstruir a tabela no papel antes de conferir.",
+      "blocks": [
+        {"type":"bullets","items":[
+          "Causa = motivo; consequência = resultado.",
+          "Condição = requisito para o fato principal.",
+          "Concessão = obstáculo admitido que não impede o fato.",
+          "Oposição = contraste entre ideias.",
+          "Finalidade = objetivo pretendido.",
+          "Conclusão = inferência/resultante argumentativa.",
+          "Explicação = justificativa de uma afirmação ou ordem.",
+          "Tempo = localização ou sequência temporal.",
+          "Proporção = duas variações relacionadas.",
+          "O sentido do conector depende do contexto; não da palavra isolada."
+        ]},
+        {"type":"callout","text":"Se duas alternativas usam conectores parecidos, substitua-os mentalmente no período e pergunte se a relação lógica continua exatamente a mesma."}
+      ]
+    },
+    {
+      "id": "phase-08-001-quiz",
+      "type": "quiz",
+      "title": "008 · Quiz FGV: conectores e relações semânticas",
+      "passPercent": 80,
+      "lead": "Dez questões. Gate objetivo: pelo menos 8/10.",
+      "questions": [
+        {"id":"q1","question":"Em “Visto que os dados estavam incompletos, a análise foi adiada”, a locução indica:","options":["Causa","Condição","Concessão","Finalidade","Conclusão"],"answer":0,"explanation":"Os dados incompletos são o motivo do adiamento."},
+        {"id":"q2","question":"Em “O volume era tão alto que o processamento demorou horas”, a oração final exprime:","options":["Causa","Consequência","Explicação","Concessão","Condição"],"answer":1,"explanation":"A demora é consequência do volume elevado."},
+        {"id":"q3","question":"Em “Contanto que os requisitos sejam atendidos, a implantação poderá ocorrer”, a locução indica:","options":["Causa","Finalidade","Condição","Conclusão","Oposição"],"answer":2,"explanation":"A implantação depende do atendimento dos requisitos."},
+        {"id":"q4","question":"Em “Mesmo que haja atrasos, o serviço será entregue”, a relação é de:","options":["Concessão","Causa","Tempo","Finalidade","Proporção"],"answer":0,"explanation":"Os atrasos são admitidos como obstáculo sem impedir a entrega."},
+        {"id":"q5","question":"Em “O método é antigo, entretanto continua eficiente”, “entretanto” indica:","options":["Conclusão","Oposição","Finalidade","Condição","Explicação"],"answer":1,"explanation":"Há contraste entre ser antigo e continuar eficiente."},
+        {"id":"q6","question":"Em “O sistema foi redundado para que uma falha não interrompesse o serviço”, a oração destacada exprime:","options":["Causa","Consequência","Finalidade","Concessão","Tempo"],"answer":2,"explanation":"Evitar interrupção é a finalidade da redundância."},
+        {"id":"q7","question":"Em “Todos os testes passaram; assim, a entrega foi autorizada”, “assim” exprime:","options":["Conclusão","Concessão","Causa","Tempo","Condição"],"answer":0,"explanation":"A autorização é apresentada como conclusão do resultado dos testes."},
+        {"id":"q8","question":"Em “Não desligue o equipamento, pois o backup ainda está em andamento”, “pois” é:","options":["Conclusivo","Explicativo","Concessivo","Proporcional","Temporal"],"answer":1,"explanation":"A segunda oração justifica a ordem de não desligar o equipamento."},
+        {"id":"q9","question":"Em “À proporção que a demanda cresce, aumenta a necessidade de capacidade”, a locução exprime:","options":["Finalidade","Causa exclusiva","Proporção","Conclusão","Concessão"],"answer":2,"explanation":"As duas grandezas variam de forma relacionada."},
+        {"id":"q10","question":"A substituição que preserva melhor o sentido de “Embora estivesse cansado, continuou trabalhando” é:","options":["Porque estava cansado, continuou trabalhando.","Ainda que estivesse cansado, continuou trabalhando.","Para que estivesse cansado, continuou trabalhando.","Logo estava cansado, continuou trabalhando.","Se estivesse cansado, continuou trabalhando."],"answer":1,"explanation":"`Ainda que` mantém o valor concessivo de `embora`; as demais alternativas alteram a relação lógica."}
+      ]
+    },
+    {
+      "id": "phase-08-001-project",
+      "type": "project",
+      "title": "008 · Mastery Gate: troque conectores sem trocar o sentido",
+      "lead": "Você fecha o tema quando consegue identificar, substituir e justificar conectores pela relação semântica, não por memorização isolada.",
+      "scenario": "Crie cinco períodos curtos no estilo FGV, cada um com uma relação diferente: causa, consequência, condição, concessão e conclusão.",
+      "tasks": [
+        "Sublinhe o conector de cada período.",
+        "Explique a relação sem usar o nome do conector como justificativa.",
+        "Substitua cada conector por outro que preserve o sentido.",
+        "Crie para cada frase um distrator com conector gramaticalmente possível, mas semanticamente inadequado.",
+        "Explique exatamente o que muda no sentido do distrator.",
+        "Inclua um caso em que `porque` seja causal e outro em que seja explicativo.",
+        "Inclua um caso de `pois` e justifique seu valor pelo contexto.",
+        "Depois de um intervalo, refaça o quiz sem revisar antes."
+      ],
+      "criteria": [
+        "Quiz ≥ 80%.",
+        "Distingue causa de consequência e causa de explicação.",
+        "Distingue concessão de oposição.",
+        "Reconhece condição, finalidade, conclusão, tempo e proporção.",
+        "Substitui conectores preservando a relação semântica.",
+        "Justifica o valor do conector pelo contexto."
+      ]
+    }
+  ]
+}
