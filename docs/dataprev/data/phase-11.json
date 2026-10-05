@@ -1,0 +1,159 @@
+{
+  "id": "phase-11",
+  "number": "11",
+  "label": "RLM · EM ESTUDO",
+  "title": "Geometria",
+  "available": true,
+  "description": "Resolver problemas geométricos típicos de prova envolvendo perímetro, área, triângulos, Teorema de Pitágoras, semelhança, circunferência, volume e plano cartesiano.",
+  "lessons": [
+    {
+      "id": "phase-11-001-theory",
+      "type": "theory",
+      "title": "011 · Theory: desenhe antes de calcular",
+      "lead": "Em geometria de prova, o maior erro costuma acontecer antes da conta: usar a medida errada, confundir área com perímetro ou não enxergar a figura escondida no enunciado.",
+      "blocks": [
+        {"type":"heading","text":"1. Perímetro x área"},
+        {"type":"paragraph","text":"Perímetro mede o contorno; área mede a superfície. Em um retângulo de lados a e b, `P = 2(a+b)` e `A = a·b`. Em um quadrado de lado l, `P = 4l` e `A = l²`."},
+        {"type":"callout","text":"Unidade ajuda a detectar erro: comprimento usa cm, m etc.; área usa cm², m²; volume usa cm³, m³."},
+        {"type":"heading","text":"2. Triângulos"},
+        {"type":"bullets","items":[
+          "Soma dos ângulos internos de qualquer triângulo = 180°.",
+          "Área: `A = base × altura / 2`.",
+          "Triângulo retângulo: `hipotenusa² = cateto₁² + cateto₂²`.",
+          "Triplas úteis: 3-4-5, 5-12-13, 6-8-10."
+        ]},
+        {"type":"heading","text":"3. Semelhança de triângulos"},
+        {"type":"paragraph","text":"Triângulos semelhantes têm ângulos correspondentes iguais e lados proporcionais. Se a razão entre lados correspondentes é k, os perímetros variam por k e as áreas por k²."},
+        {"type":"heading","text":"4. Circunferência e círculo"},
+        {"type":"code","code":"Comprimento da circunferência: C = 2πr = πd\nÁrea do círculo: A = πr²"},
+        {"type":"paragraph","text":"Cuidado com raio e diâmetro: `d = 2r`. Muitas alternativas erradas surgem justamente de usar o diâmetro no lugar do raio na fórmula da área."},
+        {"type":"heading","text":"5. Trapézio"},
+        {"type":"code","code":"A = (B + b) × h / 2"},
+        {"type":"paragraph","text":"B e b são as duas bases paralelas; h é a distância perpendicular entre elas."},
+        {"type":"heading","text":"6. Volumes básicos"},
+        {"type":"bullets","items":[
+          "Paralelepípedo retângulo: `V = comprimento × largura × altura`.",
+          "Cubo de aresta a: `V = a³`.",
+          "Prisma em geral: `V = área da base × altura`."
+        ]},
+        {"type":"heading","text":"7. Plano cartesiano"},
+        {"type":"code","code":"Distância entre (x₁,y₁) e (x₂,y₂):\nd = √[(x₂-x₁)² + (y₂-y₁)²]\n\nPonto médio:\nM = ((x₁+x₂)/2, (y₁+y₂)/2)"},
+        {"type":"callout","text":"Protocolo FGV: desenhe, marque as medidas, escreva o que a questão pede e só então escolha a fórmula. Isso evita usar uma fórmula correta no problema errado."}
+      ]
+    },
+    {
+      "id": "phase-11-001-checkpoint",
+      "type": "checkpoint",
+      "title": "011 · Checkpoint: escolha a estrutura",
+      "passPercent": 67,
+      "lead": "Três decisões rápidas antes das questões completas.",
+      "questions": [
+        {"id":"cp1","question":"Um retângulo mede 8 m por 5 m. Sua área é:","options":["13 m²","26 m²","40 m²","80 m²"],"answer":2,"explanation":"Área do retângulo = 8 × 5 = 40 m²."},
+        {"id":"cp2","question":"Um triângulo retângulo tem catetos 3 e 4. A hipotenusa mede:","options":["5","6","7","12"],"answer":0,"explanation":"Pelo Teorema de Pitágoras: 3² + 4² = 9 + 16 = 25; a hipotenusa é 5."},
+        {"id":"cp3","question":"Um círculo tem diâmetro 10 cm. Seu raio mede:","options":["2,5 cm","5 cm","10 cm","20 cm"],"answer":1,"explanation":"O raio é metade do diâmetro: 10/2 = 5 cm."}
+      ]
+    },
+    {
+      "id": "phase-11-001-workshop",
+      "type": "workshop",
+      "title": "011 · Workshop: 10 questões FGV resolvidas",
+      "lead": "Tente montar o desenho e identificar a fórmula antes de conferir a solução explicada.",
+      "workedQuestions": [
+        {"question":"Um terreno retangular mede 12 m de comprimento e 8 m de largura. Sua área é:","options":["20 m²","40 m²","80 m²","96 m²","192 m²"],"answer":3,"solution":"Área do retângulo: 12 × 8 = 96 m². O valor 40 seria o perímetro, não a área."},
+        {"question":"Um quadrado tem perímetro igual a 36 cm. Sua área é:","options":["36 cm²","72 cm²","81 cm²","108 cm²","1296 cm²"],"answer":2,"solution":"Se 4l = 36, então l = 9 cm. A área é 9² = 81 cm²."},
+        {"question":"Um triângulo tem base de 10 cm e altura de 6 cm. Sua área mede:","options":["16 cm²","30 cm²","60 cm²","80 cm²","120 cm²"],"answer":1,"solution":"A = base × altura / 2 = 10 × 6 / 2 = 30 cm²."},
+        {"question":"Em um triângulo retângulo, os catetos medem 6 cm e 8 cm. A hipotenusa mede:","options":["9 cm","10 cm","12 cm","14 cm","15 cm"],"answer":1,"solution":"6² + 8² = 36 + 64 = 100. Logo, a hipotenusa mede √100 = 10 cm."},
+        {"question":"Uma circunferência tem raio 7 cm. Usando π = 22/7, seu comprimento é:","options":["22 cm","44 cm","49 cm","77 cm","154 cm"],"answer":1,"solution":"C = 2πr = 2 × 22/7 × 7 = 44 cm."},
+        {"question":"Um círculo de raio 5 cm tem área, usando π = 3,14, igual a:","options":["31,4 cm²","62,8 cm²","75 cm²","78,5 cm²","157 cm²"],"answer":3,"solution":"A = πr² = 3,14 × 25 = 78,5 cm²."},
+        {"question":"Um trapézio possui bases de 12 cm e 8 cm e altura de 5 cm. Sua área é:","options":["40 cm²","45 cm²","50 cm²","60 cm²","100 cm²"],"answer":2,"solution":"A = (12 + 8) × 5 / 2 = 20 × 5 / 2 = 50 cm²."},
+        {"question":"Dois triângulos são semelhantes. Um lado de 8 cm no menor corresponde a um lado no maior. Se a razão menor:maior é 2:3, o lado correspondente no maior mede:","options":["10 cm","12 cm","14 cm","16 cm","18 cm"],"answer":1,"solution":"8/x = 2/3. Fazendo produto cruzado: 2x = 24, então x = 12 cm."},
+        {"question":"Uma caixa retangular mede 5 cm × 4 cm × 3 cm. Seu volume é:","options":["12 cm³","20 cm³","40 cm³","60 cm³","120 cm³"],"answer":3,"solution":"V = 5 × 4 × 3 = 60 cm³."},
+        {"question":"No plano cartesiano, a distância entre A(1,2) e B(4,6) é:","options":["3","4","5","6","7"],"answer":2,"solution":"Δx = 3 e Δy = 4. Logo, d = √(3² + 4²) = √25 = 5."}
+      ]
+    },
+    {
+      "id": "phase-11-001-lab",
+      "type": "lab",
+      "title": "011 · Lab: 10 questões para responder",
+      "lead": "Resolva no papel sem consultar a teoria. Ao submeter, cada item mostra a resposta correta e a explicação.",
+      "passPercent": 0,
+      "questions": [
+        {"id":"lab1","question":"Um retângulo tem comprimento 9 cm e perímetro 30 cm. Sua largura e sua área são, respectivamente:","options":["5 cm e 45 cm²","6 cm e 54 cm²","7 cm e 63 cm²","12 cm e 108 cm²","21 cm e 189 cm²"],"answer":1,"explanation":"2(9 + l) = 30 ⇒ 9 + l = 15 ⇒ l = 6. Área = 9 × 6 = 54 cm²."},
+        {"id":"lab2","question":"Um quadrado possui lado de 7 cm. Seu perímetro é:","options":["14 cm","21 cm","28 cm","49 cm","196 cm"],"answer":2,"explanation":"P = 4 × 7 = 28 cm."},
+        {"id":"lab3","question":"A área de um triângulo de base 12 cm e altura 9 cm é:","options":["21 cm²","42 cm²","54 cm²","108 cm²","216 cm²"],"answer":2,"explanation":"A = 12 × 9 / 2 = 54 cm²."},
+        {"id":"lab4","question":"Em um triângulo retângulo, a hipotenusa mede 13 cm e um dos catetos mede 5 cm. O outro cateto mede:","options":["8 cm","10 cm","12 cm","14 cm","18 cm"],"answer":2,"explanation":"x² + 5² = 13² ⇒ x² = 169 - 25 = 144 ⇒ x = 12 cm."},
+        {"id":"lab5","question":"Uma circunferência tem diâmetro de 10 cm. Usando π = 3,14, seu comprimento é:","options":["15,7 cm","20 cm","31,4 cm","62,8 cm","100 cm"],"answer":2,"explanation":"C = πd = 3,14 × 10 = 31,4 cm."},
+        {"id":"lab6","question":"Um círculo tem diâmetro 12 cm. Usando π = 3, sua área é:","options":["36 cm²","72 cm²","108 cm²","144 cm²","432 cm²"],"answer":2,"explanation":"O raio é 6 cm. A = πr² = 3 × 36 = 108 cm²."},
+        {"id":"lab7","question":"Um trapézio tem bases de 15 cm e 9 cm e altura de 4 cm. Sua área é:","options":["24 cm²","36 cm²","48 cm²","60 cm²","96 cm²"],"answer":2,"explanation":"A = (15 + 9) × 4 / 2 = 24 × 2 = 48 cm²."},
+        {"id":"lab8","question":"Dois triângulos semelhantes têm razão de lados menor:maior igual a 3:5. Se um lado do menor mede 9 cm, o correspondente no maior mede:","options":["12 cm","15 cm","18 cm","21 cm","27 cm"],"answer":1,"explanation":"9/x = 3/5 ⇒ 3x = 45 ⇒ x = 15 cm."},
+        {"id":"lab9","question":"Um cubo possui aresta de 4 cm. Seu volume é:","options":["16 cm³","32 cm³","48 cm³","64 cm³","96 cm³"],"answer":3,"explanation":"V = a³ = 4³ = 64 cm³."},
+        {"id":"lab10","question":"O ponto médio do segmento que liga A(2,4) a B(8,10) é:","options":["(3,5)","(4,6)","(5,7)","(6,8)","(10,14)"],"answer":2,"explanation":"M = ((2+8)/2, (4+10)/2) = (5,7)."}
+      ]
+    },
+    {
+      "id": "phase-11-001-review",
+      "type": "review",
+      "title": "011 · Review: mapa rápido de geometria",
+      "lead": "Reconstrua as fórmulas no papel antes de conferir.",
+      "blocks": [
+        {"type":"bullets","items":[
+          "Retângulo: `P = 2(a+b)` e `A = ab`.",
+          "Quadrado: `P = 4l` e `A = l²`.",
+          "Triângulo: `A = bh/2`; soma dos ângulos = 180°.",
+          "Pitágoras: `h² = a² + b²` em triângulo retângulo.",
+          "Semelhança: lados correspondentes são proporcionais.",
+          "Circunferência: `C = 2πr = πd`.",
+          "Círculo: `A = πr²`.",
+          "Trapézio: `A = (B+b)h/2`.",
+          "Paralelepípedo: `V = comprimento × largura × altura`.",
+          "Plano cartesiano: distância vem de Pitágoras; ponto médio é a média das coordenadas."
+        ]},
+        {"type":"callout","text":"Antes de calcular, confira três coisas: qual grandeza é pedida, qual unidade deve sair e se a medida fornecida é realmente a que entra na fórmula."}
+      ]
+    },
+    {
+      "id": "phase-11-001-quiz",
+      "type": "quiz",
+      "title": "011 · Quiz FGV: geometria",
+      "passPercent": 80,
+      "lead": "Dez questões. Gate objetivo: pelo menos 8/10.",
+      "questions": [
+        {"id":"q1","question":"Um terreno quadrado tem área de 144 m². Seu perímetro mede:","options":["24 m","36 m","48 m","72 m","144 m"],"answer":2,"explanation":"Se l² = 144, então l = 12. Perímetro = 4 × 12 = 48 m."},
+        {"id":"q2","question":"Um retângulo de área 84 cm² tem largura 7 cm. Seu comprimento é:","options":["10 cm","11 cm","12 cm","13 cm","14 cm"],"answer":2,"explanation":"84 = 7 × c ⇒ c = 12 cm."},
+        {"id":"q3","question":"Dois ângulos de um triângulo medem 50° e 60°. O terceiro mede:","options":["60°","65°","70°","80°","90°"],"answer":2,"explanation":"A soma é 180°. Então 180 - 50 - 60 = 70°."},
+        {"id":"q4","question":"Um triângulo retângulo tem catetos de 9 cm e 12 cm. Sua hipotenusa mede:","options":["13 cm","14 cm","15 cm","18 cm","21 cm"],"answer":2,"explanation":"9² + 12² = 81 + 144 = 225; √225 = 15."},
+        {"id":"q5","question":"Um círculo de raio 4 cm tem área, usando π = 3, igual a:","options":["12 cm²","24 cm²","36 cm²","48 cm²","96 cm²"],"answer":3,"explanation":"A = 3 × 4² = 3 × 16 = 48 cm²."},
+        {"id":"q6","question":"Uma circunferência tem raio 6 cm. Usando π = 3, seu comprimento é:","options":["18 cm","24 cm","36 cm","72 cm","108 cm"],"answer":2,"explanation":"C = 2 × 3 × 6 = 36 cm."},
+        {"id":"q7","question":"A área de um trapézio com bases 10 cm e 6 cm e altura 4 cm é:","options":["16 cm²","24 cm²","32 cm²","40 cm²","64 cm²"],"answer":2,"explanation":"A = (10 + 6) × 4 / 2 = 32 cm²."},
+        {"id":"q8","question":"Em dois triângulos semelhantes, um lado de 6 cm no menor corresponde a 15 cm no maior. Se outro lado do menor mede 8 cm, o correspondente no maior mede:","options":["16 cm","18 cm","20 cm","22 cm","24 cm"],"answer":2,"explanation":"A razão maior/menor é 15/6 = 2,5. Então 8 × 2,5 = 20 cm."},
+        {"id":"q9","question":"Um paralelepípedo retângulo mede 10 cm × 3 cm × 2 cm. Seu volume é:","options":["15 cm³","30 cm³","60 cm³","90 cm³","120 cm³"],"answer":2,"explanation":"V = 10 × 3 × 2 = 60 cm³."},
+        {"id":"q10","question":"A distância entre os pontos A(0,0) e B(6,8) é:","options":["8","9","10","12","14"],"answer":2,"explanation":"d = √(6² + 8²) = √100 = 10."}
+      ]
+    },
+    {
+      "id": "phase-11-001-project",
+      "type": "project",
+      "title": "011 · Mastery Gate: geometria sem fórmula errada",
+      "lead": "Você fecha o tema quando consegue transformar um enunciado em figura, selecionar a relação correta e validar unidade e resultado.",
+      "scenario": "Crie uma questão inédita no estilo FGV envolvendo pelo menos duas ideias geométricas, como área + perímetro, Pitágoras + área, semelhança + proporção ou volume + conversão de medidas.",
+      "tasks": [
+        "Desenhe a figura e marque todas as medidas relevantes.",
+        "Escreva claramente qual grandeza a questão pede.",
+        "Resolva passo a passo e mantenha as unidades.",
+        "Crie cinco alternativas, incluindo distratores por confusão entre área/perímetro, raio/diâmetro ou uso incorreto de fórmula.",
+        "Explique por que cada distrator está errado.",
+        "Resolva uma segunda vez por outra estratégia quando possível.",
+        "Faça uma checagem dimensional e de plausibilidade do resultado.",
+        "Depois de um intervalo, refaça o Quiz sem consultar a teoria."
+      ],
+      "criteria": [
+        "Quiz ≥ 80%.",
+        "Você distingue perímetro, área e volume sem confundir unidades.",
+        "Aplica Pitágoras e semelhança corretamente.",
+        "Distingue raio de diâmetro antes de usar fórmulas do círculo.",
+        "Consegue resolver problemas de distância e ponto médio no plano cartesiano.",
+        "Valida o resultado pela unidade e pela plausibilidade geométrica."
+      ]
+    }
+  ]
+}
