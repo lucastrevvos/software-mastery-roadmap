@@ -58,6 +58,20 @@
     </form>
   </dialog>
 
-  <script src="app.js?v=1.1.0" defer></script>
+  <script>
+    (() => {
+      const CACHE_VERSION = "1.1.6";
+      const originalFetch = window.fetch.bind(window);
+      window.fetch = (input, init) => {
+        if (typeof input === "string" && input.includes("./data/")) {
+          const url = new URL(input, window.location.href);
+          url.searchParams.set("v", CACHE_VERSION);
+          input = url.toString();
+        }
+        return originalFetch(input, init);
+      };
+    })();
+  </script>
+  <script src="app.js?v=1.1.6" defer></script>
 </body>
 </html>
