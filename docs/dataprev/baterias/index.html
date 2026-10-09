@@ -55,6 +55,22 @@
     .result strong{font-size:24px}
     .source-box{margin-top:30px;background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:18px}
     .source-box ul{padding-left:20px}
+    .coverage-section{margin:24px 0 30px;background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:18px}
+    .coverage-head{display:flex;justify-content:space-between;gap:16px;align-items:flex-end;flex-wrap:wrap}
+    .coverage-stats{display:flex;gap:8px;flex-wrap:wrap}
+    .coverage-stat{padding:6px 10px;border-radius:999px;font-size:12px;font-weight:800;border:1px solid var(--border);background:var(--panel2)}
+    .coverage-stat.ok{color:var(--ok)} .coverage-stat.partial{color:var(--accent)} .coverage-stat.gap{color:var(--bad)}
+    .coverage-legend{color:var(--muted);font-size:13px;margin:8px 0 16px}
+    .coverage-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+    .coverage-group{border:1px solid var(--border);background:var(--panel2);border-radius:12px;overflow:hidden}
+    .coverage-group summary{cursor:pointer;padding:13px 14px;font-weight:800}
+    .coverage-items{padding:0 12px 12px}
+    .coverage-item{display:grid;grid-template-columns:12px 1fr;gap:9px;align-items:start;padding:8px 2px;border-top:1px solid rgba(39,50,75,.65)}
+    .coverage-dot{width:9px;height:9px;border-radius:50%;margin-top:7px;background:var(--muted)}
+    .coverage-dot.ok{background:var(--ok)} .coverage-dot.partial{background:var(--accent)} .coverage-dot.gap{background:var(--bad)}
+    .coverage-item small{display:block;color:var(--muted);font-size:12px;margin-top:2px}
+    .coverage-priority{margin-top:14px;padding:12px 14px;border-left:4px solid var(--bad);background:rgba(255,123,137,.06);border-radius:10px;color:var(--muted)}
+    @media(max-width:800px){.coverage-grid{grid-template-columns:1fr}}
     code{background:var(--panel3);padding:.08em .35em;border-radius:5px}
     @media(max-width:800px){
       .battery-grid{grid-template-columns:1fr}
@@ -76,6 +92,19 @@
     <h1>Baterias FGV Recentes · Dataprev</h1>
     <p class="lead">Baterias de treino ativo com prioridade para questões realmente aplicadas pela FGV nos últimos anos, cobrindo tanto Conhecimentos Gerais quanto Conhecimentos Específicos do Perfil 3 — Desenvolvimento de Software da Dataprev 2026.</p>
     <div class="notice"><strong>Regra deste módulo:</strong> prioridade máxima para questões realmente aplicadas pela FGV nos anos mais recentes (2026 → 2025 → 2024 → 2023), sempre filtradas pelo edital Dataprev 2026 — Perfil 3. Questões autorais entram apenas quando faltarem itens reais de um tema e aparecem identificadas como <strong>BASEADA NO PADRÃO FGV</strong>.</div>
+  </section>
+
+  <section class="coverage-section" id="coverageSection">
+    <div class="coverage-head">
+      <div>
+        <p class="eyebrow">MAPA DO EDITAL · PERFIL 3</p>
+        <h2 style="margin-bottom:4px">Cobertura das baterias</h2>
+      </div>
+      <div class="coverage-stats" id="coverageStats"></div>
+    </div>
+    <p class="coverage-legend">Este mapa mede <strong>cobertura por questões</strong>, não domínio do aluno. Verde = já há boa amostra; amarelo = existe cobrança, mas precisa de mais questões; vermelho = ainda é lacuna do nosso banco.</p>
+    <div class="coverage-grid" id="coverageGrid"></div>
+    <div class="coverage-priority" id="coveragePriority"></div>
   </section>
 
   <section class="battery-grid" id="batteryGrid"></section>
@@ -119,11 +148,135 @@
       <li><a href="https://conhecimento.fgv.br/sites/default/files/concursos/b5504.pdf" target="_blank" rel="noopener">CNU 2 — prova FGV 2025 · IA, LAI e LGPD</a></li>
       <li><a href="https://conhecimento.fgv.br/sites/default/files/concursos/analista-de-procuradoria-especialidade-administrativa-pgmcns203-tipo-1.pdf" target="_blank" rel="noopener">Prefeitura do Rio — prova FGV 2025 · Inteligência Artificial</a></li>
     </ul>
-    <p class="source">As próximas baterias continuarão seguindo a regra: FGV real recente primeiro; questões baseadas no padrão da banca apenas quando faltarem itens reais suficientes dentro do edital.</p>
+    <p class="source">O mapa de cobertura acima é usado para escolher as próximas baterias: primeiro fechamos as lacunas do edital com questões FGV reais recentes; questões baseadas no padrão da banca entram apenas quando não houver amostra real suficiente.</p>
   </section>
 </main>
 
 <script>
+
+const coverageGroups = [
+  {name:"Português",items:[
+    ["Compreensão/interpretação e gêneros","ok","Bateria 05 já trabalha interpretação, gêneros e finalidade textual."],
+    ["Ortografia oficial e acentuação","ok","Questões reais recentes sobre ortografia, tonicidade e pronúncia."],
+    ["Coesão, referenciação e conectores","ok","Elipse, referência e relações semânticas já aparecem."],
+    ["Tempos e modos verbais","gap","Ainda sem bateria específica."],
+    ["Classes de palavras","ok","Adjetivos e classes já cobrados."],
+    ["Coordenação e subordinação","gap","Ainda precisa de FGV real direcionada."],
+    ["Pontuação","gap","Lacuna importante para FGV."],
+    ["Concordância verbal e nominal","gap","Ainda sem amostra suficiente nas baterias."],
+    ["Regência verbal e nominal","ok","Regência já aparece na Bateria 05."],
+    ["Crase","ok","Questão real presente."],
+    ["Colocação pronominal","gap","Ainda não coberta."],
+    ["Reescrita, substituição e reorganização","partial","Há semântica e coesão, mas falta uma bateria própria de reescrita FGV."]
+  ]},
+  {name:"Inglês, RLM, Atualidades e Legislação",items:[
+    ["Inglês: compreensão textual","ok","Bateria 06 usa a própria Dataprev/FGV 2024."],
+    ["Inglês: gramática relevante ao sentido","ok","Conectores, pronomes, modal verbs e classes no contexto."],
+    ["RLM: estruturas/proposições/tabela-verdade/equivalências","ok","Boa cobertura inicial na Bateria 07."],
+    ["RLM: argumentação, inferências e deduções","partial","Há lógica, mas falta uma bateria mais focada em argumentos."],
+    ["RLM: diagramas lógicos","gap","Sem questão dedicada."],
+    ["RLM: lógica de primeira ordem","partial","Predicados aparecem, mas precisa de mais volume."],
+    ["RLM: aritmética","ok","Proporção, média, álgebra e taxa equivalente."],
+    ["RLM: geometria","gap","Sem questão dedicada."],
+    ["RLM: matrizes","gap","Sem questão dedicada."],
+    ["Atualidades multidisciplinares","partial","Coberta, mas é uma área aberta e precisa renovação contínua."],
+    ["IA: fundamentos, ML, generativa e LLMs","ok","Bateria 08 + Dataprev 2024."],
+    ["IA: ética, governança e privacidade","partial","Ainda precisa de mais questões reais recentes."],
+    ["LAI, LGPD, Marco Civil e delitos informáticos","ok","Bateria 09 cobre os quatro eixos legais."],
+    ["Decretos 7.724/2012 e 7.845/2012","gap","Constam expressamente do edital e ainda não têm bateria."]
+  ]},
+  {name:"Java, frameworks e desenvolvimento",items:[
+    ["Java","ok","Bateria 04 + prova Dataprev 2024."],
+    ["Java EE / Jakarta EE","partial","Há cobrança, mas falta profundidade."],
+    ["JPA / Hibernate","ok","Questões reais recentes já presentes."],
+    ["JUnit","ok","Já coberto em questões FGV."],
+    ["JavaScript","gap","Ainda sem cobrança específica suficiente."],
+    ["JSF / PrimeFaces","gap","Lacuna nominal do edital."],
+    ["Spring / Spring Boot / Spring Cloud","ok","Bateria 04 e Dataprev 2024."],
+    ["Android / iOS / mobile","partial","Bateria 10 inclui desenvolvimento multiplataforma; falta ampliar."],
+    ["Low-code / no-code","gap","Ainda não coberto."],
+    ["Clean Code / SonarQube","ok","Bateria 03 trabalha análise estática e SonarQube."]
+  ]},
+  {name:"Arquitetura, integração, testes e métodos",items:[
+    ["Arquitetura de software / design","ok","Cobertura nas Baterias 01, 10 e 12."],
+    ["SOA / Web Services / interoperabilidade","ok","Bateria 10 inclui questão real da Dataprev."],
+    ["Mensageria","gap","Tema explícito ainda sem questão direcionada."],
+    ["API / Swagger / REST / JSON","ok","Cobertura forte e recorrente."],
+    ["Servidor web x servidor de aplicação","ok","Bateria 10 cobre diretamente."],
+    ["Internet / intranet / extranet / portal","ok","Questão real Dataprev 2024 na Bateria 10."],
+    ["XML / XSLT / UDDI","partial","XML/XSLT aparecem; UDDI ainda é lacuna."],
+    ["DevOps / Git","ok","Cobertura nas Baterias 01 e 12."],
+    ["Testes unitários, integração, usabilidade, automação e TDD","ok","Boa cobertura real."],
+    ["RPA","gap","Ainda não coberto."],
+    ["Scrum / Kanban / XP","ok","Boa cobertura real; XP precisa de mais profundidade."],
+    ["Padrões de desenvolvimento e reuso","partial","SOLID/design aparecem; falta reuso/padrões de forma mais ampla."],
+    ["Pontos de Função / Story Points","ok","Bateria 10 cobre diretamente a comparação."],
+    ["Engenharia de requisitos / elicitação","ok","Bateria 12 inclui questão real do mesmo perfil."],
+    ["Arquitetura hexagonal / microsserviços","ok","Bateria 10 usa questão real Dataprev 2024."],
+    ["API Gateway / orquestração / containers","partial","Microsserviços estão cobertos, mas esses subitens ainda precisam de questões próprias."],
+    ["Transações distribuídas","gap","Lacuna prioritária."],
+    ["Blockchain","ok","Bateria 10 inclui questão real Dataprev 2024."]
+  ]},
+  {name:"Frontend, UX e conteúdo",items:[
+    ["HTML / CSS","gap","Ainda sem questão específica."],
+    ["Ajax","gap","Ainda sem questão específica."],
+    ["Vue / Angular / React","gap","Tema nominal do edital; falta bateria real focada."],
+    ["SPA / PWA","ok","Bateria 10 usa questão real da Dataprev 2024."],
+    ["HTTPS / SSL / TLS","ok","Bateria 10 cobre diretamente."],
+    ["UX","partial","Há usabilidade/testes, mas UX precisa de mais profundidade."],
+    ["CMS / gestão de conteúdo","gap","Ainda não coberto."],
+    ["Arquitetura da informação / portais / workflow","partial","Portais aparecem, mas arquitetura da informação e workflow ainda faltam."],
+    ["Acessibilidade e usabilidade","partial","Usabilidade aparece; acessibilidade ainda precisa de questão própria."],
+    ["Planejamento de interação web","gap","Ainda sem questão dedicada."]
+  ]},
+  {name:"BI, segurança e banco de dados",items:[
+    ["BI / suporte à decisão","ok","Baterias 02 e 11."],
+    ["Data Warehouse / ETL / ELT / OLAP","ok","Cobertura forte."],
+    ["Data Mining","partial","Relacionado ao bloco, mas sem questão específica suficiente."],
+    ["Visualização / cubos / fontes de dados","ok","Bateria 11 cobre fontes e modelagem analítica."],
+    ["Políticas e procedimentos de segurança","partial","Princípios aparecem; políticas precisam de mais questões."],
+    ["ISO 27001/27002","partial","Já aparece, mas com pouco volume."],
+    ["CIA / controle de acesso / OAuth2 / SSO","ok","Boa cobertura."],
+    ["Riscos / ameaça / vulnerabilidade / impacto","ok","Coberto."],
+    ["SDL / OWASP / SAST / DAST","ok","Uma das áreas mais bem cobertas."],
+    ["Modelagem conceitual/lógica/física","partial","Modelagem existe, mas falta foco nos três níveis."],
+    ["Relacional / normalização / integridade / SQL / DDL / DML","ok","Boa cobertura geral."],
+    ["Metadados","gap","Ainda sem questão específica."],
+    ["NoSQL","ok","Bateria 11 inclui questão real Dataprev 2024."],
+    ["Banco de dados em memória","gap","Ainda sem questão específica."],
+    ["Data Lake / Big Data / dados estruturados e não estruturados","partial","Data Lake e Big Data aparecem; falta completar o conjunto."],
+    ["Integração e ingestão de dados","ok","ETL/ELT já cobertos."]
+  ]},
+  {name:"Gestão e Governança de TI",items:[
+    ["Gerenciamento de projetos: conceitos, programas e portfólio","partial","Métodos aparecem, mas falta uma bateria de gestão de projetos."],
+    ["Abordagem tradicional, híbrida e ágil","ok","Bateria 12 cobre abordagem híbrida e ágil."],
+    ["Scrum / Lean / Kanban na gestão","partial","Scrum e Kanban cobertos; Lean ainda precisa de foco."],
+    ["Processos / grupos / áreas de conhecimento","gap","Ainda não coberto."],
+    ["Gestão de riscos de projetos/TI","partial","Riscos de segurança aparecem, mas gestão de riscos de TI precisa de questão própria."],
+    ["ITIL v4","gap","Grande lacuna do edital."],
+    ["COBIT 2019","gap","Grande lacuna do edital."],
+    ["BPMN","partial","Há BPMN inicial, mas precisamos de bateria específica e mais questões reais."]
+  ]}
+];
+
+function renderCoverage(){
+  const all=coverageGroups.flatMap(g=>g.items);
+  const count=s=>all.filter(i=>i[1]===s).length;
+  document.getElementById("coverageStats").innerHTML=
+    '<span class="coverage-stat ok">Cobertos: '+count("ok")+'</span>'+
+    '<span class="coverage-stat partial">Parciais: '+count("partial")+'</span>'+
+    '<span class="coverage-stat gap">Lacunas: '+count("gap")+'</span>';
+  document.getElementById("coverageGrid").innerHTML=coverageGroups.map((g,idx)=>`
+    <details class="coverage-group" ${idx<2?"open":""}>
+      <summary>${esc(g.name)}</summary>
+      <div class="coverage-items">
+        ${g.items.map(i=>`<div class="coverage-item"><span class="coverage-dot ${i[1]}"></span><div><strong>${esc(i[0])}</strong><small>${esc(i[2])}</small></div></div>`).join("")}
+      </div>
+    </details>`).join("");
+  const gaps=all.filter(i=>i[1]==="gap").slice(0,8).map(i=>i[0]);
+  document.getElementById("coveragePriority").innerHTML="<strong>Próximas lacunas prioritárias:</strong> "+gaps.map(esc).join(" · ")+".";
+}
+
 const batteries = [
   {
     id:"fgv-dataprev-arq-01",
@@ -287,6 +440,60 @@ const batteries = [
       {k:"real",t:"CNU 2 · Classificação LAI",q:"Um ministro de Estado quer aplicar o grau máximo de sigilo que sua função permite. A classificação mais restritiva prevista é:",o:["reservada por 5 anos","secreta por 15 anos","secreta por 20 anos","ultrassecreta por 25 anos","ultrassecreta por 30 anos"],a:3,e:"Ministros de Estado podem classificar informação como ultrassecreta, cujo prazo máximo na LAI é 25 anos."},
       {k:"real",t:"CNU 2 · Transparência",q:"Para cumprir as diretrizes da Lei de Acesso à Informação, um órgão público deve:",o:["priorizar controle judicial da informação","fortalecer sigilo como cultura padrão","tratar publicidade como exceção","ocultar informações para evitar vazamentos","usar meios de comunicação viabilizados por tecnologia da informação para facilitar o acesso"],a:4,e:"A LAI determina publicidade como regra e incentiva uso de tecnologia da informação para ampliar o acesso."}
     ]
+  },
+  {
+    id:"dataprev24-web-arq-10",
+    title:"Bateria 10 · Web, Mobile & Arquiteturas",
+    source:"Dataprev · Desenvolvimento de Software · FGV 2024 · prova real do mesmo perfil",
+    meta:"10 questões reais · redes corporativas, SOA, TLS, métricas, mobile, SOLID, servidores, SPA/PWA, blockchain e microsserviços",
+    questions:[
+      {k:"real",t:"Dataprev 2024 · Q44",q:"Em redes corporativas, qual descrição caracteriza corretamente uma extranet?",o:["Rede pública global sem restrições.","Rede acessível apenas por empregados internos.","Portal público voltado exclusivamente a clientes.","Rede privada sem uso de tecnologias da Internet.","Uso de tecnologias da Internet para dar acesso controlado a usuários internos e parceiros externos autorizados."],a:4,e:"Gabarito definitivo: E. A extranet estende acesso controlado a parceiros externos autorizados."},
+      {k:"real",t:"Dataprev 2024 · Q45",q:"Ao integrar sistemas de pagamento buscando baixo acoplamento e interoperabilidade, qual alternativa é mais adequada?",o:["Usar serviços REST de forma leve e independente de plataforma.","Usar SOAP sem contratos formais.","Acoplar mudanças dos dois sistemas diretamente.","Centralizar todos os provedores num monólito.","Usar RPC como requisito para baixo acoplamento."],a:0,e:"Gabarito definitivo: A. A banca associou REST à integração leve, interoperável e de menor acoplamento."},
+      {k:"real",t:"Dataprev 2024 · Q46",q:"Qual afirmação diferencia corretamente TLS e SSL no contexto de HTTPS?",o:["SSL é mais seguro que TLS.","TLS sucedeu SSL, corrigindo vulnerabilidades e trazendo melhorias de segurança.","São equivalentes em segurança.","HTTPS funciona somente com SSL.","HTTPS usa SSL para autenticar e TLS apenas para criptografar."],a:1,e:"Gabarito definitivo: B. TLS é o sucessor de SSL."},
+      {k:"real",t:"Dataprev 2024 · Q47",q:"Sobre mensuração de tamanho/esforço, qual afirmação está correta?",o:["Pontos de Função fornecem mensuração objetiva e independente do time.","Story Points padronizam estimativas entre equipes diferentes.","Pontos de Função dependem da percepção subjetiva do time.","Story Points são preferidos em contratos formais de escopo rígido.","Pontos de Função são estimados pelo esforço percebido da equipe."],a:0,e:"Gabarito definitivo: A. Pontos de Função buscam uma medida funcional mais objetiva; Story Points são relativos ao contexto da equipe."},
+      {k:"real",t:"Dataprev 2024 · Q48",q:"Qual framework multiplataforma para Android/iOS usa a linguagem Dart?",o:["Xamarin","Flutter","React Native","Ionic","SwiftUI"],a:1,e:"Gabarito definitivo: B. Flutter usa Dart."},
+      {k:"real",t:"Dataprev 2024 · Q49",q:"Uma classe Cachorro sobrescreve emitirSom() de Animal mantendo o contrato esperado e pode substituir Animal sem quebrar o programa. Em relação ao princípio de Liskov:",o:["Sobrescrever sempre viola LSP.","Alterar a implementação sempre viola LSP.","A implementação está de acordo com LSP se Cachorro puder substituir Animal preservando a correção.","O método deve ser idêntico ao da superclasse.","O método sobrescrito precisa lançar exceção."],a:2,e:"Gabarito definitivo: C. LSP exige substituibilidade sem comprometer o comportamento esperado."},
+      {k:"real",t:"Dataprev 2024 · Q50",q:"Qual distinção entre servidor web e servidor de aplicações está correta?",o:["Servidor de aplicações serve apenas arquivos estáticos.","Servidor web atende requisições HTTP/conteúdo; servidor de aplicações executa lógica de negócio e integra serviços/dados.","Servidor web é o responsável principal pela lógica de negócio.","São essencialmente a mesma coisa.","Servidor de aplicações serve apenas para balanceamento de carga."],a:1,e:"Gabarito definitivo: B."},
+      {k:"real",t:"Dataprev 2024 · Q51",q:"Qual alternativa descreve corretamente SPA e PWA?",o:["Ambas exigem obrigatoriamente frameworks JavaScript.","SPA concentra interações numa página; PWA busca experiência web com capacidades semelhantes às de apps nativos.","PWA existe apenas para evitar recarregamentos de página.","Toda SPA exige Service Worker.","PWA é necessariamente um aplicativo nativo fora do navegador."],a:1,e:"Gabarito definitivo: B. A FGV diferenciou navegação de página única de capacidades progressivas/nativas da PWA."},
+      {k:"real",t:"Dataprev 2024 · Q56",q:"Em blockchains públicas tradicionais, qual informação não é armazenada diretamente em cada bloco?",o:["Hash do bloco anterior.","Assinaturas das transações.","Saldo corrente das carteiras como registro próprio do bloco.","Timestamp.","Dados das transações."],a:2,e:"Gabarito definitivo: C. O saldo é derivado do estado/histórico de transações, não um campo obrigatório armazenado diretamente no bloco."},
+      {k:"real",t:"Dataprev 2024 · Q57",q:"Considere: I) arquitetura hexagonal separa regras de negócio de interfaces externas por portas e adaptadores; II) microsserviços devem compartilhar o mesmo banco para aumentar acoplamento; III) um monólito pode ser distribuído, mas seus módulos são implantados como conjunto, enquanto microsserviços podem ser implantados independentemente. Está correto:",o:["I apenas.","II apenas.","III apenas.","I e II apenas.","I e III apenas."],a:4,e:"Gabarito definitivo: E. I e III são verdadeiras; II contraria a independência buscada em microsserviços."}
+    ]
+  },
+  {
+    id:"dataprev24-dados-bi-sec-11",
+    title:"Bateria 11 · Dados, BI & Segurança",
+    source:"Dataprev · Desenvolvimento de Software · FGV 2024 · prova real do mesmo perfil",
+    meta:"10 questões reais · IA, ETL, DSS, fontes, acesso, OWASP, segurança, OLAP, NoSQL e ELT",
+    questions:[
+      {k:"real",t:"Dataprev 2024 · Q58",q:"Qual conceito está diretamente ligado a sistemas que aprendem com dados e melhoram o desempenho ao longo do tempo?",o:["Algoritmos genéticos","Redes neurais artificiais","Lógica booleana","Busca heurística","Programação linear"],a:1,e:"Gabarito definitivo: B."},
+      {k:"real",t:"Dataprev 2024 · Q59",q:"Qual é o objetivo central do ETL em Data Warehousing?",o:["Criar dashboards.","Executar análises estatísticas.","Treinar modelos de ML.","Extrair de fontes, transformar de modo consistente e carregar no DW.","Gerenciar exclusivamente controle de acesso."],a:3,e:"Gabarito definitivo: D."},
+      {k:"real",t:"Dataprev 2024 · Q60",q:"Sistemas de Suporte à Decisão podem apoiar quais classes de problemas?",o:["Somente estruturados.","Somente não estruturados.","Somente semiestruturados.","Estruturados, semiestruturados e não estruturados.","Apenas problemas de uma área funcional."],a:3,e:"Gabarito definitivo: D. SSDs podem apoiar diferentes graus de estruturação."},
+      {k:"real",t:"Dataprev 2024 · Q61",q:"Qual prática NÃO é recomendada ao mapear fontes de dados para BI?",o:["Entrevistar stakeholders.","Analisar sistemas e documentos existentes.","Coletar indiscriminadamente todas as fontes, inclusive dados inconsistentes e irrelevantes, apenas para maximizar volume.","Avaliar qualidade e aderência ao objetivo.","Documentar fontes e relacionamentos."],a:2,e:"Gabarito definitivo: C. Volume sem qualidade/relevância prejudica a solução."},
+      {k:"real",t:"Dataprev 2024 · Q62",q:"Qual modelo de controle de acesso compara rótulos de segurança com autorizações previamente definidas?",o:["Discricionário","Mandatório","Entrada confiável","Baseado em papéis","Privilégio mínimo"],a:1,e:"Gabarito definitivo: B. O controle mandatório usa classificações/rótulos e autorizações."},
+      {k:"real",t:"Dataprev 2024 · Q63",q:"Qual item aparece como categoria do OWASP Top 10:2021?",o:["Server-Side Request Forgery (SSRF)","Proteção da cadeia de suprimentos como categoria nominal","Proteção do ambiente de engenharia","Treinamento operacional","Uso de recursos de frameworks"],a:0,e:"Gabarito definitivo: A. SSRF é A10:2021."},
+      {k:"real",t:"Dataprev 2024 · Q64",q:"Na arquitetura de segurança X.800, qual é um mecanismo de segurança específico de camada/serviço?",o:["Detecção de evento","Funcionalidade confiável","Preenchimento de tráfego","Rótulo de segurança","Trilha de auditoria"],a:2,e:"Gabarito definitivo: C. Preenchimento de tráfego é listado entre os mecanismos específicos."},
+      {k:"real",t:"Dataprev 2024 · Q65",q:"Sobre banco relacional e multidimensional, qual afirmação está correta?",o:["Multidimensional é voltado principalmente a OLTP.","Relacional é essencialmente OLAP e multidimensional OLTP.","Multidimensional facilita análise de grandes volumes organizados em dimensões e métricas.","Relacional organiza dados em cubos.","Multidimensional não permite agregações."],a:2,e:"Gabarito definitivo: C."},
+      {k:"real",t:"Dataprev 2024 · Q66",q:"Sobre bancos NoSQL, qual afirmação é correta?",o:["Sempre seguem estritamente ACID.","Usam sempre modelo relacional.","São adequados a cenários que exigem alta disponibilidade e escalabilidade horizontal.","Armazenam sempre em grafos.","São necessariamente superiores para ERP/CRM."],a:2,e:"Gabarito definitivo: C."},
+      {k:"real",t:"Dataprev 2024 · Q67",q:"Sobre ETL e ELT, qual afirmação está incorreta?",o:["ETL transforma antes de carregar.","ETL é comum em DW tradicional.","ELT transforma após carregar usando capacidade do destino.","ELT é especialmente mais eficiente quando o volume é pequeno e o processamento deve ocorrer fora do destino.","ETL pode ser mais lento quando o destino possui grande capacidade de processamento."],a:3,e:"Gabarito definitivo: D. Essa descrição contraria justamente a vantagem típica do ELT."}
+    ]
+  },
+  {
+    id:"dataprev24-eng-testes-agil-12",
+    title:"Bateria 12 · Engenharia, Testes & Ágil",
+    source:"Dataprev · Desenvolvimento de Software · FGV 2024 · prova real do mesmo perfil",
+    meta:"10 questões reais · Spring, XML/JSON, design, testes, Scrum/XP, requisitos, DevOps e gestão híbrida",
+    questions:[
+      {k:"real",t:"Dataprev 2024 · Q41",q:"Sobre Spring, Spring Cloud, Spring Boot, Hibernate e JUnit, qual alternativa foi considerada correta pela FGV?",o:["Spring Boot facilita desenvolvimento de microsserviços e Spring Cloud oferece recursos para sistemas distribuídos.","Hibernate é framework de testes.","Spring serve apenas para monólitos.","JUnit é ORM.","Spring Boot exige servidor standalone externo."],a:0,e:"Gabarito definitivo: A."},
+      {k:"real",t:"Dataprev 2024 · Q42",q:"Sobre XML, XSLT e JSON, assinale a correta.",o:["XML é sempre mais compacto que JSON.","XSLT transforma documentos JSON nativamente.","JSON é muito usado em APIs por sua estrutura simples e leve.","JSON usa XSLT nativamente como XML.","XML e JSON são estritamente equivalentes."],a:2,e:"Gabarito definitivo: C."},
+      {k:"real",t:"Dataprev 2024 · Q43",q:"Qual distinção entre arquitetura e design de software está correta?",o:["Design é somente codificação.","Design de baixo nível define toda a estrutura macro.","Design de alto nível trata apenas métodos específicos.","Arquitetura foca decisões estruturais amplas; design detalha decisões mais específicas.","Arquitetura só faz sentido em sistemas grandes."],a:3,e:"Gabarito definitivo: D."},
+      {k:"real",t:"Dataprev 2024 · Q52",q:"Considere: I) testes unitários verificam unidades isoladas; II) integração verifica interação entre componentes; III) TDD escreve testes antes do código funcional; IV) usabilidade avalia experiência/interação. Quais estão corretas?",o:["I, II e IV apenas.","I, III e IV apenas.","II, III e IV apenas.","I, II, III e IV.","I e III apenas."],a:3,e:"Gabarito definitivo: D. As quatro afirmações são corretas."},
+      {k:"real",t:"Dataprev 2024 · Q53",q:"Para um projeto complexo, com mudanças frequentes e entregas incrementais, qual alternativa a FGV apontou como metodologia adequada por organizar o trabalho em Sprints e adaptar-se por revisões periódicas?",o:["Scrum","Kanban","XP","Waterfall","Lean"],a:0,e:"Gabarito definitivo: A."},
+      {k:"real",t:"Dataprev 2024 · Q54",q:"Exigir que a consulta de saldo seja apresentada em tempo real é classificado, no contexto da questão, como:",o:["Requisito funcional por ser uma ação do usuário.","Requisito não funcional ligado a desempenho/tempo de resposta.","Técnica de prototipação.","Elicitação inválida.","Requisito que só pode ser descoberto após implementação."],a:1,e:"Gabarito definitivo: B."},
+      {k:"real",t:"Dataprev 2024 · Q55",q:"No contexto DevOps, a prática de disponibilizar rapidamente novas versões para produção com mínima interrupção foi associada pela FGV a:",o:["Integração Contínua","Entrega Contínua","Gerenciamento de Configuração","Monitoramento Contínuo","Controle de Versão"],a:1,e:"Gabarito definitivo: B."},
+      {k:"real",t:"Dataprev 2024 · Q68",q:"Durante uma Daily Scrum, um desenvolvedor relata impedimento que ameaça o objetivo do Sprint. O Scrum Master deve:",o:["Redistribuir tarefas sozinho.","Estimular a equipe a resolver colaborativamente e atuar na remoção de impedimentos sem comandar o trabalho.","Assumir a tarefa.","Entregar a decisão ao Product Owner.","Encerrar o Sprint."],a:1,e:"Gabarito definitivo: B."},
+      {k:"real",t:"Dataprev 2024 · Q69",q:"Na seleção do Sprint Backlog, como a equipe deve agir quando há mais trabalho desejado do que capacidade disponível?",o:["Incluir tudo porque mudanças são esperadas.","Priorizar o que cabe no Sprint considerando capacidade e objetivo.","Deixar o Product Owner decidir sozinho.","Maximizar quantidade mesmo sem concluir.","Adicionar tarefas preventivamente."],a:1,e:"Gabarito definitivo: B."},
+      {k:"real",t:"Dataprev 2024 · Q70",q:"Uma abordagem Ágil Híbrida é caracterizada por:",o:["Uso exclusivo de métodos ágeis.","Combinação de práticas ágeis e tradicionais conforme as necessidades do projeto.","Uso apenas de cerimônias Scrum.","Plano fixo sem revisão.","Foco exclusivo em documentação."],a:1,e:"Gabarito definitivo: B."}
+    ]
   }
 ];
 
@@ -388,6 +595,7 @@ document.getElementById("submitBtn").addEventListener("click",submitBattery);
 document.getElementById("resetBtn").addEventListener("click",()=>{renderQuestions();document.getElementById("result").className="result";window.scrollTo({top:0,behavior:"smooth"});});
 document.getElementById("backBtn").addEventListener("click",()=>{document.getElementById("quizWrap").classList.remove("show");document.getElementById("batteryGrid").style.display="grid";current=null;renderCards();window.scrollTo({top:0,behavior:"smooth"});});
 document.getElementById("showAll").addEventListener("click",()=>{document.getElementById("quizWrap").classList.remove("show");document.getElementById("batteryGrid").style.display="grid";current=null;renderCards();});
+renderCoverage();
 renderCards();
 </script>
 </body>
