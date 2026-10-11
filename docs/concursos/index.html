@@ -49,9 +49,9 @@ input,select,textarea{width:100%;border:1px solid #395065;background:#0d1724;col
 <div class="two" style="margin-top:16px"><div><label class="field-label" for="myAnswers">Suas respostas (1 a 70)</label><textarea id="myAnswers" spellcheck="false" placeholder="Ex.: ABCDE ABCDE ABCDE…" aria-describedby="answerHelp"></textarea></div><div><label class="field-label" for="officialAnswers">Gabarito da banca (mesmo tipo)</label><textarea id="officialAnswers" spellcheck="false" placeholder="Cole aqui quando for publicado. Use X para anulada." aria-describedby="answerHelp"></textarea></div></div>
 <p class="answer-help" id="answerHelp">Digite apenas A, B, C, D, E; use “-” para questão não respondida e “X” para anulada no gabarito. Aceita letras juntas, com espaço, vírgula ou quebra de linha. Ignore números de questões ao colar.</p>
 <div id="answerValidation" class="verified" role="status"></div>
-<div class="result" aria-label="Resultado provisório"><div class="metric"><span>Acertos</span><strong id="correct">—</strong></div><div class="metric"><span>Erros</span><strong id="wrong">—</strong></div><div class="metric"><span>Em branco</span><strong id="blank">—</strong></div><div class="metric"><span>Anuladas</span><strong id="void">—</strong></div><div class="metric"><span>Conferidas</span><strong id="checked">—</strong></div></div>
+<div class="result" aria-label="Resultado provisório"><div class="metric"><span>Acertos</span><strong id="correct">—</strong></div><div class="metric"><span>Erros</span><strong id="wrong">—</strong></div><div class="metric"><span>Em branco</span><strong id="blank">—</strong></div><div class="metric"><span>Anuladas</span><strong id="void">—</strong></div><div class="metric"><span>Conferidas</span><strong id="checked">—</strong></div><div class="metric"><span>Nota estimada</span><strong id="score">—</strong><small>/ 115 pontos</small></div></div><p class="verified" id="eligibility" role="status">Preencha as 70 respostas e o gabarito do mesmo tipo para calcular os pontos.</p>
 <div class="correction" id="correction" aria-live="polite"></div>
-<p class="verified">Resultado bruto, não pontuação oficial: pesos por disciplina, critérios eliminatórios, anulações e regras do edital precisam ser aplicados separadamente. Nenhuma estimativa de classificação é apresentada sem os dados oficiais.</p>
+<p class="verified">Nota ponderada conforme a estrutura do edital 2026: questões 1–40 valem 1 ponto e 41–70 valem 2,5 pontos, máximo 115. A aprovação exige pelo menos 57,5 pontos e nenhum zero nas seis disciplinas. Anulações são tratadas como crédito a todos para simulação. O resultado depende de validação da banca e não estima posição/classificação.</p>
 <div class="button-row"><button class="small-btn" id="exportData" type="button">Exportar minhas anotações (.json)</button><button class="small-btn" id="copySummary" type="button">Copiar resumo da correção</button><button class="small-btn" id="clearAnswers" type="button">Limpar respostas deste tipo</button></div>
 </section>
 <section id="vigia" class="panel hide"><p class="eyebrow">FILA DE ACOMPANHAMENTO</p><h2>Publicações a observar</h2><div class="watchlist"><div class="mini"><strong>Dataprev — gabarito, recursos e classificação</strong><p>Checar publicação do gabarito preliminar por tipo de caderno, janela de recursos, alterações, resultado e homologação.</p><a href="https://conhecimento.fgv.br/concursos/dataprev26" target="_blank" rel="noopener noreferrer">FGV →</a></div><div class="mini"><strong>CASAN — situação de inscrição e local da prova</strong><p>Verificar a situação no portal da AOCP, confirmar o cargo 404, acompanhar data/local e retificações.</p><a href="https://www.institutoaocp.org.br/concursos/711" target="_blank" rel="noopener noreferrer">AOCP →</a></div><div class="mini"><strong>Novos concursos — sem filtro de salário ou município</strong><p>Prioridade de apresentação para SC, sem excluir cidades pequenas ou outras regiões. Confirmar sempre escolaridade de ADS, datas e etapas.</p></div></div><hr class="sep"><h2>Oportunidades pendentes de validação</h2><div id="watchlist" class="watchlist"></div><p class="verified">Novas informações são publicadas por atualizações versionadas no repositório, não por uma conexão em tempo real com as bancas.</p></section>
@@ -98,16 +98,32 @@ function exam(){var k=$("examType").value;if(!stored.exams[k])stored.exams[k]={m
 function extract(v){return (v.toUpperCase().match(/[A-EX-]/g)||[]).slice(0,70)}
 function renderCorrection(){
  var a=extract($("myAnswers").value),b=extract($("officialAnswers").value);
- $("answerValidation").textContent="Suas respostas: "+a.length+"/70 · Gabarito: "+b.length+"/70. "+(b.length===0?"Aguardando publicação e preenchimento do gabarito.":"Conferência provisória, apenas das posições disponíveis.");
+ var full=a.length===70&&b.length===70;
+ $("answerValidation").textContent="Suas respostas: "+a.length+"/70 · Gabarito: "+b.length+"/70. "+(b.length===0?"Aguardando publicação e preenchimento do gabarito.":"Conferência preliminar das posições informadas.");
  var counts={correct:0,wrong:0,blank:0,void:0,checked:0};
- var tiles=[];
+ var points=0,discHits=[0,0,0,0,0,0],tiles=[];
+ var discNames=["Português","Inglês","RLM","Atualidades e IA","Legislação","Específicos"];
+ function disc(i){return i<12?0:i<24?1:i<29?2:i<35?3:i<40?4:5}
  for(var i=0;i<70;i++){
-  var u=a[i],g=b[i];var kind="none";
-  if(g&&u){counts.checked++;if(g==="X"){counts.void++;kind="void"}else if(u==="-"){counts.blank++;kind="none"}else if(u===g){counts.correct++;kind="good"}else{counts.wrong++;kind="bad"}}
-  else if(g&&g==="X"){counts.void++;kind="void"}
+  var u=a[i],g=b[i],kind="none",weight=i<40?1:2.5;
+  if(g&&u){
+   counts.checked++;
+   if(g==="X"){counts.void++;kind="void";points+=weight;discHits[disc(i)]++}
+   else if(u==="-"){counts.blank++}
+   else if(u===g){counts.correct++;kind="good";points+=weight;discHits[disc(i)]++}
+   else{counts.wrong++;kind="bad"}
+  }else if(g==="X"){counts.void++;kind="void"}
   tiles.push('<div class="answer-pill '+kind+'" title="Questão '+(i+1)+': sua '+(u||"não informada")+' / banca '+(g||"não informada")+'">'+(i+1)+'<strong>'+(u||"·")+(g?" / "+g:"")+'</strong></div>');
  }
  Object.keys(counts).forEach(function(k){$(k).textContent=counts[k]});
+ $("score").textContent=full?points.toFixed(1).replace(".",","):"—";
+ if(full){
+  var zeros=discHits.map(function(n,i){return n===0?discNames[i]:null}).filter(Boolean);
+  var status=points<57.5?"Abaixo do mínimo de 57,5 pontos.":zeros.length?"Pelo menos uma disciplina zerada: "+zeros.join(", ")+".":"Atende aos mínimos de pontuação e disciplinas do edital.";
+  $("eligibility").textContent=status+" Resultado preliminar de acordo com as alternativas digitadas e regras atuais; não representa aprovação ou classificação definitiva.";
+ }else{
+  $("eligibility").textContent="Informe todas as 70 alternativas de cada lado para calcular a pontuação sobre 115 e testar os dois critérios eliminatórios.";
+ }
  $("correction").innerHTML=tiles.join("");
 }
 function loadExam(){var e=exam();$("myAnswers").value=e.mine||"";$("officialAnswers").value=e.key||"";renderCorrection()}
@@ -117,7 +133,7 @@ document.querySelectorAll(".tabs button").forEach(function(b){b.addEventListener
 ["search","region","show"].forEach(function(id){$(id).addEventListener(id==="search"?"input":"change",renderCards)});
 $("examType").addEventListener("change",loadExam);["myAnswers","officialAnswers"].forEach(function(id){$(id).addEventListener("input",updateExam)});
 $("clearAnswers").addEventListener("click",function(){if(confirm("Limpar respostas e gabarito digitados para este tipo de caderno?")){stored.exams[$("examType").value]={mine:"",key:""};save();loadExam()}});
-$("copySummary").addEventListener("click",function(){var s="Dataprev 2026 — Tipo "+$("examType").value+" | Acertos: "+$("correct").textContent+" | Erros: "+$("wrong").textContent+" | Brancos: "+$("blank").textContent+" | Anuladas: "+$("void").textContent+" | Conferidas: "+$("checked").textContent+". Apuração bruta, sem pesos oficiais.";if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(s).then(function(){alert("Resumo copiado.")}).catch(function(){prompt("Copie o texto:",s)})}else prompt("Copie o texto:",s)});
+$("copySummary").addEventListener("click",function(){var s="Dataprev 2026 — Tipo "+$("examType").value+" | Acertos: "+$("correct").textContent+" | Erros: "+$("wrong").textContent+" | Brancos: "+$("blank").textContent+" | Anuladas: "+$("void").textContent+" | Conferidas: "+$("checked").textContent+". Nota ponderada: "+$("score").textContent+"/115. Simulação sujeita à confirmação oficial.";if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(s).then(function(){alert("Resumo copiado.")}).catch(function(){prompt("Copie o texto:",s)})}else prompt("Copie o texto:",s)});
 $("exportData").addEventListener("click",function(){var blob=new Blob([JSON.stringify({version:1,exportedAt:new Date().toISOString(),data:stored},null,2)],{type:"application/json"}),a=document.createElement("a"),url=URL.createObjectURL(blob);a.href=url;a.download="concursos-progresso-"+new Date().toISOString().slice(0,10)+".json";a.click();setTimeout(function(){URL.revokeObjectURL(url)},1000)});
 fetch("./concursos.json?v=2026-10-11",{cache:"no-store"}).then(function(r){if(!r.ok)throw new Error("HTTP "+r.status);return r.json()}).then(function(json){data=json;$("verified").textContent="Última verificação editorial: "+data.lastVerifiedLabel+" · Consulte os editais para retificações";$("footerDate").textContent=data.lastVerifiedLabel;renderStats();renderCards();renderWatchlist();loadExam()}).catch(function(e){$("contests").textContent="Não foi possível carregar o radar. Atualize a página ou verifique o GitHub Pages. "+e.message;$("verified").textContent="Dados indisponíveis."});
 activate(["radar","correcao","vigia"].includes(location.hash.slice(1))?location.hash.slice(1):"radar");
