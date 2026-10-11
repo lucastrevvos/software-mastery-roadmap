@@ -92,6 +92,7 @@
     <h1>Baterias FGV Recentes · Dataprev</h1>
     <p class="lead">Baterias de treino ativo com prioridade para questões realmente aplicadas pela FGV nos últimos anos, cobrindo tanto Conhecimentos Gerais quanto Conhecimentos Específicos do Perfil 3 — Desenvolvimento de Software da Dataprev 2026.</p>
     <div class="notice"><strong>Regra deste módulo:</strong> prioridade máxima para questões realmente aplicadas pela FGV nos anos mais recentes (2026 → 2025 → 2024 → 2023), sempre filtradas pelo edital Dataprev 2026 — Perfil 3. Questões autorais entram apenas quando faltarem itens reais de um tema e aparecem identificadas como <strong>BASEADA NO PADRÃO FGV</strong>.</div>
+    <div class="notice"><strong>Véspera 2026:</strong> foram adicionadas baterias preditivas para fechar as lacunas do mapa e um <strong>SIMULADO FINAL PREDITIVO com 70 questões</strong>, seguindo a distribuição oficial de 2026: 12 Português, 12 Inglês, 5 RLM, 6 Atualidades/IA, 5 Legislação e 30 Específicas. O gabarito comentado aparece após a submissão.</div>
   </section>
 
   <section class="coverage-section" id="coverageSection">
@@ -152,6 +153,7 @@
   </section>
 </main>
 
+<script src="./predicao-2026.js"></script>
 <script>
 
 const coverageGroups = [
@@ -497,6 +499,15 @@ const batteries = [
   }
 ];
 
+batteries.push(...(window.predictionBatteries || []));
+const predictionCovered = new Set(window.predictionCoveredTopics || []);
+coverageGroups.forEach(group => group.items.forEach(item => {
+  if (predictionCovered.has(item[0]) && item[1] === "gap") {
+    item[1] = "partial";
+    item[2] = "Coberta agora por bateria preditiva baseada no edital 2026; ainda falta consolidar com mais questões FGV reais.";
+  }
+}));
+
 let current = null;
 const storageKey = "dataprev-fgv-ti-batteries-v1";
 const state = JSON.parse(localStorage.getItem(storageKey) || "{}");
@@ -513,7 +524,7 @@ function renderCards(){
     const realCount=b.questions.filter(q=>q.k==="real").length;
     const basedCount=b.questions.length-realCount;
     return `<article class="battery-card ${current?.id===b.id?"active":""}">
-      <span class="score-chip">${best==null?"Ainda não feita":`Melhor: ${best}/10`}</span>
+      <span class="score-chip">${best==null?"Ainda não feita":`Melhor: ${best}/${b.questions.length}`}</span>
       <h2>${esc(b.title)}</h2>
       <div class="meta">${esc(b.source)}</div>
       <div class="source">${esc(b.meta)} · <strong>${realCount} FGV reais</strong>${basedCount? ` · ${basedCount} baseadas`:""} · tentativas: ${attempts}</div>
@@ -552,7 +563,8 @@ function renderQuestions(){
 }
 
 function submitBattery(){
-  let score=0, answered=0;
+  let score=0, answered=0, weightedScore=0;
+  const weightedMax=current.questions.reduce((sum,q)=>sum+(q.w||1),0);
   current.questions.forEach((q,qi)=>{
     const card=document.querySelector(`[data-q="${qi}"]`);
     const chosen=card.querySelector("input:checked");
@@ -571,6 +583,7 @@ function submitBattery(){
     const selected=Number(chosen.value);
     if(selected===q.a){
       score++;
+      weightedScore += (q.w||1);
       feedback.classList.add("ok");
       feedback.innerHTML=`<strong>Correto.</strong> ${q.e}`;
     }else{
@@ -586,7 +599,9 @@ function submitBattery(){
   const msg=pct>=80?"Bom nível para essa bateria. Revise os erros e tente explicar cada acerto sem olhar.":pct>=60?"Base razoável, mas ainda há padrões importantes para consolidar.":"Essa bateria encontrou lacunas úteis. Revise as explicações e refaça depois.";
   const result=document.getElementById("result");
   result.className="result show";
-  result.innerHTML=`<strong>${score}/10 · ${pct}%</strong><p>${msg}</p><span class="meta">Respondidas: ${answered}/10 · Melhor resultado salvo: ${state[current.id].best}/10</span>`;
+  const fmt=n=>Number.isInteger(n)?String(n):n.toFixed(1).replace(".",",");
+  const weighted=current.weighted?`<p><strong>Nota ponderada: ${fmt(weightedScore)} / ${fmt(weightedMax)}</strong> · Gerais peso 1 · Específicas peso 2,5</p>`:"";
+  result.innerHTML=`<strong>${score}/${current.questions.length} · ${pct}%</strong>${weighted}<p>${msg}</p><span class="meta">Respondidas: ${answered}/${current.questions.length} · Melhor resultado salvo: ${state[current.id].best}/${current.questions.length}</span>`;
   renderCards();
   result.scrollIntoView({behavior:"smooth",block:"center"});
 }
