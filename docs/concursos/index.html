@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Radar de concursos públicos de TI, inscrições e conferência de gabaritos do Software Mastery Roadmap.">
+<title>Concursos de TI · Software Mastery</title>
+<style>
+:root{color-scheme:dark;--bg:#0a101a;--surface:#111b2a;--surface2:#162437;--line:#2b3c4c;--ink:#eef5f7;--muted:#9fb1c3;--accent:#62e2ac;--gold:#edc979;--blue:#93caff;--radius:18px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 15% 0,#153130 0,transparent 33%),var(--bg);color:var(--ink);font:15px/1.55 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+a{color:var(--accent)}button,input,select,textarea{font:inherit}button,select{cursor:pointer}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+.shell{max-width:1240px;margin:0 auto;padding:0 24px}header{border-bottom:1px solid var(--line);background:#09121ccf}nav{display:flex;gap:14px;flex-wrap:wrap;align-items:center;min-height:63px}nav a{text-decoration:none;font-weight:650;color:var(--muted)}nav a:hover,nav a.current{color:var(--accent)}.brand{color:var(--ink);margin-right:auto;font-weight:800;letter-spacing:.01em}
+.hero{padding:58px 0 32px}.eyebrow{color:var(--accent);font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase}.hero h1{font-size:clamp(2rem,5vw,4.2rem);line-height:1.08;letter-spacing:-.04em;margin:12px 0}.hero p.intro{color:var(--muted);font-size:17px;max-width:780px}.verified{font-size:12px;color:var(--muted)}.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:10px 0 28px}.stat,.panel,.contest,.mini{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius)}.stat{padding:18px}.stat span{display:block;color:var(--muted);font-size:12px}.stat strong{font-size:28px;display:block;line-height:1.4;letter-spacing:-.04em}.stat small{color:var(--muted)}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;border-bottom:1px solid var(--line);margin-bottom:20px;padding-bottom:12px}.tabs button{background:transparent;border:1px solid var(--line);color:var(--muted);border-radius:999px;padding:10px 16px;font-weight:750}.tabs button[aria-pressed=true]{background:var(--accent);color:#08201a;border-color:var(--accent)}
+.panel{padding:22px;margin-bottom:20px}.panel h2{margin:0 0 8px;font-size:23px;letter-spacing:-.025em}.muted{color:var(--muted)}.panel-heading{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;flex-wrap:wrap;margin-bottom:14px}.filters{display:grid;grid-template-columns:minmax(190px,2fr) repeat(2,minmax(160px,1fr));gap:10px;margin:18px 0}
+input,select,textarea{width:100%;border:1px solid #395065;background:#0d1724;color:var(--ink);border-radius:11px;padding:11px 12px}input::placeholder,textarea::placeholder{color:#8196a9}textarea{min-height:115px;resize:vertical;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;line-height:1.7;letter-spacing:.06em}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.contest{padding:19px;display:flex;flex-direction:column;gap:12px}.contest h3{font-size:20px;line-height:1.25;margin:0}.agency{font-size:12px;text-transform:uppercase;letter-spacing:.1em;font-weight:800;color:var(--accent)}.meta{display:flex;flex-wrap:wrap;gap:7px}.chip{border:1px solid #35506a;border-radius:999px;padding:3px 9px;font-size:11px;color:#bcd2e0}.chip.open{border-color:#366b55;color:#9ee4c0}.chip.due{border-color:#84663a;color:#f2d490}.chip.check{border-color:#657387;color:#b3becc}.info{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.info dt{font-size:12px;color:var(--muted)}.info dd{margin:2px 0 0;font-weight:720}.contest p{margin:0;color:var(--muted);font-size:13px}.actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:auto;padding-top:8px}.actions a,.cta{border:1px solid var(--line);border-radius:10px;padding:8px 12px;text-decoration:none;font-weight:750;font-size:13px;color:var(--accent)}.actions a:hover,.cta:hover{border-color:var(--accent)}.stage{display:grid;gap:4px;flex:1;min-width:160px}.stage label,.field-label{font-size:12px;font-weight:650;color:var(--muted)}.stage select{font-size:12px;padding:9px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}.answer-help{color:var(--muted);font-size:13px}.result{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin:16px 0}.metric{padding:13px;background:var(--surface2);border-radius:12px}.metric span{display:block;color:var(--muted);font-size:12px}.metric strong{font-size:24px}.correction{display:flex;gap:6px;flex-wrap:wrap;margin:12px 0}.answer-pill{width:42px;min-height:42px;padding:6px 0;border-radius:10px;border:1px solid var(--line);text-align:center;background:#182636;color:var(--muted);font-size:11px}.answer-pill strong{display:block;font-size:14px;color:var(--ink)}.answer-pill.good{border-color:#328764;background:#103b30}.answer-pill.bad{border-color:#9b6260;background:#462526}.answer-pill.void{border-color:#917848;background:#463b26}.answer-pill.none{opacity:.6}
+.watchlist{display:grid;gap:10px}.mini{padding:15px}.mini strong{display:block}.mini p{margin:6px 0;color:var(--muted);font-size:13px}.mini a{font-size:13px}.notice{padding:14px 16px;border-left:3px solid var(--gold);background:#202333;border-radius:8px;color:#e7d7b8}.footer{border-top:1px solid var(--line);padding:24px 0 50px;color:var(--muted);font-size:12px}.hide{display:none!important}.button-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.small-btn{width:auto;background:var(--surface2);color:var(--ink);border:1px solid var(--line);padding:10px 13px;border-radius:10px}.small-btn:hover{border-color:var(--accent)}.empty{padding:20px;color:var(--muted)}.sep{border:0;border-top:1px solid var(--line);margin:22px 0}
+@media(max-width:900px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.cards,.two{grid-template-columns:1fr}.result{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:590px){.shell{padding:0 15px}.hero{padding:34px 0 22px}.filters{grid-template-columns:1fr}.result{grid-template-columns:repeat(2,minmax(0,1fr))}.panel{padding:17px}.info{grid-template-columns:1fr 1fr}.brand{width:100%;margin:12px 0 0}.stats{gap:8px}.stat{padding:12px}.stat strong{font-size:23px}nav{padding-bottom:10px}}
+</style>
+</head>
+<body>
+<header><nav class="shell" aria-label="Navegação principal"><a class="brand" href="../index.html">Software Mastery</a><a href="../index.html">Roadmap</a><a href="../learning/">Learning</a><a href="../dataprev/">Dataprev AMS</a><a href="index.html" class="current" aria-current="page">Concursos de TI</a></nav></header>
+<main class="shell">
+<section class="hero"><div class="eyebrow">TRILHA CONCURSOS · RADAR NACIONAL</div><h1>Oportunidades, provas<br>e gabaritos no mesmo lugar.</h1><p class="intro">Prazos sem surpresa, editais com fontes e sua evolução em um único painel. Nenhum concurso é descartado automaticamente por região ou salário.</p><div id="verified" class="verified">Carregando data da última verificação…</div></section>
+<section class="stats" aria-label="Resumo">
+<div class="stat"><span>Oportunidades mapeadas</span><strong id="totalCount">—</strong><small>com fontes</small></div>
+<div class="stat"><span>Inscrições abertas</span><strong id="openCount">—</strong><small>no prazo</small></div>
+<div class="stat"><span>Próximos 7 dias</span><strong id="weekCount">—</strong><small>prazos de inscrição</small></div>
+<div class="stat"><span>Em acompanhamento</span><strong id="followingCount">—</strong><small>marcados neste dispositivo</small></div>
+</section>
+<div class="tabs" role="group" aria-label="Seções dos concursos">
+<button type="button" data-screen="radar" aria-pressed="true">Radar de editais</button>
+<button type="button" data-screen="correcao" aria-pressed="false">Gabarito · Dataprev</button>
+<button type="button" data-screen="vigia" aria-pressed="false">Próximos passos</button>
+</div>
+<section id="radar" class="panel">
+<div class="panel-heading"><div><p class="eyebrow">RADAR NACIONAL</p><h2>Editais e oportunidades</h2><p class="muted">Filtre por região e etapa. Os prazos são computados no fuso de Brasília, com base nos dados verificados.</p></div><span class="chip">Fonte oficial quando disponível</span></div>
+<div class="filters"><input id="search" type="search" aria-label="Buscar concursos" placeholder="Buscar órgão, cargo, cidade ou banca…"><select id="region" aria-label="Região"><option value="all">Todas as regiões</option><option value="SC">Santa Catarina</option><option value="SUL">Sul (exceto SC)</option><option value="BR">Outros estados / federal</option></select><select id="show" aria-label="Situação"><option value="all">Todas as situações</option><option value="open">Inscrições no prazo</option><option value="exam">Aguardando prova / gabarito</option><option value="follow">Estou acompanhando</option><option value="verify">Falta verificar</option></select></div>
+<div id="contests" class="cards" aria-live="polite"><p>Carregando editais…</p></div>
+<p class="verified">A seleção e o estágio que você marcar ficam no armazenamento local do navegador. Não são compartilhados com o GitHub nem sincronizados entre dispositivos.</p>
+</section>
+<section id="correcao" class="panel hide">
+<p class="eyebrow">PÓS-PROVA · DATAPREV 2026</p><h2>Conferência de gabarito</h2>
+<p class="muted">Analista de TI — Desenvolvimento de Software · FGV · 70 questões. Escolha o tipo de caderno e insira suas alternativas e as do gabarito oficial do mesmo tipo. A conferência começa assim que houver respostas dos dois lados.</p>
+<div class="notice" id="keyNotice">Em 11/10/2026 o gabarito preliminar ainda não constava na página da banca. Este painel não preenche respostas oficiais automaticamente. <a href="https://conhecimento.fgv.br/concursos/dataprev26" target="_blank" rel="noopener noreferrer">Conferir FGV →</a></div>
+<div class="two" style="margin-top:20px"><div><label class="field-label" for="examType">Tipo de caderno</label><select id="examType"><option value="1">Tipo 1</option><option value="2">Tipo 2</option><option value="3">Tipo 3</option><option value="4">Tipo 4</option></select></div><div><label class="field-label" for="questionCount">Questões previstas</label><input id="questionCount" value="70" disabled aria-label="Total de questões"></div></div>
+<div class="two" style="margin-top:16px"><div><label class="field-label" for="myAnswers">Suas respostas (1 a 70)</label><textarea id="myAnswers" spellcheck="false" placeholder="Ex.: ABCDE ABCDE ABCDE…" aria-describedby="answerHelp"></textarea></div><div><label class="field-label" for="officialAnswers">Gabarito da banca (mesmo tipo)</label><textarea id="officialAnswers" spellcheck="false" placeholder="Cole aqui quando for publicado. Use X para anulada." aria-describedby="answerHelp"></textarea></div></div>
+<p class="answer-help" id="answerHelp">Digite apenas A, B, C, D, E; use “-” para questão não respondida e “X” para anulada no gabarito. Aceita letras juntas, com espaço, vírgula ou quebra de linha. Ignore números de questões ao colar.</p>
+<div id="answerValidation" class="verified" role="status"></div>
+<div class="result" aria-label="Resultado provisório"><div class="metric"><span>Acertos</span><strong id="correct">—</strong></div><div class="metric"><span>Erros</span><strong id="wrong">—</strong></div><div class="metric"><span>Em branco</span><strong id="blank">—</strong></div><div class="metric"><span>Anuladas</span><strong id="void">—</strong></div><div class="metric"><span>Conferidas</span><strong id="checked">—</strong></div></div>
+<div class="correction" id="correction" aria-live="polite"></div>
+<p class="verified">Resultado bruto, não pontuação oficial: pesos por disciplina, critérios eliminatórios, anulações e regras do edital precisam ser aplicados separadamente. Nenhuma estimativa de classificação é apresentada sem os dados oficiais.</p>
+<div class="button-row"><button class="small-btn" id="exportData" type="button">Exportar minhas anotações (.json)</button><button class="small-btn" id="copySummary" type="button">Copiar resumo da correção</button><button class="small-btn" id="clearAnswers" type="button">Limpar respostas deste tipo</button></div>
+</section>
+<section id="vigia" class="panel hide"><p class="eyebrow">FILA DE ACOMPANHAMENTO</p><h2>Publicações a observar</h2><div class="watchlist"><div class="mini"><strong>Dataprev — gabarito, recursos e classificação</strong><p>Checar publicação do gabarito preliminar por tipo de caderno, janela de recursos, alterações, resultado e homologação.</p><a href="https://conhecimento.fgv.br/concursos/dataprev26" target="_blank" rel="noopener noreferrer">FGV →</a></div><div class="mini"><strong>CASAN — situação de inscrição e local da prova</strong><p>Verificar a situação no portal da AOCP, confirmar o cargo 404, acompanhar data/local e retificações.</p><a href="https://www.institutoaocp.org.br/concursos/711" target="_blank" rel="noopener noreferrer">AOCP →</a></div><div class="mini"><strong>Novos concursos — sem filtro de salário ou município</strong><p>Prioridade de apresentação para SC, sem excluir cidades pequenas ou outras regiões. Confirmar sempre escolaridade de ADS, datas e etapas.</p></div></div><hr class="sep"><h2>Oportunidades pendentes de validação</h2><div id="watchlist" class="watchlist"></div><p class="verified">Novas informações são publicadas por atualizações versionadas no repositório, não por uma conexão em tempo real com as bancas.</p></section>
+</main>
+<footer class="shell footer">Software Mastery Roadmap · Concursos de TI · Fontes e prazos sujeitos a retificações · Última verificação em <span id="footerDate">—</span>. <a href="https://github.com/lucastrevvos/software-mastery-roadmap">GitHub</a></footer>
+<script>
+"use strict";
+var STORAGE="software-mastery-concursos-v1";
+var stored={stages:{},exams:{}};
+var data=null;
+var $=function(id){return document.getElementById(id)};
+try {var s=JSON.parse(localStorage.getItem(STORAGE));if(s&&typeof s==="object"){stored.stages=s.stages||{};stored.exams=s.exams||{}}}catch(e){}
+function save(){try{localStorage.setItem(STORAGE,JSON.stringify(stored))}catch(e){console.warn("Armazenamento local indisponível",e)}}
+function esc(v){return String(v==null?"":v).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#39;")}
+function fmtDate(v){if(!v)return "A confirmar";var p=v.split("-");return p[2]+"/"+p[1]+"/"+p[0]}
+function brl(v){return v==null?"Consultar edital":v.toLocaleString("pt-BR",{style:"currency",currency:"BRL"})}
+function daysLeft(v){if(!v)return null;var now=new Date(),end=new Date(v+"T23:59:59-03:00");return Math.ceil((end-now)/86400000)}
+function label(c){if(c.status==="verificar")return "Verificação pendente";if(c.status==="gabarito")return "Gabarito pendente";if(c.status==="prova")return "Aguardando prova";var days=daysLeft(c.applicationEnd);if(days<0)return "Inscrições encerradas";if(c.applicationStart&&daysLeft(c.applicationStart)>1)return "Inscrições futuras";if(days<=3)return "Prazo urgente";return "Inscrições abertas"}
+function isOpen(c){return c.status==="inscricoes"&&daysLeft(c.applicationEnd)>=0&&(!c.applicationStart||daysLeft(c.applicationStart)<=1)}
+function daysText(c){if(!c.applicationEnd)return "Sem data";var d=daysLeft(c.applicationEnd);return d<0?"Prazo encerrado":d===0?"Termina hoje":d===1?"Termina amanhã":"Restam "+d+" dias"}
+var stages=["Não avaliado","Quero me inscrever","Inscrito","Pagamento pendente","Inscrição confirmada","Estudando","Prova realizada","Aguardando resultado","Descartado"];
+function isFollowing(c){return !!stored.stages[c.id]&&stored.stages[c.id]!=="Não avaliado"&&stored.stages[c.id]!=="Descartado"}
+function renderStats(){var cs=data.contests;$("totalCount").textContent=cs.length;$("openCount").textContent=cs.filter(isOpen).length;$("weekCount").textContent=cs.filter(c=>isOpen(c)&&daysLeft(c.applicationEnd)<=7).length;$("followingCount").textContent=cs.filter(isFollowing).length}
+function renderCards(){
+ if(!data)return;
+ var q=$("search").value.toLowerCase().trim(),r=$("region").value,filter=$("show").value;
+ var arr=data.contests.filter(function(c){
+  var text=[c.agency,c.role,c.place,c.board,c.notes].join(" ").toLowerCase();
+  var region=r==="all"||c.scope===r;
+  var status=filter==="all"||(filter==="open"&&isOpen(c))||(filter==="exam"&&(c.status==="prova"||c.status==="gabarito"))||(filter==="follow"&&isFollowing(c))||(filter==="verify"&&!c.verified);
+  return text.includes(q)&&region&&status;
+ });
+ arr.sort(function(a,b){var rank=function(c){return c.status==="gabarito"?-2:isOpen(c)?0:c.status==="prova"?1:2};return rank(a)-rank(b)||(a.applicationEnd||"9999").localeCompare(b.applicationEnd||"9999")});
+ var list=$("contests");if(!arr.length){list.innerHTML='<p class="empty">Nenhum concurso corresponde aos filtros.</p>';return}
+ list.innerHTML=arr.map(function(c){
+ var chipClass=isOpen(c)?daysLeft(c.applicationEnd)<=3?"due":"open":c.verified?"check":"due";
+ var options=stages.map(function(st){return '<option value="'+esc(st)+'"'+((stored.stages[c.id]||"Não avaliado")===st?" selected":"")+'>'+esc(st)+'</option>'}).join("");
+ return '<article class="contest"><div class="agency">'+esc(c.agency)+'</div><h3>'+esc(c.role)+'</h3><div class="meta"><span class="chip '+chipClass+'">'+esc(label(c))+'</span><span class="chip">'+esc(c.place)+'</span><span class="chip">'+esc(c.board)+'</span></div><dl class="info"><div><dt>Remuneração inicial</dt><dd>'+esc(brl(c.salary))+'</dd></div><div><dt>Inscrições até</dt><dd>'+fmtDate(c.applicationEnd)+'</dd></div><div><dt>Prova</dt><dd>'+fmtDate(c.examDate)+'</dd></div><div><dt>Prazo</dt><dd>'+esc(daysText(c))+'</dd></div></dl><p>'+esc(c.vacancies)+' · '+esc(c.kind)+'</p><p>'+esc(c.notes)+'</p><div class="actions"><a href="'+esc(c.source)+'" target="_blank" rel="noopener noreferrer">'+(c.verified?"Fonte do concurso ↗":"Fonte secundária ↗")+'</a><div class="stage"><label for="stage-'+esc(c.id)+'">Seu acompanhamento</label><select data-id="'+esc(c.id)+'" id="stage-'+esc(c.id)+'">'+options+'</select></div></div></article>'
+ }).join("");
+ list.querySelectorAll("select[data-id]").forEach(function(sel){sel.addEventListener("change",function(){stored.stages[sel.dataset.id]=sel.value;save();renderStats();if($("show").value==="follow")renderCards()})});
+}
+function renderWatchlist(){var list=$("watchlist");list.innerHTML=data.watchlist.map(function(w){return '<div class="mini"><strong>'+esc(w.name)+'</strong><p>'+esc(w.note)+'</p>'+(w.url?'<a href="'+esc(w.url)+'" target="_blank" rel="noopener noreferrer">Consultar origem ↗</a>':"")+'</div>'}).join("")}
+function exam(){var k=$("examType").value;if(!stored.exams[k])stored.exams[k]={mine:"",key:""};return stored.exams[k]}
+function extract(v){return (v.toUpperCase().match(/[A-EX-]/g)||[]).slice(0,70)}
+function renderCorrection(){
+ var a=extract($("myAnswers").value),b=extract($("officialAnswers").value);
+ $("answerValidation").textContent="Suas respostas: "+a.length+"/70 · Gabarito: "+b.length+"/70. "+(b.length===0?"Aguardando publicação e preenchimento do gabarito.":"Conferência provisória, apenas das posições disponíveis.");
+ var counts={correct:0,wrong:0,blank:0,void:0,checked:0};
+ var tiles=[];
+ for(var i=0;i<70;i++){
+  var u=a[i],g=b[i];var kind="none";
+  if(g&&u){counts.checked++;if(g==="X"){counts.void++;kind="void"}else if(u==="-"){counts.blank++;kind="none"}else if(u===g){counts.correct++;kind="good"}else{counts.wrong++;kind="bad"}}
+  else if(g&&g==="X"){counts.void++;kind="void"}
+  tiles.push('<div class="answer-pill '+kind+'" title="Questão '+(i+1)+': sua '+(u||"não informada")+' / banca '+(g||"não informada")+'">'+(i+1)+'<strong>'+(u||"·")+(g?" / "+g:"")+'</strong></div>');
+ }
+ Object.keys(counts).forEach(function(k){$(k).textContent=counts[k]});
+ $("correction").innerHTML=tiles.join("");
+}
+function loadExam(){var e=exam();$("myAnswers").value=e.mine||"";$("officialAnswers").value=e.key||"";renderCorrection()}
+function updateExam(){var e=exam();e.mine=$("myAnswers").value;e.key=$("officialAnswers").value;save();renderCorrection()}
+function activate(screen){document.querySelectorAll(".tabs button").forEach(function(b){b.setAttribute("aria-pressed",String(b.dataset.screen===screen))});["radar","correcao","vigia"].forEach(function(id){$(id).classList.toggle("hide",id!==screen)});if(location.hash!=="#"+screen)history.replaceState(null,"","#"+screen)}
+document.querySelectorAll(".tabs button").forEach(function(b){b.addEventListener("click",function(){activate(b.dataset.screen)})});
+["search","region","show"].forEach(function(id){$(id).addEventListener(id==="search"?"input":"change",renderCards)});
+$("examType").addEventListener("change",loadExam);["myAnswers","officialAnswers"].forEach(function(id){$(id).addEventListener("input",updateExam)});
+$("clearAnswers").addEventListener("click",function(){if(confirm("Limpar respostas e gabarito digitados para este tipo de caderno?")){stored.exams[$("examType").value]={mine:"",key:""};save();loadExam()}});
+$("copySummary").addEventListener("click",function(){var s="Dataprev 2026 — Tipo "+$("examType").value+" | Acertos: "+$("correct").textContent+" | Erros: "+$("wrong").textContent+" | Brancos: "+$("blank").textContent+" | Anuladas: "+$("void").textContent+" | Conferidas: "+$("checked").textContent+". Apuração bruta, sem pesos oficiais.";if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(s).then(function(){alert("Resumo copiado.")}).catch(function(){prompt("Copie o texto:",s)})}else prompt("Copie o texto:",s)});
+$("exportData").addEventListener("click",function(){var blob=new Blob([JSON.stringify({version:1,exportedAt:new Date().toISOString(),data:stored},null,2)],{type:"application/json"}),a=document.createElement("a"),url=URL.createObjectURL(blob);a.href=url;a.download="concursos-progresso-"+new Date().toISOString().slice(0,10)+".json";a.click();setTimeout(function(){URL.revokeObjectURL(url)},1000)});
+fetch("./concursos.json?v=2026-10-11",{cache:"no-store"}).then(function(r){if(!r.ok)throw new Error("HTTP "+r.status);return r.json()}).then(function(json){data=json;$("verified").textContent="Última verificação editorial: "+data.lastVerifiedLabel+" · Consulte os editais para retificações";$("footerDate").textContent=data.lastVerifiedLabel;renderStats();renderCards();renderWatchlist();loadExam()}).catch(function(e){$("contests").textContent="Não foi possível carregar o radar. Atualize a página ou verifique o GitHub Pages. "+e.message;$("verified").textContent="Dados indisponíveis."});
+activate(["radar","correcao","vigia"].includes(location.hash.slice(1))?location.hash.slice(1):"radar");
+</script>
+</body></html>
