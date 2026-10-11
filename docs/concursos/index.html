@@ -68,9 +68,9 @@ function save(){try{localStorage.setItem(STORAGE,JSON.stringify(stored))}catch(e
 function esc(v){return String(v==null?"":v).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#39;")}
 function fmtDate(v){if(!v)return "A confirmar";var p=v.split("-");return p[2]+"/"+p[1]+"/"+p[0]}
 function brl(v){return v==null?"Consultar edital":v.toLocaleString("pt-BR",{style:"currency",currency:"BRL"})}
-function daysLeft(v){if(!v)return null;var now=new Date(),end=new Date(v+"T23:59:59-03:00");return Math.ceil((end-now)/86400000)}
-function label(c){if(c.status==="verificar")return "Verificação pendente";if(c.status==="gabarito")return "Gabarito pendente";if(c.status==="prova")return "Aguardando prova";var days=daysLeft(c.applicationEnd);if(days<0)return "Inscrições encerradas";if(c.applicationStart&&daysLeft(c.applicationStart)>1)return "Inscrições futuras";if(days<=3)return "Prazo urgente";return "Inscrições abertas"}
-function isOpen(c){return c.status==="inscricoes"&&daysLeft(c.applicationEnd)>=0&&(!c.applicationStart||daysLeft(c.applicationStart)<=1)}
+function daysLeft(v){if(!v)return null;var today=new Intl.DateTimeFormat("sv-SE",{timeZone:"America/Sao_Paulo",year:"numeric",month:"2-digit",day:"2-digit"}).format(new Date());return Math.round((Date.parse(v+"T12:00:00-03:00")-Date.parse(today+"T12:00:00-03:00"))/86400000)}
+function label(c){if(c.status==="verificar")return "Verificação pendente";if(c.status==="gabarito")return "Gabarito pendente";if(c.status==="prova")return "Aguardando prova";var days=daysLeft(c.applicationEnd);if(days<0)return "Inscrições encerradas";if(c.applicationStart&&daysLeft(c.applicationStart)>0)return "Inscrições futuras";if(days<=3)return "Prazo urgente";return "Inscrições abertas"}
+function isOpen(c){return c.status==="inscricoes"&&daysLeft(c.applicationEnd)>=0&&(!c.applicationStart||daysLeft(c.applicationStart)<=0)}
 function daysText(c){if(!c.applicationEnd)return "Sem data";var d=daysLeft(c.applicationEnd);return d<0?"Prazo encerrado":d===0?"Termina hoje":d===1?"Termina amanhã":"Restam "+d+" dias"}
 var stages=["Não avaliado","Quero me inscrever","Inscrito","Pagamento pendente","Inscrição confirmada","Estudando","Prova realizada","Aguardando resultado","Descartado"];
 function isFollowing(c){return !!stored.stages[c.id]&&stored.stages[c.id]!=="Não avaliado"&&stored.stages[c.id]!=="Descartado"}
