@@ -49,7 +49,10 @@ function observed(t,all){
 function weight(t,s,p){
  const relevance=p==="casan"?(t.track==="casan"?1.55:t.track==="shared"?1.32:.31):p==="cgu"?(t.track==="cgu"?1.7:t.track==="shared"?1.28:.1):1;
  let v=(4-t.priority)*relevance*(1+1.7*s.gap);
- if(!s.count)v*=1.13;if(s.due)v*=1.27;
+ if(!s.count)v*=1.13;
+ // Português tem evidência direta de 5/12 na Dataprev e ocupa 10 itens na CASAN; iniciar por ele antes de substituir a hipótese pelo primeiro treino AOCP.
+ if(t.id==="por"&&p==="casan"&&!s.count)v*=1.20;
+ if(s.due)v*=1.27;
  if(s.time)v*=1+Math.min(.25,s.time*.11);
  if(s.missing)v*=1+Math.min(.18,s.missing*.07);
  if(s.count>=2&&s.accuracy>=.85&&!s.due)v*=.65;
