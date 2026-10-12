@@ -1,0 +1,421 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-10-11",
+  "title": "Preparação integrada CASAN → CGU 2026",
+  "description": "Planejamento de estudos para dois concursos, CASAN como prioridade até 22/11 e CGU de 23/11 a 13/12. A ordem de estudos é uma estratégia pedagógica, não previsão de questões ou nota de corte.",
+  "sources": [
+    {
+      "name": "CASAN AOCP — concurso nível superior",
+      "url": "https://www.institutoaocp.org.br/concursos/711"
+    },
+    {
+      "name": "CGU Cebraspe — AFFC 2026",
+      "url": "https://www.cebraspe.org.br/concursos/cgu_26_affc"
+    },
+    {
+      "name": "CGU — página oficial",
+      "url": "https://www.gov.br/cgu/pt-br/acesso-a-informacao/concursos"
+    }
+  ],
+  "exams": [
+    {
+      "id": "casan",
+      "name": "CASAN 2026",
+      "role": "404 · Analista de Sistemas — Desenvolvimento",
+      "board": "Instituto AOCP",
+      "date": "2026-11-22",
+      "priority": 1,
+      "questions": 50,
+      "info": "Prova objetiva; verificar regras e últimas retificações na AOCP.",
+      "source": "https://www.institutoaocp.org.br/concursos/711",
+      "status": "Inscrição/pagamento a confirmar na área do candidato."
+    },
+    {
+      "id": "cgu",
+      "name": "CGU 2026",
+      "role": "Cargo 4 · Auditor Federal de Finanças e Controle — TI/Desenvolvimento",
+      "board": "Cebraspe",
+      "date": "2026-12-13",
+      "priority": 2,
+      "questions": 170,
+      "info": "Itens C/E e prova discursiva; inscrições até 04/11; isenção até 16/10 mediante critérios do edital.",
+      "source": "https://www.cebraspe.org.br/concursos/cgu_26_affc",
+      "status": "Inscrição ainda não confirmada."
+    }
+  ],
+  "diagnostic": {
+    "exam": "Dataprev 2026 · Tipo 1 · extraoficial",
+    "date": "2026-10-11",
+    "totalQuestions": 70,
+    "correct": 39,
+    "incorrect": 31,
+    "score": 63,
+    "maxScore": 115,
+    "official": false,
+    "notes": "Não é gabarito oficial. Q37 precisa reavaliação após divulgação; Q65 foi B no cartão apesar de E reconhecida depois; Q69 foi C no cartão, correção extraoficial B.",
+    "breakdown": [
+      {
+        "name": "Português",
+        "correct": 5,
+        "total": 12
+      },
+      {
+        "name": "Inglês técnico",
+        "correct": 9,
+        "total": 12
+      },
+      {
+        "name": "Raciocínio lógico",
+        "correct": 3,
+        "total": 5
+      },
+      {
+        "name": "Atualidades/IA",
+        "correct": 4,
+        "total": 6
+      },
+      {
+        "name": "Legislação/LGPD",
+        "correct": 2,
+        "total": 5
+      },
+      {
+        "name": "TI específica",
+        "correct": 16,
+        "total": 30
+      }
+    ],
+    "weaknesses": [
+      {
+        "name": "Português",
+        "why": "5/12; interpretação, coesão, gramática e leitura precisa.",
+        "priority": 1
+      },
+      {
+        "name": "Governança, BPMN, ITIL, COBIT",
+        "why": "Q65, 67, 68, 69; 10 pontos perdidos na parte específica.",
+        "priority": 1
+      },
+      {
+        "name": "Segurança e identidade",
+        "why": "ISO 27001/27002, SSO/OAuth e vulnerabilidades.",
+        "priority": 1
+      },
+      {
+        "name": "BI e ETL",
+        "why": "Q48, 49, 62, 63; priorizar sobretudo na fase CGU.",
+        "priority": 2
+      },
+      {
+        "name": "Java/JUnit/lambdas",
+        "why": "Q59, Q61; executar exemplos e testar.",
+        "priority": 2
+      },
+      {
+        "name": "Gestão do tempo",
+        "why": "Dificuldade relatada durante a prova; medir duração por questão e treinar 3 passagens.",
+        "priority": 1
+      }
+    ],
+    "strength": "SQL operacional, normalização, POO, arquiteturas, testes e inglês tiveram evidências favoráveis; manter revisões sem reiniciar do zero."
+  },
+  "methodology": {
+    "name": "AMS para concurso",
+    "steps": [
+      "Theory",
+      "Checkpoint",
+      "Workshop: 10 questões autorais AOCP explicadas",
+      "Lab: 10 questões autorais, respostas antes da correção",
+      "Review e Error Ledger",
+      "Simulado cronometrado",
+      "Gate por aproveitamento e tempo"
+    ],
+    "noLocks": true,
+    "learningProgress": "localStorage do navegador com exportação/importação JSON (não sincroniza automaticamente com GitHub)",
+    "timedPasses": [
+      "1ª passagem: resolver fáceis rapidamente",
+      "2ª: retornar cálculos/código/interpretação",
+      "3ª: revisar pendentes e cartão-resposta"
+    ]
+  },
+  "studyAllocation": {
+    "beforeCasan": {
+      "shared": 50,
+      "casanExclusive": 40,
+      "cguExclusive": 10
+    },
+    "afterCasan": {
+      "shared": 45,
+      "cguExclusive": 55
+    },
+    "note": "Percentuais sugeridos, ajustáveis por desempenho e tempo disponível."
+  },
+  "weeks": [
+    {
+      "id": "w01",
+      "start": "2026-10-12",
+      "end": "2026-10-18",
+      "theme": "Português, legislação CASAN, Delphi inicial",
+      "shared": "Java, algoritmos, requisitos e segurança",
+      "cgu": "Ética pública e 1 exercício discursivo curto",
+      "deliverable": "Laboratório Português 10 questões + primeiro simulado diagnóstico cronometrado"
+    },
+    {
+      "id": "w02",
+      "start": "2026-10-19",
+      "end": "2026-10-25",
+      "theme": "Matemática, COBIT, ITIL, PMBOK e BPMN",
+      "shared": "Agilidade, arquitetura, testes",
+      "cgu": "Governança, riscos e integridade",
+      "deliverable": "10 questões de governança AOCP + reteste Português"
+    },
+    {
+      "id": "w03",
+      "start": "2026-10-26",
+      "end": "2026-11-01",
+      "theme": "Delphi eventos/SQL, PL/SQL e Português",
+      "shared": "SQL/JPA, OAuth/OIDC, LGPD e REST",
+      "cgu": "Estado, democracia e administração pública",
+      "deliverable": "Laboratório de Delphi e 1 escrita técnica curta"
+    },
+    {
+      "id": "w04",
+      "start": "2026-11-02",
+      "end": "2026-11-08",
+      "theme": "Legislação institucional, matemática, APF",
+      "shared": "Spring, Docker, CI/CD, microsserviços",
+      "cgu": "Controle público e transparência",
+      "deliverable": "Simulado parcial e revisão das leis"
+    },
+    {
+      "id": "w05",
+      "start": "2026-11-09",
+      "end": "2026-11-15",
+      "theme": "Erros recorrentes e simulado AOCP de 50 questões",
+      "shared": "Segurança, bancos, Java, engenharia de software",
+      "cgu": "Situação-problema discursiva de TI",
+      "deliverable": "Simulado completo cronometrado e Error Ledger"
+    },
+    {
+      "id": "w06",
+      "start": "2026-11-16",
+      "end": "2026-11-21",
+      "theme": "Revisão CASAN: Português, Delphi, legislação e matemática",
+      "shared": "Revisão de pontos fracos relevantes",
+      "cgu": "Manutenção leve",
+      "deliverable": "Dois simulados com gestão do cartão-resposta"
+    },
+    {
+      "id": "w07",
+      "start": "2026-11-23",
+      "end": "2026-11-29",
+      "theme": "CASAN concluída: foco CGU",
+      "shared": "Java, Spring, persistência",
+      "cgu": "P1/P2, auditoria, ética e primeiro simulado Cebraspe",
+      "deliverable": "Diagnóstico Cebraspe com penalização simulada"
+    },
+    {
+      "id": "w08",
+      "start": "2026-11-30",
+      "end": "2026-12-06",
+      "theme": "Foco CGU",
+      "shared": "APIs, segurança, arquitetura, persistência",
+      "cgu": "Spring Batch, ETL, Vue, RAG, auditoria e 2 discursivas",
+      "deliverable": "Simulado técnico + duas discursivas"
+    },
+    {
+      "id": "w09",
+      "start": "2026-12-07",
+      "end": "2026-12-12",
+      "theme": "Revisão CGU",
+      "shared": "Revisão das principais lacunas",
+      "cgu": "Simulados certo/errado e discursiva sob tempo",
+      "deliverable": "Simulado completo + revisão final"
+    }
+  ],
+  "topics": [
+    {
+      "id": "por",
+      "name": "Português AOCP",
+      "track": "casan",
+      "priority": 1,
+      "status": "iniciar",
+      "detail": "Interpretação, coesão, conectivos, concordância, funções de se/que, regência, crase e pontuação.",
+      "evidence": "Dataprev 5/12",
+      "action": "Aula inicial + 10 exemplos comentados + 10 para responder",
+      "learningUrl": "modulo-portugues",
+      "timebox": 3
+    },
+    {
+      "id": "lei",
+      "name": "Legislação CASAN/saneamento",
+      "track": "casan",
+      "priority": 1,
+      "status": "planejado",
+      "detail": "Lei 9.984/2000, Decreto 7.217/2010, normas estaduais e internas; conferir conteúdo integral no edital retificado.",
+      "action": "Quadros de competências, leitura dirigida e AOCP",
+      "timebox": 3
+    },
+    {
+      "id": "delphi",
+      "name": "Delphi e Object Pascal",
+      "track": "casan",
+      "priority": 1,
+      "status": "planejado",
+      "detail": "Sintaxe, OO, eventos, formulários, datasets e integração ao banco.",
+      "action": "Código comentado e questões de interpretação",
+      "timebox": 3
+    },
+    {
+      "id": "mat",
+      "name": "Matemática e lógica AOCP",
+      "track": "casan",
+      "priority": 1,
+      "status": "planejado",
+      "detail": "Frações, porcentagem, equações, funções, probabilidade, geometria, juros e lógica.",
+      "action": "Problemas cronometrados e revisão",
+      "timebox": 3
+    },
+    {
+      "id": "gov",
+      "name": "Governança, BPMN e gestão",
+      "track": "shared",
+      "priority": 1,
+      "status": "planejado",
+      "detail": "COBIT, ITIL 4, PMBOK, BPMN, Scrum, Kanban, riscos e processos, com recorte de cada edital.",
+      "evidence": "Dataprev Q65,67,68,69",
+      "action": "10 AOCP + 10 Cebraspe adaptadas por banca",
+      "timebox": 3
+    },
+    {
+      "id": "sec",
+      "name": "Segurança, privacidade e identidade",
+      "track": "shared",
+      "priority": 1,
+      "status": "planejado",
+      "detail": "ISO, OWASP, criptografia, OAuth/OIDC, DevSecOps e LGPD.",
+      "evidence": "Dataprev Q42,43,44",
+      "action": "Revisão normativa + casos reais",
+      "timebox": 3
+    },
+    {
+      "id": "java",
+      "name": "Java, Spring, algoritmos e testes",
+      "track": "shared",
+      "priority": 2,
+      "status": "planejado",
+      "detail": "Collections, lambdas, JUnit, JPA, Spring Boot, APIs e tratamento de erros.",
+      "evidence": "Dataprev Q59,61",
+      "action": "Executar código mínimo + questões AOCP/Cebraspe",
+      "timebox": 3
+    },
+    {
+      "id": "sql",
+      "name": "SQL, modelagem e persistência",
+      "track": "shared",
+      "priority": 2,
+      "status": "planejado",
+      "detail": "SQL, índices, transações, isolamento, Oracle/PLSQL e JPA.",
+      "action": "Casos SQL cronometrados",
+      "timebox": 2
+    },
+    {
+      "id": "arq",
+      "name": "Arquitetura, integrações e DevOps",
+      "track": "shared",
+      "priority": 2,
+      "status": "planejado",
+      "detail": "REST, mensageria, idempotência, microsserviços, Docker, CI/CD, nuvem e observabilidade.",
+      "action": "Questões e estudo de cenário",
+      "timebox": 2
+    },
+    {
+      "id": "eng",
+      "name": "Engenharia de software e requisitos",
+      "track": "shared",
+      "priority": 2,
+      "status": "planejado",
+      "detail": "UML, SOLID, XP, testes, requisitos, padrões, qualidade e APF.",
+      "action": "Questões comentadas e laboratório",
+      "timebox": 2
+    },
+    {
+      "id": "atual",
+      "name": "Atualidades/SC e sustentabilidade",
+      "track": "casan",
+      "priority": 3,
+      "status": "planejado",
+      "detail": "História/geografia SC, ambiente, saneamento e notícias relevantes.",
+      "action": "Revisão objetiva curta",
+      "timebox": 1
+    },
+    {
+      "id": "aud",
+      "name": "CGU: Estado, ética, auditoria, controle e transparência",
+      "track": "cgu",
+      "priority": 2,
+      "status": "planejado",
+      "detail": "Constitucional, Estado, integridade, políticas públicas, auditoria e ouvidoria do programa.",
+      "action": "C/E com justificativa e discursiva",
+      "timebox": 4
+    },
+    {
+      "id": "dados",
+      "name": "CGU: ETL/ELT, BI, Spring Batch e IA",
+      "track": "cgu",
+      "priority": 2,
+      "status": "planejado",
+      "detail": "Processamento em lote, dados, vetores, recuperação de informação/RAG, segurança em IA e Vue.js.",
+      "evidence": "Dataprev Q48,49,62,63",
+      "action": "Laboratório Java/Spring Batch + itens C/E",
+      "timebox": 3
+    },
+    {
+      "id": "disc",
+      "name": "CGU: prova discursiva",
+      "track": "cgu",
+      "priority": 2,
+      "status": "planejado",
+      "detail": "Resposta de conhecimentos complementares e situação-problema de TI, escrita manuscrita cronometrada.",
+      "action": "1 treino semanal pré-CASAN; 2 por semana após CASAN",
+      "timebox": 2
+    }
+  ],
+  "nextActions": [
+    {
+      "id": "start-01",
+      "title": "Abrir a trilha e fazer o diagnóstico de Português",
+      "due": "2026-10-12",
+      "minutes": 60,
+      "topic": "por"
+    },
+    {
+      "id": "start-02",
+      "title": "Confirmar inscrição CASAN na AOCP",
+      "due": "2026-10-12",
+      "minutes": 10,
+      "topic": "lei"
+    },
+    {
+      "id": "start-03",
+      "title": "Inscrever-se na CGU ou confirmar a situação",
+      "due": "2026-11-04",
+      "minutes": 10,
+      "topic": "aud"
+    },
+    {
+      "id": "start-04",
+      "title": "Conferir elegibilidade de isenção CGU até 16/10",
+      "due": "2026-10-16",
+      "minutes": 10,
+      "topic": "aud"
+    },
+    {
+      "id": "start-05",
+      "title": "Simulado CASAN diagnóstico e auditoria de erros",
+      "due": "2026-10-18",
+      "minutes": 240,
+      "topic": "por"
+    }
+  ]
+}
