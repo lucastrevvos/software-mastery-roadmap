@@ -12,7 +12,25 @@ Este repositório é a fonte da verdade para quatro coisas diferentes:
 
 > Curso concluído não significa domínio. Certificado é evidência externa; Mastery Gate é evidência interna.
 
-## Trilha temporária de concursos — CASAN → CGU 2026\n\n- **CASAN — Analista de Sistemas / Desenvolvimento**: prova prevista para 22/11/2026; prioridade até essa data.\n- **CGU — AFFC / TI / Desenvolvimento**: prova prevista para 13/12/2026; parte comum estudada antes e imersão após 22/11.\n- **Diagnóstico-base Dataprev 2026 (extraoficial)**: 39 acertos em 70; 63/115 pontos. Principais intervenções: Português, governança, segurança, gestão do tempo; BI/ETL priorizado na janela CGU.\n- **AMS concurso**: Workshop com 10 questões comentadas + Lab com 10 questões respondidas antes da correção; sem bloqueio de tópicos.\n- **[Abrir painel de estudos CASAN → CGU](https://lucastrevvos.github.io/software-mastery-roadmap/concursos/estudos/)** · [Arquivo diagnóstico](docs/concursos/estudos/dataprev-2026-extraoficial.md) · [Plano estruturado](docs/concursos/estudos/plano-2026.json).\n\n> Esta é uma janela temporária de foco em concursos, sem apagar ou reordenar definitivamente as trilhas de engenharia. A atualização de progresso no painel é local e pode ser exportada em JSON.\n\n## Estado atual
+## Trilha temporária de concursos — CASAN → CGU 2026
+
+- **CASAN — Analista de Sistemas / Desenvolvimento**: prova prevista para 22/11/2026; prioridade até essa data.
+- **CGU — AFFC / TI / Desenvolvimento**: prova prevista para 13/12/2026; parte comum estudada antes e imersão após 22/11.
+- **Diagnóstico-base Dataprev 2026 (extraoficial)**: 39 acertos em 70; 63/115 pontos. Principais intervenções: Português, governança, segurança, gestão do tempo; BI/ETL priorizado na janela CGU.
+- **AMS concurso**: Workshop com 10 questões comentadas + Lab com 10 questões respondidas antes da correção; sem bloqueio de tópicos.
+- **[Abrir painel de estudos CASAN → CGU](https://lucastrevvos.github.io/software-mastery-roadmap/concursos/estudos/)** · [Arquivo diagnóstico](docs/concursos/estudos/dataprev-2026-extraoficial.md) · [Plano estruturado](docs/concursos/estudos/plano-2026.json).
+
+> Esta é uma janela temporária de foco em concursos, sem apagar ou reordenar definitivamente as trilhas de engenharia. A atualização de progresso no painel é local e pode ser exportada em JSON.
+
+## Concurso Mastery Engine (CME)
+
+Motor adaptativo de estudos para CASAN e CGU: prioridades por conteúdo do edital, urgência, desempenho observado, causa dos erros, gestão do tempo e recuperação espaçada. É um programa de treino **sem promessa de aprovação**.
+
+- [Abrir motor CME no GitHub Pages](https://lucastrevvos.github.io/software-mastery-roadmap/concursos/estudos/motor.html)
+- [Método e transparência do algoritmo](docs/concursos/estudos/MOTOR_ADAPTATIVO.md)
+- O histórico inserido no CME permanece no navegador e deve ser exportado em JSON para backup/arquivamento; não há escrita automática no repositório.
+
+## Estado atual
 
 - **CS50x:** concluído em 17/09/2026 — certificado oficial: https://certificates.cs50.io/45c5bcfe-b8cc-4aac-ad26-96b3f4824997.pdf?size=letter. Final Project: **LifeBoard** — https://github.com/lucastrevvos/lifeboard · demo: https://youtu.be/9Tg2Lx1C2bk.
 - **freeCodeCamp JavaScript Certification:** em andamento e agora é a **trilha principal ativa**. Posição registrada: Variables and Strings; próximo exercício: Build a Sentence Maker.
