@@ -1,0 +1,291 @@
+{
+  "schemaVersion": 1,
+  "subject": "Português AOCP — interpretação, coesão e gramática aplicada",
+  "origin": "Questões originais elaboradas para treino no estilo AOCP; não são transcrições de provas oficiais.",
+  "durationMinutes": 25,
+  "passPercent": 80,
+  "workshop": [
+    {
+      "topic": "Pontuação e intercalação",
+      "stem": "Assinale a justificativa correta para as vírgulas em: “A equipe, após revisar os registros, publicou o parecer.”",
+      "options": [
+        "Separam obrigatoriamente sujeito e verbo.",
+        "Isolam expressão adverbial intercalada entre sujeito e verbo.",
+        "Introduzem uma oração coordenada adversativa.",
+        "Indicam que o verbo foi omitido.",
+        "São necessárias porque a frase está na voz passiva."
+      ],
+      "answer": 1,
+      "explanation": "O segmento “após revisar os registros” está intercalado entre sujeito (“A equipe”) e verbo (“publicou”); as duas vírgulas delimitam esse termo. Não se deve separar sujeito e verbo por uma vírgula isolada.",
+      "trap": "Duas vírgulas isolam a intercalação; uma única vírgula entre sujeito e verbo seria inadequada."
+    },
+    {
+      "topic": "Concordância e 'se'",
+      "stem": "Qual construção apresenta concordância adequada na voz passiva sintética?",
+      "options": [
+        "Registrou-se três incidentes.",
+        "Verificaram-se inconsistências no cadastro.",
+        "Precisa-se de analistas experientes, com plural obrigatório.",
+        "Tratam-se de problemas recorrentes.",
+        "Identificou-se falhas graves."
+      ],
+      "answer": 1,
+      "explanation": "Em “Verificaram-se inconsistências”, o verbo é transitivo direto e concorda com o sujeito paciente plural. Com verbo transitivo indireto, “precisa-se de” permanece no singular.",
+      "trap": "“Trata-se de” e “precisa-se de” não seguem a mesma concordância da passiva sintética."
+    },
+    {
+      "topic": "Conectores",
+      "stem": "Na frase “Embora os testes tenham sido concluídos, a implantação foi adiada”, o conector exprime:",
+      "options": [
+        "Causa.",
+        "Finalidade.",
+        "Concessão.",
+        "Conclusão.",
+        "Alternância."
+      ],
+      "answer": 2,
+      "explanation": "“Embora” apresenta um fato que, apesar de ocorrer, não impede o adiamento. É uma relação concessiva.",
+      "trap": "Não confundir concessão (“embora”) com causa (“porque”)."
+    },
+    {
+      "topic": "Regência verbal",
+      "stem": "No sentido de presenciar, a regência padrão de “assistir” aparece em:",
+      "options": [
+        "Os técnicos assistiram o treinamento.",
+        "Os técnicos assistiram ao treinamento.",
+        "Os técnicos assistiram para o treinamento.",
+        "Os técnicos assistiram de treinamento.",
+        "Os técnicos assistiram com o treinamento."
+      ],
+      "answer": 1,
+      "explanation": "Na acepção de ver/presenciar, “assistir” rege a preposição “a”: assistiram ao treinamento.",
+      "trap": "“Assistir alguém”, no sentido de prestar assistência, pode ser transitivo direto; são acepções distintas."
+    },
+    {
+      "topic": "Crase",
+      "stem": "Qual frase usa corretamente a crase?",
+      "options": [
+        "O relatório foi enviado à diretoria.",
+        "O relatório foi enviado à vários setores.",
+        "O relatório foi enviado à partir de hoje.",
+        "O relatório foi enviado à ele.",
+        "O relatório foi enviado à quem solicitou."
+      ],
+      "answer": 0,
+      "explanation": "“Enviar a” + artigo feminino “a” de “a diretoria” = “à diretoria”. Antes de plural sem artigo singular não há essa contração; antes de “ele”, “quem” e “partir” não cabe.",
+      "trap": "Crase é contração de preposição e artigo/pronome demonstrativo, não sinal obrigatório antes de qualquer complemento."
+    },
+    {
+      "topic": "Coesão: retomada",
+      "stem": "Em “A comissão apresentou o relatório. Esse documento será analisado amanhã”, “Esse documento” realiza:",
+      "options": [
+        "Contradição semântica.",
+        "Retomada anafórica de “relatório”.",
+        "Introdução de uma pessoa não citada.",
+        "Transformação de discurso direto em indireto.",
+        "Comparação por semelhança."
+      ],
+      "answer": 1,
+      "explanation": "“Esse documento” retoma uma informação já mencionada, estabelecendo coesão referencial por anáfora.",
+      "trap": "Anáfora retoma o que veio antes; catáfora antecipa o que será explicado depois."
+    },
+    {
+      "topic": "Vocabulário preciso",
+      "stem": "O verbo que significa “corrigir informação incorreta em documento” é:",
+      "options": [
+        "Ratificar.",
+        "Retificar.",
+        "Retaliar.",
+        "Rescindir.",
+        "Referendar."
+      ],
+      "answer": 1,
+      "explanation": "“Retificar” significa corrigir; “ratificar” significa confirmar ou validar.",
+      "trap": "A diferença de uma letra altera o sentido da palavra."
+    },
+    {
+      "topic": "Concordância verbal",
+      "stem": "Assinale a frase correta segundo a norma-padrão:",
+      "options": [
+        "Fazem cinco meses que ocorreu a implantação.",
+        "Houveram incidentes durante a madrugada.",
+        "Existe muitos sistemas legados.",
+        "Há muitos registros pendentes.",
+        "Devem haver soluções imediatas."
+      ],
+      "answer": 3,
+      "explanation": "“Haver” com sentido de existir é impessoal, ficando no singular: “Há muitos registros”. A impessoalidade se estende às locuções: “Deve haver”.",
+      "trap": "“Existir” concorda com o sujeito; “haver” existencial não."
+    },
+    {
+      "topic": "Coesão e causa",
+      "stem": "A relação estabelecida por “por isso” em “O serviço ficou indisponível; por isso, o atendimento atrasou” é de:",
+      "options": [
+        "Oposição.",
+        "Consequência.",
+        "Condição.",
+        "Concessão.",
+        "Comparação."
+      ],
+      "answer": 1,
+      "explanation": "“Por isso” apresenta a consequência do fato anterior. A indisponibilidade levou ao atraso.",
+      "trap": "Distinguir “por isso” (resultado) de “porque” (explicação causal)."
+    },
+    {
+      "topic": "Pronomes relativos",
+      "stem": "Assinale o emprego adequado de “onde”:",
+      "options": [
+        "O dia onde os resultados saíram foi tenso.",
+        "A reunião onde tudo mudou ocorreu ontem.",
+        "A razão onde recusaram o pedido é desconhecida.",
+        "O laboratório onde os testes ocorreram foi reformado.",
+        "A decisão onde houve divergência foi revista."
+      ],
+      "answer": 3,
+      "explanation": "“Onde” retoma, em seu uso normativo, lugar físico (“laboratório”). “Dia”, “razão” e “decisão” exigem outras formas.",
+      "trap": "Nem todo antecedente admite “onde”; o pronome tem valor locativo."
+    }
+  ],
+  "lab": [
+    {
+      "topic": "Concordância e 'se'",
+      "stem": "Assinale a alternativa correta quanto ao emprego do pronome “se”.",
+      "options": [
+        "Alugam-se equipamento de rede.",
+        "Necessitam-se de documentos originais.",
+        "Publicaram-se os resultados preliminares.",
+        "Trata-se de duas propostas distintas, que concordam o verbo no plural.",
+        "Identificou-se erros nos relatórios."
+      ],
+      "answer": 2,
+      "explanation": "“Os resultados preliminares” é sujeito paciente plural da passiva sintética: “Publicaram-se”. Em “necessita-se de” e “trata-se de”, o verbo fica singular.",
+      "trap": "Diferencie passiva sintética de indeterminação do sujeito."
+    },
+    {
+      "topic": "Pontuação",
+      "stem": "Qual alternativa mantém correta a pontuação de um termo intercalado?",
+      "options": [
+        "O servidor após reiniciar, voltou ao ar.",
+        "O servidor, após reiniciar, voltou ao ar.",
+        "O servidor, após reiniciar voltou, ao ar.",
+        "O servidor após reiniciar voltou, ao ar.",
+        "O servidor, após, reiniciar voltou ao ar."
+      ],
+      "answer": 1,
+      "explanation": "A oração reduzida adverbial “após reiniciar” aparece intercalada e é isolada por duas vírgulas.",
+      "trap": "Não deixe a vírgula apenas em um lado da intercalação."
+    },
+    {
+      "topic": "Conjunções",
+      "stem": "Em “Caso o sistema apresente falhas, será acionado o plano de contingência”, “caso” expressa:",
+      "options": [
+        "Condição.",
+        "Concessão.",
+        "Adição.",
+        "Conclusão.",
+        "Oposição."
+      ],
+      "answer": 0,
+      "explanation": "“Caso” introduz uma condição: acionar o plano depende de o sistema apresentar falhas.",
+      "trap": "Condição (“caso”) é diferente de causa (“porque”)."
+    },
+    {
+      "topic": "Crase",
+      "stem": "A frase em conformidade com a norma-padrão é:",
+      "options": [
+        "A comissão dirigiu-se à uma das salas.",
+        "A comissão dirigiu-se à Curitiba.",
+        "A comissão dirigiu-se à sala de reuniões.",
+        "A comissão dirigiu-se à todos os setores.",
+        "A comissão dirigiu-se à partir das nove."
+      ],
+      "answer": 2,
+      "explanation": "“Dirigir-se a” + artigo feminino definido da expressão “a sala” gera “à sala”.",
+      "trap": "Antes de artigo indefinido “uma”, a regra geral não exige crase."
+    },
+    {
+      "topic": "Regência",
+      "stem": "Qual frase apresenta regência conforme a norma-padrão?",
+      "options": [
+        "A equipe obedeceu o regulamento.",
+        "O gestor aspirou ao cargo de diretor.",
+        "Os analistas preferem mais qualidade do que velocidade.",
+        "Ela chegou na sede às nove, em registro formal exigente.",
+        "A mudança implicou em custos adicionais."
+      ],
+      "answer": 1,
+      "explanation": "“Aspirar” no sentido de desejar rege “a”: aspirou ao cargo. “Obedecer” rege a, “preferir” prefere algo a outra coisa, “implicar” no sentido de acarretar é transitivo direto no padrão culto.",
+      "trap": "A regência pode mudar conforme a acepção do verbo."
+    },
+    {
+      "topic": "Coesão",
+      "stem": "Em “A auditoria apontou falhas. Essas irregularidades exigirão correção”, o termo destacado realiza:",
+      "options": [
+        "Retomada anafórica.",
+        "Antecipação catafórica.",
+        "Ironia.",
+        "Enumeração.",
+        "Elipse verbal."
+      ],
+      "answer": 0,
+      "explanation": "“Essas irregularidades” retoma “falhas” já apresentadas, mantendo a coesão do texto.",
+      "trap": "Retomar é anáfora; anunciar um referente ainda não explicitado é catáfora."
+    },
+    {
+      "topic": "Pontuação e conectivo",
+      "stem": "Escolha a alternativa em que o conectivo indica oposição entre fatos.",
+      "options": [
+        "O servidor reiniciou, portanto o serviço voltou.",
+        "O servidor reiniciou porque havia travado.",
+        "O servidor reiniciou, porém o serviço continuou indisponível.",
+        "O servidor reiniciou para atualizar pacotes.",
+        "O servidor reiniciou quando começou a manutenção."
+      ],
+      "answer": 2,
+      "explanation": "“Porém” é adversativo e estabelece oposição/contraste entre reiniciar e continuar indisponível.",
+      "trap": "“Portanto” indica conclusão, não oposição."
+    },
+    {
+      "topic": "Concordância impessoal",
+      "stem": "Segundo a norma-padrão, é correto afirmar:",
+      "options": [
+        "Devem haver novas ocorrências.",
+        "Fazem dez anos que a CASAN implantou o sistema.",
+        "Houve diversas solicitações de acesso.",
+        "Houveram muitas reclamações.",
+        "Podem haver atrasos."
+      ],
+      "answer": 2,
+      "explanation": "“Haver” existencial permanece no singular, inclusive nas locuções: pode haver. “Fazer” temporal também é impessoal.",
+      "trap": "O termo plural após “haver” existencial não é sujeito."
+    },
+    {
+      "topic": "Sentido lexical",
+      "stem": "Em documento formal, “ratificar uma decisão” equivale a:",
+      "options": [
+        "Revogá-la.",
+        "Corrigir sua redação.",
+        "Confirmá-la.",
+        "Contestá-la judicialmente.",
+        "Alterar seus anexos."
+      ],
+      "answer": 2,
+      "explanation": "“Ratificar” significa confirmar, validar. Corrigir seria “retificar”.",
+      "trap": "Ratificar ≠ retificar."
+    },
+    {
+      "topic": "Interpretação e inferência",
+      "stem": "Leia: “Apesar da redução das falhas, o atendimento continuou lento.” O que é possível concluir necessariamente?",
+      "options": [
+        "As falhas aumentaram.",
+        "O atendimento se tornou rápido.",
+        "As falhas foram eliminadas.",
+        "A lentidão persistiu, mesmo com a diminuição das falhas.",
+        "A equipe deixou de monitorar o atendimento."
+      ],
+      "answer": 3,
+      "explanation": "O enunciado afirma redução das falhas e persistência da lentidão. Não fala em eliminação das falhas, rapidez ou interrupção do monitoramento.",
+      "trap": "Inferência válida precisa ser sustentada pelo texto; evitar extrapolações."
+    }
+  ]
+}
