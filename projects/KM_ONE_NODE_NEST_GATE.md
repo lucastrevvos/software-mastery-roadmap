@@ -22,6 +22,22 @@ The employability goal is to reach a point where the project can support applica
 
 without waiting for the later advanced architecture/cloud phases.
 
+## TypeScript prerequisite
+
+Before starting the Node.js / NestJS implementation window, complete the **TypeScript — Official Guided Track** defined in `notes/TYPESCRIPT_GUIDED_TRACK.md`.
+
+The sequence is:
+
+```text
+freeCodeCamp JavaScript Certification
+        ↓
+TypeScript — Official Guided Track
+        ↓
+Node.js + NestJS
+```
+
+The track is assistant-led, based on the official TypeScript documentation, and ends with an internal Mastery Gate rather than an external certificate.
+
 ## Initial target stack
 
 - **Runtime:** Node.js
