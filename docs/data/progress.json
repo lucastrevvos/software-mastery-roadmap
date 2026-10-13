@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-28T11:16:04-03:00",
+  "updatedAt": "2026-10-13T14:36:00-03:00",
   "courses": {
     "cs50x": {
       "status": "completed",
@@ -172,6 +172,24 @@
         "method": "AMS — Adaptive Mastery Scaffolding",
         "status": "in-progress"
       }
+    },
+    "typescript-official-guided": {
+      "status": "not-started",
+      "started": false,
+      "completed": [],
+      "current": null,
+      "notes": [
+        "Planejado em 2026-10-13 como ponte imediata após a freeCodeCamp JavaScript Certification e antes de Node.js/NestJS.",
+        "Será ensinado pelo ChatGPT com AMS, baseado prioritariamente nas fontes oficiais do TypeScript: TypeScript for JavaScript Programmers, TypeScript for Java/C# Programmers e Handbook.",
+        "Não há certificado externo previsto; conclusão será comprovada por Mastery Gate interno.",
+        "Full Stack Open Part 9 permanece posteriormente como reforço aplicado de TypeScript, não como substituto desta ponte guiada."
+      ],
+      "sourcePlan": "notes/TYPESCRIPT_GUIDED_TRACK.md",
+      "officialSources": [
+        "https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html",
+        "https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes-oop.html",
+        "https://www.typescriptlang.org/docs/handbook/intro.html"
+      ]
     }
   },
   "labs": {
@@ -266,6 +284,8 @@
       "fcc-js-v10",
       "cs50-sql"
     ],
-    "afterGate": "Continue Financial Distributed Systems Lab in .NET 10 and rebalance JavaScript/SQL according to interview outcome and active opportunities."
+    "afterGate": "Continue Financial Distributed Systems Lab in .NET 10 and rebalance JavaScript/SQL according to interview outcome and active opportunities.",
+    "afterJavaScriptCertification": "typescript-official-guided",
+    "afterTypeScriptGuidedTrack": "nodejs-nestjs-backend-employability"
   }
 }
