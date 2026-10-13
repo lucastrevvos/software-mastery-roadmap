@@ -1,8 +1,8 @@
 {
   "meta": {
     "title": "Full Stack Software Architect & Cloud Engineer",
-    "version": "3.1.0",
-    "updatedAt": "2026-09-28",
+    "version": "3.2.0",
+    "updatedAt": "2026-10-13",
     "principles": [
       "Fundamentos fortes antes de especialização",
       "Priorizar certificados oficiais e verificáveis",
@@ -14,7 +14,8 @@
       "Empregabilidade primeiro: atingir um ponto real de candidatura antes de perseguir profundidade total",
       "No máximo 2 cursos ativos: 1 principal e 1 complementar",
       "Sequenciamento adaptativo: oportunidades reais de mercado podem antecipar uma janela de stack sem abandonar os fundamentos; a prioridade imediata é o menor caminho para competência demonstrável e empregabilidade.",
-      "Arquitetura, cloud e IA devem reforçar uma stack já utilizável, não atrasar a entrada no mercado"
+      "Arquitetura, cloud e IA devem reforçar uma stack já utilizável, não atrasar a entrada no mercado",
+      "Fontes oficiais sem certificado podem virar trilhas guiadas com Mastery Gate interno, quando forem a melhor fonte técnica."
     ],
     "platformMetadata": "Cada item informa onde estudar e onde obter a credencial; ausência de curso/certificação externa é indicada explicitamente.",
     "executionStrategy": "Adaptive employment-first roadmap: the .NET 10 / financial distributed-systems window was pulled forward because of active BTG/XP opportunities. Immediate gate: XP System Design interview on 2026-09-30 at 14:00 BRT using Excalidraw; after the interview, continue the Financial Distributed Systems Lab while rebalancing the paused JavaScript/SQL tracks."
@@ -22,8 +23,8 @@
   "phases": [
     {
       "id": "phase-01",
-      "title": "Fundamentos Ativos — JavaScript & SQL",
-      "goal": "Fechar os fundamentos que estão ativos agora sem abrir novas stacks. Regra operacional: no máximo 2 cursos ativos — 1 principal e 1 complementar.",
+      "title": "Fundamentos Ativos — JavaScript, TypeScript & SQL",
+      "goal": "Fechar os fundamentos ativos e fazer a ponte JavaScript → TypeScript antes de Node.js/NestJS. Regra operacional: no máximo 2 cursos ativos — 1 principal e 1 complementar.",
       "items": [
         {
           "id": "cs50x",
@@ -87,8 +88,37 @@
           "resumeAfter": "2026-09-30"
         },
         {
-          "id": "cs50-sql",
+          "id": "typescript-official-guided",
           "order": 3,
+          "title": "TypeScript — Official Guided Track",
+          "provider": "TypeScript Official Documentation",
+          "credential": "Mastery Gate interno (sem certificado externo)",
+          "cost": "free",
+          "status": "not-started",
+          "priority": "core",
+          "prerequisite": "Concluir freeCodeCamp JavaScript Certification",
+          "note": "Trilha ensinada pelo ChatGPT com AMS, baseada prioritariamente nas fontes oficiais TypeScript for JavaScript Programmers, TypeScript for Java/C# Programmers e Handbook. Deve ser concluída antes da janela Node.js/NestJS. Full Stack Open Part 9 permanece como reforço aplicado posterior.",
+          "source": "notes/TYPESCRIPT_GUIDED_TRACK.md",
+          "access": {
+            "learning": {
+              "status": "available",
+              "platform": "TypeScript Official Documentation",
+              "kind": "Documentação/tutorial oficial + instrução guiada",
+              "url": "https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html",
+              "cost": "Grátis"
+            },
+            "credential": {
+              "status": "internal",
+              "platform": "Programming Mastery Lab",
+              "kind": "Sem certificado externo; conclusão por Mastery Gate",
+              "url": null,
+              "cost": "Grátis"
+            }
+          }
+        },
+        {
+          "id": "cs50-sql",
+          "order": 4,
           "title": "CS50's Introduction to Databases with SQL",
           "provider": "Harvard University",
           "credential": "CS50 Certificate",
