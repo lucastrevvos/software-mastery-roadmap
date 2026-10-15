@@ -1,8 +1,8 @@
 {
   "meta": {
     "title": "Full Stack Software Architect & Cloud Engineer",
-    "version": "3.2.0",
-    "updatedAt": "2026-10-13",
+    "version": "3.3.0",
+    "updatedAt": "2026-10-15",
     "principles": [
       "Fundamentos fortes antes de especialização",
       "Priorizar certificados oficiais e verificáveis",
@@ -437,9 +437,58 @@
     },
     {
       "id": "phase-04",
-      "title": "Backend Senior Depth — Production, Architecture, Distributed Systems & AWS",
-      "goal": "Voltar ao backend com profundidade: Linux, networking, NestJS avançado, arquitetura vendor-neutral, sistemas distribuídos, observabilidade, containers e AWS.",
+      "title": "Senior Software Engineering & Architecture — Production, Distributed Systems & AWS",
+      "goal": "Consolidar o corpo de conhecimento profissional de engenharia de software com SWEBOK/IEEE e então aprofundar Linux, networking, arquitetura, sistemas distribuídos, observabilidade, containers e cloud, sem transformar o roadmap em uma sequência infinita de certificações.",
       "items": [
+        {
+          "id": "swebok-senior-guided",
+          "order": 9,
+          "title": "Senior Software Engineering — SWEBOK v4 Guided Track",
+          "provider": "IEEE Computer Society + Programming Mastery Lab",
+          "credential": "Senior Software Engineering Mastery Gate",
+          "cost": "free",
+          "status": "not-started",
+          "priority": "core",
+          "source": "https://www.computer.org/education/bodies-of-knowledge/software-engineering",
+          "plan": "notes/SENIOR_SOFTWARE_ENGINEER_SWEBOK_TRACK.md",
+          "focus": [
+            "software requirements",
+            "software architecture",
+            "software design",
+            "software construction",
+            "software testing",
+            "software engineering operations",
+            "software maintenance",
+            "software configuration management",
+            "software engineering management",
+            "software engineering process",
+            "software engineering models and methods",
+            "software quality",
+            "software security",
+            "software engineering professional practice",
+            "software engineering economics",
+            "computing foundations",
+            "mathematical foundations",
+            "engineering foundations"
+          ],
+          "note": "Trilha guiada baseada no SWEBOK v4.0a da IEEE. Não será executada como leitura linear de um livro: cada Knowledge Area será ligada a evidência prática, projetos existentes e Mastery Gates. Serve como espinha dorsal vendor-neutral do objetivo Senior Software Engineer.",
+          "access": {
+            "learning": {
+              "status": "available",
+              "platform": "IEEE Computer Society + Programming Mastery Lab",
+              "kind": "SWEBOK v4.0a oficial gratuito + instrução guiada AMS",
+              "url": "https://www.computer.org/education/bodies-of-knowledge/software-engineering",
+              "cost": "Grátis"
+            },
+            "credential": {
+              "status": "internal",
+              "platform": "Programming Mastery Lab",
+              "kind": "Senior Software Engineering Mastery Gate",
+              "url": null,
+              "cost": "Grátis"
+            }
+          }
+        },
         {
           "id": "linux-essentials",
           "order": 10,
@@ -910,6 +959,34 @@
               "kind": "AWS Certified Solutions Architect — Associate — SAA-C03",
               "url": "https://aws.amazon.com/pt/certification/certified-solutions-architect-associate/",
               "cost": "Exame pago"
+            }
+          }
+        },
+        {
+          "id": "ieee-software-professional-level-2",
+          "order": 22.5,
+          "title": "IEEE Certified Software Professional — Level 2",
+          "provider": "IEEE Computer Society",
+          "credential": "Software Professional Level 2",
+          "cost": "paid-when-justified",
+          "status": "not-started",
+          "priority": "credential-target",
+          "source": "https://www.computer.org/education/certifications",
+          "note": "Credencial externa opcional para validar engenharia de software ao longo do ciclo de vida. Preparar primeiro via SWEBOK Guided Track e prática real; comprar apenas quando houver domínio e ROI. A IEEE posiciona o Level 2 para profissionais com experiência e capacidade de liderar/entregar projetos complexos.",
+          "access": {
+            "learning": {
+              "status": "materials-only",
+              "platform": "IEEE Computer Society",
+              "kind": "SWEBOK + materiais/preparação oficial conforme disponibilidade",
+              "url": "https://www.computer.org/education/bodies-of-knowledge/software-engineering",
+              "cost": "SWEBOK gratuito; preparação adicional pode ser paga"
+            },
+            "credential": {
+              "status": "available",
+              "platform": "IEEE Computer Society",
+              "kind": "Certified Software Professional — Level 2",
+              "url": "https://www.computer.org/education/certifications",
+              "cost": "Pago; confirmar preço atual antes da compra"
             }
           }
         },
