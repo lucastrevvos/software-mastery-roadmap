@@ -49,5 +49,7 @@
   "llmops": "Operação de sistemas de IA com avaliações, observabilidade, segurança, guardrails, versionamento, custo, latência e melhoria contínua.",
   "capstone-system": "Sistema final que integra frontend, backend, cloud, dados, segurança, observabilidade e IA em uma solução de portfólio próxima de produção.",
   "architecture-defense": "Defesa final escrita e oral das decisões do capstone, demonstrando domínio de requisitos, trade-offs, evolução, riscos e comunicação arquitetural.",
-  "typescript-official-guided": "Ponte guiada JavaScript → TypeScript baseada na documentação oficial, com inferência e anotações de tipos, unions, narrowing, objetos, funções, generics, structural typing, módulos, configuração strict e diferenças entre compile time e runtime; sem certificado externo, com Mastery Gate interno."
+  "typescript-official-guided": "Ponte guiada JavaScript → TypeScript baseada na documentação oficial, com inferência e anotações de tipos, unions, narrowing, objetos, funções, generics, structural typing, módulos, configuração strict e diferenças entre compile time e runtime; sem certificado externo, com Mastery Gate interno.",
+  "swebok-senior-guided": "Trilha vendor-neutral de Senior Software Engineering baseada no SWEBOK v4.0a da IEEE, cobrindo o ciclo de vida completo: requisitos, arquitetura, design, construção, testes, operações, manutenção, qualidade, segurança, gestão, processo, prática profissional, economia e fundamentos.",
+  "ieee-software-professional-level-2": "Credencial profissional da IEEE Computer Society para validar engenharia de software em profundidade ao longo do ciclo de vida, com ênfase em aplicação prática, decisões técnicas e capacidade de liderar e entregar projetos complexos."
 }
