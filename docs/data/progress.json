@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-13T14:36:00-03:00",
+  "updatedAt": "2026-10-15T10:37:00-03:00",
   "courses": {
     "cs50x": {
       "status": "completed",
@@ -190,6 +190,31 @@
         "https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes-oop.html",
         "https://www.typescriptlang.org/docs/handbook/intro.html"
       ]
+    },
+    "swebok-senior-guided": {
+      "status": "not-started",
+      "started": false,
+      "completed": [],
+      "current": null,
+      "notes": [
+        "Adicionado em 2026-10-15 como espinha dorsal vendor-neutral para o objetivo Senior Software Engineer.",
+        "Base oficial: SWEBOK v4.0a da IEEE Computer Society.",
+        "Será ensinado via AMS e conectado a projetos reais; não será uma leitura linear do guia.",
+        "Após o Mastery Gate interno, avaliar IEEE Software Professional Level 2 como credencial externa opcional."
+      ],
+      "sourcePlan": "notes/SENIOR_SOFTWARE_ENGINEER_SWEBOK_TRACK.md",
+      "officialSource": "https://www.computer.org/education/bodies-of-knowledge/software-engineering"
+    },
+    "ieee-software-professional-level-2": {
+      "status": "not-started",
+      "started": false,
+      "completed": [],
+      "current": null,
+      "notes": [
+        "Alvo opcional de validação externa após a trilha SWEBOK e Senior Software Engineering Mastery Gate.",
+        "Não comprar prova antes de confirmar disponibilidade, preço, ROI e prontidão."
+      ],
+      "officialSource": "https://www.computer.org/education/certifications"
     }
   },
   "labs": {
