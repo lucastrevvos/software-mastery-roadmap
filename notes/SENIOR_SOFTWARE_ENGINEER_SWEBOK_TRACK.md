@@ -140,3 +140,35 @@ The user should be able to:
 - handle a changed constraint and adapt the solution.
 
 The final gate should include both implementation-level and architecture/system-level decisions.
+## What SWEBOK is — and what the certification is
+
+SWEBOK is **not a course** and **not a certification by itself**. It is the IEEE Computer Society's Guide to the Software Engineering Body of Knowledge: a vendor-neutral map of the software engineering discipline. Its role in this roadmap is to act as a coverage framework and gap radar for Senior Software Engineering.
+
+Use it to answer:
+
+- What areas belong to professional Software Engineering?
+- Which of those areas are already strong?
+- Which are only familiar from experience but not yet formalized?
+- Which areas require deliberate study, practice, and a Mastery Gate?
+
+The roadmap must therefore treat SWEBOK as:
+
+```text
+SWEBOK
+= body-of-knowledge map / professional reference
+
+Guided Track + AMS
+= learning process
+
+real projects and scenarios
+= applied evidence
+
+Senior Software Engineering Mastery Gate
+= internal validation
+
+IEEE Certified Software Professional — Level 2
+= optional external validation
+```
+
+The IEEE Computer Society currently offers SWEBOK-based Software Professional certifications. Level 2 is the target aligned to this roadmap because it emphasizes deeper lifecycle knowledge, system/design analysis, practical engineering judgment, and leadership of complex deliveries. It does not require Level 1 first; the credential is optional and should only be purchased after sufficient mastery and ROI review.
+
