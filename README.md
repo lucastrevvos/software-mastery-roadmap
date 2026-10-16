@@ -12,6 +12,15 @@ Este repositório é a fonte da verdade para quatro coisas diferentes:
 
 > Curso concluído não significa domínio. Certificado é evidência externa; Mastery Gate é evidência interna.
 
+## Preparação vestibular UFSC/IFC 2027 — Projeto Arquimedes
+
+- **Objetivo:** Engenharia Eletrônica; inscrição informada como realizada.
+- **Matemática:** 15 blocos curriculares definidos para o curso, com **129 tópicos registrados**; as demais disciplinas já têm espaço reservado para detalhamento posterior.
+- **Método:** Recall → Trace → Rebuild → Repair → Transfer → Retest. O status *estudado* não representa domínio; a promoção para *dominado* exige evidência e nível 6 ou 7.
+- **Registro-base no GitHub:** [dados e tópicos](docs/vestibular/data.json); **painel interativo:** [abrir no GitHub Pages](https://lucastrevvos.github.io/software-mastery-roadmap/vestibular/).
+- **Persistência:** cliques e lançamentos no painel ficam no navegador. Exportação/importação JSON fornece backup; dados oficiais do GitHub são atualizados por commits (não há sincronização automática).
+- **Ponto de partida:** frações, decimais, porcentagens, juros simples, operações e conjuntos básicos foram **apresentados** nas aulas anteriores, mas ainda estão **sem Retest concluído**. Próxima aula: Razão e Proporção.
+
 ## Trilha temporária de concursos — CASAN → CGU 2026
 
 - **CASAN — Analista de Sistemas / Desenvolvimento**: prova prevista para 22/11/2026; prioridade até essa data.
