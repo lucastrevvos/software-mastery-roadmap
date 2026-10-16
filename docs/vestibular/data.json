@@ -1,0 +1,1356 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-10-16",
+  "exam": {
+    "name": "Vestibular Unificado UFSC/IFC 2027",
+    "course": "Engenharia Eletrônica",
+    "registration": "realizada",
+    "reference": "https://vestibularunificado2027.ufsc.br/files/2026/09/Edital-Vestibular-2027-retificado.pdf",
+    "note": "Tópicos de Matemática baseados na lista de 15 blocos definida pelo estudante; demais matérias aguardam detalhamento verificado."
+  },
+  "method": [
+    "Recall",
+    "Trace",
+    "Rebuild",
+    "Repair",
+    "Transfer",
+    "Retest"
+  ],
+  "masteryScale": {
+    "0": "não avaliado",
+    "1": "reconhece",
+    "2": "explica",
+    "3": "resolve com ajuda",
+    "4": "resolve sozinho",
+    "5": "corrige erros",
+    "6": "transfere para questão inédita",
+    "7": "retido após revisões espaçadas"
+  },
+  "subjects": [
+    {
+      "id": "matematica",
+      "name": "Matemática",
+      "modules": [
+        {
+          "id": "mat-01",
+          "title": "Aritmética",
+          "topics": [
+            {
+              "id": "mat-01-operacoes-basicas-e-decimais",
+              "name": "Operações básicas e decimais",
+              "status": "studied",
+              "mastery": null,
+              "note": "Conteúdo apresentado no chat; Recall/Retest e domínio ainda não avaliados.",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-01-ordem-das-operacoes",
+              "name": "Ordem das operações",
+              "status": "studied",
+              "mastery": null,
+              "note": "Conteúdo apresentado no chat; Recall/Retest e domínio ainda não avaliados.",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-01-fracoes",
+              "name": "Frações",
+              "status": "studied",
+              "mastery": null,
+              "note": "Conteúdo apresentado no chat; Recall/Retest e domínio ainda não avaliados.",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-01-porcentagens",
+              "name": "Porcentagens",
+              "status": "studied",
+              "mastery": null,
+              "note": "Conteúdo apresentado no chat; Recall/Retest e domínio ainda não avaliados.",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-01-razao",
+              "name": "Razão",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-01-proporcao",
+              "name": "Proporção",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-01-regra-de-tres-simples",
+              "name": "Regra de três simples",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-01-regra-de-tres-composta",
+              "name": "Regra de três composta",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-01-juros-simples",
+              "name": "Juros simples",
+              "status": "studied",
+              "mastery": null,
+              "note": "Conteúdo apresentado no chat; Recall/Retest e domínio ainda não avaliados.",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-01-juros-compostos",
+              "name": "Juros compostos",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-01-problemas-integradores",
+              "name": "Problemas integradores",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            }
+          ]
+        },
+        {
+          "id": "mat-02",
+          "title": "Conjuntos numéricos",
+          "topics": [
+            {
+              "id": "mat-02-numeros-naturais",
+              "name": "Números naturais",
+              "status": "studied",
+              "mastery": null,
+              "note": "Conteúdo apresentado no chat; Recall/Retest e domínio ainda não avaliados.",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-02-numeros-inteiros",
+              "name": "Números inteiros",
+              "status": "studied",
+              "mastery": null,
+              "note": "Conteúdo apresentado no chat; Recall/Retest e domínio ainda não avaliados.",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-02-numeros-racionais",
+              "name": "Números racionais",
+              "status": "studied",
+              "mastery": null,
+              "note": "Conteúdo apresentado no chat; Recall/Retest e domínio ainda não avaliados.",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-02-numeros-reais-e-irracionais",
+              "name": "Números reais e irracionais",
+              "status": "studied",
+              "mastery": null,
+              "note": "Conteúdo apresentado no chat; Recall/Retest e domínio ainda não avaliados.",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-02-numeros-complexos",
+              "name": "Números complexos",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-02-mmc",
+              "name": "MMC",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-02-mdc",
+              "name": "MDC",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-02-potencias-e-propriedades",
+              "name": "Potências e propriedades",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-02-radicais-e-propriedades",
+              "name": "Radicais e propriedades",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-02-intervalos-numericos",
+              "name": "Intervalos numéricos",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            }
+          ]
+        },
+        {
+          "id": "mat-03",
+          "title": "Álgebra",
+          "topics": [
+            {
+              "id": "mat-03-expressoes-algebricas",
+              "name": "Expressões algébricas",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-03-simplificacao-e-operacoes",
+              "name": "Simplificação e operações",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-03-produtos-notaveis",
+              "name": "Produtos notáveis",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-03-fatoracao",
+              "name": "Fatoração",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-03-equacoes-do-1-grau",
+              "name": "Equações do 1º grau",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-03-equacoes-do-2-grau",
+              "name": "Equações do 2º grau",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-03-equacoes-fracionarias-e-irracionais",
+              "name": "Equações fracionárias e irracionais",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-03-inequacoes",
+              "name": "Inequações",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-03-sistemas-de-inequacoes",
+              "name": "Sistemas de inequações",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            }
+          ]
+        },
+        {
+          "id": "mat-04",
+          "title": "Funções",
+          "topics": [
+            {
+              "id": "mat-04-conceito-e-representacao",
+              "name": "Conceito e representação",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-04-dominio-e-imagem",
+              "name": "Domínio e imagem",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-04-leitura-e-construcao-de-graficos",
+              "name": "Leitura e construção de gráficos",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-04-funcao-afim",
+              "name": "Função afim",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-04-funcao-quadratica",
+              "name": "Função quadrática",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-04-funcao-racional",
+              "name": "Função racional",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-04-funcao-modular",
+              "name": "Função modular",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-04-composicao-e-inversa",
+              "name": "Composição e inversa",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            }
+          ]
+        },
+        {
+          "id": "mat-05",
+          "title": "Exponenciais e logaritmos",
+          "topics": [
+            {
+              "id": "mat-05-funcao-exponencial",
+              "name": "Função exponencial",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-05-equacoes-exponenciais",
+              "name": "Equações exponenciais",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-05-inequacoes-exponenciais",
+              "name": "Inequações exponenciais",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-05-definicao-e-propriedades-dos-logaritmos",
+              "name": "Definição e propriedades dos logaritmos",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-05-funcao-logaritmica",
+              "name": "Função logarítmica",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-05-equacoes-e-inequacoes-logaritmicas",
+              "name": "Equações e inequações logarítmicas",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-05-aplicacoes",
+              "name": "Aplicações",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            }
+          ]
+        },
+        {
+          "id": "mat-06",
+          "title": "Sequências, PA e PG",
+          "topics": [
+            {
+              "id": "mat-06-sequencias-e-padroes",
+              "name": "Sequências e padrões",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-06-termo-geral-de-pa",
+              "name": "Termo geral de PA",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-06-soma-de-pa",
+              "name": "Soma de PA",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-06-termo-geral-de-pg",
+              "name": "Termo geral de PG",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-06-soma-finita-de-pg",
+              "name": "Soma finita de PG",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-06-soma-infinita-de-pg",
+              "name": "Soma infinita de PG",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-06-problemas-contextualizados",
+              "name": "Problemas contextualizados",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            }
+          ]
+        },
+        {
+          "id": "mat-07",
+          "title": "Geometria plana",
+          "topics": [
+            {
+              "id": "mat-07-angulos",
+              "name": "Ângulos",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-07-triangulos-e-classificacoes",
+              "name": "Triângulos e classificações",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-07-congruencia-de-triangulos",
+              "name": "Congruência de triângulos",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-07-teorema-de-tales",
+              "name": "Teorema de Tales",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-07-semelhanca",
+              "name": "Semelhança",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-07-teorema-de-pitagoras",
+              "name": "Teorema de Pitágoras",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-07-poligonos",
+              "name": "Polígonos",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-07-circunferencias-e-circulo",
+              "name": "Circunferências e círculo",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-07-perimetros",
+              "name": "Perímetros",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-07-areas-planas",
+              "name": "Áreas planas",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            }
+          ]
+        },
+        {
+          "id": "mat-08",
+          "title": "Trigonometria",
+          "topics": [
+            {
+              "id": "mat-08-seno-cosseno-e-tangente",
+              "name": "Seno, cosseno e tangente",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-08-relacoes-no-triangulo-retangulo",
+              "name": "Relações no triângulo retângulo",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-08-circulo-trigonometrico",
+              "name": "Círculo trigonométrico",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-08-arcos-e-radianos",
+              "name": "Arcos e radianos",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-08-identidades-trigonometricas",
+              "name": "Identidades trigonométricas",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-08-funcoes-trigonometricas",
+              "name": "Funções trigonométricas",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-08-equacoes-trigonometricas",
+              "name": "Equações trigonométricas",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-08-lei-dos-senos",
+              "name": "Lei dos senos",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-08-lei-dos-cossenos",
+              "name": "Lei dos cossenos",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            }
+          ]
+        },
+        {
+          "id": "mat-09",
+          "title": "Geometria espacial",
+          "topics": [
+            {
+              "id": "mat-09-prismas",
+              "name": "Prismas",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-09-piramides",
+              "name": "Pirâmides",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-09-cilindros",
+              "name": "Cilindros",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-09-cones",
+              "name": "Cones",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-09-troncos-de-piramide-e-de-cone",
+              "name": "Troncos de pirâmide e de cone",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-09-esferas",
+              "name": "Esferas",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-09-areas-de-solidos",
+              "name": "Áreas de sólidos",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-09-volumes-de-solidos",
+              "name": "Volumes de sólidos",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-09-problemas-de-planificacao",
+              "name": "Problemas de planificação",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            }
+          ]
+        },
+        {
+          "id": "mat-10",
+          "title": "Geometria analítica",
+          "topics": [
+            {
+              "id": "mat-10-pontos-no-plano-cartesiano",
+              "name": "Pontos no plano cartesiano",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-10-distancia-entre-pontos",
+              "name": "Distância entre pontos",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-10-ponto-medio",
+              "name": "Ponto médio",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-10-equacao-da-reta",
+              "name": "Equação da reta",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-10-posicoes-relativas-de-retas",
+              "name": "Posições relativas de retas",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-10-distancia-ponto-reta",
+              "name": "Distância ponto-reta",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-10-equacao-da-circunferencia",
+              "name": "Equação da circunferência",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-10-parabola",
+              "name": "Parábola",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-10-elipse",
+              "name": "Elipse",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-10-hiperbole",
+              "name": "Hipérbole",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            }
+          ]
+        },
+        {
+          "id": "mat-11",
+          "title": "Análise combinatória",
+          "topics": [
+            {
+              "id": "mat-11-principio-fundamental-da-contagem",
+              "name": "Princípio fundamental da contagem",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-11-fatorial",
+              "name": "Fatorial",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-11-permutacoes-simples",
+              "name": "Permutações simples",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-11-permutacoes-com-repeticao",
+              "name": "Permutações com repetição",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-11-arranjos",
+              "name": "Arranjos",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-11-combinacoes",
+              "name": "Combinações",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-11-contagem-com-restricoes",
+              "name": "Contagem com restrições",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-11-binomio-de-newton",
+              "name": "Binômio de Newton",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            }
+          ]
+        },
+        {
+          "id": "mat-12",
+          "title": "Probabilidade",
+          "topics": [
+            {
+              "id": "mat-12-espaco-amostral-e-eventos",
+              "name": "Espaço amostral e eventos",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-12-probabilidade-basica",
+              "name": "Probabilidade básica",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-12-uniao-e-intersecao-de-eventos",
+              "name": "União e interseção de eventos",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-12-evento-complementar",
+              "name": "Evento complementar",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-12-probabilidade-condicional",
+              "name": "Probabilidade condicional",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-12-independencia",
+              "name": "Independência",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-12-problemas-de-probabilidade-compostos",
+              "name": "Problemas de probabilidade compostos",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            }
+          ]
+        },
+        {
+          "id": "mat-13",
+          "title": "Estatística",
+          "topics": [
+            {
+              "id": "mat-13-tabelas-e-graficos",
+              "name": "Tabelas e gráficos",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-13-media-aritmetica-e-ponderada",
+              "name": "Média aritmética e ponderada",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-13-mediana",
+              "name": "Mediana",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-13-moda",
+              "name": "Moda",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-13-amplitude-e-quartis",
+              "name": "Amplitude e quartis",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-13-variancia",
+              "name": "Variância",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-13-desvio-padrao",
+              "name": "Desvio padrão",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-13-interpretacao-de-dados",
+              "name": "Interpretação de dados",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            }
+          ]
+        },
+        {
+          "id": "mat-14",
+          "title": "Matrizes, determinantes e sistemas",
+          "topics": [
+            {
+              "id": "mat-14-conceito-e-tipos-de-matrizes",
+              "name": "Conceito e tipos de matrizes",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-14-operacoes-com-matrizes",
+              "name": "Operações com matrizes",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-14-produto-de-matrizes",
+              "name": "Produto de matrizes",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-14-matriz-inversa",
+              "name": "Matriz inversa",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-14-determinantes",
+              "name": "Determinantes",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-14-sistemas-lineares",
+              "name": "Sistemas lineares",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-14-escalonamento",
+              "name": "Escalonamento",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-14-classificacao-de-sistemas",
+              "name": "Classificação de sistemas",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            }
+          ]
+        },
+        {
+          "id": "mat-15",
+          "title": "Polinômios e equações algébricas",
+          "topics": [
+            {
+              "id": "mat-15-definicao-e-grau-de-polinomios",
+              "name": "Definição e grau de polinômios",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-15-operacoes-com-polinomios",
+              "name": "Operações com polinômios",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-15-divisao-de-polinomios",
+              "name": "Divisão de polinômios",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-15-teorema-do-resto",
+              "name": "Teorema do resto",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-15-fatoracao-de-polinomios",
+              "name": "Fatoração de polinômios",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-15-raizes-e-multiplicidade",
+              "name": "Raízes e multiplicidade",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-15-relacoes-entre-coeficientes-e-raizes",
+              "name": "Relações entre coeficientes e raízes",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            },
+            {
+              "id": "mat-15-equacoes-algebricas",
+              "name": "Equações algébricas",
+              "status": "not_started",
+              "mastery": null,
+              "note": "",
+              "reviewDate": null,
+              "evidence": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lingua-portuguesa",
+      "name": "Língua Portuguesa",
+      "modules": [],
+      "note": "Estrutura reservada; tópicos ainda não cadastrados."
+    },
+    {
+      "id": "literatura",
+      "name": "Literatura",
+      "modules": [],
+      "note": "Estrutura reservada; tópicos ainda não cadastrados."
+    },
+    {
+      "id": "redacao",
+      "name": "Redação",
+      "modules": [],
+      "note": "Estrutura reservada; tópicos ainda não cadastrados."
+    },
+    {
+      "id": "lingua-estrangeira",
+      "name": "Língua Estrangeira",
+      "modules": [],
+      "note": "Estrutura reservada; tópicos ainda não cadastrados."
+    },
+    {
+      "id": "fisica",
+      "name": "Física",
+      "modules": [],
+      "note": "Estrutura reservada; tópicos ainda não cadastrados."
+    },
+    {
+      "id": "quimica",
+      "name": "Química",
+      "modules": [],
+      "note": "Estrutura reservada; tópicos ainda não cadastrados."
+    },
+    {
+      "id": "biologia",
+      "name": "Biologia",
+      "modules": [],
+      "note": "Estrutura reservada; tópicos ainda não cadastrados."
+    },
+    {
+      "id": "historia",
+      "name": "História",
+      "modules": [],
+      "note": "Estrutura reservada; tópicos ainda não cadastrados."
+    },
+    {
+      "id": "geografia",
+      "name": "Geografia",
+      "modules": [],
+      "note": "Estrutura reservada; tópicos ainda não cadastrados."
+    },
+    {
+      "id": "filosofia",
+      "name": "Filosofia",
+      "modules": [],
+      "note": "Estrutura reservada; tópicos ainda não cadastrados."
+    },
+    {
+      "id": "sociologia",
+      "name": "Sociologia",
+      "modules": [],
+      "note": "Estrutura reservada; tópicos ainda não cadastrados."
+    }
+  ],
+  "sessions": [],
+  "errors": []
+}
