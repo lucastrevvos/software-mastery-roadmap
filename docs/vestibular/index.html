@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Painel de estudos Vestibular UFSC/IFC 2027: tópicos, domínio, simulados, erros e revisões do Projeto Arquimedes.">
+<title>Vestibular UFSC/IFC 2027 | Software Mastery Roadmap</title>
+<style>
+:root{color-scheme:dark;--bg:#09121d;--card:#121f2c;--card2:#1a2c3d;--line:#2d4457;--text:#ecf5f7;--muted:#9bafc0;--mint:#5cdbb3;--blue:#90c4ff;--gold:#f4c977;--red:#ff9f9f}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 10% -10%,#183d40 0,transparent 42%),var(--bg);color:var(--text);font:15px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif}
+button,input,select,textarea{font:inherit}button{cursor:pointer}a{color:var(--mint)}button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.shell{width:min(1160px,calc(100% - 36px));margin:auto}.topbar{border-bottom:1px solid var(--line);background:#07121bd9}.nav{display:flex;align-items:center;flex-wrap:wrap;gap:18px;min-height:66px}.nav a{text-decoration:none;color:var(--muted);font-size:13px;font-weight:650}.nav a:hover,.nav a.current{color:var(--mint)}.nav .brand{margin-right:auto;color:var(--text);font-size:15px;font-weight:850}
+.hero{padding:45px 0 22px}.eyebrow{color:var(--mint);font-weight:850;font-size:11px;letter-spacing:.16em;text-transform:uppercase}.hero h1{font-size:clamp(2rem,5vw,3.8rem);line-height:1.08;letter-spacing:-.04em;margin:10px 0}.hero p{color:var(--muted);max-width:820px;font-size:16px}.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.tag{border:1px solid #346c61;border-radius:100px;color:#b6efd7;padding:5px 11px;font-size:12px}
+.panel,.stat{background:var(--card);border:1px solid var(--line);border-radius:16px}.panel{padding:20px;margin-bottom:18px}.stats{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin-bottom:18px}.stat{padding:17px}.stat span{color:var(--muted);font-size:12px;display:block}.stat strong{font-size:29px;line-height:1.5;display:block;font-variant-numeric:tabular-nums}.stat small{font-size:11px;color:var(--muted)}
+h2{font-size:22px;margin:0 0 7px;letter-spacing:-.02em}h3{margin:0;font-size:16px}.muted,.hint{color:var(--muted)}.hint{font-size:12px}.headrow{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}.bar{height:9px;background:#213749;border-radius:30px;overflow:hidden}.bar>span{display:block;height:100%;background:linear-gradient(90deg,#36bd93,#a6edd0);border-radius:30px;transition:width .2s}.bar.small{height:5px;margin-top:9px}
+.notice{border-left:3px solid var(--gold);background:#2a2a2b;border-radius:8px;padding:12px 14px;color:#eee0c1;font-size:13px}.notice.info{border-left-color:var(--mint);background:#142b2c;color:#bfe6d5}
+.controls{display:grid;grid-template-columns:1fr 1fr 2fr 1fr;gap:10px;margin:16px 0}.control label,label.small-label{font-size:12px;font-weight:700;color:var(--muted);display:block;margin-bottom:5px}
+input,select,textarea{width:100%;border-radius:10px;background:#0a1926;border:1px solid #405469;color:var(--text);padding:10px 11px;min-width:0}textarea{resize:vertical;min-height:72px}input::placeholder,textarea::placeholder{color:#7d97aa}
+button,.btn{border:1px solid #426a68;color:var(--mint);border-radius:10px;background:#15302d;padding:10px 13px;font-weight:750;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:6px}
+button:hover,.btn:hover{background:#21443c}.btn.secondary{background:#1c2f40;color:#d5eafb;border-color:#486078}.btn.warning{background:#342820;color:#ffe4bc;border-color:#846743}
+.actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:13px}.pill{font-size:11px;padding:4px 8px;border-radius:100px;background:#203b48;color:#cbdfe8;border:1px solid #355669;white-space:nowrap}
+.pill.studied{background:#42381f;color:#f4db9a;border-color:#776036}.pill.mastered{background:#1a4438;color:#a5efd0;border-color:#3c8d73}.pill.review{background:#203c58;color:#a7d7ff}.pill.stuck{background:#4a252a;color:#ffb7bb}
+.module{border:1px solid var(--line);border-radius:13px;margin:11px 0;overflow:hidden;background:#10202e}
+.module summary{list-style:none;cursor:pointer;padding:16px;display:flex;align-items:center;gap:13px}.module summary::-webkit-details-marker{display:none}.module summary:hover{background:#192c3d}.module-title{flex:1;min-width:0}.module-title strong{display:block}.module-title small{display:block;color:var(--muted);margin-top:2px}.arrow{color:var(--mint);font-weight:800}.module[open] .arrow{transform:rotate(90deg)}.module-body{padding:0 14px 12px}.topic{border-top:1px solid #2b3e4f;padding:14px 2px}.topic-header{display:flex;gap:14px;align-items:center;flex-wrap:wrap}.topic-name{font-weight:750;flex:1;min-width:200px}.topic-status{width:185px}.topic details{margin-top:9px}.topic details summary{cursor:pointer;color:var(--blue);font-size:12px;font-weight:750;display:inline-block;padding:4px 0}.topic-fields{display:grid;grid-template-columns:150px 170px 1fr;gap:10px;margin:10px 0}.topic-fields .full{grid-column:1/-1}.topic-fields textarea{min-height:72px}.topic-fields input,.topic-fields select{padding:8px;font-size:13px}
+.empty{background:var(--card2);border-radius:10px;padding:18px;color:var(--muted)}
+.formgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}.formgrid .wide{grid-column:span 2}.formgrid .full{grid-column:1/-1}
+.records{display:grid;gap:8px;margin-top:13px}.record{border:1px solid #385164;border-radius:11px;padding:11px 13px;background:#132534}.record strong{font-size:13px}.record p{font-size:12px;color:var(--muted);margin:5px 0 0;white-space:pre-wrap}.record small{color:var(--muted)}.record-head{display:flex;align-items:center;justify-content:space-between;gap:10px}.record button{padding:4px 9px;font-size:11px}.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.footer{margin-top:30px;border-top:1px solid var(--line);padding:20px 0 45px;color:var(--muted);font-size:12px}.hidden{display:none!important}
+@media(max-width:850px){.stats{grid-template-columns:repeat(3,1fr)}.controls{grid-template-columns:1fr 1fr}.two{grid-template-columns:1fr}}
+@media(max-width:610px){.shell{width:min(100% - 24px,1160px)}.hero{padding-top:32px}.stats{grid-template-columns:repeat(2,1fr)}.panel{padding:15px}.controls,.formgrid,.topic-fields{grid-template-columns:1fr}.formgrid .wide,.formgrid .full,.topic-fields .full{grid-column:auto}.topic-status{width:100%}.module summary{padding:13px}.nav .brand{width:100%;margin:10px 0 0}.nav{gap:11px;padding-bottom:10px}}
+</style>
+</head>
+<body>
+<header class="topbar"><nav class="shell nav" aria-label="Seções do roadmap">
+<a class="brand" href="../index.html">Software Mastery Roadmap</a>
+<a href="../index.html">Roadmap</a><a href="../concursos/estudos/">Concursos de TI</a><a href="index.html" class="current" aria-current="page">Vestibular UFSC/IFC 2027</a>
+</nav></header>
+<main class="shell">
+<section class="hero">
+<div class="eyebrow">Projeto Arquimedes · Trilha Vestibular</div>
+<h1>Estudar, testar,<br>dominar e reter.</h1>
+<p>Painel de preparação para <strong>Engenharia Eletrônica — UFSC/IFC 2027</strong>. Cada tópico acompanha o aprendizado real, os retestes, a resolução de questões e os erros a corrigir.</p>
+<div class="tags"><span class="tag">Inscrição realizada</span><span class="tag">15 blocos de matemática</span><span class="tag">Recall → Trace → Rebuild → Repair → Transfer → Retest</span></div>
+</section>
+<section class="stats" aria-label="Indicadores de estudo">
+<div class="stat"><span>Tópicos cadastrados</span><strong id="stat-total">—</strong><small>currículo ativo</small></div>
+<div class="stat"><span>Estudados</span><strong id="stat-studied">—</strong><small>sem domínio comprovado</small></div>
+<div class="stat"><span>Dominados</span><strong id="stat-mastered">—</strong><small>gate validado</small></div>
+<div class="stat"><span>Revisão / travas</span><strong id="stat-review">—</strong><small>pedem atenção</small></div>
+<div class="stat"><span>Questões resolvidas</span><strong id="stat-questions">—</strong><small id="stat-accuracy">acurácia sem dados</small></div>
+</section>
+<section class="panel">
+<div class="headrow"><div><div class="eyebrow">Progresso comprovado</div><h2 id="progress-label">Carregando...</h2></div><a class="btn secondary" href="data.json" target="_blank" rel="noopener">Ver registro no GitHub Pages ↗</a></div>
+<div class="bar" aria-label="Progresso de domínio"><span id="progress-bar" style="width:0%"></span></div>
+<p class="hint">Aulas apresentadas no chat contam como <strong>estudadas</strong>, não como dominadas. Nível 6 exige transferência e reteste comprovados; nível 7 exige retenção espaçada.</p>
+<div class="notice info" role="note">As alterações feitas aqui são salvas <strong>somente neste navegador</strong>. O GitHub Pages não grava seus cliques no repositório. Use <strong>Exportar progresso</strong> para guardar o JSON; os registros oficiais do repositório podem ser atualizados em nossos checkpoints via GitHub.</div>
+<div class="actions"><button id="export-btn" type="button">Exportar progresso (.json)</button><button id="import-btn" class="btn secondary" type="button">Importar backup</button><input id="import-file" class="hidden" type="file" accept=".json,application/json"><button id="reset-btn" class="btn warning" type="button">Limpar alterações locais</button></div>
+</section>
+<section class="panel" id="curriculum">
+<div class="headrow"><div><div class="eyebrow">Checklist vivo</div><h2>Disciplinas, blocos e tópicos</h2></div><span class="pill">Não iniciado → Estudado → Revisar → Dominado</span></div>
+<div class="controls">
+<div class="control"><label for="subject">Disciplina</label><select id="subject"></select></div>
+<div class="control"><label for="filter">Status</label><select id="filter"><option value="all">Todos os status</option><option value="not_started">Não iniciado</option><option value="studied">Estudado</option><option value="review">Revisar</option><option value="mastered">Dominado</option><option value="stuck">Travado</option></select></div>
+<div class="control"><label for="search">Pesquisar tópico</label><input id="search" type="search" placeholder="Ex.: regra de três, trigonometria..."></div>
+<div class="control"><label for="only-due">Revisões</label><select id="only-due"><option value="all">Mostrar todas</option><option value="due">Só vencidas / hoje</option></select></div>
+</div>
+<div id="modules"><p class="muted">Carregando tópicos...</p></div>
+</section>
+<div class="two">
+<section class="panel">
+<div class="eyebrow">Treino e Retest</div><h2>Registrar sessão de estudo</h2>
+<p class="hint">Registre exercícios reais, simulados e resultados. Sem tentativa registrada, não há desempenho presumido.</p>
+<form id="session-form" class="formgrid">
+<label class="small-label">Data<input id="session-date" type="date" required></label>
+<label class="small-label">Disciplina<select id="session-subject" required></select></label>
+<label class="small-label wide">Bloco / assunto<input id="session-module" placeholder="Ex.: 1 — Aritmética" required></label>
+<label class="small-label">Questões feitas<input id="session-total" type="number" min="0" step="1" required></label>
+<label class="small-label">Acertos<input id="session-correct" type="number" min="0" step="1" required></label>
+<label class="small-label wide">Etapa do método<select id="session-method"><option>Recall</option><option>Trace</option><option>Rebuild</option><option>Repair</option><option>Transfer</option><option>Retest</option><option>Simulado</option></select></label>
+<label class="small-label full">Aprendizado / evidência / dificuldade<textarea id="session-notes" placeholder="O que consegui fazer sem ajuda? Que erro apareceu?"></textarea></label>
+<div class="full"><button type="submit">Registrar sessão</button></div>
+</form>
+<div id="session-records" class="records"></div>
+</section>
+<section class="panel">
+<div class="eyebrow">Repair · Error Ledger</div><h2>Registro de erros</h2>
+<p class="hint">Guarde erros realmente observados, com causa e correção. Erros prováveis mencionados na aula não contam como falhas suas.</p>
+<form id="error-form" class="formgrid">
+<label class="small-label wide">Tópico<input id="error-topic" required placeholder="Ex.: soma de frações"></label>
+<label class="small-label">Situação<select id="error-status"><option value="open">Aberto</option><option value="corrected">Corrigido</option><option value="retained">Retido após revisão</option></select></label>
+<label class="small-label">Data<input id="error-date" type="date" required></label>
+<label class="small-label full">Erro / causa identificada<textarea id="error-description" required placeholder="O que fiz e por que foi incorreto?"></textarea></label>
+<label class="small-label full">Plano de correção<textarea id="error-fix" placeholder="Como revisar e retestar?"></textarea></label>
+<div class="full"><button type="submit">Registrar erro</button></div>
+</form>
+<div id="error-records" class="records"></div>
+</section>
+</div>
+<section class="panel">
+<div class="eyebrow">Regras de domínio</div><h2>Como uma competência avança</h2>
+<p class="muted">Níveis 0–7: não avaliado · reconhece · explica · resolve com ajuda · resolve sozinho · corrige erros · transfere para questão inédita · retém depois de revisões espaçadas. O status <strong>Dominado</strong> no painel exige nível 6 ou 7 e evidência escrita de avaliação. Uma aula simplesmente lida fica em <strong>Estudado</strong>.</p>
+<p class="hint">Este painel começa com os 15 blocos de Matemática cadastrados. As demais disciplinas estão preparadas como áreas de expansão, ainda sem lista de conteúdos validada do edital.</p>
+</section>
+</main>
+<footer class="shell footer">Projeto Arquimedes · <a href="https://github.com/lucastrevvos/software-mastery-roadmap/tree/main/docs/vestibular">Fonte no GitHub</a> · <a href="../index.html">Voltar ao roadmap</a></footer>
+<script>
+(function(){
+"use strict";
+var KEY="arquimedes-vestibular-progress-v1", catalog=null, local={topics:{},sessions:[],errors:[]};
+var statusNames={not_started:"Não iniciado",studied:"Estudado",review:"Revisar",mastered:"Dominado",stuck:"Travado"};
+var esc=function(v){return String(v===undefined||v===null?"":v).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})};
+var $=function(id){return document.getElementById(id)};
+function today(){var d=new Date();return [d.getFullYear(),String(d.getMonth()+1).padStart(2,"0"),String(d.getDate()).padStart(2,"0")].join("-")}
+function save(){localStorage.setItem(KEY,JSON.stringify(local))}
+function subjects(){return catalog.subjects}
+function entries(){return subjects().flatMap(function(s){return s.modules.flatMap(function(m){return m.topics.map(function(t){return {subject:s,module:m,topic:t}})})})}
+function topicState(t){return Object.assign({},t,local.topics[t.id]||{})}
+function badge(s){return '<span class="pill '+esc(s)+'">'+esc(statusNames[s]||"Não iniciado")+'</span>'}
+function statusSelect(id,cur){return '<select class="topic-status" data-id="'+esc(id)+'" data-field="status" aria-label="Status de '+esc(id)+'">'+Object.keys(statusNames).map(function(s){return '<option value="'+s+'"'+(s===cur?' selected':'')+'>'+esc(statusNames[s])+'</option>'}).join("")+'</select>'}
+function renderStats(){
+var all=entries().map(function(x){return topicState(x.topic)}), total=all.length, mastered=all.filter(function(t){return t.status==="mastered"}).length, studied=all.filter(function(t){return t.status==="studied"}).length, attention=all.filter(function(t){return t.status==="review"||t.status==="stuck"}).length;
+var sessions=(catalog.sessions||[]).concat(local.sessions), questions=sessions.reduce(function(n,s){return n+Number(s.total||0)},0), correct=sessions.reduce(function(n,s){return n+Number(s.correct||0)},0);
+$("stat-total").textContent=total;$("stat-studied").textContent=studied;$("stat-mastered").textContent=mastered;$("stat-review").textContent=attention;$("stat-questions").textContent=questions;
+$("stat-accuracy").textContent=questions?((correct/questions*100).toFixed(1).replace(".",",")+"% de acertos"):"sem questões registradas";
+var percent=total?Math.round(mastered/total*100):0;$("progress-label").textContent=percent+"% dos tópicos dominados";$("progress-bar").style.width=percent+"%";
+}
+function renderCurriculum(){
+var oldOpen=Array.from(document.querySelectorAll(".module[open]")).map(function(el){return el.dataset.module}), first=!document.querySelector(".module");
+var sid=$("subject").value, subject=subjects().find(function(s){return s.id===sid})||subjects()[0], text=$("search").value.trim().toLocaleLowerCase("pt-BR"), status=$("filter").value, dueOnly=$("only-due").value==="due", current=today();
+var shown=0, parts=[];
+subject.modules.forEach(function(m){
+var topics=m.topics.filter(function(t){var v=topicState(t);return (status==="all"||v.status===status)&&(!text||(t.name+" "+m.title).toLocaleLowerCase("pt-BR").includes(text))&&(!dueOnly||(v.reviewDate&&v.reviewDate<=current&&v.status!=="mastered"))});
+if(!topics.length)return;shown+=topics.length;
+var mastered=m.topics.filter(function(t){return topicState(t).status==="mastered"}).length;
+var opened=oldOpen.includes(m.id)||first&&m.id==="mat-01";
+parts.push('<details class="module" data-module="'+esc(m.id)+'"'+(opened?' open':'')+'><summary><span class="pill">'+esc(m.id.replace("mat-",""))+'</span><span class="module-title"><strong>'+esc(m.title)+'</strong><small>'+mastered+'/'+m.topics.length+' dominados · '+topics.length+' exibidos</small><div class="bar small"><span style="width:'+(m.topics.length?100*mastered/m.topics.length:0)+'%"></span></div></span><span class="arrow">›</span></summary><div class="module-body">');
+topics.forEach(function(t){var v=topicState(t);
+parts.push('<div class="topic"><div class="topic-header"><div class="topic-name">'+esc(t.name)+'</div>'+badge(v.status)+statusSelect(t.id,v.status)+'</div><details><summary>Registro, revisão e evidência ›</summary><div class="topic-fields">'+
+'<label class="small-label">Nível de domínio<select data-id="'+esc(t.id)+'" data-field="mastery"><option value="">Não avaliado</option>'+Array.from({length:8},function(_,i){return '<option value="'+i+'"'+(String(v.mastery)===String(i)?' selected':'')+'>'+i+' — '+esc(catalog.masteryScale[i])+'</option>'}).join("")+'</select></label>'+
+'<label class="small-label">Próxima revisão<input type="date" data-id="'+esc(t.id)+'" data-field="reviewDate" value="'+esc(v.reviewDate||"")+'"></label>'+
+'<label class="small-label">Evidência de domínio<input data-id="'+esc(t.id)+'" data-field="evidence" value="'+esc(v.evidence||"")+'" placeholder="Ex.: Retest 7/8 em 16/10"></label>'+
+'<label class="small-label full">Anotações e dificuldade<textarea data-id="'+esc(t.id)+'" data-field="note" placeholder="Aprendi, errei, corrigi, preciso revisar...">'+esc(v.note||"")+'</textarea></label></div></details></div>');
+});
+parts.push('</div></details>');
+});
+$("modules").innerHTML=parts.join("")||(subject.modules.length?'<div class="empty">Nenhum tópico atende aos filtros. Ajuste a busca.</div>':'<div class="empty">Área reservada para '+esc(subject.name)+'. Os tópicos dessa disciplina ainda serão cadastrados após a conferência do edital.</div>');
+}
+function renderRecords(){
+var sessions=(catalog.sessions||[]).concat(local.sessions).slice().reverse();
+$("session-records").innerHTML=sessions.length?sessions.slice(0,15).map(function(s){return '<article class="record"><div class="record-head"><strong>'+esc(s.date)+' · '+esc(s.subject)+' · '+esc(s.module)+'</strong>'+(s.localId?'<button data-remove-session="'+esc(s.localId)+'" type="button">Excluir</button>':'')+'</div><p>'+esc(s.method)+' · '+esc(s.correct)+'/'+esc(s.total)+' acertos'+(s.total?' ('+(100*s.correct/s.total).toFixed(0)+'%)':'')+'</p><p>'+esc(s.notes||"")+'</p></article>'}).join(""):'<div class="empty">Nenhum treino registrado. Comece pelo Retest 001.</div>';
+var errors=(catalog.errors||[]).concat(local.errors).slice().reverse();
+$("error-records").innerHTML=errors.length?errors.slice(0,15).map(function(e){return '<article class="record"><div class="record-head"><strong>'+esc(e.date)+' · '+esc(e.topic)+'</strong>'+(e.localId?'<button type="button" data-remove-error="'+esc(e.localId)+'">Excluir</button>':'')+'</div><small>'+esc({open:"Aberto",corrected:"Corrigido",retained:"Retido"}[e.status]||e.status)+'</small><p>'+esc(e.description)+'</p><p>Plano: '+esc(e.fix||"A definir")+'</p></article>'}).join(""):'<div class="empty">Nenhum erro observado registrado.</div>';
+}
+function render(){renderStats();renderCurriculum();renderRecords()}
+function init(){
+$("subject").innerHTML=subjects().map(function(s){return '<option value="'+esc(s.id)+'">'+esc(s.name)+'</option>'}).join("");
+$("session-subject").innerHTML=subjects().map(function(s){return '<option value="'+esc(s.name)+'">'+esc(s.name)+'</option>'}).join("");
+$("session-date").value=today();$("error-date").value=today();render();
+}
+["subject","filter","search","only-due"].forEach(function(id){$(id).addEventListener(id==="search"?"input":"change",renderCurriculum)});
+$("modules").addEventListener("change",function(ev){var target=ev.target,id=target.dataset.id,field=target.dataset.field;if(!id||!field)return;
+var t=entries().find(function(e){return e.topic.id===id});if(!t)return;
+var previous=topicState(t.topic), next=target.value;
+if(field==="status"&&next==="mastered"&&(Number(previous.mastery)<6||!String(previous.evidence||"").trim())){alert("Para marcar Dominado, registre primeiro domínio nível 6 ou 7 e evidência de Retest/Transfer.");target.value=previous.status;return}
+var patch=local.topics[id]||{};patch[field]=field==="mastery"?(next===""?null:Number(next)):next;
+if(field==="mastery"&&patch[field]!==null&&patch[field]<6&&previous.status==="mastered")patch.status="review";
+local.topics[id]=patch;save();render();
+});
+$("session-form").addEventListener("submit",function(ev){ev.preventDefault();var total=Number($("session-total").value), correct=Number($("session-correct").value);if(correct>total){alert("Acertos não podem superar questões feitas.");return}
+local.sessions.push({localId:String(Date.now())+"-s",date:$("session-date").value,subject:$("session-subject").value,module:$("session-module").value.trim(),total,correct,method:$("session-method").value,notes:$("session-notes").value.trim()});
+save();ev.target.reset();$("session-date").value=today();renderStats();renderRecords();
+});
+$("error-form").addEventListener("submit",function(ev){ev.preventDefault();local.errors.push({localId:String(Date.now())+"-e",date:$("error-date").value,topic:$("error-topic").value.trim(),status:$("error-status").value,description:$("error-description").value.trim(),fix:$("error-fix").value.trim()});save();ev.target.reset();$("error-date").value=today();renderRecords()});
+document.addEventListener("click",function(ev){var t=ev.target;if(t.dataset.removeSession){local.sessions=local.sessions.filter(function(x){return x.localId!==t.dataset.removeSession});save();renderStats();renderRecords()}if(t.dataset.removeError){local.errors=local.errors.filter(function(x){return x.localId!==t.dataset.removeError});save();renderRecords()}});
+$("export-btn").addEventListener("click",function(){var data={type:"vestibular-progress-backup",version:1,exportedAt:new Date().toISOString(),catalogUpdatedAt:catalog.updatedAt,topics:local.topics,sessions:local.sessions,errors:local.errors};var blob=new Blob([JSON.stringify(data,null,2)],{type:"application/json"}),url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download="vestibular-ufsc-2027-progresso-"+today()+".json";a.click();URL.revokeObjectURL(url)});
+$("import-btn").addEventListener("click",function(){$("import-file").click()});
+$("import-file").addEventListener("change",async function(ev){var f=ev.target.files[0];if(!f)return;try{var obj=JSON.parse(await f.text());if(obj.type!=="vestibular-progress-backup"||obj.version!==1||!obj.topics||!Array.isArray(obj.sessions)||!Array.isArray(obj.errors))throw Error("Formato não reconhecido");if(!confirm("Substituir os dados locais pelos dados do arquivo?"))return;local={topics:obj.topics,sessions:obj.sessions,errors:obj.errors};save();render();alert("Backup importado.")}catch(e){alert("Não foi possível importar: "+e.message)}finally{ev.target.value=""}});
+$("reset-btn").addEventListener("click",function(){if(confirm("Apagar todas as alterações locais deste navegador? Esta ação não altera o GitHub.")){local={topics:{},sessions:[],errors:[]};save();render()}});
+try{var stored=JSON.parse(localStorage.getItem(KEY)||"null");if(stored&&stored.topics&&Array.isArray(stored.sessions)&&Array.isArray(stored.errors))local=stored}catch(e){}
+fetch("./data.json",{cache:"no-store"}).then(function(r){if(!r.ok)throw Error("HTTP "+r.status);return r.json()}).then(function(data){catalog=data;init()}).catch(function(err){$("modules").innerHTML='<div class="empty">Não foi possível carregar data.json ('+esc(err.message)+'). Acesse pela página publicada no GitHub Pages.</div>'});
+})();
+</script>
+</body></html>
