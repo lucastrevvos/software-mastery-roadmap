@@ -125,7 +125,7 @@ $("stat-accuracy").textContent=questions?((correct/questions*100).toFixed(1).rep
 var percent=total?Math.round(mastered/total*100):0;$("progress-label").textContent=percent+"% dos tópicos dominados";$("progress-bar").style.width=percent+"%";
 }
 function renderCurriculum(){
-var oldOpen=Array.from(document.querySelectorAll(".module[open]")).map(function(el){return el.dataset.module}), first=!document.querySelector(".module");
+var oldOpen=Array.from(document.querySelectorAll(".module[open]")).map(function(el){return el.dataset.module}), openTopics=Array.from(document.querySelectorAll(".topic details[open]")).map(function(el){return el.dataset.topic}), first=!document.querySelector(".module");
 var sid=$("subject").value, subject=subjects().find(function(s){return s.id===sid})||subjects()[0], text=$("search").value.trim().toLocaleLowerCase("pt-BR"), status=$("filter").value, dueOnly=$("only-due").value==="due", current=today();
 var shown=0, parts=[];
 subject.modules.forEach(function(m){
@@ -135,7 +135,7 @@ var mastered=m.topics.filter(function(t){return topicState(t).status==="mastered
 var opened=oldOpen.includes(m.id)||first&&m.id==="mat-01";
 parts.push('<details class="module" data-module="'+esc(m.id)+'"'+(opened?' open':'')+'><summary><span class="pill">'+esc(m.id.replace("mat-",""))+'</span><span class="module-title"><strong>'+esc(m.title)+'</strong><small>'+mastered+'/'+m.topics.length+' dominados · '+topics.length+' exibidos</small><div class="bar small"><span style="width:'+(m.topics.length?100*mastered/m.topics.length:0)+'%"></span></div></span><span class="arrow">›</span></summary><div class="module-body">');
 topics.forEach(function(t){var v=topicState(t);
-parts.push('<div class="topic"><div class="topic-header"><div class="topic-name">'+esc(t.name)+'</div>'+badge(v.status)+statusSelect(t.id,v.status)+'</div><details><summary>Registro, revisão e evidência ›</summary><div class="topic-fields">'+
+parts.push('<div class="topic"><div class="topic-header"><div class="topic-name">'+esc(t.name)+'</div>'+badge(v.status)+statusSelect(t.id,v.status)+'</div><details data-topic="'+esc(t.id)+'"'+(openTopics.includes(t.id)?' open':'')+'><summary>Registro, revisão e evidência ›</summary><div class="topic-fields">'+
 '<label class="small-label">Nível de domínio<select data-id="'+esc(t.id)+'" data-field="mastery"><option value="">Não avaliado</option>'+Array.from({length:8},function(_,i){return '<option value="'+i+'"'+(String(v.mastery)===String(i)?' selected':'')+'>'+i+' — '+esc(catalog.masteryScale[i])+'</option>'}).join("")+'</select></label>'+
 '<label class="small-label">Próxima revisão<input type="date" data-id="'+esc(t.id)+'" data-field="reviewDate" value="'+esc(v.reviewDate||"")+'"></label>'+
 '<label class="small-label">Evidência de domínio<input data-id="'+esc(t.id)+'" data-field="evidence" value="'+esc(v.evidence||"")+'" placeholder="Ex.: Retest 7/8 em 16/10"></label>'+
