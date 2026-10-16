@@ -74,27 +74,27 @@
             {
               "id": "mat-01-razao",
               "name": "Razão",
-              "status": "not_started",
+              "status": "studied",
               "mastery": null,
-              "note": "",
+              "note": "Aula 1.6 apresentada no chat; não houve respostas ao diagnóstico nem Retest validado.",
               "reviewDate": null,
               "evidence": ""
             },
             {
               "id": "mat-01-proporcao",
               "name": "Proporção",
-              "status": "not_started",
+              "status": "studied",
               "mastery": null,
-              "note": "",
+              "note": "Aula 1.6 apresentada no chat; não houve respostas ao diagnóstico nem Retest validado.",
               "reviewDate": null,
               "evidence": ""
             },
             {
               "id": "mat-01-regra-de-tres-simples",
               "name": "Regra de três simples",
-              "status": "not_started",
+              "status": "studied",
               "mastery": null,
-              "note": "",
+              "note": "Aula 1.7 apresentada no chat; sem respostas do aluno, transferência ou Retest validado.",
               "reviewDate": null,
               "evidence": ""
             },
