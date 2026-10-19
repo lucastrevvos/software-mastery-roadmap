@@ -1,8 +1,8 @@
 {
   "meta": {
     "title": "Full Stack Software Architect & Cloud Engineer",
-    "version": "3.3.0",
-    "updatedAt": "2026-10-15",
+    "version": "3.4.0",
+    "updatedAt": "2026-10-19",
     "principles": [
       "Fundamentos fortes antes de especialização",
       "Priorizar certificados oficiais e verificáveis",
@@ -66,7 +66,7 @@
           "provider": "freeCodeCamp",
           "credential": "JavaScript Certification",
           "cost": "free",
-          "status": "paused",
+          "status": "in-progress",
           "priority": "core",
           "access": {
             "learning": {
@@ -151,7 +151,7 @@
     {
       "id": "phase-02",
       "title": "Node.js & NestJS — Backend Employability",
-      "goal": "Transformar JavaScript/TypeScript em uma stack backend profissional antes de aprofundar arquitetura. O objetivo é atingir rapidamente um ponto real de candidatura para vagas Node.js, TypeScript e NestJS.",
+      "goal": "Transformar JavaScript/TypeScript em uma stack backend profissional e iniciar o KM One como o projeto profissional central do roadmap. A primeira arquitetura é um monólito modular NestJS profissional; distribuição e novas stacks só entram quando o domínio justificar.",
       "items": [
         {
           "id": "nodejs-core-fundamentals",
@@ -284,14 +284,14 @@
         },
         {
           "id": "node-nest-employability-project",
-          "title": "KM One — Node/Nest Backend Employability Project + Gate",
+          "title": "KM One — Central Professional Product: NestJS Foundation",
           "provider": "Programming Mastery Lab",
           "credential": "Internal Employability Gate",
           "cost": "free",
           "status": "not-started",
-          "priority": "employment",
+          "priority": "central-project",
           "source": "./mastery-gates/",
-          "description": "Usar o backend real do KM One como projeto de empregabilidade em TypeScript/NestJS, mantendo a hospedagem na Azure e evitando um projeto artificial só para cumprir o Gate.",
+          "description": "Primeira etapa do projeto profissional central do roadmap: TypeScript + Node.js + NestJS + PostgreSQL/Neon + Azure, começando como monólito modular profissional. Depois, o mesmo produto evoluirá seletivamente para bounded contexts, microservices polyglot, sistemas distribuídos, observabilidade, cloud e IA.",
           "focus": [
             "REST API design",
             "NestJS modules, controllers, providers and DI",
@@ -372,6 +372,17 @@
             "Asynchronous jobs or messaging only when justified",
             "Observability improvements",
             "Advanced patterns such as Outbox, events, DDD/CQRS only when there is a real product need"
+          ],
+          "plan": "projects/KM_ONE_CENTRAL_PROFESSIONAL_PATH.md",
+          "architectureRule": "Modular monolith first; extract services only after a real domain/operational boundary appears.",
+          "longTermEvolution": [
+            "NestJS modular monolith",
+            "bounded-context discovery",
+            "selective NestJS/TypeScript + .NET/C# microservices",
+            "language-independent contracts",
+            "RabbitMQ and distributed reliability",
+            "OpenTelemetry and platform engineering",
+            "AI-enabled services when justified"
           ]
         }
       ]
@@ -379,7 +390,7 @@
     {
       "id": "phase-03",
       "title": "Full Stack Employability — React + Helsinki",
-      "goal": "Adicionar React e capacidade ponta a ponta sem abandonar a identidade backend. Esta janela amplia os tipos de vaga possíveis antes do mergulho em backend sênior.",
+      "goal": "Adicionar React e capacidade ponta a ponta sem abandonar a identidade backend. O Full Stack Open deve alimentar fluxos reais do KM One, transformando o projeto central em evidência full-stack quando fizer sentido.",
       "items": [
         {
           "id": "full-stack-open-core",
@@ -432,14 +443,60 @@
               "cost": "Grátis"
             }
           }
+        },
+        {
+          "id": "km-one-fullstack-integration",
+          "order": 8,
+          "title": "KM One — Full-Stack Integration",
+          "provider": "Professional Project + Full Stack Open",
+          "credential": "Applied full-stack evidence",
+          "cost": "free",
+          "status": "not-started",
+          "priority": "central-application",
+          "plan": "projects/KM_ONE_CENTRAL_PROFESSIONAL_PATH.md",
+          "focus": [
+            "React + TypeScript integration",
+            "real user flows",
+            "frontend/backend contracts",
+            "authentication flows",
+            "end-to-end tests"
+          ],
+          "note": "Aplicar ao KM One o conhecimento full-stack aprendido no Full Stack Open. O produto deve manter uma única arquitetura frontend coerente; outros frameworks ficam como especializações separadas salvo necessidade real."
         }
       ]
     },
     {
       "id": "phase-04",
       "title": "Senior Software Engineering & Architecture — Production, Distributed Systems & AWS",
-      "goal": "Consolidar o corpo de conhecimento profissional de engenharia de software com SWEBOK/IEEE e então aprofundar Linux, networking, arquitetura, sistemas distribuídos, observabilidade, containers e cloud, sem transformar o roadmap em uma sequência infinita de certificações.",
+      "goal": "Consolidar Senior Software Engineering e Software Architecture com SWEBOK/iSAQB e aplicar essa profundidade ao KM One. Nesta fase, o produto central pode evoluir do monólito modular para microservices polyglot seletivos, mensageria, confiabilidade distribuída, observabilidade, containers e cloud — sempre por necessidade arquitetural real.",
       "items": [
+        {
+          "id": "km-one-polyglot-microservices",
+          "order": 8,
+          "title": "KM One — Polyglot Microservices & Architecture Evolution",
+          "provider": "Professional Project + Programming Mastery Lab",
+          "credential": "Applied distributed architecture portfolio",
+          "cost": "free-first",
+          "status": "not-started",
+          "priority": "central-application",
+          "plan": "projects/KM_ONE_CENTRAL_PROFESSIONAL_PATH.md",
+          "prerequisite": "KM One NestJS professional modular monolith with clear domain boundaries",
+          "focus": [
+            "bounded contexts",
+            "selective service extraction",
+            "NestJS / TypeScript services",
+            ".NET / C# services where justified",
+            "language-independent contracts",
+            "RabbitMQ",
+            "Outbox / Inbox / idempotency",
+            "eventual consistency",
+            "OpenTelemetry",
+            "containers and Kubernetes",
+            "Azure and CI/CD",
+            "architecture defense"
+          ],
+          "note": "Não é um objetivo de quantidade de microservices. Cada extração precisa ser defendida por responsabilidade de negócio, ownership de dados, escala, confiabilidade, segurança ou cadência de deploy. A escolha da stack vem depois da fronteira."
+        },
         {
           "id": "swebok-senior-guided",
           "order": 9,
@@ -1060,7 +1117,7 @@
     {
       "id": "phase-05",
       "title": "AI-Enabled Backend — Python, LLM Apps & Agents",
-      "goal": "Adicionar IA ao repertório de engenharia sem transformar a trilha em uma formação de cientista de dados. Python entra just-in-time para aplicações de IA, RAG, agentes, avaliação e LLMOps.",
+      "goal": "Adicionar IA ao repertório de engenharia e aplicar capacidades úteis ao KM One sem reduzir IA a um chatbot cosmético. TypeScript é preferido quando suficiente; Python entra just-in-time quando o ecossistema de IA/dados trouxer vantagem concreta.",
       "items": [
         {
           "id": "cs50p",
@@ -1229,13 +1286,37 @@
               "cost": "Grátis-first"
             }
           }
+        },
+        {
+          "id": "km-one-ai-engineering",
+          "order": 30,
+          "title": "KM One — AI Engineering Integration",
+          "provider": "Professional Project + AI Engineering Track",
+          "credential": "Applied AI engineering portfolio",
+          "cost": "free-first",
+          "status": "not-started",
+          "priority": "central-application",
+          "plan": "projects/KM_ONE_CENTRAL_PROFESSIONAL_PATH.md",
+          "focus": [
+            "LLM APIs",
+            "structured outputs",
+            "tool calling",
+            "embeddings and RAG",
+            "agents/workflows when justified",
+            "evaluations",
+            "guardrails",
+            "cost and latency",
+            "AI observability",
+            "secure data boundaries"
+          ],
+          "note": "A IA precisa resolver um problema real do KM One e ter avaliação/operabilidade. Python só vira serviço independente quando houver razão técnica clara."
         }
       ]
     },
     {
       "id": "phase-06",
       "title": ".NET 10 & Financial Distributed Systems — Active Backend Window",
-      "goal": "A janela .NET foi antecipada por oportunidades reais em sistemas financeiros. Consolidar C#/.NET 10 em backend e sistemas distribuídos, praticar defesa arquitetural e system design, e manter Azure como eixo cloud da trilha. O laboratório deve introduzir padrões porque o problema exige, não como checklist.",
+      "goal": "Consolidar C#/.NET 10 em backend e sistemas distribuídos no Financial Lab e usar essa competência, quando uma fronteira real justificar, em serviços selecionados do KM One. Azure continua como eixo cloud, e .NET passa a ser uma stack possível do produto polyglot, não um projeto isolado por linguagem.",
       "items": [
         {
           "id": "foundational-csharp",
