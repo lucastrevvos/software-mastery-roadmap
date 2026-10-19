@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-15T10:37:00-03:00",
+  "updatedAt": "2026-10-19T13:53:00-03:00",
   "courses": {
     "cs50x": {
       "status": "completed",
@@ -91,7 +91,7 @@
       }
     },
     "fcc-js-v10": {
-      "status": "paused",
+      "status": "in-progress",
       "started": true,
       "completed": [
         "variables-and-strings/introduction-to-javascript",
@@ -100,7 +100,7 @@
         "variables-and-strings/build-a-greeting-bot",
         "variables-and-strings/build-a-javascript-trivia-bot"
       ],
-      "current": "variables-and-strings/build-a-sentence-maker",
+      "current": "JavaScript Certification — active labs and algorithm/object/array practice",
       "stepsComplete": 25,
       "stepsTotal": 1320,
       "section": "Variables and Strings",
@@ -111,7 +111,8 @@
         "Próximo exercício: Build a Sentence Maker.",
         "Primeiro LAB-FCC-JS será aberto após o núcleo de Data Types + Review + Quiz, para avaliar um bloco de competência completo em vez de cada exercício isolado.",
         "Retomado como trilha principal em 2026-09-17 após a conclusão oficial do CS50x.",
-        "Pausa tática em 2026-09-28 até a entrevista técnica da XP em 2026-09-30 às 14h; retomar após o sprint de System Design."
+        "Pausa tática em 2026-09-28 até a entrevista técnica da XP em 2026-09-30 às 14h; retomar após o sprint de System Design.",
+        "Retomada confirmada em 2026-10-19; JavaScript Certification voltou a ser a trilha principal antes de TypeScript."
       ]
     },
     "foundational-csharp": {
@@ -215,6 +216,20 @@
         "Não comprar prova antes de confirmar disponibilidade, preço, ROI e prontidão."
       ],
       "officialSource": "https://www.computer.org/education/certifications"
+    },
+    "km-one-central-professional-path": {
+      "status": "planned",
+      "started": false,
+      "completed": [],
+      "current": "Prerequisite path: finish JavaScript Certification → TypeScript Guided Track → Node/Nest foundation",
+      "sourcePlan": "projects/KM_ONE_CENTRAL_PROFESSIONAL_PATH.md",
+      "notes": [
+        "Definido em 2026-10-19 como o projeto profissional central que conecta o roadmap à prática.",
+        "Começa como monólito modular NestJS e só evolui para microservices quando bounded contexts/necessidades reais justificarem.",
+        "O alvo polyglot é usar NestJS/TypeScript como stack principal e .NET/C# em serviços selecionados quando houver razão arquitetural.",
+        "Financial Lab permanece laboratório focado; conhecimento validado nele pode ser transferido ao KM One.",
+        "SWEBOK, iSAQB, full-stack, cloud, observabilidade e IA devem gerar evidência prática no KM One sempre que fizer sentido."
+      ]
     }
   },
   "labs": {
@@ -286,18 +301,19 @@
     "maxActiveCourses": 2,
     "primaryShare": "70-80%",
     "complementaryShare": "20-30%",
-    "currentPrimary": "dotnet-backend",
+    "currentPrimary": "fcc-js-v10",
     "currentComplementary": null,
     "nextWindow": "nodejs-nestjs-backend-employability",
     "secondBackendWindow": "dotnet-azure",
     "nodeNestEmployabilityProject": {
       "name": "KM One",
-      "backend": "Node.js + TypeScript + NestJS",
+      "backend": "Node.js + TypeScript + NestJS first; polyglot evolution later",
       "database": "PostgreSQL / Neon",
       "cloud": "Azure",
       "status": "planned",
-      "decisionDate": "2026-09-21",
-      "note": "KM One replaces an artificial Node/Nest gate project. .NET is intentionally reserved for the later second-backend window; Trevvos Platform Core remains the candidate .NET system."
+      "decisionDate": "2026-10-19",
+      "canonicalPlan": "projects/KM_ONE_CENTRAL_PROFESSIONAL_PATH.md",
+      "note": "KM One is now the central professional project. It begins as a professional NestJS modular monolith and later evolves through real bounded contexts into selective NestJS/.NET microservices, distributed reliability, observability, cloud/platform engineering and AI."
     },
     "immediateGate": {
       "title": "XP — entrevista técnica de System Design",
@@ -311,6 +327,39 @@
     ],
     "afterGate": "Continue Financial Distributed Systems Lab in .NET 10 and rebalance JavaScript/SQL according to interview outcome and active opportunities.",
     "afterJavaScriptCertification": "typescript-official-guided",
-    "afterTypeScriptGuidedTrack": "nodejs-nestjs-backend-employability"
+    "afterTypeScriptGuidedTrack": "nodejs-nestjs-backend-employability",
+    "mainAppliedProject": {
+      "name": "KM One",
+      "role": "central-professional-project",
+      "canonicalPlan": "projects/KM_ONE_CENTRAL_PROFESSIONAL_PATH.md",
+      "principle": "Study provides capability; KM One provides professional evidence.",
+      "currentPlannedStart": "NestJS modular monolith after JavaScript certification and TypeScript Guided Track",
+      "evolution": [
+        "JavaScript Certification",
+        "TypeScript Guided Track",
+        "Node.js / NestJS",
+        "KM One professional modular monolith",
+        "Full Stack Open / real frontend integration",
+        "SWEBOK + iSAQB applied to KM One",
+        "bounded-context discovery",
+        "selective NestJS/TypeScript + .NET/C# microservices",
+        "RabbitMQ + distributed reliability",
+        "OpenTelemetry + containers + Azure + CI/CD",
+        "AI-enabled service(s)",
+        "Senior Software Engineering + Software Architecture defenses"
+      ],
+      "architectureRules": [
+        "No microservice without a real boundary.",
+        "No new stack without a technical reason.",
+        "No pattern without a failure/problem it solves.",
+        "Start modular monolith; extract selectively.",
+        "Distributed contracts must be language-independent."
+      ],
+      "polyglotTarget": {
+        "primary": "NestJS / TypeScript",
+        "secondary": ".NET / C# for selected justified services",
+        "future": "Python only where AI/data ecosystem gives concrete value"
+      }
+    }
   }
 }
