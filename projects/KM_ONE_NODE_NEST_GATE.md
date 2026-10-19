@@ -1,5 +1,13 @@
 # KM One — Node/Nest Backend Employability Gate
 
+> **Canonical evolution update — 2026-10-19**
+>
+> This file remains the early employability gate for the Node/Nest phase. The broader, current source of truth for KM One is:
+>
+> `projects/KM_ONE_CENTRAL_PROFESSIONAL_PATH.md`
+>
+> KM One now starts as a NestJS modular monolith and later evolves, when justified by domain boundaries, into a polyglot distributed system with selective NestJS/TypeScript and .NET/C# services. .NET is therefore no longer restricted conceptually to Trevvos/Financial Lab; it may enter KM One at a real bounded-context/service boundary.
+
 Status: **Decision accepted on 2026-09-21**
 
 ## Decision
@@ -95,23 +103,28 @@ The Gate is passed when KM One has a backend that can be defended technically an
 
 At that point, Node.js / TypeScript / NestJS job applications should begin even if advanced distributed systems, AWS/cloud architecture and AI phases are still pending.
 
-## Relationship with Trevvos and .NET
+## Relationship with .NET and the central KM One path
 
-Current architectural intent:
+The initial KM One backend remains **Node.js + TypeScript + NestJS** because this is the next employability gate.
+
+The long-term decision is now broader:
 
 ```text
 KM One
-→ Node.js + TypeScript + NestJS
+→ starts as NestJS modular monolith
 → PostgreSQL / Neon
 → Azure
-→ primary Node/Nest employability project
-
-Trevvos Platform Core
-→ remains the candidate .NET system
-→ future C# / ASP.NET Core / Azure window
+→ bounded contexts discovered through real product growth
+→ selective service extraction
+→ NestJS/TypeScript + .NET/C# services when justified
 ```
 
-This creates a useful future comparison: the same engineering ideas — dependency injection, middleware, persistence, background work, messaging, observability and architecture — can later be implemented in both NestJS and .NET.
+.NET therefore becomes both:
+
+1. a focused learning window in the Financial Distributed Systems Lab; and
+2. a possible production stack inside KM One for a bounded context that genuinely earns independent service ownership.
+
+The canonical cross-phase plan is `projects/KM_ONE_CENTRAL_PROFESSIONAL_PATH.md`.
 
 ## Long-term learning value
 
