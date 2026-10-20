@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-19T13:53:00-03:00",
+  "updatedAt": "2026-10-20T15:44:00-03:00",
   "courses": {
     "cs50x": {
       "status": "completed",
@@ -360,6 +360,27 @@
         "secondary": ".NET / C# for selected justified services",
         "future": "Python only where AI/data ecosystem gives concrete value"
       }
+    },
+    "tacticalSprint": {
+      "id": "loopia-interview-2026-10-22",
+      "title": "Loopia — Engenheiro de Software Fullstack — Technical Interview Sprint",
+      "company": "Loopia Software Ltda",
+      "role": "Engenheiro de Software - Fullstack",
+      "interviewAt": "2026-10-22T14:00:00-03:00",
+      "format": "Technical interview with two Tech Leads",
+      "status": "active",
+      "source": "https://vagas.tagguirh.com.br/visualizar-vaga/loopia/2378",
+      "priorities": [
+        "Python fundamentals + FastAPI/Django mental model",
+        "React + Vite mental model and practical component/data-flow review",
+        "MySQL/SQL performance and transactions",
+        "API design, testing and code review",
+        "AWS fundamentals relevant to web/backend systems",
+        "Docker, Kubernetes and CI/CD",
+        "microservices, RabbitMQ/Kafka and resilience",
+        "Loopia-specific system design: marketplace/WhatsApp integrations, webhooks, async processing, idempotency, rate limits, AI calls and observability"
+      ],
+      "note": "Temporary interview sprint. Does not replace the canonical roadmap sequence; JavaScript Certification remains the long-term active foundation and resumes immediately after the interview."
     }
   }
 }
