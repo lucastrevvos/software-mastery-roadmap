@@ -380,7 +380,25 @@
         "microservices, RabbitMQ/Kafka and resilience",
         "Loopia-specific system design: marketplace/WhatsApp integrations, webhooks, async processing, idempotency, rate limits, AI calls and observability"
       ],
-      "note": "Temporary interview sprint. Does not replace the canonical roadmap sequence; JavaScript Certification remains the long-term active foundation and resumes immediately after the interview."
+      "note": "Temporary interview sprint. Does not replace the canonical roadmap sequence; JavaScript Certification remains the long-term active foundation and resumes immediately after the interview.",
+      "labArchitecturePlan": {
+        "name": "Commerce Support Hub",
+        "goal": "Interview-focused production-style lab inspired by omnichannel support/e-commerce integration problems.",
+        "currentStage": "React + Vite frontend connected to FastAPI",
+        "laterProfessionalization": [
+          "Refactor from flat files into clear application layers/modules",
+          "Separate HTTP/API, application/service, persistence/repository and messaging concerns",
+          "Introduce configuration/env management and dependency injection cleanly",
+          "Add tests and contract boundaries",
+          "Add retry policy with bounded attempts",
+          "Add backoff for transient failures",
+          "Add DLQ for poison/permanent failures",
+          "Add circuit breaker only for synchronous/external calls where it is justified",
+          "Add timeouts, rate limiting and observability",
+          "Review Outbox/Inbox with proper ownership boundaries and separate consumer storage if extracted into a real service"
+        ],
+        "architectureRule": "Patterns are introduced only when a concrete failure mode or operational requirement justifies them."
+      }
     }
   }
 }
