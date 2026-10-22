@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-11",
+  "updatedAt": "2026-10-22",
   "title": "Preparação integrada CASAN → CGU 2026",
   "description": "Planejamento de estudos para dois concursos, CASAN como prioridade até 22/11 e CGU de 23/11 a 13/12. A ordem de estudos é uma estratégia pedagógica, não previsão de questões ou nota de corte.",
   "sources": [
@@ -15,6 +15,10 @@
     {
       "name": "CGU — página oficial",
       "url": "https://www.gov.br/cgu/pt-br/acesso-a-informacao/concursos"
+    },
+    {
+      "name": "Dataprev 2026 — gabarito preliminar oficial FGV 13/10",
+      "url": "https://conhecimento.fgv.br/sites/default/files/concursos/dataprev2026-gabaritos-para-publicacao.pdf"
     }
   ],
   "exams": [
@@ -44,19 +48,19 @@
     }
   ],
   "diagnostic": {
-    "exam": "Dataprev 2026 · Tipo 1 · extraoficial",
+    "exam": "Dataprev 2026 · Tipo 1 · chave oficial preliminar FGV 13/10",
     "date": "2026-10-11",
     "totalQuestions": 70,
-    "correct": 39,
-    "incorrect": 31,
-    "score": 63,
+    "correct": 37,
+    "incorrect": 33,
+    "score": 59.5,
     "maxScore": 115,
     "official": false,
-    "notes": "Não é gabarito oficial. Q37 precisa reavaliação após divulgação; Q65 foi B no cartão apesar de E reconhecida depois; Q69 foi C no cartão, correção extraoficial B.",
+    "notes": "Nota calculada com gabarito OFICIAL PRELIMINAR (não definitivo), respostas registradas na conversa e questão 27 inferida da foto. Diferença para nossa chave inicial: Q5 e Q64 passaram de acerto a erro; Q4/Q11/Q35 divergiam, já erros. Q37 E e Q69 B confirmadas. Mínimo 57,5 sem zerar disciplina, margem +2 pontos.",
     "breakdown": [
       {
         "name": "Português",
-        "correct": 5,
+        "correct": 4,
         "total": 12
       },
       {
@@ -81,14 +85,14 @@
       },
       {
         "name": "TI específica",
-        "correct": 16,
+        "correct": 15,
         "total": 30
       }
     ],
     "weaknesses": [
       {
         "name": "Português",
-        "why": "5/12; interpretação, coesão, gramática e leitura precisa.",
+        "why": "4/12 segundo gabarito preliminar FGV; interpretação, coesão, gramática e leitura precisa.",
         "priority": 1
       },
       {
@@ -115,9 +119,16 @@
         "name": "Gestão do tempo",
         "why": "Dificuldade relatada durante a prova; medir duração por questão e treinar 3 passagens.",
         "priority": 1
+      },
+      {
+        "name": "Métricas de associação",
+        "why": "Q64: suporte e confiança usam denominadores distintos; chave inicial do assistente estava errada.",
+        "priority": 2
       }
     ],
-    "strength": "SQL operacional, normalização, POO, arquiteturas, testes e inglês tiveram evidências favoráveis; manter revisões sem reiniciar do zero."
+    "strength": "SQL operacional, normalização, POO, arquiteturas, testes e inglês tiveram evidências favoráveis; manter revisões sem reiniciar do zero.",
+    "officialPreliminary": true,
+    "officialReference": "https://conhecimento.fgv.br/sites/default/files/concursos/dataprev2026-gabaritos-para-publicacao.pdf"
   },
   "methodology": {
     "name": "AMS para concurso",
