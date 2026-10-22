@@ -25,7 +25,7 @@ Este repositório é a fonte da verdade para quatro coisas diferentes:
 
 - **CASAN — Analista de Sistemas / Desenvolvimento**: prova prevista para 22/11/2026; prioridade até essa data.
 - **CGU — AFFC / TI / Desenvolvimento**: prova prevista para 13/12/2026; parte comum estudada antes e imersão após 22/11.
-- **Diagnóstico-base Dataprev 2026 (extraoficial)**: 39 acertos em 70; 63/115 pontos. Principais intervenções: Português, governança, segurança, gestão do tempo; BI/ETL priorizado na janela CGU.
+- **Diagnóstico-base Dataprev 2026 (extraoficial)**: 37 acertos em 70; 59,5/115 pontos (FGV preliminar de 13/10; sujeito a recursos). Principais intervenções: Português, governança, segurança, gestão do tempo; BI/ETL priorizado na janela CGU.
 - **AMS concurso**: Workshop com 10 questões comentadas + Lab com 10 questões respondidas antes da correção; sem bloqueio de tópicos.
 - **[Abrir painel de estudos CASAN → CGU](https://lucastrevvos.github.io/software-mastery-roadmap/concursos/estudos/)** · [Arquivo diagnóstico](docs/concursos/estudos/dataprev-2026-extraoficial.md) · [Plano estruturado](docs/concursos/estudos/plano-2026.json).
 
