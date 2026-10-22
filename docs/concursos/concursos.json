@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "lastVerified": "2026-10-11",
-  "lastVerifiedLabel": "11 de outubro de 2026",
+  "lastVerified": "2026-10-22",
+  "lastVerifiedLabel": "22 de outubro de 2026",
   "sourcesNote": "O radar é atualizado por verificações periódicas; não consulta bancas em tempo real ao abrir a página. Sempre confirme condições e prazos no edital.",
   "contests": [
     {
@@ -18,9 +18,9 @@
       "salary": 10685.44,
       "vacancies": "20 vagas + 80 CR em Florianópolis (referência de planejamento)",
       "source": "https://conhecimento.fgv.br/concursos/dataprev26",
-      "priority": "Acompanhamento",
-      "notes": "Prova em 11/10/2026. Gabarito ainda não disponível na página oficial na consulta de 11/10. Conferir tipo do caderno, recursos e publicação de resultados.",
-      "userStage": "prova realizada",
+      "priority": "Acompanhar resultado",
+      "notes": "Gabarito oficial PRELIMINAR publicado em 13/10/2026. Recursos de 14 a 15/10, prazo encerrado. Ainda sem gabarito definitivo/resultado de classificação na consulta de 22/10. Estimativa pessoal Tipo 1: 37/70 e 59,5/115 (cartão a conferir). Resultado previsto para 14/01/2027.",
+      "userStage": "prova realizada; gabarito preliminar corrigido",
       "verified": true
     },
     {
