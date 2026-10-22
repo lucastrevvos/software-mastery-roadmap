@@ -1,6 +1,9 @@
 # CME — Concurso Mastery Engine (v1)
 **Status:** programa de estudo adaptativo experimental, integrado à trilha CASAN → CGU 2026. **Não promete aprovação**, não é uma IA treinada com dados de classificação e não prevê nota de corte.
 
+## Status de fonte — 22/10/2026
+A base Dataprev foi atualizada pelo **gabarito oficial preliminar** da FGV, não definitivo. Resultado recalculado: **37/70, 59,5/115**, margem de 2 pontos sobre o mínimo de 57,5 (sem zerar disciplinas). Fonte: https://conhecimento.fgv.br/sites/default/files/concursos/dataprev2026-gabaritos-para-publicacao.pdf
+
 ## Propósito
 Maximizar pontos esperados por hora de estudo a partir de:
 - conteúdo **presente nos editais**;
@@ -18,7 +21,7 @@ Maximizar pontos esperados por hora de estudo a partir de:
 - Nunca bloquear acesso a um módulo porque outro está incompleto.
 
 ## Base pessoal (hipóteses iniciais até coleta)
-Na Dataprev Tipo 1, a correção **extraoficial** registrou **39 acertos/70; 63/115**. Português **5/12**; inglês **9/12**; lógica **3/5**; atualidades **4/6**; legislação **2/5**; TI específica **16/30**. A questão 65 foi marcada B, embora o usuário tenha identificado E depois. A questão 69 foi marcada C; correção extraoficial sugeriu B. Questão 37 exige conferência após gabarito FGV.
+Na Dataprev Tipo 1, a correção **extraoficial** registrou **37 acertos/70; 59,5/115**. Português **4/12**; inglês **9/12**; lógica **3/5**; atualidades **4/6**; legislação **2/5**; TI específica **15/30**. A questão 65 foi marcada B, embora o usuário tenha identificado E depois. A questão 69 foi marcada C; correção extraoficial sugeriu B. A FGV divulgou o gabarito preliminar em 13/10/2026: Q37 E, Q69 B. Q5 e Q64, antes tratadas como acertos na nossa correção, são erros conforme a FGV.
 Hipóteses diagnósticas: baixa cobertura de governança, segurança, alguns tópicos de BI/ETL, lacunas de Português e dificuldade declarada de tempo. Não considerar essas hipóteses domínio medido na CASAN.
 
 ## Fundamento e limites da evidência
