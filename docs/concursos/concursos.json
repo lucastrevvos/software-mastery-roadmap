@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "lastVerified": "2026-10-23",
-  "lastVerifiedLabel": "23 de outubro de 2026",
+  "lastVerified": "2026-10-24",
+  "lastVerifiedLabel": "24 de outubro de 2026",
   "sourcesNote": "O radar é atualizado por verificações periódicas; não consulta bancas em tempo real ao abrir a página. Sempre confirme condições e prazos no edital.",
   "contests": [
     {
@@ -236,6 +236,66 @@
       "notes": "Edital publicado em 20/10/2026. Inscrições até 18/11 às 16h. Exige curso superior ou pós-graduação em TI reconhecido pelo MEC; ADS é superior na área, mas não é citado nominalmente e sua aceitação específica não foi confirmada. Auxílios divulgados: alimentação R$ 2.200 e saúde R$ 1.800, conforme condições do edital. Provas em João Pessoa.",
       "userStage": "não informado",
       "verified": true
+    },
+    {
+      "id": "udesc-ps07-26",
+      "agency": "UDESC",
+      "role": "Professor Substituto — TI (Algoritmos, Banco de Dados, Engenharia de Software e Ciência da Computação)",
+      "place": "Joinville, Caçador e Lages/SC",
+      "scope": "SC",
+      "board": "UDESC (bancas dos centros)",
+      "kind": "Processo seletivo temporário",
+      "status": "inscricoes",
+      "applicationStart": "2026-10-09",
+      "applicationEnd": "2026-10-26",
+      "examDate": "2026-11-09",
+      "salary": null,
+      "vacancies": "Joinville: Algoritmos (2), Banco de Dados (1), Engenharia de Software (2); Caçador: Ciência da Computação (6); Lages: Programação de Computadores (1).",
+      "source": "https://www.udesc.br/processoseletivo/072026",
+      "priority": "SC — prazo 26/10",
+      "notes": "Edital PS 07/2026; inscrições pagantes até 26/10. Para Engenharia de Software (Joinville), o edital aceita expressamente graduação em Tecnologia em Análise e Desenvolvimento de Sistemas, mas também exige especialização, mestrado ou doutorado nas áreas específicas do item 7.2.8; enquadramento de pós-graduação em Engenharia de Software na categoria 'Engenharias' não foi confirmado. Para Algoritmos e Banco de Dados, também aceita ADS, mas exige mestrado/doutorado nas áreas descritas (itens 7.2.1-7.2.2). Caçador tem requisitos próprios (itens 7.11.4-7.11.9). Prova escrita prevista 09/11. Retificação nº 1 de 16/10 mudou apenas prazo de isenção de 16 para 19/10.",
+      "userStage": "não informado",
+      "verified": true
+    },
+    {
+      "id": "creci-es-26",
+      "agency": "CRECI-ES",
+      "role": "Analista de TI (407) e Assistente de TI (208)",
+      "place": "Vitória/ES",
+      "scope": "BR",
+      "board": "Instituto Quadrix",
+      "kind": "Concurso público (CLT)",
+      "status": "inscricoes",
+      "applicationStart": "2026-10-05",
+      "applicationEnd": "2026-11-10",
+      "examDate": "2027-01-17",
+      "salary": 7792.5,
+      "vacancies": "Analista TI: 2 vagas imediatas (1 AC + 1 PN) + 48 CR; Assistente TI: 1 vaga imediata + 39 CR.",
+      "source": "https://quadrix.org.br/informacoes/3049",
+      "priority": "TI — tecnólogo aceito",
+      "notes": "Edital 01/2026 de 02/10, retificação 02 de 21/10 não altera cargos de TI. Analista (407): salário-base R$ 7.792,50, 40h, aceita expressamente graduação em TI ou Ciências da Computação ou equivalentes em grau de bacharel OU TECNÓLOGO; ADS não é citado pelo nome, mas é graduação na área de TI. Assistente (208): R$ 7.012,50, 40h, exige ensino médio e curso técnico nas áreas indicadas OU experiência comprovada de no mínimo 6 meses em TI; tecnólogo isolado não é substituição expressa para o curso técnico. Inscrições até 10/11 às 23h, conforme Quadrix. Benefícios conforme edital.",
+      "userStage": "não informado",
+      "verified": true
+    },
+    {
+      "id": "uerj-ps01-26",
+      "agency": "UERJ",
+      "role": "Desenvolvedor Front-end Sênior, Tele Desenvolvedor Back-end Sênior, Analistas de TI",
+      "place": "Rio de Janeiro/RJ",
+      "scope": "BR",
+      "board": "Instituto Avalia",
+      "kind": "Processo seletivo simplificado temporário",
+      "status": "inscricoes",
+      "applicationStart": "2026-10-19",
+      "applicationEnd": "2026-11-03",
+      "examDate": null,
+      "salary": 7350,
+      "vacancies": "Cadastro de reserva (sem vagas imediatas quantificadas) para funções de TI.",
+      "source": "https://www.avalia.org.br/concursos/629",
+      "priority": "Desenvolvimento de Software — CR",
+      "notes": "PSS 01/2026, inscrições de 19/10 a 03/11 às 19h, conforme página da banca. Funções de TI divulgadas: Desenvolvedor Front-end (Sênior), Tele Desenvolvedor Back-end (Sênior), Analista de TI Segurança/Infraestrutura (R$ 7.350) e Analista em TI (R$ 3.400), entre outras; valores específicos devem ser conferidos na documentação da banca. Seleção por títulos/experiência, sem prova objetiva. Requisitos exatos e aceitação de ADS por função ainda não confirmados; não presumir elegibilidade.",
+      "userStage": "não informado",
+      "verified": true
     }
   ],
   "watchlist": [
@@ -258,6 +318,11 @@
       "name": "UFBA e UFRRJ — Técnico de TI",
       "note": "Necessário verificar publicação oficial, requisitos e período de inscrição.",
       "url": null
+    },
+    {
+      "name": "UERJ PSS 01/2026 — confirmação dos requisitos por função",
+      "note": "Confirmar no edital oficial do Instituto Avalia os requisitos de escolaridade/experiência de cada perfil de TI e se ADS é aceito; cadastro reserva, inscrições até 03/11.",
+      "url": "https://www.avalia.org.br/concursos/629"
     }
   ]
 }
