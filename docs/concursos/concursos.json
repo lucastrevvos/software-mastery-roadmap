@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "lastVerified": "2026-10-24",
-  "lastVerifiedLabel": "24 de outubro de 2026",
+  "lastVerified": "2026-10-25",
+  "lastVerifiedLabel": "25 de outubro de 2026",
   "sourcesNote": "O radar é atualizado por verificações periódicas; não consulta bancas em tempo real ao abrir a página. Sempre confirme condições e prazos no edital.",
   "contests": [
     {
@@ -296,6 +296,86 @@
       "notes": "PSS 01/2026, inscrições de 19/10 a 03/11 às 19h, conforme página da banca. Funções de TI divulgadas: Desenvolvedor Front-end (Sênior), Tele Desenvolvedor Back-end (Sênior), Analista de TI Segurança/Infraestrutura (R$ 7.350) e Analista em TI (R$ 3.400), entre outras; valores específicos devem ser conferidos na documentação da banca. Seleção por títulos/experiência, sem prova objetiva. Requisitos exatos e aceitação de ADS por função ainda não confirmados; não presumir elegibilidade.",
       "userStage": "não informado",
       "verified": true
+    },
+    {
+      "id": "sao-domingos-sc-26",
+      "agency": "Prefeitura de São Domingos/SC",
+      "role": "Monitor de Programas Sociais (Informática)",
+      "place": "São Domingos/SC",
+      "scope": "SC",
+      "board": "Instituto Fênix",
+      "kind": "Concurso público efetivo",
+      "status": "inscricoes",
+      "applicationStart": "2026-09-28",
+      "applicationEnd": "2026-10-28",
+      "examDate": "2026-11-15",
+      "salary": 1992.68,
+      "vacancies": "Cadastro de reserva para Monitor de Programas Sociais (Informática).",
+      "source": "https://institutofenix.selecao.net.br/informacoes/99/",
+      "priority": "SC — prazo 28/10 às 18h",
+      "notes": "Edital 001/2026 de 23/09; inscrição e pagamento até 28/10 às 18h. Monitor Informática: 40h, R$ 1.992,68, CR, provas objetiva e prática em 15/11. Item 2.1: possuir/estar cursando ensino médio, com experiência na área de atuação e/ou treinamento específico; se cursando ensino médio, apresentar atestado bimestral de frequência mínima de 75%. Não exige expressamente diploma técnico nem ADS; tecnólogo ADS não dispensa comprovar experiência/treinamento caso exigido. Conferir retificação 01/2026 e condições no portal da banca.",
+      "userStage": "não informado",
+      "verified": true
+    },
+    {
+      "id": "uem-tecnico-ti-390-26",
+      "agency": "Universidade Estadual de Maringá (UEM)",
+      "role": "Técnico em Informática — Goioerê, Maringá e Umuarama",
+      "place": "Goioerê, Maringá e Umuarama/PR",
+      "scope": "BR",
+      "board": "UEM/PRH",
+      "kind": "Teste seletivo temporário",
+      "status": "inscricoes",
+      "applicationStart": "2026-10-06",
+      "applicationEnd": "2026-10-27",
+      "examDate": "2026-11-29",
+      "salary": 4443.18,
+      "vacancies": "4 vagas imediatas: Goioerê (1), Maringá (2, uma reservada a candidatos negros conforme sorteio), Umuarama (1).",
+      "source": "https://bce.uem.br/res/em-andamento-tecnicos/edital-390-2026-prh",
+      "priority": "TI — prazo 27/10; graduação na área substitui técnico",
+      "notes": "Edital 390/2026-PRH, consolidado em 05/10; retificação 404/2026-PRH incluiu item 2.1: falta de ensino médio profissionalizante/pós-médio em Informática pode ser suprida por conclusão de graduação na área de Informática, sem aumento salarial. Tecnólogo ADS é graduação na área, mas não é mencionado nominalmente; confirmar enquadramento com UEM. Salário R$ 4.443,18, 40h, taxa R$ 88,86; pagamento até 28/10. Prova objetiva 29/11 às 14h (horário de Brasília), na cidade da vaga. Fonte: edital consolidado no site oficial.",
+      "userStage": "não informado",
+      "verified": true
+    },
+    {
+      "id": "ifsertaope-mediador-ads-26",
+      "agency": "IFSertãoPE",
+      "role": "Mediador Pedagógico UAB — Tecnologia em Análise e Desenvolvimento de Sistemas",
+      "place": "Afrânio, Floresta, Garanhuns, Cedro e São José do Egito/PE",
+      "scope": "BR",
+      "board": "IFSertãoPE/UAB",
+      "kind": "Processo seletivo para bolsista (cadastro de reserva)",
+      "status": "inscricoes",
+      "applicationStart": "2026-10-26",
+      "applicationEnd": "2026-11-09",
+      "examDate": null,
+      "salary": 1100,
+      "vacancies": "Cadastro de reserva em 5 polos de Pernambuco.",
+      "source": "https://ifsertaope.edu.br/ead/edital-complementar-decorrente-do-edital-no-54-2026-processo-seletivo-simplificado-para-mediador-pedagogico-uab-2026/",
+      "priority": "TI/educação — inscrições abrem 26/10; retificação 22/10",
+      "notes": "Edital complementar do 54/2026, retificação nº 2 de 22/10 por problema técnico no sistema alterou inscrição de 10–25/10 para 26/10–09/11; resultados preliminares a partir de 20/11, final 27/11. Graduação na área de TI + pós-graduação lato ou stricto sensu; ADS é área de TI, mas aceitação individual não foi confirmada. Requer 20h/semana e disponibilidade para atuação presencial semanal no polo/campus/reitoria; não é trabalho 100% remoto. Bolsa CAPES de R$ 1.100 mensais durante atuação, sem vínculo empregatício; análise curricular. O edital não restringe candidatos a servidores da instituição, mas há regras para os servidores. Cadastro reserva.",
+      "userStage": "não informado",
+      "verified": true
+    },
+    {
+      "id": "camara-sao-joao-sabugi-26",
+      "agency": "Câmara Municipal de São João do Sabugi/RN",
+      "role": "Técnico em Informática",
+      "place": "São João do Sabugi/RN",
+      "scope": "BR",
+      "board": "Instituto IGEDUC",
+      "kind": "Concurso público efetivo",
+      "status": "inscricoes",
+      "applicationStart": "2026-09-25",
+      "applicationEnd": "2026-10-27",
+      "examDate": "2026-12-06",
+      "salary": 1621,
+      "vacancies": "1 vaga imediata para Técnico em Informática.",
+      "source": "https://igeduc.selecao.net.br/informacoes/174/",
+      "priority": "TI municipal — prazo 27/10",
+      "notes": "Edital 004/2026 de 24/09. Inscrições até 27/10 às 23h59, taxa R$ 125; 40h semanais, salário-base R$ 1.621 e auxílio-alimentação de R$ 800 conforme lei municipal e condições. Anexo I exige ensino médio completo E curso técnico em Informática, com certificado reconhecido pelo MEC, na posse. Tecnólogo ADS isolado NÃO está expressamente previsto como substituto do curso técnico. Prova objetiva 06/12.",
+      "userStage": "não informado",
+      "verified": true
     }
   ],
   "watchlist": [
@@ -323,6 +403,16 @@
       "name": "UERJ PSS 01/2026 — confirmação dos requisitos por função",
       "note": "Confirmar no edital oficial do Instituto Avalia os requisitos de escolaridade/experiência de cada perfil de TI e se ADS é aceito; cadastro reserva, inscrições até 03/11.",
       "url": "https://www.avalia.org.br/concursos/629"
+    },
+    {
+      "name": "UEM 390/2026 — enquadramento de Tecnólogo ADS",
+      "note": "Item 2.1 do edital retificado admite graduação na área de Informática em substituição ao técnico, mas não menciona ADS nominalmente; prazo de inscrição 27/10.",
+      "url": "https://bce.uem.br/res/em-andamento-tecnicos/edital-390-2026-prh"
+    },
+    {
+      "name": "IFSertãoPE UAB — mediação ADS",
+      "note": "Retificação nº 2 de 22/10 deslocou inscrições para 26/10–09/11; confirmar aceite do tecnólogo ADS e disponibilidade presencial semanal nos polos.",
+      "url": "https://ifsertaope.edu.br/ead/edital-complementar-decorrente-do-edital-no-54-2026-processo-seletivo-simplificado-para-mediador-pedagogico-uab-2026/"
     }
   ]
 }
