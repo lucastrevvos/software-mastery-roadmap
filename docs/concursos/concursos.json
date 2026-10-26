@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "lastVerified": "2026-10-25",
-  "lastVerifiedLabel": "25 de outubro de 2026",
+  "lastVerified": "2026-10-26",
+  "lastVerifiedLabel": "26 de outubro de 2026",
   "sourcesNote": "O radar é atualizado por verificações periódicas; não consulta bancas em tempo real ao abrir a página. Sempre confirme condições e prazos no edital.",
   "contests": [
     {
@@ -19,7 +19,7 @@
       "vacancies": "20 vagas + 80 CR em Florianópolis (referência de planejamento)",
       "source": "https://conhecimento.fgv.br/concursos/dataprev26",
       "priority": "Acompanhar resultado",
-      "notes": "Gabarito oficial PRELIMINAR publicado em 13/10/2026. Recursos de 14 a 15/10, prazo encerrado. Ainda sem gabarito definitivo/resultado de classificação na consulta de 23/10. Estimativa pessoal Tipo 1: 37/70 e 59,5/115 (cartão a conferir). Resultado previsto para 14/01/2027.",
+      "notes": "Gabarito oficial PRELIMINAR publicado em 13/10/2026. Recursos de 14 a 15/10, prazo encerrado. Ainda sem gabarito definitivo/resultado de classificação na consulta oficial de 26/10. Estimativa pessoal Tipo 1: 37/70 e 59,5/115 (cartão a conferir). Resultado previsto para 14/01/2027.",
       "userStage": "prova realizada; gabarito preliminar corrigido",
       "verified": true
     },
@@ -133,7 +133,7 @@
       "vacancies": "10 vagas em TI",
       "source": "https://portal.tce.go.gov.br/-/tce-go-abre-concurso-publico-para-tecnico-de-controle-externo",
       "priority": "Alta remuneração",
-      "notes": "Requisito escolar: ensino médio completo. Estudo de caso na discursiva. Inscrições até 06/11; taxa R$ 100.",
+      "notes": "Requisito escolar: ensino médio completo. Estudo de caso na discursiva. Inscrições até 06/11; taxa R$ 100. Conferido no comunicado oficial do TCE-GO de 07/10/2026: 10 vagas de TI, 06/11 último dia de inscrições, provas objetiva e discursiva em 17/01/2027.",
       "userStage": "não informado",
       "verified": true
     },
@@ -252,8 +252,8 @@
       "salary": null,
       "vacancies": "Joinville: Algoritmos (2), Banco de Dados (1), Engenharia de Software (2); Caçador: Ciência da Computação (6); Lages: Programação de Computadores (1).",
       "source": "https://www.udesc.br/processoseletivo/072026",
-      "priority": "SC — prazo 26/10",
-      "notes": "Edital PS 07/2026; inscrições pagantes até 26/10. Para Engenharia de Software (Joinville), o edital aceita expressamente graduação em Tecnologia em Análise e Desenvolvimento de Sistemas, mas também exige especialização, mestrado ou doutorado nas áreas específicas do item 7.2.8; enquadramento de pós-graduação em Engenharia de Software na categoria 'Engenharias' não foi confirmado. Para Algoritmos e Banco de Dados, também aceita ADS, mas exige mestrado/doutorado nas áreas descritas (itens 7.2.1-7.2.2). Caçador tem requisitos próprios (itens 7.11.4-7.11.9). Prova escrita prevista 09/11. Retificação nº 1 de 16/10 mudou apenas prazo de isenção de 16 para 19/10.",
+      "priority": "URGENTE SC — último dia de inscrição 26/10",
+      "notes": "Edital PS 07/2026; inscrições pagantes até 26/10. Para Engenharia de Software (Joinville), o edital aceita expressamente graduação em Tecnologia em Análise e Desenvolvimento de Sistemas, mas também exige especialização, mestrado ou doutorado nas áreas específicas do item 7.2.8; enquadramento de pós-graduação em Engenharia de Software na categoria 'Engenharias' não foi confirmado. Para Algoritmos e Banco de Dados, também aceita ADS, mas exige mestrado/doutorado nas áreas descritas (itens 7.2.1-7.2.2). Caçador tem requisitos próprios (itens 7.11.4-7.11.9). Prova escrita prevista 09/11. Retificação nº 1 de 16/10 mudou apenas prazo de isenção de 16 para 19/10. Conferência de 26/10: notícia oficial da UDESC de 15/10 reafirma que 26/10 é o último dia de inscrição pagante; taxa R$ 100. Não presumir horário de encerramento.",
       "userStage": "não informado",
       "verified": true
     },
@@ -332,7 +332,7 @@
       "salary": 4443.18,
       "vacancies": "4 vagas imediatas: Goioerê (1), Maringá (2, uma reservada a candidatos negros conforme sorteio), Umuarama (1).",
       "source": "https://bce.uem.br/res/em-andamento-tecnicos/edital-390-2026-prh",
-      "priority": "TI — prazo 27/10; graduação na área substitui técnico",
+      "priority": "URGENTE — inscrições encerram amanhã, 27/10",
       "notes": "Edital 390/2026-PRH, consolidado em 05/10; retificação 404/2026-PRH incluiu item 2.1: falta de ensino médio profissionalizante/pós-médio em Informática pode ser suprida por conclusão de graduação na área de Informática, sem aumento salarial. Tecnólogo ADS é graduação na área, mas não é mencionado nominalmente; confirmar enquadramento com UEM. Salário R$ 4.443,18, 40h, taxa R$ 88,86; pagamento até 28/10. Prova objetiva 29/11 às 14h (horário de Brasília), na cidade da vaga. Fonte: edital consolidado no site oficial.",
       "userStage": "não informado",
       "verified": true
@@ -352,7 +352,7 @@
       "salary": 1100,
       "vacancies": "Cadastro de reserva em 5 polos de Pernambuco.",
       "source": "https://ifsertaope.edu.br/ead/edital-complementar-decorrente-do-edital-no-54-2026-processo-seletivo-simplificado-para-mediador-pedagogico-uab-2026/",
-      "priority": "TI/educação — inscrições abrem 26/10; retificação 22/10",
+      "priority": "Inscrições iniciadas em 26/10; até 09/11",
       "notes": "Edital complementar do 54/2026, retificação nº 2 de 22/10 por problema técnico no sistema alterou inscrição de 10–25/10 para 26/10–09/11; resultados preliminares a partir de 20/11, final 27/11. Graduação na área de TI + pós-graduação lato ou stricto sensu; ADS é área de TI, mas aceitação individual não foi confirmada. Requer 20h/semana e disponibilidade para atuação presencial semanal no polo/campus/reitoria; não é trabalho 100% remoto. Bolsa CAPES de R$ 1.100 mensais durante atuação, sem vínculo empregatício; análise curricular. O edital não restringe candidatos a servidores da instituição, mas há regras para os servidores. Cadastro reserva.",
       "userStage": "não informado",
       "verified": true
@@ -374,6 +374,46 @@
       "source": "https://igeduc.selecao.net.br/informacoes/174/",
       "priority": "TI municipal — prazo 27/10",
       "notes": "Edital 004/2026 de 24/09. Inscrições até 27/10 às 23h59, taxa R$ 125; 40h semanais, salário-base R$ 1.621 e auxílio-alimentação de R$ 800 conforme lei municipal e condições. Anexo I exige ensino médio completo E curso técnico em Informática, com certificado reconhecido pelo MEC, na posse. Tecnólogo ADS isolado NÃO está expressamente previsto como substituto do curso técnico. Prova objetiva 06/12.",
+      "userStage": "não informado",
+      "verified": true
+    },
+    {
+      "id": "novo-cabrais-tecnico-ti-26",
+      "agency": "Prefeitura de Novo Cabrais/RS",
+      "role": "Técnico em Informática",
+      "place": "Novo Cabrais/RS",
+      "scope": "BR",
+      "board": "Instituto Objetiva",
+      "kind": "Concurso público efetivo (estatutário)",
+      "status": "inscricoes",
+      "applicationStart": "2026-10-23",
+      "applicationEnd": "2026-11-23",
+      "examDate": "2027-01-10",
+      "salary": 3636.18,
+      "vacancies": "1 vaga imediata + cadastro reserva",
+      "source": "https://novocabrais.rs.gov.br/concurso/detalhe/146/pconcurso-publico-n-01-2026p/",
+      "priority": "Novo — TI municipal; formação técnica obrigatória",
+      "notes": "Edital 01/2026 publicado pela prefeitura em 16/10; inscrições 23/10 a 23/11, taxa R$ 163,60. Exige ensino médio completo COM formação técnica específica em Informática, concomitante ou posteriormente concluída. Diploma de Tecnólogo ADS isoladamente NÃO está previsto como substituto. 40h/semana. Prova objetiva prevista 10/01/2027. Fonte primária: edital oficial PDF https://novocabrais.rs.gov.br/concurso/download/642/ (tabela de cargos, página 3).",
+      "userStage": "não informado",
+      "verified": true
+    },
+    {
+      "id": "novo-cabrais-prof-informatica-26",
+      "agency": "Prefeitura de Novo Cabrais/RS",
+      "role": "Professor de Informática",
+      "place": "Novo Cabrais/RS",
+      "scope": "BR",
+      "board": "Instituto Objetiva",
+      "kind": "Concurso público efetivo (estatutário)",
+      "status": "inscricoes",
+      "applicationStart": "2026-10-23",
+      "applicationEnd": "2026-11-23",
+      "examDate": "2027-01-10",
+      "salary": 2664.58,
+      "vacancies": "1 vaga imediata + cadastro reserva",
+      "source": "https://novocabrais.rs.gov.br/concurso/detalhe/146/pconcurso-publico-n-01-2026p/",
+      "priority": "Novo — docência em TI; exige formação pedagógica",
+      "notes": "Edital 01/2026, tabela oficial de cargos (página 2). 20h/semana; salário inicial R$ 2.664,58; taxa R$ 245,40. Requisito: licenciatura plena na disciplina OU formação superior completa em área correspondente COM formação pedagógica completa conforme art. 63 da LDB. Tecnólogo ADS isolado não atende à exigência adicional pedagógica; aceitação do ADS com formação pedagógica requer validação. Prova objetiva e títulos (professores), prova objetiva prevista 10/01/2027. Edital https://novocabrais.rs.gov.br/concurso/download/642/.",
       "userStage": "não informado",
       "verified": true
     }
@@ -413,6 +453,11 @@
       "name": "IFSertãoPE UAB — mediação ADS",
       "note": "Retificação nº 2 de 22/10 deslocou inscrições para 26/10–09/11; confirmar aceite do tecnólogo ADS e disponibilidade presencial semanal nos polos.",
       "url": "https://ifsertaope.edu.br/ead/edital-complementar-decorrente-do-edital-no-54-2026-processo-seletivo-simplificado-para-mediador-pedagogico-uab-2026/"
+    },
+    {
+      "name": "Novo Cabrais/RS — Técnico e Professor de Informática",
+      "note": "Edital 01/2026, inscrições até 23/11. Técnico exige ensino médio + curso técnico em Informática; tecnólogo ADS isolado não está previsto. Professor exige licenciatura ou graduação correspondente + formação pedagógica; confirmar enquadramento de ADS com formação pedagógica. Edital oficial disponível na prefeitura.",
+      "url": "https://novocabrais.rs.gov.br/concurso/detalhe/146/pconcurso-publico-n-01-2026p/"
     }
   ]
 }
