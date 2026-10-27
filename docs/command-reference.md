@@ -531,8 +531,8 @@ Cruze o histórico com o profiler.
 |---|---|
 | Validar arquivos sobrepostos | `docker compose -f docker-compose.yml -f compose.local.yml config --quiet` |
 | Iniciar somente Insights (exemplo) | `docker compose -f docker-compose.yml -f compose.local.yml up --build -d --no-deps insights` |
-| Ver serviços | `docker compose ps` |
-| Ver logs | `docker compose logs -f insights` |
+| Ver serviços | `docker compose -f docker-compose.yml -f compose.local.yml ps` |
+| Ver logs | `docker compose -f docker-compose.yml -f compose.local.yml logs -f insights` |
 
 Evite `docker compose down -v` sem entender o impacto sobre volumes e dados.
 
