@@ -105,8 +105,8 @@ git diff &lt;HASH&gt;^ &lt;HASH&gt; -- app.py</code></pre><p><strong>Modelo:</st
       <table><thead><tr><th>Pergunta</th><th>Comando</th></tr></thead><tbody>
       <tr><td>A configuração está válida?</td><td><code>docker compose -f docker-compose.yml -f compose.local.yml config --quiet</code></td></tr>
       <tr><td>Quero iniciar somente um serviço</td><td><code>docker compose -f docker-compose.yml -f compose.local.yml up --build -d --no-deps insights</code></td></tr>
-      <tr><td>Quais serviços estão ativos?</td><td><code>docker compose ps</code></td></tr>
-      <tr><td>Quero ver logs de um serviço</td><td><code>docker compose logs -f insights</code></td></tr>
+      <tr><td>Quais serviços estão ativos?</td><td><code>docker compose -f docker-compose.yml -f compose.local.yml ps</code></td></tr>
+      <tr><td>Quero ver logs de um serviço</td><td><code>docker compose -f docker-compose.yml -f compose.local.yml logs -f insights</code></td></tr>
       </tbody></table><p><strong>Atenção:</strong> os exemplos de Compose dependem do nome dos arquivos e serviços do repositório; <code>--no-deps</code> evita iniciar dependências nesse comando. Evite <code>down -v</code> sem compreender: pode remover volumes e dados locais.</p></article>
       <article class="ref-card searchable"><h3>Quando investigo DNS, porta e PostgreSQL</h3>
       <table><thead><tr><th>Pergunta</th><th>Comando</th></tr></thead><tbody>
