@@ -489,6 +489,70 @@ Cruze o histórico com o profiler.
 
 ---
 
+# 00.9 — Docker, Compose e redes (2026-10-27)
+
+> Consultar por pergunta, não decorar. Exemplos independentes de projetos, com nomes substituíveis.
+
+## Qual terminal?
+
+- **Git Bash (VS Code / NestJS):** prefira comandos em uma linha; continuação de linha com barra invertida `\`.
+- **PowerShell (Visual Studio / .NET):** prefira IDE para pesquisar arquivos (`Ctrl+Shift+F`); continuação de linha com crase (`\``).
+- **Docker CLI:** os comandos de uma linha abaixo funcionam nos dois terminais.
+
+## Imagem e container
+
+| Preciso... | Comando | O que comprova |
+|---|---|---|
+| Construir imagem | `docker build -t minha-api:dev ./pasta-da-api` | Dockerfile executado e imagem com tag |
+| Ver imagem local | `docker image ls minha-api` | Imagem/tag presente |
+| Executar e publicar porta só no host | `docker run --rm --name api-teste -p 127.0.0.1:13000:3000 minha-api:dev` | Container em primeiro plano |
+| Ver containers ativos | `docker ps` | Processos em execução |
+| Inspecionar mapeamento | `docker port api-teste` | Porta interna → porta publicada |
+| Encerrar | `docker stop api-teste` | Solicita parada; `--rm` remove o container após o término |
+
+**Modelo mental:** Dockerfile → build → imagem → run → container. Multi-stage ≠ múltiplos serviços. `:dev` é apenas uma tag de imagem, não configura automaticamente o ambiente.
+
+## Redes e service discovery
+
+| Preciso... | Comando |
+|---|---|
+| Listar redes | `docker network ls` |
+| Inspecionar membros | `docker network inspect minha-rede` |
+| Conectar container | `docker network connect minha-rede api-teste` |
+| Resolver DNS entre containers | `docker run --rm --network minha-rede busybox:1.37 nslookup postgres` |
+| Testar porta TCP | `docker run --rm --network minha-rede busybox:1.37 nc -z -w 3 postgres 5432` |
+| Testar prontidão PostgreSQL | `docker run --rm --network minha-rede postgres:17-alpine pg_isready -h postgres -p 5432` |
+
+**Modelo mental:** `localhost` é relativo ao ambiente que faz a conexão. IP de container pode mudar quando recriado. Na rede Compose, prefira o **nome do serviço**. DNS ≠ TCP ≠ autenticação ≠ SQL.
+
+## Compose
+
+| Preciso... | Comando |
+|---|---|
+| Validar arquivos sobrepostos | `docker compose -f docker-compose.yml -f compose.local.yml config --quiet` |
+| Iniciar somente Insights (exemplo) | `docker compose -f docker-compose.yml -f compose.local.yml up --build -d --no-deps insights` |
+| Ver serviços | `docker compose -f docker-compose.yml -f compose.local.yml ps` |
+| Ver logs | `docker compose -f docker-compose.yml -f compose.local.yml logs -f insights` |
+
+Evite `docker compose down -v` sem entender o impacto sobre volumes e dados.
+
+## .NET: como investigar uma conexão sem decorar PowerShell
+
+1. No Visual Studio, usar `Ctrl+Shift+F` por `UseNpgsql` ou `GetConnectionString`.
+2. Localizar o registro do `DbContext`, o ponto de chamada da injeção e o consumidor da interface.
+3. Conferir `appsettings.json`, `appsettings.Development.json` e variáveis de ambiente.
+4. Em configuração ASP.NET Core padrão, `ConnectionStrings__TrevvosDb` representa `ConnectionStrings:TrevvosDb` e costuma prevalecer sobre os JSON.
+
+**Atenção:** contêiner DI do .NET (objetos) não é container Docker (processo). Registrar dependências não executa uma consulta ao banco.
+
+## Erros que vale lembrar
+
+- `bash: --name: command not found` → conferir se copiou crases do PowerShell para Git Bash; tentar uma linha.
+- `Unable to find image ... locally` → conferir se o `docker build` ocorreu e se a tag coincide.
+- `localhost` funciona no Windows mas não no container → investigar namespace de rede e nome DNS do serviço.
+
+---
+
 # Regra final
 
 A caixa de ferramentas não existe para decorar comandos.
