@@ -19,6 +19,7 @@
     </nav>
     <p class="eyebrow">CAIXA DE FERRAMENTAS · REFERÊNCIA VIVA</p>
     <h1>Command Reference</h1>
+    <p class="section-note"><a href="engineering-notebook.html">← Caderno do Engenheiro</a> · Git Bash para NestJS; PowerShell para .NET. Primeiro tente uma ação simples na IDE.</p>
     <p class="lead">Não decore comandos pouco usados. Comece pela pergunta, encontre a ferramenta, colete evidência.</p>
     <input id="search" class="ref-search" type="search" placeholder="Buscar: git diff, profiler, encoding, processo, logs…" aria-label="Buscar comandos">
     <p class="section-note copy-note">A versão <a href="command-reference.md">Markdown</a> foi mantida propositalmente limpa para copiar ao Notion.</p>
@@ -82,6 +83,38 @@ python3 -m cProfile -s cumulative app.py
 git log --oneline -- app.py
 git show &lt;HASH&gt; -- app.py
 git diff &lt;HASH&gt;^ &lt;HASH&gt; -- app.py</code></pre><p><strong>Modelo:</strong> observação → evidência → hipótese → experimento → causa provada → correção → reteste → antes × depois.</p></article>
+    </div>
+  </section>
+  <section class="section" id="docker-compose">
+    <div class="section-head"><div><p class="eyebrow">ATUALIZAÇÃO · 27/10/2026</p><h2>Docker, Compose, redes e diagnóstico de banco</h2></div></div>
+    <p>Use comandos em <strong>uma linha</strong>, sobretudo ao alternar Git Bash e PowerShell. Para continuar linhas, Git Bash usa barra invertida (<code>\</code>) e PowerShell usa crase (<code>&#96;</code>).</p>
+    <div class="ref-grid">
+      <article class="ref-card searchable"><h3>Quando quero construir, executar ou encontrar algo</h3>
+      <table><thead><tr><th>Pergunta</th><th>Comando (Git Bash ou PowerShell)</th></tr></thead><tbody>
+      <tr><td>Como criar uma imagem?</td><td><code>docker build -t minha-api:dev ./pasta-da-api</code></td></tr>
+      <tr><td>A imagem existe?</td><td><code>docker image ls minha-api</code></td></tr>
+      <tr><td>Como rodar para testar?</td><td><code>docker run --rm --name api-teste -p 127.0.0.1:13000:3000 minha-api:dev</code></td></tr>
+      <tr><td>O que está rodando?</td><td><code>docker ps</code></td></tr>
+      <tr><td>Qual porta publiquei?</td><td><code>docker port api-teste</code></td></tr>
+      <tr><td>Como encerrar o teste?</td><td><code>docker stop api-teste</code></td></tr>
+      <tr><td>Quais redes existem?</td><td><code>docker network ls</code></td></tr>
+      <tr><td>Quem está na rede?</td><td><code>docker network inspect nome-da-rede</code></td></tr>
+      <tr><td>Como conectar um container a uma rede?</td><td><code>docker network connect nome-da-rede api-teste</code></td></tr>
+      </tbody></table><p><strong>Armadilhas:</strong> <code>--rm</code> remove o container encerrado, não a imagem. A tag <code>:dev</code> é um nome escolhido, não uma variável de ambiente.</p></article>
+      <article class="ref-card searchable"><h3>Quando gerencio vários serviços com Compose</h3>
+      <table><thead><tr><th>Pergunta</th><th>Comando</th></tr></thead><tbody>
+      <tr><td>A configuração está válida?</td><td><code>docker compose -f docker-compose.yml -f compose.local.yml config --quiet</code></td></tr>
+      <tr><td>Quero iniciar somente um serviço</td><td><code>docker compose -f docker-compose.yml -f compose.local.yml up --build -d --no-deps insights</code></td></tr>
+      <tr><td>Quais serviços estão ativos?</td><td><code>docker compose ps</code></td></tr>
+      <tr><td>Quero ver logs de um serviço</td><td><code>docker compose logs -f insights</code></td></tr>
+      </tbody></table><p><strong>Atenção:</strong> os exemplos de Compose dependem do nome dos arquivos e serviços do repositório; <code>--no-deps</code> evita iniciar dependências nesse comando. Evite <code>down -v</code> sem compreender: pode remover volumes e dados locais.</p></article>
+      <article class="ref-card searchable"><h3>Quando investigo DNS, porta e PostgreSQL</h3>
+      <table><thead><tr><th>Pergunta</th><th>Comando</th></tr></thead><tbody>
+      <tr><td>O nome resolve na rede?</td><td><code>docker run --rm --network MINHA_REDE busybox:1.37 nslookup postgres</code></td></tr>
+      <tr><td>Conecta na porta TCP?</td><td><code>docker run --rm --network MINHA_REDE busybox:1.37 nc -z -w 3 postgres 5432</code></td></tr>
+      <tr><td>PostgreSQL aceita conexões?</td><td><code>docker run --rm --network MINHA_REDE postgres:17-alpine pg_isready -h postgres -p 5432</code></td></tr>
+      <tr><td>Como investigar configuração .NET?</td><td>Visual Studio → <code>Ctrl+Shift+F</code> → procurar <code>UseNpgsql</code> ou <code>GetConnectionString</code></td></tr>
+      </tbody></table><p><strong>Diagnóstico por camadas:</strong> DNS informa IP → TCP indica conectividade → <code>pg_isready</code> indica disponibilidade → autenticação e SQL exigem um teste adicional. Nunca copie senhas reais para o caderno.</p></article>
     </div>
   </section>
 </main>
