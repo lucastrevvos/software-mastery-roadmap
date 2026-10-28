@@ -595,6 +595,20 @@ Sintoma praticado: EF Core referenciado diretamente em **10.0.13**; dependência
 
 ---
 
+## Ferramentas EF Core e projeto de inicialização (28/10/2026)
+
+**Problema observado:** o Console do Gerenciador de Pacotes reconheceu `Add-Migration` (Tools 10.0.14), mas `Get-DbContext -Project Trevvos.Infrastructure -StartupProject Trevvos.Api` compilou e falhou porque **`Trevvos.Api` não referenciava `Microsoft.EntityFrameworkCore.Design`**.
+
+| Pergunta | Comando / caminho | Interpretação |
+|---|---|---|
+| Os comandos do EF Core estão carregados? | `Get-Command Add-Migration` | Só verifica a ferramenta de console |
+| Quais contextos o EF descobre? | `Get-DbContext -Project Trevvos.Infrastructure -StartupProject Trevvos.Api` | Compila e executa descoberta em design time; não aplica migration |
+| Falta `Microsoft.EntityFrameworkCore.Design` no startup? | NuGet gráfico de **Trevvos.Api** → procurar `Microsoft.EntityFrameworkCore.Design` versão `10.0.14` | Correção proposta, ainda pendente de confirmação |
+
+**Diferença:** `Microsoft.EntityFrameworkCore.Tools` fornece comandos PMC; `Microsoft.EntityFrameworkCore.Design` habilita serviços de design time. O projeto das migrations (`-Project`) e o projeto usado para inicializar (`-StartupProject`) podem ser diferentes. Uma compilação bem-sucedida não garante descoberta do contexto.
+
+---
+
 # Regra final
 
 A caixa de ferramentas não existe para decorar comandos.
