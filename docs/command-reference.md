@@ -553,6 +553,48 @@ Evite `docker compose down -v` sem entender o impacto sobre volumes e dados.
 
 ---
 
+
+# 00.10 — .NET, Visual Studio, NuGet e identidade (2026-10-27)
+
+> Primeiro escolher a pergunta e a interface gráfica. Comandos abaixo são alternativas, não obrigação de decorar.
+
+## Como abrir e compilar
+
+| Preciso... | Caminho no Visual Studio | Alternativa no terminal |
+|---|---|---|
+| Gerenciar dependências NuGet | Abrir **solução/projeto** (`.sln`, `.slnx` ou `.csproj`) → botão direito no **projeto C#** → **Gerenciar Pacotes NuGet** | `dotnet add <caminho.csproj> package <pacote> --version <versão>` |
+| Compilar somente o projeto | Botão direito em `Trevvos.Infrastructure` → **Compilar** | `dotnet build <caminho.csproj>` |
+| Encontrar tipo/registro | `Ctrl+Shift+F` por `DependencyInjection`, `AddDbContext`, `GetConnectionString` | Não exige terminal |
+| Restaurar pacotes | NuGet / compilação da IDE | `dotnet restore <caminho.csproj>` |
+
+**Armadilha:** a pasta amarela no modo *Open Folder* não equivale necessariamente a um projeto C# carregado. O menu NuGet só aparece no contexto apropriado.
+
+## Resolver downgrade de pacote
+
+Sintoma praticado: EF Core referenciado diretamente em **10.0.13**; dependência do Npgsql exige EF Core **>= 10.0.14**. Solução verificada: atualizar a referência direta **Microsoft.EntityFrameworkCore para 10.0.14**, sem suprimir o alerta. A versão do pacote Identity deve ser escolhida de modo compatível.
+
+## DI, DbContext e Identity
+
+- `DependencyInjection.cs` **é arquivo que criamos**, não parte obrigatória do template.
+- O .NET oferece DI por `IServiceCollection`; `AddTrevvosInfrastructure(this IServiceCollection services, IConfiguration configuration)` é um **método de extensão** usado para organizar os registros.
+- `AddDbContext<T>()` registra construção do contexto na DI (padrão `scoped`); não testa conexão nem executa migrations.
+- `IdentityUser<Guid>` representa usuário com identificador `Guid`; `IdentityDbContext<...>` contém mapeamentos do ASP.NET Core Identity.
+- Dois contextos podem usar a mesma conexão com responsabilidades/esquemas distintos; isso **não cria tabelas automaticamente**.
+- Instalar o pacote Identity e registrar um contexto **não implementa login nem validação JWT**.
+
+## Healthcheck e Compose — evidências práticas
+
+| Pergunta | Ferramenta |
+|---|---|
+| Compose valida YAML? | `docker compose -f docker-compose.yml -f compose.local.yml config --quiet` |
+| Aplicar configuração do container sem recriar dependências? | `docker compose -f docker-compose.yml -f compose.local.yml up -d --no-deps --force-recreate insights` |
+| O Docker considera saudável? | `docker compose -f docker-compose.yml -f compose.local.yml ps insights` |
+| O DNS interno do serviço funciona? | `docker run --rm --network trevvos-platform_default curlimages/curl:8.17.0 -i http://insights:3000/health/ready` |
+
+`--force-recreate` recria o container; `--build` reconstrói a imagem; `-d` desacopla do terminal. `healthy` só atesta as verificações implementadas. `restart: unless-stopped` não reinicia apenas pelo estado unhealthy.
+
+---
+
 # Regra final
 
 A caixa de ferramentas não existe para decorar comandos.

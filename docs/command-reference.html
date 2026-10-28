@@ -117,6 +117,27 @@ git diff &lt;HASH&gt;^ &lt;HASH&gt; -- app.py</code></pre><p><strong>Modelo:</st
       </tbody></table><p><strong>Diagnóstico por camadas:</strong> DNS informa IP → TCP indica conectividade → <code>pg_isready</code> indica disponibilidade → autenticação e SQL exigem um teste adicional. Nunca copie senhas reais para o caderno.</p></article>
     </div>
   </section>
+
+  <section class="section" id="dotnet-nuget-di">
+    <div class="section-head"><div><p class="eyebrow">.NET · VISUAL STUDIO · 27/10/2026</p><h2>NuGet, compilação, DI e Identity</h2></div></div>
+    <div class="ref-grid">
+      <article class="ref-card searchable"><h3>Quando quero trabalhar pela IDE</h3>
+        <table><thead><tr><th>Pergunta</th><th>Onde agir</th></tr></thead><tbody>
+          <tr><td>Como instalar pacote NuGet?</td><td>Abrir solução/projeto (.sln, .slnx ou .csproj) → botão direito no projeto C# → Gerenciar Pacotes NuGet</td></tr>
+          <tr><td>Como compilar somente um projeto?</td><td>Gerenciador de Soluções → botão direito no projeto → Compilar</td></tr>
+          <tr><td>Onde se registra um serviço?</td><td>Ctrl+Shift+F → pesquisar <code>AddDbContext</code>, <code>AddScoped</code> ou <code>DependencyInjection</code></td></tr>
+          <tr><td>Como restaurar pacotes pelo terminal, se necessário?</td><td><code>dotnet restore &lt;caminho.csproj&gt;</code></td></tr>
+          <tr><td>Como compilar pelo terminal, se necessário?</td><td><code>dotnet build &lt;caminho.csproj&gt;</code></td></tr>
+        </tbody></table>
+        <p><strong>Armadilha:</strong> abrir uma pasta no Visual Studio não equivale a carregar o projeto .NET; procure o ícone de projeto C#.</p>
+      </article>
+      <article class="ref-card searchable"><h3>Como interpretar downgrade, DI e DbContext?</h3>
+        <p><strong>NuGet:</strong> EF Core <code>10.0.13</code> foi insuficiente para a cadeia de dependências do Npgsql que exigia <code>10.0.14</code>; atualizar a referência direta resolveu.</p>
+        <p><strong>DI:</strong> o contêiner <code>IServiceCollection</code> é nativo. Já <code>DependencyInjection.cs</code> e <code>AddTrevvosInfrastructure()</code> são organização própria, com método de extensão (<code>this IServiceCollection</code>).</p>
+        <p><strong>Identity:</strong> <code>IdentityUser&lt;Guid&gt;</code> modela usuário e <code>IdentityDbContext</code> mapeia tabelas; <code>AddDbContext</code> não cria banco, migrations, login ou token. Separar contexto Flow e Identity preserva fronteiras de persistência.</p>
+      </article>
+    </div>
+  </section>
 </main>
 <footer class="footer"><div class="shell"><span>Software Formation Roadmap · Command Reference · 2026-09-06</span><div><a href="real-learning-notes.html">Caderno</a></div></div></footer>
 <script>
