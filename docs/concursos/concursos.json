@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "lastVerified": "2026-10-28",
-  "lastVerifiedLabel": "28 de outubro de 2026",
+  "lastVerified": "2026-10-29",
+  "lastVerifiedLabel": "29 de outubro de 2026",
   "sourcesNote": "O radar é atualizado por verificações periódicas; não consulta bancas em tempo real ao abrir a página. Sempre confirme condições e prazos no edital.",
   "contests": [
     {
@@ -19,7 +19,7 @@
       "vacancies": "20 vagas + 80 CR em Florianópolis (referência de planejamento)",
       "source": "https://conhecimento.fgv.br/concursos/dataprev26",
       "priority": "Acompanhar resultado",
-      "notes": "Gabarito oficial PRELIMINAR publicado em 13/10/2026. Recursos de 14 a 15/10, prazo encerrado. Ainda sem gabarito definitivo/resultado de classificação na consulta oficial de 28/10. Estimativa pessoal Tipo 1: 37/70 e 59,5/115 (cartão a conferir). Resultado previsto para 14/01/2027.",
+      "notes": "Gabarito oficial PRELIMINAR publicado em 13/10/2026. Recursos de 14 a 15/10, prazo encerrado. Ainda sem gabarito definitivo/resultado de classificação na consulta oficial de 29/10. Estimativa pessoal Tipo 1: 37/70 e 59,5/115 (cartão a conferir). Resultado previsto para 14/01/2027.",
       "userStage": "prova realizada; gabarito preliminar corrigido",
       "verified": true
     },
@@ -76,7 +76,7 @@
       "vacancies": "Cadastro de reserva",
       "source": "https://furb.selecao.net.br/informacoes/564/",
       "priority": "Prioridade SC",
-      "notes": "Isenção até 11/10 às 23h59; taxa de R$ 140. Necessário conferir aceitação do diploma de ADS no edital/banca.",
+      "notes": "Inscrições até 03/11 às 23h59 (FURB), prova 29/11; isenção encerrada 11/10; taxa de R$ 140. Necessário conferir aceitação do diploma de ADS no edital/banca.",
       "userStage": "não informado",
       "verified": true
     },
@@ -736,14 +736,199 @@
       "source": "https://www.concursosfcc.com.br",
       "priority": "NOVO NO RADAR — prazo 05/11, TI federal",
       "notes": "Edital nº 1/2026 publicado no DOU 02/10, retificação nº 2 publicada 08/10. Oportunidades para Analista Judiciário em TI e Técnico Judiciário em TI, ambas de nível superior, em cadastro reserva. Exigências específicas de cada especialidade e aceitação nominal de ADS ainda não conferidas no edital integral; NÃO presumir. Inscrições até 05/11 às 23h59 (horário Brasília), taxa Analista R$ 110 e Técnico R$ 90, prova 17/01/2027. Página oficial de inscrição: https://www.concursosfcc.com.br. A retificação restringiu lotação por preferências a cargos específicos e atualizou resolução de assédio/discriminação."
+    },
+    {
+      "id": "sead-ap-analista-ti-26",
+      "agency": "SEAD/AP",
+      "role": "Analista de Tecnologia da Informação (cód. 104)",
+      "place": "Macapá/AP",
+      "scope": "Nacional",
+      "board": "IDCAP",
+      "kind": "Concurso público",
+      "status": "inscricoes",
+      "applicationEnd": "2026-10-29",
+      "examDate": "2026-11-29",
+      "salary": 8331.35,
+      "vacancies": "21 classificados para cadastro de reserva (19 AC + 2 PcD); sem vagas imediatas garantidas",
+      "source": "https://idcap.selecao.net.br/informacoes/262",
+      "priority": "Prazo HOJE",
+      "notes": "Edital 001/2026 de 01/10: 21 posições de cadastro de reserva, R$ 8.331,35/40h; inscrição até 29/10 às 23h59. Exige diploma superior na área de TIC reconhecido pelo MEC; tecnólogo ADS é da área, mas não é mencionado nominalmente e aceite individual não foi confirmado. Provas objetiva e discursiva em 29/11 em Macapá; conferir Anexo I vigente.",
+      "userStage": "não informado",
+      "verified": true
+    },
+    {
+      "id": "ifap-analista-ti-tae-26",
+      "agency": "IFAP",
+      "role": "Analista de Tecnologia da Informação (cód. 01)",
+      "place": "Reitoria, Macapá/AP",
+      "scope": "Nacional",
+      "board": "IFAP",
+      "kind": "Concurso público efetivo",
+      "status": "inscricoes",
+      "applicationEnd": "2026-10-29",
+      "examDate": "2026-12-06",
+      "salary": 5215.39,
+      "vacancies": "6 vagas imediatas; lista de homologados 25 (não são vagas imediatas)",
+      "source": "https://concursopublico.ifap.edu.br/concurso/",
+      "priority": "Prazo HOJE",
+      "notes": "Edital 02/2026: diploma superior na área de TI reconhecido pelo MEC, sem citar ADS nominalmente; possível enquadramento do tecnólogo ADS, não garantido. Inscrições até 29/10, pagamento até 30/10; não presumir hora de encerramento. Prova 06/12 conforme cronograma divulgado; conferir retificações 01–04.",
+      "userStage": "não informado",
+      "verified": true
+    },
+    {
+      "id": "ifap-tecnico-ti-tae-26",
+      "agency": "IFAP",
+      "role": "Técnico de Tecnologia da Informação (cód. 07)",
+      "place": "Oiapoque/AP",
+      "scope": "Nacional",
+      "board": "IFAP",
+      "kind": "Concurso público efetivo",
+      "status": "inscricoes",
+      "applicationEnd": "2026-10-29",
+      "examDate": "2026-12-06",
+      "salary": 3181.39,
+      "vacancies": "1 vaga imediata",
+      "source": "https://concursopublico.ifap.edu.br/concurso/",
+      "priority": "Prazo HOJE",
+      "notes": "Edital 02/2026: ensino médio profissionalizante em Informática OU ensino médio + curso técnico em Informática ou Eletrônica com ênfase em Sistemas Computacionais. Diploma superior de ADS isoladamente NÃO consta como substituto. Inscrições até 29/10, pagamento até 30/10; horário final não confirmado.",
+      "userStage": "não informado",
+      "verified": true
+    },
+    {
+      "id": "ufba-analista-ti-007-26",
+      "agency": "UFBA",
+      "role": "Analista de Tecnologia da Informação",
+      "place": "Salvador/BA",
+      "scope": "Nacional",
+      "board": "Instituto Avalia",
+      "kind": "Concurso público efetivo",
+      "status": "inscricoes",
+      "applicationEnd": "2026-11-06",
+      "examDate": "2026-12-20",
+      "salary": 5215.39,
+      "vacancies": "1 vaga imediata",
+      "source": "https://www.avalia.org.br/concursos/638",
+      "priority": "Retificação 29/10",
+      "notes": "Edital 007/2026, retificação nº 6 publicada no DOU em 29/10: inscrições prorrogadas para 06/11 às 23h59 e pagamento para 09/11. Página-resumo da banca ainda exibia 29/10 na consulta de 29/10; prevalece retificação oficial, confirmar atualização do sistema. Formação específica e aceitação de tecnólogo ADS precisam de leitura do Anexo I consolidado; não presumir.",
+      "userStage": "não informado",
+      "verified": true
+    },
+    {
+      "id": "ufba-tecnico-ti-007-26",
+      "agency": "UFBA",
+      "role": "Técnico de Tecnologia da Informação",
+      "place": "Salvador/BA",
+      "scope": "Nacional",
+      "board": "Instituto Avalia",
+      "kind": "Concurso público efetivo",
+      "status": "inscricoes",
+      "applicationEnd": "2026-11-06",
+      "examDate": "2026-12-20",
+      "salary": 3181.39,
+      "vacancies": "4 vagas imediatas",
+      "source": "https://www.avalia.org.br/concursos/638",
+      "priority": "Retificação 29/10",
+      "notes": "Edital 007/2026, retificação nº 6 publicada no DOU 29/10: inscrição até 06/11 às 23h59, pagamento até 09/11. A banca ainda mostrava 29/10 no cabeçalho consultado em 29/10. Requisito de curso técnico/possível substituição por tecnólogo ADS não confirmado; não presumir. Prova 20/12.",
+      "userStage": "não informado",
+      "verified": true
+    },
+    {
+      "id": "cremerj-dev-sistemas-26",
+      "agency": "CREMERJ",
+      "role": "Analista de Desenvolvimento de Sistemas",
+      "place": "Rio de Janeiro/RJ",
+      "scope": "Nacional",
+      "board": "Instituto Consulplan",
+      "kind": "Concurso público (CLT)",
+      "status": "inscricoes",
+      "applicationEnd": "2026-10-29",
+      "examDate": "2026-12-13",
+      "salary": null,
+      "vacancies": "1 vaga imediata informada em levantamentos do edital; confirmar quadro oficial",
+      "source": "https://www.institutoconsulplan.org.br/cremerj2026",
+      "priority": "Prazo HOJE às 16h",
+      "notes": "Edital CREMERJ 01/2026, retificação II de outubro: inscrição prorrogada até 29/10 às 16h, pagamento até 30/10 às 20h, prova prevista 13/12. Retificação passou a admitir bacharelado OU tecnólogo na área de TI para esta especialidade; ADS não é citado nominalmente. A página oficial da Consulplan retornou erro de acesso automático (403) na consulta; números por cargo dependem de validação do PDF oficial antes da inscrição.",
+      "userStage": "não informado",
+      "verified": true
+    },
+    {
+      "id": "cremerj-ciencia-dados-26",
+      "agency": "CREMERJ",
+      "role": "Analista de Ciência e Análise de Dados",
+      "place": "Rio de Janeiro/RJ",
+      "scope": "Nacional",
+      "board": "Instituto Consulplan",
+      "kind": "Concurso público (CLT)",
+      "status": "inscricoes",
+      "applicationEnd": "2026-10-29",
+      "examDate": "2026-12-13",
+      "salary": null,
+      "vacancies": "1 vaga imediata informada em levantamentos do edital; confirmar quadro oficial",
+      "source": "https://www.institutoconsulplan.org.br/cremerj2026",
+      "priority": "Prazo HOJE às 16h",
+      "notes": "Edital CREMERJ 01/2026, retificação II de outubro: inscrição prorrogada até 29/10 às 16h, pagamento até 30/10 às 20h, prova prevista 13/12. Retificação passou a admitir bacharelado OU tecnólogo na área de TI para esta especialidade; ADS não é citado nominalmente. A página oficial da Consulplan retornou erro de acesso automático (403) na consulta; números por cargo dependem de validação do PDF oficial antes da inscrição.",
+      "userStage": "não informado",
+      "verified": true
+    },
+    {
+      "id": "cremerj-suporte-26",
+      "agency": "CREMERJ",
+      "role": "Analista de Suporte",
+      "place": "Rio de Janeiro/RJ",
+      "scope": "Nacional",
+      "board": "Instituto Consulplan",
+      "kind": "Concurso público (CLT)",
+      "status": "inscricoes",
+      "applicationEnd": "2026-10-29",
+      "examDate": "2026-12-13",
+      "salary": null,
+      "vacancies": "1 vaga imediata informada em levantamentos do edital; confirmar quadro oficial",
+      "source": "https://www.institutoconsulplan.org.br/cremerj2026",
+      "priority": "Prazo HOJE às 16h",
+      "notes": "Edital CREMERJ 01/2026, retificação II de outubro: inscrição prorrogada até 29/10 às 16h, pagamento até 30/10 às 20h, prova prevista 13/12. Retificação passou a admitir bacharelado OU tecnólogo na área de TI para esta especialidade; ADS não é citado nominalmente. A página oficial da Consulplan retornou erro de acesso automático (403) na consulta; números por cargo dependem de validação do PDF oficial antes da inscrição.",
+      "userStage": "não informado",
+      "verified": true
+    },
+    {
+      "id": "cremerj-dba-26",
+      "agency": "CREMERJ",
+      "role": "Analista de Banco de Dados (DBA)",
+      "place": "Rio de Janeiro/RJ",
+      "scope": "Nacional",
+      "board": "Instituto Consulplan",
+      "kind": "Concurso público (CLT)",
+      "status": "inscricoes",
+      "applicationEnd": "2026-10-29",
+      "examDate": "2026-12-13",
+      "salary": null,
+      "vacancies": "Cadastro de reserva; confirmar quadro oficial",
+      "source": "https://www.institutoconsulplan.org.br/cremerj2026",
+      "priority": "Prazo HOJE às 16h",
+      "notes": "Edital CREMERJ 01/2026, retificação II de outubro: inscrição prorrogada até 29/10 às 16h, pagamento até 30/10 às 20h, prova prevista 13/12. Retificação passou a admitir bacharelado OU tecnólogo na área de TI para esta especialidade; ADS não é citado nominalmente. A página oficial da Consulplan retornou erro de acesso automático (403) na consulta; números por cargo dependem de validação do PDF oficial antes da inscrição.",
+      "userStage": "não informado",
+      "verified": true
+    },
+    {
+      "id": "cremerj-tecnico-apoio-26",
+      "agency": "CREMERJ",
+      "role": "Técnico de Apoio ao Usuário (Informática)",
+      "place": "Rio de Janeiro/RJ",
+      "scope": "Nacional",
+      "board": "Instituto Consulplan",
+      "kind": "Concurso público (CLT)",
+      "status": "inscricoes",
+      "applicationEnd": "2026-10-29",
+      "examDate": "2026-12-13",
+      "salary": null,
+      "vacancies": "Cadastro de reserva; confirmar quadro oficial",
+      "source": "https://www.institutoconsulplan.org.br/cremerj2026",
+      "priority": "Prazo HOJE às 16h",
+      "notes": "Inscrições até 29/10 às 16h, pagamento até 30/10 às 20h, prova 13/12. Exigência de curso técnico ou formação substitutiva NÃO confirmada no edital retificado; não presumir que ADS isolado seja suficiente. Página oficial da banca não permitiu leitura automatizada.",
+      "userStage": "não informado",
+      "verified": true
     }
   ],
   "watchlist": [
-    {
-      "name": "SEAD/AP — TI",
-      "note": "Banca mostra inscrições de 14/09 a 13/10 (não até 29/10); cargo/atribuições de TI ainda necessitam validação.",
-      "url": "https://www.institutoaocp.org.br/concursos/status/inscricoes-abertas"
-    },
     {
       "name": "Câmara de Unaí/MG — Analista de Sistemas",
       "note": "Oportunidade recuperada do levantamento anterior; cronograma e edital ainda não verificados nesta rodada.",
@@ -752,11 +937,6 @@
     {
       "name": "Contagem/MG — TI",
       "note": "Cronograma e cargo específico precisam de confirmação no edital.",
-      "url": null
-    },
-    {
-      "name": "UFBA e UFRRJ — Técnico de TI",
-      "note": "Necessário verificar publicação oficial, requisitos e período de inscrição.",
       "url": null
     },
     {
@@ -805,14 +985,29 @@
       "url": "https://www.acesseconcursossc.com.br/"
     },
     {
-      "name": "UFBA/IFAP — prazos indicados para 29/10",
-      "note": "Rodadas anteriores apontaram término de inscrições 29/10 para cargos TI da UFBA e IFAP; não houve confirmação documental atual nesta rodada. Verificar imediatamente páginas das bancas antes de afirmar prazo, vagas ou aceitação ADS.",
-      "url": null
-    },
-    {
       "name": "TRF3 — certificados de 120 horas para Técnico TI",
       "note": "Edital 01/2026: Técnico Desenvolvimento de Sistemas e Suporte exigem graduação em qualquer área MAIS certificados de cursos específicos somando 120 horas. Esclarecer com Vunesp se a formação superior em ADS pode ser utilizada como certificado; NÃO presumir dispensa.",
       "url": "https://www.in.gov.br/web/dou/-/edital-n-1-de-23-de-outubro-de-2026-740280249"
+    },
+    {
+      "name": "UFBA — 6ª retificação do DOU em 29/10, divergência temporária na banca",
+      "note": "DOU 29/10 prorrogou inscrição até 06/11 às 23h59 e pagamento até 09/11; Instituto Avalia ainda mostrava 29/10 em cabeçalho na consulta de 29/10. Conferir sistema e requisitos por cargo, sobretudo aceitação de ADS e requisito técnico.",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-28-de-outubro-de-2026-741089739"
+    },
+    {
+      "name": "CREMERJ — inscrições terminam 29/10 às 16h",
+      "note": "Retificação II ampliou tecnólogos da área de TI para Analista de Desenvolvimento, Dados, Suporte e DBA. Validar edital consolidado, remuneração e formação na banca Consulplan; site oficial bloqueou leitura automática (403).",
+      "url": "https://www.institutoconsulplan.org.br/cremerj2026"
+    },
+    {
+      "name": "IFAP e SEAD/AP — prazos de 29/10",
+      "note": "IFAP: 6 vagas Analista TI e 1 Técnico TI, até 29/10, pagamento 30/10. SEAD/AP: Analista TI com 21 posições de cadastro reserva, até 29/10 às 23h59. Tecnólogo ADS não citado nominalmente nos dois editais; não afirmar aceite individual.",
+      "url": "https://idcap.selecao.net.br/informacoes/262"
+    },
+    {
+      "name": "UFRRJ — técnico de TI (prazo anterior encerrado)",
+      "note": "Levantamentos indicam encerramento em 13/10; conferir eventual nova seleção/retificação oficial antes de registrar oportunidade ativa.",
+      "url": null
     }
   ]
 }
