@@ -2,12 +2,12 @@
 
 **Data-base:** 2026-10-30  
 **Modo:** começar do zero **sem diagnóstico inicial**.  
-**Status curricular:** planejado, ainda não iniciado neste registro.  
-**Próximo tópico:** F0.01 — Como funcionam aplicativos móveis, sistemas operacionais e ciclo de vida.
+**Status curricular:** F0.01 em estudo (material publicado, avaliação não realizada). Nenhum tópico comprovado.  
+**Tópico atual:** [F0.01 — Como funcionam aplicativos móveis, sistemas operacionais e ciclo de vida](lessons/F0.01-ANDROID-FOUNDATIONS.md) — responder avaliação e realizar laboratório após correção.
 
 | Fase | Estado inicial | Tópicos comprovados | Gate |
 |---|---|---:|---|
-| F0 — Fundamentos e ambiente | Não iniciado | 0/8 | Pendente |
+| F0 — Fundamentos e ambiente | F0.01 em estudo | 0/8 | Pendente |
 | F1 — Kotlin | Não iniciado | 0/12 | Pendente |
 | F2 — Android / Compose | Não iniciado | 0/12 | Pendente |
 | F3 — Arquitetura | Não iniciado | 0/12 | Pendente |
