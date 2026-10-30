@@ -96,6 +96,11 @@ Cada projeto deve permitir a reprodução do cenário, justificar arquitetura, a
 
 Headline de trabalho: **Software Engineer | Android Native & Flutter | Mobile Architecture | Kotlin & .NET**. O histórico sênior geral não equivale automaticamente à senioridade Android; evoluir o título conforme evidências e a atuação real. Ver [guia de carreira](CARREIRA_PORTFOLIO.md).
 
+## Aula 01 publicada — F0.01
+
+- [**F0.01 — Como funcionam os aplicativos, Android e lifecycle**](lessons/F0.01-ANDROID-FOUNDATIONS.md) — explicações, exemplos, código ilustrativo, sete exercícios e avaliação de 16 pontos.
+- **Estado:** conteúdo disponibilizado; ainda não comprovado. Responder exercícios para correção e posterior laboratório.
+
 ## Primeira sessão — começar sem diagnóstico
 
 1. Abrir [a Fase 0 do painel](https://lucastrevvos.github.io/software-mastery-roadmap/mobile/).
