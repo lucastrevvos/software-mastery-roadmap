@@ -16,7 +16,7 @@
 | F6 — Avançado e carreira | Não iniciado | 0/12 | Pendente |
 | **Total** | **Não iniciado** | **0/80** | — |
 
-Experiências profissionais anteriores com **Cargo Cheia/Carga Cheia em Flutter, KM One em Android e backend .NET** são recursos de portfólio, mas os tópicos da **nova formação** ainda não foram avaliados nem promovidos. O zero representa somente o estado do currículo.
+Experiências profissionais anteriores com **Carga Cheia em Flutter, KM One em Android e backend .NET** são recursos de portfólio, mas os tópicos da **nova formação** ainda não foram avaliados nem promovidos. O zero representa somente o estado do currículo.
 
 ## Registro de evidências
 
