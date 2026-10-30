@@ -1,0 +1,698 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-10-30",
+  "title": "Mobile Engineering Roadmap",
+  "subtitle": "Android nativo primeiro · Flutter depois · engenharia de produto completo",
+  "objective": "Construir especialização sólida e verificável em Mobile Software Engineering, com portfólio, certificações reais e evidências técnicas.",
+  "startingPoint": "Trilha curricular começa do zero, sem prova diagnóstica. Experiências anteriores são ativos de portfólio, não marcam domínio automaticamente.",
+  "weeklyHoursSuggested": "8–10",
+  "estimatedDuration": "9–12 meses, ajustável segundo disponibilidade e gates",
+  "startingStatus": "não iniciado",
+  "primaryStack": [
+    "Kotlin",
+    "Android SDK",
+    "Jetpack Compose",
+    "Coroutines",
+    "Flow",
+    "Room",
+    "Hilt",
+    "WorkManager"
+  ],
+  "secondaryStack": [
+    "Dart",
+    "Flutter",
+    "integrações nativas Android/iOS"
+  ],
+  "supporting": [
+    "HTTP/REST",
+    "Git",
+    "Gradle",
+    "CI/CD",
+    "OWASP MASVS",
+    "Observabilidade",
+    "Backend .NET"
+  ],
+  "rules": [
+    "Sem diagnóstico inicial: começar pelo primeiro tópico da fase 0.",
+    "Uma fase principal por vez; apenas estudo complementar leve em paralelo.",
+    "Aula e certificado não significam domínio técnico.",
+    "Marcar 'dominado' somente após implementação própria, explicação, debug e exercício de transferência.",
+    "Usar IA para pistas e revisão no Learning Mode; soluções completas permitidas no Production Mode.",
+    "Registrar evidências reais: commits, testes, medições, documentação e links; não inventar resultados.",
+    "Revisar em 1, 7 e 30 dias os conceitos centrais, ajustando conforme retenção."
+  ],
+  "masteryScale": [
+    {
+      "value": 0,
+      "label": "Não iniciado"
+    },
+    {
+      "value": 1,
+      "label": "Reconhece"
+    },
+    {
+      "value": 2,
+      "label": "Explica"
+    },
+    {
+      "value": 3,
+      "label": "Executa com ajuda"
+    },
+    {
+      "value": 4,
+      "label": "Executa sozinho"
+    },
+    {
+      "value": 5,
+      "label": "Depura"
+    },
+    {
+      "value": 6,
+      "label": "Transfere para outro problema"
+    },
+    {
+      "value": 7,
+      "label": "Retido após revisões"
+    }
+  ],
+  "phases": [
+    {
+      "id": "f0",
+      "number": 0,
+      "title": "Fundamentos e ambiente",
+      "weeks": 2,
+      "period": "Semanas 1–2",
+      "focus": "Começar do zero, aprender ferramentas e entender a plataforma.",
+      "topics": [
+        {
+          "id": "f0-01",
+          "title": "Como funcionam aplicativos móveis, sistemas operacionais e ciclo de vida"
+        },
+        {
+          "id": "f0-02",
+          "title": "Android versus iOS versus multiplataforma: diferenças e trade-offs"
+        },
+        {
+          "id": "f0-03",
+          "title": "Instalar Android Studio, JDK, SDK, emulador e configurar dispositivo"
+        },
+        {
+          "id": "f0-04",
+          "title": "IDE, terminal, Git, GitHub e organização de projeto"
+        },
+        {
+          "id": "f0-05",
+          "title": "Variáveis, tipos, condicionais, laços e funções: revisão de lógica"
+        },
+        {
+          "id": "f0-06",
+          "title": "O que são HTTP, JSON, cliente-servidor e APIs REST"
+        },
+        {
+          "id": "f0-07",
+          "title": "Conceitos de interfaces, acessibilidade e UX mobile"
+        },
+        {
+          "id": "f0-08",
+          "title": "Executar, depurar e versionar um programa Kotlin simples"
+        }
+      ],
+      "practice": "Hello Mobile: repositório Git com código Kotlin compilável, README, histórico de commits e pequeno consumo simulado de JSON.",
+      "gate": "Explicar o fluxo editar→compilar→executar→depurar e reconstruir o exercício sem copiar um tutorial.",
+      "resources": [
+        {
+          "label": "Android Developers — primeiros passos",
+          "url": "https://developer.android.com/get-started/overview"
+        },
+        {
+          "label": "Kotlin — Getting Started",
+          "url": "https://kotlinlang.org/docs/getting-started.html"
+        },
+        {
+          "label": "GitHub Skills",
+          "url": "https://skills.github.com/"
+        }
+      ]
+    },
+    {
+      "id": "f1",
+      "number": 1,
+      "title": "Kotlin: do básico ao assíncrono",
+      "weeks": 6,
+      "period": "Semanas 3–8",
+      "focus": "Domínio da linguagem antes de depender de frameworks.",
+      "topics": [
+        {
+          "id": "f1-01",
+          "title": "Sintaxe, tipos, mutabilidade e inferência de tipos"
+        },
+        {
+          "id": "f1-02",
+          "title": "Null safety, operadores e smart casts"
+        },
+        {
+          "id": "f1-03",
+          "title": "Funções, parâmetros nomeados, lambdas e extensões"
+        },
+        {
+          "id": "f1-04",
+          "title": "Collections, map/filter/reduce e sequências"
+        },
+        {
+          "id": "f1-05",
+          "title": "Classes, interfaces, encapsulamento e herança"
+        },
+        {
+          "id": "f1-06",
+          "title": "Data class, enum, sealed class e modelagem de domínio"
+        },
+        {
+          "id": "f1-07",
+          "title": "Generics, exceptions, Result e tratamento de erros"
+        },
+        {
+          "id": "f1-08",
+          "title": "Leitura e escrita, organização de packages e Gradle"
+        },
+        {
+          "id": "f1-09",
+          "title": "Testes unitários com JUnit e TDD básico"
+        },
+        {
+          "id": "f1-10",
+          "title": "Coroutines: suspend, structured concurrency e cancelamento"
+        },
+        {
+          "id": "f1-11",
+          "title": "Flow, StateFlow, streams e tratamento de concorrência"
+        },
+        {
+          "id": "f1-12",
+          "title": "Interoperabilidade Kotlin/Java e fundamentos de KMP"
+        }
+      ],
+      "practice": "Kotlin Core Lab: biblioteca de domínio com CLI, testes automatizados, processamento assíncrono e documentação.",
+      "gate": "Resolver exercícios novos sem IA, explicar cancelamento/concorrência, depurar falhas e alcançar domínio ≥ 6 nos tópicos essenciais.",
+      "resources": [
+        {
+          "label": "Kotlin Docs",
+          "url": "https://kotlinlang.org/docs/home.html"
+        },
+        {
+          "label": "Kotlin Koans",
+          "url": "https://play.kotlinlang.org/koans/overview"
+        },
+        {
+          "label": "JetBrains — Kotlin Professional Certificate",
+          "url": "https://blog.jetbrains.com/kotlin/2026/04/kotlin-professional-certificate-by-jetbrains-now-on-linkedin-learning/"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "number": 2,
+      "title": "Android moderno e Jetpack Compose",
+      "weeks": 8,
+      "period": "Semanas 9–16",
+      "focus": "Construir interfaces e fluxos sólidos no Android nativo.",
+      "topics": [
+        {
+          "id": "f2-01",
+          "title": "Estrutura de projeto, Gradle, manifest, SDK e API levels"
+        },
+        {
+          "id": "f2-02",
+          "title": "Android lifecycle, Activity, processos e estado"
+        },
+        {
+          "id": "f2-03",
+          "title": "Compose: composables, layouts, modifiers e Material 3"
+        },
+        {
+          "id": "f2-04",
+          "title": "State, recomposition, remember e state hoisting"
+        },
+        {
+          "id": "f2-05",
+          "title": "ViewModel e StateFlow com fluxo unidirecional de dados"
+        },
+        {
+          "id": "f2-06",
+          "title": "Navigation, deep links básicos e fluxo entre telas"
+        },
+        {
+          "id": "f2-07",
+          "title": "Lists, formulários, validação e tratamento de erro"
+        },
+        {
+          "id": "f2-08",
+          "title": "Acessibilidade, internacionalização e layouts adaptativos"
+        },
+        {
+          "id": "f2-09",
+          "title": "Coroutines no Android e chamadas de rede"
+        },
+        {
+          "id": "f2-10",
+          "title": "Retrofit/OkHttp ou Ktor Client: API e serialização"
+        },
+        {
+          "id": "f2-11",
+          "title": "Room: entidade, DAO, queries e persistência"
+        },
+        {
+          "id": "f2-12",
+          "title": "Permissões, armazenamento, notificações e testes Compose"
+        }
+      ],
+      "practice": "Android Engineering Lab v1: app completo com 4 telas, navegação, API, cache local e estado testável.",
+      "gate": "Entregar APK/debug build reproduzível; demonstrar lifecycle, UI state, armazenamento e testes, incluindo falha de rede.",
+      "resources": [
+        {
+          "label": "Android Basics with Compose",
+          "url": "https://developer.android.com/courses/android-basics-compose/course"
+        },
+        {
+          "label": "Compose — documentação",
+          "url": "https://developer.android.com/develop/ui/compose/documentation"
+        },
+        {
+          "label": "Now in Android — referência",
+          "url": "https://github.com/android/nowinandroid"
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "number": 3,
+      "title": "Arquitetura, dados e resiliência",
+      "weeks": 8,
+      "period": "Semanas 17–24",
+      "focus": "Projetar apps confiáveis, testáveis e offline-first.",
+      "topics": [
+        {
+          "id": "f3-01",
+          "title": "UDF, responsabilidades e trade-offs de MVVM/MVI"
+        },
+        {
+          "id": "f3-02",
+          "title": "Arquitetura em camadas, repositories e boundaries"
+        },
+        {
+          "id": "f3-03",
+          "title": "SOLID e Clean Architecture sem burocracia"
+        },
+        {
+          "id": "f3-04",
+          "title": "Injeção de dependência com Hilt"
+        },
+        {
+          "id": "f3-05",
+          "title": "Coroutines/Flow avançados, dispatcher e concorrência"
+        },
+        {
+          "id": "f3-06",
+          "title": "Room migrations, cache e fonte única de verdade"
+        },
+        {
+          "id": "f3-07",
+          "title": "Offline-first: filas, sincronização e retomada"
+        },
+        {
+          "id": "f3-08",
+          "title": "WorkManager: trabalho agendado e limitações do SO"
+        },
+        {
+          "id": "f3-09",
+          "title": "Idempotência, retries, backoff e conflitos de escrita"
+        },
+        {
+          "id": "f3-10",
+          "title": "Autenticação, refresh token e armazenamento seguro"
+        },
+        {
+          "id": "f3-11",
+          "title": "APIs .NET, versionamento de contratos e paginação"
+        },
+        {
+          "id": "f3-12",
+          "title": "Push, deep links, notificações e feature flags"
+        }
+      ],
+      "practice": "Android Engineering Lab v2: operação offline, sincronização eventual, testes de idempotência e arquitetura documentada.",
+      "gate": "Desligar a internet durante uma operação e demonstrar persistência, não duplicação, retomada e testes automatizados.",
+      "resources": [
+        {
+          "label": "Android — App architecture",
+          "url": "https://developer.android.com/topic/architecture"
+        },
+        {
+          "label": "Offline-first data layer",
+          "url": "https://developer.android.com/topic/architecture/data-layer/offline-first"
+        },
+        {
+          "label": "WorkManager",
+          "url": "https://developer.android.com/topic/libraries/architecture/workmanager"
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "number": 4,
+      "title": "Qualidade, segurança e produção",
+      "weeks": 6,
+      "period": "Semanas 25–30",
+      "focus": "Operar e entregar apps com qualidade mensurável.",
+      "topics": [
+        {
+          "id": "f4-01",
+          "title": "Estratégia de testes: unitários, integração, UI e instrumentados"
+        },
+        {
+          "id": "f4-02",
+          "title": "Mocks, fakes, contract tests e cobertura útil"
+        },
+        {
+          "id": "f4-03",
+          "title": "Gradle builds, variantes, signing e gerenciamento de secrets"
+        },
+        {
+          "id": "f4-04",
+          "title": "CI/CD com GitHub Actions, lint e gates de qualidade"
+        },
+        {
+          "id": "f4-05",
+          "title": "Play Console, distribuição, rollback e release notes"
+        },
+        {
+          "id": "f4-06",
+          "title": "Android vitals, crashes, ANR e investigação de incidentes"
+        },
+        {
+          "id": "f4-07",
+          "title": "Profiling de CPU, memória, energia e rede"
+        },
+        {
+          "id": "f4-08",
+          "title": "Performance: startup, frames, jank, bateria e cache"
+        },
+        {
+          "id": "f4-09",
+          "title": "OWASP MASVS/MASTG e modelagem de ameaças"
+        },
+        {
+          "id": "f4-10",
+          "title": "Permissões, privacidade, coleta mínima e disclosure"
+        },
+        {
+          "id": "f4-11",
+          "title": "Acessibilidade e compatibilidade de dispositivos"
+        },
+        {
+          "id": "f4-12",
+          "title": "Observabilidade com métricas, logs e crash reporting"
+        }
+      ],
+      "practice": "Pipeline mobile: build/testes automatizados, matriz de testes, relatório de profiling e checklist de release.",
+      "gate": "Executar pipeline reprodutível e evidenciar melhorias antes/depois em um problema de qualidade ou performance real.",
+      "resources": [
+        {
+          "label": "GitHub Actions — documentação",
+          "url": "https://docs.github.com/en/actions"
+        },
+        {
+          "label": "OWASP MASVS",
+          "url": "https://mas.owasp.org/MASVS/"
+        },
+        {
+          "label": "Android vitals",
+          "url": "https://developer.android.com/topic/performance/vitals"
+        }
+      ]
+    },
+    {
+      "id": "f5",
+      "number": 5,
+      "title": "Dart e Flutter multiplataforma",
+      "weeks": 8,
+      "period": "Semanas 31–38",
+      "focus": "Consolidar Flutter com padrões de produção, aproveitando experiência anterior.",
+      "topics": [
+        {
+          "id": "f5-01",
+          "title": "Dart: tipos, null safety, collections, async/await e streams"
+        },
+        {
+          "id": "f5-02",
+          "title": "Flutter widgets, element tree e rendering"
+        },
+        {
+          "id": "f5-03",
+          "title": "StatefulWidget, lifecycle e gerenciamento de estado"
+        },
+        {
+          "id": "f5-04",
+          "title": "Arquitetura de apresentação, domínio e dados em Flutter"
+        },
+        {
+          "id": "f5-05",
+          "title": "Escolher e dominar um state management (Riverpod ou BLoC)"
+        },
+        {
+          "id": "f5-06",
+          "title": "Rotas, deep links, UX adaptativa e acessibilidade"
+        },
+        {
+          "id": "f5-07",
+          "title": "Consumo de APIs, cache, serialização e tratamento de erro"
+        },
+        {
+          "id": "f5-08",
+          "title": "Persistência local e sincronização offline"
+        },
+        {
+          "id": "f5-09",
+          "title": "Platform channels, plugins e interoperabilidade nativa"
+        },
+        {
+          "id": "f5-10",
+          "title": "Testes unitários, widget tests e integration tests"
+        },
+        {
+          "id": "f5-11",
+          "title": "Performance e DevTools: rebuilds, frames, memória"
+        },
+        {
+          "id": "f5-12",
+          "title": "Build, assinatura e distribuição Android/iOS (iOS requer macOS/Xcode)"
+        }
+      ],
+      "practice": "Flutter Production Lab: aplicativo multiplataforma demonstrável, com testes, API e um plugin ou integração nativa.",
+      "gate": "Explicar quando usar Flutter ou Android nativo e demonstrar solução de problema equivalente em ambas abordagens.",
+      "resources": [
+        {
+          "label": "Flutter — Learn",
+          "url": "https://docs.flutter.dev/learn"
+        },
+        {
+          "label": "Dart — Language",
+          "url": "https://dart.dev/language"
+        },
+        {
+          "label": "Flutter — Testing",
+          "url": "https://docs.flutter.dev/testing/overview"
+        }
+      ]
+    },
+    {
+      "id": "f6",
+      "number": 6,
+      "title": "Engenharia avançada e carreira mobile",
+      "weeks": 8,
+      "period": "Semanas 39–46",
+      "focus": "Transformar competência técnica em impacto e posicionamento profissional.",
+      "topics": [
+        {
+          "id": "f6-01",
+          "title": "System design mobile: dados, segurança, latência e escala"
+        },
+        {
+          "id": "f6-02",
+          "title": "Modularização, build performance e manutenção de SDKs"
+        },
+        {
+          "id": "f6-03",
+          "title": "Estratégias de observabilidade, feature flags e A/B tests"
+        },
+        {
+          "id": "f6-04",
+          "title": "Accessibility, localization e design responsivo avançados"
+        },
+        {
+          "id": "f6-05",
+          "title": "Kotlin Multiplatform: conceito, benefícios e limites"
+        },
+        {
+          "id": "f6-06",
+          "title": "Swift/SwiftUI: fundamentos opcionais para leitura técnica"
+        },
+        {
+          "id": "f6-07",
+          "title": "IA assistida com validação crítica e políticas de dados"
+        },
+        {
+          "id": "f6-08",
+          "title": "Documentar ADRs, fazer code reviews e conduzir refactoring"
+        },
+        {
+          "id": "f6-09",
+          "title": "KM One: estudo de caso técnico sem expor código sensível"
+        },
+        {
+          "id": "f6-10",
+          "title": "Portfólio GitHub: demos, READMEs em inglês e métricas verificáveis"
+        },
+        {
+          "id": "f6-11",
+          "title": "LinkedIn e narrativa profissional mobile, sem inflar senioridade"
+        },
+        {
+          "id": "f6-12",
+          "title": "Entrevistas: Android internals, Kotlin, system design e pair programming"
+        }
+      ],
+      "practice": "Portfólio final: 3 projetos/cases com README inglês, ADR, testes e demonstração, mais 1 artigo técnico fundamentado.",
+      "gate": "Defender decisões arquiteturais e trade-offs em simulação de entrevista; comprovar resultados com código e métricas.",
+      "resources": [
+        {
+          "label": "Android quality guidelines",
+          "url": "https://developer.android.com/docs/quality-guidelines"
+        },
+        {
+          "label": "Kotlin Multiplatform",
+          "url": "https://kotlinlang.org/docs/multiplatform.html"
+        },
+        {
+          "label": "AWS Certified Developer",
+          "url": "https://aws.amazon.com/certification/certified-developer-associate/"
+        }
+      ]
+    }
+  ],
+  "certifications": [
+    {
+      "id": "kotlin-jetbrains",
+      "title": "Kotlin Professional Certificate by JetBrains",
+      "type": "Programa + exame final",
+      "priority": "P1",
+      "phase": "f1",
+      "requiredForRoadmap": false,
+      "notes": "4 cursos e exame final; acesso via LinkedIn Learning. Diferencia Kotlin, NÃO substitui comprovação de Android nativo.",
+      "url": "https://www.linkedin.com/learning/paths/kotlin-professional-certificate-by-jetbrains",
+      "status": "planejada"
+    },
+    {
+      "id": "github-actions",
+      "title": "GitHub Actions Certification (GH-200)",
+      "type": "Exame profissional",
+      "priority": "P2",
+      "phase": "f4",
+      "requiredForRoadmap": false,
+      "notes": "Exame de CI/CD; focar após pipeline mobile funcional. Examinar preço e condições atuais na página oficial.",
+      "url": "https://learn.microsoft.com/en-us/credentials/certifications/github-actions/",
+      "status": "planejada"
+    },
+    {
+      "id": "play-listing",
+      "title": "Google Play Store Listing Certificate",
+      "type": "Certificação de publicação e ficha de loja",
+      "priority": "Complementar",
+      "phase": "f4",
+      "requiredForRoadmap": false,
+      "notes": "Não é certificação de programação Android; útil para distribuição e crescimento de produto.",
+      "url": "https://playacademy.withgoogle.com/intl/pt-BR/certificate/",
+      "status": "opcional"
+    },
+    {
+      "id": "aws-developer",
+      "title": "AWS Certified Developer – Associate (DVA-C03)",
+      "type": "Exame profissional cloud",
+      "priority": "Opcional estratégico",
+      "phase": "f6",
+      "requiredForRoadmap": false,
+      "notes": "Nova versão com entrega a partir de 01/12/2026; útil para backend mobile, mas não substitui prática Android.",
+      "url": "https://aws.amazon.com/certification/certified-developer-associate/",
+      "status": "opcional"
+    }
+  ],
+  "projects": [
+    {
+      "id": "kotlin-core",
+      "name": "Kotlin Core Lab",
+      "kind": "fundamentos",
+      "objective": "Biblioteca Kotlin com testes, async/coroutines e CLI documentada.",
+      "evidence": [
+        "código fonte",
+        "testes verdes",
+        "README em inglês",
+        "commits próprios"
+      ]
+    },
+    {
+      "id": "android-lab",
+      "name": "Android Engineering Lab",
+      "kind": "nativo",
+      "objective": "App Android Compose com REST, Room, offline-first, WorkManager, testes e pipeline.",
+      "evidence": [
+        "APK/debug build",
+        "arquitetura e ADRs",
+        "testes e relatório de falhas",
+        "demonstração de sincronização"
+      ]
+    },
+    {
+      "id": "km-one",
+      "name": "KM One — Engineering Case Study",
+      "kind": "produto real",
+      "objective": "Documentar desafios nativos, permissões, serviços, desempenho e decisões arquiteturais usando apenas evidências verificáveis e publicáveis.",
+      "evidence": [
+        "estudo de caso técnico",
+        "diagrama de arquitetura",
+        "trade-offs e lições aprendidas",
+        "resultados mensurados quando existirem"
+      ]
+    },
+    {
+      "id": "flutter-lab",
+      "name": "Flutter Production Lab",
+      "kind": "multiplataforma",
+      "objective": "App Flutter com testes, persistência, API e integração nativa; comparação com abordagem Android nativa.",
+      "evidence": [
+        "código fonte",
+        "testes automatizados",
+        "demo",
+        "README e decisões técnicas"
+      ]
+    }
+  ],
+  "profile": {
+    "headline": "Software Engineer | Android Native & Flutter | Mobile Architecture | Kotlin & .NET",
+    "principle": "Posicionamento honesto: senioridade geral em software ≠ senioridade mobile automaticamente. Evoluir título quando evidências suportarem.",
+    "portfolioLanguage": "en",
+    "linkedinPolicy": "Preferir um único perfil pessoal com seção e portfólio mobile especializados."
+  },
+  "references": [
+    {
+      "label": "JetBrains Kotlin certificate",
+      "url": "https://blog.jetbrains.com/kotlin/2026/04/kotlin-professional-certificate-by-jetbrains-now-on-linkedin-learning/"
+    },
+    {
+      "label": "GitHub Actions exam",
+      "url": "https://learn.github.com/certification/ACTIONS"
+    },
+    {
+      "label": "AWS DVA-C03 announcement",
+      "url": "https://aws.amazon.com/blogs/training-and-certification/september-2026-new-offerings/"
+    }
+  ]
+}
