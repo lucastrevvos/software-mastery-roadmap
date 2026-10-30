@@ -12,6 +12,16 @@ Este repositório é a fonte da verdade para quatro coisas diferentes:
 
 > Curso concluído não significa domínio. Certificado é evidência externa; Mastery Gate é evidência interna.
 
+## Especialização Mobile Engineering — Android nativo + Flutter
+
+- **Objetivo:** construir especialização mobile profunda, com Android/Kotlin/Jetpack Compose primeiro e Flutter depois, aproveitando experiência prévia em .NET, Carga Cheia e KM One.
+- **Início pedagógico:** do zero, **sem diagnóstico inicial**; 7 fases e 80 tópicos, com evidência de domínio em cada gate.
+- **Certificações:** Kotlin Professional Certificate by JetBrains (P1), GitHub Actions GH-200 (P2); Google Play Store Listing complementar e AWS Developer Associate opcional.
+- **Painel interativo:** [Mobile Engineering Roadmap](https://lucastrevvos.github.io/software-mastery-roadmap/mobile/) · [currículo](docs/mobile/data.json) · [guia completo](docs/mobile/README.md) · [progresso oficial](docs/mobile/PROGRESS.md) · [credenciais](docs/mobile/CERTIFICACOES.md) · [carreira e portfólio](docs/mobile/CARREIRA_PORTFOLIO.md).
+- **Persistência:** acompanhamento no navegador com exportação/importação JSON; conquistas oficiais são versionadas por commits, sem sincronização automática.
+
+> Esta é uma trilha de **especialização independente**, não apaga as demais trilhas, nem afirma domínio anterior apenas por experiência profissional.
+
 ## Preparação vestibular UFSC/IFC 2027 — Projeto Arquimedes
 
 - **Objetivo:** Engenharia Eletrônica; inscrição informada como realizada.
