@@ -86,7 +86,8 @@
       "topics": [
         {
           "id": "f0-01",
-          "title": "Como funcionam aplicativos móveis, sistemas operacionais e ciclo de vida"
+          "title": "Como funcionam aplicativos móveis, sistemas operacionais e ciclo de vida",
+          "lessonUrl": "lessons/F0.01-ANDROID-FOUNDATIONS.md"
         },
         {
           "id": "f0-02",
