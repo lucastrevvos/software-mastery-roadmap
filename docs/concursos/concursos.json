@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "lastVerified": "2026-11-01",
-  "lastVerifiedLabel": "1º de novembro de 2026",
+  "lastVerified": "2026-11-02",
+  "lastVerifiedLabel": "2 de novembro de 2026",
   "sourcesNote": "O radar é atualizado por verificações periódicas; não consulta bancas em tempo real ao abrir a página. Sempre confirme condições e prazos no edital.",
   "contests": [
     {
@@ -19,7 +19,7 @@
       "vacancies": "20 vagas + 80 CR em Florianópolis (referência de planejamento)",
       "source": "https://conhecimento.fgv.br/concursos/dataprev26",
       "priority": "Acompanhar resultado",
-      "notes": "Gabarito oficial PRELIMINAR publicado em 13/10/2026. Recursos de 14 a 15/10, prazo encerrado. Ainda sem gabarito definitivo/resultado de classificação na consulta oficial de 31/10. Estimativa pessoal Tipo 1: 37/70 e 59,5/115 (cartão a conferir). Resultado previsto para 14/01/2027.",
+      "notes": "Gabarito oficial PRELIMINAR publicado em 13/10/2026. Recursos de 14 a 15/10, prazo encerrado. Ainda sem gabarito definitivo/resultado de classificação na consulta oficial de 02/11. Estimativa pessoal Tipo 1: 37/70 e 59,5/115 (cartão a conferir). Resultado previsto para 14/01/2027.",
       "userStage": "prova realizada; gabarito preliminar corrigido",
       "verified": true
     },
@@ -1344,6 +1344,63 @@
       "status": "inscricoes",
       "userStage": "não informado",
       "verified": true
+    },
+    {
+      "id": "concordia-sc-analista-ti-001-2026",
+      "agency": "Prefeitura de Concórdia/SC",
+      "role": "Analista de Tecnologia da Informação",
+      "place": "Concórdia/SC",
+      "scope": "SC",
+      "board": "FEPESE",
+      "kind": "Concurso público estatutário",
+      "applicationEnd": "2026-12-03",
+      "examDate": "2027-01-31",
+      "salary": 8250.2,
+      "vacancies": "1 vaga imediata + cadastro de reserva",
+      "source": "https://2026cpconcordiaeduca.fepese.org.br/?arquivo=TR01_2026_001_CP_Concordia_Educa.pdf&go=download&inline=1",
+      "priority": "SC — ADS EXPRESSAMENTE ACEITO; inscrição abre 03/11 às 16h",
+      "notes": "Retificação nº 01 de 28/10/2026 INCLUIU o cargo no Edital 001/2026: 1 vaga + CR, 35h, vencimento-base R$ 8.250,20. Exige curso superior em Ciência da Computação, Engenharia de Software, Sistemas de Informação, Engenharia da Computação, TI, ANÁLISE E DESENVOLVIMENTO DE SISTEMAS, Redes, Processamento de Dados ou áreas correlatas, MAIS CNH categoria B. Inscrições 03/11/2026 às 16h a 03/12/2026 às 16h (Brasília); prova objetiva prevista 31/01/2027. Requisito ADS e CNH confirmados diretamente na retificação oficial; observar cronograma e eventuais alterações da banca.",
+      "status": "inscricoes",
+      "userStage": "não informado",
+      "verified": true
+    },
+    {
+      "id": "ifsp-183-26-docente-informatica-sao-paulo",
+      "agency": "Instituto Federal de São Paulo (IFSP)",
+      "role": "Professor EBTT efetivo — Informática (Edital 183/2026)",
+      "place": "São Paulo — campus São Paulo/SP",
+      "scope": "Nacional",
+      "board": "IFSP",
+      "kind": "Concurso público estatutário — 40h dedicação exclusiva",
+      "applicationEnd": "2026-11-17",
+      "examDate": "2026-12-13",
+      "salary": 6397.19,
+      "vacancies": "1 vaga de ampla concorrência no campus São Paulo",
+      "source": "https://ocs.spo.ifsp.edu.br/destaques/4723-edital-ifsp-%E2%80%94-concurso-p%C3%BAblico-para-contrata%C3%A7%C3%A3o-de-professores",
+      "priority": "ADS EXPRESSAMENTE ACEITO — professor efetivo, inscrição até 17/11",
+      "notes": "Edital 183/2026 e Retificação 188/2026; página OFICIAL do campus São Paulo confirma 1 vaga de ampla concorrência em Informática e inclui expressamente TECNOLOGIA EM ANÁLISE E DESENVOLVIMENTO DE SISTEMAS entre as graduações aceitas. Vencimento básico R$ 6.397,19 para 40h de dedicação exclusiva, acrescido de retribuição por titulação conforme grau, não confundir com salário final. Inscrições 06/10 a 17/11/2026, taxa R$ 200, prova objetiva prevista 13/12/2026; provas didática e títulos posteriores. Há outras vagas de Informática em diversos campi, a distribuir após leitura integral do anexo retificado; não confundir com Edital 123/2026 para professores substitutos.",
+      "status": "inscricoes",
+      "userStage": "não informado",
+      "verified": true
+    },
+    {
+      "id": "ifsp-183-26-docente-informatica-sao-vicente",
+      "agency": "Instituto Federal de São Paulo (IFSP)",
+      "role": "Professor EBTT efetivo — Informática (Edital 183/2026)",
+      "place": "São Vicente/SP",
+      "scope": "Nacional",
+      "board": "IFSP",
+      "kind": "Concurso público estatutário — 40h dedicação exclusiva",
+      "applicationEnd": "2026-11-17",
+      "examDate": "2026-12-13",
+      "salary": 6397.19,
+      "vacancies": "1 vaga de Informática confirmada pelo campus São Vicente",
+      "source": "https://svc.ifsp.edu.br/component/content/article/17-ultimas-noticias/95-ifsp-publica-edital-de-concurso-publico-para-contratacao-de-professores",
+      "priority": "Concurso docente efetivo — conferir requisito ADS específico",
+      "notes": "Página OFICIAL do IFSP campus São Vicente (08/10) confirma 1 vaga para Informática no Edital 183/2026 e inscrições até 17/11/2026. Vencimento básico R$ 6.397,19 + eventual retribuição por titulação, 40h dedicação exclusiva, prova objetiva prevista 13/12/2026. O campus São Paulo confirma ADS expressamente para sua vaga, mas o requisito EXATO da vaga de São Vicente ainda precisa de leitura no quadro do edital consolidado; não presumir que é idêntico. Edital integral do IFSP bloqueou acesso automatizado.",
+      "status": "inscricoes",
+      "userStage": "não informado",
+      "verified": true
     }
   ],
   "watchlist": [
@@ -1506,6 +1563,16 @@
       "name": "SETEC Campinas/SP — Analista Técnico Informática",
       "note": "1 vaga, R$ 8.285,32 + auxílio; inscrições até 04/12, prova 17/01. Prefeitura confirma; requisitos específicos de ADS precisam ser lidos no edital Indepac.",
       "url": "https://www.campinas.sp.gov.br/noticias/setec-abre-concursos-com-40-vagas-e-salario-de-ate-r-114-mil-em-campinas"
+    },
+    {
+      "name": "Concórdia/SC — Analista de TI, retificação incluiu cargo em 28/10",
+      "note": "Retificação OFICIAL nº 01 do Edital 001/2026 acrescentou 1 vaga + CR para Analista de TI (R$ 8.250,20/35h). Tecnólogo ADS EXPRESSAMENTE aceito, mas exige também CNH B. Inscrições de 03/11 às 16h a 03/12 às 16h; prova 31/01/2027. Fonte: retificação da FEPESE.",
+      "url": "https://2026cpconcordiaeduca.fepese.org.br/?arquivo=TR01_2026_001_CP_Concordia_Educa.pdf&go=download&inline=1"
+    },
+    {
+      "name": "IFSP — Edital 183/2026, professor EBTT efetivo de Informática",
+      "note": "Edital 183/2026 e Retificação 188/2026; 47 vagas totais em diversas áreas. Informática no campus São Paulo: 1 vaga AC e Tecnólogo ADS EXPRESSAMENTE aceito, conforme notícia oficial do campus. São Vicente: 1 vaga Informática confirmada, mas aceitação ADS específica ainda pendente de leitura do quadro retificado. Levantamento secundário indica mais campi; confirmar número e distribuição exata no edital integral antes de adicionar cada vaga. Inscrições até 17/11; prova 13/12. Não confundir com Edital 123/2026 (temporários).",
+      "url": "https://www.ifsp.edu.br/index.php/conteudo-do-menu-superior/17-ultimas-noticias/6152-ifsp-publica-edital-de-concurso-publico-para-contratacao-de-39-professores"
     }
   ]
 }
