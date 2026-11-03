@@ -2,12 +2,12 @@
 
 **Data-base:** 2026-10-30  
 **Modo:** começar do zero **sem diagnóstico inicial**.  
-**Status curricular:** F0.01 em estudo (material publicado, avaliação não realizada). Nenhum tópico comprovado.  
+**Status curricular:** F0.01 com LAB-MOB-001 publicado, aguardando execução e revisão prática. Nenhum tópico comprovado.  
 **Tópico atual:** [F0.01 — Como funcionam aplicativos móveis, sistemas operacionais e ciclo de vida](lessons/F0.01-ANDROID-FOUNDATIONS.md) — responder avaliação e realizar laboratório após correção.
 
 | Fase | Estado inicial | Tópicos comprovados | Gate |
 |---|---|---:|---|
-| F0 — Fundamentos e ambiente | F0.01 em estudo | 0/8 | Pendente |
+| F0 — Fundamentos e ambiente | LAB-MOB-001 disponível; execução pendente | 0/8 | Pendente |
 | F1 — Kotlin | Não iniciado | 0/12 | Pendente |
 | F2 — Android / Compose | Não iniciado | 0/12 | Pendente |
 | F3 — Arquitetura | Não iniciado | 0/12 | Pendente |
@@ -17,6 +17,9 @@
 | **Total** | **Não iniciado** | **0/80** | — |
 
 Experiências profissionais anteriores com **Carga Cheia em Flutter, KM One em Android e backend .NET** são recursos de portfólio, mas os tópicos da **nova formação** ainda não foram avaliados nem promovidos. O zero representa somente o estado do currículo.
+
+
+**Laboratório atual:** [LAB-MOB-001 — Android Lifecycle na prática](labs/LAB-MOB-001-LIFECYCLE.md). Método hands-on sem quiz: executar, observar Logcat, investigar e registrar. O tópico permanece **não comprovado** até a revisão do código e das evidências.
 
 ## Registro de evidências
 
