@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "lastVerified": "2026-11-02",
-  "lastVerifiedLabel": "2 de novembro de 2026",
+  "lastVerified": "2026-11-03",
+  "lastVerifiedLabel": "03/11/2026",
   "sourcesNote": "O radar é atualizado por verificações periódicas; não consulta bancas em tempo real ao abrir a página. Sempre confirme condições e prazos no edital.",
   "contests": [
     {
@@ -1573,6 +1573,21 @@
       "name": "IFSP — Edital 183/2026, professor EBTT efetivo de Informática",
       "note": "Edital 183/2026 e Retificação 188/2026; 47 vagas totais em diversas áreas. Informática no campus São Paulo: 1 vaga AC e Tecnólogo ADS EXPRESSAMENTE aceito, conforme notícia oficial do campus. São Vicente: 1 vaga Informática confirmada, mas aceitação ADS específica ainda pendente de leitura do quadro retificado. Levantamento secundário indica mais campi; confirmar número e distribuição exata no edital integral antes de adicionar cada vaga. Inscrições até 17/11; prova 13/12. Não confundir com Edital 123/2026 (temporários).",
       "url": "https://www.ifsp.edu.br/index.php/conteudo-do-menu-superior/17-ultimas-noticias/6152-ifsp-publica-edital-de-concurso-publico-para-contratacao-de-39-professores"
+    },
+    {
+      "name": "Maravilha/SC — encerramento das inscrições em 03/11",
+      "note": "Confirmado na FURB em 03/11/2026: inscrições do Edital 001/2026 encerram em 03/11 às 23h59; pagamento da taxa até 04/11; prova objetiva 29/11. Inclui cargos de TI. Requisitos de ADS dependem da descrição específica do cargo no edital.",
+      "url": "https://furb.selecao.net.br/informacoes/564/"
+    },
+    {
+      "name": "Porto Alegre/RS — encerramento das inscrições em 03/11",
+      "note": "Confirmado no portal oficial municipal em 03/11/2026: Analista de Tecnologia da Informação e Comunicação, inscrições até 03/11 às 17h pela Fundatec; prova prevista 20/12. Exige graduação em área relacionada à TI; aceitação nominal de ADS não confirmada.",
+      "url": "https://prefeitura.poa.br/smap/noticias/prefeitura-abre-concurso-para-diferentes-areas-e-formacao-de-cadastro-reserva"
+    },
+    {
+      "name": "Dataprev 2026 — acompanhamento 03/11",
+      "note": "Página oficial da FGV consultada em 03/11/2026: publicações mais recentes seguem em 14/10 (recursos) e 13/10 (gabarito preliminar); não identificado gabarito definitivo nem classificação para Desenvolvimento de Software em Florianópolis.",
+      "url": "https://conhecimento.fgv.br/concursos/dataprev26"
     }
   ]
 }
