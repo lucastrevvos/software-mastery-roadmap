@@ -96,6 +96,11 @@ Cada projeto deve permitir a reprodução do cenário, justificar arquitetura, a
 
 Headline de trabalho: **Software Engineer | Android Native & Flutter | Mobile Architecture | Kotlin & .NET**. O histórico sênior geral não equivale automaticamente à senioridade Android; evoluir o título conforme evidências e a atuação real. Ver [guia de carreira](CARREIRA_PORTFOLIO.md).
 
+## Laboratório ativo — F0.01
+
+- [**LAB-MOB-001 — Android Lifecycle na prática**](labs/LAB-MOB-001-LIFECYCLE.md): criar LifecycleLab, instrumentar Activity, observar Logcat, provocar Home/retorno/rotação, registrar evidências e submeter código para revisão. **Sem quiz.**
+- **Estado:** laboratório preparado; execução e comprovação pendentes.
+
 ## Aula 01 publicada — F0.01
 
 - [**F0.01 — Como funcionam os aplicativos, Android e lifecycle**](lessons/F0.01-ANDROID-FOUNDATIONS.md) — explicações, exemplos, código ilustrativo, sete exercícios e avaliação de 16 pontos.
