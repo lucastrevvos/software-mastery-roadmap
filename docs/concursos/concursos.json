@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "lastVerified": "2026-11-04",
-  "lastVerifiedLabel": "04/11/2026",
+  "lastVerified": "2026-11-05",
+  "lastVerifiedLabel": "05/11/2026",
   "sourcesNote": "O radar é atualizado por verificações periódicas; não consulta bancas em tempo real ao abrir a página. Sempre confirme condições e prazos no edital.",
   "contests": [
     {
@@ -19,7 +19,7 @@
       "vacancies": "20 vagas + 80 CR em Florianópolis (referência de planejamento)",
       "source": "https://conhecimento.fgv.br/concursos/dataprev26",
       "priority": "Acompanhar resultado",
-      "notes": "Gabarito oficial PRELIMINAR publicado em 13/10/2026. Recursos de 14 a 15/10, prazo encerrado. 2ª retificação publicada em 04/11: vagas adicionais de reserva indígena/quilombola com distribuição dinâmica nacional e novas datas de avaliações; ainda sem gabarito definitivo/resultado de classificação na consulta oficial de 04/11. Estimativa pessoal Tipo 1: 37/70 e 59,5/115 (cartão a conferir). Resultado previsto para 14/01/2027.",
+      "notes": "Gabarito oficial PRELIMINAR publicado em 13/10/2026. Recursos de 14 a 15/10, prazo encerrado. 2ª retificação publicada em 04/11: vagas adicionais de reserva indígena/quilombola com distribuição dinâmica nacional e novas datas de avaliações; ainda sem gabarito definitivo/resultado de classificação na consulta oficial de 05/11. Estimativa pessoal Tipo 1: 37/70 e 59,5/115 (cartão a conferir). Resultado previsto para 14/01/2027.",
       "userStage": "prova realizada; gabarito preliminar corrigido",
       "verified": true
     },
@@ -735,7 +735,7 @@
       "vacancies": "Cadastro de reserva; não há vagas imediatas fixadas; salário de Analista R$ 16.040,88 e Técnico R$ 9.776,71",
       "source": "https://www.concursosfcc.com.br",
       "priority": "NOVO NO RADAR — prazo 05/11, TI federal",
-      "notes": "Edital nº 1/2026 publicado no DOU 02/10, retificação nº 2 publicada 08/10. Oportunidades para Analista Judiciário em TI e Técnico Judiciário em TI, ambas de nível superior, em cadastro reserva. Exigências específicas de cada especialidade e aceitação nominal de ADS ainda não conferidas no edital integral; NÃO presumir. Inscrições até 05/11 às 23h59 (horário Brasília), taxa Analista R$ 110 e Técnico R$ 90, prova 17/01/2027. Página oficial de inscrição: https://www.concursosfcc.com.br. A retificação restringiu lotação por preferências a cargos específicos e atualizou resolução de assédio/discriminação."
+      "notes": "Edital nº 1/2026 publicado no DOU 02/10, retificação nº 2 publicada 08/10. Oportunidades para Analista Judiciário em TI e Técnico Judiciário em TI, ambas de nível superior, em cadastro reserva. Exigências específicas de cada especialidade e aceitação nominal de ADS ainda não conferidas no edital integral; NÃO presumir. Inscrições até 05/11 às 23h59 (horário Brasília), taxa Analista R$ 110 e Técnico R$ 90, prova 17/01/2027. Página oficial de inscrição: https://www.concursosfcc.com.br. A retificação restringiu lotação por preferências a cargos específicos e atualizou resolução de assédio/discriminação. Verificação 05/11: inscrições encerram hoje às 23h59 (Brasília), pagamento até 06/11, prova prevista 17/01/2027. Retificação de 29/10 reportada em fonte especializada, envolvendo Enfermagem, PCD, TAF e regras de discursiva; verificar documento oficial para impacto em TI. Aceitação nominal do Tecnólogo ADS não confirmada no edital integral."
     },
     {
       "id": "sead-ap-analista-ti-26",
@@ -1597,6 +1597,11 @@
     {
       "name": "TCE-GO — inscrições terminam em 06/11",
       "note": "Técnico de Controle Externo, especialidade TI: 10 vagas, ensino médio; inscrições até 06/11/2026 às 23h59 (Brasília), segundo cronograma divulgado; confirmar alterações na FCC. Prova prevista 17/01/2027.",
+      "url": "https://www.concursosfcc.com.br"
+    },
+    {
+      "name": "TRT8 — último dia de inscrição 05/11/2026",
+      "note": "Analista Judiciário — TI e Técnico Judiciário — TI, cadastro de reserva. Prazo 05/11/2026 às 23h59 (Brasília), pagamento até 06/11; prova prevista 17/01/2027. Requisito nominal de ADS ainda não validado. Consultar banca FCC e edital/retificações.",
       "url": "https://www.concursosfcc.com.br"
     }
   ]
