@@ -4,6 +4,7 @@
   const VALID_STATUSES = ["not-started", "studying", "proven"];
   let curriculum = null;
   let state = loadState();
+  let coachedLesson = null;
   const $ = id => document.getElementById(id);
   const safe = value => String(value ?? "").replace(/[&<>"']/g, c => ({
     "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#39;"
@@ -24,6 +25,31 @@
     } catch {return {version:1,weeks:{},gates:{}};}
   }
   function save() {try {localStorage.setItem(STORE_KEY, JSON.stringify(state));} catch(e) { console.warn("Persistência local indisponível",e); }}
+  function applyCoachingProgress(remote) {
+    if(!remote || remote.schemaVersion!==1 || !remote.weeks || typeof remote.weeks!=="object")return;
+    const levels={"not-started":0,"studying":1,"proven":2};
+    let changed=false;
+    for(const [key,record] of Object.entries(remote.weeks)){
+      if(!/^m[1-5]-w([1-9]|[1-3][0-9]|40)$/.test(key) || !record || !VALID_STATUSES.includes(record.status))continue;
+      const previous=state.weeks[key] || {status:"not-started",evidence:""};
+      const remoteEvidence=String(record.evidence||"").trim();
+      if(record.status==="proven"&&!remoteEvidence)continue;
+      if(levels[record.status] > (levels[previous.status]??0)){
+        state.weeks[key]={status:record.status,evidence:record.status==="proven"?remoteEvidence:String(previous.evidence||"")};
+        changed=true;
+      }
+    }
+    if(remote.gates && typeof remote.gates==="object"){
+      for(const [key,record] of Object.entries(remote.gates)){
+        if(!/^m[1-5]-[ABC]$/.test(key)||!record?.validated||!String(record.evidence||"").trim())continue;
+        if(!state.gates[key]?.validated){state.gates[key]={validated:true,evidence:String(record.evidence).trim()};changed=true;}
+      }
+    }
+    if(remote.activeModule && Number.isInteger(remote.activeWeek) && typeof remote.lessonLink==="string" && /^https:\/\/github\.com\/lucastrevvos\/software-mastery-roadmap\/blob\/main\/docs\/engenharia-avancada\/aulas\/[a-z0-9-]+\.md$/.test(remote.lessonLink)){
+      coachedLesson={key:remote.activeModule+"-w"+remote.activeWeek,title:String(remote.activeLesson||"Aula guiada"),url:remote.lessonLink};
+    }
+    if(changed)save();
+  }
   const weekKey = (m, w) => m.id + "-w" + w;
   const gateKey = (m, g) => m.id + "-" + g.label;
   const weekInfo = key => state.weeks[key] || {status:"not-started",evidence:""};
@@ -67,6 +93,7 @@
       '<details><summary>Teoria profunda, laboratório e evidência</summary><div class="week-body">' +
       '<h4>Teoria e mecanismos</h4><p>'+safe(week[1])+'</p>' +
       '<h4>Laboratório</h4><p class="lab">'+safe(week[2])+'</p>' +
+      (coachedLesson && coachedLesson.key===k?'<p class="note"><a href="'+safe(coachedLesson.url)+'" target="_blank" rel="noopener noreferrer">Abrir material da aula: '+safe(coachedLesson.title)+' ↗</a></p>':'') +
       '<div class="week-controls"><label>Status<select data-week-status="'+safe(k)+'">' +
       [['not-started','Não iniciado'],['studying','Estudando'],['proven','Comprovado']].map(a=>'<option value="'+a[0]+'"'+(status===a[0]?' selected':'')+'>'+a[1]+'</option>').join('') +
       '</select></label><label>Evidência: link para commit, teste, relatório ou descrição<textarea rows="2" data-week-evidence="'+safe(k)+'" placeholder="Ex.: commit SHA, relatório dos testes, hipótese + resultado...">'+safe(w.evidence||"")+'</textarea></label></div>' +
@@ -192,6 +219,10 @@
     try {
       const r=await fetch("data.json",{cache:"no-cache"});if(!r.ok)throw new Error("HTTP "+r.status);
       curriculum=await r.json();
+      try {
+        const coachingResponse=await fetch("coaching-progress.json",{cache:"no-cache"});
+        if(coachingResponse.ok)applyCoachingProgress(await coachingResponse.json());
+      } catch(e) {console.warn("Acompanhamento de mentoria indisponível; usando progresso local.",e);}
       if(!Array.isArray(curriculum.modules)||curriculum.modules.length!==5||curriculum.modules.some(m=>m.weeks.length!==8))throw new Error("Estrutura curricular inesperada.");
       renderStatic();renderModule();
       window.addEventListener("hashchange",()=>{renderModule();});
