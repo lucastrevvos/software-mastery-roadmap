@@ -143,7 +143,7 @@
         alert("Registre uma evidência concreta (commit, teste, resultado ou relatório) antes de marcar Comprovado.");
         t.value=o.status||"not-started";return;
       }
-      o.status=v;state.weeks[k]=o;save();renderModule();return;
+      o.status=v;state.weeks[k]=o;save();renderModule();const activeWeek=document.getElementById("week-"+k.split("-w")[1]);if(activeWeek){const details=activeWeek.querySelector("details");if(details)details.open=true;}return;
     }
     const g=t.dataset.gateStatus;
     if(g){
