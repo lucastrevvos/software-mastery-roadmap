@@ -1,0 +1,1053 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-06",
+  "slug": "engenharia-avancada",
+  "title": "Engenharia de Software Avançada",
+  "subtitle": "Do código correto à arquitetura e operação de sistemas complexos",
+  "audience": "Desenvolvedor em transição para Senior / Staff Software Engineer e Software Architect",
+  "durationWeeks": 40,
+  "weeklyHours": "12–16",
+  "estimatedHours": "480–640",
+  "allocation": [
+    {
+      "title": "Teoria e documentação",
+      "pct": 25
+    },
+    {
+      "title": "Implementação e laboratórios",
+      "pct": 55
+    },
+    {
+      "title": "Testes, análise e revisão",
+      "pct": 20
+    }
+  ],
+  "primaryStack": [
+    "C# / .NET",
+    "PostgreSQL",
+    "Oracle Database / PL/SQL",
+    "Docker",
+    "RabbitMQ",
+    "OpenTelemetry",
+    "Kubernetes",
+    "AWS ou Azure"
+  ],
+  "secondaryStack": [
+    "TypeScript / NestJS",
+    "Redis",
+    "Terraform",
+    "Prometheus",
+    "Grafana",
+    "k6"
+  ],
+  "integratedProject": {
+    "name": "ServiceOps",
+    "summary": "Plataforma fictícia de operações de serviços sob demanda: precificação, seleção de profissionais, agenda, reservas concorrentes, ordens de serviço, cobranças simuladas, eventos, observabilidade e recuperação de falhas.",
+    "progression": [
+      "Motor de precificação em memória",
+      "Reservas transacionais em PostgreSQL e laboratório Oracle",
+      "Modular Monolith com DDD",
+      "Billing Service distribuído com Saga e Outbox/Inbox",
+      "Ambiente operável em cloud, testes de carga e recuperação"
+    ],
+    "rule": "Evitar microserviços e abstrações sem justificativa explícita; cada evolução nasce de requisitos, medições e trade-offs."
+  },
+  "masteryScale": [
+    {
+      "value": 0,
+      "label": "Não demonstrado",
+      "description": "Não consegue explicar nem implementar."
+    },
+    {
+      "value": 1,
+      "label": "Teórico",
+      "description": "Reconhece termos, mas depende de instruções."
+    },
+    {
+      "value": 2,
+      "label": "Assistido",
+      "description": "Resolve casos conhecidos com ajuda."
+    },
+    {
+      "value": 3,
+      "label": "Autônomo",
+      "description": "Implementa, testa, diagnostica e justifica sozinho."
+    },
+    {
+      "value": 4,
+      "label": "Domínio",
+      "description": "Resolve casos novos, avalia trade-offs e revisa decisões de terceiros."
+    }
+  ],
+  "approval": [
+    "Correção: invariantes críticas comprovadas por testes.",
+    "Profundidade: explica os mecanismos, não só as APIs.",
+    "Evidência: código, experimentos e medições reproduzíveis.",
+    "Trade-offs: compara pelo menos uma alternativa descartada.",
+    "Diagnóstico: resolve uma falha ou requisito novo sem roteiro.",
+    "Revisão: defende decisões como em uma entrevista sênior."
+  ],
+  "modules": [
+    {
+      "id": "m1",
+      "number": 1,
+      "start": 1,
+      "end": 8,
+      "title": "Fundação de Código, Algoritmos e Testes",
+      "focus": "Construir software correto, testável e eficiente.",
+      "summary": "Entender o custo computacional e produzir código verificável antes de introduzir persistência ou distribuição.",
+      "objectives": [
+        "Analisar complexidade de tempo e espaço com Big O, Omega e Theta e estimar custos amortizados.",
+        "Selecionar estruturas de dados adequadas a acesso, busca, atualização, memória e distribuição de entradas.",
+        "Explicar execução, stack/heap, CLR, alocação, GC, mutabilidade e efeitos colaterais.",
+        "Implementar algoritmos e argumentar correção mediante invariantes e casos-limite.",
+        "Praticar refatoração, coesão, acoplamento e Dependency Inversion no nível de código.",
+        "Construir testes unitários, de propriedades, mutação, integração e desempenho adequados ao risco.",
+        "Medir gargalos reais por profiling e benchmarking evitando conclusões de microbenchmark mal controlado.",
+        "Automatizar qualidade e conseguir defender mudanças em revisão técnica."
+      ],
+      "weeks": [
+        [
+          "Runtime, fundamentos e código determinístico",
+          "Stack/heap, value/reference types, CLR, JIT, GC, igualdade vs identidade, imutabilidade, pureza, exceções e efeitos colaterais.",
+          "Implementar regras de preço puras; testar arredondamento, entradas inválidas, idempotência de cálculo e invariantes."
+        ],
+        [
+          "Complexidade formal",
+          "Big O/Ω/Θ, pior/médio caso, análise amortizada, recursão, árvores de recorrência, custo de espaço e crescimento de entrada.",
+          "Comparar algoritmos de busca/ordenação em datasets crescentes; relatório com hipóteses, medições e limites."
+        ],
+        [
+          "Estruturas de dados",
+          "Arrays, listas, stacks, queues, hash tables, colisões, sets, heaps, árvores balanceadas, grafos e cache locality.",
+          "Indexar profissionais por região, especialidade, preço e disponibilidade; justificar complexidade das operações."
+        ],
+        [
+          "Algoritmos e provas de correção",
+          "Busca binária, sorting, greedy, programação dinâmica, BFS, DFS, caminhos mínimos e invariantes de laço.",
+          "Implementar duas estratégias de matching, uma solução de referência e propriedades de equivalência."
+        ],
+        [
+          "Design de código e refatoração",
+          "SOLID, composição, coesão, coupling, interfaces, Dependency Inversion, error handling, code smells e refactoring seguro.",
+          "Introduzir políticas de cálculo intercambiáveis com testes de regressão e ADR mínimo."
+        ],
+        [
+          "Estratégias de teste",
+          "TDD, equivalence partitioning, boundary values, parametrização, mocks/stubs/fakes, pirâmide de testes e contracts.",
+          "Consolidar suíte de testes, separar dublês legítimos de mocks que acoplam testes à implementação."
+        ],
+        [
+          "Testes avançados e CI",
+          "Property-based testing, mutation testing, fuzzing, determinismo, testes de integração, análise estática e pipelines.",
+          "FsCheck + mutation testing + GitHub Actions; induzir defeitos para provar que os testes os detectam."
+        ],
+        [
+          "Performance e revisão",
+          "CPU/allocation profiling, BenchmarkDotNet, warm-up, JIT, GC, throughput, p50/p95 e trade-offs memória/CPU.",
+          "Executar benchmark controlado, eliminar gargalo comprovado e defender a implementação em revisão."
+        ]
+      ],
+      "keywords": [
+        [
+          "Algoritmos",
+          "Time Complexity, Space Complexity, Amortized Analysis, Algorithmic Invariants, análise assintótica"
+        ],
+        [
+          "Estruturas",
+          "Hash Table, Balanced Tree, Priority Queue, Heap, Graph Traversal, estruturas persistentes"
+        ],
+        [
+          "Runtime",
+          ".NET CLR, Garbage Collection, Memory Allocation, Value Types vs Reference Types, JIT Compilation"
+        ],
+        [
+          "Design",
+          "Referential Transparency, Pure Functions, Cohesion and Coupling, Dependency Inversion, Code Smells"
+        ],
+        [
+          "Testes",
+          "Test Pyramid, Property-Based Testing, Mutation Testing, Test Doubles, Boundary Value Analysis"
+        ],
+        [
+          "Performance",
+          "BenchmarkDotNet, CPU Profiling, Allocation Profiling, Hot Paths, Cache Locality"
+        ]
+      ],
+      "project": {
+        "name": "Motor de precificação e seleção de profissionais",
+        "stack": "C#/.NET · xUnit · FsCheck · BenchmarkDotNet · GitHub Actions",
+        "scenario": "Uma solicitação precisa ser precificada e atribuída aos profissionais elegíveis, com ranking determinístico e regras extensíveis, sem banco de dados.",
+        "requirements": [
+          "Calcular valores a partir de distância, duração, categoria, demanda e desconto com arredondamento monetário explícito.",
+          "Filtrar por habilidades, capacidade, área e disponibilidade; ordenar com desempates documentados.",
+          "Tratar entradas inválidas, vazias e limites numéricos.",
+          "Implementar duas estratégias de seleção e um algoritmo de referência simples.",
+          "Permitir trocar política sem efeitos colaterais acidentais.",
+          "Fornecer benchmarks com método e ambiente documentados.",
+          "Criar testes de propriedades e mutação para invariantes.",
+          "Automatizar build, testes e análise estática via CI."
+        ]
+      },
+      "checkpoints": [
+        {
+          "label": "A",
+          "week": 2,
+          "title": "Fundamentos",
+          "items": [
+            "Explicar tempo e espaço de funções críticas.",
+            "Demonstrar degradação com crescimento do input.",
+            "Diferenciar valor, identidade e mutabilidade."
+          ]
+        },
+        {
+          "label": "B",
+          "week": 5,
+          "title": "Algoritmos e design",
+          "items": [
+            "Comparar duas implementações em dados reproduzíveis.",
+            "Garantir isolamento de estado entre políticas.",
+            "Justificar cada abstração e trade-off."
+          ]
+        },
+        {
+          "label": "C",
+          "week": 8,
+          "title": "Entrega",
+          "items": [
+            "Testes automatizados para invariantes críticas.",
+            "Cobertura de linhas ≥85% no domínio, sem tratá-la como prova isolada.",
+            "Mutation score ≥75% e análise de mutantes sobreviventes.",
+            "CI verde, análise estática e benchmarks documentados.",
+            "Avaliação: implementar mudança inesperada preservando correção e justificando impacto."
+          ]
+        }
+      ],
+      "readings": [
+        "Introduction to Algorithms — Cormen et al.",
+        "The Algorithm Design Manual — Steven Skiena",
+        "A Philosophy of Software Design — John Ousterhout",
+        "Refactoring — Martin Fowler"
+      ],
+      "links": [
+        {
+          "label": "ASP.NET Core — Integration Tests",
+          "url": "https://learn.microsoft.com/en-us/aspnet/core/test/integration-tests"
+        },
+        {
+          "label": "BenchmarkDotNet",
+          "url": "https://benchmarkdotnet.org/"
+        }
+      ]
+    },
+    {
+      "id": "m2",
+      "number": 2,
+      "start": 9,
+      "end": 16,
+      "title": "Engenharia de Dados, Concorrência e Internos de SGBDs",
+      "focus": "Garantir integridade e desempenho sob concorrência.",
+      "summary": "Dominar MVCC, snapshots, locks, níveis de isolamento e planejamento de consultas por experimentos com conexões reais.",
+      "objectives": [
+        "Modelar esquemas relacionais e impor integridade com constraints e chaves.",
+        "Explicar páginas, B+ trees, buffers, WAL/redo/undo, checkpoints e crash recovery.",
+        "Descrever visibilidade MVCC no PostgreSQL e consistência de leitura via undo/SCN no Oracle.",
+        "Reproduzir dirty reads (quando permitidos), non-repeatable reads, phantoms, lost update e write skew.",
+        "Escolher isolamento, locks e controle otimista segundo as invariantes.",
+        "Diagnosticar lock waits, deadlocks, serialization failures, timeouts e retries.",
+        "Interpretar EXPLAIN/planos, cardinalidade, joins e índices; otimizar com medição.",
+        "Escrever SQL e PL/SQL corretos com transações reproduzíveis em sessões independentes."
+      ],
+      "weeks": [
+        [
+          "Modelagem relacional",
+          "Álgebra relacional, ER, chaves, 1NF–BCNF, dependências funcionais, temporalidade, constraints e schema evolution.",
+          "Criar esquema ServiceOps com constraints, migrações e testes de integridade."
+        ],
+        [
+          "Internos de SGBD",
+          "Pages, B+ trees, buffer pool, WAL, redo/undo, checkpoints, recovery, write amplification e index-only scans.",
+          "Inspecionar índices e metadados de armazenamento e registrar o efeito de mudanças de escrita."
+        ],
+        [
+          "MVCC e snapshots",
+          "Snapshot visibility, version chains/tuples, VACUUM, undo, SCN, read consistency e long-running transactions.",
+          "Reproduzir leitura durante transação não commitada em sessões físicas independentes PostgreSQL e Oracle."
+        ],
+        [
+          "Isolamento e anomalias",
+          "Read Committed, Repeatable Read, Snapshot Isolation, Serializable/SSI, lost update, phantom e write skew.",
+          "Criar matriz experimental por SGBD: interleaving, isolamento, observação e motivo."
+        ],
+        [
+          "Locks e controle de concorrência",
+          "SELECT FOR UPDATE, row/table locks, optimistic versioning, deadlocks, waits, timeouts e retries seguros.",
+          "Produzir deadlock reproduzível, identificar bloqueadores e comparar controle pessimista/otimista."
+        ],
+        [
+          "Otimização de consultas",
+          "Cost-based optimization, seletividade, cardinality estimation, nested loop, hash/merge join, composite/covering indexes.",
+          "Capturar EXPLAIN ANALYZE/DBMS_XPLAN antes/depois de otimizar duas consultas."
+        ],
+        [
+          "PL/SQL e operação",
+          "Packages, procedures, exception handling, connection pooling, N+1, operações em lote, partições, online migrations.",
+          "Implementar rotina transacional Oracle PL/SQL e comparar com implementação PostgreSQL."
+        ],
+        [
+          "Teste de concorrência e defesa",
+          "Race conditions, barriers, contention, transaction retries, capacidade e incident analysis.",
+          "Rodar suíte com 200 requisições simultâneas e elaborar relatório de consistência/desempenho."
+        ]
+      ],
+      "keywords": [
+        [
+          "MVCC",
+          "Multi-Version Concurrency Control, Snapshot Visibility, Tuple Versioning, Undo Segments, SCN, Read Consistency"
+        ],
+        [
+          "Anomalias",
+          "Dirty Read, Non-Repeatable Read, Phantom Read, Lost Update, Write Skew, Serialization Anomaly"
+        ],
+        [
+          "Isolamento",
+          "Snapshot Isolation, Serializable Snapshot Isolation (SSI), Repeatable Read, Serializability"
+        ],
+        [
+          "Bloqueios",
+          "Pessimistic Locking, Optimistic Locking, Row-Level Lock, Deadlock Detection, Lock Contention"
+        ],
+        [
+          "Internos",
+          "Write-Ahead Log, Buffer Pool, B+ Tree, Crash Recovery, Cost-Based Optimizer"
+        ],
+        [
+          "Oracle",
+          "PL/SQL, UNDO_RETENTION, DBMS_XPLAN, ORA-08177, SCN"
+        ],
+        [
+          "PostgreSQL",
+          "EXPLAIN ANALYZE, pg_locks, pg_stat_activity, VACUUM, SQLSTATE 40001"
+        ]
+      ],
+      "project": {
+        "name": "Motor transacional de reservas e alocação",
+        "stack": "ASP.NET Core · PostgreSQL · Oracle Free · SQL/PLSQL · Testcontainers",
+        "scenario": "Dez vagas disponíveis são disputadas por 200 solicitações elegíveis e distintas; o sistema pode confirmar exatamente dez, nunca ultrapassando a capacidade, apesar de concorrência.",
+        "requirements": [
+          "Persistir domínio com constraints, índices e migrações.",
+          "Criar/confirmar/cancelar reservas sob transações locais.",
+          "Demonstrar controle pessimista e otimista.",
+          "Reproduzir snapshots e anomalias com duas conexões físicas.",
+          "Empregar barreiras de sincronização para tornar interleavings reproduzíveis.",
+          "Distinguir conflitos transitórios e falhas permanentes; retry sem duplicar efeitos externos.",
+          "Criar e medir consultas de disponibilidade; investigar planos.",
+          "Implementar operação transacional em PL/SQL com relatório Oracle × PostgreSQL."
+        ]
+      },
+      "checkpoints": [
+        {
+          "label": "A",
+          "week": 11,
+          "title": "MVCC e persistência",
+          "items": [
+            "Explicar visibilidade de versões em PostgreSQL e Oracle.",
+            "Demonstrar read consistency com transações concorrentes independentes.",
+            "Distinguir undo, WAL e redo."
+          ]
+        },
+        {
+          "label": "B",
+          "week": 13,
+          "title": "Isolamento e contenção",
+          "items": [
+            "Matriz de anomalias observadas por SGBD/nível de isolamento.",
+            "Um deadlock reproduzido, com sessões e recursos identificados.",
+            "Lost update ou write skew identificado e corrigido.",
+            "Comparativo de controle otimista e pessimista."
+          ]
+        },
+        {
+          "label": "C",
+          "week": 16,
+          "title": "Consistência e desempenho",
+          "items": [
+            "200 solicitações concorrentes sobre dez vagas: exatamente dez confirmações válidas, sob condições declaradas.",
+            "Nenhuma violação de capacidade nem contagem incorreta após cancelamento/retry.",
+            "Integridade protegida também por constraints.",
+            "Duas consultas otimizadas com planos e evidências.",
+            "Laboratório PL/SQL e comparação de comportamento observado.",
+            "Avaliação: diagnosticar duplicações ou pool saturado e demonstrar correção."
+          ]
+        }
+      ],
+      "readings": [
+        "Database Internals — Alex Petrov",
+        "Designing Data-Intensive Applications — Kleppmann e Riccomini",
+        "Documentação oficial PostgreSQL",
+        "Oracle Database Concepts"
+      ],
+      "links": [
+        {
+          "label": "PostgreSQL — Transaction Isolation",
+          "url": "https://www.postgresql.org/docs/current/transaction-iso.html"
+        },
+        {
+          "label": "Oracle — Data Concurrency and Consistency",
+          "url": "https://docs.oracle.com/en/database/oracle/oracle-database/23/cncpt/data-concurrency-and-consistency.html"
+        }
+      ],
+      "caveat": "PostgreSQL Repeatable Read usa snapshot com semântica mais forte do que o padrão SQL para phantoms, mas não é serialização completa; Oracle Serializable tem implementação e efeitos distintos. Não considerar MVCC sinônimo de ausência de locks."
+    },
+    {
+      "id": "m3",
+      "number": 3,
+      "start": 17,
+      "end": 24,
+      "title": "Design de Software, Clean Architecture e Domain-Driven Design (DDD)",
+      "focus": "Definir regras, limites de responsabilidade e evolução de software.",
+      "summary": "Arquitetura serve a requisitos e trade-offs; a solução inicial deve ser um monólito modular com limites verificáveis, não microserviços por estética.",
+      "objectives": [
+        "Traduzir requisitos e atributos de qualidade em restrições arquiteturais verificáveis.",
+        "Avaliar modularidade, coesão, acoplamento e dependências.",
+        "Distinguir Clean, Hexagonal, Onion e Layered Architecture.",
+        "Aplicar DDD estratégico: core/supporting domain, bounded contexts, ubiquitous language e context mapping.",
+        "Aplicar DDD tático: aggregates, entities, value objects, factories, repositories e domain services.",
+        "Definir invariantes e boundaries transacionais de agregados.",
+        "Distinguir domain/integration events, commands, queries e CQRS sem dogmatismo.",
+        "Documentar arquitetura C4, ADRs e testes estruturais automáticos."
+      ],
+      "weeks": [
+        [
+          "Atributos de qualidade e decisões",
+          "Functional/non-functional requirements, availability, scalability, modifiability, testability, security, quality scenarios e trade-offs.",
+          "Escrever cenários verificáveis e restrições arquiteturais reais."
+        ],
+        [
+          "Modularidade e dependências",
+          "SOLID, cohesion/coupling, package principles, dependency inversion, architecture fitness functions.",
+          "Medir dependências e identificar ciclos e pontos de alto acoplamento."
+        ],
+        [
+          "Clean/Hexagonal/Onion",
+          "Layers, ports & adapters, composition root, dependency rule, interfaces, testes sem infra, trade-offs de abstração.",
+          "Isolar regras de negócio de ORM, HTTP e SDKs."
+        ],
+        [
+          "DDD estratégico",
+          "Subdomains, core domain, bounded contexts, ubiquitous language, context mapping, shared kernel e ACL.",
+          "Event Storming; mapear Pricing, Scheduling, Orders e Billing."
+        ],
+        [
+          "DDD tático",
+          "Aggregates, aggregate roots, invariantes, entities, value objects, domain services, factories e repositories.",
+          "Modelar aggregates e testar invariantes em cenários normais e concorrentes."
+        ],
+        [
+          "CQRS e fluxo de aplicação",
+          "Commands/queries, application services, domain events, integration events, rich vs anemic domain, read models.",
+          "Implementar use cases; separar leitura/escrita só se houver justificativa documentada."
+        ],
+        [
+          "Modular Monolith",
+          "Module boundaries, versioned contracts, API evolution, internal events, database ownership e ADRs.",
+          "Definir interfaces intermodulares e anti-corruption layer para gateway financeiro fictício."
+        ],
+        [
+          "Revisão e arquitetura evolutiva",
+          "Architecture review, technical debt, decision records, structural tests e trade-off analysis.",
+          "Defender arquitetura escolhida e executar regressões funcionais/estruturais."
+        ]
+      ],
+      "keywords": [
+        [
+          "Limites",
+          "Modularity, Separation of Concerns, Architectural Boundaries, Cohesion and Coupling"
+        ],
+        [
+          "Clean Architecture",
+          "Dependency Rule, Ports and Adapters, Hexagonal Architecture, Composition Root"
+        ],
+        [
+          "DDD estratégico",
+          "Strategic Design, Bounded Context, Context Mapping, Ubiquitous Language, Subdomains"
+        ],
+        [
+          "DDD tático",
+          "Aggregate Root, Value Object, Domain Invariants, Repository Pattern, Domain Service"
+        ],
+        [
+          "Modelagem",
+          "Anemic Domain Model, Rich Domain Model, Transactional Boundary, Aggregate Consistency"
+        ],
+        [
+          "Evolução",
+          "Modular Monolith, Architecture Decision Record, Architecture Fitness Function, Change Coupling"
+        ],
+        [
+          "CQRS",
+          "Command Query Responsibility Segregation, Read Model, Write Model, Command Handler"
+        ]
+      ],
+      "project": {
+        "name": "ServiceOps como Modular Monolith orientado ao domínio",
+        "stack": "ASP.NET Core · DDD · Hexagonal/Clean · C4 · ADR · ArchUnitNET/NetArchTest",
+        "scenario": "A aplicação transacional cresce; times precisam evoluir precificação, agenda, pedidos e faturamento sem cascata de alterações nem dependências ocultas.",
+        "requirements": [
+          "Criar módulos Pricing, Scheduling, Orders e Billing com limites explícitos.",
+          "Manter domínio sem dependência direta de ASP.NET Core ou ORM.",
+          "Implementar Money como value object e invariantes em aggregates.",
+          "Formalizar contratos intermodulares e anti-corruption layer para fornecedor de pagamento.",
+          "Avaliar CQRS em um caso e documentar o custo adicional.",
+          "Registrar no mínimo cinco ADRs com alternativas e consequências.",
+          "Diagramas C4 relevantes com responsabilidades e dependências.",
+          "Automatizar testes arquiteturais; preservar testes do Módulo 2."
+        ]
+      },
+      "checkpoints": [
+        {
+          "label": "A",
+          "week": 19,
+          "title": "Fronteiras",
+          "items": [
+            "Domínio sem dependências diretas de framework.",
+            "Grafo de dependências documentado.",
+            "Regras testáveis sem iniciar servidor nem banco.",
+            "Alternativa arquitetural analisada e rejeitada."
+          ]
+        },
+        {
+          "label": "B",
+          "week": 21,
+          "title": "Modelo de domínio",
+          "items": [
+            "Context map e vocabulário definidos.",
+            "Invariantes protegidas nos limites transacionais.",
+            "Regras críticas fora de controllers.",
+            "Aggregate adequado comparado a alternativa ruim."
+          ]
+        },
+        {
+          "label": "C",
+          "week": 24,
+          "title": "Evolução e revisão",
+          "items": [
+            "Diagramas C4 de contexto, contêiner e componentes relevantes.",
+            "Cinco ADRs completos.",
+            "CI bloqueia dependências proibidas e ciclos.",
+            "Testes do Módulo 2 permanecem verdes.",
+            "Nova regra de Billing sem edição indevida dos demais módulos.",
+            "Avaliação: defender monólito modular vs microsserviços com custos mensurados."
+          ]
+        }
+      ],
+      "readings": [
+        "Domain-Driven Design — Eric Evans",
+        "Implementing Domain-Driven Design — Vaughn Vernon",
+        "Clean Architecture — Robert C. Martin",
+        "Fundamentals of Software Architecture — Richards e Ford"
+      ],
+      "links": [
+        {
+          "label": "C4 Model",
+          "url": "https://c4model.com/"
+        },
+        {
+          "label": "Azure — Domain-Driven Design",
+          "url": "https://learn.microsoft.com/en-us/azure/architecture/microservices/model/domain-analysis"
+        }
+      ]
+    },
+    {
+      "id": "m4",
+      "number": 4,
+      "start": 25,
+      "end": 32,
+      "title": "Sistemas Distribuídos, Microsserviços e Arquitetura Orientada a Eventos (EDA)",
+      "focus": "Coordenar componentes que falham independentemente.",
+      "summary": "Uma mensagem pode duplicar; uma resposta pode sumir após sucesso; operações distribuídas exigem idempotência, reconciliação e contratos.",
+      "objectives": [
+        "Explicar falhas parciais, latência, network partitions, CAP/PACELC e modelos de consistência.",
+        "Escolher comunicação síncrona vs assíncrona conforme acoplamento e requisitos.",
+        "Distinguir at-most-once, at-least-once e alcance real de exactly-once.",
+        "Projetar exchanges, queues, routing keys, ACK, retry e DLQ no RabbitMQ.",
+        "Eliminar dual writes locais com Transactional Outbox e deduplicação Inbox.",
+        "Orquestrar Saga, compensações e reconciliação sem transação global.",
+        "Tratar timeouts, circuit breaker, backpressure, rate limiting e poison messages.",
+        "Versionar eventos, testar contratos, investigar ordem e processar duplicações seguramente."
+      ],
+      "weeks": [
+        [
+          "Fundamentos distribuídos",
+          "Partial failure, network partitions, latency, CAP, PACELC, strong/eventual consistency, clocks e timeouts.",
+          "Simular indisponibilidade e latência entre aplicações."
+        ],
+        [
+          "Fronteiras de serviço",
+          "Monolith vs microservices, database per service, distributed monolith, ownership, API contracts, discovery.",
+          "Extrair Billing justificadamente; impedir compartilhamento de tabelas."
+        ],
+        [
+          "Mensageria RabbitMQ",
+          "Queues, exchanges, routing keys, pub/sub, acknowledgements, durability, consumer groups e redelivery.",
+          "Publicar/consumir eventos com falhas e duplicações simuladas."
+        ],
+        [
+          "Outbox/Inbox e deduplicação",
+          "Dual write problem, transactional outbox, inbox, idempotency keys, deduplication, ordering, schema evolution.",
+          "Gravar estado local + Outbox atomicamente; impedir efeito duplicado com chave única."
+        ],
+        [
+          "Saga e compensação",
+          "Distributed transactions, Saga orchestration/choreography, compensation, pivot transactions e reconciliation.",
+          "Reserva provisória → pagamento → confirmação, liberação ou compensação."
+        ],
+        [
+          "Resiliência",
+          "Timeout budgets, exponential backoff+jitter, circuit breaker, bulkhead, backpressure, poison messages e DLQ.",
+          "Injetar erros transitórios e permanentes; observar comportamento limitado."
+        ],
+        [
+          "Escala e consistência",
+          "Competing consumers, partitioning, ordering, CQRS projections, replay e reconciliation.",
+          "Escalar consumidores, reprocessar eventos e reconstruir projeção."
+        ],
+        [
+          "Testes e arquitetura distribuída",
+          "Contract tests, fault injection, failure matrix, failure budgets e system design review.",
+          "Testar indisponibilidades/duplicações/ordem e revisar trade-offs."
+        ]
+      ],
+      "keywords": [
+        [
+          "Fundamentos",
+          "Partial Failure, Network Partition, CAP Theorem, PACELC, Linearizability, Logical Clocks"
+        ],
+        [
+          "Mensagens",
+          "At-Least-Once Delivery, Message Acknowledgment, Consumer Groups, Dead Letter Queue"
+        ],
+        [
+          "Garantias",
+          "Idempotent Consumer, Exactly-Once Processing, Deduplication, Delivery Semantics"
+        ],
+        [
+          "Persistência",
+          "Transactional Outbox, Inbox Pattern, Change Data Capture, Dual Write Problem"
+        ],
+        [
+          "Coordenação",
+          "Saga Pattern, Choreography, Orchestration, Compensating Transaction"
+        ],
+        [
+          "Resiliência",
+          "Circuit Breaker, Exponential Backoff with Jitter, Bulkhead, Backpressure"
+        ],
+        [
+          "Contratos",
+          "Consumer-Driven Contract Testing, Schema Evolution, Event Versioning, Eventual Consistency"
+        ]
+      ],
+      "project": {
+        "name": "Orquestração distribuída de reservas e pagamentos",
+        "stack": ".NET · RabbitMQ · PostgreSQL · OpenTelemetry · Toxiproxy",
+        "scenario": "Ordem/reserva e Billing agora são processos separados com bases próprias; o pagamento pode completar antes de uma falha de comunicação.",
+        "requirements": [
+          "Separar Billing Service sem compartilhar tabelas/transações com o monólito modular.",
+          "Criar reserva provisória e Outbox na mesma transação local.",
+          "Processar solicitação de cobrança com Inbox/deduplicação persistente.",
+          "Emitir PaymentAuthorized/PaymentDeclined com Outbox do Billing.",
+          "Confirmar, cancelar ou compensar com Saga de estados explícitos.",
+          "Reconciliar operações pendentes e respostas após timeout.",
+          "Configurar retry/backoff/jitter, DLQ, rate limits e métricas.",
+          "Testar interrupções após COMMIT, perda de ACK, broker indisponível e ordem invertida."
+        ]
+      },
+      "checkpoints": [
+        {
+          "label": "A",
+          "week": 27,
+          "title": "Processos e contratos",
+          "items": [
+            "Dois processos implantáveis independentes.",
+            "Propriedade exclusiva dos dados em cada serviço.",
+            "Mensagens versionadas e redelivery demonstrado.",
+            "RabbitMQ com ACK e semântica de entrega corretamente descrita."
+          ]
+        },
+        {
+          "label": "B",
+          "week": 29,
+          "title": "Consistência distribuída",
+          "items": [
+            "Outbox transacional e Inbox por chave única.",
+            "Saga com estados/compensações testados.",
+            "Nenhuma reserva confirmada sem autorização válida.",
+            "Nenhuma cobrança duplicada em reentregas."
+          ]
+        },
+        {
+          "label": "C",
+          "week": 32,
+          "title": "Falhas e recuperação",
+          "items": [
+            "1.000 redeliveries sem efeito financeiro duplicado.",
+            "Falhas verificadas: queda após COMMIT; perda de ACK; timeout tardio; pagamento recusado; broker offline; poison message; ordem invertida; consumidores concorrentes.",
+            "Pendências reconciliadas após recuperação.",
+            "Testes de contrato e métricas de fila.",
+            "Avaliação: derrubar broker durante cobrança e demonstrar ausência de perda/duplicidade."
+          ]
+        }
+      ],
+      "readings": [
+        "Designing Data-Intensive Applications — Kleppmann e Riccomini",
+        "Release It! — Michael Nygard",
+        "Building Microservices — Sam Newman",
+        "Understanding Distributed Systems — Roberto Vitillo"
+      ],
+      "links": [
+        {
+          "label": "RabbitMQ — Reliability",
+          "url": "https://www.rabbitmq.com/docs/reliability"
+        },
+        {
+          "label": "Microsoft — Transactional Outbox",
+          "url": "https://learn.microsoft.com/en-us/azure/architecture/databases/guide/transactional-outbox-cosmos"
+        }
+      ],
+      "failureMatrix": [
+        [
+          "Aplicação cai após COMMIT antes de publicar",
+          "Relay de Outbox publica ao reiniciar."
+        ],
+        [
+          "Consumidor processa mas ACK se perde",
+          "Redelivery não duplica efeito."
+        ],
+        [
+          "Gateway conclui e resposta chega após timeout",
+          "Reconciliação evita cobrar novamente."
+        ],
+        [
+          "Pagamento é recusado",
+          "Capacidade provisória é liberada."
+        ],
+        [
+          "Broker fica indisponível",
+          "Outbox persiste intenção até nova publicação."
+        ],
+        [
+          "Mensagem inválida definitivamente",
+          "DLQ, alerta e nenhuma repetição infinita."
+        ],
+        [
+          "Eventos chegam fora de ordem",
+          "Versionamento/transições impedem regressão de estado."
+        ],
+        [
+          "Dois consumidores recebem duplicatas",
+          "Deduplicação transacional funciona sob corrida."
+        ]
+      ]
+    },
+    {
+      "id": "m5",
+      "number": 5,
+      "start": 33,
+      "end": 40,
+      "title": "Infraestrutura, Observabilidade e Cloud Computing",
+      "focus": "Implantar, operar, medir e recuperar sistemas em produção.",
+      "summary": "A arquitetura só está completa quando é possível observar comportamento, executar deploy, detectar degradação e recuperar incidentes.",
+      "objectives": [
+        "Investigar processos Linux, memória, DNS, TCP, TLS, HTTP, sockets e balanceamento.",
+        "Construir imagens Docker seguras, menores e reproduzíveis.",
+        "Projetar CI/CD com testes, SAST, análise de dependências, artefatos e rollback.",
+        "Operar Kubernetes: Pods, Deployments, Services, probes, requests/limits, HPA e Ingress.",
+        "Provisionar infraestrutura em AWS ou Azure com Terraform e IAM mínimo.",
+        "Instrumentar logs estruturados, métricas RED/USE e traces correlacionados.",
+        "Definir SLIs/SLOs, error budgets, alertas e capacidade a partir de dados.",
+        "Realizar load/fault testing, backup/restore, recovery drills e postmortems."
+      ],
+      "weeks": [
+        [
+          "Sistemas operacionais e redes",
+          "Linux processes, memory, FDs, sockets, DNS, TCP, TLS, HTTP/2, reverse proxy, NAT e load balancing.",
+          "Inspecionar conexões e gargalos entre serviços."
+        ],
+        [
+          "Containers",
+          "Dockerfile multi-stage, namespaces, cgroups, image layers, networking, volumes, resource limits e least privilege.",
+          "Docker Compose reproduzível com serviços e dependências."
+        ],
+        [
+          "CI/CD e supply chain",
+          "Reproducible builds, artifact provenance, SAST, dependency scanning, SBOM, deploy strategies, blue-green/canary e rollback.",
+          "Pipeline com qualidade, imagens versionadas, scanning e release."
+        ],
+        [
+          "Kubernetes",
+          "Control plane, scheduler, Pods, Deployments, Services, StatefulSets, Ingress, ConfigMaps, Secrets, readiness/liveness, requests/limits e HPA.",
+          "Implantar em kind/k3d; induzir readiness failure e reinício controlado."
+        ],
+        [
+          "Cloud e IaC",
+          "AWS/Azure networking, VPC/VNet, subnets, route tables, IAM, managed DB, availability zones, load balancing e Terraform.",
+          "Provisionar ambiente efêmero e documentar topologia, permissões e custos."
+        ],
+        [
+          "Observabilidade",
+          "OpenTelemetry, trace context, spans, structured logging, RED/USE, cardinalidade, metrics, collectors, dashboards.",
+          "Correlacionar reserva e cobrança em API, broker, Billing e banco."
+        ],
+        [
+          "SRE e confiabilidade",
+          "SLI/SLO, error budgets, alerting burn rates, capacity planning, k6, backups, RPO/RTO, disaster recovery.",
+          "Definir SLOs, executar carga, restaurar backup em ambiente limpo."
+        ],
+        [
+          "Incident response e revisão final",
+          "Chaos engineering, incident lifecycle, postmortems, threat modeling, cost optimization e tech leadership.",
+          "Simular degradação do banco + backlog de fila; diagnosticar, recuperar e reportar."
+        ]
+      ],
+      "keywords": [
+        [
+          "Linux",
+          "Process Scheduling, Memory Pressure, File Descriptors, Context Switching, Linux Namespaces"
+        ],
+        [
+          "Redes",
+          "TCP Handshake, DNS Resolution, Connection Pooling, Reverse Proxy, TLS Termination"
+        ],
+        [
+          "Containers",
+          "Multi-Stage Builds, Container Isolation, Cgroups, Image Layers, Rootless Containers"
+        ],
+        [
+          "Kubernetes",
+          "Pod Lifecycle, Readiness Probe, Liveness Probe, HPA, Resource Requests and Limits"
+        ],
+        [
+          "Infra",
+          "Infrastructure as Code, Immutable Infrastructure, Availability Zones, Least Privilege IAM"
+        ],
+        [
+          "Observabilidade",
+          "Distributed Tracing, Trace Context Propagation, Structured Logging, OpenTelemetry Collector"
+        ],
+        [
+          "SRE",
+          "SLI, SLO, Error Budget, Burn Rate, MTTR, RPO, RTO"
+        ],
+        [
+          "Performance",
+          "Load Testing, Stress Testing, Soak Testing, Capacity Planning, Saturation"
+        ],
+        [
+          "Segurança",
+          "Threat Modeling, Secret Management, SBOM, Supply Chain Security, OWASP API Security"
+        ]
+      ],
+      "project": {
+        "name": "ServiceOps em produção simulada e recuperação de incidentes",
+        "stack": "Docker · Kubernetes · Terraform · GitHub Actions · OpenTelemetry · Prometheus · Grafana · k6 · AWS/Azure",
+        "scenario": "Plataforma recebe tráfego, é implantada repetidamente, enfrenta falhas e precisa demonstrar segurança, visibilidade e recuperação com métricas.",
+        "requirements": [
+          "Executar API/Billing/PostgreSQL/RabbitMQ localmente em containers e cluster.",
+          "Pipeline CI/CD com testes, scanning, imagens versionadas e rollback.",
+          "Provisionamento efêmero com Terraform e menor privilégio em uma cloud.",
+          "Observabilidade fim-a-fim com logs, métricas, traces e dashboards.",
+          "Métricas de latência p95, throughput, erros, saturação, filas e reprocessamento.",
+          "Carga estável, stress test, limites e capacidade documentados.",
+          "RPO/RTO testados por restauração verificada.",
+          "Simular incidentes, elaborar postmortem e estimar custos operacionais."
+        ]
+      },
+      "checkpoints": [
+        {
+          "label": "A",
+          "week": 35,
+          "title": "Entrega reproduzível",
+          "items": [
+            "Ambiente executável seguindo README.",
+            "Pipeline bloqueia falhas críticas.",
+            "Imagens versionadas e sem credenciais em repo.",
+            "Rollback executado e documentado."
+          ]
+        },
+        {
+          "label": "B",
+          "week": 38,
+          "title": "Infra e telemetria",
+          "items": [
+            "Kubernetes local funcional; readiness/liveness e limites testados.",
+            "Trace fim-a-fim API→mensagens→Billing.",
+            "Dashboards incluem latência, tráfego, erros, saturação e filas.",
+            "Terraform provisiona/destroi ambiente efêmero com segurança.",
+            "Rede e permissões documentadas."
+          ]
+        },
+        {
+          "label": "C",
+          "week": 40,
+          "title": "Operação e recuperação",
+          "items": [
+            "SLIs/SLOs formalizados e medidos na janela de teste.",
+            "Carga reproduzível com gargalos e ambiente documentados.",
+            "Recuperação de falha de instância demonstrada.",
+            "Backup restaurado e integridade validada.",
+            "RPO e RTO medidos, contrastados com metas.",
+            "Postmortem com timeline, causa-raiz e prevenção.",
+            "Avaliação: degradação banco + backlog, diagnóstico e recuperação."
+          ]
+        }
+      ],
+      "targets": [
+        [
+          "Throughput",
+          "20 req/s sustentadas por 10 min"
+        ],
+        [
+          "Latência p95",
+          "< 400 ms nas operações síncronas críticas"
+        ],
+        [
+          "Taxa de erros inesperados",
+          "< 1% durante carga estável"
+        ],
+        [
+          "SLO proposto",
+          "99,9% de disponibilidade em 30 dias"
+        ],
+        [
+          "RPO",
+          "≤ 5 min"
+        ],
+        [
+          "RTO",
+          "≤ 30 min"
+        ],
+        [
+          "Mensagens perdidas após commit",
+          "0 nos cenários testados"
+        ]
+      ],
+      "readings": [
+        "Site Reliability Engineering — Google",
+        "The Site Reliability Workbook — Google",
+        "Kubernetes Up & Running",
+        "Infrastructure as Code — Kief Morris"
+      ],
+      "links": [
+        {
+          "label": "OpenTelemetry — Signals",
+          "url": "https://opentelemetry.io/docs/concepts/signals/"
+        },
+        {
+          "label": "Kubernetes — Probes",
+          "url": "https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/"
+        },
+        {
+          "label": "Google SRE Books",
+          "url": "https://sre.google/books/"
+        }
+      ],
+      "caveat": "Metas numéricas são parâmetros de laboratório, não recomendações universais. Teste de dez minutos não demonstra SLO mensal de 99,9%."
+    }
+  ],
+  "competencies": [
+    [
+      "Software Engineering",
+      "Código correto, sustentável e eficiência mensurável."
+    ],
+    [
+      "Database Engineering",
+      "Concorrência, isolamentos, locks, queries e transações."
+    ],
+    [
+      "Software Design",
+      "Modelos de domínio, contratos e boundaries."
+    ],
+    [
+      "Software Architecture",
+      "Análise comparativa e justificativas documentadas."
+    ],
+    [
+      "Distributed Systems",
+      "Falhas parciais, duplicação, eventual consistency e resiliência."
+    ],
+    [
+      "Platform Engineering",
+      "CI/CD, containers, cloud e IaC."
+    ],
+    [
+      "Site Reliability",
+      "Telemetria, SLOs, incidentes e recovery."
+    ],
+    [
+      "Technical Leadership",
+      "Comunicar trade-offs e defender decisões."
+    ]
+  ],
+  "finalChallenge": [
+    [
+      "Nova regra de negócio",
+      "Alteração complexa em agenda ou faturamento, preservando invariantes."
+    ],
+    [
+      "Falha concorrente",
+      "Operações disputam capacidade e revelam potencial anomalia."
+    ],
+    [
+      "Falha distribuída",
+      "Componente atrasa ou cai após persistir parte da operação."
+    ],
+    [
+      "Incidente operacional",
+      "Degradação exige diagnóstico por métricas, tracing, logs e planos."
+    ]
+  ],
+  "evidenceMatrix": [
+    [
+      "Complexidade",
+      "Prova/estimativa formal + benchmark."
+    ],
+    [
+      "MVCC e isolamento",
+      "Dois terminais/sessões + matriz de anomalias."
+    ],
+    [
+      "DDD",
+      "Context map, aggregates e testes de invariantes."
+    ],
+    [
+      "Dependency Inversion",
+      "Testes arquiteturais no CI."
+    ],
+    [
+      "Eventual Consistency",
+      "Fluxo falho + recuperação e reconciliação."
+    ],
+    [
+      "Idempotência",
+      "Teste automatizado com duplicatas e corrida."
+    ],
+    [
+      "SLO",
+      "Definição, instrumentação e série medida."
+    ],
+    [
+      "Disaster Recovery",
+      "Restauração real e integridade verificada."
+    ]
+  ],
+  "rules": [
+    "Estudo não é domínio. Domínio requer experimento, correção, diagnóstico e transferência.",
+    "A aprovação mínima de objetivos essenciais é 3/4 na régua desta trilha; meta 4 para especialização.",
+    "Gates são bloqueantes: semanas são orientação e não autorização para ignorar lacunas.",
+    "Não adicionar microserviços nem CQRS sem hipóteses e trade-offs.",
+    "Registrar fonte, código, teste, medição, ADR e limitações de cada resultado.",
+    "Progresso do navegador é local; exportar/importar JSON. Nada se sincroniza com GitHub automaticamente."
+  ],
+  "disclaimer": "40 semanas formam uma base técnica verificável, não substituem experiência em sistemas reais e não garantem cargo de Staff/Architect."
+}
