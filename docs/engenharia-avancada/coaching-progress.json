@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-06",
+  "source": "mentoria-github",
+  "note": "Status de mentoria sincronizado de modo somente-leitura com o painel. Semanas comprovadas exigem evidência verificável; início de aula não comprova domínio.",
+  "activeModule": "m1",
+  "activeWeek": 1,
+  "activeLesson": "1.1 — Execução, memória, tipos por valor/referência, aliasing e imutabilidade",
+  "lessonLink": "https://github.com/lucastrevvos/software-mastery-roadmap/blob/main/docs/engenharia-avancada/aulas/m1-semana-01.md",
+  "weeks": {
+    "m1-w1": {
+      "status": "studying",
+      "evidence": ""
+    }
+  },
+  "gates": {},
+  "milestones": [
+    {
+      "at": "2026-11-06",
+      "type": "started",
+      "key": "m1-w1",
+      "description": "Aula 1.1 iniciada; diagnóstico de cópia superficial e imutabilidade apresentado; resposta e laboratório pendentes."
+    }
+  ]
+}
