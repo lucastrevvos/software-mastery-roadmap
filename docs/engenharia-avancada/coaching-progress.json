@@ -5,7 +5,7 @@
   "note": "Status de mentoria sincronizado de modo somente-leitura com o painel. Semanas comprovadas exigem evidência verificável; início de aula não comprova domínio.",
   "activeModule": "m1",
   "activeWeek": 1,
-  "activeLesson": "1.1 — Execução, memória, tipos por valor/referência, aliasing e imutabilidade",
+  "activeLesson": "1.1 — Copiar uma ficha no C#: entendendo with passo a passo",
   "lessonLink": "https://github.com/lucastrevvos/software-mastery-roadmap/blob/main/docs/engenharia-avancada/aulas/m1-semana-01.md",
   "weeks": {
     "m1-w1": {
@@ -20,6 +20,12 @@
       "type": "started",
       "key": "m1-w1",
       "description": "Aula 1.1 iniciada; diagnóstico de cópia superficial e imutabilidade apresentado; resposta e laboratório pendentes."
+    },
+    {
+      "at": "2026-11-06",
+      "type": "pedagogy-adjusted",
+      "key": "m1-w1",
+      "description": "Aula reescrita em linguagem acessível, com exemplos e uma pergunta por vez. Não houve comprovação de domínio."
     }
   ]
 }
