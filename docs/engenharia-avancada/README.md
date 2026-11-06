@@ -25,6 +25,7 @@ Formar competência verificável de engenharia e arquitetura de software de alto
 3. Ao terminar cada checkpoint, registre evidências dos critérios de aceite e marque **Validado**.
 4. Consulte a seção **Avaliação e comprovação** para a escala 0–4. Nível 3 exige autonomia; nível 4 exige transferência para problemas novos.
 5. Use **Exportar progresso JSON** para backup e **Importar progresso JSON** para transferir entre navegadores. Estes controles não modificam o repositório GitHub.
+6. As sessões conduzidas pela mentoria podem atualizar o arquivo versionado `coaching-progress.json`. O painel lê esses avanços ao carregar e preserva status locais mais avançados. **Iniciar uma aula não significa comprovar domínio.** A sincronização GitHub → navegador não envia modificações do navegador de volta ao repositório.
 
 As oito semanas de cada módulo são uma estimativa. **Checkpoints são bloqueantes**: não avance por calendário ignorando falhas críticas. As percentagens da tela refletem *semanas marcadas como comprovadas com evidência*; não são uma certificação automática.
 
@@ -44,6 +45,8 @@ Princípios:
 
 - `index.html`: interface da nova aba, vinculada ao roadmap principal.
 - `data.json`: **fonte da verdade** do currículo (objetivos, 40 semanas, termos, requisitos dos projetos, critérios de aceite, checkpoints e leituras).
+- `coaching-progress.json`: estado versionado da mentoria, com semanas em andamento e evidências validadas.
+- `aulas/`: materiais e desafios de cada encontro, publicados conforme o avanço.
 - `app.js`: navegação, acompanhamento, validação de evidência e exportação/importação local.
 - `styles.css`: apresentação responsiva em padrão visual compatível com o repositório.
 - `README.md`: este manual.
@@ -52,7 +55,7 @@ Para editar o programa, modifique `data.json`, não o HTML. Mantenha `schemaVers
 
 ## Segurança, privacidade e limites
 
-O andamento é armazenado em `localStorage` sob a chave `advanced-engineering-roadmap-progress-v1`; nada é enviado ao servidor. **Não coloque dados pessoais, senhas, tokens ou URLs privadas de sistemas** no campo de evidências, principalmente ao compartilhar um backup JSON.
+O progresso pessoal é armazenado em `localStorage` sob a chave `advanced-engineering-roadmap-progress-v1`; nada é enviado ao servidor. **Não coloque dados pessoais, senhas, tokens ou URLs privadas de sistemas** no campo de evidências, principalmente ao compartilhar um backup JSON.
 
 A conclusão da trilha não substitui vivência de produção nem promete cargo ou certificação de mercado. Ela fornece evidências concretas e auditáveis de competência.
 
