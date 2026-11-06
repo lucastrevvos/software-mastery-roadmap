@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#08111d">
+<meta name="description" content="Trilha prática de Engenharia de Software Avançada: 5 módulos, 40 semanas, projetos, checkpoints, MVCC, DDD, sistemas distribuídos e cloud.">
+<title>Engenharia de Software Avançada · Software Mastery Roadmap</title>
+<link rel="stylesheet" href="../css/app.css?v=2.1.1">
+<link rel="stylesheet" href="styles.css?v=1">
+<script src="app.js?v=1" defer></script>
+</head>
+<body>
+<header class="shell advanced-hero">
+  <p class="eyebrow">PROGRAMA DE ENGENHARIA · EVIDÊNCIA ANTES DE RÓTULOS</p>
+  <h1>Engenharia de Software <span>Avançada</span></h1>
+  <p class="intro">De código correto à arquitetura, concorrência, sistemas distribuídos e operação em cloud. O alvo é demonstrar decisões técnicas que resistem a testes, carga e falhas.</p>
+  <div class="hero-tags"><span>40 semanas</span><span>480–640 horas</span><span>12–16 horas/semana</span><span>5 módulos</span><span>1 projeto integrador</span></div>
+</header>
+<nav class="roadmap-tabs shell" aria-label="Trilhas do roadmap">
+  <a class="roadmap-tab" href="../index.html">Roadmap principal</a>
+  <a class="roadmap-tab" href="../engineering-notebook.html">Caderno do Engenheiro</a>
+  <a class="roadmap-tab active" href="./" aria-current="page">Engenharia Avançada</a>
+  <a class="roadmap-tab" href="../mobile/">Mobile Engineering</a>
+  <a class="roadmap-tab" href="../physical-ai-roadmap.html">Edge AI · Robotics</a>
+  <a class="roadmap-tab" href="../english.html">English</a>
+  <a class="roadmap-tab" href="../concursos/">Concursos de TI</a>
+  <a class="roadmap-tab" href="../vestibular/">Vestibular UFSC/IFC</a>
+</nav>
+<main class="shell">
+<section class="summary-grid" aria-label="Indicadores de progresso">
+  <article class="metric"><span>Semanas comprovadas</span><strong id="stat-weeks">0/40</strong><small>Com evidência registrada</small></article>
+  <article class="metric"><span>Checkpoints validados</span><strong id="stat-gates">0/15</strong><small>Três gates por módulo</small></article>
+  <article class="metric"><span>Conclusão por semanas</span><strong id="stat-percent">0%</strong><div class="track"><span id="global-meter" style="width:0%"></span></div></article>
+  <article class="metric"><span>Trilha</span><strong>5 módulos</strong><small>Fundamentos → Cloud</small></article>
+</section>
+<section class="panel advanced-panel" id="overview">
+  <div class="section-head"><div><p class="eyebrow">ARQUITETURA DE APRENDIZAGEM</p><h2>ServiceOps · projeto integrador</h2></div><span class="pill">Código + evidências</span></div>
+  <p id="project-overview">Carregando currículo…</p>
+  <div class="progression" id="project-progression"></div>
+  <div class="callout"><strong>Princípio anti-overengineering:</strong> toda abstração, CQRS, worker ou microsserviço precisa de uma hipótese, um benefício e um custo explicados.</div>
+</section>
+<section class="workspace">
+ <aside class="module-sidebar">
+   <h2>Módulos</h2>
+   <p class="side-desc">Selecione um módulo. O progresso salvo neste navegador não altera o repositório.</p>
+   <div id="module-nav" role="navigation" aria-label="Navegação por módulos"></div>
+   <div class="side-actions">
+     <button type="button" id="btn-export">Exportar progresso JSON</button>
+     <button type="button" id="btn-import">Importar progresso JSON</button>
+     <input type="file" id="file-import" accept="application/json,.json" hidden>
+     <button type="button" id="btn-clear" class="subtle">Limpar progresso local</button>
+   </div>
+   <p class="privacy">O status e as evidências ficam em <code>localStorage</code>. Para levar a outro navegador, exporte o JSON. Atualizações no GitHub exigem commit.</p>
+ </aside>
+ <div class="content-column">
+   <section id="module-content" class="panel advanced-panel" aria-live="polite"><p>Carregando módulos…</p></section>
+ </div>
+</section>
+<section class="panel advanced-panel" id="evaluation">
+ <div class="section-head"><div><p class="eyebrow">GATES DE DOMÍNIO</p><h2>Avaliação e comprovação</h2></div><span class="pill">3/4 para aprovação essencial</span></div>
+ <p class="muted">Concluir conteúdo não equivale a dominar mecanismos. O nível 3 requer autonomia; o nível 4 requer transferir, diagnosticar e revisar decisões em casos novos.</p>
+ <div id="mastery-scale" class="scale"></div>
+ <h3>Critérios gerais de aprovação</h3><ul id="approval-rules"></ul>
+ <h3>Matriz de evidência</h3><div class="scroll"><table><thead><tr><th>Competência</th><th>Evidência verificável</th></tr></thead><tbody id="evidence-table"></tbody></table></div>
+</section>
+<section class="panel advanced-panel" id="endgame">
+ <div class="section-head"><div><p class="eyebrow">PROVA FINAL · SEMANA 40</p><h2>Defesa técnica integradora</h2></div></div>
+ <p>Quatro incidentes ou mudanças não anunciados: defender o diagnóstico, a correção, os testes de regressão e os riscos residuais.</p>
+ <div id="final-challenges" class="twocol"></div>
+ <h3>Competências adquiridas mediante evidência</h3><div id="competencies" class="twocol"></div>
+ <p class="muted" id="disclaimer"></p>
+</section>
+</main>
+<footer class="shell advanced-footer"><span>Software Mastery Roadmap · Engenharia Avançada</span><a href="https://github.com/lucastrevvos/software-mastery-roadmap/tree/main/docs/engenharia-avancada">Ver fontes e currículo no GitHub</a></footer>
+</body>
+</html>
