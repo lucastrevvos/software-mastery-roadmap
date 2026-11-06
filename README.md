@@ -12,6 +12,21 @@ Este repositório é a fonte da verdade para quatro coisas diferentes:
 
 > Curso concluído não significa domínio. Certificado é evidência externa; Mastery Gate é evidência interna.
 
+## Engenharia de Software Avançada — 5 módulos / 40 semanas
+
+Trilha prática para evoluir de desenvolvedor para engenharia e arquitetura de sistemas de alto nível, com **480–640 horas** orientativas, projeto integrador **ServiceOps**, **40 semanas**, **5 projetos de consolidação** e **15 checkpoints de aceite**.
+
+- **M1 (1–8):** algoritmos, estruturas de dados, runtime, código e testes.
+- **M2 (9–16):** SQL/PLSQL, MVCC, locks, isolamento, deadlocks e otimização de SGBDs.
+- **M3 (17–24):** design, Clean/Hexagonal Architecture, DDD e monólito modular.
+- **M4 (25–32):** sistemas distribuídos, RabbitMQ, Saga, Transactional Outbox/Inbox e EDA.
+- **M5 (33–40):** containers, CI/CD, Kubernetes, cloud, observabilidade e SRE.
+- **Critério de domínio:** execução própria, testes, diagnósticos, documentação de trade-offs, evidências e revisão. Curso visto ≠ competência demonstrada.
+- **Painel:** [Abrir Engenharia Avançada](https://lucastrevvos.github.io/software-mastery-roadmap/engenharia-avancada/) · [Currículo estruturado](docs/engenharia-avancada/data.json) · [Manual](docs/engenharia-avancada/README.md).
+- **Persistência:** status de semanas/checkpoints e evidências ficam somente no navegador, com exportação/importação JSON (sem sync automático com GitHub).
+
+> Trilha independente; não altera automaticamente o progresso já registrado nas demais especializações.
+
 ## Especialização Mobile Engineering — Android nativo + Flutter
 
 - **Objetivo:** construir especialização mobile profunda, com Android/Kotlin/Jetpack Compose primeiro e Flutter depois, aproveitando experiência prévia em .NET, Carga Cheia e KM One.
