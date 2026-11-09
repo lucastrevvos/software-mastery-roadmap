@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "lastVerified": "2026-11-06",
-  "lastVerifiedLabel": "06/11/2026",
+  "lastVerified": "2026-11-09",
+  "lastVerifiedLabel": "09/11/2026",
   "sourcesNote": "O radar é atualizado por verificações periódicas; não consulta bancas em tempo real ao abrir a página. Sempre confirme condições e prazos no edital.",
   "contests": [
     {
@@ -607,7 +607,7 @@
       "place": "São Paulo/SP e Campo Grande/MS — quadro do TRF3",
       "board": "Vunesp",
       "kind": "Concurso público federal",
-      "status": "previsto",
+      "status": "inscricoes",
       "applicationStart": "2026-11-04",
       "applicationEnd": "2026-11-23",
       "examDate": "2027-01-31",
@@ -615,7 +615,7 @@
       "vacancies": "1 vaga imediata em TI + CR",
       "source": "https://web.trf3.jus.br/noticias-intranet-sjsp/Noticiar/ExibirNoticia/2450-trf3-divulga-edital-de-concurso-para-servidores",
       "priority": "NOVO NO RADAR — 1 vaga TI, R$ 16 mil; inscrições 04/11",
-      "notes": "Edital nº 01/2026 datado 23/10, publicado no DOU 26/10; notícia oficial do TRF3 em 26/10. Graduação superior na área de TI ou qualquer graduação acompanhada de pós-graduação em TI com 360h. Tecnólogo ADS é superior na área, mas o edital não o cita nominalmente; aceitação individual não confirmada. Inscrições Vunesp 04/11 às 10h a 23/11 às 23h59, taxa R$ 160. Prova 31/01/2027. Lotação específica por unidade conforme edital. Edital oficial: https://www.in.gov.br/web/dou/-/edital-n-1-de-23-de-outubro-de-2026-740280249."
+      "notes": "Edital nº 01/2026 datado 23/10, publicado no DOU 26/10; notícia oficial do TRF3 em 26/10. Graduação superior na área de TI ou qualquer graduação acompanhada de pós-graduação em TI com 360h. Tecnólogo ADS é superior na área, mas o edital não o cita nominalmente; aceitação individual não confirmada. Inscrições Vunesp 04/11 às 10h a 23/11 às 23h59, taxa R$ 160. Prova 31/01/2027. Lotação específica por unidade conforme edital. Edital oficial: https://www.in.gov.br/web/dou/-/edital-n-1-de-23-de-outubro-de-2026-740280249. Verificação oficial em 09/11: inscrições abertas desde 04/11, encerram 23/11 às 23h59; Edital nº 02/2026 de retificação disponível na página institucional: https://web.trf3.jus.br/noticias-sjsp/Noticiar/ExibirNoticia/2462-inscricoes-abertas-para-concurso-de-servidores-da . Impacto da retificação nos requisitos individuais de TI ainda não revalidado."
     },
     {
       "scope": "BR",
@@ -627,7 +627,7 @@
       "place": "São Paulo/SP e Campo Grande/MS — quadro do TRF3",
       "board": "Vunesp",
       "kind": "Concurso público federal",
-      "status": "previsto",
+      "status": "inscricoes",
       "applicationStart": "2026-11-04",
       "applicationEnd": "2026-11-23",
       "examDate": "2027-01-31",
@@ -635,7 +635,7 @@
       "vacancies": "1 vaga imediata em TI + CR",
       "source": "https://web.trf3.jus.br/noticias-intranet-sjsp/Noticiar/ExibirNoticia/2450-trf3-divulga-edital-de-concurso-para-servidores",
       "priority": "NOVO NO RADAR — R$ 16 mil",
-      "notes": "Edital nº 01/2026 publicado 26/10. Superior em TI ou qualquer graduação + pós-graduação em TI de 360h; ADS não mencionado nominalmente, elegibilidade individual não confirmada. Inscrições 04 a 23/11, prova 31/01/2027; taxa R$ 160. Fonte oficial: https://www.in.gov.br/web/dou/-/edital-n-1-de-23-de-outubro-de-2026-740280249."
+      "notes": "Edital nº 01/2026 publicado 26/10. Superior em TI ou qualquer graduação + pós-graduação em TI de 360h; ADS não mencionado nominalmente, elegibilidade individual não confirmada. Inscrições 04 a 23/11, prova 31/01/2027; taxa R$ 160. Fonte oficial: https://www.in.gov.br/web/dou/-/edital-n-1-de-23-de-outubro-de-2026-740280249. Verificação oficial em 09/11: inscrições abertas desde 04/11, encerram 23/11 às 23h59; Edital nº 02/2026 de retificação disponível na página institucional: https://web.trf3.jus.br/noticias-sjsp/Noticiar/ExibirNoticia/2462-inscricoes-abertas-para-concurso-de-servidores-da . Impacto da retificação nos requisitos individuais de TI ainda não revalidado."
     },
     {
       "scope": "BR",
@@ -647,7 +647,7 @@
       "place": "São Paulo/SP e Campo Grande/MS — quadro do TRF3",
       "board": "Vunesp",
       "kind": "Concurso público federal",
-      "status": "previsto",
+      "status": "inscricoes",
       "applicationStart": "2026-11-04",
       "applicationEnd": "2026-11-23",
       "examDate": "2027-01-31",
@@ -655,7 +655,7 @@
       "vacancies": "5 vagas imediatas em desenvolvimento de sistemas + CR",
       "source": "https://web.trf3.jus.br/noticias-intranet-sjsp/Noticiar/ExibirNoticia/2450-trf3-divulga-edital-de-concurso-para-servidores",
       "priority": "NOVO NO RADAR — 5 vagas em Desenvolvimento",
-      "notes": "Edital 01/2026, DOU 26/10. Exige graduação superior em qualquer área MAIS certificados de cursos de desenvolvimento de software com carga horária total mínima de 120h. ADS atende em princípio à parte 'superior', mas NÃO presumir que diploma ADS substitua os certificados extras; confirmar com banca. Inscrições 04/11 às 10h até 23/11 às 23h59, taxa R$ 100. Prova 31/01/2027. Edital oficial https://www.in.gov.br/web/dou/-/edital-n-1-de-23-de-outubro-de-2026-740280249."
+      "notes": "Edital 01/2026, DOU 26/10. Exige graduação superior em qualquer área MAIS certificados de cursos de desenvolvimento de software com carga horária total mínima de 120h. ADS atende em princípio à parte 'superior', mas NÃO presumir que diploma ADS substitua os certificados extras; confirmar com banca. Inscrições 04/11 às 10h até 23/11 às 23h59, taxa R$ 100. Prova 31/01/2027. Edital oficial https://www.in.gov.br/web/dou/-/edital-n-1-de-23-de-outubro-de-2026-740280249. Verificação oficial em 09/11: inscrições abertas desde 04/11, encerram 23/11 às 23h59; Edital nº 02/2026 de retificação disponível na página institucional: https://web.trf3.jus.br/noticias-sjsp/Noticiar/ExibirNoticia/2462-inscricoes-abertas-para-concurso-de-servidores-da . Impacto da retificação nos requisitos individuais de TI ainda não revalidado."
     },
     {
       "scope": "BR",
@@ -667,7 +667,7 @@
       "place": "São Paulo/SP e Campo Grande/MS — quadro do TRF3",
       "board": "Vunesp",
       "kind": "Concurso público federal",
-      "status": "previsto",
+      "status": "inscricoes",
       "applicationStart": "2026-11-04",
       "applicationEnd": "2026-11-23",
       "examDate": "2027-01-31",
@@ -675,7 +675,7 @@
       "vacancies": "4 vagas imediatas em suporte técnico + CR",
       "source": "https://web.trf3.jus.br/noticias-intranet-sjsp/Noticiar/ExibirNoticia/2450-trf3-divulga-edital-de-concurso-para-servidores",
       "priority": "NOVO NO RADAR — 4 vagas de TI",
-      "notes": "Edital 01/2026, DOU 26/10. Exige graduação em qualquer área e cursos específicos em TI totalizando no mínimo 120h; ADS isoladamente não supre de modo expresso os cursos extras. Inscrições 04 a 23/11, taxa R$ 100, prova 31/01/2027. Edital https://www.in.gov.br/web/dou/-/edital-n-1-de-23-de-outubro-de-2026-740280249."
+      "notes": "Edital 01/2026, DOU 26/10. Exige graduação em qualquer área e cursos específicos em TI totalizando no mínimo 120h; ADS isoladamente não supre de modo expresso os cursos extras. Inscrições 04 a 23/11, taxa R$ 100, prova 31/01/2027. Edital https://www.in.gov.br/web/dou/-/edital-n-1-de-23-de-outubro-de-2026-740280249. Verificação oficial em 09/11: inscrições abertas desde 04/11, encerram 23/11 às 23h59; Edital nº 02/2026 de retificação disponível na página institucional: https://web.trf3.jus.br/noticias-sjsp/Noticiar/ExibirNoticia/2462-inscricoes-abertas-para-concurso-de-servidores-da . Impacto da retificação nos requisitos individuais de TI ainda não revalidado."
     },
     {
       "scope": "BR",
@@ -687,7 +687,7 @@
       "place": "Mato Grosso do Sul",
       "board": "Vunesp",
       "kind": "Concurso público federal",
-      "status": "previsto",
+      "status": "inscricoes",
       "applicationStart": "2026-11-04",
       "applicationEnd": "2026-11-23",
       "examDate": "2027-01-31",
@@ -695,7 +695,7 @@
       "vacancies": "Cadastro de reserva na Seção Judiciária de MS",
       "source": "https://web.trf3.jus.br/noticias-intranet-sjsp/Noticiar/ExibirNoticia/2450-trf3-divulga-edital-de-concurso-para-servidores",
       "priority": "NOVO NO RADAR — cadastro reserva TI",
-      "notes": "Edital 01/2026, DOU 26/10. Graduação superior em qualquer área MAIS cursos específicos de TI totalizando ao menos 120h; não presumir que ADS substitua certificados. Inscrições 04 a 23/11, prova 31/01/2027. Edital https://www.in.gov.br/web/dou/-/edital-n-1-de-23-de-outubro-de-2026-740280249."
+      "notes": "Edital 01/2026, DOU 26/10. Graduação superior em qualquer área MAIS cursos específicos de TI totalizando ao menos 120h; não presumir que ADS substitua certificados. Inscrições 04 a 23/11, prova 31/01/2027. Edital https://www.in.gov.br/web/dou/-/edital-n-1-de-23-de-outubro-de-2026-740280249. Verificação oficial em 09/11: inscrições abertas desde 04/11, encerram 23/11 às 23h59; Edital nº 02/2026 de retificação disponível na página institucional: https://web.trf3.jus.br/noticias-sjsp/Noticiar/ExibirNoticia/2462-inscricoes-abertas-para-concurso-de-servidores-da . Impacto da retificação nos requisitos individuais de TI ainda não revalidado."
     },
     {
       "scope": "SC",
@@ -1401,6 +1401,26 @@
       "status": "inscricoes",
       "userStage": "não informado",
       "verified": true
+    },
+    {
+      "id": "ima-sc-26-analista-informatica",
+      "agency": "Instituto do Meio Ambiente de Santa Catarina (IMA/SC)",
+      "role": "Analista de Informática",
+      "place": "Florianópolis/São José — SC",
+      "scope": "SC",
+      "board": "FURB",
+      "kind": "Concurso público",
+      "status": "previsto",
+      "applicationStart": "2026-11-13",
+      "applicationEnd": "2026-12-14",
+      "examDate": "2027-02-14",
+      "salary": 12300,
+      "vacancies": "5 vagas imediatas + cadastro de reserva",
+      "source": "https://furb.selecao.net.br/informacoes/584/",
+      "priority": "Prioridade máxima SC — 5 vagas em Florianópolis/São José",
+      "notes": "Edital oficial 001/2026 publicado em 04/11/2026. Banca confirma 5 vagas imediatas + CR, R$ 12.300/40h, taxa R$ 160. Inscrições 13/11 a 14/12, isenção 13 a 19/11, prova 14/02/2027. A aceitação específica de Tecnólogo em ADS NÃO foi confirmada no quadro de requisitos do edital integral; validar antes de inscrição.",
+      "userStage": "não informado",
+      "verified": true
     }
   ],
   "watchlist": [
@@ -1603,6 +1623,11 @@
       "name": "TRT8 — último dia de inscrição 05/11/2026",
       "note": "Analista Judiciário — TI e Técnico Judiciário — TI, cadastro de reserva. Prazo 05/11/2026 às 23h59 (Brasília), pagamento até 06/11; prova prevista 17/01/2027. Requisito nominal de ADS ainda não validado. Consultar banca FCC e edital/retificações.",
       "url": "https://www.concursosfcc.com.br"
+    },
+    {
+      "name": "IMA/SC 2026 — Analista de Informática Florianópolis/São José",
+      "note": "Edital 04/11; 5 vagas + CR, R$ 12.300, inscrições iniciam 13/11, isenção até 19/11, prova 14/02/2027. Conferir no PDF se Tecnólogo ADS é aceito nominalmente.",
+      "url": "https://furb.selecao.net.br/informacoes/584/"
     }
   ]
 }
