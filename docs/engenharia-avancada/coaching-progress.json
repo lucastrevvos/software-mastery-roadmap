@@ -5,7 +5,7 @@
   "note": "Status de mentoria sincronizado de modo somente-leitura com o painel. Semanas comprovadas exigem evidência verificável; início de aula não comprova domínio.",
   "activeModule": "m1",
   "activeWeek": 1,
-  "activeLesson": "1.2 — Diferença entre copiar referência e criar novo objeto",
+  "activeLesson": "1.2 — Revisão: duas variáveis, uma instância compartilhada",
   "lessonLink": "https://github.com/lucastrevvos/software-mastery-roadmap/blob/main/docs/engenharia-avancada/aulas/m1-semana-01.md",
   "weeks": {
     "m1-w1": {
@@ -44,6 +44,12 @@
       "type": "concept-assimilated",
       "key": "m1-w1",
       "description": "Método DECA desafio 5: resposta correta (5). Identificou duas instâncias independentes criadas por duas chamadas a new Caixa(). Aguardando explicação com palavras próprias; semana segue em estudo."
+    },
+    {
+      "at": "2026-11-09",
+      "type": "review-needed",
+      "key": "m1-w1",
+      "description": "Desafio DECA 6: respondeu 5, mas a saída correta é 15 porque caixaA e caixaB referenciam a mesma instância. Reconheceu o termo reference type; exige reforço na consequência do aliasing. Semana permanece estudando, sem evidência de domínio deste conceito."
     }
   ]
 }
