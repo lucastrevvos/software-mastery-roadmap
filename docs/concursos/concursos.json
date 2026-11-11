@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "lastVerified": "2026-11-09",
-  "lastVerifiedLabel": "09/11/2026",
+  "lastVerified": "2026-11-11",
+  "lastVerifiedLabel": "11/11/2026",
   "sourcesNote": "O radar é atualizado por verificações periódicas; não consulta bancas em tempo real ao abrir a página. Sempre confirme condições e prazos no edital.",
   "contests": [
     {
@@ -1421,6 +1421,26 @@
       "notes": "Edital oficial 001/2026 publicado em 04/11/2026. Banca confirma 5 vagas imediatas + CR, R$ 12.300/40h, taxa R$ 160. Inscrições 13/11 a 14/12, isenção 13 a 19/11, prova 14/02/2027. A aceitação específica de Tecnólogo em ADS NÃO foi confirmada no quadro de requisitos do edital integral; validar antes de inscrição.",
       "userStage": "não informado",
       "verified": true
+    },
+    {
+      "id": "ima-sc-26-tecnico-informatica",
+      "agency": "Instituto do Meio Ambiente de Santa Catarina (IMA/SC)",
+      "role": "Técnico em Informática",
+      "place": "Florianópolis/São José — SC",
+      "scope": "SC",
+      "board": "FURB",
+      "kind": "Concurso público",
+      "status": "previsto",
+      "applicationStart": "2026-11-13",
+      "applicationEnd": "2026-12-14",
+      "examDate": "2027-02-14",
+      "salary": 7810,
+      "vacancies": "1 vaga imediata + cadastro de reserva",
+      "source": "https://furb.selecao.net.br/informacoes/584/",
+      "priority": "Prioridade SC — oportunidade adicional de TI na Grande Florianópolis",
+      "notes": "Identificado em 11/11/2026 na página oficial FURB do Edital 001/2026 (publicado em 04/11). Ensino médio/técnico, 40h, taxa R$ 100, isenção 13–19/11. Requisito exato de curso técnico e eventual equivalência por Tecnólogo ADS ainda NÃO confirmados no PDF; não presumir elegibilidade. Prova prevista 14/02/2027.",
+      "userStage": "não informado",
+      "verified": true
     }
   ],
   "watchlist": [
@@ -1627,6 +1647,11 @@
     {
       "name": "IMA/SC 2026 — Analista de Informática Florianópolis/São José",
       "note": "Edital 04/11; 5 vagas + CR, R$ 12.300, inscrições iniciam 13/11, isenção até 19/11, prova 14/02/2027. Conferir no PDF se Tecnólogo ADS é aceito nominalmente.",
+      "url": "https://furb.selecao.net.br/informacoes/584/"
+    },
+    {
+      "name": "IMA/SC — Técnico em Informática: inscrições 13/11/2026",
+      "note": "Nova oportunidade confirmada na página oficial: 1 vaga + CR, R$ 7.810, Florianópolis/São José, ensino médio/técnico; confirmar no edital integral se ADS substitui curso técnico. Inscrições 13/11 a 14/12, isenção 13 a 19/11, prova 14/02/2027.",
       "url": "https://furb.selecao.net.br/informacoes/584/"
     }
   ]
