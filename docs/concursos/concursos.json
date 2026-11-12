@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "lastVerified": "2026-11-11",
-  "lastVerifiedLabel": "11/11/2026",
+  "lastVerified": "2026-11-12",
+  "lastVerifiedLabel": "12/11/2026",
   "sourcesNote": "O radar é atualizado por verificações periódicas; não consulta bancas em tempo real ao abrir a página. Sempre confirme condições e prazos no edital.",
   "contests": [
     {
@@ -1441,6 +1441,26 @@
       "notes": "Identificado em 11/11/2026 na página oficial FURB do Edital 001/2026 (publicado em 04/11). Ensino médio/técnico, 40h, taxa R$ 100, isenção 13–19/11. Requisito exato de curso técnico e eventual equivalência por Tecnólogo ADS ainda NÃO confirmados no PDF; não presumir elegibilidade. Prova prevista 14/02/2027.",
       "userStage": "não informado",
       "verified": true
+    },
+    {
+      "id": "camara-sao-francisco-sul-26-analista-ti",
+      "agency": "Câmara Municipal de São Francisco do Sul",
+      "role": "Analista de Tecnologia da Informação",
+      "place": "São Francisco do Sul — SC",
+      "scope": "SC",
+      "board": "FURB",
+      "kind": "Concurso público",
+      "status": "inscrições abertas",
+      "applicationStart": "2026-11-06",
+      "applicationEnd": "2026-12-07",
+      "examDate": "2027-01-24",
+      "salary": 8369.63,
+      "vacancies": "1 vaga imediata + cadastro de reserva",
+      "source": "https://furb.selecao.net.br/concurso/581-camara-municipal-de-sao-francisco-do-sul-concurso-publico",
+      "priority": "Santa Catarina — oportunidade de TI com jornada de 30 horas",
+      "notes": "Edital 001/2026 de 28/10, errata 01 de 05/11. FURB confirma 1 vaga + CR, R$ 8.369,63, 30h semanais, taxa R$ 150, inscrições até 07/12 e prova em 24/01/2027. Requisito específico de graduação e aceitação do Tecnólogo em ADS não verificados no edital integral; não presumir elegibilidade.",
+      "userStage": "não informado",
+      "verified": true
     }
   ],
   "watchlist": [
@@ -1653,6 +1673,11 @@
       "name": "IMA/SC — Técnico em Informática: inscrições 13/11/2026",
       "note": "Nova oportunidade confirmada na página oficial: 1 vaga + CR, R$ 7.810, Florianópolis/São José, ensino médio/técnico; confirmar no edital integral se ADS substitui curso técnico. Inscrições 13/11 a 14/12, isenção 13 a 19/11, prova 14/02/2027.",
       "url": "https://furb.selecao.net.br/informacoes/584/"
+    },
+    {
+      "name": "Câmara São Francisco do Sul — Analista TI: inscrições até 07/12/2026",
+      "note": "Concurso 001/2026, 1 vaga + CR, R$ 8.369,63/30h, prova 24/01/2027. Verificar requisitos de diploma e efeito da errata de 05/11 sobre TI antes da inscrição.",
+      "url": "https://furb.selecao.net.br/concurso/581-camara-municipal-de-sao-francisco-do-sul-concurso-publico"
     }
   ]
 }
