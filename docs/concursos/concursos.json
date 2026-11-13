@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "lastVerified": "2026-11-12",
-  "lastVerifiedLabel": "12/11/2026",
+  "lastVerified": "2026-11-13",
+  "lastVerifiedLabel": "13/11/2026",
   "sourcesNote": "O radar é atualizado por verificações periódicas; não consulta bancas em tempo real ao abrir a página. Sempre confirme condições e prazos no edital.",
   "contests": [
     {
@@ -1410,7 +1410,7 @@
       "scope": "SC",
       "board": "FURB",
       "kind": "Concurso público",
-      "status": "previsto",
+      "status": "inscrições abertas",
       "applicationStart": "2026-11-13",
       "applicationEnd": "2026-12-14",
       "examDate": "2027-02-14",
@@ -1418,7 +1418,7 @@
       "vacancies": "5 vagas imediatas + cadastro de reserva",
       "source": "https://furb.selecao.net.br/informacoes/584/",
       "priority": "Prioridade máxima SC — 5 vagas em Florianópolis/São José",
-      "notes": "Edital oficial 001/2026 publicado em 04/11/2026. Banca confirma 5 vagas imediatas + CR, R$ 12.300/40h, taxa R$ 160. Inscrições 13/11 a 14/12, isenção 13 a 19/11, prova 14/02/2027. A aceitação específica de Tecnólogo em ADS NÃO foi confirmada no quadro de requisitos do edital integral; validar antes de inscrição.",
+      "notes": "ERRATA N.º 01 publicada em 12/11/2026: requisito alterado para 'conclusão de curso superior específico na área de informática, com registro no respectivo Conselho Regional, se houver'; 5 vagas + CR; CNH B não consta no requisito retificado. Tecnólogo em ADS não é citado nominalmente, mas é graduação superior na área de informática; confirmar aceitação formal com a banca antes de pagar. Inscrições abertas 13/11 a 14/12; isenção até 19/11. Fonte: https://anexos-r2.selecao.net.br/uploads/342/concursos/584/anexos/b7e09599-23d2-4f39-9239-387a37b6afa3.pdf",
       "userStage": "não informado",
       "verified": true
     },
@@ -1430,7 +1430,7 @@
       "scope": "SC",
       "board": "FURB",
       "kind": "Concurso público",
-      "status": "previsto",
+      "status": "inscrições abertas",
       "applicationStart": "2026-11-13",
       "applicationEnd": "2026-12-14",
       "examDate": "2027-02-14",
@@ -1438,7 +1438,7 @@
       "vacancies": "1 vaga imediata + cadastro de reserva",
       "source": "https://furb.selecao.net.br/informacoes/584/",
       "priority": "Prioridade SC — oportunidade adicional de TI na Grande Florianópolis",
-      "notes": "Identificado em 11/11/2026 na página oficial FURB do Edital 001/2026 (publicado em 04/11). Ensino médio/técnico, 40h, taxa R$ 100, isenção 13–19/11. Requisito exato de curso técnico e eventual equivalência por Tecnólogo ADS ainda NÃO confirmados no PDF; não presumir elegibilidade. Prova prevista 14/02/2027.",
+      "notes": "ERRATA N.º 01 de 12/11/2026: exige ensino médio e educação profissional técnica na área de atuação, com registro em conselho quando houver; não confirma substituição do curso técnico por Tecnólogo ADS. 1 vaga + CR. Inscrições 13/11 a 14/12, isenção até 19/11. Fonte: https://anexos-r2.selecao.net.br/uploads/342/concursos/584/anexos/b7e09599-23d2-4f39-9239-387a37b6afa3.pdf",
       "userStage": "não informado",
       "verified": true
     },
@@ -1678,6 +1678,11 @@
       "name": "Câmara São Francisco do Sul — Analista TI: inscrições até 07/12/2026",
       "note": "Concurso 001/2026, 1 vaga + CR, R$ 8.369,63/30h, prova 24/01/2027. Verificar requisitos de diploma e efeito da errata de 05/11 sobre TI antes da inscrição.",
       "url": "https://furb.selecao.net.br/concurso/581-camara-municipal-de-sao-francisco-do-sul-concurso-publico"
+    },
+    {
+      "name": "IMA/SC — Errata 01 de 12/11: requisito ampliado para Analista de Informática; inscrições abertas 13/11",
+      "note": "Retificação oficial substituiu lista fechada de quatro graduações por 'curso superior específico na área de informática' (5 vagas + CR, R$ 12.300). ADS é tecnólogo de nível superior na área, porém não citado expressamente: confirmar interpretação da banca. Técnico em Informática continua exigindo formação técnica; não presumir equivalência ADS. Isenção até 19/11.",
+      "url": "https://furb.selecao.net.br/informacoes/584/"
     }
   ]
 }
