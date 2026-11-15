@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "lastVerified": "2026-11-13",
-  "lastVerifiedLabel": "13/11/2026",
+  "lastVerified": "2026-11-15",
+  "lastVerifiedLabel": "15/11/2026",
   "sourcesNote": "O radar é atualizado por verificações periódicas; não consulta bancas em tempo real ao abrir a página. Sempre confirme condições e prazos no edital.",
   "contests": [
     {
@@ -38,9 +38,9 @@
       "vacancies": "Consultar edital, cargo 404",
       "source": "https://www.institutoaocp.org.br/concursos/711",
       "priority": "Prioridade SC",
-      "notes": "Inscrições encerradas em 09/10. Situação da inscrição precisa ser conferida na área do candidato; não presumir confirmação.",
+      "notes": "Inscrições encerradas em 09/10. Situação da inscrição precisa ser conferida na área do candidato; não presumir confirmação. Verificação 15/11/2026: Instituto AOCP lista oficialmente a divulgação do Edital de Horário e Local de Realização da Prova Objetiva para o concurso CASAN 003/2026 (nível superior). Consultar o documento e a área do candidato para confirmar endereço, horário e correspondência com cargo 404; estes detalhes não foram extraídos nesta verificação.",
       "userStage": "inscrição a confirmar",
-      "verified": true
+      "verified": "2026-11-15"
     },
     {
       "id": "ses-sc-039",
@@ -1683,6 +1683,11 @@
       "name": "IMA/SC — Errata 01 de 12/11: requisito ampliado para Analista de Informática; inscrições abertas 13/11",
       "note": "Retificação oficial substituiu lista fechada de quatro graduações por 'curso superior específico na área de informática' (5 vagas + CR, R$ 12.300). ADS é tecnólogo de nível superior na área, porém não citado expressamente: confirmar interpretação da banca. Técnico em Informática continua exigindo formação técnica; não presumir equivalência ADS. Isenção até 19/11.",
       "url": "https://furb.selecao.net.br/informacoes/584/"
+    },
+    {
+      "name": "CASAN 003/2026 — edital de horário e local da prova objetiva divulgado (verificado 15/11)",
+      "note": "Instituto AOCP informa oficialmente a divulgação do edital de horário e local da prova objetiva para o nível superior. Prova prevista 22/11/2026. Conferir no edital/área do candidato os dados específicos do cargo 404; horário e endereço não foram verificados e não devem ser presumidos.",
+      "url": "https://www.institutoaocp.org.br/concursos/status/em-andamento"
     }
   ]
 }
