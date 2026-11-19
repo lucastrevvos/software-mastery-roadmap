@@ -58,6 +58,7 @@ function renderProjects(projectData){
     const active=reqs.filter(r=>r.status==='in-progress').length;
     const phases=project.phases||[];
     const currentPhase=phases.find(p=>p.status==='in-progress');
+    const learning=project.learningTracks||[];
     return `
       <article class="project-card">
         <div class="project-head">
@@ -77,6 +78,10 @@ function renderProjects(projectData){
           ${reqs.map(req=>`<span class="project-req project-req-${escapeHtml(req.status)}" title="${escapeHtml(req.evidence||'')}">${escapeHtml(req.title)}</span>`).join('')}
         </div>
         <small class="project-summary">${covered} requisito(s) coberto(s) · ${active} em prática · ${reqs.length} mapeados</small>
+        ${learning.length?`<div class="project-learning-preview">
+          <div class="project-learning-head"><strong>Competências aprendidas dentro do projeto</strong><small>${learning.length} tópicos mapeados · ${learning.filter(l=>l.status==="not-started").length} futuros</small></div>
+          <div class="project-learning-tags">${learning.slice(0,7).map(l=>`<span class="project-learning-tag project-learning-tag-${escapeHtml(l.status)}">${escapeHtml(l.topic)}</span>`).join('')}</div>
+        </div>`:""}
         <details class="project-details">
           <summary>Estratégia, arquitetura e fases</summary>
           <div class="project-detail-grid">
@@ -90,6 +95,15 @@ function renderProjects(projectData){
           <div class="project-phases">
             ${phases.map(phase=>`<div class="project-phase"><span>${String(phase.order).padStart(2,'0')}</span><div><strong>${escapeHtml(phase.title)}</strong><small>${escapeHtml(statusLabel(phase.status))}${Number.isFinite(phase.progress)?` · ${phase.progress}%`:""}</small></div></div>`).join('')}
           </div>
+          ${learning.length?`<div class="project-learning-details">
+            <h4>Aprendizado integrado do roadmap</h4>
+            <p>${escapeHtml(project.learningApproach||"Competências validadas por evidência prática.")}</p>
+            <div class="project-learning-grid">${learning.map(l=>`
+              <article class="project-learning-topic">
+                <div><strong>${escapeHtml(l.topic)}</strong><span class="project-learning-state project-learning-state-${escapeHtml(l.status)}">${l.status==="covered"?"comprovado":l.status==="in-progress"?"em prática":"planejado"} · ${escapeHtml(l.when||"")}</span></div>
+                <p>${escapeHtml(l.note||"")}</p>
+              </article>`).join('')}</div>
+          </div>`:""}
         </details>
       </article>`;
   }).join('');
