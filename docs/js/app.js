@@ -18,15 +18,33 @@ function escapeHtml(value){
   })[char]);
 }
 
-function renderCurrent(progress){
-  const courses=Object.entries(progress.courses).filter(([,c])=>c.status==='in-progress');
-  $('#current-courses').innerHTML=courses.map(([id,c])=>`
+function renderCurrent(progress,projectData){
+  const hiddenCourseIds=new Set(['km-one-central-professional-path']);
+  const courseTitles={
+    'cs50x':'CS50x',
+    'fcc-js-v10':'JavaScript Certification · freeCodeCamp',
+    'cs50-sql':'CS50 SQL · Harvard',
+    'foundational-csharp':'Foundational C# with Microsoft',
+    'linux-foundation-lfs101':'Introduction to Linux (LFS101)'
+  };
+  const courses=Object.entries(progress.courses)
+    .filter(([id,c])=>c.status==='in-progress'&&!hiddenCourseIds.has(id));
+  const courseCards=courses.map(([id,c])=>`
     <article class="course-card">
       <span class="${statusClass(c.status)}">${statusLabel(c.status)}</span>
-      <h3>${id==='cs50x'?'CS50x':id==='fcc-js-v10'?'freeCodeCamp JavaScript':id==='cs50-sql'?'CS50 SQL':id==='foundational-csharp'?'Foundational C# with Microsoft':id==='dotnet-backend'?'.NET 10 · Financial Distributed Systems Lab':id}</h3>
-      <p class="muted">Atual: ${c.current||'a definir'}</p>
+      <h3>${escapeHtml(courseTitles[id]||id)}</h3>
+      <p class="muted">Atual: ${escapeHtml(c.current||'a definir')}</p>
       ${c.completed?.length?`<small>${c.completed.length} marco(s) registrado(s)</small>`:''}
-    </article>`).join('');
+    </article>`);
+  const activeProjects=(projectData.projects||[])
+    .filter(p=>p.status==='in-progress'&&p.featuredCurrent);
+  const projectCards=activeProjects.map(project=>`
+    <article class="course-card">
+      <span class="${statusClass(project.status)}">${statusLabel(project.status)} · projeto</span>
+      <h3>${escapeHtml(project.title)}</h3>
+      <p class="muted">Atual: ${escapeHtml(project.progress?.currentTask||'a definir')}</p>
+    </article>`);
+  $('#current-courses').innerHTML=[...courseCards,...projectCards].join('');
 }
 
 function renderProjects(projectData){
@@ -48,9 +66,9 @@ function renderProjects(projectData){
             <h3>${escapeHtml(project.title)}</h3>
             <p>${escapeHtml(project.purpose)}</p>
           </div>
-          <div class="project-percent"><strong>${project.progress?.percent??0}%</strong><small>progresso</small></div>
+          <div class="project-percent"><strong>${Number.isFinite(project.progress?.percent)?`${project.progress.percent}%`:"—"}</strong><small>${Number.isFinite(project.progress?.percent)?"progresso":"sem % aferido"}</small></div>
         </div>
-        <div class="project-track"><div class="project-fill" style="width:${project.progress?.percent??0}%"></div></div>
+        ${Number.isFinite(project.progress?.percent)?`<div class="project-track"><div class="project-fill" style="width:${project.progress.percent}%"></div></div>`:""}
         <div class="project-now">
           <div><small>FASE ATUAL</small><strong>${escapeHtml(project.progress?.currentPhase||currentPhase?.title||'a definir')}</strong></div>
           <div><small>AGORA</small><strong>${escapeHtml(project.progress?.currentTask||'a definir')}</strong></div>
@@ -63,14 +81,14 @@ function renderProjects(projectData){
           <summary>Estratégia, arquitetura e fases</summary>
           <div class="project-detail-grid">
             <section><h4>Estratégia</h4><ol>${(project.strategy||[]).map(x=>`<li>${escapeHtml(x)}</li>`).join('')}</ol></section>
-            <section><h4>Local → AWS → Azure</h4>
+            <section><h4>Arquitetura e implantação</h4>
               <p><strong>Local:</strong> ${escapeHtml((project.architecture?.local||[]).join(' → '))}</p>
               <p><strong>AWS:</strong> ${escapeHtml((project.architecture?.aws||[]).join(' · '))}</p>
               <p><strong>Azure:</strong> ${escapeHtml((project.architecture?.azure||[]).join(' · '))}</p>
             </section>
           </div>
           <div class="project-phases">
-            ${phases.map(phase=>`<div class="project-phase"><span>${String(phase.order).padStart(2,'0')}</span><div><strong>${escapeHtml(phase.title)}</strong><small>${escapeHtml(statusLabel(phase.status))} · ${phase.progress}%</small></div></div>`).join('')}
+            ${phases.map(phase=>`<div class="project-phase"><span>${String(phase.order).padStart(2,'0')}</span><div><strong>${escapeHtml(phase.title)}</strong><small>${escapeHtml(statusLabel(phase.status))}${Number.isFinite(phase.progress)?` · ${phase.progress}%`:""}</small></div></div>`).join('')}
           </div>
         </details>
       </article>`;
@@ -289,7 +307,7 @@ async function init(){
       loadJson('data/course-notes.json'),
       loadJson('data/projects.json')
     ]);
-    renderCurrent(progress);
+    renderCurrent(progress,projects);
     renderProjects(projects);
     renderMastery(mastery);
     renderReviews(reviews);
