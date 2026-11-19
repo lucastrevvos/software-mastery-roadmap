@@ -69,7 +69,10 @@ Motor adaptativo de estudos para CASAN e CGU: prioridades por conteúdo do edita
 - **CS50x:** concluído em 17/09/2026 — certificado oficial: https://certificates.cs50.io/45c5bcfe-b8cc-4aac-ad26-96b3f4824997.pdf?size=letter. Final Project: **LifeBoard** — https://github.com/lucastrevvos/lifeboard · demo: https://youtu.be/9Tg2Lx1C2bk.
 - **freeCodeCamp JavaScript Certification:** em andamento e agora é a **trilha principal ativa**. Posição registrada: Variables and Strings; próximo exercício: Build a Sentence Maker.
 - **CS50's Introduction to Databases with SQL:** em andamento em paralelo desde 18/09/2026; etapa atual: Week 0 — Querying — https://cs50.harvard.edu/sql/weeks/0/.
-- **Foundational C# with Microsoft:** não iniciado e intencionalmente adiado para a segunda grande janela de backend, depois da consolidação Node/Nest + Full Stack Open + profundidade de backend.
+- **Foundational C# with Microsoft:** concluído (certificação registrada em `docs/data/progress.json`); aprofundamento aplicado de .NET permanece secundário.
+- **Introduction to Linux (LFS101):** em andamento, separadamente do exame opcional LPI Linux Essentials.
+- **Jungle iGaming e KM One:** projetos em andamento; seus conteúdos técnicos estão mapeados em `docs/data/projects.json` com status reais (em prática/planejado), sem duplicação como módulos internos independentes.
+- **GitHub Actions GH-200:** certificação não iniciada; será preparada com pipeline real e estudo oficial, sem confundir execução do projeto com aprovação na prova.
 - **Programming Mastery Lab:** ativo em modo de checkpoints cumulativos. A conclusão do CS50x registra progresso externo, mas não promove automaticamente competências para Mastery 7.
 - **Engineering Impact:** trilha transversal ativa para transformar maturidade técnica em projetos, documentação, open source e contribuição pública quando fizer sentido.
 - **Método Especial JCI:** camada transversal ativa; Japão = profundidade, China = treino deliberado, Índia = aplicação/empregabilidade. Ver [JCI_METHOD.md](JCI_METHOD.md).
@@ -91,16 +94,26 @@ Ordem estratégica atual:
 1. **JavaScript + SQL** — fechar os fundamentos ativos.
 2. **Node.js + NestJS** — atingir empregabilidade real como backend TypeScript.
 3. **Full Stack Open + React** — ampliar candidaturas para full stack sem abandonar a identidade backend.
-4. **Backend Senior Depth** — Linux, networking, Nest avançado, DDD, arquitetura, sistemas distribuídos, observabilidade e AWS.
-5. **AI-Enabled Backend** — Python just-in-time, LLM apps, RAG, agentes e LLMOps.
+4. **Backend Senior Depth** — Linux, networking, SWEBOK/iSAQB, GitHub Actions GH-200 e cloud; DDD, arquitetura, sistemas distribuídos e observabilidade são praticados dentro de Jungle/KM One.
+5. **AI-Enabled Backend** — Python e fundamentos oficiais de IA; LLM apps, RAG, agentes e LLMOps entram no KM One por demanda real.
 6. **C#/.NET + Azure** — segunda grande janela de backend, reaplicando conceitos já dominados.
 7. **Frontend Specialization** — Next.js e Angular com profundidade.
 8. **AI/Data/Security avançados + Capstone** — especialização e credenciais de longo prazo.
 
-> Empregabilidade Gate #1: **KM One** será o projeto backend real em Node.js + TypeScript + NestJS, com PostgreSQL/Neon e deploy na Azure. Ao concluir um backend profissional e defensável tecnicamente, iniciar candidaturas para vagas Node.js/TypeScript/NestJS sem esperar cloud ou arquitetura avançadas. Decisão detalhada em [projects/KM_ONE_NODE_NEST_GATE.md](projects/KM_ONE_NODE_NEST_GATE.md).
+> **Aprendizado aplicado:** Jungle iGaming é o laboratório atual de backend financeiro (NestJS, TDD, Money e ADRs). KM One é produto Android ativo; sua futura API NestJS/Neon/Azure será iniciada quando houver requisitos. Observabilidade, CI/CD, DDD, C4, mensageria, segurança e IA são competências incorporadas a esses dois projetos, com evidências e etapas futuras documentadas em [docs/data/projects.json](docs/data/projects.json).
 
 > Empregabilidade Gate #2: após o Full Stack Open, ampliar candidaturas para posições Node/React/TypeScript Full Stack.
 
+
+## Aprendizado integrado aos projetos
+
+Os temas internos de DDD, C4/ADRs, consistência, mensageria, resiliência, observabilidade, containers, CI/CD, integração full stack, IA aplicada e defesa de arquitetura não são mais cursos avulsos da trilha principal.
+
+- **Jungle iGaming:** NestJS/TypeScript, testes, Money, DDD, transações, concorrência, idempotência; próximos gates incluem integração, CI/CD, Docker, observabilidade e documentação arquitetural.
+- **KM One:** Android/Kotlin ativo. Backend NestJS/Neon, segurança, Azure, GitHub Actions, C4, integrações, observabilidade e IA são entregas planejadas ou condicionais, não concluídas.
+- **Certificações externas preservadas:** GitHub Actions GH-200, iSAQB, cloud e cursos oficiais ainda exigem preparação ou exame próprios. Implementar uma ferramenta no projeto não é conquistar a credencial.
+
+A fonte de verdade de competências por projeto é `docs/data/projects.json`; os temas retirados do catálogo permanecem rastreados em `docs/data/roadmap.json → meta.projectIntegratedTopics`.
 
 ## Método do laboratório
 
