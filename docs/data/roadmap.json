@@ -1,8 +1,8 @@
 {
   "meta": {
     "title": "Full Stack Software Architect & Cloud Engineer",
-    "version": "3.4.0",
-    "updatedAt": "2026-10-19",
+    "version": "3.4.1",
+    "updatedAt": "2026-11-18",
     "principles": [
       "Fundamentos fortes antes de especialização",
       "Priorizar certificados oficiais e verificáveis",
@@ -18,7 +18,7 @@
       "Fontes oficiais sem certificado podem virar trilhas guiadas com Mastery Gate interno, quando forem a melhor fonte técnica."
     ],
     "platformMetadata": "Cada item informa onde estudar e onde obter a credencial; ausência de curso/certificação externa é indicada explicitamente.",
-    "executionStrategy": "Adaptive employment-first roadmap: the .NET 10 / financial distributed-systems window was pulled forward because of active BTG/XP opportunities. Immediate gate: XP System Design interview on 2026-09-30 at 14:00 BRT using Excalidraw; after the interview, continue the Financial Distributed Systems Lab while rebalancing the paused JavaScript/SQL tracks."
+    "executionStrategy": "Trilhas ativas: freeCodeCamp JavaScript Certification, CS50 SQL e Linux Foundation LFS101. Laboratórios aplicados ativos: KM One (Android/Kotlin; backend NestJS planejado) e Jungle iGaming (NestJS/TypeScript/Bun, TDD, Money e ADRs). Financial Distributed Systems Lab retirado da lista ativa; manter .NET/C# no currículo técnico sem vincular a um sprint de entrevista encerrado."
   },
   "phases": [
     {
@@ -83,9 +83,7 @@
               "url": "https://www.freecodecamp.org/learn/",
               "cost": "Grátis"
             }
-          },
-          "pauseReason": "Pausa tática para o sprint de System Design da XP.",
-          "resumeAfter": "2026-09-30"
+          }
         },
         {
           "id": "typescript-official-guided",
@@ -123,7 +121,7 @@
           "provider": "Harvard University",
           "credential": "CS50 Certificate",
           "cost": "free",
-          "status": "paused",
+          "status": "in-progress",
           "priority": "core",
           "source": "https://cs50.harvard.edu/sql/",
           "note": "Em paralelo com a freeCodeCamp JavaScript Certification a partir de 2026-09-18. Início: Week 0 — Querying.",
@@ -142,9 +140,7 @@
               "url": "https://cs50.me/cs50sql",
               "cost": "Grátis no CS50; edX opcional pago"
             }
-          },
-          "pauseReason": "Pausa tática para o sprint de System Design da XP.",
-          "resumeAfter": "2026-09-30"
+          }
         }
       ]
     },
@@ -284,14 +280,14 @@
         },
         {
           "id": "node-nest-employability-project",
-          "title": "KM One — Central Professional Product: NestJS Foundation",
+          "title": "KM One — Produto central (Android ativo · backend NestJS planejado)",
           "provider": "Programming Mastery Lab",
           "credential": "Internal Employability Gate",
           "cost": "free",
-          "status": "not-started",
+          "status": "in-progress",
           "priority": "central-project",
           "source": "./mastery-gates/",
-          "description": "Primeira etapa do projeto profissional central do roadmap: TypeScript + Node.js + NestJS + PostgreSQL/Neon + Azure, começando como monólito modular profissional. Depois, o mesmo produto evoluirá seletivamente para bounded contexts, microservices polyglot, sistemas distribuídos, observabilidade, cloud e IA.",
+          "description": "Produto real em evolução: app Android nativo e monitoramento de ofertas ativos. O backend Node.js/TypeScript/NestJS, PostgreSQL/Neon e Azure é uma etapa futura, guiada por requisitos e evidências.",
           "focus": [
             "REST API design",
             "NestJS modules, controllers, providers and DI",
@@ -307,7 +303,7 @@
             "deployment",
             "README and architecture notes"
           ],
-          "note": "Empregabilidade Gate #1 baseado no produto real KM One. Ao concluir um backend profissional implantado e defensável tecnicamente, iniciar candidaturas para Node.js, TypeScript e NestJS backend sem esperar arquitetura/cloud avançadas.",
+          "note": "Status em andamento refere-se ao produto KM One; não representa a conclusão ou início comprovado da implementação da API NestJS.",
           "access": {
             "learning": {
               "status": "internal",
@@ -495,7 +491,7 @@
             "Azure and CI/CD",
             "architecture defense"
           ],
-          "note": "Não é um objetivo de quantidade de microservices. Cada extração precisa ser defendida por responsabilidade de negócio, ownership de dados, escala, confiabilidade, segurança ou cadência de deploy. A escolha da stack vem depois da fronteira."
+          "note": "Não é um objetivo de quantidade de microservices. Cada extração precisa ser defendida por responsabilidade de negócio, ownership de dados, escala, confiabilidade, segurança ou cadência de deploy. A escolha da stack vem depois da fronteira. O produto KM One está em andamento; esta etapa específica de microsserviços é futura."
         },
         {
           "id": "swebok-senior-guided",
@@ -591,6 +587,41 @@
               "kind": "Exame Linux Essentials 010-160",
               "url": "https://www.lpi.org/our-certifications/linux-essentials-overview/",
               "cost": "Exame pago"
+            }
+          }
+        },
+        {
+          "id": "linux-foundation-lfs101",
+          "order": 10.1,
+          "title": "Introduction to Linux (LFS101)",
+          "provider": "The Linux Foundation",
+          "credential": "Curso introdutório; conclusão/certificado a confirmar no portal",
+          "cost": "free",
+          "status": "in-progress",
+          "priority": "core",
+          "source": "https://trainingportal.linuxfoundation.org/courses/introduction-to-linux-lfs101",
+          "description": "Trilha prática de fundamentos Linux em andamento, independente da preparação opcional para a certificação LPI Linux Essentials.",
+          "focus": [
+            "Terminal e shell",
+            "Filesystem e permissões",
+            "Gerenciamento de processos",
+            "Distribuições Linux",
+            "Pacotes e rede básica"
+          ],
+          "access": {
+            "learning": {
+              "status": "available",
+              "platform": "Linux Foundation Training",
+              "kind": "Introduction to Linux (LFS101)",
+              "url": "https://trainingportal.linuxfoundation.org/courses/introduction-to-linux-lfs101",
+              "cost": "Curso gratuito"
+            },
+            "credential": {
+              "status": "unverified",
+              "platform": "Linux Foundation Training",
+              "kind": "Não registrar certificação concluída; verificar regras do portal ao finalizar.",
+              "url": "https://trainingportal.linuxfoundation.org/courses/introduction-to-linux-lfs101",
+              "cost": "A confirmar"
             }
           }
         },
@@ -1315,8 +1346,8 @@
     },
     {
       "id": "phase-06",
-      "title": ".NET 10 & Financial Distributed Systems — Active Backend Window",
-      "goal": "Consolidar C#/.NET 10 em backend e sistemas distribuídos no Financial Lab e usar essa competência, quando uma fronteira real justificar, em serviços selecionados do KM One. Azure continua como eixo cloud, e .NET passa a ser uma stack possível do produto polyglot, não um projeto isolado por linguagem.",
+      "title": ".NET/C# Backend Engineering & Azure",
+      "goal": "Aprofundamento em C#/.NET, APIs, testes e Azure em uma janela secundária, sem projeto financeiro ativo.",
       "items": [
         {
           "id": "foundational-csharp",
@@ -1354,8 +1385,8 @@
           "provider": "Microsoft Learn + Mastery Lab",
           "credential": "Applied portfolio + badges where available",
           "cost": "free",
-          "status": "in-progress",
-          "priority": "active-senior-interview",
+          "status": "paused",
+          "priority": "secondary",
           "access": {
             "learning": {
               "status": "available",
@@ -1373,45 +1404,14 @@
             }
           },
           "startedAt": "2026-09-28",
-          "description": "Financial Distributed Systems Lab em .NET 10: ASP.NET Core, testes, DDD, Clean Architecture, CQRS quando justificado, PostgreSQL, RabbitMQ, confiabilidade distribuída, containers, Kubernetes, observabilidade, CI/CD e defesa arquitetural.",
+          "description": "Trilha de engenharia backend com C#/.NET e ASP.NET Core. O antigo Financial Distributed Systems Lab e o sprint de entrevista XP foram retirados da lista ativa; os fundamentos .NET continuam disponíveis no currículo.",
           "currentFocus": [
-            ".NET 10 / ASP.NET Core",
-            "TDD, unit, integration and architecture tests",
-            "DDD and domain invariants",
-            "Clean Architecture / Ports and Adapters when justified",
-            "CQRS when read/write models genuinely diverge",
-            "PostgreSQL",
-            "RabbitMQ with explicit ACK/NACK, prefetch and redelivery semantics",
-            "Idempotency, Inbox, Transactional Outbox, Retry and DLQ",
-            "Eventual consistency, Saga/Process Manager and compensation",
-            "Resilience, timeouts and circuit breakers",
-            "Docker and local Kubernetes",
-            "OpenTelemetry, logs, metrics and traces",
-            "CI/CD and production-readiness",
-            "Architecture-defense drills under changing constraints"
-          ],
-          "activeSprint": {
-            "title": "XP System Design Interview Sprint",
-            "status": "in-progress",
-            "deadline": "2026-09-30T14:00:00-03:00",
-            "tool": "Excalidraw",
-            "format": "Live system design + architecture defense with senior interviewers",
-            "domains": [
-              "credit",
-              "collections",
-              "payments"
-            ],
-            "objective": "Desenhar uma solução enquanto explica decisões, limites de consistência, source of truth, integração síncrona/assíncrona, escalabilidade, duplicidade, falhas, observabilidade e trade-offs.",
-            "questionPressure": [
-              "Why RabbitMQ instead of Kafka or synchronous HTTP?",
-              "What is the source of truth?",
-              "What happens if the same event arrives twice?",
-              "What happens if the database commits and the broker is unavailable?",
-              "Where is strong consistency required and where is eventual consistency acceptable?",
-              "How does the system scale and how is it observed in production?",
-              "Does this need CQRS or microservices at all?"
-            ]
-          }
+            "C# e orientação a objetos",
+            "ASP.NET Core APIs",
+            "Injeção de dependências e testes",
+            "SQL e persistência",
+            "Arquitetura aplicada conforme os requisitos"
+          ]
         },
         {
           "id": "azure-foundations",
