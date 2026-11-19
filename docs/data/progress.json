@@ -243,6 +243,18 @@
         "Curso da Linux Foundation em andamento em 2026-11-18.",
         "Curso introdutório distinto do exame LPI Linux Essentials; não marcar certificado como obtido antes da conclusão."
       ]
+    },
+    "github-actions-gh-200": {
+      "status": "not-started",
+      "started": false,
+      "completed": [],
+      "current": null,
+      "courseUrl": "https://learn.microsoft.com/en-us/training/paths/github-actions/",
+      "certificationUrl": "https://learn.microsoft.com/pt-br/credentials/certifications/github-actions/",
+      "notes": [
+        "Estudar após pipeline básico de CI/CD e laboratório NestJS; exame GH-200 somente quando houver evidência prática suficiente.",
+        "Certificação intermediária GitHub Actions; estudo gratuito no Microsoft Learn, prova paga."
+      ]
     }
   },
   "labs": {
