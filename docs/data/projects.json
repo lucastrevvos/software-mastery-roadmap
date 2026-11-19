@@ -1,7 +1,7 @@
 {
   "meta": {
     "version": "1.0.0",
-    "updatedAt": "2026-09-03T13:35:00-03:00",
+    "updatedAt": "2026-11-18T23:51:00-03:00",
     "purpose": "Camada de projetos aplicados do roadmap: estratégia, arquitetura, requisitos praticados, evidências, progresso e próximos gates."
   },
   "principles": [
@@ -517,6 +517,298 @@
         "Observability backend comparison: Axiom vs Grafana stack (Prometheus/Loki/Tempo) vs Sentry vs CloudWatch/Application Insights.",
         "Failure investigation lab: trace one request across API, PostgreSQL, external API, queue and worker."
       ]
+    },
+    {
+      "id": "jungle-igaming-nestjs-lab",
+      "title": "Jungle iGaming — Backend Challenge Lab (NestJS)",
+      "kind": "technical-challenge-and-mastery-lab",
+      "status": "in-progress",
+      "featuredCurrent": true,
+      "priority": "high",
+      "startedAt": "2026-11-15",
+      "updatedAt": "2026-11-18T23:51:00-03:00",
+      "purpose": "Usar o desafio backend da Jungle Gaming como laboratório prático de engenharia: domínio financeiro, TDD, concorrência, atomicidade, idempotência e decisões arquiteturais documentadas.",
+      "careerContext": "Laboratório de preparação e demonstração técnica baseado no desafio de Backend Developer da Jungle Gaming.",
+      "goal": "Evoluir uma API NestJS/TypeScript com consistência financeira, testes automatizados, decisões justificadas em ADRs e cenários de falha reproduzíveis.",
+      "stack": {
+        "runtime": [
+          "Bun"
+        ],
+        "backend": [
+          "TypeScript",
+          "NestJS"
+        ],
+        "data": [
+          "Persistência transacional — implementação progressiva"
+        ],
+        "localPlatform": [
+          "Git",
+          "TDD"
+        ],
+        "integration": [
+          "Outbox/Inbox — decisões documentadas"
+        ]
+      },
+      "requirements": [
+        {
+          "id": "nestjs",
+          "title": "NestJS + TypeScript",
+          "status": "in-progress",
+          "evidence": "Projeto/laboratório backend inicializado com NestJS, TypeScript e Bun."
+        },
+        {
+          "id": "money",
+          "title": "Money Value Object",
+          "status": "covered",
+          "evidence": "Value Object com decimal.js, 7 testes passando; precisão, imutabilidade, moedas e overflow cobertos."
+        },
+        {
+          "id": "tdd",
+          "title": "TDD",
+          "status": "in-progress",
+          "evidence": "7 testes automatizados de Money registrados; expandir cobertura para transações."
+        },
+        {
+          "id": "adrs",
+          "title": "ADRs",
+          "status": "covered",
+          "evidence": "ADRs 0001–0008: casos de uso, atomicidade, concorrência, idempotência, referências pendentes, outbox, inbox e Money."
+        },
+        {
+          "id": "atomicity",
+          "title": "Atomicidade e concorrência",
+          "status": "in-progress",
+          "evidence": "Conceitos e decisões estudados; comprovação integral em runtime ainda pendente."
+        },
+        {
+          "id": "idempotency",
+          "title": "Idempotência persistente",
+          "status": "in-progress",
+          "evidence": "Incidente e ADR discutidos; implementação e validação operacional seguem como próximo gate."
+        },
+        {
+          "id": "outbox",
+          "title": "Transactional Outbox/Inbox",
+          "status": "not-started",
+          "evidence": "Modelos e decisões discutidos; ainda não marcar implementação como concluída."
+        }
+      ],
+      "architecture": {
+        "local": [
+          "Bun + NestJS + TypeScript",
+          "Money (decimal.js)",
+          "Testes + Git + ADRs"
+        ],
+        "aws": [],
+        "azure": []
+      },
+      "strategy": [
+        "Aproveitar o teste real de seleção como laboratório de engenharia, não apenas como entrega rápida.",
+        "Trabalhar pelo método DECA, com pequenos passos, testes primeiro e commits curtos.",
+        "Separar evidência testada de decisões apenas documentadas; evitar overengineering."
+      ],
+      "phases": [
+        {
+          "order": 0,
+          "title": "Bootstrap e domínio do desafio",
+          "status": "completed",
+          "progress": 100
+        },
+        {
+          "order": 1,
+          "title": "ADRs de consistência e confiabilidade",
+          "status": "completed",
+          "progress": 100
+        },
+        {
+          "order": 2,
+          "title": "Money Value Object — 7 testes passando",
+          "status": "completed",
+          "progress": 100
+        },
+        {
+          "order": 3,
+          "title": "Transações, concorrência e idempotência",
+          "status": "in-progress",
+          "progress": null
+        },
+        {
+          "order": 4,
+          "title": "Outbox, Inbox e integração",
+          "status": "not-started",
+          "progress": null
+        },
+        {
+          "order": 5,
+          "title": "Testes de integração e defesa técnica",
+          "status": "not-started",
+          "progress": null
+        }
+      ],
+      "progress": {
+        "percent": null,
+        "currentPhase": "Transações, concorrência e idempotência",
+        "currentTask": "Evoluir o domínio financeiro a partir do Money Value Object e validar consistência com testes.",
+        "nextTasks": [
+          "Implementar e testar operações financeiras atômicas",
+          "Validar concorrência e idempotência",
+          "Implementar padrões de mensageria somente quando necessários"
+        ],
+        "completedEvidence": [
+          "ADRs 0001–0008 documentadas.",
+          "Money Value Object implementado com decimal.js e 7 testes aprovados."
+        ]
+      }
+    },
+    {
+      "id": "km-one-product",
+      "title": "KM One — Produto Android para Motoristas",
+      "kind": "real-product-and-engineering-lab",
+      "status": "in-progress",
+      "featuredCurrent": true,
+      "priority": "high",
+      "updatedAt": "2026-11-18T23:51:00-03:00",
+      "purpose": "Produto Android nativo que ajuda motoristas de Uber/99 a avaliar ofertas e métricas de viagem; integrações e backend profissional evoluem por necessidades reais.",
+      "careerContext": "Produto real da Trevvos e laboratório de arquitetura, produto mobile e engenharia de software.",
+      "goal": "Aprimorar o aplicativo Android, resolver requisitos de distribuição e evoluir seletivamente backend, dados e integrações sem antecipar complexidade desnecessária.",
+      "stack": {
+        "mobile": [
+          "Android nativo",
+          "Kotlin",
+          "AccessibilityService",
+          "MediaProjection/OCR",
+          "Overlay"
+        ],
+        "backendPlanned": [
+          "Node.js",
+          "TypeScript",
+          "NestJS"
+        ],
+        "dataPlanned": [
+          "PostgreSQL/Neon"
+        ],
+        "cloudPlanned": [
+          "Azure"
+        ],
+        "integrationsPlanned": [
+          "WhatsApp",
+          "Parceiros e serviços ao motorista"
+        ]
+      },
+      "requirements": [
+        {
+          "id": "android",
+          "title": "Android nativo",
+          "status": "in-progress",
+          "evidence": "Aplicativo funcional em evolução."
+        },
+        {
+          "id": "offer-analysis",
+          "title": "Ofertas e R$/km",
+          "status": "in-progress",
+          "evidence": "Regras de detecção/avaliação de ofertas Uber/99 trabalhadas no aplicativo."
+        },
+        {
+          "id": "ocr",
+          "title": "OCR e acessibilidade",
+          "status": "in-progress",
+          "evidence": "MediaProjection, AccessibilityService e overlay explorados; fluxo de publicação exige adequação."
+        },
+        {
+          "id": "testing",
+          "title": "Testes fechados",
+          "status": "covered",
+          "evidence": "Ciclo de 12 testers por 14 dias relatado."
+        },
+        {
+          "id": "play-store",
+          "title": "Google Play",
+          "status": "in-progress",
+          "evidence": "Publicação/revisão requer resolução de disclosure e políticas aplicáveis."
+        },
+        {
+          "id": "nestjs",
+          "title": "Backend NestJS",
+          "status": "not-started",
+          "evidence": "Stack planejada para evolução backend; não confundir projeto Android ativo com backend implantado."
+        },
+        {
+          "id": "azure",
+          "title": "PostgreSQL/Neon + Azure",
+          "status": "not-started",
+          "evidence": "Arquitetura e deploy backend previstos."
+        },
+        {
+          "id": "whatsapp",
+          "title": "WhatsApp e parceiros",
+          "status": "not-started",
+          "evidence": "Funcionalidades de integração planejadas."
+        }
+      ],
+      "architecture": {
+        "local": [
+          "App Android/Kotlin",
+          "Captura/acessibilidade/OCR",
+          "Regras de avaliação de viagens"
+        ],
+        "aws": [],
+        "azure": [
+          "Backend NestJS + PostgreSQL/Neon (planejado)",
+          "Deploy de serviços quando necessário"
+        ]
+      },
+      "strategy": [
+        "Manter o produto Android em funcionamento e validar entrega/distribuição.",
+        "Separar claramente funcionalidades implementadas das planejadas.",
+        "Evoluir backend como monólito modular NestJS antes de considerar microsserviços.",
+        "Utilizar incidentes reais como casos de estudo de arquitetura e testes."
+      ],
+      "phases": [
+        {
+          "order": 0,
+          "title": "App Android, detecção de ofertas e R$/km",
+          "status": "in-progress",
+          "progress": null
+        },
+        {
+          "order": 1,
+          "title": "Testes, UX e adequação à Google Play",
+          "status": "in-progress",
+          "progress": null
+        },
+        {
+          "order": 2,
+          "title": "Backend NestJS + PostgreSQL/Neon",
+          "status": "not-started",
+          "progress": null
+        },
+        {
+          "order": 3,
+          "title": "Integrações WhatsApp e parceiros",
+          "status": "not-started",
+          "progress": null
+        },
+        {
+          "order": 4,
+          "title": "Observabilidade e evolução arquitetural",
+          "status": "not-started",
+          "progress": null
+        }
+      ],
+      "progress": {
+        "percent": null,
+        "currentPhase": "Aplicativo Android e conformidade de distribuição",
+        "currentTask": "Evoluir as funcionalidades Android e resolver requisitos de publicação; backend NestJS permanece planejado.",
+        "nextTasks": [
+          "Validar fluxo Android e precisão das métricas",
+          "Revisar disclosure/políticas para distribuição",
+          "Planejar primeiro recorte da API NestJS"
+        ],
+        "completedEvidence": [
+          "Ciclo de testes fechados com 12 participantes por 14 dias.",
+          "App Android com avaliação de ofertas e técnicas de captura já trabalhadas."
+        ]
+      }
     }
   ]
 }
