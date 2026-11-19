@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "lastVerified": "2026-11-15",
-  "lastVerifiedLabel": "15/11/2026",
+  "lastVerified": "2026-11-19",
+  "lastVerifiedLabel": "19/11/2026",
   "sourcesNote": "O radar é atualizado por verificações periódicas; não consulta bancas em tempo real ao abrir a página. Sempre confirme condições e prazos no edital.",
   "contests": [
     {
@@ -12,15 +12,15 @@
       "scope": "SC",
       "board": "FGV",
       "kind": "Concurso público",
-      "status": "gabarito",
+      "status": "resultado da prova objetiva",
       "applicationEnd": "2026-08-06",
       "examDate": "2026-10-11",
       "salary": 10685.44,
       "vacancies": "20 vagas + 80 CR em Florianópolis (referência de planejamento)",
       "source": "https://conhecimento.fgv.br/concursos/dataprev26",
-      "priority": "Acompanhar resultado",
-      "notes": "Gabarito oficial PRELIMINAR publicado em 13/10/2026. Recursos de 14 a 15/10, prazo encerrado. 2ª retificação publicada em 04/11: vagas adicionais de reserva indígena/quilombola com distribuição dinâmica nacional e novas datas de avaliações; ainda sem gabarito definitivo/resultado de classificação na consulta oficial de 05/11. Estimativa pessoal Tipo 1: 37/70 e 59,5/115 (cartão a conferir). Resultado previsto para 14/01/2027.",
-      "userStage": "prova realizada; gabarito preliminar corrigido",
+      "priority": "Resultado publicado — conferir classificação",
+      "notes": "Gabarito oficial PRELIMINAR publicado em 13/10/2026. Recursos de 14 a 15/10, prazo encerrado. 2ª retificação publicada em 04/11: vagas adicionais de reserva indígena/quilombola com distribuição dinâmica nacional e novas datas de avaliações; resultado da prova objetiva e respostas aos recursos publicados pela FGV em 18/11/2026; documentos de convocação para avaliações complementares também publicados em 18/11. Não foi possível extrair a lista completa ou confirmar classificação individual de Desenvolvimento de Software em Florianópolis. O link das respostas aos recursos aponta para PDF cujo nome contém 'gabarito-definitivo_ajustado', mas seu conteúdo não foi validado. Estimativa pessoal Tipo 1: 37/70 e 59,5/115 (cartão a conferir). Resultado previsto para 14/01/2027.",
+      "userStage": "prova realizada; resultado objetivo publicado em 18/11 — conferir",
       "verified": true
     },
     {
@@ -1688,6 +1688,11 @@
       "name": "CASAN 003/2026 — edital de horário e local da prova objetiva divulgado (verificado 15/11)",
       "note": "Instituto AOCP informa oficialmente a divulgação do edital de horário e local da prova objetiva para o nível superior. Prova prevista 22/11/2026. Conferir no edital/área do candidato os dados específicos do cargo 404; horário e endereço não foram verificados e não devem ser presumidos.",
       "url": "https://www.institutoaocp.org.br/concursos/status/em-andamento"
+    },
+    {
+      "name": "Dataprev 2026 — resultado da prova objetiva e respostas aos recursos publicados em 18/11",
+      "note": "NOVIDADE FGV confirmada em 19/11: em 18/11 publicou Resultado da Prova Objetiva, Respostas aos Recursos contra o Gabarito Oficial Preliminar, convocação para avaliação biopsicossocial e procedimentos complementares para candidatos pretos/pardos, indígenas e quilombolas. PDF de resultado extenso não foi extraído; não afirmar nota/classificação individual em Desenvolvimento de Software Florianópolis. Link de respostas possui nome de arquivo 'gabarito-definitivo_ajustado.pdf', conteúdo não validado. Conferir lista e cronograma oficial antes de concluir situação do candidato.",
+      "url": "https://conhecimento.fgv.br/concursos/dataprev26"
     }
   ]
 }
