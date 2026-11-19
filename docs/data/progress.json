@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-18T23:51:00-03:00",
+  "updatedAt": "2026-11-19T20:26:00-03:00",
   "courses": {
     "cs50x": {
       "status": "completed",
@@ -220,17 +220,18 @@
       "officialSource": "https://www.computer.org/education/certifications"
     },
     "km-one-central-professional-path": {
-      "status": "in-progress",
+      "status": "integrated-in-project",
       "started": true,
       "completed": [],
-      "current": "Produto Android em evolução; backend profissional NestJS previsto para etapa posterior.",
+      "current": "O acompanhamento está em Projetos & evidências: KM One; não é curso separado.",
       "sourcePlan": "projects/KM_ONE_CENTRAL_PROFESSIONAL_PATH.md",
       "notes": [
         "Definido em 2026-10-19 como o projeto profissional central que conecta o roadmap à prática.",
         "Começa como monólito modular NestJS e só evolui para microservices quando bounded contexts/necessidades reais justificarem.",
         "O alvo polyglot é usar NestJS/TypeScript como stack principal e .NET/C# em serviços selecionados quando houver razão arquitetural.",
         "SWEBOK, iSAQB, full-stack, cloud, observabilidade e IA devem gerar evidência prática no KM One sempre que fizer sentido.",
-        "Produto KM One confirmado em andamento em 2026-11-18; implantação do backend NestJS ainda não confirmada."
+        "Produto KM One confirmado em andamento em 2026-11-18; implantação do backend NestJS ainda não confirmada.",
+        "Em 2026-11-19, este gate foi integrado ao projeto KM One em docs/data/projects.json, não sendo mais listado como curso isolado."
       ]
     },
     "linux-foundation-lfs101": {
