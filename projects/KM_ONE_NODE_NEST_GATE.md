@@ -14,7 +14,7 @@ Status: **Decision accepted on 2026-09-21**
 
 Reconsider the KM One backend from **.NET** to **Node.js + TypeScript + NestJS**, while keeping **Azure** as the cloud platform.
 
-KM One becomes the real-world project for **Node/Nest Backend Employability Project + Gate** in the roadmap.
+KM One is already an Android product in progress. The **Node/Nest Backend Employability Gate** is a future product phase rather than a separate course or implemented backend.
 
 This is not a rejection of .NET. The .NET ecosystem is deliberately postponed to the second major backend window, where the same architectural concepts will be reapplied in C# / ASP.NET Core / Azure.
 
@@ -121,8 +121,8 @@ KM One
 
 .NET therefore becomes both:
 
-1. a focused learning window in the Financial Distributed Systems Lab; and
-2. a possible production stack inside KM One for a bounded context that genuinely earns independent service ownership.
+1. an optional focused .NET/C# learning window outside the retired Financial Lab; and
+2. a possible future production stack inside KM One when a real bounded context earns independent deployment.
 
 The canonical cross-phase plan is `projects/KM_ONE_CENTRAL_PROFESSIONAL_PATH.md`.
 
