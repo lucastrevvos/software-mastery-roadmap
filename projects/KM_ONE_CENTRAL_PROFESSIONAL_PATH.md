@@ -1,12 +1,12 @@
 # KM One — Central Professional Engineering Path
 
-Status: **canonical / main applied path**
+Status: **canonical / main applied path** — aplicativo Android ativo; backend e arquitetura cloud documentados como evolução planejada.
 
 Decision date: **2026-10-19**
 
 ## Core decision
 
-KM One is the **main professional project** that connects the roadmap to real engineering practice.
+KM One is the **main real product** that connects the roadmap to engineering practice. Its Android app is active; the NestJS backend, persistence, cloud and advanced architecture sections below are planned or conditional, not deployed implementations.
 
 The roadmap must no longer treat KM One as only a Node/Nest employability project. It starts there, but it evolves in controlled stages into the main environment for applying:
 
@@ -278,20 +278,13 @@ Candidate capabilities:
 
 TypeScript should be preferred when adequate. Python enters when its AI/data ecosystem provides concrete value.
 
-## Relationship with Financial Lab
+## Relationship with Jungle iGaming
 
-Financial Distributed Systems Lab remains a **focused training laboratory**.
+Jungle iGaming is the **current NestJS/TypeScript financial-backend training laboratory**. It has a tested Money Value Object and documented ADRs; other concepts are still in progress or planned.
 
-Its role:
+Transfer ideas to KM One only when the Android product and its future backend have real use cases. Avoid duplicating separate internal courses for DDD, architecture documentation, distributed reliability, observability, CI/CD or architecture defense.
 
-```text
-Financial Lab
-→ isolate and learn hard backend/distributed concepts
-→ test them safely
-→ transfer validated ideas into KM One when relevant
-```
-
-KM One is the professional product; Financial Lab is the engineering laboratory.
+Practical coverage and actual evidence are maintained in `docs/data/projects.json`. GH-200, iSAQB and cloud certifications remain independent official credentials.
 
 ## Relationship with SWEBOK and iSAQB
 
