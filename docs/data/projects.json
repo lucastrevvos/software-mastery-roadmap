@@ -1,8 +1,9 @@
 {
   "meta": {
-    "version": "1.0.0",
+    "version": "1.1.0",
     "updatedAt": "2026-11-19",
-    "purpose": "Camada de projetos aplicados do roadmap: estratégia, arquitetura, requisitos praticados, evidências, progresso e próximos gates."
+    "purpose": "Camada de projetos aplicados do roadmap: estratégia, arquitetura, requisitos praticados, evidências, progresso e próximos gates.",
+    "learningModel": "Domínio de conteúdos retirados como módulos soltos do roadmap é desenvolvido e verificado dentro de Jungle iGaming e KM One. Tags em andamento indicam prática e progresso, não conclusão ou domínio. Certificações externas permanecem independentes."
   },
   "principles": [
     "Projeto deve transformar conhecimento em evidência prática, não apenas repetir tutorial.",
@@ -139,6 +140,24 @@
           "title": "Testes de integração e defesa técnica",
           "status": "not-started",
           "progress": null
+        },
+        {
+          "order": 6,
+          "title": "CI/CD com GitHub Actions e Docker",
+          "status": "not-started",
+          "progress": null
+        },
+        {
+          "order": 7,
+          "title": "Observabilidade, segurança e diagnóstico",
+          "status": "not-started",
+          "progress": null
+        },
+        {
+          "order": 8,
+          "title": "C4 e defesa arquitetural por evidências",
+          "status": "not-started",
+          "progress": null
         }
       ],
       "progress": {
@@ -154,7 +173,76 @@
           "ADRs 0001–0008 documentadas.",
           "Money Value Object implementado com decimal.js e 7 testes aprovados."
         ]
-      }
+      },
+      "learningTracks": [
+        {
+          "topic": "NestJS e contratos de API",
+          "status": "in-progress",
+          "when": "Atual",
+          "note": "Projeto NestJS/TypeScript/Bun iniciado; arquitetura e contratos evoluem no laboratório."
+        },
+        {
+          "topic": "TDD e testes automatizados",
+          "status": "in-progress",
+          "when": "Atual",
+          "note": "Sete testes do Money aprovados; faltam integração e cenários de falha."
+        },
+        {
+          "topic": "DDD, Value Objects e invariantes",
+          "status": "in-progress",
+          "when": "Atual",
+          "note": "Money Value Object validado; demais invariantes financeiras ainda evoluirão."
+        },
+        {
+          "topic": "Arquitetura, ADRs e defesa de decisões",
+          "status": "in-progress",
+          "when": "Atual",
+          "note": "ADRs 0001–0008 documentadas; defesa e verificação em execução ainda pendentes."
+        },
+        {
+          "topic": "Transações, concorrência e idempotência",
+          "status": "in-progress",
+          "when": "Próximo gate",
+          "note": "Incidentes e ADRs já estudados; falta comprovar atomicidade/concorrência/idempotência com testes integrados."
+        },
+        {
+          "topic": "Mensageria, Outbox e Inbox",
+          "status": "not-started",
+          "when": "Fase posterior",
+          "note": "Padrões documentados; só implementar se o fluxo de integração justificar."
+        },
+        {
+          "topic": "Docker e execução reproduzível",
+          "status": "not-started",
+          "when": "Fase posterior",
+          "note": "Containerização e ambiente reprodutível a construir."
+        },
+        {
+          "topic": "CI/CD e GitHub Actions",
+          "status": "not-started",
+          "when": "Antes da GH-200",
+          "note": "Criar workflow de testes, build, artefatos e verificação de segurança; não equivale à certificação GH-200."
+        },
+        {
+          "topic": "Observabilidade (logs, métricas, tracing)",
+          "status": "not-started",
+          "when": "Fase posterior",
+          "note": "Instrumentação e simulação de incidentes ainda não implementadas."
+        },
+        {
+          "topic": "Documentação C4 e revisão arquitetural",
+          "status": "not-started",
+          "when": "Fase posterior",
+          "note": "ADRs já existem; diagramas C4/revisão e critérios de qualidade ainda não demonstrados."
+        },
+        {
+          "topic": "Segurança de API e pipeline",
+          "status": "not-started",
+          "when": "Fase posterior",
+          "note": "Validação de entradas, privilégios mínimos e proteção de secrets serão tratados conforme o sistema evoluir."
+        }
+      ],
+      "learningApproach": "Laboratório de backend financeiro. Cada competência só avança de planejada para comprovada após código, testes, incidentes e evidências verificáveis."
     },
     {
       "id": "km-one-product",
@@ -289,6 +377,30 @@
           "title": "Observabilidade e evolução arquitetural",
           "status": "not-started",
           "progress": null
+        },
+        {
+          "order": 5,
+          "title": "Full-stack web, somente quando útil",
+          "status": "not-started",
+          "progress": null
+        },
+        {
+          "order": 6,
+          "title": "AI Engineering e avaliação de integrações",
+          "status": "not-started",
+          "progress": null
+        },
+        {
+          "order": 7,
+          "title": "Mensageria e serviços independentes, se necessários",
+          "status": "not-started",
+          "progress": null
+        },
+        {
+          "order": 8,
+          "title": "Defesa arquitetural e portfólio de produção",
+          "status": "not-started",
+          "progress": null
         }
       ],
       "progress": {
@@ -304,7 +416,88 @@
           "Ciclo de testes fechados com 12 participantes por 14 dias.",
           "App Android com avaliação de ofertas e técnicas de captura já trabalhadas."
         ]
-      }
+      },
+      "learningTracks": [
+        {
+          "topic": "Android nativo, Kotlin, OCR e UX",
+          "status": "in-progress",
+          "when": "Atual",
+          "note": "Aplicativo em evolução; OCR, acessibilidade, ofertas e métricas são trabalhados no produto."
+        },
+        {
+          "topic": "Testes de dispositivo, Play Store e conformidade",
+          "status": "in-progress",
+          "when": "Atual",
+          "note": "Houve ciclo de testes fechados; adequação de políticas e publicação ainda exigem trabalho."
+        },
+        {
+          "topic": "API NestJS, DTOs e arquitetura modular",
+          "status": "not-started",
+          "when": "Futuro backend",
+          "note": "Prevista uma API Node/Nest modular; não afirmar que o backend foi implantado."
+        },
+        {
+          "topic": "PostgreSQL/Neon e modelagem de dados",
+          "status": "not-started",
+          "when": "Futuro backend",
+          "note": "Persistência e migrações planejadas para serviços do KM One."
+        },
+        {
+          "topic": "Autenticação, autorização e segurança",
+          "status": "not-started",
+          "when": "Futuro backend",
+          "note": "Entregas profissionais a implementar quando o backend começar."
+        },
+        {
+          "topic": "DDD, C4, ADRs e evolução arquitetural",
+          "status": "not-started",
+          "when": "Quando necessário",
+          "note": "Definir módulos e decisões com requisitos reais antes de considerar microsserviços."
+        },
+        {
+          "topic": "CI/CD, GitHub Actions e Docker",
+          "status": "not-started",
+          "when": "Futuro backend",
+          "note": "Fluxos automatizados, testes e deploy conforme o backend for entregue."
+        },
+        {
+          "topic": "Azure, operação e ambientes",
+          "status": "not-started",
+          "when": "Futuro backend",
+          "note": "Deploy/Key Vault/monitoramento são metas da infraestrutura futura, não evidências concluídas."
+        },
+        {
+          "topic": "Observabilidade, logs e métricas",
+          "status": "not-started",
+          "when": "Futuro backend",
+          "note": "Introduzir logs estruturados e health checks; tracing distribuído se existirem fronteiras de serviço."
+        },
+        {
+          "topic": "Integração, filas e resiliência distribuída",
+          "status": "not-started",
+          "when": "Condicional",
+          "note": "Idempotência, Outbox/Inbox, RabbitMQ e outros padrões apenas se a arquitetura demandar."
+        },
+        {
+          "topic": "Frontend web e fluxos full stack",
+          "status": "not-started",
+          "when": "Condicional",
+          "note": "Usar React/TypeScript quando houver painel web justificável para o produto."
+        },
+        {
+          "topic": "LLMs, RAG, agentes, avaliações e LLMOps",
+          "status": "not-started",
+          "when": "Futuro IA",
+          "note": "Somente em funcionalidades úteis, como suporte/contexto ao motorista, com segurança, testes e custo controlado."
+        },
+        {
+          "topic": "Defesa de arquitetura e portfólio",
+          "status": "not-started",
+          "when": "Evolução",
+          "note": "Criar evidências de decisões, incidentes e trade-offs em vez de um capstone fictício."
+        }
+      ],
+      "learningApproach": "Produto Android real. A atividade atual não prova entrega do backend; tecnologias futuras entram conforme valor de produto, emprego e necessidade arquitetural."
     }
   ]
 }
