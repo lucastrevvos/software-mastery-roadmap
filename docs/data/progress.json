@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-20T15:44:00-03:00",
+  "updatedAt": "2026-11-18T23:51:00-03:00",
   "courses": {
     "cs50x": {
       "status": "completed",
@@ -133,13 +133,14 @@
       "certificateUrl": "https://www.freecodecamp.org/certification/lucas-do-amaral-santos/foundational-c-sharp-with-microsoft"
     },
     "cs50-sql": {
-      "status": "paused",
+      "status": "in-progress",
       "started": true,
       "completed": [],
       "current": "week-0-querying",
       "notes": [
         "CS50 SQL retomado em paralelo em 2026-09-18. Início oficial: Week 0 — Querying.",
-        "Pausa tática em 2026-09-28 até a entrevista técnica da XP em 2026-09-30 às 14h; retomar após o sprint de System Design."
+        "Pausa tática em 2026-09-28 até a entrevista técnica da XP em 2026-09-30 às 14h; retomar após o sprint de System Design.",
+        "Em andamento novamente em 2026-11-18, confirmado pelo usuário; próximo marco permanece Week 0 — Querying."
       ],
       "courseUrl": "https://cs50.harvard.edu/sql/",
       "currentTaskUrl": "https://cs50.harvard.edu/sql/weeks/0/"
@@ -150,16 +151,17 @@
       "completed": []
     },
     "dotnet-backend": {
-      "status": "in-progress",
+      "status": "paused",
       "started": true,
       "startedAt": "2026-09-28",
       "completed": [],
-      "current": "XP System Design Interview Sprint — architecture defense in Excalidraw",
+      "current": null,
       "notes": [
         "Financial Distributed Systems Lab em .NET 10 iniciado como trilha aplicada de senioridade.",
         "Prioridade imediata: entrevista técnica da XP em 2026-09-30 às 14h.",
         "Formato esperado: desenhar system design no Excalidraw e defender decisões/trade-offs sob questionamento de seniors.",
-        "Domínios de treino: crédito, cobrança e pagamentos."
+        "Domínios de treino: crédito, cobrança e pagamentos.",
+        "Financial Distributed Systems Lab retirado da lista de projetos ativos em 2026-11-18; registro mantido apenas como histórico."
       ],
       "interview": {
         "company": "XP",
@@ -171,7 +173,7 @@
       "lab": {
         "title": "Financial Distributed Systems Lab — .NET 10",
         "method": "AMS — Adaptive Mastery Scaffolding",
-        "status": "in-progress"
+        "status": "paused"
       }
     },
     "typescript-official-guided": {
@@ -218,17 +220,28 @@
       "officialSource": "https://www.computer.org/education/certifications"
     },
     "km-one-central-professional-path": {
-      "status": "planned",
-      "started": false,
+      "status": "in-progress",
+      "started": true,
       "completed": [],
-      "current": "Prerequisite path: finish JavaScript Certification → TypeScript Guided Track → Node/Nest foundation",
+      "current": "Produto Android em evolução; backend profissional NestJS previsto para etapa posterior.",
       "sourcePlan": "projects/KM_ONE_CENTRAL_PROFESSIONAL_PATH.md",
       "notes": [
         "Definido em 2026-10-19 como o projeto profissional central que conecta o roadmap à prática.",
         "Começa como monólito modular NestJS e só evolui para microservices quando bounded contexts/necessidades reais justificarem.",
         "O alvo polyglot é usar NestJS/TypeScript como stack principal e .NET/C# em serviços selecionados quando houver razão arquitetural.",
-        "Financial Lab permanece laboratório focado; conhecimento validado nele pode ser transferido ao KM One.",
-        "SWEBOK, iSAQB, full-stack, cloud, observabilidade e IA devem gerar evidência prática no KM One sempre que fizer sentido."
+        "SWEBOK, iSAQB, full-stack, cloud, observabilidade e IA devem gerar evidência prática no KM One sempre que fizer sentido.",
+        "Produto KM One confirmado em andamento em 2026-11-18; implantação do backend NestJS ainda não confirmada."
+      ]
+    },
+    "linux-foundation-lfs101": {
+      "status": "in-progress",
+      "started": true,
+      "completed": [],
+      "current": "Introduction to Linux (LFS101) — conteúdo e exercícios oficiais em andamento",
+      "courseUrl": "https://trainingportal.linuxfoundation.org/courses/introduction-to-linux-lfs101",
+      "notes": [
+        "Curso da Linux Foundation em andamento em 2026-11-18.",
+        "Curso introdutório distinto do exame LPI Linux Essentials; não marcar certificado como obtido antes da conclusão."
       ]
     }
   },
