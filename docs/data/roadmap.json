@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Full Stack Software Architect & Cloud Engineer",
-    "version": "3.4.2",
+    "version": "3.5.0",
     "updatedAt": "2026-11-19",
     "principles": [
       "Fundamentos fortes antes de especialização",
@@ -18,7 +18,123 @@
       "Fontes oficiais sem certificado podem virar trilhas guiadas com Mastery Gate interno, quando forem a melhor fonte técnica."
     ],
     "platformMetadata": "Cada item informa onde estudar e onde obter a credencial; ausência de curso/certificação externa é indicada explicitamente.",
-    "executionStrategy": "Trilhas ativas: freeCodeCamp JavaScript Certification, CS50 SQL e Linux Foundation LFS101. Laboratórios aplicados ativos: KM One (Android/Kotlin; backend NestJS planejado) e Jungle iGaming (NestJS/TypeScript/Bun, TDD, Money e ADRs). Financial Distributed Systems Lab retirado da lista ativa; manter .NET/C# no currículo técnico sem vincular a um sprint de entrevista encerrado."
+    "executionStrategy": "Cursos e certificações oficiais em ordem: JavaScript Certification, CS50 SQL e Linux LFS101 ativos; GH-200 após pipeline CI/CD comprovado; iSAQB e certificações cloud conforme ROI. Laboratórios aplicados de engenharia são integrados aos projetos Jungle iGaming (backend financeiro, TDD, arquitetura, confiabilidade e CI/CD/observabilidade futuros) e KM One (Android em progresso; backend NestJS/Neon/Azure e IA futuros conforme necessidade). Não duplicar esses conteúdos como cursos internos isolados.",
+    "projectIntegratedTopics": [
+      {
+        "id": "node-nest-employability-project",
+        "title": "KM One — Produto central (Android ativo · backend NestJS planejado)",
+        "projects": [
+          "km-one-product"
+        ]
+      },
+      {
+        "id": "km-one-fullstack-integration",
+        "title": "KM One — Full-Stack Integration",
+        "projects": [
+          "km-one-product"
+        ]
+      },
+      {
+        "id": "km-one-polyglot-microservices",
+        "title": "KM One — Polyglot Microservices & Architecture Evolution",
+        "projects": [
+          "km-one-product"
+        ]
+      },
+      {
+        "id": "architecture-foundations",
+        "title": "Software Architecture Foundations — Mastery Lab",
+        "projects": [
+          "jungle-igaming-nestjs-lab",
+          "km-one-product"
+        ]
+      },
+      {
+        "id": "architecture-documentation",
+        "title": "Architecture Documentation — C4, ADRs, Quality Scenarios & Architecture Communication",
+        "projects": [
+          "jungle-igaming-nestjs-lab",
+          "km-one-product"
+        ]
+      },
+      {
+        "id": "ddd-clean-hexagonal",
+        "title": "DDD, Clean Architecture & Hexagonal Architecture",
+        "projects": [
+          "jungle-igaming-nestjs-lab",
+          "km-one-product"
+        ]
+      },
+      {
+        "id": "distributed-systems",
+        "title": "Distributed Systems, Messaging & Resilience",
+        "projects": [
+          "jungle-igaming-nestjs-lab",
+          "km-one-product"
+        ]
+      },
+      {
+        "id": "observability-platform",
+        "title": "Observability, CI/CD, Containers & Platform Engineering",
+        "projects": [
+          "jungle-igaming-nestjs-lab",
+          "km-one-product"
+        ]
+      },
+      {
+        "id": "architecture-mastery-defense",
+        "title": "Software Architecture Mastery Gate & Architecture Defense",
+        "projects": [
+          "jungle-igaming-nestjs-lab",
+          "km-one-product"
+        ]
+      },
+      {
+        "id": "llm-apps",
+        "title": "LLM Application Engineering",
+        "projects": [
+          "km-one-product"
+        ]
+      },
+      {
+        "id": "rag-agents",
+        "title": "RAG, Agents & Tool Use",
+        "projects": [
+          "km-one-product"
+        ]
+      },
+      {
+        "id": "llmops",
+        "title": "Evaluation, LLMOps, Safety & Observability",
+        "projects": [
+          "km-one-product"
+        ]
+      },
+      {
+        "id": "km-one-ai-engineering",
+        "title": "KM One — AI Engineering Integration",
+        "projects": [
+          "km-one-product"
+        ]
+      },
+      {
+        "id": "capstone-system",
+        "title": "Capstone Full Stack + Cloud + AI",
+        "projects": [
+          "jungle-igaming-nestjs-lab",
+          "km-one-product"
+        ]
+      },
+      {
+        "id": "architecture-defense",
+        "title": "Architecture Defense",
+        "projects": [
+          "jungle-igaming-nestjs-lab",
+          "km-one-product"
+        ]
+      }
+    ],
+    "learningArchitecture": "A trilha principal lista cursos/certificações e estudos específicos que não são substituídos por projetos. Tópicos aplicados (DDD, ADRs, C4, testes, sistemas distribuídos, observabilidade, CI/CD, containers, implantação e LLM apps) são acompanhados em Jungle iGaming e KM One. Status de projeto não equivale a domínio; evidência validada precede conclusão."
   },
   "phases": [
     {
@@ -147,11 +263,11 @@
     {
       "id": "phase-02",
       "title": "Node.js & NestJS — Backend Employability",
-      "goal": "Transformar JavaScript/TypeScript em uma stack backend profissional e iniciar o KM One como o projeto profissional central do roadmap. A primeira arquitetura é um monólito modular NestJS profissional; distribuição e novas stacks só entram quando o domínio justificar.",
+      "goal": "Aprofundar Node.js/NestJS e suas credenciais quando agregarem valor. Aplicar APIs, DI, validação, arquitetura e testes primeiro no Jungle iGaming; levar ao backend KM One quando sua implementação começar.",
       "items": [
         {
           "id": "nodejs-core-fundamentals",
-          "order": 4,
+          "order": 5,
           "title": "Node.js Core Fundamentals",
           "provider": "Node.js official documentation + Programming Mastery Lab",
           "credential": "No official Node.js certification; practical mastery evidence",
@@ -197,7 +313,7 @@
         },
         {
           "id": "hackerrank-node-basic",
-          "order": 5,
+          "order": 6,
           "title": "Node (Basic) Skills Certification",
           "provider": "HackerRank",
           "credential": "HackerRank Node (Basic) Certificate",
@@ -237,7 +353,7 @@
         },
         {
           "id": "nestjs-official-fundamentals",
-          "order": 6,
+          "order": 7,
           "title": "NestJS Official — Fundamentals",
           "provider": "NestJS",
           "credential": "Official NestJS Certificate of Completion",
@@ -277,116 +393,13 @@
               "cost": "Incluído no curso; certificado de conclusão, sem exame profissional separado"
             }
           }
-        },
-        {
-          "id": "node-nest-employability-project",
-          "title": "KM One — Produto central (Android ativo · backend NestJS planejado)",
-          "provider": "Programming Mastery Lab",
-          "credential": "Internal Employability Gate",
-          "cost": "free",
-          "status": "in-progress",
-          "priority": "central-project",
-          "source": "./mastery-gates/",
-          "description": "Produto real em evolução: app Android nativo e monitoramento de ofertas ativos. O backend Node.js/TypeScript/NestJS, PostgreSQL/Neon e Azure é uma etapa futura, guiada por requisitos e evidências.",
-          "focus": [
-            "REST API design",
-            "NestJS modules, controllers, providers and DI",
-            "PostgreSQL and migrations",
-            "authentication and authorization",
-            "validation and error contracts",
-            "automated tests",
-            "Docker",
-            "cache and basic Redis usage",
-            "basic messaging or asynchronous job processing",
-            "logging and health checks",
-            "CI/CD basics",
-            "deployment",
-            "README and architecture notes"
-          ],
-          "note": "Status em andamento refere-se ao produto KM One; não representa a conclusão ou início comprovado da implementação da API NestJS.",
-          "access": {
-            "learning": {
-              "status": "internal",
-              "platform": "Programming Mastery Lab",
-              "kind": "Projeto profissional guiado por requisitos e critérios de domínio",
-              "url": null,
-              "cost": "Grátis"
-            },
-            "credential": {
-              "status": "internal",
-              "platform": "Programming Mastery Lab",
-              "kind": "Mastery/Employability Gate interno; evidência principal é projeto, código, testes, deploy e defesa técnica",
-              "url": null,
-              "cost": "Grátis"
-            }
-          },
-          "order": 7,
-          "project": {
-            "name": "KM One",
-            "role": "Real product used as Node/Nest Employability Gate",
-            "backend": "Node.js + TypeScript + NestJS",
-            "database": "PostgreSQL / Neon",
-            "cloud": "Azure",
-            "deploymentCandidates": [
-              "Azure Container Apps",
-              "Azure App Service"
-            ],
-            "platformServices": [
-              "Azure Key Vault",
-              "Application Insights",
-              "Azure Storage when required",
-              "CI/CD"
-            ]
-          },
-          "architectureDecision": {
-            "status": "accepted",
-            "date": "2026-09-21",
-            "decision": "Reconsider KM One backend from .NET to Node.js/TypeScript/NestJS while keeping Azure as the cloud platform.",
-            "rationale": [
-              "Turn the roadmap employability gate into a real product instead of an artificial portfolio exercise",
-              "Create one deeply practiced, marketable backend stack before opening the .NET window",
-              "Preserve Azure knowledge and cloud continuity",
-              "Keep .NET reserved for the later second-backend-ecosystem window",
-              "Allow future comparison of the same architectural concepts across NestJS and .NET"
-            ],
-            "boundaries": [
-              "KM One backend becomes the primary Node/Nest real-world project",
-              "Trevvos Platform Core remains the candidate .NET system for the future .NET/Azure window",
-              "Do not front-load advanced architecture patterns before the product needs them"
-            ]
-          },
-          "deliverySequence": [
-            "NestJS modules, controllers, services/providers and DTO validation",
-            "PostgreSQL / Neon and migrations",
-            "Authentication and authorization",
-            "Automated tests",
-            "Docker",
-            "Logging and health checks",
-            "CI/CD",
-            "Azure deployment",
-            "Cache / Redis only when justified",
-            "Asynchronous jobs or messaging only when justified",
-            "Observability improvements",
-            "Advanced patterns such as Outbox, events, DDD/CQRS only when there is a real product need"
-          ],
-          "plan": "projects/KM_ONE_CENTRAL_PROFESSIONAL_PATH.md",
-          "architectureRule": "Modular monolith first; extract services only after a real domain/operational boundary appears.",
-          "longTermEvolution": [
-            "NestJS modular monolith",
-            "bounded-context discovery",
-            "selective NestJS/TypeScript + .NET/C# microservices",
-            "language-independent contracts",
-            "RabbitMQ and distributed reliability",
-            "OpenTelemetry and platform engineering",
-            "AI-enabled services when justified"
-          ]
         }
       ]
     },
     {
       "id": "phase-03",
       "title": "Full Stack Employability — React + Helsinki",
-      "goal": "Adicionar React e capacidade ponta a ponta sem abandonar a identidade backend. O Full Stack Open deve alimentar fluxos reais do KM One, transformando o projeto central em evidência full-stack quando fizer sentido.",
+      "goal": "Concluir a formação oficial React/Full Stack Open; aplicar frontend ao KM One somente quando houver um fluxo de produto real que precise dele.",
       "items": [
         {
           "id": "full-stack-open-core",
@@ -439,63 +452,17 @@
               "cost": "Grátis"
             }
           }
-        },
-        {
-          "id": "km-one-fullstack-integration",
-          "order": 8,
-          "title": "KM One — Full-Stack Integration",
-          "provider": "Professional Project + Full Stack Open",
-          "credential": "Applied full-stack evidence",
-          "cost": "free",
-          "status": "not-started",
-          "priority": "central-application",
-          "plan": "projects/KM_ONE_CENTRAL_PROFESSIONAL_PATH.md",
-          "focus": [
-            "React + TypeScript integration",
-            "real user flows",
-            "frontend/backend contracts",
-            "authentication flows",
-            "end-to-end tests"
-          ],
-          "note": "Aplicar ao KM One o conhecimento full-stack aprendido no Full Stack Open. O produto deve manter uma única arquitetura frontend coerente; outros frameworks ficam como especializações separadas salvo necessidade real."
         }
       ]
     },
     {
       "id": "phase-04",
       "title": "Senior Software Engineering & Architecture — Production, Distributed Systems & AWS",
-      "goal": "Consolidar Senior Software Engineering e Software Architecture com SWEBOK/iSAQB e aplicar essa profundidade ao KM One. Nesta fase, o produto central pode evoluir do monólito modular para microservices polyglot seletivos, mensageria, confiabilidade distribuída, observabilidade, containers e cloud — sempre por necessidade arquitetural real.",
+      "goal": "Formação sênior com referências e certificações relevantes (SWEBOK, iSAQB, GH-200, AWS), enquanto DDD, C4, ADRs, mensageria, observabilidade, containers e CI/CD são praticados e registrados nos projetos Jungle iGaming e KM One. Não criar laboratórios duplicados.",
       "items": [
         {
-          "id": "km-one-polyglot-microservices",
-          "order": 8,
-          "title": "KM One — Polyglot Microservices & Architecture Evolution",
-          "provider": "Professional Project + Programming Mastery Lab",
-          "credential": "Applied distributed architecture portfolio",
-          "cost": "free-first",
-          "status": "not-started",
-          "priority": "central-application",
-          "plan": "projects/KM_ONE_CENTRAL_PROFESSIONAL_PATH.md",
-          "prerequisite": "KM One NestJS professional modular monolith with clear domain boundaries",
-          "focus": [
-            "bounded contexts",
-            "selective service extraction",
-            "NestJS / TypeScript services",
-            ".NET / C# services where justified",
-            "language-independent contracts",
-            "RabbitMQ",
-            "Outbox / Inbox / idempotency",
-            "eventual consistency",
-            "OpenTelemetry",
-            "containers and Kubernetes",
-            "Azure and CI/CD",
-            "architecture defense"
-          ],
-          "note": "Não é um objetivo de quantidade de microservices. Cada extração precisa ser defendida por responsabilidade de negócio, ownership de dados, escala, confiabilidade, segurança ou cadência de deploy. A escolha da stack vem depois da fronteira. O produto KM One está em andamento; esta etapa específica de microsserviços é futura."
-        },
-        {
           "id": "swebok-senior-guided",
-          "order": 9,
+          "order": 10,
           "title": "Senior Software Engineering — SWEBOK v4 Guided Track",
           "provider": "IEEE Computer Society + Programming Mastery Lab",
           "credential": "Senior Software Engineering Mastery Gate",
@@ -544,7 +511,7 @@
         },
         {
           "id": "linux-essentials",
-          "order": 10,
+          "order": 11,
           "title": "Linux Fundamentals — Linux Essentials",
           "provider": "Linux Professional Institute (LPI)",
           "credential": "LPI Linux Essentials 010-160 target",
@@ -592,7 +559,7 @@
         },
         {
           "id": "linux-foundation-lfs101",
-          "order": 10.1,
+          "order": 12,
           "title": "Introduction to Linux (LFS101)",
           "provider": "The Linux Foundation",
           "credential": "Curso introdutório; conclusão/certificado a confirmar no portal",
@@ -627,7 +594,7 @@
         },
         {
           "id": "cisco-networking-basics",
-          "order": 11,
+          "order": 13,
           "title": "Networking Fundamentals — Cisco Networking Basics",
           "provider": "Cisco Networking Academy",
           "credential": "Cisco Networking Academy Digital Badge",
@@ -667,7 +634,7 @@
         },
         {
           "id": "cisco-ccst-networking",
-          "order": 12,
+          "order": 14,
           "title": "Cisco Certified Support Technician (CCST) Networking",
           "provider": "Cisco",
           "credential": "Cisco Certified Support Technician (CCST) Networking",
@@ -697,7 +664,7 @@
         },
         {
           "id": "nestjs-official-microservices",
-          "order": 13,
+          "order": 15,
           "title": "NestJS Official — Microservices",
           "provider": "NestJS",
           "credential": "Official NestJS Certificate of Completion",
@@ -718,7 +685,7 @@
             "Inbox / Outbox patterns",
             "scalable and resilient service design"
           ],
-          "note": "Extensão oficial focada em microsserviços e mensageria. Para o roadmap, entra depois de Fundamentals e antes de Architecture & Advanced Patterns.",
+          "note": "Extensão oficial focada em microsserviços e mensageria. Para o roadmap, entra depois de Fundamentals e antes de Architecture & Advanced Patterns. A prova/curso oficial permanece na trilha; exercícios e evidências práticas são aplicados nos projetos Jungle iGaming e KM One, sem declarar domínio automaticamente.",
           "access": {
             "learning": {
               "status": "available",
@@ -734,11 +701,15 @@
               "url": "https://courses.nestjs.com/",
               "cost": "Incluído no curso; certificado de conclusão, sem exame profissional separado"
             }
-          }
+          },
+          "projectApplication": [
+            "jungle-igaming-nestjs-lab",
+            "km-one-product"
+          ]
         },
         {
           "id": "nestjs-official-architecture",
-          "order": 14,
+          "order": 16,
           "title": "NestJS Official — Architecture & Advanced Patterns",
           "provider": "NestJS",
           "credential": "Official NestJS Certificate of Completion",
@@ -761,7 +732,7 @@
             "data hydration",
             "advanced architectural trade-offs"
           ],
-          "note": "Curso oficial avançado alinhado ao eixo de arquitetura do roadmap. Serve como ponte entre NestJS aplicado e a futura fase vendor-neutral de Software Architecture.",
+          "note": "Curso oficial avançado alinhado ao eixo de arquitetura do roadmap. Serve como ponte entre NestJS aplicado e a futura fase vendor-neutral de Software Architecture. A prova/curso oficial permanece na trilha; exercícios e evidências práticas são aplicados nos projetos Jungle iGaming e KM One, sem declarar domínio automaticamente.",
           "access": {
             "learning": {
               "status": "available",
@@ -777,11 +748,15 @@
               "url": "https://courses.nestjs.com/",
               "cost": "Incluído no curso; certificado de conclusão, sem exame profissional separado"
             }
-          }
+          },
+          "projectApplication": [
+            "jungle-igaming-nestjs-lab",
+            "km-one-product"
+          ]
         },
         {
           "id": "isaqb-cpsa-f-curriculum",
-          "order": 15,
+          "order": 17,
           "title": "iSAQB CPSA-F — Official Curriculum, Glossary & Mock Exam",
           "provider": "iSAQB",
           "credential": "Official CPSA-F curriculum preparation; certification exam optional later",
@@ -798,7 +773,7 @@
             "design decisions",
             "tools and examples"
           ],
-          "note": "Usar o material oficial gratuito como referência externa principal. A prova paga fica para quando houver ROI/voucher e domínio suficiente para passar de primeira.",
+          "note": "Usar o material oficial gratuito como referência externa principal. A prova paga fica para quando houver ROI/voucher e domínio suficiente para passar de primeira. A prova/curso oficial permanece na trilha; exercícios e evidências práticas são aplicados nos projetos Jungle iGaming e KM One, sem declarar domínio automaticamente.",
           "access": {
             "learning": {
               "status": "materials-only",
@@ -814,178 +789,15 @@
               "url": "https://www.isaqb.org/certifications/certification-bodies/",
               "cost": "Pago; preço varia por organismo/país"
             }
-          }
-        },
-        {
-          "id": "architecture-foundations",
-          "order": 16,
-          "title": "Software Architecture Foundations — Mastery Lab",
-          "provider": "Programming Mastery Lab + iSAQB curriculum",
-          "credential": "Architecture Mastery Gate",
-          "cost": "free",
-          "status": "not-started",
-          "priority": "core",
-          "focus": [
-            "architectural drivers",
-            "quality attributes",
-            "constraints",
-            "trade-offs",
-            "coupling/cohesion",
-            "architecture styles",
-            "design decisions"
-          ],
-          "note": "Camada prática: transformar o currículo iSAQB em capacidade demonstrável de explicar, desenhar, criticar e defender uma arquitetura.",
-          "access": {
-            "learning": {
-              "status": "internal",
-              "platform": "Programming Mastery Lab + currículo iSAQB",
-              "kind": "Laboratório próprio baseado em referência oficial; não há curso externo obrigatório",
-              "url": "https://www.isaqb.org/certifications/cpsa-certifications/cpsa-foundation-level/",
-              "cost": "Grátis"
-            },
-            "credential": {
-              "status": "internal",
-              "platform": "Programming Mastery Lab",
-              "kind": "Architecture Mastery Gate",
-              "url": null,
-              "cost": "Grátis"
-            }
-          }
-        },
-        {
-          "id": "architecture-documentation",
-          "order": 17,
-          "title": "Architecture Documentation — C4, ADRs, Quality Scenarios & Architecture Communication",
-          "provider": "iSAQB-aligned + Programming Mastery Lab",
-          "credential": "Applied architecture documentation portfolio",
-          "cost": "free",
-          "status": "not-started",
-          "priority": "core",
-          "focus": [
-            "C4 diagrams",
-            "ADRs",
-            "quality scenarios",
-            "views and viewpoints",
-            "architecture communication",
-            "decision rationale"
-          ],
-          "access": {
-            "learning": {
-              "status": "internal",
-              "platform": "Programming Mastery Lab + referências iSAQB",
-              "kind": "Não há curso único obrigatório; estudo por currículo/referências + prática",
-              "url": "https://www.isaqb.org/",
-              "cost": "Grátis-first"
-            },
-            "credential": {
-              "status": "internal",
-              "platform": "Programming Mastery Lab",
-              "kind": "Portfólio de documentação arquitetural",
-              "url": null,
-              "cost": "Grátis"
-            }
-          }
-        },
-        {
-          "id": "ddd-clean-hexagonal",
-          "order": 18,
-          "title": "DDD, Clean Architecture & Hexagonal Architecture",
-          "provider": "Programming Mastery Lab + primary references",
-          "credential": "Applied architecture project",
-          "cost": "free-first",
-          "status": "not-started",
-          "priority": "core",
-          "focus": [
-            "bounded contexts",
-            "domain modeling",
-            "ports and adapters",
-            "dependency direction",
-            "modularity",
-            "testability"
-          ],
-          "access": {
-            "learning": {
-              "status": "materials-only",
-              "platform": "Programming Mastery Lab + referências primárias",
-              "kind": "Não há uma plataforma oficial única; estudo é curado por referências e laboratório",
-              "url": null,
-              "cost": "Grátis-first"
-            },
-            "credential": {
-              "status": "internal",
-              "platform": "Programming Mastery Lab",
-              "kind": "Projeto aplicado; sem certificação externa obrigatória",
-              "url": null,
-              "cost": "Grátis-first"
-            }
-          }
-        },
-        {
-          "id": "distributed-systems",
-          "order": 19,
-          "title": "Distributed Systems, Messaging & Resilience",
-          "provider": "Programming Mastery Lab + vendor-neutral references",
-          "credential": "Applied architecture project",
-          "cost": "free-first",
-          "status": "not-started",
-          "priority": "core",
-          "focus": [
-            "distributed systems fundamentals",
-            "messaging",
-            "consistency",
-            "idempotency",
-            "retries",
-            "timeouts",
-            "circuit breakers",
-            "resilience",
-            "event-driven architecture"
-          ],
-          "access": {
-            "learning": {
-              "status": "materials-only",
-              "platform": "Programming Mastery Lab + referências vendor-neutral",
-              "kind": "Não há curso oficial único; conteúdo entra por laboratórios e referências selecionadas",
-              "url": null,
-              "cost": "Grátis-first"
-            },
-            "credential": {
-              "status": "internal",
-              "platform": "Programming Mastery Lab",
-              "kind": "Projeto aplicado de sistemas distribuídos",
-              "url": null,
-              "cost": "Grátis-first"
-            }
-          }
-        },
-        {
-          "id": "observability-platform",
-          "order": 20,
-          "title": "Observability, CI/CD, Containers & Platform Engineering",
-          "provider": "Programming Mastery Lab + cloud providers",
-          "credential": "Portfolio + provider badges",
-          "cost": "free-first",
-          "status": "not-started",
-          "priority": "core",
-          "access": {
-            "learning": {
-              "status": "materials-only",
-              "platform": "Programming Mastery Lab + plataformas dos provedores",
-              "kind": "Sem curso único; aprendizado por labs e módulos oficiais de ferramentas/cloud",
-              "url": null,
-              "cost": "Grátis-first"
-            },
-            "credential": {
-              "status": "internal",
-              "platform": "Portfólio + badges dos provedores quando existirem",
-              "kind": "Sem uma certificação externa única para este item",
-              "url": null,
-              "cost": "Varia"
-            }
-          }
+          },
+          "projectApplication": [
+            "jungle-igaming-nestjs-lab",
+            "km-one-product"
+          ]
         },
         {
           "id": "github-actions-gh-200",
-          "order": 20.5,
+          "order": 18,
           "title": "GitHub Actions Certification (GH-200)",
           "provider": "GitHub / Microsoft Learn",
           "credential": "GitHub Actions Certification — Exam GH-200",
@@ -1019,7 +831,7 @@
           ],
           "assessment": "Exame GH-200 supervisionado, 100 minutos, disponível em português do Brasil; validade informada de 2 anos, com transição de processo de renovação.",
           "practicalGate": "No laboratório Jungle iGaming, pipeline build/lint/test (7 testes Money e expansão), teste de integração com serviço de banco, artefatos/caching, branch protections e logs; documentar falhas, corrigir e demonstrar defesa das permissões/secrets. Adicionar deploy somente quando o ambiente existir.",
-          "note": "Prioridade antes de AWS/Azure. Estudo oficial gratuito; exame pago e agendado somente após gates práticos. Evitar confundir conclusão das 2 learning paths com aprovação na certificação.",
+          "note": "Prioridade antes de AWS/Azure. Estudo oficial gratuito; exame pago e agendado somente após gates práticos. Evitar confundir conclusão das 2 learning paths com aprovação na certificação. A prova/curso oficial permanece na trilha; exercícios e evidências práticas são aplicados nos projetos Jungle iGaming e KM One, sem declarar domínio automaticamente.",
           "access": {
             "learning": {
               "status": "available",
@@ -1035,11 +847,15 @@
               "url": "https://learn.microsoft.com/pt-br/credentials/certifications/github-actions/",
               "cost": "Exame pago; preço regional"
             }
-          }
+          },
+          "projectApplication": [
+            "jungle-igaming-nestjs-lab",
+            "km-one-product"
+          ]
         },
         {
           "id": "aws-foundations",
-          "order": 21,
+          "order": 19,
           "title": "AWS Cloud Foundations + Certified Cloud Practitioner",
           "provider": "AWS Educate / AWS Skill Builder",
           "credential": "AWS Certified Cloud Practitioner (CLF-C02) target + free AWS learning badges",
@@ -1049,7 +865,7 @@
           "priceSource": "https://aws.amazon.com/pt/certification/certified-cloud-practitioner/",
           "status": "not-started",
           "priority": "core",
-          "note": "Treinamento e vários badges podem ser gratuitos; a certificação AWS Certified Cloud Practitioner é paga. Após obter uma AWS Certification, a AWS oferece 50% de desconto em outro exame de certificação elegível.",
+          "note": "Treinamento e vários badges podem ser gratuitos; a certificação AWS Certified Cloud Practitioner é paga. Após obter uma AWS Certification, a AWS oferece 50% de desconto em outro exame de certificação elegível. A certificação segue separada do projeto; o KM One usa Azure como alvo atual. Escolher AWS somente com justificativa de carreira/implementação.",
           "access": {
             "learning": {
               "status": "available",
@@ -1065,11 +881,14 @@
               "url": "https://aws.amazon.com/pt/certification/certified-cloud-practitioner/",
               "cost": "Exame pago"
             }
-          }
+          },
+          "projectApplication": [
+            "km-one-product"
+          ]
         },
         {
           "id": "aws-solutions-architect-associate",
-          "order": 22,
+          "order": 20,
           "title": "AWS Certified Solutions Architect — Associate (SAA-C03)",
           "provider": "AWS Training and Certification",
           "credential": "AWS Certified Solutions Architect — Associate",
@@ -1086,7 +905,7 @@
             "cost-optimized architectures",
             "AWS architecture trade-offs"
           ],
-          "note": "Principal alvo de arquitetura AWS no nível Associate. Fazer depois dos fundamentos AWS e de prática suficiente com serviços reais.",
+          "note": "Principal alvo de arquitetura AWS no nível Associate. Fazer depois dos fundamentos AWS e de prática suficiente com serviços reais. A certificação segue separada do projeto; o KM One usa Azure como alvo atual. Escolher AWS somente com justificativa de carreira/implementação.",
           "access": {
             "learning": {
               "status": "available",
@@ -1102,11 +921,14 @@
               "url": "https://aws.amazon.com/pt/certification/certified-solutions-architect-associate/",
               "cost": "Exame pago"
             }
-          }
+          },
+          "projectApplication": [
+            "km-one-product"
+          ]
         },
         {
           "id": "ieee-software-professional-level-2",
-          "order": 22.5,
+          "order": 21,
           "title": "IEEE Certified Software Professional — Level 2",
           "provider": "IEEE Computer Society",
           "credential": "Software Professional Level 2",
@@ -1133,42 +955,8 @@
           }
         },
         {
-          "id": "architecture-mastery-defense",
-          "order": 23,
-          "title": "Software Architecture Mastery Gate & Architecture Defense",
-          "provider": "Programming Mastery Lab",
-          "credential": "Internal architecture defense + public architecture portfolio",
-          "cost": "free",
-          "status": "not-started",
-          "priority": "core",
-          "focus": [
-            "design from requirements",
-            "trade-off analysis",
-            "architecture review",
-            "documentation",
-            "defense of decisions",
-            "evolution strategy"
-          ],
-          "access": {
-            "learning": {
-              "status": "internal",
-              "platform": "Programming Mastery Lab",
-              "kind": "Preparação por projeto, revisão e defesa; não é curso externo",
-              "url": null,
-              "cost": "Grátis"
-            },
-            "credential": {
-              "status": "internal",
-              "platform": "Programming Mastery Lab",
-              "kind": "Architecture Defense interna + portfólio público",
-              "url": null,
-              "cost": "Grátis"
-            }
-          }
-        },
-        {
           "id": "isaqb-cpsa-f-exam",
-          "order": 24,
+          "order": 22,
           "title": "iSAQB Certified Professional for Software Architecture — Foundation Level (CPSA-F)",
           "provider": "iSAQB",
           "credential": "CPSA-F",
@@ -1179,7 +967,7 @@
           "priceExampleSource": "https://www.gasq.org/en/certification/exam-booking/details/isaqb-de-2461-43704.html",
           "status": "not-started",
           "priority": "credential-target",
-          "note": "O iSAQB não fixa um preço mundial para o CPSA-F: a prova é realizada por organismos certificadores independentes e o preço varia por país. Treinamento não é obrigatório para autodidatas.",
+          "note": "O iSAQB não fixa um preço mundial para o CPSA-F: a prova é realizada por organismos certificadores independentes e o preço varia por país. Treinamento não é obrigatório para autodidatas. A prova/curso oficial permanece na trilha; exercícios e evidências práticas são aplicados nos projetos Jungle iGaming e KM One, sem declarar domínio automaticamente.",
           "access": {
             "learning": {
               "status": "materials-only",
@@ -1195,18 +983,22 @@
               "url": "https://www.isaqb.org/certifications/certification-bodies/",
               "cost": "Pago; varia por organismo/país"
             }
-          }
+          },
+          "projectApplication": [
+            "jungle-igaming-nestjs-lab",
+            "km-one-product"
+          ]
         }
       ]
     },
     {
       "id": "phase-05",
       "title": "AI-Enabled Backend — Python, LLM Apps & Agents",
-      "goal": "Adicionar IA ao repertório de engenharia e aplicar capacidades úteis ao KM One sem reduzir IA a um chatbot cosmético. TypeScript é preferido quando suficiente; Python entra just-in-time quando o ecossistema de IA/dados trouxer vantagem concreta.",
+      "goal": "Estudar fundamentos oficiais de Python e IA; integrar LLMs, RAG, agentes, avaliações e LLMOps ao KM One apenas quando uma funcionalidade justificar.",
       "items": [
         {
           "id": "cs50p",
-          "order": 25,
+          "order": 23,
           "title": "CS50's Introduction to Programming with Python",
           "provider": "Harvard University",
           "credential": "CS50 Certificate",
@@ -1232,7 +1024,7 @@
         },
         {
           "id": "elements-of-ai",
-          "order": 26,
+          "order": 24,
           "title": "Elements of AI — Introduction to AI",
           "provider": "University of Helsinki + MinnaLearn",
           "credential": "Free Digital Certificate",
@@ -1270,7 +1062,7 @@
         },
         {
           "id": "python-ai-engineering",
-          "order": 27,
+          "order": 25,
           "title": "Python para Engenharia de IA",
           "provider": "Mastery Lab",
           "credential": "Portfolio + Mastery Gate",
@@ -1293,108 +1085,6 @@
               "cost": "Grátis"
             }
           }
-        },
-        {
-          "id": "llm-apps",
-          "order": 28,
-          "title": "LLM Application Engineering",
-          "provider": "Mastery Lab",
-          "credential": "AI application portfolio",
-          "cost": "free-first",
-          "status": "not-started",
-          "priority": "core",
-          "access": {
-            "learning": {
-              "status": "internal",
-              "platform": "Programming Mastery Lab",
-              "kind": "Trilha prática interna; sem curso externo único obrigatório",
-              "url": null,
-              "cost": "Grátis-first"
-            },
-            "credential": {
-              "status": "internal",
-              "platform": "Programming Mastery Lab",
-              "kind": "AI application portfolio",
-              "url": null,
-              "cost": "Grátis-first"
-            }
-          }
-        },
-        {
-          "id": "rag-agents",
-          "order": 29,
-          "title": "RAG, Agents & Tool Use",
-          "provider": "Mastery Lab",
-          "credential": "AI systems Mastery Gate",
-          "cost": "free-first",
-          "status": "not-started",
-          "priority": "core",
-          "access": {
-            "learning": {
-              "status": "internal",
-              "platform": "Programming Mastery Lab",
-              "kind": "Trilha prática interna; referências entram conforme necessidade",
-              "url": null,
-              "cost": "Grátis-first"
-            },
-            "credential": {
-              "status": "internal",
-              "platform": "Programming Mastery Lab",
-              "kind": "AI Systems Mastery Gate",
-              "url": null,
-              "cost": "Grátis-first"
-            }
-          }
-        },
-        {
-          "id": "llmops",
-          "order": 30,
-          "title": "Evaluation, LLMOps, Safety & Observability",
-          "provider": "Mastery Lab",
-          "credential": "Production AI architecture project",
-          "cost": "free-first",
-          "status": "not-started",
-          "priority": "core",
-          "access": {
-            "learning": {
-              "status": "internal",
-              "platform": "Programming Mastery Lab",
-              "kind": "Trilha prática interna com ferramentas de avaliação, segurança e observabilidade",
-              "url": null,
-              "cost": "Grátis-first"
-            },
-            "credential": {
-              "status": "internal",
-              "platform": "Programming Mastery Lab",
-              "kind": "Production AI architecture project",
-              "url": null,
-              "cost": "Grátis-first"
-            }
-          }
-        },
-        {
-          "id": "km-one-ai-engineering",
-          "order": 30,
-          "title": "KM One — AI Engineering Integration",
-          "provider": "Professional Project + AI Engineering Track",
-          "credential": "Applied AI engineering portfolio",
-          "cost": "free-first",
-          "status": "not-started",
-          "priority": "central-application",
-          "plan": "projects/KM_ONE_CENTRAL_PROFESSIONAL_PATH.md",
-          "focus": [
-            "LLM APIs",
-            "structured outputs",
-            "tool calling",
-            "embeddings and RAG",
-            "agents/workflows when justified",
-            "evaluations",
-            "guardrails",
-            "cost and latency",
-            "AI observability",
-            "secure data boundaries"
-          ],
-          "note": "A IA precisa resolver um problema real do KM One e ter avaliação/operabilidade. Python só vira serviço independente quando houver razão técnica clara."
         }
       ]
     },
@@ -1405,7 +1095,7 @@
       "items": [
         {
           "id": "foundational-csharp",
-          "order": 31,
+          "order": 26,
           "title": "Foundational C# with Microsoft",
           "provider": "Microsoft + freeCodeCamp",
           "credential": "Foundational C# Certification",
@@ -1434,7 +1124,7 @@
         },
         {
           "id": "dotnet-backend",
-          "order": 32,
+          "order": 27,
           "title": ".NET/C# Backend Engineering",
           "provider": "Microsoft Learn + Mastery Lab",
           "credential": "Applied portfolio + badges where available",
@@ -1469,7 +1159,7 @@
         },
         {
           "id": "azure-foundations",
-          "order": 33,
+          "order": 28,
           "title": "Azure Fundamentals (AZ-900)",
           "provider": "Microsoft Learn",
           "credential": "Microsoft Certified: Azure Fundamentals",
@@ -1499,7 +1189,7 @@
         },
         {
           "id": "azure-developer",
-          "order": 34,
+          "order": 29,
           "title": "Azure AI Cloud Developer Associate (AI-200)",
           "provider": "Microsoft Learn",
           "credential": "Microsoft Certified: Azure AI Cloud Developer Associate",
@@ -1529,7 +1219,7 @@
         },
         {
           "id": "azure-administrator",
-          "order": 35,
+          "order": 30,
           "title": "Azure Administrator Associate (AZ-104)",
           "provider": "Microsoft Learn",
           "credential": "Microsoft Certified: Azure Administrator Associate",
@@ -1566,7 +1256,7 @@
         },
         {
           "id": "azure-solutions-architect",
-          "order": 36,
+          "order": 31,
           "title": "Designing Microsoft Azure Infrastructure Solutions (AZ-305)",
           "provider": "Microsoft Learn",
           "credential": "AZ-305 exam; with Azure Administrator Associate leads to Microsoft Certified: Azure Solutions Architect Expert",
@@ -1646,11 +1336,11 @@
               "cost": null
             }
           },
-          "order": 37
+          "order": 32
         },
         {
           "id": "angular-official-essentials",
-          "order": 38,
+          "order": 33,
           "title": "Angular Official — Essentials + First App",
           "provider": "Angular Team / angular.dev",
           "credential": "Official learning path; no external certificate",
@@ -1686,7 +1376,7 @@
         },
         {
           "id": "angular-official-core",
-          "order": 39,
+          "order": 34,
           "title": "Angular Official — Components, Templates, Signals & Dependency Injection",
           "provider": "Angular Team / angular.dev",
           "credential": "Official documentation + Mastery evidence",
@@ -1722,7 +1412,7 @@
         },
         {
           "id": "angular-official-app-engineering",
-          "order": 40,
+          "order": 35,
           "title": "Angular Official — Routing, HTTP, Forms & Application Data Flow",
           "provider": "Angular Team / angular.dev",
           "credential": "Official documentation + applied project",
@@ -1760,7 +1450,7 @@
         },
         {
           "id": "angular-official-testing-debugging",
-          "order": 41,
+          "order": 36,
           "title": "Angular Official — Testing & Debugging",
           "provider": "Angular Team / angular.dev",
           "credential": "Official documentation + Mastery evidence",
@@ -1795,7 +1485,7 @@
         },
         {
           "id": "angular-official-performance-ssr",
-          "order": 42,
+          "order": 37,
           "title": "Angular Official — Performance, SSR/SSG, Hydration & Zoneless",
           "provider": "Angular Team / angular.dev",
           "credential": "Official documentation + applied project",
@@ -1832,7 +1522,7 @@
         },
         {
           "id": "angular-mastery-project",
-          "order": 43,
+          "order": 38,
           "title": "Angular Applied Project + Mastery Gate",
           "provider": "Programming Mastery Lab",
           "credential": "Internal Mastery Gate + public portfolio evidence",
@@ -1859,7 +1549,7 @@
         },
         {
           "id": "hackerrank-angular-basic",
-          "order": 44,
+          "order": 39,
           "title": "Angular (Basic) Skills Certification",
           "provider": "HackerRank",
           "credential": "HackerRank Angular (Basic) Certificate",
@@ -1887,7 +1577,7 @@
         },
         {
           "id": "hackerrank-angular-intermediate",
-          "order": 45,
+          "order": 40,
           "title": "Angular (Intermediate) Skills Certification",
           "provider": "HackerRank",
           "credential": "HackerRank Angular (Intermediate) Certificate",
@@ -1915,7 +1605,7 @@
         },
         {
           "id": "cs50-web",
-          "order": 46,
+          "order": 41,
           "title": "CS50's Web Programming with Python and JavaScript",
           "provider": "Harvard University",
           "credential": "CS50 Certificate",
@@ -1948,7 +1638,7 @@
       "items": [
         {
           "id": "harvard-data-science-python",
-          "order": 47,
+          "order": 42,
           "title": "Introduction to Data Science with Python",
           "provider": "Harvard University / HarvardX",
           "credential": "Verified Certificate (edX, optional)",
@@ -1991,7 +1681,7 @@
         },
         {
           "id": "ibm-ai-foundations-understanding",
-          "order": 48,
+          "order": 43,
           "title": "AI Fundamentals: Foundations for Understanding AI",
           "provider": "IBM SkillsBuild",
           "credential": "IBM SkillsBuild Digital Credential / Credly badge",
@@ -2027,7 +1717,7 @@
         },
         {
           "id": "ibm-artificial-intelligence-fundamentals",
-          "order": 49,
+          "order": 44,
           "title": "Artificial Intelligence Fundamentals",
           "provider": "IBM SkillsBuild",
           "credential": "IBM SkillsBuild Digital Credential",
@@ -2062,7 +1752,7 @@
         },
         {
           "id": "umd-ai-career-empowerment",
-          "order": 50,
+          "order": 45,
           "title": "AI and Career Empowerment",
           "provider": "University of Maryland — Robert H. Smith School of Business",
           "credential": "Free Certificate of Completion",
@@ -2098,7 +1788,7 @@
         },
         {
           "id": "alteryx-ml-fundamentals",
-          "order": 51,
+          "order": 46,
           "title": "Machine Learning Fundamentals Micro-Credential",
           "provider": "Alteryx",
           "credential": "Alteryx Machine Learning Fundamentals Micro-Credential / Credly",
@@ -2132,7 +1822,7 @@
         },
         {
           "id": "cs50-ai",
-          "order": 52,
+          "order": 47,
           "title": "CS50's Introduction to Artificial Intelligence with Python",
           "provider": "Harvard University",
           "credential": "CS50 Certificate",
@@ -2158,7 +1848,7 @@
         },
         {
           "id": "cs50-cyber",
-          "order": 53,
+          "order": 48,
           "title": "CS50's Introduction to Cybersecurity",
           "provider": "Harvard University",
           "credential": "CS50 Certificate",
@@ -2187,11 +1877,11 @@
     {
       "id": "phase-09",
       "title": "Advanced Credentials & Capstone Architect",
-      "goal": "Fechar a formação com breadth cloud adicional, credenciais avançadas e um sistema capstone que integre backend, frontend, cloud, segurança, dados e IA com defesa arquitetural.",
+      "goal": "Aprofundar credenciais avançadas, aplicando arquitetura e defesas profissionais nos projetos reais. Não manter um capstone artificial duplicado.",
       "items": [
         {
           "id": "oci-foundations",
-          "order": 54,
+          "order": 49,
           "title": "OCI Foundations (2026)",
           "provider": "Oracle University",
           "credential": "Oracle Cloud Infrastructure 2026 Foundations Associate (1Z0-1085-26)",
@@ -2219,7 +1909,7 @@
         },
         {
           "id": "sei-software-architecture-professional",
-          "order": 55,
+          "order": 50,
           "title": "SEI Software Architecture Professional Certificate",
           "provider": "Carnegie Mellon University — Software Engineering Institute",
           "credential": "SEI Software Architecture Professional Certificate",
@@ -2253,58 +1943,6 @@
               "kind": "SEI Software Architecture Professional Certificate após cumprir o programa",
               "url": "https://www.sei.cmu.edu/credentials/sei-software-architecture-professional-certificate/",
               "cost": "Pago"
-            }
-          }
-        },
-        {
-          "id": "capstone-system",
-          "order": 56,
-          "title": "Capstone Full Stack + Cloud + AI",
-          "provider": "Programming Mastery Lab",
-          "credential": "Final Mastery Gate + public portfolio",
-          "cost": "free-first",
-          "status": "not-started",
-          "priority": "capstone",
-          "access": {
-            "learning": {
-              "status": "internal",
-              "platform": "Programming Mastery Lab",
-              "kind": "Capstone próprio; não é curso de terceiros",
-              "url": null,
-              "cost": "Grátis-first"
-            },
-            "credential": {
-              "status": "internal",
-              "platform": "Programming Mastery Lab",
-              "kind": "Final Mastery Gate + portfólio público",
-              "url": null,
-              "cost": "Grátis-first"
-            }
-          }
-        },
-        {
-          "id": "architecture-defense",
-          "order": 57,
-          "title": "Architecture Defense",
-          "provider": "Programming Mastery Lab",
-          "credential": "Oral/written architecture defense",
-          "cost": "free",
-          "status": "not-started",
-          "priority": "capstone",
-          "access": {
-            "learning": {
-              "status": "internal",
-              "platform": "Programming Mastery Lab",
-              "kind": "Preparação e defesa do capstone; não é curso externo",
-              "url": null,
-              "cost": "Grátis"
-            },
-            "credential": {
-              "status": "internal",
-              "platform": "Programming Mastery Lab",
-              "kind": "Defesa arquitetural oral/escrita interna",
-              "url": null,
-              "cost": "Grátis"
             }
           }
         }
