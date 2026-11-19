@@ -111,16 +111,6 @@ function renderMastery(mastery){
     </div>`).join('');
 }
 
-function renderReviews(reviews){
-  const pending=reviews.queue.filter(r=>r.status!=='completed');
-  $('#reviews-due').textContent=pending.length;
-  $('#review-list').innerHTML=pending.length?pending.map(r=>`
-    <article class="review-card">
-      <div><strong>${r.id}</strong><span class="muted">${r.source}</span></div>
-      <div><span class="status status-in-progress">${r.type}</span><div class="muted">Prazo: ${r.dueDate}</div></div>
-    </article>`).join(''):'<p class="muted">Nenhuma revisão pendente.</p>';
-}
-
 function renderErrors(ledger){
   const open=ledger.errors.filter(e=>e.status==='open').length;
   $('#errors-open').textContent=open;
@@ -298,11 +288,10 @@ function renderRoadmap(roadmap,courseNotes){
 
 async function init(){
   try{
-    const [roadmap,progress,mastery,reviews,ledger,courseNotes,projects]=await Promise.all([
+    const [roadmap,progress,mastery,ledger,courseNotes,projects]=await Promise.all([
       loadJson('data/roadmap.json'),
       loadJson('data/progress.json'),
       loadJson('data/mastery.json'),
-      loadJson('data/reviews.json'),
       loadJson('data/error-ledger.json'),
       loadJson('data/course-notes.json'),
       loadJson('data/projects.json')
@@ -310,7 +299,6 @@ async function init(){
     renderCurrent(progress,projects);
     renderProjects(projects);
     renderMastery(mastery);
-    renderReviews(reviews);
     renderErrors(ledger);
     renderRoadmap(roadmap,courseNotes);
     $('#last-updated').textContent=`Atualizado ${progress.updatedAt.replace('T',' ').replace('-03:00',' BRT')}`;
