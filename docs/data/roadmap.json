@@ -1,8 +1,8 @@
 {
   "meta": {
     "title": "Full Stack Software Architect & Cloud Engineer",
-    "version": "3.4.1",
-    "updatedAt": "2026-11-18",
+    "version": "3.4.2",
+    "updatedAt": "2026-11-19",
     "principles": [
       "Fundamentos fortes antes de especialização",
       "Priorizar certificados oficiais e verificáveis",
@@ -980,6 +980,60 @@
               "kind": "Sem uma certificação externa única para este item",
               "url": null,
               "cost": "Varia"
+            }
+          }
+        },
+        {
+          "id": "github-actions-gh-200",
+          "order": 20.5,
+          "title": "GitHub Actions Certification (GH-200)",
+          "provider": "GitHub / Microsoft Learn",
+          "credential": "GitHub Actions Certification — Exam GH-200",
+          "cost": "mixed-free-study-paid-exam",
+          "examPrice": "US$99 de referência (preço regional e impostos podem variar)",
+          "priceAsOf": "2026-11-19",
+          "priceSource": "https://learn.microsoft.com/pt-br/credentials/certifications/github-actions/",
+          "status": "not-started",
+          "priority": "high-roi",
+          "source": "https://learn.microsoft.com/pt-br/credentials/certifications/github-actions/",
+          "description": "Certificação profissional intermediária em automação, CI/CD, workflows seguros, actions customizadas e governança GitHub. Após laboratório de pipeline (build, testes, artefatos, deploy) e antes da primeira certificação cloud.",
+          "prerequisite": "Ter pipeline CI com testes e artefatos funcionando no Jungle iGaming; ampliar depois com deploy, secrets/OIDC e troubleshooting.",
+          "focus": [
+            "Criar e gerenciar workflows, eventos, jobs, matrizes e condicionais",
+            "Diagnosticar falhas de execução, artefatos, caching e logs",
+            "Criar, versionar e manter ações JavaScript, Docker ou composite",
+            "Gerenciar runners, reutilização, permissões e políticas em organizações",
+            "Proteger pipelines: GITHUB_TOKEN mínimo privilégio, secrets, OIDC e dependências pinadas",
+            "Otimizar desempenho e custo de CI/CD e controlar publicações"
+          ],
+          "officialStudyGuide": "https://learn.microsoft.com/pt-br/credentials/certifications/resources/study-guides/gh-200",
+          "officialTraining": [
+            {
+              "title": "Microsoft Learn — Parte 1 de 2 (4 módulos)",
+              "url": "https://learn.microsoft.com/en-us/training/paths/github-actions/"
+            },
+            {
+              "title": "Microsoft Learn — Parte 2 de 2 (3 módulos)",
+              "url": "https://learn.microsoft.com/en-us/training/paths/github-actions-2/"
+            }
+          ],
+          "assessment": "Exame GH-200 supervisionado, 100 minutos, disponível em português do Brasil; validade informada de 2 anos, com transição de processo de renovação.",
+          "practicalGate": "No laboratório Jungle iGaming, pipeline build/lint/test (7 testes Money e expansão), teste de integração com serviço de banco, artefatos/caching, branch protections e logs; documentar falhas, corrigir e demonstrar defesa das permissões/secrets. Adicionar deploy somente quando o ambiente existir.",
+          "note": "Prioridade antes de AWS/Azure. Estudo oficial gratuito; exame pago e agendado somente após gates práticos. Evitar confundir conclusão das 2 learning paths com aprovação na certificação.",
+          "access": {
+            "learning": {
+              "status": "available",
+              "platform": "Microsoft Learn — GitHub Actions",
+              "kind": "2 trilhas oficiais gratuitas (7 módulos) + laboratório prático + guia GH-200",
+              "url": "https://learn.microsoft.com/en-us/training/paths/github-actions/",
+              "cost": "Estudo gratuito"
+            },
+            "credential": {
+              "status": "available",
+              "platform": "GitHub Certifications / Microsoft Learn (Pearson VUE)",
+              "kind": "Exame GH-200 supervisionado (certificação profissional)",
+              "url": "https://learn.microsoft.com/pt-br/credentials/certifications/github-actions/",
+              "cost": "Exame pago; preço regional"
             }
           }
         },
