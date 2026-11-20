@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-19T20:26:00-03:00",
+  "updatedAt": "2026-11-20T18:58:00-03:00",
   "courses": {
     "cs50x": {
       "status": "completed",
@@ -235,15 +235,26 @@
       ]
     },
     "linux-foundation-lfs101": {
-      "status": "in-progress",
+      "status": "completed",
       "started": true,
-      "completed": [],
-      "current": "Introduction to Linux (LFS101) — conteúdo e exercícios oficiais em andamento",
+      "completed": [
+        "course-complete",
+        "certificate-of-completion-issued"
+      ],
+      "current": null,
       "courseUrl": "https://trainingportal.linuxfoundation.org/courses/introduction-to-linux-lfs101",
       "notes": [
-        "Curso da Linux Foundation em andamento em 2026-11-18.",
-        "Curso introdutório distinto do exame LPI Linux Essentials; não marcar certificado como obtido antes da conclusão."
-      ]
+        "Concluído em 20/11/2026. Certificate of Completion PDF da The Linux Foundation apresentado e conferido, ID LF-kj0budahoa.",
+        "Não confundir conclusão LFS101 com certificação profissional Linux Foundation Certified System Administrator (LFCS).",
+        "URL S3 com X-Amz-Expires=900 era temporária; não registrar como URL de certificação.",
+        "Badge digital individual da Credly pode fornecer prova verificável pública; ainda não recebido/confirmado. Solicitar link individual quando disponível.",
+        "O PDF de certificado fornecido pelo titular não foi publicado no repositório."
+      ],
+      "completedAt": "2026-11-20",
+      "certificateId": "LF-kj0budahoa",
+      "certificateType": "course-completion",
+      "badgeStatus": "not-yet-verified",
+      "issuerBadgePage": "https://www.credly.com/org/the-linux-foundation/badge/lfs101-introduction-to-linux"
     },
     "github-actions-gh-200": {
       "status": "not-started",
