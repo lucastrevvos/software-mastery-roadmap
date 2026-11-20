@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Full Stack Software Architect & Cloud Engineer",
-    "version": "3.5.1",
+    "version": "3.5.2",
     "updatedAt": "2026-11-20",
     "principles": [
       "Fundamentos fortes antes de especialização",
@@ -567,7 +567,7 @@
           "status": "completed",
           "priority": "core",
           "source": "https://trainingportal.linuxfoundation.org/courses/introduction-to-linux-lfs101",
-          "description": "Curso Introduction to Linux (LFS101) concluído oficialmente em 20/11/2026. Diploma PDF apresentado, com ID LF-kj0budahoa. Credencial de conclusão de curso, não a certificação profissional LFCS. Badge individual da Credly ainda não identificado.",
+          "description": "Curso Introduction to Linux (LFS101) concluído oficialmente em 20/11/2026. Diploma PDF apresentado, com ID LF-kj0budahoa. Credencial de conclusão de curso, não a certificação profissional LFCS. Link individual de compartilhamento da Credly recebido em 20/11/2026; acesso público ainda não verificado.",
           "focus": [
             "Terminal e shell",
             "Filesystem e permissões",
@@ -586,15 +586,17 @@
             "credential": {
               "status": "completed",
               "platform": "Linux Foundation Training / Credly",
-              "kind": "Certificate of Completion (LFS101) obtido em 20/11/2026; badge digital individual a confirmar",
-              "url": "https://trainingportal.linuxfoundation.org/learn/dashboard",
+              "kind": "Certificate of Completion (LFS101) + link individual Credly fornecido; acesso público pendente de verificação",
+              "url": "https://www.credly.com/earner/earned/share/de9f88d8-1690-4a5d-8068-d5e33fe5ab06",
               "cost": "Certificado de conclusão incluído no curso gratuito"
             }
           },
           "completedAt": "2026-11-20",
           "certificateId": "LF-kj0budahoa",
-          "certificateEvidence": "PDF original fornecido pelo titular em 20/11/2026, não publicado publicamente; link temporário S3 expirado, sem link verificável individual neste momento.",
-          "badgeIssuerPage": "https://www.credly.com/org/the-linux-foundation/badge/lfs101-introduction-to-linux"
+          "certificateEvidence": "PDF de conclusão fornecido pelo titular em 20/11/2026; link individual Credly informado pelo titular, acesso por terceiros não confirmado.",
+          "badgeIssuerPage": "https://www.credly.com/org/the-linux-foundation/badge/lfs101-introduction-to-linux",
+          "credlyShareUrl": "https://www.credly.com/earner/earned/share/de9f88d8-1690-4a5d-8068-d5e33fe5ab06",
+          "credlyPublicAccess": "not-verified"
         },
         {
           "id": "cisco-networking-basics",
