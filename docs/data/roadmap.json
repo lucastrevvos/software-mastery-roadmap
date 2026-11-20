@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Full Stack Software Architect & Cloud Engineer",
-    "version": "3.5.3",
+    "version": "3.6.0",
     "updatedAt": "2026-11-20",
     "principles": [
       "Fundamentos fortes antes de especialização",
@@ -15,10 +15,10 @@
       "No máximo 2 cursos ativos: 1 principal e 1 complementar",
       "Sequenciamento adaptativo: oportunidades reais de mercado podem antecipar uma janela de stack sem abandonar os fundamentos; a prioridade imediata é o menor caminho para competência demonstrável e empregabilidade.",
       "Arquitetura, cloud e IA devem reforçar uma stack já utilizável, não atrasar a entrada no mercado",
-      "Fontes oficiais sem certificado podem virar trilhas guiadas com Mastery Gate interno, quando forem a melhor fonte técnica."
+      "Apenas cursos oficiais estruturados ou credenciais externas (gratuitas ou pagas) aparecem na trilha; documentação e laboratórios internos ficam como material de apoio e evidência de projeto."
     ],
-    "platformMetadata": "Cada item informa onde estudar e onde obter a credencial; ausência de curso/certificação externa é indicada explicitamente.",
-    "executionStrategy": "Cursos e certificações oficiais em ordem: JavaScript Certification e CS50 SQL ativos; Linux LFS101 concluído em 20/11/2026 (certificado de conclusão); GH-200 após pipeline CI/CD comprovado; iSAQB e certificações cloud conforme ROI. Laboratórios aplicados de engenharia são integrados aos projetos Jungle iGaming (backend financeiro, TDD, arquitetura, confiabilidade e CI/CD/observabilidade futuros) e KM One (Android em progresso; backend NestJS/Neon/Azure e IA futuros conforme necessidade). Não duplicar esses conteúdos como cursos internos isolados.",
+    "platformMetadata": "Cada item possui curso oficial estruturado ou credencial externa de provedor identificável. Itens sem certificação podem permanecer apenas quando houver curso/tutorial oficial do mantenedor.",
+    "executionStrategy": "Ativos: freeCodeCamp JavaScript Certification e Harvard CS50 SQL. LFS101 concluído em 20/11/2026. NestJS possui cursos oficiais pagos. GH-200 é certificação após pipeline CI/CD real. Azure/AWS, iSAQB, IEEE e outras credenciais entram pelo retorno profissional. Projetos Jungle iGaming e KM One acompanham aplicação prática; documentação isolada não integra o catálogo.",
     "projectIntegratedTopics": [
       {
         "id": "node-nest-employability-project",
@@ -134,13 +134,82 @@
         ]
       }
     ],
-    "learningArchitecture": "A trilha principal lista cursos/certificações e estudos específicos que não são substituídos por projetos. Tópicos aplicados (DDD, ADRs, C4, testes, sistemas distribuídos, observabilidade, CI/CD, containers, implantação e LLM apps) são acompanhados em Jungle iGaming e KM One. Status de projeto não equivale a domínio; evidência validada precede conclusão."
+    "learningArchitecture": "A trilha principal contém apenas cursos/tutorials oficiais e credenciais gratuitas ou pagas. DDD, ADRs, C4, testes, observabilidade, CI/CD, containers, sistemas distribuídos e IA aplicada são estudados no Jungle iGaming e KM One como competências e evidências, não como cursos separados.",
+    "catalogPolicy": "Critério estrito: somente (a) curso/tutorial estruturado oferecido oficialmente por instituição, provedor ou mantenedor, com ou sem certificado; ou (b) exame/credencial externa identificável, gratuita ou paga. Documentação e artigos isolados, Mastery Gates e laboratórios internos não são entradas do catálogo.",
+    "removedNonOfficialCourses": [
+      {
+        "id": "typescript-official-guided",
+        "title": "TypeScript — Official Guided Track",
+        "reason": "Roteiro interno baseado em documentação oficial, não curso oficial nem credencial externa.",
+        "statusAtRemoval": "not-started"
+      },
+      {
+        "id": "nodejs-core-fundamentals",
+        "title": "Node.js Core Fundamentals",
+        "reason": "Coleção de guias oficiais Node.js Learn + laboratório interno, não curso estruturado com credencial.",
+        "statusAtRemoval": "not-started"
+      },
+      {
+        "id": "swebok-senior-guided",
+        "title": "Senior Software Engineering — SWEBOK v4 Guided Track",
+        "reason": "Trilha guiada interna de leitura do SWEBOK; conteúdo aplicado aos projetos e à certificação IEEE.",
+        "statusAtRemoval": "not-started"
+      },
+      {
+        "id": "isaqb-cpsa-f-curriculum",
+        "title": "iSAQB CPSA-F — Official Curriculum, Glossary & Mock Exam",
+        "reason": "Material curricular e mock exam, não curso; incorporado como preparação à certificação CPSA-F.",
+        "statusAtRemoval": "not-started"
+      },
+      {
+        "id": "python-ai-engineering",
+        "title": "Python para Engenharia de IA",
+        "reason": "Formação interna Mastery Lab, sem curso oficial ou credencial externa.",
+        "statusAtRemoval": "not-started"
+      },
+      {
+        "id": "dotnet-backend",
+        "title": ".NET/C# Backend Engineering",
+        "reason": "Trilha própria formada por módulos soltos e portfólio; não um curso único oficial.",
+        "statusAtRemoval": "paused"
+      },
+      {
+        "id": "angular-official-core",
+        "title": "Angular Official — Components, Templates, Signals & Dependency Injection",
+        "reason": "Recorte interno da documentação Angular, não um curso oficial individual.",
+        "statusAtRemoval": "not-started"
+      },
+      {
+        "id": "angular-official-app-engineering",
+        "title": "Angular Official — Routing, HTTP, Forms & Application Data Flow",
+        "reason": "Recorte interno da documentação Angular, não um curso oficial individual.",
+        "statusAtRemoval": "not-started"
+      },
+      {
+        "id": "angular-official-testing-debugging",
+        "title": "Angular Official — Testing & Debugging",
+        "reason": "Recorte interno da documentação Angular, não um curso oficial individual.",
+        "statusAtRemoval": "not-started"
+      },
+      {
+        "id": "angular-official-performance-ssr",
+        "title": "Angular Official — Performance, SSR/SSG, Hydration & Zoneless",
+        "reason": "Recorte interno da documentação Angular, não um curso oficial individual.",
+        "statusAtRemoval": "not-started"
+      },
+      {
+        "id": "angular-mastery-project",
+        "title": "Angular Applied Project + Mastery Gate",
+        "reason": "Projeto e avaliação interna, sem credencial externa ou curso oficial.",
+        "statusAtRemoval": "not-started"
+      }
+    ]
   },
   "phases": [
     {
       "id": "phase-01",
-      "title": "Fundamentos Ativos — JavaScript, TypeScript & SQL",
-      "goal": "Fechar os fundamentos ativos e fazer a ponte JavaScript → TypeScript antes de Node.js/NestJS. Regra operacional: no máximo 2 cursos ativos — 1 principal e 1 complementar.",
+      "title": "Fundamentos Certificáveis — JavaScript e SQL",
+      "goal": "Consolidar credenciais oficiais freeCodeCamp e Harvard. TypeScript é estudado por aplicação no Jungle iGaming e em cursos oficiais posteriores, sem trilha interna avulsa.",
       "items": [
         {
           "id": "cs50x",
@@ -202,37 +271,8 @@
           }
         },
         {
-          "id": "typescript-official-guided",
-          "order": 3,
-          "title": "TypeScript — Official Guided Track",
-          "provider": "TypeScript Official Documentation",
-          "credential": "Mastery Gate interno (sem certificado externo)",
-          "cost": "free",
-          "status": "not-started",
-          "priority": "core",
-          "prerequisite": "Concluir freeCodeCamp JavaScript Certification",
-          "note": "Trilha ensinada pelo ChatGPT com AMS, baseada prioritariamente nas fontes oficiais TypeScript for JavaScript Programmers, TypeScript for Java/C# Programmers e Handbook. Deve ser concluída antes da janela Node.js/NestJS. Full Stack Open Part 9 permanece como reforço aplicado posterior.",
-          "source": "notes/TYPESCRIPT_GUIDED_TRACK.md",
-          "access": {
-            "learning": {
-              "status": "available",
-              "platform": "TypeScript Official Documentation",
-              "kind": "Documentação/tutorial oficial + instrução guiada",
-              "url": "https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html",
-              "cost": "Grátis"
-            },
-            "credential": {
-              "status": "internal",
-              "platform": "Programming Mastery Lab",
-              "kind": "Sem certificado externo; conclusão por Mastery Gate",
-              "url": null,
-              "cost": "Grátis"
-            }
-          }
-        },
-        {
           "id": "cs50-sql",
-          "order": 4,
+          "order": 3,
           "title": "CS50's Introduction to Databases with SQL",
           "provider": "Harvard University",
           "credential": "CS50 Certificate",
@@ -263,57 +303,11 @@
     {
       "id": "phase-02",
       "title": "Node.js & NestJS — Backend Employability",
-      "goal": "Aprofundar Node.js/NestJS e suas credenciais quando agregarem valor. Aplicar APIs, DI, validação, arquitetura e testes primeiro no Jungle iGaming; levar ao backend KM One quando sua implementação começar.",
+      "goal": "Credencial HackerRank Node.js e cursos oficiais pagos NestJS; o laboratório de backend é o Jungle iGaming, com posterior integração no KM One quando o backend começar.",
       "items": [
         {
-          "id": "nodejs-core-fundamentals",
-          "order": 5,
-          "title": "Node.js Core Fundamentals",
-          "provider": "Node.js official documentation + Programming Mastery Lab",
-          "credential": "No official Node.js certification; practical mastery evidence",
-          "cost": "free",
-          "status": "not-started",
-          "priority": "core",
-          "source": "https://nodejs.org/en/learn",
-          "description": "Fundamentos do runtime Node.js antes de frameworks: Event Loop, async I/O, módulos, Events, Streams, Buffers, filesystem, HTTP, process, workers, debugging e comportamento de produção.",
-          "focus": [
-            "Node.js runtime and V8 mental model",
-            "Event Loop and non-blocking I/O",
-            "callbacks, Promises and async/await",
-            "CommonJS and ES Modules",
-            "npm and package.json",
-            "EventEmitter",
-            "Buffers",
-            "Streams and backpressure",
-            "filesystem and path",
-            "HTTP core",
-            "process, environment variables and signals",
-            "child processes and worker threads",
-            "graceful shutdown",
-            "error handling",
-            "debugging and basic profiling"
-          ],
-          "note": "Bloco de fundamentos do runtime. Não existe certificação oficial Node.js ativa atualmente; a validação externa seguinte será HackerRank Node (Basic).",
-          "access": {
-            "learning": {
-              "status": "available",
-              "platform": "nodejs.org Learn + Node.js API Documentation",
-              "kind": "Documentação e guias oficiais do projeto Node.js, complementados por labs do Programming Mastery Lab",
-              "url": "https://nodejs.org/en/learn",
-              "cost": "Grátis"
-            },
-            "credential": {
-              "status": "none",
-              "platform": null,
-              "kind": "Não há certificação oficial Node.js/OpenJS ativa. Evidência por labs/Mastery Gate e, em seguida, HackerRank Node (Basic).",
-              "url": null,
-              "cost": null
-            }
-          }
-        },
-        {
           "id": "hackerrank-node-basic",
-          "order": 6,
+          "order": 4,
           "title": "Node (Basic) Skills Certification",
           "provider": "HackerRank",
           "credential": "HackerRank Node (Basic) Certificate",
@@ -353,7 +347,7 @@
         },
         {
           "id": "nestjs-official-fundamentals",
-          "order": 7,
+          "order": 5,
           "title": "NestJS Official — Fundamentals",
           "provider": "NestJS",
           "credential": "Official NestJS Certificate of Completion",
@@ -403,7 +397,7 @@
       "items": [
         {
           "id": "full-stack-open-core",
-          "order": 8,
+          "order": 6,
           "title": "Full Stack Open — Core 0–7",
           "provider": "University of Helsinki",
           "credential": "University certificate / ECTS where applicable",
@@ -429,7 +423,7 @@
         },
         {
           "id": "full-stack-open-extensions",
-          "order": 9,
+          "order": 7,
           "title": "Full Stack Open — extensões relevantes",
           "provider": "University of Helsinki",
           "credential": "University certificate / ECTS where applicable",
@@ -458,60 +452,11 @@
     {
       "id": "phase-04",
       "title": "Senior Software Engineering & Architecture — Production, Distributed Systems & AWS",
-      "goal": "Formação sênior com referências e certificações relevantes (SWEBOK, iSAQB, GH-200, AWS), enquanto DDD, C4, ADRs, mensageria, observabilidade, containers e CI/CD são praticados e registrados nos projetos Jungle iGaming e KM One. Não criar laboratórios duplicados.",
+      "goal": "Aprofundar Linux, redes, NestJS e arquitetura por cursos oficiais e certificações Cisco, GitHub GH-200, AWS, IEEE e iSAQB. SWEBOK, ADRs, observabilidade, Docker e sistemas distribuídos são referências e competências dos projetos, não cursos avulsos.",
       "items": [
         {
-          "id": "swebok-senior-guided",
-          "order": 10,
-          "title": "Senior Software Engineering — SWEBOK v4 Guided Track",
-          "provider": "IEEE Computer Society + Programming Mastery Lab",
-          "credential": "Senior Software Engineering Mastery Gate",
-          "cost": "free",
-          "status": "not-started",
-          "priority": "core",
-          "source": "https://www.computer.org/education/bodies-of-knowledge/software-engineering",
-          "plan": "notes/SENIOR_SOFTWARE_ENGINEER_SWEBOK_TRACK.md",
-          "focus": [
-            "software requirements",
-            "software architecture",
-            "software design",
-            "software construction",
-            "software testing",
-            "software engineering operations",
-            "software maintenance",
-            "software configuration management",
-            "software engineering management",
-            "software engineering process",
-            "software engineering models and methods",
-            "software quality",
-            "software security",
-            "software engineering professional practice",
-            "software engineering economics",
-            "computing foundations",
-            "mathematical foundations",
-            "engineering foundations"
-          ],
-          "note": "Trilha guiada baseada no SWEBOK v4.0a da IEEE. Não será executada como leitura linear de um livro: cada Knowledge Area será ligada a evidência prática, projetos existentes e Mastery Gates. Serve como espinha dorsal vendor-neutral do objetivo Senior Software Engineer.",
-          "access": {
-            "learning": {
-              "status": "available",
-              "platform": "IEEE Computer Society + Programming Mastery Lab",
-              "kind": "SWEBOK v4.0a oficial gratuito + instrução guiada AMS",
-              "url": "https://www.computer.org/education/bodies-of-knowledge/software-engineering",
-              "cost": "Grátis"
-            },
-            "credential": {
-              "status": "internal",
-              "platform": "Programming Mastery Lab",
-              "kind": "Senior Software Engineering Mastery Gate",
-              "url": null,
-              "cost": "Grátis"
-            }
-          }
-        },
-        {
           "id": "linux-essentials",
-          "order": 11,
+          "order": 8,
           "title": "Linux Fundamentals — Linux Essentials",
           "provider": "Linux Professional Institute (LPI)",
           "credential": "LPI Linux Essentials 010-160 target",
@@ -559,7 +504,7 @@
         },
         {
           "id": "linux-foundation-lfs101",
-          "order": 12,
+          "order": 9,
           "title": "Introduction to Linux (LFS101)",
           "provider": "The Linux Foundation",
           "credential": "The Linux Foundation — Certificate of Completion, Introduction to Linux (LFS101)",
@@ -599,7 +544,7 @@
         },
         {
           "id": "cisco-networking-basics",
-          "order": 13,
+          "order": 10,
           "title": "Networking Fundamentals — Cisco Networking Basics",
           "provider": "Cisco Networking Academy",
           "credential": "Cisco Networking Academy Digital Badge",
@@ -639,7 +584,7 @@
         },
         {
           "id": "cisco-ccst-networking",
-          "order": 14,
+          "order": 11,
           "title": "Cisco Certified Support Technician (CCST) Networking",
           "provider": "Cisco",
           "credential": "Cisco Certified Support Technician (CCST) Networking",
@@ -669,7 +614,7 @@
         },
         {
           "id": "nestjs-official-microservices",
-          "order": 15,
+          "order": 12,
           "title": "NestJS Official — Microservices",
           "provider": "NestJS",
           "credential": "Official NestJS Certificate of Completion",
@@ -714,7 +659,7 @@
         },
         {
           "id": "nestjs-official-architecture",
-          "order": 16,
+          "order": 13,
           "title": "NestJS Official — Architecture & Advanced Patterns",
           "provider": "NestJS",
           "credential": "Official NestJS Certificate of Completion",
@@ -760,49 +705,8 @@
           ]
         },
         {
-          "id": "isaqb-cpsa-f-curriculum",
-          "order": 17,
-          "title": "iSAQB CPSA-F — Official Curriculum, Glossary & Mock Exam",
-          "provider": "iSAQB",
-          "credential": "Official CPSA-F curriculum preparation; certification exam optional later",
-          "cost": "free-study",
-          "status": "not-started",
-          "priority": "core",
-          "source": "https://www.isaqb.org/certifications/cpsa-certifications/",
-          "focus": [
-            "software architecture fundamentals",
-            "architecture design",
-            "quality requirements",
-            "architecture documentation",
-            "communication",
-            "design decisions",
-            "tools and examples"
-          ],
-          "note": "Usar o material oficial gratuito como referência externa principal. A prova paga fica para quando houver ROI/voucher e domínio suficiente para passar de primeira. A prova/curso oficial permanece na trilha; exercícios e evidências práticas são aplicados nos projetos Jungle iGaming e KM One, sem declarar domínio automaticamente.",
-          "access": {
-            "learning": {
-              "status": "materials-only",
-              "platform": "iSAQB",
-              "kind": "Currículo, glossário e mock exam oficiais; não há uma plataforma única de curso do próprio iSAQB",
-              "url": "https://www.isaqb.org/certifications/cpsa-certifications/cpsa-foundation-level/",
-              "cost": "Material oficial gratuito; treinamentos credenciados normalmente são pagos"
-            },
-            "credential": {
-              "status": "optional",
-              "platform": "Certification Bodies reconhecidos pelo iSAQB",
-              "kind": "Exame CPSA-F opcional; o iSAQB não aplica o exame diretamente",
-              "url": "https://www.isaqb.org/certifications/certification-bodies/",
-              "cost": "Pago; preço varia por organismo/país"
-            }
-          },
-          "projectApplication": [
-            "jungle-igaming-nestjs-lab",
-            "km-one-product"
-          ]
-        },
-        {
           "id": "github-actions-gh-200",
-          "order": 18,
+          "order": 14,
           "title": "GitHub Actions Certification (GH-200)",
           "provider": "GitHub / Microsoft Learn",
           "credential": "GitHub Actions Certification — Exam GH-200",
@@ -860,7 +764,7 @@
         },
         {
           "id": "aws-foundations",
-          "order": 19,
+          "order": 15,
           "title": "AWS Cloud Foundations + Certified Cloud Practitioner",
           "provider": "AWS Educate / AWS Skill Builder",
           "credential": "AWS Certified Cloud Practitioner (CLF-C02) target + free AWS learning badges",
@@ -893,7 +797,7 @@
         },
         {
           "id": "aws-solutions-architect-associate",
-          "order": 20,
+          "order": 16,
           "title": "AWS Certified Solutions Architect — Associate (SAA-C03)",
           "provider": "AWS Training and Certification",
           "credential": "AWS Certified Solutions Architect — Associate",
@@ -933,14 +837,14 @@
         },
         {
           "id": "ieee-software-professional-level-2",
-          "order": 21,
+          "order": 17,
           "title": "IEEE Certified Software Professional — Level 2",
           "provider": "IEEE Computer Society",
           "credential": "Software Professional Level 2",
           "cost": "paid-when-justified",
           "status": "not-started",
           "priority": "credential-target",
-          "source": "https://www.computer.org/education/certifications",
+          "source": "https://www.computer.org/product/education/software-professional-certification-level-2",
           "note": "Credencial externa opcional para validar engenharia de software ao longo do ciclo de vida. Preparar primeiro via SWEBOK Guided Track e prática real; comprar apenas quando houver domínio e ROI. A IEEE posiciona o Level 2 para profissionais com experiência e capacidade de liderar/entregar projetos complexos.",
           "access": {
             "learning": {
@@ -954,14 +858,15 @@
               "status": "available",
               "platform": "IEEE Computer Society",
               "kind": "Certified Software Professional — Level 2",
-              "url": "https://www.computer.org/education/certifications",
+              "url": "https://www.computer.org/product/education/software-professional-certification-level-2",
               "cost": "Pago; confirmar preço atual antes da compra"
             }
-          }
+          },
+          "description": "Credencial profissional IEEE Computer Society Software Professional Certification — Level 2, com exame oficial. SWEBOK v4 funciona como referência de estudo, não como curso independente."
         },
         {
           "id": "isaqb-cpsa-f-exam",
-          "order": 22,
+          "order": 18,
           "title": "iSAQB Certified Professional for Software Architecture — Foundation Level (CPSA-F)",
           "provider": "iSAQB",
           "credential": "CPSA-F",
@@ -992,18 +897,20 @@
           "projectApplication": [
             "jungle-igaming-nestjs-lab",
             "km-one-product"
-          ]
+          ],
+          "description": "Certificação profissional CPSA-F obtida em exame por organismo acreditado. Preparação disponível pelo currículo oficial, glossário, prova-modelo e treinamento credenciado opcional; esses materiais não são uma trilha separada.",
+          "officialCurriculumUrl": "https://www.isaqb.org/certifications/cpsa-certifications/cpsa-foundation-level/"
         }
       ]
     },
     {
       "id": "phase-05",
-      "title": "AI-Enabled Backend — Python, LLM Apps & Agents",
-      "goal": "Estudar fundamentos oficiais de Python e IA; integrar LLMs, RAG, agentes, avaliações e LLMOps ao KM One apenas quando uma funcionalidade justificar.",
+      "title": "Python & IA — Cursos Oficiais",
+      "goal": "Cursos oficiais de Python e fundamentos de IA com credencial externa. Aplicações LLM, RAG, agentes e LLMOps são tópicos do KM One, não cursos próprios na lista.",
       "items": [
         {
           "id": "cs50p",
-          "order": 23,
+          "order": 19,
           "title": "CS50's Introduction to Programming with Python",
           "provider": "Harvard University",
           "credential": "CS50 Certificate",
@@ -1029,7 +936,7 @@
         },
         {
           "id": "elements-of-ai",
-          "order": 24,
+          "order": 20,
           "title": "Elements of AI — Introduction to AI",
           "provider": "University of Helsinki + MinnaLearn",
           "credential": "Free Digital Certificate",
@@ -1064,43 +971,17 @@
               "cost": "Grátis"
             }
           }
-        },
-        {
-          "id": "python-ai-engineering",
-          "order": 25,
-          "title": "Python para Engenharia de IA",
-          "provider": "Mastery Lab",
-          "credential": "Portfolio + Mastery Gate",
-          "cost": "free",
-          "status": "not-started",
-          "priority": "stack",
-          "access": {
-            "learning": {
-              "status": "internal",
-              "platform": "Programming Mastery Lab",
-              "kind": "Trilha aplicada interna; não é curso externo",
-              "url": null,
-              "cost": "Grátis"
-            },
-            "credential": {
-              "status": "internal",
-              "platform": "Programming Mastery Lab",
-              "kind": "Portfolio + Mastery Gate",
-              "url": null,
-              "cost": "Grátis"
-            }
-          }
         }
       ]
     },
     {
       "id": "phase-06",
-      "title": ".NET/C# Backend Engineering & Azure",
-      "goal": "Aprofundamento em C#/.NET, APIs, testes e Azure em uma janela secundária, sem projeto financeiro ativo.",
+      "title": "C#/.NET — Credenciais Microsoft e Azure",
+      "goal": "Credenciais oficiais da Microsoft. Prática de APIs e aprofundamento .NET permanecem fora do catálogo de cursos como engenharia aplicada.",
       "items": [
         {
           "id": "foundational-csharp",
-          "order": 26,
+          "order": 21,
           "title": "Foundational C# with Microsoft",
           "provider": "Microsoft + freeCodeCamp",
           "credential": "Foundational C# Certification",
@@ -1128,43 +1009,8 @@
           "note": "Concluído e certificado em 2026-09-28. Usado como revisão/validação formal da linguagem antes da janela .NET 10 focada em backend, sistemas distribuídos e system design."
         },
         {
-          "id": "dotnet-backend",
-          "order": 27,
-          "title": ".NET/C# Backend Engineering",
-          "provider": "Microsoft Learn + Mastery Lab",
-          "credential": "Applied portfolio + badges where available",
-          "cost": "free",
-          "status": "paused",
-          "priority": "secondary",
-          "access": {
-            "learning": {
-              "status": "available",
-              "platform": "Microsoft Learn + Programming Mastery Lab",
-              "kind": "Módulos oficiais selecionados + laboratório aplicado; não é um único curso fechado",
-              "url": "https://learn.microsoft.com/training/",
-              "cost": "Grátis"
-            },
-            "credential": {
-              "status": "internal",
-              "platform": "Microsoft Learn + portfólio",
-              "kind": "Badges/achievements onde disponíveis + evidência prática; não há uma certificação .NET única para este item",
-              "url": "https://learn.microsoft.com/credentials/",
-              "cost": "Grátis para estudo; exames específicos podem ser pagos"
-            }
-          },
-          "startedAt": "2026-09-28",
-          "description": "Trilha de engenharia backend com C#/.NET e ASP.NET Core. O antigo Financial Distributed Systems Lab e o sprint de entrevista XP foram retirados da lista ativa; os fundamentos .NET continuam disponíveis no currículo.",
-          "currentFocus": [
-            "C# e orientação a objetos",
-            "ASP.NET Core APIs",
-            "Injeção de dependências e testes",
-            "SQL e persistência",
-            "Arquitetura aplicada conforme os requisitos"
-          ]
-        },
-        {
           "id": "azure-foundations",
-          "order": 28,
+          "order": 22,
           "title": "Azure Fundamentals (AZ-900)",
           "provider": "Microsoft Learn",
           "credential": "Microsoft Certified: Azure Fundamentals",
@@ -1194,7 +1040,7 @@
         },
         {
           "id": "azure-developer",
-          "order": 29,
+          "order": 23,
           "title": "Azure AI Cloud Developer Associate (AI-200)",
           "provider": "Microsoft Learn",
           "credential": "Microsoft Certified: Azure AI Cloud Developer Associate",
@@ -1224,7 +1070,7 @@
         },
         {
           "id": "azure-administrator",
-          "order": 30,
+          "order": 24,
           "title": "Azure Administrator Associate (AZ-104)",
           "provider": "Microsoft Learn",
           "credential": "Microsoft Certified: Azure Administrator Associate",
@@ -1261,7 +1107,7 @@
         },
         {
           "id": "azure-solutions-architect",
-          "order": 31,
+          "order": 25,
           "title": "Designing Microsoft Azure Infrastructure Solutions (AZ-305)",
           "provider": "Microsoft Learn",
           "credential": "AZ-305 exam; with Azure Administrator Associate leads to Microsoft Certified: Azure Solutions Architect Expert",
@@ -1300,18 +1146,18 @@
     {
       "id": "phase-07",
       "title": "Frontend Specialization — Next.js, Angular & Web",
-      "goal": "Depois de React no Full Stack Open e de duas janelas de backend, aprofundar frameworks de frontend sem fragmentar o foco inicial.",
+      "goal": "Next.js Learn e tutoriais oficiais Angular, sem certificado, seguidos por credenciais HackerRank e cursos Harvard. Documentação por tema e projeto interno Angular deixam de ser cursos independentes.",
       "items": [
         {
           "id": "nextjs-official",
-          "title": "Next.js Official — App Router & Production",
+          "title": "Next.js Learn — Curso Oficial",
           "provider": "Vercel / Next.js",
-          "credential": "No official external certification",
+          "credential": "Curso oficial Next.js Learn; sem certificação externa",
           "cost": "free",
           "status": "not-started",
           "priority": "frontend",
           "source": "https://nextjs.org/learn",
-          "description": "Aprofundar Next.js somente depois da janela backend e da base React do Full Stack Open.",
+          "description": "Curso oficial mantido pelo projeto Next.js, com exercícios guiados em App Router e desenvolvimento de aplicações. Mantido por ser curso oficial mesmo sem certificado.",
           "focus": [
             "App Router",
             "server and client components",
@@ -1329,7 +1175,7 @@
             "learning": {
               "status": "available",
               "platform": "Next.js Learn + official documentation",
-              "kind": "Curso/guias oficiais do Next.js",
+              "kind": "Next.js Learn — curso estruturado oficial",
               "url": "https://nextjs.org/learn",
               "cost": "Grátis"
             },
@@ -1341,18 +1187,18 @@
               "cost": null
             }
           },
-          "order": 32
+          "order": 26
         },
         {
           "id": "angular-official-essentials",
-          "order": 33,
-          "title": "Angular Official — Essentials + First App",
+          "order": 27,
+          "title": "Angular — Tutoriais Oficiais (Essentials + First App)",
           "provider": "Angular Team / angular.dev",
-          "credential": "Official learning path; no external certificate",
+          "credential": "Tutoriais interativos oficiais, sem certificação externa",
           "cost": "free",
           "status": "not-started",
           "priority": "stack",
-          "source": "https://angular.dev/essentials",
+          "source": "https://angular.dev/tutorials",
           "practice": "https://angular.dev/tutorials",
           "focus": [
             "Angular mental model",
@@ -1366,7 +1212,7 @@
             "learning": {
               "status": "available",
               "platform": "angular.dev",
-              "kind": "Tutorials, Essentials e Playground oficiais",
+              "kind": "Tutoriais oficiais interativos da equipe Angular — Essentials e First App",
               "url": "https://angular.dev/tutorials",
               "cost": "Grátis"
             },
@@ -1377,184 +1223,12 @@
               "url": null,
               "cost": null
             }
-          }
-        },
-        {
-          "id": "angular-official-core",
-          "order": 34,
-          "title": "Angular Official — Components, Templates, Signals & Dependency Injection",
-          "provider": "Angular Team / angular.dev",
-          "credential": "Official documentation + Mastery evidence",
-          "cost": "free",
-          "status": "not-started",
-          "priority": "stack",
-          "focus": [
-            "standalone components",
-            "component composition",
-            "template syntax",
-            "bindings",
-            "control flow",
-            "signals",
-            "computed/effect",
-            "dependency injection"
-          ],
-          "access": {
-            "learning": {
-              "status": "available",
-              "platform": "angular.dev",
-              "kind": "Documentação e tutorials oficiais",
-              "url": "https://angular.dev/",
-              "cost": "Grátis"
-            },
-            "credential": {
-              "status": "internal",
-              "platform": "Programming Mastery Lab",
-              "kind": "Evidência de domínio; sem certificação externa oficial",
-              "url": null,
-              "cost": "Grátis"
-            }
-          }
-        },
-        {
-          "id": "angular-official-app-engineering",
-          "order": 35,
-          "title": "Angular Official — Routing, HTTP, Forms & Application Data Flow",
-          "provider": "Angular Team / angular.dev",
-          "credential": "Official documentation + applied project",
-          "cost": "free",
-          "status": "not-started",
-          "priority": "stack",
-          "focus": [
-            "router",
-            "route params",
-            "guards",
-            "lazy loading",
-            "HttpClient",
-            "interceptors",
-            "reactive forms",
-            "template-driven forms",
-            "Signal Forms where stable",
-            "Observable integration"
-          ],
-          "access": {
-            "learning": {
-              "status": "available",
-              "platform": "angular.dev",
-              "kind": "Documentação e tutorials oficiais",
-              "url": "https://angular.dev/",
-              "cost": "Grátis"
-            },
-            "credential": {
-              "status": "internal",
-              "platform": "Programming Mastery Lab",
-              "kind": "Projeto aplicado; sem certificação externa oficial",
-              "url": null,
-              "cost": "Grátis"
-            }
-          }
-        },
-        {
-          "id": "angular-official-testing-debugging",
-          "order": 36,
-          "title": "Angular Official — Testing & Debugging",
-          "provider": "Angular Team / angular.dev",
-          "credential": "Official documentation + Mastery evidence",
-          "cost": "free",
-          "status": "not-started",
-          "priority": "stack",
-          "focus": [
-            "TestBed",
-            "component tests",
-            "HTTP testing",
-            "router testing",
-            "async behavior",
-            "Angular DevTools",
-            "debugging discipline"
-          ],
-          "access": {
-            "learning": {
-              "status": "available",
-              "platform": "angular.dev",
-              "kind": "Documentação oficial de testing e debugging",
-              "url": "https://angular.dev/guide/testing",
-              "cost": "Grátis"
-            },
-            "credential": {
-              "status": "internal",
-              "platform": "Programming Mastery Lab",
-              "kind": "Evidência de domínio; sem certificação externa oficial",
-              "url": null,
-              "cost": "Grátis"
-            }
-          }
-        },
-        {
-          "id": "angular-official-performance-ssr",
-          "order": 37,
-          "title": "Angular Official — Performance, SSR/SSG, Hydration & Zoneless",
-          "provider": "Angular Team / angular.dev",
-          "credential": "Official documentation + applied project",
-          "cost": "free",
-          "status": "not-started",
-          "priority": "stack",
-          "focus": [
-            "performance",
-            "lazy loading",
-            "@defer",
-            "SSR",
-            "SSG/prerender",
-            "hydration",
-            "incremental hydration",
-            "Core Web Vitals",
-            "zoneless Angular"
-          ],
-          "access": {
-            "learning": {
-              "status": "available",
-              "platform": "angular.dev",
-              "kind": "Documentação oficial de performance, SSR, hydration e recursos modernos",
-              "url": "https://angular.dev/",
-              "cost": "Grátis"
-            },
-            "credential": {
-              "status": "internal",
-              "platform": "Programming Mastery Lab",
-              "kind": "Projeto aplicado; sem certificação externa oficial",
-              "url": null,
-              "cost": "Grátis"
-            }
-          }
-        },
-        {
-          "id": "angular-mastery-project",
-          "order": 38,
-          "title": "Angular Applied Project + Mastery Gate",
-          "provider": "Programming Mastery Lab",
-          "credential": "Internal Mastery Gate + public portfolio evidence",
-          "cost": "free",
-          "status": "not-started",
-          "priority": "core",
-          "note": "Construir/revisar uma aplicação Angular moderna usando as APIs atuais do framework e comprovar Explain, Trace, Build, Debug e Transfer antes das provas externas.",
-          "access": {
-            "learning": {
-              "status": "internal",
-              "platform": "Programming Mastery Lab",
-              "kind": "Projeto guiado pelo roadmap; não é curso de terceiros",
-              "url": null,
-              "cost": "Grátis"
-            },
-            "credential": {
-              "status": "internal",
-              "platform": "Programming Mastery Lab",
-              "kind": "Mastery Gate interno + evidência pública de portfólio",
-              "url": null,
-              "cost": "Grátis"
-            }
-          }
+          },
+          "description": "Tutoriais estruturados e interativos publicados pela equipe Angular: Essentials, Learn Angular e Build your first Angular app. É estudo oficial, não uma certificação."
         },
         {
           "id": "hackerrank-angular-basic",
-          "order": 39,
+          "order": 28,
           "title": "Angular (Basic) Skills Certification",
           "provider": "HackerRank",
           "credential": "HackerRank Angular (Basic) Certificate",
@@ -1582,7 +1256,7 @@
         },
         {
           "id": "hackerrank-angular-intermediate",
-          "order": 40,
+          "order": 29,
           "title": "Angular (Intermediate) Skills Certification",
           "provider": "HackerRank",
           "credential": "HackerRank Angular (Intermediate) Certificate",
@@ -1610,7 +1284,7 @@
         },
         {
           "id": "cs50-web",
-          "order": 41,
+          "order": 30,
           "title": "CS50's Web Programming with Python and JavaScript",
           "provider": "Harvard University",
           "credential": "CS50 Certificate",
@@ -1643,7 +1317,7 @@
       "items": [
         {
           "id": "harvard-data-science-python",
-          "order": 42,
+          "order": 31,
           "title": "Introduction to Data Science with Python",
           "provider": "Harvard University / HarvardX",
           "credential": "Verified Certificate (edX, optional)",
@@ -1686,7 +1360,7 @@
         },
         {
           "id": "ibm-ai-foundations-understanding",
-          "order": 43,
+          "order": 32,
           "title": "AI Fundamentals: Foundations for Understanding AI",
           "provider": "IBM SkillsBuild",
           "credential": "IBM SkillsBuild Digital Credential / Credly badge",
@@ -1722,7 +1396,7 @@
         },
         {
           "id": "ibm-artificial-intelligence-fundamentals",
-          "order": 44,
+          "order": 33,
           "title": "Artificial Intelligence Fundamentals",
           "provider": "IBM SkillsBuild",
           "credential": "IBM SkillsBuild Digital Credential",
@@ -1757,7 +1431,7 @@
         },
         {
           "id": "umd-ai-career-empowerment",
-          "order": 45,
+          "order": 34,
           "title": "AI and Career Empowerment",
           "provider": "University of Maryland — Robert H. Smith School of Business",
           "credential": "Free Certificate of Completion",
@@ -1793,7 +1467,7 @@
         },
         {
           "id": "alteryx-ml-fundamentals",
-          "order": 46,
+          "order": 35,
           "title": "Machine Learning Fundamentals Micro-Credential",
           "provider": "Alteryx",
           "credential": "Alteryx Machine Learning Fundamentals Micro-Credential / Credly",
@@ -1827,7 +1501,7 @@
         },
         {
           "id": "cs50-ai",
-          "order": 47,
+          "order": 36,
           "title": "CS50's Introduction to Artificial Intelligence with Python",
           "provider": "Harvard University",
           "credential": "CS50 Certificate",
@@ -1853,7 +1527,7 @@
         },
         {
           "id": "cs50-cyber",
-          "order": 48,
+          "order": 37,
           "title": "CS50's Introduction to Cybersecurity",
           "provider": "Harvard University",
           "credential": "CS50 Certificate",
@@ -1881,12 +1555,12 @@
     },
     {
       "id": "phase-09",
-      "title": "Advanced Credentials & Capstone Architect",
-      "goal": "Aprofundar credenciais avançadas, aplicando arquitetura e defesas profissionais nos projetos reais. Não manter um capstone artificial duplicado.",
+      "title": "Certificações Avançadas — Oracle e SEI",
+      "goal": "Certificações e programas oficiais da Oracle University e Carnegie Mellon SEI; defesas de arquitetura e capstones continuam integrados aos projetos reais, não como cursos sem credencial.",
       "items": [
         {
           "id": "oci-foundations",
-          "order": 49,
+          "order": 38,
           "title": "OCI Foundations (2026)",
           "provider": "Oracle University",
           "credential": "Oracle Cloud Infrastructure 2026 Foundations Associate (1Z0-1085-26)",
@@ -1914,7 +1588,7 @@
         },
         {
           "id": "sei-software-architecture-professional",
-          "order": 50,
+          "order": 39,
           "title": "SEI Software Architecture Professional Certificate",
           "provider": "Carnegie Mellon University — Software Engineering Institute",
           "credential": "SEI Software Architecture Professional Certificate",
