@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Full Stack Software Architect & Cloud Engineer",
-    "version": "3.7.0",
+    "version": "3.7.1",
     "updatedAt": "2026-11-20",
     "principles": [
       "Fundamentos fortes antes de especialização",
@@ -18,7 +18,7 @@
       "Apenas cursos oficiais estruturados ou credenciais externas (gratuitas ou pagas) aparecem na trilha; documentação e laboratórios internos ficam como material de apoio e evidência de projeto."
     ],
     "platformMetadata": "Cada item possui curso oficial estruturado ou credencial externa de provedor identificável. Itens sem certificação podem permanecer apenas quando houver curso/tutorial oficial do mantenedor.",
-    "executionStrategy": "Ativos: freeCodeCamp JavaScript e Harvard CS50 SQL. LFS101 concluído. Próximas opções oficiais para backend: Introduction to Node.js LFW111 (Linux Foundation/OpenJS, edX), Node.js Learn gratuito como apoio, HackerRank Node, NestJS Fundamentals. React pelo Full Stack Open é único frontend principal; Next.js entra depois como extensão. Jungle e KM One aplicam competências sem criar cursos internos.",
+    "executionStrategy": "Ativos atuais: JavaScript Certification e CS50 SQL; LFS101 concluído. Janela Node.js planejada: primeiro Node.js Learn guiado página por página via ChatGPT/DECA, depois LFW111 de modo independente e certificação HackerRank Node Basic. React é único frontend; NestJS e projetos Jungle/KM One aplicam conhecimentos.",
     "projectIntegratedTopics": [
       {
         "id": "node-nest-employability-project",
@@ -174,7 +174,8 @@
         "statusAtRemoval": "paused"
       }
     ],
-    "frontendFocus": "React (Full Stack Open) é o frontend principal; Next.js Learn somente como evolução opcional do mesmo ecossistema. Frameworks alternativos retirados da trilha principal."
+    "frontendFocus": "React (Full Stack Open) é o frontend principal; Next.js Learn somente como evolução opcional do mesmo ecossistema. Frameworks alternativos retirados da trilha principal.",
+    "nodejsLearningSequence": "Node.js Learn (documentação e artigos oficiais, guia página a página pelo ChatGPT/DECA) → Introduction to Node.js LFW111 (estudo autônomo) → HackerRank Node Basic → NestJS Fundamentals."
   },
   "phases": [
     {
@@ -274,8 +275,64 @@
     {
       "id": "phase-02",
       "title": "Node.js & NestJS — Backend Employability",
-      "goal": "Aprender Node.js em curso oficial Linux Foundation/OpenJS (LFW111), complementar com o Node.js Learn e validar fundamentos pelo HackerRank Node; depois estudar NestJS nos cursos oficiais. Aplicação prática no Jungle iGaming e, quando justificável, KM One.",
+      "goal": "1) Node.js Learn oficial, página por página, com o ChatGPT ensinando pelo Método DECA e avanço condicionado à compreensão; 2) LFW111 Linux Foundation/OpenJS feito sozinho; 3) HackerRank Node Basic como avaliação externa e NestJS Fundamentals como curso oficial; engenharia prática nos projetos Jungle iGaming e KM One.",
       "items": [
+        {
+          "id": "nodejs-learn-official-guided",
+          "title": "Node.js Learn — estudo guiado pelo site oficial",
+          "provider": "Node.js / OpenJS Foundation — nodejs.org",
+          "credential": "Curso/guia oficial de aprendizagem (sem certificado)",
+          "cost": "free",
+          "status": "not-started",
+          "priority": "core",
+          "source": "https://nodejs.org/learn",
+          "description": "Percorrer as páginas do Node.js Learn na ordem oficial, com orientação personalizada pelo ChatGPT usando Método DECA (Descomplicar → Experimentar → Corrigir → Avançar), uma página e um desafio por vez. A fonte é sempre o artigo original do nodejs.org; o assistente explica com analogias, código pequeno e verifica a compreensão antes de avançar. Não há certificação vinculada a este percurso.",
+          "guideMode": "mentor-led-deca",
+          "officialSequence": "official-site-navigation-order",
+          "progressGate": "Uma página por vez; resposta/discussão do desafio antes do avanço; registrar progresso real no chat e GitHub",
+          "linkFirstPage": "https://nodejs.org/learn/getting-started/introduction-to-nodejs",
+          "sections": [
+            "Getting Started",
+            "Command Line",
+            "HTTP",
+            "Manipulating Files",
+            "Asynchronous Work",
+            "Concurrency",
+            "TypeScript",
+            "Modules",
+            "Diagnostics",
+            "Test Runner",
+            "Node-API",
+            "Userland Migrations"
+          ],
+          "focus": [
+            "Fundamentos e funcionamento do runtime",
+            "V8, JavaScript no servidor e npm",
+            "CLI, variáveis de ambiente, HTTP e sistema de arquivos",
+            "Callbacks, Promises, Event Loop e concorrência",
+            "TypeScript e módulos",
+            "Streams, backpressure, testes e diagnóstico de memória",
+            "Segurança e melhores práticas"
+          ],
+          "learningMethod": "Fonte oficial artigo por artigo; explicações simples, exercícios práticos, correção e avanço condicionado à compreensão (Método DECA). Não copiar o material integral.",
+          "access": {
+            "learning": {
+              "status": "available",
+              "platform": "Node.js Learn — nodejs.org",
+              "kind": "Guias e tutoriais oficiais organizados em sequência, conduzidos pelo ChatGPT",
+              "url": "https://nodejs.org/learn",
+              "cost": "Grátis"
+            },
+            "credential": {
+              "status": "none",
+              "platform": "Node.js / OpenJS Foundation",
+              "kind": "Não emite certificado; conclusão rastreada apenas como estudo de material oficial",
+              "url": null,
+              "cost": null
+            }
+          },
+          "order": 4
+        },
         {
           "id": "linux-foundation-node-lfw111",
           "title": "Introduction to Node.js (LFW111) — Linux Foundation / OpenJS",
@@ -285,7 +342,7 @@
           "status": "not-started",
           "priority": "core",
           "source": "https://www.edx.org/learn/node-js/the-linux-foundation-introduction-to-node-js",
-          "description": "Curso estruturado oficial Introduction to Node.js, publicado por The Linux Foundation em parceria com OpenJS Foundation, com aulas sobre ferramentas CLI, APIs REST simuladas, módulos e serviços. Acesso de auditoria gratuito; certificado verificado pela edX depende de pagamento e requisitos. Não confundir com JSNAD/JSNSD, aposentadas em 30/09/2025.",
+          "description": "Curso oficial da Linux Foundation/OpenJS (LFW111) a ser feito de forma autônoma após completar o aprendizado guiado do Node.js Learn. Acesso e condições de certificado variam pela edX; não confundir com JSNAD/JSNSD aposentadas.",
           "focus": [
             "Runtime e arquitetura Node.js",
             "Ferramentas de linha de comando",
@@ -296,12 +353,12 @@
           "officialSupplement": {
             "platform": "Node.js Learn",
             "url": "https://nodejs.org/learn",
-            "kind": "Guias gratuitos mantidos pelo projeto Node.js; estudo complementar sem certificado"
+            "kind": "Primeira etapa obrigatória: estudo guiado página por página com ChatGPT/DECA."
           },
           "priceAsOf": "2026-11-20",
           "examPrice": "Preço do certificado verificado é mostrado pela edX no checkout; pode variar conforme oferta e país",
           "priceSource": "https://www.edx.org/learn/node-js/the-linux-foundation-introduction-to-node-js",
-          "note": "Etapa após consolidar JavaScript e antes da certificação HackerRank Node e do curso oficial NestJS; não altera cursos já ativos. O projeto Node.js mantém o Node.js Learn gratuito; JSNAD e JSNSD foram descontinuadas em 2025.",
+          "note": "Segunda etapa de Node.js: o usuário fará este curso sozinho depois do percurso de tutoria por páginas do Node.js Learn. O exame/credencial depende das condições oficiais da edX.",
           "access": {
             "learning": {
               "status": "available",
@@ -318,11 +375,13 @@
               "cost": "Pago, valor sujeito à oferta regional"
             }
           },
-          "order": 4
+          "order": 5,
+          "prerequisite": "Concluir o percurso guiado do Node.js Learn, verificando entendimento e prática; na sequência estudar o LFW111 de maneira independente.",
+          "learningMode": "independent-self-paced-after-nodejs-learn"
         },
         {
           "id": "hackerrank-node-basic",
-          "order": 5,
+          "order": 6,
           "title": "Node (Basic) Skills Certification",
           "provider": "HackerRank",
           "credential": "HackerRank Node (Basic) Certificate",
@@ -362,7 +421,7 @@
         },
         {
           "id": "nestjs-official-fundamentals",
-          "order": 6,
+          "order": 7,
           "title": "NestJS Official — Fundamentals",
           "provider": "NestJS",
           "credential": "Official NestJS Certificate of Completion",
@@ -412,7 +471,7 @@
       "items": [
         {
           "id": "full-stack-open-core",
-          "order": 7,
+          "order": 8,
           "title": "Full Stack Open — Core 0–7",
           "provider": "University of Helsinki",
           "credential": "University certificate / ECTS where applicable",
@@ -438,7 +497,7 @@
         },
         {
           "id": "full-stack-open-extensions",
-          "order": 8,
+          "order": 9,
           "title": "Full Stack Open — extensões relevantes",
           "provider": "University of Helsinki",
           "credential": "University certificate / ECTS where applicable",
@@ -471,7 +530,7 @@
       "items": [
         {
           "id": "linux-essentials",
-          "order": 9,
+          "order": 10,
           "title": "Linux Fundamentals — Linux Essentials",
           "provider": "Linux Professional Institute (LPI)",
           "credential": "LPI Linux Essentials 010-160 target",
@@ -519,7 +578,7 @@
         },
         {
           "id": "linux-foundation-lfs101",
-          "order": 10,
+          "order": 11,
           "title": "Introduction to Linux (LFS101)",
           "provider": "The Linux Foundation",
           "credential": "The Linux Foundation — Certificate of Completion, Introduction to Linux (LFS101)",
@@ -559,7 +618,7 @@
         },
         {
           "id": "cisco-networking-basics",
-          "order": 11,
+          "order": 12,
           "title": "Networking Fundamentals — Cisco Networking Basics",
           "provider": "Cisco Networking Academy",
           "credential": "Cisco Networking Academy Digital Badge",
@@ -599,7 +658,7 @@
         },
         {
           "id": "cisco-ccst-networking",
-          "order": 12,
+          "order": 13,
           "title": "Cisco Certified Support Technician (CCST) Networking",
           "provider": "Cisco",
           "credential": "Cisco Certified Support Technician (CCST) Networking",
@@ -629,7 +688,7 @@
         },
         {
           "id": "nestjs-official-microservices",
-          "order": 13,
+          "order": 14,
           "title": "NestJS Official — Microservices",
           "provider": "NestJS",
           "credential": "Official NestJS Certificate of Completion",
@@ -674,7 +733,7 @@
         },
         {
           "id": "nestjs-official-architecture",
-          "order": 14,
+          "order": 15,
           "title": "NestJS Official — Architecture & Advanced Patterns",
           "provider": "NestJS",
           "credential": "Official NestJS Certificate of Completion",
@@ -721,7 +780,7 @@
         },
         {
           "id": "github-actions-gh-200",
-          "order": 15,
+          "order": 16,
           "title": "GitHub Actions Certification (GH-200)",
           "provider": "GitHub / Microsoft Learn",
           "credential": "GitHub Actions Certification — Exam GH-200",
@@ -779,7 +838,7 @@
         },
         {
           "id": "aws-foundations",
-          "order": 16,
+          "order": 17,
           "title": "AWS Cloud Foundations + Certified Cloud Practitioner",
           "provider": "AWS Educate / AWS Skill Builder",
           "credential": "AWS Certified Cloud Practitioner (CLF-C02) target + free AWS learning badges",
@@ -812,7 +871,7 @@
         },
         {
           "id": "aws-solutions-architect-associate",
-          "order": 17,
+          "order": 18,
           "title": "AWS Certified Solutions Architect — Associate (SAA-C03)",
           "provider": "AWS Training and Certification",
           "credential": "AWS Certified Solutions Architect — Associate",
@@ -852,7 +911,7 @@
         },
         {
           "id": "ieee-software-professional-level-2",
-          "order": 18,
+          "order": 19,
           "title": "IEEE Certified Software Professional — Level 2",
           "provider": "IEEE Computer Society",
           "credential": "Software Professional Level 2",
@@ -881,7 +940,7 @@
         },
         {
           "id": "isaqb-cpsa-f-exam",
-          "order": 19,
+          "order": 20,
           "title": "iSAQB Certified Professional for Software Architecture — Foundation Level (CPSA-F)",
           "provider": "iSAQB",
           "credential": "CPSA-F",
@@ -925,7 +984,7 @@
       "items": [
         {
           "id": "cs50p",
-          "order": 20,
+          "order": 21,
           "title": "CS50's Introduction to Programming with Python",
           "provider": "Harvard University",
           "credential": "CS50 Certificate",
@@ -951,7 +1010,7 @@
         },
         {
           "id": "elements-of-ai",
-          "order": 21,
+          "order": 22,
           "title": "Elements of AI — Introduction to AI",
           "provider": "University of Helsinki + MinnaLearn",
           "credential": "Free Digital Certificate",
@@ -996,7 +1055,7 @@
       "items": [
         {
           "id": "foundational-csharp",
-          "order": 22,
+          "order": 23,
           "title": "Foundational C# with Microsoft",
           "provider": "Microsoft + freeCodeCamp",
           "credential": "Foundational C# Certification",
@@ -1025,7 +1084,7 @@
         },
         {
           "id": "azure-foundations",
-          "order": 23,
+          "order": 24,
           "title": "Azure Fundamentals (AZ-900)",
           "provider": "Microsoft Learn",
           "credential": "Microsoft Certified: Azure Fundamentals",
@@ -1055,7 +1114,7 @@
         },
         {
           "id": "azure-developer",
-          "order": 24,
+          "order": 25,
           "title": "Azure AI Cloud Developer Associate (AI-200)",
           "provider": "Microsoft Learn",
           "credential": "Microsoft Certified: Azure AI Cloud Developer Associate",
@@ -1085,7 +1144,7 @@
         },
         {
           "id": "azure-administrator",
-          "order": 25,
+          "order": 26,
           "title": "Azure Administrator Associate (AZ-104)",
           "provider": "Microsoft Learn",
           "credential": "Microsoft Certified: Azure Administrator Associate",
@@ -1122,7 +1181,7 @@
         },
         {
           "id": "azure-solutions-architect",
-          "order": 26,
+          "order": 27,
           "title": "Designing Microsoft Azure Infrastructure Solutions (AZ-305)",
           "provider": "Microsoft Learn",
           "credential": "AZ-305 exam; with Azure Administrator Associate leads to Microsoft Certified: Azure Solutions Architect Expert",
@@ -1202,11 +1261,11 @@
               "cost": null
             }
           },
-          "order": 27
+          "order": 28
         },
         {
           "id": "cs50-web",
-          "order": 28,
+          "order": 29,
           "title": "CS50's Web Programming with Python and JavaScript",
           "provider": "Harvard University",
           "credential": "CS50 Certificate",
@@ -1239,7 +1298,7 @@
       "items": [
         {
           "id": "harvard-data-science-python",
-          "order": 29,
+          "order": 30,
           "title": "Introduction to Data Science with Python",
           "provider": "Harvard University / HarvardX",
           "credential": "Verified Certificate (edX, optional)",
@@ -1282,7 +1341,7 @@
         },
         {
           "id": "ibm-ai-foundations-understanding",
-          "order": 30,
+          "order": 31,
           "title": "AI Fundamentals: Foundations for Understanding AI",
           "provider": "IBM SkillsBuild",
           "credential": "IBM SkillsBuild Digital Credential / Credly badge",
@@ -1318,7 +1377,7 @@
         },
         {
           "id": "ibm-artificial-intelligence-fundamentals",
-          "order": 31,
+          "order": 32,
           "title": "Artificial Intelligence Fundamentals",
           "provider": "IBM SkillsBuild",
           "credential": "IBM SkillsBuild Digital Credential",
@@ -1353,7 +1412,7 @@
         },
         {
           "id": "umd-ai-career-empowerment",
-          "order": 32,
+          "order": 33,
           "title": "AI and Career Empowerment",
           "provider": "University of Maryland — Robert H. Smith School of Business",
           "credential": "Free Certificate of Completion",
@@ -1389,7 +1448,7 @@
         },
         {
           "id": "alteryx-ml-fundamentals",
-          "order": 33,
+          "order": 34,
           "title": "Machine Learning Fundamentals Micro-Credential",
           "provider": "Alteryx",
           "credential": "Alteryx Machine Learning Fundamentals Micro-Credential / Credly",
@@ -1423,7 +1482,7 @@
         },
         {
           "id": "cs50-ai",
-          "order": 34,
+          "order": 35,
           "title": "CS50's Introduction to Artificial Intelligence with Python",
           "provider": "Harvard University",
           "credential": "CS50 Certificate",
@@ -1449,7 +1508,7 @@
         },
         {
           "id": "cs50-cyber",
-          "order": 35,
+          "order": 36,
           "title": "CS50's Introduction to Cybersecurity",
           "provider": "Harvard University",
           "credential": "CS50 Certificate",
@@ -1482,7 +1541,7 @@
       "items": [
         {
           "id": "oci-foundations",
-          "order": 36,
+          "order": 37,
           "title": "OCI Foundations (2026)",
           "provider": "Oracle University",
           "credential": "Oracle Cloud Infrastructure 2026 Foundations Associate (1Z0-1085-26)",
@@ -1510,7 +1569,7 @@
         },
         {
           "id": "sei-software-architecture-professional",
-          "order": 37,
+          "order": 38,
           "title": "SEI Software Architecture Professional Certificate",
           "provider": "Carnegie Mellon University — Software Engineering Institute",
           "credential": "SEI Software Architecture Professional Certificate",
