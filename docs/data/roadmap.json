@@ -1,8 +1,8 @@
 {
   "meta": {
     "title": "Full Stack Software Architect & Cloud Engineer",
-    "version": "3.5.0",
-    "updatedAt": "2026-11-19",
+    "version": "3.5.1",
+    "updatedAt": "2026-11-20",
     "principles": [
       "Fundamentos fortes antes de especialização",
       "Priorizar certificados oficiais e verificáveis",
@@ -18,7 +18,7 @@
       "Fontes oficiais sem certificado podem virar trilhas guiadas com Mastery Gate interno, quando forem a melhor fonte técnica."
     ],
     "platformMetadata": "Cada item informa onde estudar e onde obter a credencial; ausência de curso/certificação externa é indicada explicitamente.",
-    "executionStrategy": "Cursos e certificações oficiais em ordem: JavaScript Certification, CS50 SQL e Linux LFS101 ativos; GH-200 após pipeline CI/CD comprovado; iSAQB e certificações cloud conforme ROI. Laboratórios aplicados de engenharia são integrados aos projetos Jungle iGaming (backend financeiro, TDD, arquitetura, confiabilidade e CI/CD/observabilidade futuros) e KM One (Android em progresso; backend NestJS/Neon/Azure e IA futuros conforme necessidade). Não duplicar esses conteúdos como cursos internos isolados.",
+    "executionStrategy": "Cursos e certificações oficiais em ordem: JavaScript Certification e CS50 SQL ativos; Linux LFS101 concluído em 20/11/2026 (certificado de conclusão); GH-200 após pipeline CI/CD comprovado; iSAQB e certificações cloud conforme ROI. Laboratórios aplicados de engenharia são integrados aos projetos Jungle iGaming (backend financeiro, TDD, arquitetura, confiabilidade e CI/CD/observabilidade futuros) e KM One (Android em progresso; backend NestJS/Neon/Azure e IA futuros conforme necessidade). Não duplicar esses conteúdos como cursos internos isolados.",
     "projectIntegratedTopics": [
       {
         "id": "node-nest-employability-project",
@@ -562,12 +562,12 @@
           "order": 12,
           "title": "Introduction to Linux (LFS101)",
           "provider": "The Linux Foundation",
-          "credential": "Curso introdutório; conclusão/certificado a confirmar no portal",
+          "credential": "The Linux Foundation — Certificate of Completion, Introduction to Linux (LFS101)",
           "cost": "free",
-          "status": "in-progress",
+          "status": "completed",
           "priority": "core",
           "source": "https://trainingportal.linuxfoundation.org/courses/introduction-to-linux-lfs101",
-          "description": "Trilha prática de fundamentos Linux em andamento, independente da preparação opcional para a certificação LPI Linux Essentials.",
+          "description": "Curso Introduction to Linux (LFS101) concluído oficialmente em 20/11/2026. Diploma PDF apresentado, com ID LF-kj0budahoa. Credencial de conclusão de curso, não a certificação profissional LFCS. Badge individual da Credly ainda não identificado.",
           "focus": [
             "Terminal e shell",
             "Filesystem e permissões",
@@ -584,13 +584,17 @@
               "cost": "Curso gratuito"
             },
             "credential": {
-              "status": "unverified",
-              "platform": "Linux Foundation Training",
-              "kind": "Não registrar certificação concluída; verificar regras do portal ao finalizar.",
-              "url": "https://trainingportal.linuxfoundation.org/courses/introduction-to-linux-lfs101",
-              "cost": "A confirmar"
+              "status": "completed",
+              "platform": "Linux Foundation Training / Credly",
+              "kind": "Certificate of Completion (LFS101) obtido em 20/11/2026; badge digital individual a confirmar",
+              "url": "https://trainingportal.linuxfoundation.org/learn/dashboard",
+              "cost": "Certificado de conclusão incluído no curso gratuito"
             }
-          }
+          },
+          "completedAt": "2026-11-20",
+          "certificateId": "LF-kj0budahoa",
+          "certificateEvidence": "PDF original fornecido pelo titular em 20/11/2026, não publicado publicamente; link temporário S3 expirado, sem link verificável individual neste momento.",
+          "badgeIssuerPage": "https://www.credly.com/org/the-linux-foundation/badge/lfs101-introduction-to-linux"
         },
         {
           "id": "cisco-networking-basics",
