@@ -88,22 +88,20 @@ Não entram como cursos independentes: trilhas guiadas por IA, documentos e arti
 - **Credenciais mantidas:** Harvard/CS50, freeCodeCamp, Linux Foundation, LPI, Cisco, NestJS (cursos oficiais pagos), HackerRank, GitHub GH-200, AWS, Azure/Microsoft, IEEE, iSAQB, Helsinki, IBM, University of Maryland, Alteryx, Oracle e Carnegie Mellon SEI.
 - **Preservação de histórico:** entradas antigas removidas do catálogo ficam documentadas em `docs/data/roadmap.json → meta.removedNonOfficialCourses`. Registros de estudos internos anteriores ficam em `docs/data/progress.json → archivedInternalTracks`, sem aparecer entre os cursos.
 
-## Node.js — percurso oficial em duas etapas
+## Node.js — plano oficial com certificação freeCodeCamp
 
-**1) Node.js Learn (prioridade, guiado pelo ChatGPT)** — https://nodejs.org/learn
+- **Formação principal:** [Back-End Development and APIs — freeCodeCamp](https://www.freecodecamp.org/learn/back-end-development-and-apis-v9/), gratuita, currículo oficial atualizado, com cinco projetos obrigatórios e avaliação final para certificado verificável.
+- **Node.js Learn:** https://nodejs.org/learn fica somente como referência técnica mantida pelo Node.js, sem etapa ou certificação própria no catálogo.
+- **LFW111:** retirado do roadmap; o usuário verificou que a Linux Foundation não oferece mais matrícula direta.
+- **Na sequência:** HackerRank Node Basic como avaliação complementar opcional; NestJS Fundamentals como curso oficial especializado.
+- **Situação:** trilha backend freeCodeCamp ainda não iniciada. JavaScript e CS50 SQL seguem em andamento.
 
-- Fonte exclusiva de cada aula: a página correspondente no Node.js Learn, respeitando sua navegação oficial.
-- Método DECA: Descomplicar → Experimentar → Corrigir → Avançar; uma página, um conceito ou desafio de cada vez. Avançar apenas após resposta e compreensão.
-- O assistente explica e exemplifica, não simplesmente manda ler a documentação; sem inventar conteúdo que não esteja na fonte e sem prometer certificado inexistente.
-- Primeira página: https://nodejs.org/learn/getting-started/introduction-to-nodejs
-- Curso oficial gratuito por artigos/guias; **não emite certificado**. O progresso real é registrado no chat e no roadmap.
+## Linux Foundation — Cybersecurity Essentials (LFC108)
 
-**2) Introduction to Node.js (LFW111), em estudo autônomo** — https://www.edx.org/learn/node-js/the-linux-foundation-introduction-to-node-js
-
-- Curso oficial The Linux Foundation + OpenJS Foundation pela edX, a realizar **sozinho após** o estudo guiado do Node.js Learn.
-- Auditoria gratuita e certificado verificado pago opcional conforme condições da edX. Não iniciar automaticamente.
-- Depois: HackerRank Node Basic como checkpoint externo, seguido pelo NestJS Fundamentals (curso oficial).
-- **JSNAD e JSNSD** foram aposentados em 30/09/2025; não são metas atuais.
+- **Curso oficial:** https://training.linuxfoundation.org/training/cybersecurity-essentials-lfc108/ (gratuito, ~1 hora de material, autoinstrucional).
+- **Badge oficial:** https://www.credly.com/org/the-linux-foundation/badge/lfc108-cybersecurity-essentials (gratuito, após 70% na avaliação final).
+- Aparece no catálogo ao lado do LFS101, antes dos conteúdos de redes; é uma credencial introdutória de conscientização em segurança, não exame profissional.
+- **Situação:** não iniciado.
 
 ## Estratégia de execução — Employment First
 
@@ -119,9 +117,9 @@ Regra operacional:
 Ordem estratégica atual:
 
 1. **JavaScript + SQL** — concluir cursos e credenciais oficiais ativos.
-2. **Node.js + NestJS** — usar cursos oficiais e HackerRank Node; comprovar backend com Jungle iGaming e, futuramente, KM One.
+2. **Node.js + NestJS** — certificar Node.js/Express pela freeCodeCamp; HackerRank Node opcional e cursos oficiais NestJS depois. Comprovar backend com Jungle iGaming e, futuramente, KM One.
 3. **Full Stack Open + React** — ampliar candidaturas para full stack sem abandonar a identidade backend.
-4. **Backend Senior Depth** — credenciais oficiais Linux, Cisco, GH-200, iSAQB, IEEE, AWS e Azure; DDD, SWEBOK, arquitetura, sistemas distribuídos e observabilidade como estudo aplicado dentro de Jungle/KM One.
+4. **Backend Senior Depth** — LFS101 e LFC108 (Linux Foundation), Cisco, GH-200, iSAQB, IEEE, AWS e Azure; DDD, SWEBOK, arquitetura, sistemas distribuídos e observabilidade como estudo aplicado dentro de Jungle/KM One.
 5. **AI-Enabled Backend** — Python e fundamentos oficiais de IA; LLM apps, RAG, agentes e LLMOps entram no KM One por demanda real.
 6. **C#/.NET + Azure** — credenciais oficiais Microsoft e prática de backend sem criar curso interno.
 7. **Frontend React** — Full Stack Open primeiro e Next.js Learn como extensão opcional.
