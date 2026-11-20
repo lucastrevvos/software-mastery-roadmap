@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Full Stack Software Architect & Cloud Engineer",
-    "version": "3.7.1",
+    "version": "3.8.0",
     "updatedAt": "2026-11-20",
     "principles": [
       "Fundamentos fortes antes de especialização",
@@ -18,7 +18,7 @@
       "Apenas cursos oficiais estruturados ou credenciais externas (gratuitas ou pagas) aparecem na trilha; documentação e laboratórios internos ficam como material de apoio e evidência de projeto."
     ],
     "platformMetadata": "Cada item possui curso oficial estruturado ou credencial externa de provedor identificável. Itens sem certificação podem permanecer apenas quando houver curso/tutorial oficial do mantenedor.",
-    "executionStrategy": "Ativos atuais: JavaScript Certification e CS50 SQL; LFS101 concluído. Janela Node.js planejada: primeiro Node.js Learn guiado página por página via ChatGPT/DECA, depois LFW111 de modo independente e certificação HackerRank Node Basic. React é único frontend; NestJS e projetos Jungle/KM One aplicam conhecimentos.",
+    "executionStrategy": "JavaScript Certification e CS50 SQL em andamento. Futuro backend Node.js: freeCodeCamp Back-End Development and APIs, gratuito e com certificado verificável; Node.js Learn apenas como referência. LFW111 removido do plano. LFC108 Cybersecurity Essentials adicionado como curso e badge digital gratuitos da Linux Foundation, não iniciado. React permanece frontend único; projetos Jungle/KM One são ambientes de aplicação prática.",
     "projectIntegratedTopics": [
       {
         "id": "node-nest-employability-project",
@@ -175,7 +175,11 @@
       }
     ],
     "frontendFocus": "React (Full Stack Open) é o frontend principal; Next.js Learn somente como evolução opcional do mesmo ecossistema. Frameworks alternativos retirados da trilha principal.",
-    "nodejsLearningSequence": "Node.js Learn (documentação e artigos oficiais, guia página a página pelo ChatGPT/DECA) → Introduction to Node.js LFW111 (estudo autônomo) → HackerRank Node Basic → NestJS Fundamentals."
+    "nodejsLearningSequence": "freeCodeCamp Back-End Development and APIs (certificação gratuita, currículo v9) → HackerRank Node Basic (credencial opcional) → NestJS Fundamentals (curso oficial). Node.js Learn é documentação complementar, sem trilha independente; LFW111 retirado por indisponibilidade de oferta direta na Linux Foundation informada pelo usuário.",
+    "offeredCredentialSources": {
+      "freecodecamp-backend-apis-v9": "https://www.freecodecamp.org/learn/back-end-development-and-apis-v9/",
+      "linux-foundation-lfc108": "https://training.linuxfoundation.org/training/cybersecurity-essentials-lfc108/"
+    }
   },
   "phases": [
     {
@@ -275,113 +279,54 @@
     {
       "id": "phase-02",
       "title": "Node.js & NestJS — Backend Employability",
-      "goal": "1) Node.js Learn oficial, página por página, com o ChatGPT ensinando pelo Método DECA e avanço condicionado à compreensão; 2) LFW111 Linux Foundation/OpenJS feito sozinho; 3) HackerRank Node Basic como avaliação externa e NestJS Fundamentals como curso oficial; engenharia prática nos projetos Jungle iGaming e KM One.",
+      "goal": "Aprender Node.js e Express pela certificação gratuita oficial Back-End Development and APIs da freeCodeCamp. Utilizar Node.js Learn como referência opcional. Depois: HackerRank Node Basic como credencial adicional opcional e NestJS Fundamentals como curso oficial. Aplicar conhecimentos no Jungle iGaming e no KM One.",
       "items": [
         {
-          "id": "nodejs-learn-official-guided",
-          "title": "Node.js Learn — estudo guiado pelo site oficial",
-          "provider": "Node.js / OpenJS Foundation — nodejs.org",
-          "credential": "Curso/guia oficial de aprendizagem (sem certificado)",
+          "id": "freecodecamp-backend-apis-v9",
+          "title": "Back-End Development and APIs — freeCodeCamp",
+          "provider": "freeCodeCamp",
+          "credential": "Back-End Development and APIs Certification (freeCodeCamp)",
           "cost": "free",
           "status": "not-started",
           "priority": "core",
-          "source": "https://nodejs.org/learn",
-          "description": "Percorrer as páginas do Node.js Learn na ordem oficial, com orientação personalizada pelo ChatGPT usando Método DECA (Descomplicar → Experimentar → Corrigir → Avançar), uma página e um desafio por vez. A fonte é sempre o artigo original do nodejs.org; o assistente explica com analogias, código pequeno e verifica a compreensão antes de avançar. Não há certificação vinculada a este percurso.",
-          "guideMode": "mentor-led-deca",
-          "officialSequence": "official-site-navigation-order",
-          "progressGate": "Uma página por vez; resposta/discussão do desafio antes do avanço; registrar progresso real no chat e GitHub",
-          "linkFirstPage": "https://nodejs.org/learn/getting-started/introduction-to-nodejs",
-          "sections": [
-            "Getting Started",
-            "Command Line",
-            "HTTP",
-            "Manipulating Files",
-            "Asynchronous Work",
-            "Concurrency",
-            "TypeScript",
-            "Modules",
-            "Diagnostics",
-            "Test Runner",
-            "Node-API",
-            "Userland Migrations"
-          ],
+          "source": "https://www.freecodecamp.org/learn/back-end-development-and-apis-v9/",
+          "description": "Certificação oficial e gratuita freeCodeCamp no currículo atual (v9), abrangendo fundamentos Node.js, ferramentas npm, servidores HTTP, Express e construção de APIs. Exige lições, avaliações, cinco projetos obrigatórios e prova para emissão de credencial individual verificável.",
           "focus": [
-            "Fundamentos e funcionamento do runtime",
-            "V8, JavaScript no servidor e npm",
-            "CLI, variáveis de ambiente, HTTP e sistema de arquivos",
-            "Callbacks, Promises, Event Loop e concorrência",
-            "TypeScript e módulos",
-            "Streams, backpressure, testes e diagnóstico de memória",
-            "Segurança e melhores práticas"
+            "Node.js",
+            "npm e módulos",
+            "HTTP",
+            "Express",
+            "APIs REST",
+            "desenvolvimento de servidores",
+            "projetos e exame de certificação"
           ],
-          "learningMethod": "Fonte oficial artigo por artigo; explicações simples, exercícios práticos, correção e avanço condicionado à compreensão (Método DECA). Não copiar o material integral.",
+          "note": "Formação principal de Node.js escolhida em 20/11/2026. Estudo autônomo pelo freeCodeCamp; Node.js Learn permanece apenas como material oficial de referência sob demanda, sem trilha separada. Não iniciado.",
+          "officialReference": {
+            "platform": "Node.js Learn",
+            "url": "https://nodejs.org/learn",
+            "usage": "Consulta técnica complementar, não curso independente no roadmap"
+          },
           "access": {
             "learning": {
               "status": "available",
-              "platform": "Node.js Learn — nodejs.org",
-              "kind": "Guias e tutoriais oficiais organizados em sequência, conduzidos pelo ChatGPT",
-              "url": "https://nodejs.org/learn",
+              "platform": "freeCodeCamp",
+              "kind": "Back-End Development and APIs — currículo oficial com lições e cinco projetos",
+              "url": "https://www.freecodecamp.org/learn/back-end-development-and-apis-v9/",
               "cost": "Grátis"
             },
             "credential": {
-              "status": "none",
-              "platform": "Node.js / OpenJS Foundation",
-              "kind": "Não emite certificado; conclusão rastreada apenas como estudo de material oficial",
-              "url": null,
-              "cost": null
+              "status": "available",
+              "platform": "freeCodeCamp",
+              "kind": "Back-End Development and APIs Certification; cinco projetos + exame para emitir certificado público verificável",
+              "url": "https://www.freecodecamp.org/learn/back-end-development-and-apis-v9/",
+              "cost": "Grátis"
             }
           },
           "order": 4
         },
         {
-          "id": "linux-foundation-node-lfw111",
-          "title": "Introduction to Node.js (LFW111) — Linux Foundation / OpenJS",
-          "provider": "The Linux Foundation + OpenJS Foundation (edX)",
-          "credential": "Curso oficial; certificado edX verificado opcional pago (badge individual sujeito aos requisitos)",
-          "cost": "mixed-free-study-paid-certificate",
-          "status": "not-started",
-          "priority": "core",
-          "source": "https://www.edx.org/learn/node-js/the-linux-foundation-introduction-to-node-js",
-          "description": "Curso oficial da Linux Foundation/OpenJS (LFW111) a ser feito de forma autônoma após completar o aprendizado guiado do Node.js Learn. Acesso e condições de certificado variam pela edX; não confundir com JSNAD/JSNSD aposentadas.",
-          "focus": [
-            "Runtime e arquitetura Node.js",
-            "Ferramentas de linha de comando",
-            "Módulos e APIs nativas",
-            "Prototipagem de APIs REST",
-            "Conceitos de serviços em tempo real"
-          ],
-          "officialSupplement": {
-            "platform": "Node.js Learn",
-            "url": "https://nodejs.org/learn",
-            "kind": "Primeira etapa obrigatória: estudo guiado página por página com ChatGPT/DECA."
-          },
-          "priceAsOf": "2026-11-20",
-          "examPrice": "Preço do certificado verificado é mostrado pela edX no checkout; pode variar conforme oferta e país",
-          "priceSource": "https://www.edx.org/learn/node-js/the-linux-foundation-introduction-to-node-js",
-          "note": "Segunda etapa de Node.js: o usuário fará este curso sozinho depois do percurso de tutoria por páginas do Node.js Learn. O exame/credencial depende das condições oficiais da edX.",
-          "access": {
-            "learning": {
-              "status": "available",
-              "platform": "The Linux Foundation / edX",
-              "kind": "Introduction to Node.js — LFW111 (curso oficial)",
-              "url": "https://www.edx.org/learn/node-js/the-linux-foundation-introduction-to-node-js",
-              "cost": "Auditoria gratuita (conforme regras da edX)"
-            },
-            "credential": {
-              "status": "optional",
-              "platform": "edX / The Linux Foundation",
-              "kind": "Certificado verificado opcional pago; badge Credly depende dos critérios do emissor",
-              "url": "https://www.edx.org/learn/node-js/the-linux-foundation-introduction-to-node-js",
-              "cost": "Pago, valor sujeito à oferta regional"
-            }
-          },
-          "order": 5,
-          "prerequisite": "Concluir o percurso guiado do Node.js Learn, verificando entendimento e prática; na sequência estudar o LFW111 de maneira independente.",
-          "learningMode": "independent-self-paced-after-nodejs-learn"
-        },
-        {
           "id": "hackerrank-node-basic",
-          "order": 6,
+          "order": 5,
           "title": "Node (Basic) Skills Certification",
           "provider": "HackerRank",
           "credential": "HackerRank Node (Basic) Certificate",
@@ -401,12 +346,12 @@
             "File System",
             "NPM"
           ],
-          "note": "Certificação de skill do HackerRank, não certificação oficial do projeto Node.js/OpenJS. Usar como checkpoint externo antes de avançar para frameworks.",
+          "note": "Credencial externa e opcional para avaliar fundamentos de Node.js após a certificação freeCodeCamp. Não substitui a certificação principal escolhida.",
           "access": {
             "learning": {
               "status": "none",
               "platform": null,
-              "kind": "Não é um curso. A preparação vem do bloco Node.js Core Fundamentals e de prática própria.",
+              "kind": "Preparação principal pela certificação freeCodeCamp Back-End Development and APIs, com consulta à documentação oficial Node.js.",
               "url": null,
               "cost": null
             },
@@ -421,7 +366,7 @@
         },
         {
           "id": "nestjs-official-fundamentals",
-          "order": 7,
+          "order": 6,
           "title": "NestJS Official — Fundamentals",
           "provider": "NestJS",
           "credential": "Official NestJS Certificate of Completion",
@@ -471,7 +416,7 @@
       "items": [
         {
           "id": "full-stack-open-core",
-          "order": 8,
+          "order": 7,
           "title": "Full Stack Open — Core 0–7",
           "provider": "University of Helsinki",
           "credential": "University certificate / ECTS where applicable",
@@ -497,7 +442,7 @@
         },
         {
           "id": "full-stack-open-extensions",
-          "order": 9,
+          "order": 8,
           "title": "Full Stack Open — extensões relevantes",
           "provider": "University of Helsinki",
           "credential": "University certificate / ECTS where applicable",
@@ -526,11 +471,11 @@
     {
       "id": "phase-04",
       "title": "Senior Software Engineering & Architecture — Production, Distributed Systems & AWS",
-      "goal": "Aprofundar Linux, redes, NestJS e arquitetura por cursos oficiais e certificações Cisco, GitHub GH-200, AWS, IEEE e iSAQB. SWEBOK, ADRs, observabilidade, Docker e sistemas distribuídos são referências e competências dos projetos, não cursos avulsos.",
+      "goal": "Formação em Linux e segurança básica pela Linux Foundation (LFS101 e LFC108, este último com badge gratuito), seguida por redes, NestJS avançado, arquitetura e certificações Cisco, GitHub GH-200, AWS, IEEE e iSAQB. Tópicos aplicados permanecem nos projetos, não como cursos avulsos.",
       "items": [
         {
           "id": "linux-essentials",
-          "order": 10,
+          "order": 9,
           "title": "Linux Fundamentals — Linux Essentials",
           "provider": "Linux Professional Institute (LPI)",
           "credential": "LPI Linux Essentials 010-160 target",
@@ -578,7 +523,7 @@
         },
         {
           "id": "linux-foundation-lfs101",
-          "order": 11,
+          "order": 10,
           "title": "Introduction to Linux (LFS101)",
           "provider": "The Linux Foundation",
           "credential": "The Linux Foundation — Certificate of Completion, Introduction to Linux (LFS101)",
@@ -615,6 +560,46 @@
           "certificateEvidence": "PDF original fornecido pelo titular em 20/11/2026, não publicado publicamente; URL pública individual Credly ainda pendente.",
           "badgeIssuerPage": "https://www.credly.com/org/the-linux-foundation/badge/lfs101-introduction-to-linux",
           "credlyPublicAccess": "not-public"
+        },
+        {
+          "id": "linux-foundation-lfc108",
+          "title": "Cybersecurity Essentials (LFC108)",
+          "provider": "The Linux Foundation",
+          "credential": "LFC108: Cybersecurity Essentials — Digital Badge (Credly)",
+          "cost": "free",
+          "status": "not-started",
+          "priority": "recommended",
+          "source": "https://training.linuxfoundation.org/training/cybersecurity-essentials-lfc108/",
+          "description": "Curso oficial gratuito e autoinstrucional da Linux Foundation sobre conscientização e práticas essenciais de segurança digital. Aproximadamente 1h de material, questionários, acesso por 90 dias e badge digital pela Credly após obter pelo menos 70% na avaliação final. É badge de aprendizagem introdutória, não certificação profissional avançada.",
+          "estimatedHours": "~1h",
+          "badgePassingGrade": "70% na avaliação final",
+          "focus": [
+            "Cybersecurity Awareness",
+            "Malware",
+            "Data breaches",
+            "Protection and prevention",
+            "Mobile device security",
+            "Social networks safety",
+            "Prevention software"
+          ],
+          "note": "Curso + badge gratuitos confirmados diretamente nas páginas oficiais Linux Foundation e Credly em 20/11/2026. Curso não iniciado; pode ser concluído em janela breve sem substituir estudos principais.",
+          "access": {
+            "learning": {
+              "status": "available",
+              "platform": "The Linux Foundation Training Portal",
+              "kind": "Cybersecurity Essentials (LFC108) — curso oficial autoinstrucional",
+              "url": "https://trainingportal.linuxfoundation.org/courses/cybersecurity-essentials-lfc108",
+              "cost": "Grátis — US$0"
+            },
+            "credential": {
+              "status": "available",
+              "platform": "The Linux Foundation / Credly",
+              "kind": "LFC108: Cybersecurity Essentials Digital Badge — mínimo de 70% na avaliação final",
+              "url": "https://www.credly.com/org/the-linux-foundation/badge/lfc108-cybersecurity-essentials",
+              "cost": "Grátis"
+            }
+          },
+          "order": 11
         },
         {
           "id": "cisco-networking-basics",
