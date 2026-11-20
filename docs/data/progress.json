@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-20T20:00:00-03:00",
+  "updatedAt": "2026-11-20T20:03:00-03:00",
   "courses": {
     "cs50x": {
       "status": "completed",
@@ -196,34 +196,30 @@
         "Certificação intermediária GitHub Actions; estudo gratuito no Microsoft Learn, prova paga."
       ]
     },
-    "linux-foundation-node-lfw111": {
+    "freecodecamp-backend-apis-v9": {
       "status": "not-started",
       "started": false,
       "completed": [],
       "current": null,
-      "courseUrl": "https://www.edx.org/learn/node-js/the-linux-foundation-introduction-to-node-js",
+      "courseUrl": "https://www.freecodecamp.org/learn/back-end-development-and-apis-v9/",
       "notes": [
-        "Curso oficial Linux Foundation/OpenJS Foundation em modalidade edX; estudo/auditoria gratuita, certificado pago opcional; não iniciado.",
-        "As certificações JSNAD/JSNSD foram encerradas em 30/09/2025; não são metas.",
-        "Sequência confirmada em 20/11/2026: cursar LFW111 sozinho depois da trilha Node.js Learn ministrada pelo ChatGPT.",
-        "Não declarar este curso iniciado antes da participação efetiva."
+        "Escolhido em 20/11/2026 para ser a formação principal de Node.js, substituindo Node.js Learn guiado e LFW111.",
+        "Certificação freeCodeCamp gratuita com cinco projetos obrigatórios e exame; ainda não iniciada.",
+        "Node.js Learn em https://nodejs.org/learn pode ser consultado quando necessário, sem criar outra trilha."
       ]
     },
-    "nodejs-learn-official-guided": {
+    "linux-foundation-lfc108": {
       "status": "not-started",
       "started": false,
       "completed": [],
       "current": null,
-      "courseUrl": "https://nodejs.org/learn",
-      "firstLessonUrl": "https://nodejs.org/learn/getting-started/introduction-to-nodejs",
-      "nextLessonUrl": "https://nodejs.org/learn/getting-started/introduction-to-nodejs",
-      "guidedMode": "chatgpt-deca-one-official-page-at-a-time",
-      "studiedSections": [],
+      "courseUrl": "https://trainingportal.linuxfoundation.org/courses/cybersecurity-essentials-lfc108",
+      "badgeType": "learning-digital-badge",
+      "badgeIssuer": "The Linux Foundation / Credly",
+      "credentialUrl": "https://www.credly.com/org/the-linux-foundation/badge/lfc108-cybersecurity-essentials",
       "notes": [
-        "Fonte primária obrigatória: https://nodejs.org/learn; seguir páginas e títulos exatamente na navegação oficial, sem omitir conteúdo.",
-        "O assistente ensina uma página por vez: Descomplicar, Experimentar, Corrigir, Avançar (DECA), com pergunta prática única e avanço só após compreensão.",
-        "Não existe certificado externo ao concluir Node.js Learn; o LFW111 vem depois como curso independente a ser feito pelo usuário.",
-        "Ainda não iniciado; não ultrapassar limite de cursos ativos do roadmap."
+        "Curso gratuito com badge digital oficial Credly (mínimo 70% na prova final), conforme páginas oficiais da Linux Foundation e Credly.",
+        "Aproximadamente 1 hora de material, autoinstrucional; ainda não iniciado."
       ]
     }
   },
@@ -298,7 +294,7 @@
     "complementaryShare": "20-30%",
     "currentPrimary": "fcc-js-v10",
     "currentComplementary": "cs50-sql",
-    "nextWindow": "nodejs-learn-official-guided",
+    "nextWindow": "freecodecamp-backend-apis-v9",
     "secondBackendWindow": "dotnet-azure",
     "nodeNestEmployabilityProject": {
       "name": "KM One",
@@ -310,7 +306,7 @@
       "canonicalPlan": "projects/KM_ONE_CENTRAL_PROFESSIONAL_PATH.md",
       "note": "KM One is now the central professional project. It begins as a professional NestJS modular monolith and later evolves through real bounded contexts into selective NestJS/.NET microservices, distributed reliability, observability, cloud/platform engineering and AI."
     },
-    "afterJavaScriptCertification": "Node.js Learn (site oficial) com ensino por ChatGPT/DECA página por página; em seguida LFW111 feito autonomamente. SQL continua conforme status real registrado.",
+    "afterJavaScriptCertification": "freeCodeCamp Back-End Development and APIs (Node.js/Express com certificado gratuito); Node.js Learn como consulta; HackerRank Node opcional; NestJS posteriormente.",
     "mainAppliedProject": {
       "name": "KM One",
       "role": "central-professional-project",
@@ -385,22 +381,27 @@
     },
     "nodejsOfficialPlan": {
       "step1": {
-        "id": "nodejs-learn-official-guided",
-        "course": "Node.js Learn",
-        "mode": "guided-by-ChatGPT-DECA",
-        "url": "https://nodejs.org/learn",
+        "id": "freecodecamp-backend-apis-v9",
+        "course": "freeCodeCamp Back-End Development and APIs",
+        "mode": "self-paced-free-certification",
+        "url": "https://www.freecodecamp.org/learn/back-end-development-and-apis-v9/",
         "progress": "not-started"
       },
+      "reference": {
+        "course": "Node.js Learn",
+        "mode": "official-reference-only",
+        "url": "https://nodejs.org/learn"
+      },
       "step2": {
-        "id": "linux-foundation-node-lfw111",
-        "course": "Introduction to Node.js (LFW111)",
-        "mode": "self-paced-independently",
+        "id": "hackerrank-node-basic",
+        "course": "HackerRank Node Basic",
+        "mode": "optional-external-assessment",
         "progress": "not-started"
       },
       "step3": {
-        "id": "hackerrank-node-basic",
-        "course": "HackerRank Node Basic (opcional após prática)",
-        "mode": "external-assessment",
+        "id": "nestjs-official-fundamentals",
+        "course": "NestJS Official Fundamentals",
+        "mode": "official-paid-course",
         "progress": "not-started"
       }
     }
@@ -477,6 +478,36 @@
         "SWEBOK, iSAQB, full-stack, cloud, observabilidade e IA devem gerar evidência prática no KM One sempre que fizer sentido.",
         "Produto KM One confirmado em andamento em 2026-11-18; implantação do backend NestJS ainda não confirmada.",
         "Em 2026-11-19, este gate foi integrado ao projeto KM One em docs/data/projects.json, não sendo mais listado como curso isolado."
+      ]
+    },
+    "nodejs-learn-official-guided": {
+      "status": "not-started",
+      "started": false,
+      "completed": [],
+      "current": null,
+      "courseUrl": "https://nodejs.org/learn",
+      "firstLessonUrl": "https://nodejs.org/learn/getting-started/introduction-to-nodejs",
+      "nextLessonUrl": "https://nodejs.org/learn/getting-started/introduction-to-nodejs",
+      "guidedMode": "chatgpt-deca-one-official-page-at-a-time",
+      "studiedSections": [],
+      "notes": [
+        "Fonte primária obrigatória: https://nodejs.org/learn; seguir páginas e títulos exatamente na navegação oficial, sem omitir conteúdo.",
+        "O assistente ensina uma página por vez: Descomplicar, Experimentar, Corrigir, Avançar (DECA), com pergunta prática única e avanço só após compreensão.",
+        "Não existe certificado externo ao concluir Node.js Learn; o LFW111 vem depois como curso independente a ser feito pelo usuário.",
+        "Ainda não iniciado; não ultrapassar limite de cursos ativos do roadmap."
+      ]
+    },
+    "linux-foundation-node-lfw111": {
+      "status": "not-started",
+      "started": false,
+      "completed": [],
+      "current": null,
+      "courseUrl": "https://www.edx.org/learn/node-js/the-linux-foundation-introduction-to-node-js",
+      "notes": [
+        "Curso oficial Linux Foundation/OpenJS Foundation em modalidade edX; estudo/auditoria gratuita, certificado pago opcional; não iniciado.",
+        "As certificações JSNAD/JSNSD foram encerradas em 30/09/2025; não são metas.",
+        "Sequência confirmada em 20/11/2026: cursar LFW111 sozinho depois da trilha Node.js Learn ministrada pelo ChatGPT.",
+        "Não declarar este curso iniciado antes da participação efetiva."
       ]
     }
   }
