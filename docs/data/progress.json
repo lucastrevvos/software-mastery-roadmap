@@ -248,15 +248,14 @@
         "Não confundir conclusão LFS101 com certificação profissional Linux Foundation Certified System Administrator (LFCS).",
         "URL S3 com X-Amz-Expires=900 era temporária; não registrar como URL de certificação.",
         "O PDF de certificado fornecido pelo titular não foi publicado no repositório.",
-        "Link individual da Credly informado em 20/11/2026: https://www.credly.com/earner/earned/share/de9f88d8-1690-4a5d-8068-d5e33fe5ab06 (visibilidade sem login não confirmada; confirmar em aba anônima ou usando Public Link no painel Credly)."
+        "Link recebido da rota /earner/earned/share/ não funcionou na checagem externa relatada pelo usuário; não utilizar como comprovante público no CV/LinkedIn. Solicitar URL em Share → Public Link (normalmente /badges/<uuid>/public_url)."
       ],
       "completedAt": "2026-11-20",
       "certificateId": "LF-kj0budahoa",
       "certificateType": "course-completion",
-      "badgeStatus": "share-link-received",
+      "badgeStatus": "public-link-pending",
       "issuerBadgePage": "https://www.credly.com/org/the-linux-foundation/badge/lfs101-introduction-to-linux",
-      "credlyShareUrl": "https://www.credly.com/earner/earned/share/de9f88d8-1690-4a5d-8068-d5e33fe5ab06",
-      "credlyPublicAccess": "not-verified"
+      "credlyPublicAccess": "not-public"
     },
     "github-actions-gh-200": {
       "status": "not-started",
