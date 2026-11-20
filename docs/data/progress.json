@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-20T19:00:00-03:00",
+  "updatedAt": "2026-11-20T20:00:00-03:00",
   "courses": {
     "cs50x": {
       "status": "completed",
@@ -194,6 +194,18 @@
       "notes": [
         "Estudar após pipeline básico de CI/CD e laboratório NestJS; exame GH-200 somente quando houver evidência prática suficiente.",
         "Certificação intermediária GitHub Actions; estudo gratuito no Microsoft Learn, prova paga."
+      ]
+    },
+    "linux-foundation-node-lfw111": {
+      "status": "not-started",
+      "started": false,
+      "completed": [],
+      "current": null,
+      "courseUrl": "https://www.edx.org/learn/node-js/the-linux-foundation-introduction-to-node-js",
+      "notes": [
+        "Curso oficial Linux Foundation/OpenJS Foundation em modalidade edX; estudo/auditoria gratuita, certificado pago opcional; não iniciado.",
+        "Node.js Learn (https://nodejs.org/learn) como referência oficial gratuita complementar.",
+        "As certificações JSNAD/JSNSD foram encerradas em 30/09/2025; não são metas."
       ]
     }
   },
