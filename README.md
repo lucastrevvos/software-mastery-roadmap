@@ -88,13 +88,22 @@ Não entram como cursos independentes: trilhas guiadas por IA, documentos e arti
 - **Credenciais mantidas:** Harvard/CS50, freeCodeCamp, Linux Foundation, LPI, Cisco, NestJS (cursos oficiais pagos), HackerRank, GitHub GH-200, AWS, Azure/Microsoft, IEEE, iSAQB, Helsinki, IBM, University of Maryland, Alteryx, Oracle e Carnegie Mellon SEI.
 - **Preservação de histórico:** entradas antigas removidas do catálogo ficam documentadas em `docs/data/roadmap.json → meta.removedNonOfficialCourses`. Registros de estudos internos anteriores ficam em `docs/data/progress.json → archivedInternalTracks`, sem aparecer entre os cursos.
 
-## Node.js — opções de estudo oficiais
+## Node.js — percurso oficial em duas etapas
 
-- **Introduction to Node.js (LFW111)** — curso oficial The Linux Foundation + OpenJS Foundation pela edX, com opção de estudo gratuito (auditoria) e certificado verificado pago opcional: https://www.edx.org/learn/node-js/the-linux-foundation-introduction-to-node-js
-- **Node.js Learn** — guias de aprendizagem publicados e mantidos pelo próprio Node.js, gratuitos e sem certificado: https://nodejs.org/learn
-- **JSNAD e JSNSD** — exames antigos oficialmente aposentados em **30/09/2025**; não incluir como certificações disponíveis.
-- **Sequência:** freeCodeCamp JavaScript → LFW111 + Node.js Learn (apoio) → HackerRank Node Basic (credencial) → NestJS Fundamentals (curso oficial) → backend aplicado no Jungle iGaming / KM One.
-- **Frontend único:** React, com Next.js opcional por ser parte do mesmo ecossistema.
+**1) Node.js Learn (prioridade, guiado pelo ChatGPT)** — https://nodejs.org/learn
+
+- Fonte exclusiva de cada aula: a página correspondente no Node.js Learn, respeitando sua navegação oficial.
+- Método DECA: Descomplicar → Experimentar → Corrigir → Avançar; uma página, um conceito ou desafio de cada vez. Avançar apenas após resposta e compreensão.
+- O assistente explica e exemplifica, não simplesmente manda ler a documentação; sem inventar conteúdo que não esteja na fonte e sem prometer certificado inexistente.
+- Primeira página: https://nodejs.org/learn/getting-started/introduction-to-nodejs
+- Curso oficial gratuito por artigos/guias; **não emite certificado**. O progresso real é registrado no chat e no roadmap.
+
+**2) Introduction to Node.js (LFW111), em estudo autônomo** — https://www.edx.org/learn/node-js/the-linux-foundation-introduction-to-node-js
+
+- Curso oficial The Linux Foundation + OpenJS Foundation pela edX, a realizar **sozinho após** o estudo guiado do Node.js Learn.
+- Auditoria gratuita e certificado verificado pago opcional conforme condições da edX. Não iniciar automaticamente.
+- Depois: HackerRank Node Basic como checkpoint externo, seguido pelo NestJS Fundamentals (curso oficial).
+- **JSNAD e JSNSD** foram aposentados em 30/09/2025; não são metas atuais.
 
 ## Estratégia de execução — Employment First
 
