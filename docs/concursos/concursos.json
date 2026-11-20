@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "lastVerified": "2026-11-19",
-  "lastVerifiedLabel": "19/11/2026",
+  "lastVerified": "2026-11-20",
+  "lastVerifiedLabel": "20/11/2026",
   "sourcesNote": "O radar é atualizado por verificações periódicas; não consulta bancas em tempo real ao abrir a página. Sempre confirme condições e prazos no edital.",
   "contests": [
     {
@@ -12,15 +12,15 @@
       "scope": "SC",
       "board": "FGV",
       "kind": "Concurso público",
-      "status": "resultado da prova objetiva",
+      "status": "gabarito definitivo e consulta individual disponíveis",
       "applicationEnd": "2026-08-06",
       "examDate": "2026-10-11",
       "salary": 10685.44,
       "vacancies": "20 vagas + 80 CR em Florianópolis (referência de planejamento)",
       "source": "https://conhecimento.fgv.br/concursos/dataprev26",
-      "priority": "Resultado publicado — conferir classificação",
-      "notes": "Gabarito oficial PRELIMINAR publicado em 13/10/2026. Recursos de 14 a 15/10, prazo encerrado. 2ª retificação publicada em 04/11: vagas adicionais de reserva indígena/quilombola com distribuição dinâmica nacional e novas datas de avaliações; resultado da prova objetiva e respostas aos recursos publicados pela FGV em 18/11/2026; documentos de convocação para avaliações complementares também publicados em 18/11. Não foi possível extrair a lista completa ou confirmar classificação individual de Desenvolvimento de Software em Florianópolis. O link das respostas aos recursos aponta para PDF cujo nome contém 'gabarito-definitivo_ajustado', mas seu conteúdo não foi validado. Estimativa pessoal Tipo 1: 37/70 e 59,5/115 (cartão a conferir). Resultado previsto para 14/01/2027.",
-      "userStage": "prova realizada; resultado objetivo publicado em 18/11 — conferir",
+      "priority": "Consultar resultado individual e classificação",
+      "notes": "Gabarito oficial PRELIMINAR publicado em 13/10/2026. Recursos de 14 a 15/10, prazo encerrado. 2ª retificação publicada em 04/11: vagas adicionais de reserva indígena/quilombola com distribuição dinâmica nacional e novas datas de avaliações; resultado da prova objetiva e respostas aos recursos publicados pela FGV em 18/11/2026; documentos de convocação para avaliações complementares também publicados em 18/11. Não foi possível extrair a lista completa ou confirmar classificação individual de Desenvolvimento de Software em Florianópolis. FGV publicou explicitamente Gabarito Oficial Definitivo da Prova Objetiva e Consulta individual — Resultado da Prova Objetiva em 19/11/2026. Conteúdo do gabarito por tipo e classificação individual ainda não conferidos. Estimativa pessoal Tipo 1: 37/70 e 59,5/115 (cartão a conferir). Resultado previsto para 14/01/2027.",
+      "userStage": "prova realizada; resultado objetivo 18/11 e consulta individual 19/11 disponíveis",
       "verified": true
     },
     {
@@ -1692,6 +1692,11 @@
     {
       "name": "Dataprev 2026 — resultado da prova objetiva e respostas aos recursos publicados em 18/11",
       "note": "NOVIDADE FGV confirmada em 19/11: em 18/11 publicou Resultado da Prova Objetiva, Respostas aos Recursos contra o Gabarito Oficial Preliminar, convocação para avaliação biopsicossocial e procedimentos complementares para candidatos pretos/pardos, indígenas e quilombolas. PDF de resultado extenso não foi extraído; não afirmar nota/classificação individual em Desenvolvimento de Software Florianópolis. Link de respostas possui nome de arquivo 'gabarito-definitivo_ajustado.pdf', conteúdo não validado. Conferir lista e cronograma oficial antes de concluir situação do candidato.",
+      "url": "https://conhecimento.fgv.br/concursos/dataprev26"
+    },
+    {
+      "name": "Dataprev 2026 — gabarito oficial definitivo e consulta individual (19/11)",
+      "note": "Publicação confirmada na FGV em 19/11/2026: Gabarito Oficial Definitivo da Prova Objetiva e Consulta individual — Resultado da Prova Objetiva. Resultado geral publicado em 18/11. Conferir Tipo 1/2/3/4 e resultado individual para Desenvolvimento de Software/Florianópolis; nenhuma nota ou classificação individual confirmada nesta rodada.",
       "url": "https://conhecimento.fgv.br/concursos/dataprev26"
     }
   ]
