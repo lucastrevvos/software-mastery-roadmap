@@ -82,11 +82,19 @@ Motor adaptativo de estudos para CASAN e CGU: prioridades por conteúdo do edita
 
 A **Trilha completa** do painel lista exclusivamente **cursos ou tutoriais estruturados oferecidos oficialmente** por instituições/mantenedores, e **certificações/credenciais externas identificáveis**, gratuitas ou pagas.
 
-Não entram como cursos independentes: trilhas guiadas por IA, documentos e artigos oficiais isolados, Mastery Gates, projetos internos e recortes próprios de documentação. Conteúdos como TypeScript, Node.js core, SWEBOK, .NET backend, arquitetura, CI/CD, observabilidade e aprofundamento Angular continuam sendo estudados conforme as necessidades do **Jungle iGaming** e **KM One**, ou como preparação para as credenciais externas mantidas.
+Não entram como cursos independentes: trilhas guiadas por IA, documentos e artigos oficiais isolados, Mastery Gates, projetos internos e recortes próprios de documentação. Conteúdos como TypeScript, Node.js core, SWEBOK, .NET backend, arquitetura, CI/CD, observabilidade continuam sendo estudados conforme as necessidades do **Jungle iGaming** e **KM One**, ou como preparação para as credenciais externas mantidas.
 
-- **Exceção que não é exceção à regra:** Next.js Learn e os tutoriais interativos oficiais de Angular continuam, porque são formações estruturadas oficiais, mesmo sem certificação.
+- **Frontend único:** React pelo Full Stack Open, com Next.js Learn como evolução opcional no mesmo ecossistema; não manter outras trilhas de framework frontend no catálogo.
 - **Credenciais mantidas:** Harvard/CS50, freeCodeCamp, Linux Foundation, LPI, Cisco, NestJS (cursos oficiais pagos), HackerRank, GitHub GH-200, AWS, Azure/Microsoft, IEEE, iSAQB, Helsinki, IBM, University of Maryland, Alteryx, Oracle e Carnegie Mellon SEI.
 - **Preservação de histórico:** entradas antigas removidas do catálogo ficam documentadas em `docs/data/roadmap.json → meta.removedNonOfficialCourses`. Registros de estudos internos anteriores ficam em `docs/data/progress.json → archivedInternalTracks`, sem aparecer entre os cursos.
+
+## Node.js — opções de estudo oficiais
+
+- **Introduction to Node.js (LFW111)** — curso oficial The Linux Foundation + OpenJS Foundation pela edX, com opção de estudo gratuito (auditoria) e certificado verificado pago opcional: https://www.edx.org/learn/node-js/the-linux-foundation-introduction-to-node-js
+- **Node.js Learn** — guias de aprendizagem publicados e mantidos pelo próprio Node.js, gratuitos e sem certificado: https://nodejs.org/learn
+- **JSNAD e JSNSD** — exames antigos oficialmente aposentados em **30/09/2025**; não incluir como certificações disponíveis.
+- **Sequência:** freeCodeCamp JavaScript → LFW111 + Node.js Learn (apoio) → HackerRank Node Basic (credencial) → NestJS Fundamentals (curso oficial) → backend aplicado no Jungle iGaming / KM One.
+- **Frontend único:** React, com Next.js opcional por ser parte do mesmo ecossistema.
 
 ## Estratégia de execução — Employment First
 
@@ -107,7 +115,7 @@ Ordem estratégica atual:
 4. **Backend Senior Depth** — credenciais oficiais Linux, Cisco, GH-200, iSAQB, IEEE, AWS e Azure; DDD, SWEBOK, arquitetura, sistemas distribuídos e observabilidade como estudo aplicado dentro de Jungle/KM One.
 5. **AI-Enabled Backend** — Python e fundamentos oficiais de IA; LLM apps, RAG, agentes e LLMOps entram no KM One por demanda real.
 6. **C#/.NET + Azure** — credenciais oficiais Microsoft e prática de backend sem criar curso interno.
-7. **Frontend Specialization** — Next.js e Angular com profundidade.
+7. **Frontend React** — Full Stack Open primeiro e Next.js Learn como extensão opcional.
 8. **AI/Data/Security avançados + Capstone** — especialização e credenciais de longo prazo.
 
 > **Aprendizado aplicado:** Jungle iGaming é o laboratório atual de backend financeiro (NestJS, TDD, Money e ADRs). KM One é produto Android ativo; sua futura API NestJS/Neon/Azure será iniciada quando houver requisitos. Observabilidade, CI/CD, DDD, C4, mensageria, segurança e IA são competências incorporadas a esses dois projetos, com evidências e etapas futuras documentadas em [docs/data/projects.json](docs/data/projects.json).
