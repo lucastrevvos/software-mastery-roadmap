@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-20T18:58:00-03:00",
+  "updatedAt": "2026-11-20T19:00:00-03:00",
   "courses": {
     "cs50x": {
       "status": "completed",
@@ -150,64 +150,6 @@
       "started": false,
       "completed": []
     },
-    "dotnet-backend": {
-      "status": "paused",
-      "started": true,
-      "startedAt": "2026-09-28",
-      "completed": [],
-      "current": null,
-      "notes": [
-        "Financial Distributed Systems Lab em .NET 10 iniciado como trilha aplicada de senioridade.",
-        "Prioridade imediata: entrevista técnica da XP em 2026-09-30 às 14h.",
-        "Formato esperado: desenhar system design no Excalidraw e defender decisões/trade-offs sob questionamento de seniors.",
-        "Domínios de treino: crédito, cobrança e pagamentos.",
-        "Financial Distributed Systems Lab retirado da lista de projetos ativos em 2026-11-18; registro mantido apenas como histórico."
-      ],
-      "interview": {
-        "company": "XP",
-        "type": "technical-system-design",
-        "scheduledAt": "2026-09-30T14:00:00-03:00",
-        "tool": "Excalidraw",
-        "status": "scheduled"
-      },
-      "lab": {
-        "title": "Financial Distributed Systems Lab — .NET 10",
-        "method": "AMS — Adaptive Mastery Scaffolding",
-        "status": "paused"
-      }
-    },
-    "typescript-official-guided": {
-      "status": "not-started",
-      "started": false,
-      "completed": [],
-      "current": null,
-      "notes": [
-        "Planejado em 2026-10-13 como ponte imediata após a freeCodeCamp JavaScript Certification e antes de Node.js/NestJS.",
-        "Será ensinado pelo ChatGPT com AMS, baseado prioritariamente nas fontes oficiais do TypeScript: TypeScript for JavaScript Programmers, TypeScript for Java/C# Programmers e Handbook.",
-        "Não há certificado externo previsto; conclusão será comprovada por Mastery Gate interno.",
-        "Full Stack Open Part 9 permanece posteriormente como reforço aplicado de TypeScript, não como substituto desta ponte guiada."
-      ],
-      "sourcePlan": "notes/TYPESCRIPT_GUIDED_TRACK.md",
-      "officialSources": [
-        "https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html",
-        "https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes-oop.html",
-        "https://www.typescriptlang.org/docs/handbook/intro.html"
-      ]
-    },
-    "swebok-senior-guided": {
-      "status": "not-started",
-      "started": false,
-      "completed": [],
-      "current": null,
-      "notes": [
-        "Adicionado em 2026-10-15 como espinha dorsal vendor-neutral para o objetivo Senior Software Engineer.",
-        "Base oficial: SWEBOK v4.0a da IEEE Computer Society.",
-        "Será ensinado via AMS e conectado a projetos reais; não será uma leitura linear do guia.",
-        "Após o Mastery Gate interno, avaliar IEEE Software Professional Level 2 como credencial externa opcional."
-      ],
-      "sourcePlan": "notes/SENIOR_SOFTWARE_ENGINEER_SWEBOK_TRACK.md",
-      "officialSource": "https://www.computer.org/education/bodies-of-knowledge/software-engineering"
-    },
     "ieee-software-professional-level-2": {
       "status": "not-started",
       "started": false,
@@ -218,21 +160,6 @@
         "Não comprar prova antes de confirmar disponibilidade, preço, ROI e prontidão."
       ],
       "officialSource": "https://www.computer.org/education/certifications"
-    },
-    "km-one-central-professional-path": {
-      "status": "integrated-in-project",
-      "started": true,
-      "completed": [],
-      "current": "O acompanhamento está em Projetos & evidências: KM One; não é curso separado.",
-      "sourcePlan": "projects/KM_ONE_CENTRAL_PROFESSIONAL_PATH.md",
-      "notes": [
-        "Definido em 2026-10-19 como o projeto profissional central que conecta o roadmap à prática.",
-        "Começa como monólito modular NestJS e só evolui para microservices quando bounded contexts/necessidades reais justificarem.",
-        "O alvo polyglot é usar NestJS/TypeScript como stack principal e .NET/C# em serviços selecionados quando houver razão arquitetural.",
-        "SWEBOK, iSAQB, full-stack, cloud, observabilidade e IA devem gerar evidência prática no KM One sempre que fizer sentido.",
-        "Produto KM One confirmado em andamento em 2026-11-18; implantação do backend NestJS ainda não confirmada.",
-        "Em 2026-11-19, este gate foi integrado ao projeto KM One em docs/data/projects.json, não sendo mais listado como curso isolado."
-      ]
     },
     "linux-foundation-lfs101": {
       "status": "completed",
@@ -331,17 +258,17 @@
       "note": "O lab completo foi preservado, mas foi adiado para um checkpoint cumulativo ou para o sprint de mastery pós-CS50. Durante o curso, o PSet oficial é a prática principal e só vazamentos conceituais relevantes serão retestados."
     }
   },
-  "current": "dotnet-backend",
-  "currentTask": "XP System Design Interview Sprint — Excalidraw architecture defense",
-  "currentTaskUrl": null,
+  "current": "fcc-js-v10",
+  "currentTask": "JavaScript Certification — active labs and algorithm/object/array practice",
+  "currentTaskUrl": "https://www.freecodecamp.org/learn/full-stack-developer/",
   "strategy": {
     "mode": "adaptive-employment-first",
     "maxActiveCourses": 2,
     "primaryShare": "70-80%",
     "complementaryShare": "20-30%",
     "currentPrimary": "fcc-js-v10",
-    "currentComplementary": null,
-    "nextWindow": "nodejs-nestjs-backend-employability",
+    "currentComplementary": "cs50-sql",
+    "nextWindow": "nestjs-official-fundamentals",
     "secondBackendWindow": "dotnet-azure",
     "nodeNestEmployabilityProject": {
       "name": "KM One",
@@ -353,28 +280,16 @@
       "canonicalPlan": "projects/KM_ONE_CENTRAL_PROFESSIONAL_PATH.md",
       "note": "KM One is now the central professional project. It begins as a professional NestJS modular monolith and later evolves through real bounded contexts into selective NestJS/.NET microservices, distributed reliability, observability, cloud/platform engineering and AI."
     },
-    "immediateGate": {
-      "title": "XP — entrevista técnica de System Design",
-      "scheduledAt": "2026-09-30T14:00:00-03:00",
-      "tool": "Excalidraw",
-      "focus": "System Design + architecture defense"
-    },
-    "pausedUntilGate": [
-      "fcc-js-v10",
-      "cs50-sql"
-    ],
-    "afterGate": "Continue Financial Distributed Systems Lab in .NET 10 and rebalance JavaScript/SQL according to interview outcome and active opportunities.",
-    "afterJavaScriptCertification": "typescript-official-guided",
-    "afterTypeScriptGuidedTrack": "nodejs-nestjs-backend-employability",
+    "afterJavaScriptCertification": "Continuar CS50 SQL e aplicar TypeScript em cursos oficiais e projetos Jungle iGaming/KM One; não há trilha interna TypeScript separada no catálogo.",
     "mainAppliedProject": {
       "name": "KM One",
       "role": "central-professional-project",
       "canonicalPlan": "projects/KM_ONE_CENTRAL_PROFESSIONAL_PATH.md",
       "principle": "Study provides capability; KM One provides professional evidence.",
-      "currentPlannedStart": "NestJS modular monolith after JavaScript certification and TypeScript Guided Track",
+      "currentPlannedStart": "Backend NestJS modular quando requisitos do KM One justificarem; fundamentos backend aplicados no Jungle iGaming.",
       "evolution": [
         "JavaScript Certification",
-        "TypeScript Guided Track",
+        "TypeScript por curso oficial ou projeto (sem trilha interna)",
         "Node.js / NestJS",
         "KM One professional modular monolith",
         "Full Stack Open / real frontend integration",
@@ -437,6 +352,81 @@
         ],
         "architectureRule": "Patterns are introduced only when a concrete failure mode or operational requirement justifies them."
       }
+    }
+  },
+  "archivedInternalTracks": {
+    "typescript-official-guided": {
+      "status": "not-started",
+      "started": false,
+      "completed": [],
+      "current": null,
+      "notes": [
+        "Planejado em 2026-10-13 como ponte imediata após a freeCodeCamp JavaScript Certification e antes de Node.js/NestJS.",
+        "Será ensinado pelo ChatGPT com AMS, baseado prioritariamente nas fontes oficiais do TypeScript: TypeScript for JavaScript Programmers, TypeScript for Java/C# Programmers e Handbook.",
+        "Não há certificado externo previsto; conclusão será comprovada por Mastery Gate interno.",
+        "Full Stack Open Part 9 permanece posteriormente como reforço aplicado de TypeScript, não como substituto desta ponte guiada."
+      ],
+      "sourcePlan": "notes/TYPESCRIPT_GUIDED_TRACK.md",
+      "officialSources": [
+        "https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html",
+        "https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes-oop.html",
+        "https://www.typescriptlang.org/docs/handbook/intro.html"
+      ]
+    },
+    "swebok-senior-guided": {
+      "status": "not-started",
+      "started": false,
+      "completed": [],
+      "current": null,
+      "notes": [
+        "Adicionado em 2026-10-15 como espinha dorsal vendor-neutral para o objetivo Senior Software Engineer.",
+        "Base oficial: SWEBOK v4.0a da IEEE Computer Society.",
+        "Será ensinado via AMS e conectado a projetos reais; não será uma leitura linear do guia.",
+        "Após o Mastery Gate interno, avaliar IEEE Software Professional Level 2 como credencial externa opcional."
+      ],
+      "sourcePlan": "notes/SENIOR_SOFTWARE_ENGINEER_SWEBOK_TRACK.md",
+      "officialSource": "https://www.computer.org/education/bodies-of-knowledge/software-engineering"
+    },
+    "dotnet-backend": {
+      "status": "paused",
+      "started": true,
+      "startedAt": "2026-09-28",
+      "completed": [],
+      "current": null,
+      "notes": [
+        "Financial Distributed Systems Lab em .NET 10 iniciado como trilha aplicada de senioridade.",
+        "Prioridade imediata: entrevista técnica da XP em 2026-09-30 às 14h.",
+        "Formato esperado: desenhar system design no Excalidraw e defender decisões/trade-offs sob questionamento de seniors.",
+        "Domínios de treino: crédito, cobrança e pagamentos.",
+        "Financial Distributed Systems Lab retirado da lista de projetos ativos em 2026-11-18; registro mantido apenas como histórico."
+      ],
+      "interview": {
+        "company": "XP",
+        "type": "technical-system-design",
+        "scheduledAt": "2026-09-30T14:00:00-03:00",
+        "tool": "Excalidraw",
+        "status": "scheduled"
+      },
+      "lab": {
+        "title": "Financial Distributed Systems Lab — .NET 10",
+        "method": "AMS — Adaptive Mastery Scaffolding",
+        "status": "paused"
+      }
+    },
+    "km-one-central-professional-path": {
+      "status": "integrated-in-project",
+      "started": true,
+      "completed": [],
+      "current": "O acompanhamento está em Projetos & evidências: KM One; não é curso separado.",
+      "sourcePlan": "projects/KM_ONE_CENTRAL_PROFESSIONAL_PATH.md",
+      "notes": [
+        "Definido em 2026-10-19 como o projeto profissional central que conecta o roadmap à prática.",
+        "Começa como monólito modular NestJS e só evolui para microservices quando bounded contexts/necessidades reais justificarem.",
+        "O alvo polyglot é usar NestJS/TypeScript como stack principal e .NET/C# em serviços selecionados quando houver razão arquitetural.",
+        "SWEBOK, iSAQB, full-stack, cloud, observabilidade e IA devem gerar evidência prática no KM One sempre que fizer sentido.",
+        "Produto KM One confirmado em andamento em 2026-11-18; implantação do backend NestJS ainda não confirmada.",
+        "Em 2026-11-19, este gate foi integrado ao projeto KM One em docs/data/projects.json, não sendo mais listado como curso isolado."
+      ]
     }
   }
 }
