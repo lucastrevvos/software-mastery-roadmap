@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Full Stack Software Architect & Cloud Engineer",
-    "version": "3.5.2",
+    "version": "3.5.3",
     "updatedAt": "2026-11-20",
     "principles": [
       "Fundamentos fortes antes de especialização",
@@ -567,7 +567,7 @@
           "status": "completed",
           "priority": "core",
           "source": "https://trainingportal.linuxfoundation.org/courses/introduction-to-linux-lfs101",
-          "description": "Curso Introduction to Linux (LFS101) concluído oficialmente em 20/11/2026. Diploma PDF apresentado, com ID LF-kj0budahoa. Credencial de conclusão de curso, não a certificação profissional LFCS. Link individual de compartilhamento da Credly recebido em 20/11/2026; acesso público ainda não verificado.",
+          "description": "Curso Introduction to Linux (LFS101) concluído em 20/11/2026. Certificado PDF conferido, ID LF-kj0budahoa. Aguardando URL pública individual do badge Credly. Credencial de conclusão de curso, não certificação profissional LFCS.",
           "focus": [
             "Terminal e shell",
             "Filesystem e permissões",
@@ -586,17 +586,16 @@
             "credential": {
               "status": "completed",
               "platform": "Linux Foundation Training / Credly",
-              "kind": "Certificate of Completion (LFS101) + link individual Credly fornecido; acesso público pendente de verificação",
-              "url": "https://www.credly.com/earner/earned/share/de9f88d8-1690-4a5d-8068-d5e33fe5ab06",
+              "kind": "Certificate of Completion (LFS101) concluído; URL pública individual de verificação ainda pendente",
+              "url": "https://trainingportal.linuxfoundation.org/learn/dashboard",
               "cost": "Certificado de conclusão incluído no curso gratuito"
             }
           },
           "completedAt": "2026-11-20",
           "certificateId": "LF-kj0budahoa",
-          "certificateEvidence": "PDF de conclusão fornecido pelo titular em 20/11/2026; link individual Credly informado pelo titular, acesso por terceiros não confirmado.",
+          "certificateEvidence": "PDF original fornecido pelo titular em 20/11/2026, não publicado publicamente; URL pública individual Credly ainda pendente.",
           "badgeIssuerPage": "https://www.credly.com/org/the-linux-foundation/badge/lfs101-introduction-to-linux",
-          "credlyShareUrl": "https://www.credly.com/earner/earned/share/de9f88d8-1690-4a5d-8068-d5e33fe5ab06",
-          "credlyPublicAccess": "not-verified"
+          "credlyPublicAccess": "not-public"
         },
         {
           "id": "cisco-networking-basics",
