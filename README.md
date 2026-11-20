@@ -78,6 +78,16 @@ Motor adaptativo de estudos para CASAN e CGU: prioridades por conteúdo do edita
 - **Método Especial JCI:** camada transversal ativa; Japão = profundidade, China = treino deliberado, Índia = aplicação/empregabilidade. Ver [JCI_METHOD.md](JCI_METHOD.md).
 
 
+## Política do catálogo oficial — versão 3.6.0
+
+A **Trilha completa** do painel lista exclusivamente **cursos ou tutoriais estruturados oferecidos oficialmente** por instituições/mantenedores, e **certificações/credenciais externas identificáveis**, gratuitas ou pagas.
+
+Não entram como cursos independentes: trilhas guiadas por IA, documentos e artigos oficiais isolados, Mastery Gates, projetos internos e recortes próprios de documentação. Conteúdos como TypeScript, Node.js core, SWEBOK, .NET backend, arquitetura, CI/CD, observabilidade e aprofundamento Angular continuam sendo estudados conforme as necessidades do **Jungle iGaming** e **KM One**, ou como preparação para as credenciais externas mantidas.
+
+- **Exceção que não é exceção à regra:** Next.js Learn e os tutoriais interativos oficiais de Angular continuam, porque são formações estruturadas oficiais, mesmo sem certificação.
+- **Credenciais mantidas:** Harvard/CS50, freeCodeCamp, Linux Foundation, LPI, Cisco, NestJS (cursos oficiais pagos), HackerRank, GitHub GH-200, AWS, Azure/Microsoft, IEEE, iSAQB, Helsinki, IBM, University of Maryland, Alteryx, Oracle e Carnegie Mellon SEI.
+- **Preservação de histórico:** entradas antigas removidas do catálogo ficam documentadas em `docs/data/roadmap.json → meta.removedNonOfficialCourses`. Registros de estudos internos anteriores ficam em `docs/data/progress.json → archivedInternalTracks`, sem aparecer entre os cursos.
+
 ## Estratégia de execução — Employment First
 
 O roadmap é executado em **janelas de imersão**, não como uma lista de tecnologias estudadas em paralelo.
@@ -91,12 +101,12 @@ Regra operacional:
 
 Ordem estratégica atual:
 
-1. **JavaScript + SQL** — fechar os fundamentos ativos.
-2. **Node.js + NestJS** — atingir empregabilidade real como backend TypeScript.
+1. **JavaScript + SQL** — concluir cursos e credenciais oficiais ativos.
+2. **Node.js + NestJS** — usar cursos oficiais e HackerRank Node; comprovar backend com Jungle iGaming e, futuramente, KM One.
 3. **Full Stack Open + React** — ampliar candidaturas para full stack sem abandonar a identidade backend.
-4. **Backend Senior Depth** — Linux, networking, SWEBOK/iSAQB, GitHub Actions GH-200 e cloud; DDD, arquitetura, sistemas distribuídos e observabilidade são praticados dentro de Jungle/KM One.
+4. **Backend Senior Depth** — credenciais oficiais Linux, Cisco, GH-200, iSAQB, IEEE, AWS e Azure; DDD, SWEBOK, arquitetura, sistemas distribuídos e observabilidade como estudo aplicado dentro de Jungle/KM One.
 5. **AI-Enabled Backend** — Python e fundamentos oficiais de IA; LLM apps, RAG, agentes e LLMOps entram no KM One por demanda real.
-6. **C#/.NET + Azure** — segunda grande janela de backend, reaplicando conceitos já dominados.
+6. **C#/.NET + Azure** — credenciais oficiais Microsoft e prática de backend sem criar curso interno.
 7. **Frontend Specialization** — Next.js e Angular com profundidade.
 8. **AI/Data/Security avançados + Capstone** — especialização e credenciais de longo prazo.
 
