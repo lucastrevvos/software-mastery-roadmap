@@ -109,22 +109,6 @@ function renderProjects(projectData){
   }).join('');
 }
 
-function renderMastery(mastery){
-  const list=mastery.competencies;
-  const assessed=list.filter(x=>x.level>0);
-  const avg=assessed.length?assessed.reduce((sum,x)=>sum+x.level,0)/assessed.length:0;
-  $('#mastery-average').textContent=`${avg.toFixed(1)}/7`;
-  $('#mastery-list').innerHTML=list.map(item=>`
-    <div class="mastery-row">
-      <div>
-        <strong>${item.title}</strong>
-        ${item.provisional?'<div class="provisional">provisório — aguardando gate/reteste</div>':''}
-      </div>
-      <div class="mastery-track" title="${item.level}/7"><div class="mastery-fill" style="width:${(item.level/7)*100}%"></div></div>
-      <div class="mastery-score">${item.level}/7</div>
-    </div>`).join('');
-}
-
 function renderErrors(ledger){
   const open=ledger.errors.filter(e=>e.status==='open').length;
   $('#errors-open').textContent=open;
@@ -302,17 +286,15 @@ function renderRoadmap(roadmap,courseNotes){
 
 async function init(){
   try{
-    const [roadmap,progress,mastery,ledger,courseNotes,projects]=await Promise.all([
+    const [roadmap,progress,ledger,courseNotes,projects]=await Promise.all([
       loadJson('data/roadmap.json'),
       loadJson('data/progress.json'),
-      loadJson('data/mastery.json'),
       loadJson('data/error-ledger.json'),
       loadJson('data/course-notes.json'),
       loadJson('data/projects.json')
     ]);
     renderCurrent(progress,projects);
     renderProjects(projects);
-    renderMastery(mastery);
     renderErrors(ledger);
     renderRoadmap(roadmap,courseNotes);
     $('#last-updated').textContent=`Atualizado ${progress.updatedAt.replace('T',' ').replace('-03:00',' BRT')}`;
