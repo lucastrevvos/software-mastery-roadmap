@@ -1,7 +1,7 @@
 # AcervoLab Academy — Registro oficial de progresso
 
 **Atualização:** 2026-11-23  
-**Status global:** PLANEJAMENTO CONCLUÍDO / IMPLEMENTAÇÃO NÃO INICIADA  
+**Status global:** FORMAÇÃO INICIADA (ACV-101/T01) / IMPLEMENTAÇÃO NÃO INICIADA  
 **Repositório:** `lucastrevvos/software-mastery-roadmap`  
 **Trilha:** `docs/acervolab/`
 
@@ -35,15 +35,15 @@
 
 **Nota pedagógica:** as respostas foram dadas sem raciocínio escrito; não são evidência suficiente de domínio independente. Os conceitos estão disponíveis na biblioteca para retest durante a formação.
 
-## Próxima ação recomendada
+## Aula em andamento e próximo passo
 
 **ACV-101 / Engenharia de requisitos e produto / T01 — Problema e atores.**
 
-1. Definir quem usa o AcervoLab e por quê.
-2. Desenhar o escopo mínimo do empréstimo.
-3. Registrar primeira invariante e um critério de aceitação.
-4. Criar nota de teoria em `theory.json` após ensinar o primeiro conceito.
-5. Ainda **não** criar projeto .NET nem migrar dados; primeiro formular o problema.
+- **2026-11-23 — Aula 001 iniciada:** problema inicial da escola com equipamentos (conflitos de reservas, atrasos, rastreabilidade); atores potenciais: professor/solicitante e responsável pelo acervo. Conteúdo teórico registrado em `theory.json` como **TH-013**; a escolha desses atores ainda precisa ser validada com o exercício.
+- **Aguardando resposta:** Desafio ACV-101-001 — distinguir ator externo de componente interno, preferencialmente com justificativa.
+- **Evidência até agora:** teoria apresentada e nota versionada; **nenhuma resposta ao desafio, implementação ou mastery gate concluído**.
+- **Depois:** definir escopo mínimo, primeira invariante e critérios de aceitação com um passo por vez.
+- Ainda **não** criar projeto .NET nem infraestrutura: primeiro formular o problema.
 
 ## Gates e marcos
 
