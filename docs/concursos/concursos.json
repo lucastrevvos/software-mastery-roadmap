@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "lastVerified": "2026-11-20",
-  "lastVerifiedLabel": "20/11/2026",
+  "lastVerified": "2026-11-23",
+  "lastVerifiedLabel": "23/11/2026",
   "sourcesNote": "O radar é atualizado por verificações periódicas; não consulta bancas em tempo real ao abrir a página. Sempre confirme condições e prazos no edital.",
   "contests": [
     {
@@ -1461,6 +1461,66 @@
       "notes": "Edital 001/2026 de 28/10, errata 01 de 05/11. FURB confirma 1 vaga + CR, R$ 8.369,63, 30h semanais, taxa R$ 150, inscrições até 07/12 e prova em 24/01/2027. Requisito específico de graduação e aceitação do Tecnólogo em ADS não verificados no edital integral; não presumir elegibilidade.",
       "userStage": "não informado",
       "verified": true
+    },
+    {
+      "id": "tce-es-pss-2-2026-dev-csharp",
+      "agency": "Tribunal de Contas do Estado do Espírito Santo (TCE-ES)",
+      "role": "Técnico de Nível Superior — Desenvolvedor C# Full Stack",
+      "place": "Vitória — ES (presencial)",
+      "scope": "ES",
+      "board": "TCE-ES",
+      "kind": "Processo seletivo simplificado — contratação temporária",
+      "status": "inscrições abertas",
+      "applicationStart": "2026-11-16",
+      "applicationEnd": "2026-12-18",
+      "examDate": null,
+      "salary": 17645.21,
+      "vacancies": "15 vagas imediatas",
+      "source": "https://www.tcees.tc.br/processoseletivo/",
+      "priority": "Nacional — desenvolvimento C#/.NET; contratação temporária presencial",
+      "notes": "Edital PSS 2/2026 divulgado oficialmente em 09/11. Inscrições até 18/12/2026 às 17h (Brasília); 40h semanais presenciais; seleção sem prova, por informações e documentos comprobatórios. Auxílio-alimentação R$ 2.217,82. Formação específica e aceitação de Tecnólogo ADS ainda não conferidas no edital integral; não presumir elegibilidade.",
+      "userStage": "não informado",
+      "verified": true
+    },
+    {
+      "id": "tce-es-pss-2-2026-ia",
+      "agency": "Tribunal de Contas do Estado do Espírito Santo (TCE-ES)",
+      "role": "Técnico de Nível Superior — Inteligência Artificial",
+      "place": "Vitória — ES (presencial)",
+      "scope": "ES",
+      "board": "TCE-ES",
+      "kind": "Processo seletivo simplificado — contratação temporária",
+      "status": "inscrições abertas",
+      "applicationStart": "2026-11-16",
+      "applicationEnd": "2026-12-18",
+      "examDate": null,
+      "salary": 17645.21,
+      "vacancies": "Cadastro de reserva",
+      "source": "https://www.tcees.tc.br/processoseletivo/",
+      "priority": "Nacional — inteligência artificial; contratação temporária presencial",
+      "notes": "Edital PSS 2/2026; cadastro de reserva para IA. Inscrições até 18/12/2026 às 17h (Brasília). 40h semanais, presencial; documentação de experiência/qualificação deve ser comprovada. Formação e Tecnólogo ADS pendentes de conferência no edital integral.",
+      "userStage": "não informado",
+      "verified": true
+    },
+    {
+      "id": "tce-es-pss-2-2026-infra",
+      "agency": "Tribunal de Contas do Estado do Espírito Santo (TCE-ES)",
+      "role": "Técnico de Nível Superior — Infraestrutura de Tecnologia da Informação",
+      "place": "Vitória — ES (presencial)",
+      "scope": "ES",
+      "board": "TCE-ES",
+      "kind": "Processo seletivo simplificado — contratação temporária",
+      "status": "inscrições abertas",
+      "applicationStart": "2026-11-16",
+      "applicationEnd": "2026-12-18",
+      "examDate": null,
+      "salary": 17645.21,
+      "vacancies": "1 vaga imediata",
+      "source": "https://www.tcees.tc.br/processoseletivo/",
+      "priority": "Nacional — infraestrutura TI",
+      "notes": "PSS 2/2026. Inscrições até 18/12/2026 às 17h (Brasília). Jornada 40h presencial. Formação e aceitação do Tecnólogo ADS não verificadas no edital integral.",
+      "userStage": "não informado",
+      "verified": true
     }
   ],
   "watchlist": [
@@ -1698,6 +1758,11 @@
       "name": "Dataprev 2026 — gabarito oficial definitivo e consulta individual (19/11)",
       "note": "Publicação confirmada na FGV em 19/11/2026: Gabarito Oficial Definitivo da Prova Objetiva e Consulta individual — Resultado da Prova Objetiva. Resultado geral publicado em 18/11. Conferir Tipo 1/2/3/4 e resultado individual para Desenvolvimento de Software/Florianópolis; nenhuma nota ou classificação individual confirmada nesta rodada.",
       "url": "https://conhecimento.fgv.br/concursos/dataprev26"
+    },
+    {
+      "name": "TCE-ES PSS 2/2026 — três áreas de TI; inscrições até 18/12",
+      "note": "Fonte oficial de 09/11/2026 e página institucional confirmam 15 vagas C# Full Stack, 1 infraestrutura, IA somente CR; R$ 17.645,21, presencial, temporário. Confirmar no edital integral requisitos de formação e pontuação; Tecnólogo ADS não validado.",
+      "url": "https://www.tcees.tc.br/processoseletivo/"
     }
   ]
 }
