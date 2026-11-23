@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101d28">
+<meta name="description" content="AcervoLab Academy — curso acadêmico prático de C#/.NET, engenharia, arquitetura de software e Engenharia de IA. Teoria versionada e progresso com evidências.">
+<title>AcervoLab Academy · Software Mastery Roadmap</title>
+<link rel="stylesheet" href="styles.css?v=1.0.0">
+<script src="app.js?v=1.0.0" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Pular para conteúdo</a>
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="brand" href="../index.html" aria-label="Voltar ao Software Mastery Roadmap"><span class="brand-mark">A<span>.</span></span><span>SOFTWARE MASTERY <small>ACERVO<span class="accent">LAB</span> ACADEMY</small></span></a>
+    <nav class="topnav" aria-label="Navegação entre trilhas">
+      <a href="../index.html">Roadmap principal</a>
+      <a href="../engineering-notebook.html">Caderno do Engenheiro</a>
+      <a href="../engenharia-avancada/">Engenharia Avançada</a>
+      <a href="../physical-ai-roadmap.html">Physical AI</a>
+    </nav>
+  </div>
+</header>
+<main id="main" class="wrap">
+  <section class="hero" aria-labelledby="page-title">
+    <div class="hero-copy">
+      <p class="eyebrow">FORMAÇÃO CONTÍNUA · CURRÍCULO ABERTO · PROJETO REAL</p>
+      <h1 id="page-title">Aprenda engenharia.<br><em>Construa evidências.</em></h1>
+      <p class="lead">Um único sistema — <strong>AcervoLab</strong> — para percorrer fundamentos, .NET, design de software, arquitetura, cloud e Engenharia de IA. Do Console à produção, sem atalhos e sem complexidade gratuita.</p>
+      <div class="hero-points"><span>06 semestres</span><span>25 disciplinas</span><span id="hero-topics">— tópicos</span><span>01 projeto integrador</span></div>
+    </div>
+    <aside class="hero-aside" aria-label="Método de aprendizado">
+      <span class="aside-label">O MÉTODO</span>
+      <ol><li>Problema real</li><li>Teoria e mecanismo</li><li>Decisão técnica</li><li>Código e teste</li><li>Evidência e revisão</li></ol>
+      <p>Aprendizado não é certificado automático. Domínio exige demonstração.</p>
+    </aside>
+  </section>
+  <section class="stats" aria-label="Indicadores da trilha">
+    <article><span>Progresso comprovado</span><strong id="stat-progress">0%</strong><small id="stat-progress-detail">Nenhuma evidência ainda</small></article>
+    <article><span>Em estudo</span><strong id="stat-study">0</strong><small>Tópicos iniciados / praticados</small></article>
+    <article><span>Teoria versionada</span><strong id="stat-theory">—</strong><small>Conceitos escritos no GitHub</small></article>
+    <article><span>Versão do curso</span><strong>v1.0</strong><small>Grade aberta, sem bloqueios</small></article>
+  </section>
+  <nav class="view-nav" aria-label="Seções da AcervoLab Academy">
+    <button type="button" class="view-tab active" data-view="grade" aria-selected="true">Grade curricular</button>
+    <button type="button" class="view-tab" data-view="teoria" aria-selected="false">Biblioteca de teoria</button>
+    <button type="button" class="view-tab" data-view="diario" aria-selected="false">Diário e evidências</button>
+    <button type="button" class="view-tab" data-view="metodo" aria-selected="false">Método & evolução</button>
+  </nav>
+  <section id="view-grade" class="view active" aria-labelledby="grade-title">
+    <div class="section-heading">
+      <div><p class="eyebrow">GRADE ACADÊMICA</p><h2 id="grade-title">Disciplinas por semestre</h2></div>
+      <p>Os conteúdos ficam disponíveis a qualquer momento. A ordem é recomendada, não uma trava.</p>
+    </div>
+    <div class="workbench">
+      <aside class="semester-sidebar"><h3>Semestres</h3><div id="semester-nav" aria-label="Escolher semestre"></div><p class="subtle">O progresso é salvo neste navegador; exporte uma cópia para backup.</p></aside>
+      <div class="workbench-main" id="semester-detail" aria-live="polite"><p>Carregando currículo…</p></div>
+    </div>
+  </section>
+  <section id="view-teoria" class="view" aria-labelledby="theory-title" hidden>
+    <div class="section-heading"><div><p class="eyebrow">FONTE DA VERDADE · GITHUB</p><h2 id="theory-title">Biblioteca de teoria</h2></div><p>Cada conceito estudado gera um registro com definição, problema, exemplo, armadilha e relações.</p></div>
+    <div class="searchbox"><label for="theory-search">Buscar conceito</label><input id="theory-search" type="search" placeholder="Ex.: Strategy, coesão, polimorfismo, DIP…" autocomplete="off"></div>
+    <div id="theory-results" class="theory-list" aria-live="polite"></div>
+  </section>
+  <section id="view-diario" class="view" aria-labelledby="diary-title" hidden>
+    <div class="section-heading"><div><p class="eyebrow">RETENÇÃO E EVIDÊNCIA</p><h2 id="diary-title">Diário de bordo</h2></div><p>Anote experimentos, dúvidas e links de commits. Esta seção é local, não publica conteúdo no GitHub.</p></div>
+    <div class="diary-layout">
+      <form class="panel" id="diary-form">
+        <h3>Nova anotação</h3>
+        <label for="diary-subject">Assunto ou disciplina</label><input id="diary-subject" required maxlength="120" placeholder="ACV-203 · Strategy">
+        <label for="diary-note">O que aprendi, testei ou ainda não entendi?</label><textarea id="diary-note" required rows="5" maxlength="6000" placeholder="Problema, hipótese, código, resultado, dúvidas…"></textarea>
+        <label for="diary-evidence">Evidência (opcional)</label><input id="diary-evidence" maxlength="500" placeholder="URL do commit / PR / teste">
+        <button type="submit" class="primary">Salvar no navegador</button>
+        <p class="subtle">As notas oficiais de teoria são versionadas separadamente em theory.json. Registros locais não são sincronizados automaticamente.</p>
+      </form>
+      <div class="panel"><div class="spread"><h3>Histórico local</h3><span id="diary-count" class="tiny">0 registros</span></div><div id="diary-list" class="diary-list"></div>
+        <div class="file-actions"><button id="export-progress" type="button">Exportar backup JSON</button><button id="import-progress" type="button">Importar backup JSON</button><input id="import-file" type="file" accept=".json,application/json" hidden></div>
+        <p class="subtle">Exportação inclui progresso dos tópicos, evidências e diário. Não substitui commits de documentação.</p>
+      </div>
+    </div>
+  </section>
+  <section id="view-metodo" class="view" aria-labelledby="method-title" hidden>
+    <div class="section-heading"><div><p class="eyebrow">COMO A FORMAÇÃO EVOLUI</p><h2 id="method-title">O laboratório é o currículo</h2></div><p>Cada nova ferramenta precisa justificar seu custo pela resolução de um problema observado.</p></div>
+    <div class="panel"><h3>Marcos arquiteturais</h3><div id="milestone-list" class="milestone-list"></div></div>
+    <div class="method-grid">
+      <article class="panel"><h3>Um conceito, uma evidência</h3><p>Explicamos o mecanismo, implementamos um experimento pequeno, criamos teste, registramos decisões e fazemos retest. Marcar uma opção em exercício não prova domínio.</p><p>Escala: <strong>Reconhecer → Explicar → Aplicar → Depurar → Transferir → Retestar.</strong></p></article>
+      <article class="panel"><h3>Engenharia de IA no currículo</h3><p>Matemática e dados fundamentam ML; APIs e segurança fundamentam aplicações com LLM; no 5º semestre estudamos ML, embeddings e RAG; no 6º, agentes, LLMOps, avaliação, governança e IA em produção com .NET.</p><p>A IA entra como módulo e capacidade do produto. A lógica determinística de empréstimos continua sendo responsabilidade da aplicação.</p></article>
+      <article class="panel"><h3>Regras de continuidade</h3><p>As aulas novas serão registradas em <code>theory.json</code> por commit, vinculadas a seus tópicos. Este painel lê o arquivo versionado. O diário e checkboxes ficam somente neste navegador com exportação/importação.</p><p><a href="README.md">Manual do laboratório</a> · <a href="PROGRESS.md">Progresso oficial</a> · <a href="https://github.com/lucastrevvos/software-mastery-roadmap/tree/main/docs/acervolab">Arquivos no GitHub</a></p></article>
+      <article class="panel"><h3>Política anti-overengineering</h3><p>Começar com Console, depois monólito simples. Nenhum microsserviço, agente autônomo, fila, cache ou camada adicional sem hipótese, teste comparativo e ADR quando fizer sentido.</p><p>Cloud, eventos e recursos de IA podem falhar: o sistema central deve degradar de maneira previsível.</p></article>
+    </div>
+  </section>
+</main>
+<footer class="wrap footer"><span>AcervoLab Academy · parte do Software Mastery Roadmap</span><span>Currículo educacional independente, sem vínculo com instituição de ensino.</span></footer>
+</body>
+</html>

@@ -1,0 +1,1596 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-23",
+  "program": {
+    "name": "AcervoLab Academy",
+    "type": "Trilha acadêmica independente (não é graduação credenciada)",
+    "project": "AcervoLab — empréstimos e reservas de equipamentos",
+    "guidingRule": "Problema real → teoria → decisão → experimento → implementação → teste → evidência → revisão",
+    "status": "planejado",
+    "progressRules": [
+      "Estudado não significa dominado",
+      "Nunca bloquear acesso aos próximos tópicos",
+      "O progresso do navegador é local; registros oficiais exigem commit no GitHub",
+      "Todo conceito novo deve receber nota teórica versionada antes de ser marcado como ensinado",
+      "A IA entra progressivamente; nunca substitui regras determinísticas críticas"
+    ]
+  },
+  "semesters": [
+    {
+      "id": "S1",
+      "name": "1º semestre · Fundamentos de computação e programação",
+      "objective": "Entender o computador, pensar algoritmicamente e criar um AcervoLab Console sem infraestrutura externa.",
+      "milestone": "AcervoLab v0.1 · Console com regras essenciais",
+      "subjects": [
+        {
+          "id": "ACV-101",
+          "title": "Engenharia de requisitos e produto",
+          "why": "Aprender a descobrir e definir o problema antes de programar.",
+          "topics": [
+            {
+              "id": "ACV-101-T01",
+              "title": "Problema e atores"
+            },
+            {
+              "id": "ACV-101-T02",
+              "title": "Requisitos funcionais e não funcionais"
+            },
+            {
+              "id": "ACV-101-T03",
+              "title": "Casos de uso e histórias de usuário"
+            },
+            {
+              "id": "ACV-101-T04",
+              "title": "Regras e invariantes de negócio"
+            },
+            {
+              "id": "ACV-101-T05",
+              "title": "Critérios de aceitação e Gherkin"
+            },
+            {
+              "id": "ACV-101-T06",
+              "title": "Estados de equipamento e empréstimo"
+            },
+            {
+              "id": "ACV-101-T07",
+              "title": "Modelagem UML e fluxos"
+            },
+            {
+              "id": "ACV-101-T08",
+              "title": "Riscos, hipóteses e escopo"
+            },
+            {
+              "id": "ACV-101-T09",
+              "title": "Registro de decisões (ADR)"
+            }
+          ],
+          "lab": "Especificação v0.1, casos de uso e mapa de estados",
+          "gate": "Explicar por que cada regra existe e demonstrar critérios de aceitação."
+        },
+        {
+          "id": "ACV-102",
+          "title": "Lógica, C# e fundamentos de programação",
+          "why": "Construir uma base que independe de frameworks.",
+          "topics": [
+            {
+              "id": "ACV-102-T01",
+              "title": "Compilação e execução"
+            },
+            {
+              "id": "ACV-102-T02",
+              "title": "Variáveis, tipos e literais"
+            },
+            {
+              "id": "ACV-102-T03",
+              "title": "Operadores e expressões"
+            },
+            {
+              "id": "ACV-102-T04",
+              "title": "Condições e decisões"
+            },
+            {
+              "id": "ACV-102-T05",
+              "title": "Laços e iteração"
+            },
+            {
+              "id": "ACV-102-T06",
+              "title": "Métodos, parâmetros e retorno"
+            },
+            {
+              "id": "ACV-102-T07",
+              "title": "Escopo e passagem de argumentos"
+            },
+            {
+              "id": "ACV-102-T08",
+              "title": "Nullability e tipos opcionais"
+            },
+            {
+              "id": "ACV-102-T09",
+              "title": "Exceções e fluxo de erro"
+            },
+            {
+              "id": "ACV-102-T10",
+              "title": "Entrada e saída de Console"
+            },
+            {
+              "id": "ACV-102-T11",
+              "title": "Debugging e breakpoints"
+            }
+          ],
+          "lab": "Cadastro, listagem, empréstimo e devolução no Console",
+          "gate": "Resolver variações sem copiar soluções e depurar um erro introduzido."
+        },
+        {
+          "id": "ACV-103",
+          "title": "Fundamentos de sistemas e runtime .NET",
+          "why": "Entender o que ocorre entre o código-fonte e a execução.",
+          "topics": [
+            {
+              "id": "ACV-103-T01",
+              "title": "CPU, memória e instruções"
+            },
+            {
+              "id": "ACV-103-T02",
+              "title": "Processos e threads"
+            },
+            {
+              "id": "ACV-103-T03",
+              "title": "Compilador, IL e JIT"
+            },
+            {
+              "id": "ACV-103-T04",
+              "title": "CLR, assemblies e metadados"
+            },
+            {
+              "id": "ACV-103-T05",
+              "title": "Value types e reference types"
+            },
+            {
+              "id": "ACV-103-T06",
+              "title": "Stack e heap como modelos de memória"
+            },
+            {
+              "id": "ACV-103-T07",
+              "title": "Garbage collector e alocação"
+            },
+            {
+              "id": "ACV-103-T08",
+              "title": "Referências, aliasing e cópia"
+            },
+            {
+              "id": "ACV-103-T09",
+              "title": "Generics e collections"
+            },
+            {
+              "id": "ACV-103-T10",
+              "title": "Imutabilidade e records"
+            },
+            {
+              "id": "ACV-103-T11",
+              "title": "Arquivos, streams e I/O"
+            },
+            {
+              "id": "ACV-103-T12",
+              "title": "Sistema operacional e terminal"
+            }
+          ],
+          "lab": "Analisar alocações e o ciclo de vida de objetos do AcervoLab",
+          "gate": "Explicar execução, identidade e cópia de valores com exemplos C#."
+        },
+        {
+          "id": "ACV-104",
+          "title": "Algoritmos, estruturas e Git",
+          "why": "Aprender a escolher estruturas e analisar custos.",
+          "topics": [
+            {
+              "id": "ACV-104-T01",
+              "title": "Big O e análise assintótica"
+            },
+            {
+              "id": "ACV-104-T02",
+              "title": "Arrays e List<T>"
+            },
+            {
+              "id": "ACV-104-T03",
+              "title": "Dictionary e hashing"
+            },
+            {
+              "id": "ACV-104-T04",
+              "title": "HashSet e unicidade"
+            },
+            {
+              "id": "ACV-104-T05",
+              "title": "Queue, Stack e fila de reservas"
+            },
+            {
+              "id": "ACV-104-T06",
+              "title": "Linked list e árvores"
+            },
+            {
+              "id": "ACV-104-T07",
+              "title": "Árvores de busca e heap"
+            },
+            {
+              "id": "ACV-104-T08",
+              "title": "Busca linear e binária"
+            },
+            {
+              "id": "ACV-104-T09",
+              "title": "Bubble, Merge e Quick Sort"
+            },
+            {
+              "id": "ACV-104-T10",
+              "title": "Recursão e casos-base"
+            },
+            {
+              "id": "ACV-104-T11",
+              "title": "Invariantes de algoritmo"
+            },
+            {
+              "id": "ACV-104-T12",
+              "title": "Git add commit diff log"
+            },
+            {
+              "id": "ACV-104-T13",
+              "title": "Branches, merge e conflitos"
+            },
+            {
+              "id": "ACV-104-T14",
+              "title": "Rebase e cherry-pick"
+            }
+          ],
+          "lab": "Fila de reservas, busca e comparação de algoritmos",
+          "gate": "Justificar a estrutura escolhida e demonstrar testes de borda."
+        }
+      ]
+    },
+    {
+      "id": "S2",
+      "name": "2º semestre · Design de código e qualidade",
+      "objective": "Modelar um domínio coeso, escrever testes e compreender a razão de existir dos padrões.",
+      "milestone": "AcervoLab v0.2 · Código modular e coberto por testes",
+      "subjects": [
+        {
+          "id": "ACV-201",
+          "title": "POO e modelagem do domínio",
+          "why": "Passar de estruturas de dados a objetos com regras próprias.",
+          "topics": [
+            {
+              "id": "ACV-201-T01",
+              "title": "Objetos e identidade"
+            },
+            {
+              "id": "ACV-201-T02",
+              "title": "Classes e construtores"
+            },
+            {
+              "id": "ACV-201-T03",
+              "title": "Encapsulamento e invariantes"
+            },
+            {
+              "id": "ACV-201-T04",
+              "title": "Abstração e contratos"
+            },
+            {
+              "id": "ACV-201-T05",
+              "title": "Interfaces e implementações"
+            },
+            {
+              "id": "ACV-201-T06",
+              "title": "Polimorfismo"
+            },
+            {
+              "id": "ACV-201-T07",
+              "title": "Herança versus composição"
+            },
+            {
+              "id": "ACV-201-T08",
+              "title": "Agregação e associação"
+            },
+            {
+              "id": "ACV-201-T09",
+              "title": "Entidades e objetos de valor"
+            },
+            {
+              "id": "ACV-201-T10",
+              "title": "Enums e máquinas de estados"
+            },
+            {
+              "id": "ACV-201-T11",
+              "title": "Modelagem de erros de domínio"
+            }
+          ],
+          "lab": "Equipamento, Usuário, Empréstimo e Reserva",
+          "gate": "Justificar uma invariante e impedir estados inválidos."
+        },
+        {
+          "id": "ACV-202",
+          "title": "Princípios de design e SOLID",
+          "why": "Entender motivos de mudança e dependências.",
+          "topics": [
+            {
+              "id": "ACV-202-T01",
+              "title": "Coesão e acoplamento"
+            },
+            {
+              "id": "ACV-202-T02",
+              "title": "SRP: razões para mudar"
+            },
+            {
+              "id": "ACV-202-T03",
+              "title": "OCP: extensão e pontos de variação"
+            },
+            {
+              "id": "ACV-202-T04",
+              "title": "LSP: substituição válida"
+            },
+            {
+              "id": "ACV-202-T05",
+              "title": "ISP: interfaces específicas"
+            },
+            {
+              "id": "ACV-202-T06",
+              "title": "DIP: dependência de abstrações"
+            },
+            {
+              "id": "ACV-202-T07",
+              "title": "Injeção de dependência versus DIP"
+            },
+            {
+              "id": "ACV-202-T08",
+              "title": "Composição e acoplamento temporal"
+            },
+            {
+              "id": "ACV-202-T09",
+              "title": "Tell, Don't Ask e encapsulamento"
+            },
+            {
+              "id": "ACV-202-T10",
+              "title": "Evitar abstrações prematuras"
+            }
+          ],
+          "lab": "Refatorar política de empréstimo e separação de persistência",
+          "gate": "Mostrar o impacto de mudar uma regra antes e depois da refatoração."
+        },
+        {
+          "id": "ACV-203",
+          "title": "Design Patterns e refatoração",
+          "why": "Selecionar padrões por problema real, não por catálogo.",
+          "topics": [
+            {
+              "id": "ACV-203-T01",
+              "title": "Categorias GoF: criacionais, estruturais, comportamentais"
+            },
+            {
+              "id": "ACV-203-T02",
+              "title": "Strategy e políticas intercambiáveis"
+            },
+            {
+              "id": "ACV-203-T03",
+              "title": "State para ciclo de empréstimo"
+            },
+            {
+              "id": "ACV-203-T04",
+              "title": "Factory Method e construção"
+            },
+            {
+              "id": "ACV-203-T05",
+              "title": "Builder e configuração"
+            },
+            {
+              "id": "ACV-203-T06",
+              "title": "Adapter e integração legada"
+            },
+            {
+              "id": "ACV-203-T07",
+              "title": "Facade e subsistemas"
+            },
+            {
+              "id": "ACV-203-T08",
+              "title": "Decorator e funcionalidades transversais"
+            },
+            {
+              "id": "ACV-203-T09",
+              "title": "Observer e eventos"
+            },
+            {
+              "id": "ACV-203-T10",
+              "title": "Command e ações"
+            },
+            {
+              "id": "ACV-203-T11",
+              "title": "Composite e estruturas hierárquicas"
+            },
+            {
+              "id": "ACV-203-T12",
+              "title": "Singleton e riscos de estado global"
+            },
+            {
+              "id": "ACV-203-T13",
+              "title": "Padrões versus antipadrões"
+            },
+            {
+              "id": "ACV-203-T14",
+              "title": "Code smells e técnicas de refatoração"
+            }
+          ],
+          "lab": "Trocar políticas de empréstimo sem alterar o fluxo principal",
+          "gate": "Explicar dois padrões escolhidos e dois deliberadamente rejeitados."
+        },
+        {
+          "id": "ACV-204",
+          "title": "Testes, depuração e engenharia do código",
+          "why": "Produzir evidência de comportamento e prevenir regressões.",
+          "topics": [
+            {
+              "id": "ACV-204-T01",
+              "title": "Testes unitários e AAA"
+            },
+            {
+              "id": "ACV-204-T02",
+              "title": "xUnit e assertions"
+            },
+            {
+              "id": "ACV-204-T03",
+              "title": "TDD Red-Green-Refactor"
+            },
+            {
+              "id": "ACV-204-T04",
+              "title": "Test doubles: stub fake mock"
+            },
+            {
+              "id": "ACV-204-T05",
+              "title": "Testes baseados em propriedades"
+            },
+            {
+              "id": "ACV-204-T06",
+              "title": "Partições e valores de fronteira"
+            },
+            {
+              "id": "ACV-204-T07",
+              "title": "Testes de integração"
+            },
+            {
+              "id": "ACV-204-T08",
+              "title": "Testes de contrato"
+            },
+            {
+              "id": "ACV-204-T09",
+              "title": "Cobertura versus qualidade"
+            },
+            {
+              "id": "ACV-204-T10",
+              "title": "Analisadores e formatação"
+            },
+            {
+              "id": "ACV-204-T11",
+              "title": "GitHub PR e code review"
+            },
+            {
+              "id": "ACV-204-T12",
+              "title": "Logs e diagnóstico"
+            },
+            {
+              "id": "ACV-204-T13",
+              "title": "Benchmark inicial"
+            }
+          ],
+          "lab": "Suíte automatizada de regras de negócio e PR revisável",
+          "gate": "Introduzir um bug e demonstrar teste vermelho, correção e regressão protegida."
+        }
+      ]
+    },
+    {
+      "id": "S3",
+      "name": "3º semestre · Dados, web e segurança",
+      "objective": "Transformar o Console em aplicação HTTP com persistência e controles reais.",
+      "milestone": "AcervoLab v1.0 · API REST e interface simples",
+      "subjects": [
+        {
+          "id": "ACV-301",
+          "title": "Bancos de dados e persistência",
+          "why": "Garantir dados corretos e consultas explicáveis.",
+          "topics": [
+            {
+              "id": "ACV-301-T01",
+              "title": "Modelo relacional"
+            },
+            {
+              "id": "ACV-301-T02",
+              "title": "Chaves e relacionamentos"
+            },
+            {
+              "id": "ACV-301-T03",
+              "title": "Normalização e desnormalização"
+            },
+            {
+              "id": "ACV-301-T04",
+              "title": "SQL DDL DML DQL DCL TCL"
+            },
+            {
+              "id": "ACV-301-T05",
+              "title": "JOIN, GROUP BY e subconsultas"
+            },
+            {
+              "id": "ACV-301-T06",
+              "title": "Índices e EXPLAIN"
+            },
+            {
+              "id": "ACV-301-T07",
+              "title": "Transações e ACID"
+            },
+            {
+              "id": "ACV-301-T08",
+              "title": "Isolamento, locks e MVCC"
+            },
+            {
+              "id": "ACV-301-T09",
+              "title": "Constraints e integridade"
+            },
+            {
+              "id": "ACV-301-T10",
+              "title": "PostgreSQL"
+            },
+            {
+              "id": "ACV-301-T11",
+              "title": "ADO.NET, EF Core e migrations"
+            },
+            {
+              "id": "ACV-301-T12",
+              "title": "Repository: quando ajuda e quando não"
+            },
+            {
+              "id": "ACV-301-T13",
+              "title": "Paginação e consultas eficientes"
+            }
+          ],
+          "lab": "Persistir equipamentos, reservas e empréstimos no PostgreSQL",
+          "gate": "Corrigir uma inconsistência e demonstrar plano de consulta."
+        },
+        {
+          "id": "ACV-302",
+          "title": "ASP.NET Core, HTTP e APIs",
+          "why": "Expor casos de uso por contratos web sólidos.",
+          "topics": [
+            {
+              "id": "ACV-302-T01",
+              "title": "Modelo cliente-servidor"
+            },
+            {
+              "id": "ACV-302-T02",
+              "title": "TCP/IP, DNS e TLS"
+            },
+            {
+              "id": "ACV-302-T03",
+              "title": "HTTP métodos, status e headers"
+            },
+            {
+              "id": "ACV-302-T04",
+              "title": "REST e recursos"
+            },
+            {
+              "id": "ACV-302-T05",
+              "title": "Minimal APIs e Controllers"
+            },
+            {
+              "id": "ACV-302-T06",
+              "title": "Serialização e JSON"
+            },
+            {
+              "id": "ACV-302-T07",
+              "title": "DTOs e mapeamento"
+            },
+            {
+              "id": "ACV-302-T08",
+              "title": "Validação e erros Problem Details"
+            },
+            {
+              "id": "ACV-302-T09",
+              "title": "OpenAPI e versionamento"
+            },
+            {
+              "id": "ACV-302-T10",
+              "title": "Idempotência de comandos"
+            },
+            {
+              "id": "ACV-302-T11",
+              "title": "Paginação, filtros e ordenação"
+            },
+            {
+              "id": "ACV-302-T12",
+              "title": "Testes de API"
+            },
+            {
+              "id": "ACV-302-T13",
+              "title": "Compatibilidade retroativa"
+            }
+          ],
+          "lab": "CRUD e endpoints de empréstimo/devolução",
+          "gate": "Demonstrar contrato, respostas de erro e testes end-to-end de API."
+        },
+        {
+          "id": "ACV-303",
+          "title": "Interface web e experiência de uso",
+          "why": "Criar UI simples e acessível, sem confundir UX com arquitetura.",
+          "topics": [
+            {
+              "id": "ACV-303-T01",
+              "title": "HTML semântico"
+            },
+            {
+              "id": "ACV-303-T02",
+              "title": "CSS e layout responsivo"
+            },
+            {
+              "id": "ACV-303-T03",
+              "title": "JavaScript e TypeScript essenciais"
+            },
+            {
+              "id": "ACV-303-T04",
+              "title": "Formulários e validação"
+            },
+            {
+              "id": "ACV-303-T05",
+              "title": "Fetch e estado assíncrono"
+            },
+            {
+              "id": "ACV-303-T06",
+              "title": "Renderização e performance"
+            },
+            {
+              "id": "ACV-303-T07",
+              "title": "Acessibilidade WCAG e teclado"
+            },
+            {
+              "id": "ACV-303-T08",
+              "title": "Feedback de erro e estados de loading"
+            },
+            {
+              "id": "ACV-303-T09",
+              "title": "Testes de interface"
+            },
+            {
+              "id": "ACV-303-T10",
+              "title": "Design centrado no usuário"
+            }
+          ],
+          "lab": "Painel de equipamentos com empréstimo, devolução e reserva",
+          "gate": "Completar um fluxo usando apenas teclado e reproduzir falha de rede."
+        },
+        {
+          "id": "ACV-304",
+          "title": "Segurança, identidade e privacidade",
+          "why": "Garantir autorização e uso responsável dos dados.",
+          "topics": [
+            {
+              "id": "ACV-304-T01",
+              "title": "Ameaças e modelo de confiança"
+            },
+            {
+              "id": "ACV-304-T02",
+              "title": "Autenticação versus autorização"
+            },
+            {
+              "id": "ACV-304-T03",
+              "title": "Sessões, cookies e JWT"
+            },
+            {
+              "id": "ACV-304-T04",
+              "title": "OAuth 2.0 e OpenID Connect"
+            },
+            {
+              "id": "ACV-304-T05",
+              "title": "RBAC e regras por recurso"
+            },
+            {
+              "id": "ACV-304-T06",
+              "title": "Princípio do menor privilégio"
+            },
+            {
+              "id": "ACV-304-T07",
+              "title": "OWASP Top 10"
+            },
+            {
+              "id": "ACV-304-T08",
+              "title": "SQL injection, XSS e CSRF"
+            },
+            {
+              "id": "ACV-304-T09",
+              "title": "Hash de senhas e segredos"
+            },
+            {
+              "id": "ACV-304-T10",
+              "title": "Criptografia em trânsito e repouso"
+            },
+            {
+              "id": "ACV-304-T11",
+              "title": "LGPD e minimização de dados"
+            },
+            {
+              "id": "ACV-304-T12",
+              "title": "Auditoria e trilhas de acesso"
+            },
+            {
+              "id": "ACV-304-T13",
+              "title": "Testes de segurança"
+            }
+          ],
+          "lab": "Papéis de usuário e administrador e log de auditoria",
+          "gate": "Impedir acesso indevido ao empréstimo de outro usuário."
+        }
+      ]
+    },
+    {
+      "id": "S4",
+      "name": "4º semestre · Arquitetura e produção",
+      "objective": "Colocar o monólito no ar, medir comportamento e evoluir sem overengineering.",
+      "milestone": "AcervoLab v1.5 · Monólito modular publicado e observável",
+      "subjects": [
+        {
+          "id": "ACV-401",
+          "title": "Linux, redes, containers e cloud",
+          "why": "Compreender a infraestrutura antes de abstraí-la.",
+          "topics": [
+            {
+              "id": "ACV-401-T01",
+              "title": "Shell, arquivos, permissões e processos"
+            },
+            {
+              "id": "ACV-401-T02",
+              "title": "Sockets, portas e redes"
+            },
+            {
+              "id": "ACV-401-T03",
+              "title": "DNS, reverse proxy e TLS"
+            },
+            {
+              "id": "ACV-401-T04",
+              "title": "Ambientes e configuração"
+            },
+            {
+              "id": "ACV-401-T05",
+              "title": "Dockerfile e imagens"
+            },
+            {
+              "id": "ACV-401-T06",
+              "title": "Docker Compose e redes"
+            },
+            {
+              "id": "ACV-401-T07",
+              "title": "Volumes, persistência e backup"
+            },
+            {
+              "id": "ACV-401-T08",
+              "title": "Cloud IaaS PaaS SaaS"
+            },
+            {
+              "id": "ACV-401-T09",
+              "title": "Identidade e segredos de cloud"
+            },
+            {
+              "id": "ACV-401-T10",
+              "title": "Storage e bancos gerenciados"
+            },
+            {
+              "id": "ACV-401-T11",
+              "title": "Infraestrutura como código"
+            },
+            {
+              "id": "ACV-401-T12",
+              "title": "Custos, limites e regiões"
+            }
+          ],
+          "lab": "Executar o AcervoLab em containers e publicar ambiente acessível",
+          "gate": "Restaurar backup e explicar o caminho de uma requisição."
+        },
+        {
+          "id": "ACV-402",
+          "title": "DevOps, confiabilidade e observabilidade",
+          "why": "Fazer mudanças seguras e diagnosticar produção.",
+          "topics": [
+            {
+              "id": "ACV-402-T01",
+              "title": "CI e pipelines"
+            },
+            {
+              "id": "ACV-402-T02",
+              "title": "CD, deploy e rollback"
+            },
+            {
+              "id": "ACV-402-T03",
+              "title": "GitHub Actions"
+            },
+            {
+              "id": "ACV-402-T04",
+              "title": "Testes automatizados em pipeline"
+            },
+            {
+              "id": "ACV-402-T05",
+              "title": "Qualidade e segurança de dependências"
+            },
+            {
+              "id": "ACV-402-T06",
+              "title": "Logs estruturados"
+            },
+            {
+              "id": "ACV-402-T07",
+              "title": "Métricas e tracing"
+            },
+            {
+              "id": "ACV-402-T08",
+              "title": "OpenTelemetry"
+            },
+            {
+              "id": "ACV-402-T09",
+              "title": "SLO, SLA e indicadores"
+            },
+            {
+              "id": "ACV-402-T10",
+              "title": "Health checks e alertas"
+            },
+            {
+              "id": "ACV-402-T11",
+              "title": "Feature flags"
+            },
+            {
+              "id": "ACV-402-T12",
+              "title": "Incidentes e postmortems"
+            },
+            {
+              "id": "ACV-402-T13",
+              "title": "FinOps básico"
+            }
+          ],
+          "lab": "Deploy automatizado com logs, métricas e rollback",
+          "gate": "Investigar falha simulada usando evidências observáveis."
+        },
+        {
+          "id": "ACV-403",
+          "title": "Concorrência, assíncrono e desempenho",
+          "why": "Resolver solicitações simultâneas e latência.",
+          "topics": [
+            {
+              "id": "ACV-403-T01",
+              "title": "Tasks e async/await"
+            },
+            {
+              "id": "ACV-403-T02",
+              "title": "CancellationToken"
+            },
+            {
+              "id": "ACV-403-T03",
+              "title": "Threads e sincronização"
+            },
+            {
+              "id": "ACV-403-T04",
+              "title": "Race conditions e TOCTOU"
+            },
+            {
+              "id": "ACV-403-T05",
+              "title": "Locks, isolamento e concorrência otimista"
+            },
+            {
+              "id": "ACV-403-T06",
+              "title": "Deadlocks"
+            },
+            {
+              "id": "ACV-403-T07",
+              "title": "Idempotência e deduplicação"
+            },
+            {
+              "id": "ACV-403-T08",
+              "title": "Retry, backoff e timeout"
+            },
+            {
+              "id": "ACV-403-T09",
+              "title": "Cache e invalidação"
+            },
+            {
+              "id": "ACV-403-T10",
+              "title": "Profiling e benchmarks"
+            },
+            {
+              "id": "ACV-403-T11",
+              "title": "Testes de carga e stress"
+            },
+            {
+              "id": "ACV-403-T12",
+              "title": "Pool de conexões"
+            },
+            {
+              "id": "ACV-403-T13",
+              "title": "Diagnóstico de gargalos"
+            }
+          ],
+          "lab": "Garantir empréstimo único sob corrida simultânea",
+          "gate": "Provocar corrida, provar falha, aplicar correção e medir."
+        },
+        {
+          "id": "ACV-404",
+          "title": "Arquitetura evolutiva, DDD e monólito modular",
+          "why": "Separar responsabilidades de domínio com limites claros.",
+          "topics": [
+            {
+              "id": "ACV-404-T01",
+              "title": "Arquitetura em camadas"
+            },
+            {
+              "id": "ACV-404-T02",
+              "title": "Clean Architecture e Hexagonal"
+            },
+            {
+              "id": "ACV-404-T03",
+              "title": "DDD estratégico: contextos delimitados"
+            },
+            {
+              "id": "ACV-404-T04",
+              "title": "DDD tático: agregados e value objects"
+            },
+            {
+              "id": "ACV-404-T05",
+              "title": "Application services e domínio"
+            },
+            {
+              "id": "ACV-404-T06",
+              "title": "Dependency rule"
+            },
+            {
+              "id": "ACV-404-T07",
+              "title": "Arquitetura modular"
+            },
+            {
+              "id": "ACV-404-T08",
+              "title": "CQRS: custo e benefício"
+            },
+            {
+              "id": "ACV-404-T09",
+              "title": "Eventos de domínio"
+            },
+            {
+              "id": "ACV-404-T10",
+              "title": "Diagramas C4"
+            },
+            {
+              "id": "ACV-404-T11",
+              "title": "ADRs e trade-offs"
+            },
+            {
+              "id": "ACV-404-T12",
+              "title": "Arquitetura evolutiva e fitness functions"
+            },
+            {
+              "id": "ACV-404-T13",
+              "title": "Testes arquiteturais"
+            }
+          ],
+          "lab": "Separar Acervo, Empréstimos e Notificações em módulos internos",
+          "gate": "Defender um monólito modular contra microsserviços prematuros."
+        }
+      ]
+    },
+    {
+      "id": "S5",
+      "name": "5º semestre · Sistemas distribuídos e fundamentos de IA",
+      "objective": "Estudar comunicação entre serviços e os fundamentos matemáticos e computacionais da Inteligência Artificial.",
+      "milestone": "AcervoLab v2.0 · Eventos confiáveis e primeiro módulo de IA avaliado",
+      "subjects": [
+        {
+          "id": "ACV-501",
+          "title": "Eventos e sistemas distribuídos",
+          "why": "Compreender custos das fronteiras de processo.",
+          "topics": [
+            {
+              "id": "ACV-501-T01",
+              "title": "Latência e falhas parciais"
+            },
+            {
+              "id": "ACV-501-T02",
+              "title": "Mensageria e pub/sub"
+            },
+            {
+              "id": "ACV-501-T03",
+              "title": "RabbitMQ e Kafka: diferenças"
+            },
+            {
+              "id": "ACV-501-T04",
+              "title": "Entrega ao menos uma vez"
+            },
+            {
+              "id": "ACV-501-T05",
+              "title": "Ordenação e duplicidade"
+            },
+            {
+              "id": "ACV-501-T06",
+              "title": "Transactional Outbox e Inbox"
+            },
+            {
+              "id": "ACV-501-T07",
+              "title": "Consistência eventual"
+            },
+            {
+              "id": "ACV-501-T08",
+              "title": "Saga e compensações"
+            },
+            {
+              "id": "ACV-501-T09",
+              "title": "Circuit breaker e bulkhead"
+            },
+            {
+              "id": "ACV-501-T10",
+              "title": "Observabilidade distribuída"
+            },
+            {
+              "id": "ACV-501-T11",
+              "title": "Contratos e evolução de eventos"
+            },
+            {
+              "id": "ACV-501-T12",
+              "title": "CAP e trade-offs"
+            },
+            {
+              "id": "ACV-501-T13",
+              "title": "Quando manter monólito"
+            }
+          ],
+          "lab": "Worker de notificação confiável e reprocessável",
+          "gate": "Derrubar serviço durante evento e provar recuperação sem duplicar efeitos."
+        },
+        {
+          "id": "ACV-502",
+          "title": "Matemática, estatística e fundamentos de ML",
+          "why": "Criar intuição quantitativa antes de modelos.",
+          "topics": [
+            {
+              "id": "ACV-502-T01",
+              "title": "Álgebra linear e vetores"
+            },
+            {
+              "id": "ACV-502-T02",
+              "title": "Matrizes e produtos"
+            },
+            {
+              "id": "ACV-502-T03",
+              "title": "Probabilidade condicional"
+            },
+            {
+              "id": "ACV-502-T04",
+              "title": "Distribuições e amostragem"
+            },
+            {
+              "id": "ACV-502-T05",
+              "title": "Estatística descritiva"
+            },
+            {
+              "id": "ACV-502-T06",
+              "title": "Inferência e intervalos"
+            },
+            {
+              "id": "ACV-502-T07",
+              "title": "Funções, derivadas e gradientes"
+            },
+            {
+              "id": "ACV-502-T08",
+              "title": "Otimização e função de perda"
+            },
+            {
+              "id": "ACV-502-T09",
+              "title": "Dados de treino, validação e teste"
+            },
+            {
+              "id": "ACV-502-T10",
+              "title": "Overfitting e regularização"
+            },
+            {
+              "id": "ACV-502-T11",
+              "title": "Métricas precisão recall F1 AUC"
+            },
+            {
+              "id": "ACV-502-T12",
+              "title": "Vieses e causalidade"
+            },
+            {
+              "id": "ACV-502-T13",
+              "title": "Aprendizado supervisionado e não supervisionado"
+            }
+          ],
+          "lab": "Explorar dados sintéticos de uso de equipamentos",
+          "gate": "Comparar baseline simples e modelo com avaliação adequada."
+        },
+        {
+          "id": "ACV-503",
+          "title": "Python, engenharia de dados e ML aplicado",
+          "why": "Construir pipelines reprodutíveis de dados e modelos.",
+          "topics": [
+            {
+              "id": "ACV-503-T01",
+              "title": "Python científico"
+            },
+            {
+              "id": "ACV-503-T02",
+              "title": "NumPy e pandas"
+            },
+            {
+              "id": "ACV-503-T03",
+              "title": "Exploração e limpeza de dados"
+            },
+            {
+              "id": "ACV-503-T04",
+              "title": "Feature engineering"
+            },
+            {
+              "id": "ACV-503-T05",
+              "title": "Data leakage"
+            },
+            {
+              "id": "ACV-503-T06",
+              "title": "scikit-learn e pipelines"
+            },
+            {
+              "id": "ACV-503-T07",
+              "title": "Classificação e regressão"
+            },
+            {
+              "id": "ACV-503-T08",
+              "title": "Modelos de árvores e ensembles"
+            },
+            {
+              "id": "ACV-503-T09",
+              "title": "Clustering e anomalias"
+            },
+            {
+              "id": "ACV-503-T10",
+              "title": "Versionamento de dados/modelos"
+            },
+            {
+              "id": "ACV-503-T11",
+              "title": "Experimentos e reprodutibilidade"
+            },
+            {
+              "id": "ACV-503-T12",
+              "title": "Serviço de inferência"
+            },
+            {
+              "id": "ACV-503-T13",
+              "title": "Drift de dados e monitoramento"
+            }
+          ],
+          "lab": "Prever demanda ou detectar padrões incomuns em dados sintéticos",
+          "gate": "Reproduzir treino e comparar com regra determinística."
+        },
+        {
+          "id": "ACV-504",
+          "title": "Fundamentos de LLM, embeddings e RAG",
+          "why": "Integrar modelos sem tratá-los como fonte infalível.",
+          "topics": [
+            {
+              "id": "ACV-504-T01",
+              "title": "Redes neurais e atenção: visão intuitiva"
+            },
+            {
+              "id": "ACV-504-T02",
+              "title": "Transformers e tokens"
+            },
+            {
+              "id": "ACV-504-T03",
+              "title": "Context window e custo por token"
+            },
+            {
+              "id": "ACV-504-T04",
+              "title": "Embeddings e semelhança vetorial"
+            },
+            {
+              "id": "ACV-504-T05",
+              "title": "Prompt design e saída estruturada"
+            },
+            {
+              "id": "ACV-504-T06",
+              "title": "Tool calling e limites de confiança"
+            },
+            {
+              "id": "ACV-504-T07",
+              "title": "Busca textual e vetorial"
+            },
+            {
+              "id": "ACV-504-T08",
+              "title": "Chunking e ingestão"
+            },
+            {
+              "id": "ACV-504-T09",
+              "title": "RAG, reranking e filtros"
+            },
+            {
+              "id": "ACV-504-T10",
+              "title": "Grounding e citações de fonte"
+            },
+            {
+              "id": "ACV-504-T11",
+              "title": "Alucinações e erros de recuperação"
+            },
+            {
+              "id": "ACV-504-T12",
+              "title": "Avaliação de busca e resposta"
+            },
+            {
+              "id": "ACV-504-T13",
+              "title": "Cache e custos de inferência"
+            }
+          ],
+          "lab": "Busca semântica e assistente de políticas do AcervoLab",
+          "gate": "Demonstrar respostas fundamentadas, recusas e teste de qualidade."
+        }
+      ]
+    },
+    {
+      "id": "S6",
+      "name": "6º semestre · Engenharia de IA e defesa de arquitetura",
+      "objective": "Operar IA de modo verificável e seguro, integrando engenharia de software, LLMOps e arquitetura de produção.",
+      "milestone": "AcervoLab v3.0 · Sistema de produção com IA observável e defesa técnica",
+      "subjects": [
+        {
+          "id": "ACV-601",
+          "title": "Agentes, ferramentas e automação inteligente",
+          "why": "Distinguir workflows previsíveis de autonomia real.",
+          "topics": [
+            {
+              "id": "ACV-601-T01",
+              "title": "Workflows determinísticos versus agentes"
+            },
+            {
+              "id": "ACV-601-T02",
+              "title": "Planejamento e orquestração"
+            },
+            {
+              "id": "ACV-601-T03",
+              "title": "Estado e memória de sessão"
+            },
+            {
+              "id": "ACV-601-T04",
+              "title": "Tools com contratos tipados"
+            },
+            {
+              "id": "ACV-601-T05",
+              "title": "MCP e integrações externas"
+            },
+            {
+              "id": "ACV-601-T06",
+              "title": "Limites de permissão e identidade"
+            },
+            {
+              "id": "ACV-601-T07",
+              "title": "Human-in-the-loop"
+            },
+            {
+              "id": "ACV-601-T08",
+              "title": "Reexecução, retries e idempotência"
+            },
+            {
+              "id": "ACV-601-T09",
+              "title": "Multiagentes: quando evitar"
+            },
+            {
+              "id": "ACV-601-T10",
+              "title": "Isolamento de ferramentas"
+            },
+            {
+              "id": "ACV-601-T11",
+              "title": "Avaliação de trajetórias"
+            },
+            {
+              "id": "ACV-601-T12",
+              "title": "Falha segura e desambiguação"
+            }
+          ],
+          "lab": "Assistente solicita reserva, mas só efetiva com validação e aprovação",
+          "gate": "Demonstrar proteção contra ações não autorizadas e repetidas."
+        },
+        {
+          "id": "ACV-602",
+          "title": "LLMOps, avaliação e qualidade de IA",
+          "why": "Aplicar disciplina de engenharia à mudança de modelos e prompts.",
+          "topics": [
+            {
+              "id": "ACV-602-T01",
+              "title": "Conjuntos de avaliação e golden datasets"
+            },
+            {
+              "id": "ACV-602-T02",
+              "title": "Métricas determinísticas e julgamento por modelo"
+            },
+            {
+              "id": "ACV-602-T03",
+              "title": "Avaliação offline e online"
+            },
+            {
+              "id": "ACV-602-T04",
+              "title": "Testes de prompt e regressão"
+            },
+            {
+              "id": "ACV-602-T05",
+              "title": "Qualidade de RAG e relevância"
+            },
+            {
+              "id": "ACV-602-T06",
+              "title": "Observabilidade de token, latência e custo"
+            },
+            {
+              "id": "ACV-602-T07",
+              "title": "Tracing de agentes"
+            },
+            {
+              "id": "ACV-602-T08",
+              "title": "Experimentos A/B"
+            },
+            {
+              "id": "ACV-602-T09",
+              "title": "Versões de modelo e prompts"
+            },
+            {
+              "id": "ACV-602-T10",
+              "title": "Fallback e degradação graciosa"
+            },
+            {
+              "id": "ACV-602-T11",
+              "title": "SLIs e SLOs para IA"
+            },
+            {
+              "id": "ACV-602-T12",
+              "title": "Monitoramento de qualidade"
+            },
+            {
+              "id": "ACV-602-T13",
+              "title": "Revisão humana e erros conhecidos"
+            }
+          ],
+          "lab": "Pipeline CI com testes de qualidade de respostas e telemetria",
+          "gate": "Capturar regressão e bloquear promoção de versão inadequada."
+        },
+        {
+          "id": "ACV-603",
+          "title": "Segurança e governança de sistemas de IA",
+          "why": "Tratar o modelo e os dados externos como não confiáveis.",
+          "topics": [
+            {
+              "id": "ACV-603-T01",
+              "title": "Prompt injection e jailbreak"
+            },
+            {
+              "id": "ACV-603-T02",
+              "title": "Isolamento de instruções e dados"
+            },
+            {
+              "id": "ACV-603-T03",
+              "title": "Exfiltração via tools"
+            },
+            {
+              "id": "ACV-603-T04",
+              "title": "Validação de saída e schema"
+            },
+            {
+              "id": "ACV-603-T05",
+              "title": "Moderação e abuso"
+            },
+            {
+              "id": "ACV-603-T06",
+              "title": "Dados pessoais e minimização"
+            },
+            {
+              "id": "ACV-603-T07",
+              "title": "Retenção e consentimento"
+            },
+            {
+              "id": "ACV-603-T08",
+              "title": "Direitos de acesso e segregação"
+            },
+            {
+              "id": "ACV-603-T09",
+              "title": "Viés e fairness"
+            },
+            {
+              "id": "ACV-603-T10",
+              "title": "Avaliação de risco e ameaça"
+            },
+            {
+              "id": "ACV-603-T11",
+              "title": "Auditabilidade e explicabilidade"
+            },
+            {
+              "id": "ACV-603-T12",
+              "title": "Políticas de uso e revisão humana"
+            },
+            {
+              "id": "ACV-603-T13",
+              "title": "Governança de provedores"
+            }
+          ],
+          "lab": "Teste ofensivo controlado contra o agente e filtros de autorização",
+          "gate": "Comprovar que prompts maliciosos não autorizam empréstimos."
+        },
+        {
+          "id": "ACV-604",
+          "title": "Engenharia de IA em produção com .NET",
+          "why": "Integrar IA à arquitetura existente de forma econômica e operável.",
+          "topics": [
+            {
+              "id": "ACV-604-T01",
+              "title": "Camada de IA como módulo de aplicação"
+            },
+            {
+              "id": "ACV-604-T02",
+              "title": "Abstração de provedores de LLM"
+            },
+            {
+              "id": "ACV-604-T03",
+              "title": "HTTP clients e resiliência em .NET"
+            },
+            {
+              "id": "ACV-604-T04",
+              "title": "Structured output e validação"
+            },
+            {
+              "id": "ACV-604-T05",
+              "title": "Integração Python/.NET quando útil"
+            },
+            {
+              "id": "ACV-604-T06",
+              "title": "Filas de inferência e processamento assíncrono"
+            },
+            {
+              "id": "ACV-604-T07",
+              "title": "Hospedagem e endpoints de modelos"
+            },
+            {
+              "id": "ACV-604-T08",
+              "title": "Modelos locais e remotos: trade-offs"
+            },
+            {
+              "id": "ACV-604-T09",
+              "title": "Latency budgets"
+            },
+            {
+              "id": "ACV-604-T10",
+              "title": "Cache, batching e rate limits"
+            },
+            {
+              "id": "ACV-604-T11",
+              "title": "Segredos e governança de API keys"
+            },
+            {
+              "id": "ACV-604-T12",
+              "title": "Custos por requisição"
+            },
+            {
+              "id": "ACV-604-T13",
+              "title": "Deploy, rollback e observabilidade de IA"
+            }
+          ],
+          "lab": "Serviço de IA integrado à API com fallback sem IA",
+          "gate": "Defender escolha de arquitetura e demonstrar operação com falha do provedor."
+        },
+        {
+          "id": "ACV-605",
+          "title": "Projeto de conclusão e defesa técnica",
+          "why": "Consolidar toda a engenharia em uma evolução explicável.",
+          "topics": [
+            {
+              "id": "ACV-605-T01",
+              "title": "Levantamento de requisitos v3"
+            },
+            {
+              "id": "ACV-605-T02",
+              "title": "Riscos e critérios arquiteturais"
+            },
+            {
+              "id": "ACV-605-T03",
+              "title": "Medição antes de otimizar"
+            },
+            {
+              "id": "ACV-605-T04",
+              "title": "Migrações sem indisponibilidade"
+            },
+            {
+              "id": "ACV-605-T05",
+              "title": "Estratégia de testes completa"
+            },
+            {
+              "id": "ACV-605-T06",
+              "title": "Teste de concorrência e carga"
+            },
+            {
+              "id": "ACV-605-T07",
+              "title": "Falhas parciais e recuperação"
+            },
+            {
+              "id": "ACV-605-T08",
+              "title": "Observabilidade ponta a ponta"
+            },
+            {
+              "id": "ACV-605-T09",
+              "title": "Análise de segurança e IA"
+            },
+            {
+              "id": "ACV-605-T10",
+              "title": "Custo, performance e escalabilidade"
+            },
+            {
+              "id": "ACV-605-T11",
+              "title": "ADRs e diagramas atualizados"
+            },
+            {
+              "id": "ACV-605-T12",
+              "title": "Threat modeling"
+            },
+            {
+              "id": "ACV-605-T13",
+              "title": "Documentação operacional"
+            },
+            {
+              "id": "ACV-605-T14",
+              "title": "Defesa de trade-offs"
+            },
+            {
+              "id": "ACV-605-T15",
+              "title": "Retest de conceitos frágeis"
+            }
+          ],
+          "lab": "Demonstração pública do AcervoLab, testes e apresentação técnica",
+          "gate": "Defender incidentes imprevistos, evidências, limitações e decisões."
+        }
+      ]
+    }
+  ],
+  "bridges": [
+    {
+      "name": "IA opcional inicial",
+      "when": "Semestres 1–4",
+      "scope": "Fundamentos de algoritmos, estatística, dados, interfaces, HTTP e segurança constituem pré-requisitos de engenharia de IA. Pequenos experimentos de IA são possíveis, mas não necessários."
+    },
+    {
+      "name": "IA aplicada e ML",
+      "when": "5º semestre",
+      "scope": "Dados sintéticos, avaliação de baselines, Python, embeddings, RAG e integração inicial no AcervoLab."
+    },
+    {
+      "name": "IA em produção",
+      "when": "6º semestre",
+      "scope": "Agentes com aprovação humana, RAG com provas, testes, tracing, segurança, custos, fallback, governança e integração com .NET."
+    }
+  ],
+  "milestones": [
+    {
+      "id": "v0.1",
+      "text": "Console em memória",
+      "architecture": "Sem infraestrutura externa"
+    },
+    {
+      "id": "v0.2",
+      "text": "Domínio testável",
+      "architecture": "POO e refatoração sem camadas artificiais"
+    },
+    {
+      "id": "v1.0",
+      "text": "API e web",
+      "architecture": "Monólito simples + PostgreSQL"
+    },
+    {
+      "id": "v1.5",
+      "text": "Deploy cloud",
+      "architecture": "Monólito modular, CI/CD e observabilidade"
+    },
+    {
+      "id": "v2.0",
+      "text": "Eventos e IA experimental",
+      "architecture": "Worker, integração avaliada e testes de falha"
+    },
+    {
+      "id": "v3.0",
+      "text": "IA em produção e defesa",
+      "architecture": "Arquitetura justificada por evidências; serviços separados apenas quando necessários"
+    }
+  ],
+  "workflow": {
+    "before": "Identificar o problema e apresentar teoria com um exemplo próprio",
+    "during": "Um desafio por vez; implementar pequenos incrementos com C#, testes e Git",
+    "after": "Atualizar docs/acervolab/theory.json por commit para cada conceito ensinado; associar tópico, data, exemplos, erros, relações e evidência; atualizar PROGRESS.md só quando houver comprovação",
+    "mastery": "Reconhecer → Explicar → Aplicar → Depurar → Transferir → Retestar"
+  }
+}
