@@ -12,6 +12,19 @@ Este repositório é a fonte da verdade para quatro coisas diferentes:
 
 > Curso concluído não significa domínio. Certificado é evidência externa; Mastery Gate é evidência interna.
 
+## AcervoLab Academy — Engenharia de Software, .NET e IA (6 semestres)
+
+Nova trilha acadêmica independente, baseada em **um único sistema simples de empréstimos e reservas**. O AcervoLab evolui de Console C# para monólito com PostgreSQL/API/web, cloud, arquitetura modular, sistemas distribuídos e **Engenharia de IA** (ML, LLM, RAG, agentes, LLMOps, segurança, governança e operação).
+
+- **Grade:** 6 semestres, 25 disciplinas, 312 tópicos, acesso livre, sem bloqueios de navegação.
+- **Teoria:** cada conceito é documentado e versionado no GitHub em `docs/acervolab/theory.json`. Doze conceitos de POO/SOLID/GoF estudados anteriormente foram registrados sem marcação de domínio.
+- **Progresso:** notas e status no navegador com exportação/importação; comprovação oficial em `PROGRESS.md` via commit após evidência.
+- **Protocolo:** problema → teoria → decisão → incremento de código → teste → evidência → revisão (Método DECA e mastery gates).
+- **Painel:** [AcervoLab Academy](https://lucastrevvos.github.io/software-mastery-roadmap/acervolab/) · [currículo](docs/acervolab/curriculum.json) · [teoria](docs/acervolab/theory.json) · [manual de continuidade](docs/acervolab/README.md) · [progresso oficial](docs/acervolab/PROGRESS.md).
+- **Início técnico:** `ACV-101 / T01 — Problema e atores`. Não criar abstrações antes de haver problema demonstrado.
+
+> A página é estática; atualização pública de teoria exige commit feito pelo assistente ou por quem edita o repositório. O painel não sincroniza automaticamente dados locais com o GitHub.
+
 ## Engenharia de Software Avançada — 5 módulos / 40 semanas
 
 Trilha prática para evoluir de desenvolvedor para engenharia e arquitetura de sistemas de alto nível, com **480–640 horas** orientativas, projeto integrador **ServiceOps**, **40 semanas**, **5 projetos de consolidação** e **15 checkpoints de aceite**.
