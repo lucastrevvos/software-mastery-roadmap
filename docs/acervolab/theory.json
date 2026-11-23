@@ -185,12 +185,12 @@
       "kind": "Engenharia de requisitos e modelagem de casos de uso",
       "definition": "Antes de escolher tecnologias, descrever claramente qual problema o software precisa resolver e reconhecer os papéis externos (atores) que interagem com ele. Ator representa um papel, que pode ser humano ou outro sistema; não é necessariamente uma pessoa específica.",
       "problem": "Evitar começar pela tecnologia sem entender usuários, objetivos, fronteiras do sistema e dificuldades observáveis.",
-      "example": "No AcervoLab, a escola sofre com conflitos de reservas, atrasos e falta de rastreabilidade. Professor/solicitante consulta e pede empréstimo; responsável pelo acervo registra empréstimos e devoluções. O banco interno não é ator, pois faz parte da implementação.",
-      "pitfall": "Ator não é sinônimo de classe, tabela ou componente interno. Um interessado (stakeholder) não é necessariamente ator de um caso de uso. Exemplos de atores e fluxos são hipóteses até serem validados com o domínio.",
+      "example": "No AcervoLab, professor/solicitante consulta e pede equipamentos; responsável pelo acervo registra devoluções. Banco interno e classe Empréstimo não são atores, pois integram a implementação. Um provedor de identidade externo que atende a uma solicitação do AcervoLab pode ser ator de apoio, conforme a fronteira modelada.",
+      "pitfall": "Ator não é sinônimo de usuário humano, classe, tabela ou componente interno. Sua identificação depende da fronteira do sistema; pessoas e serviços externos podem assumir papéis. Acertar uma alternativa sem justificar ainda não comprova domínio.",
       "related": "Escopo e fronteira do sistema; stakeholders; requisitos funcionais; casos de uso; invariantes; critérios de aceitação.",
       "learnedAt": "2026-11-23",
-      "state": "apresentado; desafio inicial e domínio ainda não comprovados",
-      "source": "AcervoLab Academy — Aula 001 / ACV-101-T01, explicação didática no chat; aguarda resposta ao desafio de identificação de ator"
+      "state": "estudando; ACV-101-001 respondido corretamente (B), sem justificativa; aplicação e retest pendentes",
+      "source": "Aula 001 (23/11/2026): conceito apresentado e resposta B correta ao ACV-101-001 sem raciocínio; transferência para ator não humano ainda pendente"
     }
   ]
 }
