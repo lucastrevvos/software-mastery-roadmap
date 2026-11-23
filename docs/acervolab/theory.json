@@ -185,12 +185,26 @@
       "kind": "Engenharia de requisitos e modelagem de casos de uso",
       "definition": "Antes de escolher tecnologias, descrever claramente qual problema o software precisa resolver e reconhecer os papéis externos (atores) que interagem com ele. Ator representa um papel, que pode ser humano ou outro sistema; não é necessariamente uma pessoa específica.",
       "problem": "Evitar começar pela tecnologia sem entender usuários, objetivos, fronteiras do sistema e dificuldades observáveis.",
-      "example": "No AcervoLab, professor/solicitante consulta e pede equipamentos; responsável pelo acervo registra devoluções. Banco interno e classe Empréstimo não são atores, pois integram a implementação. Um provedor de identidade externo que atende a uma solicitação do AcervoLab pode ser ator de apoio, conforme a fronteira modelada.",
+      "example": "Professor (ator humano) solicita notebook; serviço externo de autenticação (ator não humano de apoio) confirma identidade; banco de dados e classes internos não são atores. A fronteira define o que é externo ao AcervoLab.",
       "pitfall": "Ator não é sinônimo de usuário humano, classe, tabela ou componente interno. Sua identificação depende da fronteira do sistema; pessoas e serviços externos podem assumir papéis. Acertar uma alternativa sem justificar ainda não comprova domínio.",
       "related": "Escopo e fronteira do sistema; stakeholders; requisitos funcionais; casos de uso; invariantes; critérios de aceitação.",
       "learnedAt": "2026-11-23",
-      "state": "estudando; ACV-101-001 respondido corretamente (B), sem justificativa; aplicação e retest pendentes",
-      "source": "Aula 001 (23/11/2026): conceito apresentado e resposta B correta ao ACV-101-001 sem raciocínio; transferência para ator não humano ainda pendente"
+      "state": "estudando; desafios ACV-101-001=B e ACV-101-002=A corretos, sem raciocínio; aplicação autônoma e domínio pendentes",
+      "source": "Aula 001 (23/11/2026); desafios ACV-101-001 (ator humano) e ACV-101-002 (sistema externo) respondidos corretamente sem justificativa"
+    },
+    {
+      "id": "TH-014",
+      "name": "Objetivo do ator",
+      "topicId": "ACV-101-T01",
+      "kind": "Engenharia de requisitos e análise de casos de uso",
+      "definition": "O objetivo do ator é o resultado útil que um papel externo deseja atingir ao interagir com o sistema. Um ator descreve quem participa; o objetivo esclarece para quê, antes de definir telas ou tecnologias.",
+      "problem": "Evitar confundir a necessidade do usuário com detalhes de interface, linguagem ou banco de dados; orientar requisitos e casos de uso pelo resultado esperado.",
+      "example": "No AcervoLab, o professor quer conseguir um equipamento disponível para uma aula; o responsável pelo acervo quer saber qual equipamento está emprestado e registrar a devolução.",
+      "pitfall": "Descrever 'clicar no botão azul' ou 'usar PostgreSQL' como objetivo do ator; isso são decisões de interface/implementação, não o resultado de negócio. Não supor que uma pessoa corresponde sempre a um único papel.",
+      "related": "TH-013: problemas e atores; casos de uso; escopo; necessidades dos usuários; critérios de aceitação.",
+      "learnedAt": "2026-11-23",
+      "state": "apresentado; ainda sem resposta ao exercício de aplicação",
+      "source": "AcervoLab Academy — continuação da Aula 001: tópico ACV-101-T01, após verificação ACV-101-002"
     }
   ]
 }
