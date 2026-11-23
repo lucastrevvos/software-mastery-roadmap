@@ -189,8 +189,8 @@
       "pitfall": "Ator não é sinônimo de usuário humano, classe, tabela ou componente interno. Sua identificação depende da fronteira do sistema; pessoas e serviços externos podem assumir papéis. Acertar uma alternativa sem justificar ainda não comprova domínio.",
       "related": "Escopo e fronteira do sistema; stakeholders; requisitos funcionais; casos de uso; invariantes; critérios de aceitação.",
       "learnedAt": "2026-11-23",
-      "state": "estudando; desafios ACV-101-001=B e ACV-101-002=A corretos, sem raciocínio; aplicação autônoma e domínio pendentes",
-      "source": "Aula 001 (23/11/2026); desafios ACV-101-001 (ator humano) e ACV-101-002 (sistema externo) respondidos corretamente sem justificativa"
+      "state": "praticado em exercício escrito (ACV-101-003); T01 ainda requer transferência/retest posterior para validação",
+      "source": "2026-11-23: desafios ACV-101-001=B e ACV-101-002=A sem justificativa; resposta aberta ACV-101-003: coordenador consulta disponibilidade e efetua empréstimo do material"
     },
     {
       "id": "TH-014",
@@ -199,12 +199,26 @@
       "kind": "Engenharia de requisitos e análise de casos de uso",
       "definition": "O objetivo do ator é o resultado útil que um papel externo deseja atingir ao interagir com o sistema. Um ator descreve quem participa; o objetivo esclarece para quê, antes de definir telas ou tecnologias.",
       "problem": "Evitar confundir a necessidade do usuário com detalhes de interface, linguagem ou banco de dados; orientar requisitos e casos de uso pelo resultado esperado.",
-      "example": "No AcervoLab, o professor quer conseguir um equipamento disponível para uma aula; o responsável pelo acervo quer saber qual equipamento está emprestado e registrar a devolução.",
-      "pitfall": "Descrever 'clicar no botão azul' ou 'usar PostgreSQL' como objetivo do ator; isso são decisões de interface/implementação, não o resultado de negócio. Não supor que uma pessoa corresponde sempre a um único papel.",
+      "example": "O coordenador pedagógico quer garantir material para sua aula. Para atingir isso, consulta disponibilidade e, se houver equipamento elegível e regras atendidas, solicita o empréstimo. Objetivo final ≠ ações intermediárias.",
+      "pitfall": "Não confundir objetivo (conseguir material para aula) com ações (consultar, solicitar), interface (clicar botão) ou tecnologia (API, PostgreSQL). Disponibilidade isolada pode não garantir autorização do empréstimo.",
       "related": "TH-013: problemas e atores; casos de uso; escopo; necessidades dos usuários; critérios de aceitação.",
       "learnedAt": "2026-11-23",
-      "state": "apresentado; ainda sem resposta ao exercício de aplicação",
-      "source": "AcervoLab Academy — continuação da Aula 001: tópico ACV-101-T01, após verificação ACV-101-002"
+      "state": "praticado com evidência textual ACV-101-003; validação final e retest pendentes",
+      "source": "2026-11-23 — resposta aberta do usuário no ACV-101-003: 'O objetivo desse coordenador, ao interagir com o sistema será consultar se o material para sua aula, está disponivel, sendo positivo, efetuar o emprestimo do material.' Correta, com refinamento entre objetivo e ações."
+    },
+    {
+      "id": "TH-015",
+      "name": "Requisito funcional",
+      "topicId": "ACV-101-T02",
+      "kind": "Engenharia de requisitos",
+      "definition": "Requisito funcional descreve uma capacidade, comportamento ou serviço que o sistema deve oferecer para atender a uma necessidade de negócio ou objetivo de ator.",
+      "problem": "Transformar necessidades como 'preciso de um equipamento para aula' em comportamentos verificáveis do software, sem antecipar a implementação.",
+      "example": "RF-001: O sistema deve permitir consultar a disponibilidade de um equipamento identificado.",
+      "pitfall": "Confundir requisito funcional com objetivo amplo ('ter uma aula preparada') ou escolha de tecnologia ('usar PostgreSQL'). Escrever requisitos ambíguos ou que misturam múltiplas funcionalidades prejudica testes.",
+      "related": "TH-013 problema e atores; TH-014 objetivo do ator; critérios de aceitação; casos de uso; requisitos não funcionais (estudo posterior).",
+      "learnedAt": "2026-11-23",
+      "state": "apresentado; aguardando exercício ACV-101-004",
+      "source": "AcervoLab Academy — ACV-101-T02, primeiro contato após correção do ACV-101-003"
     }
   ]
 }
