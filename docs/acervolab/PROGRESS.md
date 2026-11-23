@@ -39,9 +39,10 @@
 
 **ACV-101 / Engenharia de requisitos e produto / T01 — Problema e atores.**
 
-- **2026-11-23 — Aula 001 iniciada:** problema inicial da escola com equipamentos (conflitos de reservas, atrasos, rastreabilidade); atores potenciais: professor/solicitante e responsável pelo acervo. Conteúdo teórico registrado em `theory.json` como **TH-013**; a escolha desses atores ainda precisa ser validada com o exercício.
-- **Aguardando resposta:** Desafio ACV-101-001 — distinguir ator externo de componente interno, preferencialmente com justificativa.
-- **Evidência até agora:** teoria apresentada e nota versionada; **nenhuma resposta ao desafio, implementação ou mastery gate concluído**.
+- **2026-11-23 — Aula 001 iniciada:** problema inicial da escola com equipamentos (conflitos de reservas, atrasos, rastreabilidade); atores potenciais: professor/solicitante e responsável pelo acervo. Conceito teórico registrado como **TH-013**.
+- **2026-11-23 — Desafio ACV-101-001:** resposta **B (professor)** correta; raciocínio não informado. Evidência de identificação de ator humano em uma questão de múltipla escolha, **não** suficiente para domínio ou conclusão do tópico.
+- **Em andamento:** verificação ACV-101-002 — distinguir ator externo não humano de componente interno, considerando a fronteira do sistema. Aguardar resposta e justificativa (opcional).
+- **Evidência até agora:** teoria versionada e um acerto de múltipla escolha; **sem justificativa própria, implementação, exercício de transferência concluído ou mastery gate validado**.
 - **Depois:** definir escopo mínimo, primeira invariante e critérios de aceitação com um passo por vez.
 - Ainda **não** criar projeto .NET nem infraestrutura: primeiro formular o problema.
 
