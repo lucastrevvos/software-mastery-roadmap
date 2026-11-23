@@ -37,14 +37,15 @@
 
 ## Aula em andamento e próximo passo
 
-**ACV-101 / Engenharia de requisitos e produto / T01 — Problema e atores.**
+**ACV-101 / Engenharia de requisitos e produto / T01 praticado; T02 iniciado — Requisitos funcionais.**
 
 - **2026-11-23 — Aula 001 iniciada:** problema inicial da escola com equipamentos (conflitos de reservas, atrasos, rastreabilidade); atores potenciais: professor/solicitante e responsável pelo acervo. Conceito teórico registrado como **TH-013**.
 - **2026-11-23 — Desafio ACV-101-001:** resposta **B (professor)** correta; raciocínio não informado. Evidência de identificação de ator humano em uma questão de múltipla escolha, **não** suficiente para domínio ou conclusão do tópico.
 - **2026-11-23 — Verificação ACV-101-002:** resposta **A (sistema externo pode ser ator)** correta; raciocínio não informado. Duas respostas corretas de múltipla escolha indicam reconhecimento de atores humanos e não humanos, **sem comprovar domínio independente**.
-- **Próximo passo ACV-101-003:** aplicar o novo conceito **objetivo do ator** (TH-014) em resposta aberta, distinguindo resultado desejado de decisão de interface/tecnologia.
-- **Evidência até agora:** teoria TH-013 e TH-014 versionada, duas respostas corretas; **sem justificativa própria, prática ou mastery gate validado**.
-- **Depois:** definir escopo mínimo, primeira invariante e critérios de aceitação com um passo por vez.
+- **2026-11-23 — Desafio ACV-101-003:** resposta escrita do usuário: «O objetivo desse coordenador, ao interagir com o sistema será consultar se o material para sua aula, está disponivel, sendo positivo, efetuar o emprestimo do material.» Correta: reconheceu objetivo e ações sem recorrer a tecnologia; refinamento ensinado: objetivo final é garantir material para a aula, enquanto consulta e solicitação são ações. Disponibilidade não garante aprovação automática.
+- **Estado ACV-101-T01: PRATICADO**, com resposta aberta documentada após duas respostas de múltipla escolha corretas. **Não validado definitivamente**: revisão de transferência e retest ainda pendentes.
+- **Novo conceito apresentado:** TH-015 — requisito funcional (ACV-101-T02), transformando objetivo do ator em comportamento observável do sistema.
+- **Próximo passo ACV-101-004:** formular em palavras próprias um requisito funcional simples de empréstimo para o AcervoLab; aguardar resposta. Nenhuma implementação iniciada.
 - Ainda **não** criar projeto .NET nem infraestrutura: primeiro formular o problema.
 
 ## Gates e marcos
