@@ -177,6 +177,20 @@
       "learnedAt": "2026-11-23",
       "state": "apresentado; domínio ainda não comprovado",
       "source": "Conversa didática anterior à criação da AcervoLab Academy (desafios 001–010)"
+    },
+    {
+      "id": "TH-013",
+      "name": "Problema e atores do sistema",
+      "topicId": "ACV-101-T01",
+      "kind": "Engenharia de requisitos e modelagem de casos de uso",
+      "definition": "Antes de escolher tecnologias, descrever claramente qual problema o software precisa resolver e reconhecer os papéis externos (atores) que interagem com ele. Ator representa um papel, que pode ser humano ou outro sistema; não é necessariamente uma pessoa específica.",
+      "problem": "Evitar começar pela tecnologia sem entender usuários, objetivos, fronteiras do sistema e dificuldades observáveis.",
+      "example": "No AcervoLab, a escola sofre com conflitos de reservas, atrasos e falta de rastreabilidade. Professor/solicitante consulta e pede empréstimo; responsável pelo acervo registra empréstimos e devoluções. O banco interno não é ator, pois faz parte da implementação.",
+      "pitfall": "Ator não é sinônimo de classe, tabela ou componente interno. Um interessado (stakeholder) não é necessariamente ator de um caso de uso. Exemplos de atores e fluxos são hipóteses até serem validados com o domínio.",
+      "related": "Escopo e fronteira do sistema; stakeholders; requisitos funcionais; casos de uso; invariantes; critérios de aceitação.",
+      "learnedAt": "2026-11-23",
+      "state": "apresentado; desafio inicial e domínio ainda não comprovados",
+      "source": "AcervoLab Academy — Aula 001 / ACV-101-T01, explicação didática no chat; aguarda resposta ao desafio de identificação de ator"
     }
   ]
 }
