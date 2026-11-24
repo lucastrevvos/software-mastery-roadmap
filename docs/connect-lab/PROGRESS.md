@@ -6,7 +6,7 @@ Fonte de verdade do tutor: [currículo e protocolo](index.html). Referência tra
 
 ## Estado atual
 
-- Módulo 01: iniciado (teoria apresentada; verificação pendente).
+- Módulo 01: iniciado (Desafio 001 correto; prática HTTP pendente).
 - Módulos 02–12: planejados.
 - Repositório de implementação: ainda não definido/criado nesta trilha.
 - Evidências práticas: nenhuma ainda.
@@ -14,8 +14,9 @@ Fonte de verdade do tutor: [currículo e protocolo](index.html). Referência tra
 ## Aula 001 — Runtime versus framework
 
 - Conceito apresentado: JavaScript/TypeScript, Node.js e Express; servidor HTTP nativo versus framework.
-- Desafio pendente: se removermos Express, o Node.js ainda pode receber requisições HTTP? Explicar por quê.
-- Próxima ação: aplicar o desafio DECA; se confirmado, criar o primeiro servidor HTTP mínimo e comparar com Express. Um passo por turno.
+- Evidência 23/11/2026: resposta B, justificativa: “Teremos que usar o runtime do nodejs”. Conceito validado no nível introdutório; sem evidência prática ainda.
+- Próxima ação (Aula 002): criar servidor HTTP nativo local, observar callback por requisição e testar GET /health com curl. Depois verificar entendimento antes de introduzir Express.
+- Referência: [runtime versus framework no Caderno do Engenheiro](../engineering-notebook.html#connect-runtime-framework).
 
 ## Registro das próximas etapas
 
