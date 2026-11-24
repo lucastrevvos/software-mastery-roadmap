@@ -6,10 +6,10 @@ Fonte de verdade do tutor: [currículo e protocolo](index.html). Referência tra
 
 ## Estado atual
 
-- Módulo 01: iniciado (Desafios 001–018 corretos; testes com Fake executados segundo relato).
+- Módulo 01: iniciado (Desafios 001–019 corretos; testes com Spy executados segundo relato).
 - Módulos 02–12: planejados.
 - Repositório de implementação: projeto local connect-lab; remoto e commits do código ainda não confirmados.
-- Evidências práticas: aluno confirmou execução bem-sucedida do servidor HTTP nativo, roteamento, Express e middleware de logging e proteção simulada de conversas e agrupamento e extração do Router e do middleware de autenticação e do Conversation Service, além do primeiro teste unitário e ciclo TDD completo, testes negativos, experimento manual de mutação, testes de caracterização, seam temporal, Stub e Fake, nas Aulas 002–018; sem logs anexados.
+- Evidências práticas: aluno confirmou execução bem-sucedida do servidor HTTP nativo, roteamento, Express e middleware de logging e proteção simulada de conversas e agrupamento e extração do Router e do middleware de autenticação e do Conversation Service, além do primeiro teste unitário e ciclo TDD completo, testes negativos, experimento manual de mutação, testes de caracterização, seam temporal, Stub, Fake e Spy, nas Aulas 002–019; sem logs anexados.
 
 ## Aula 001 — Runtime versus framework
 
@@ -138,6 +138,14 @@ Fonte de verdade do tutor: [currículo e protocolo](index.html). Referência tra
 - Conceitos validados em nível introdutório: Fake, estado em memória, Map chave-valor, diferença de Stub e limites de simulação de banco. Contagem individual dos testes, logs e commit local não apresentados.
 - Referência: [Fake](../engineering-notebook.html#connect-fake).
 - Próxima ação (Aula 019): introduzir Spy manual com array de chamadas; criar função closeConversation(conversation, notifyCustomer) em conversations/conversation-service.js que retorna nova conversa CLOSED para OPEN e solicita notificação com ID; para status não permitido retorna a conversa original sem notificar. Reutilizar canCloseConversation; adicionar dois testes de interação para quantidade, argumento e ausência de chamada; não integrar ao HTTP nem enviar notificações reais. Um desafio por turno.
+
+## Aula 019 — Test Doubles: Spy
+
+- Evidência 24/11/2026: execução reportada como “Funcionou”; resposta A (função que registra chamadas e argumentos é Spy).
+- Conceitos validados em nível introdutório: Spy, verificação de estado e de interações, notificação simulada no fechamento da conversa. Contagem individual dos testes, logs e commit local não apresentados.
+- Observação espontânea: aluno perguntou como o ID chega ao callback sem ser passado na chamada externa. Explicadas funções de primeira classe, higher-order function, callback síncrono, closure sobre calls e equivalência conceitual com delegate Action<int> do C#. O ID é passado explicitamente na invocação interna, não capturado por closure. Sem exercício adicional sobre isso, conforme solicitado.
+- Referência: [Spy e callbacks](../engineering-notebook.html#connect-spy).
+- Próxima ação (Aula 020): diferenciar Mock de Spy por expectativas de interação pré-definidas; adicionar apenas um teste com mock manual que exige exatamente uma notificação com ID 123, rejeita chamadas inesperadas e verifica ausência de chamada no final. Reutilizar closeConversation sem alterar produção; explicar que nomenclatura varia entre ferramentas. Um desafio por turno.
 
 ## Registro das próximas etapas
 
