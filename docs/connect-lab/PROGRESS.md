@@ -6,10 +6,10 @@ Fonte de verdade do tutor: [currículo e protocolo](index.html). Referência tra
 
 ## Estado atual
 
-- Módulo 01: iniciado (Desafios 001–019 corretos; testes com Spy executados segundo relato).
+- Módulo 01: iniciado (Desafios 001–020 corretos; testes com Mock executados segundo relato).
 - Módulos 02–12: planejados.
 - Repositório de implementação: projeto local connect-lab; remoto e commits do código ainda não confirmados.
-- Evidências práticas: aluno confirmou execução bem-sucedida do servidor HTTP nativo, roteamento, Express e middleware de logging e proteção simulada de conversas e agrupamento e extração do Router e do middleware de autenticação e do Conversation Service, além do primeiro teste unitário e ciclo TDD completo, testes negativos, experimento manual de mutação, testes de caracterização, seam temporal, Stub, Fake e Spy, nas Aulas 002–019; sem logs anexados.
+- Evidências práticas: aluno confirmou execução bem-sucedida do servidor HTTP nativo, roteamento, Express e middleware de logging e proteção simulada de conversas e agrupamento e extração do Router e do middleware de autenticação e do Conversation Service, além do primeiro teste unitário e ciclo TDD completo, testes negativos, experimento manual de mutação, testes de caracterização, seam temporal, Stub, Fake, Spy e Mock, nas Aulas 002–020; sem logs anexados.
 
 ## Aula 001 — Runtime versus framework
 
@@ -146,6 +146,13 @@ Fonte de verdade do tutor: [currículo e protocolo](index.html). Referência tra
 - Observação espontânea: aluno perguntou como o ID chega ao callback sem ser passado na chamada externa. Explicadas funções de primeira classe, higher-order function, callback síncrono, closure sobre calls e equivalência conceitual com delegate Action<int> do C#. O ID é passado explicitamente na invocação interna, não capturado por closure. Sem exercício adicional sobre isso, conforme solicitado.
 - Referência: [Spy e callbacks](../engineering-notebook.html#connect-spy).
 - Próxima ação (Aula 020): diferenciar Mock de Spy por expectativas de interação pré-definidas; adicionar apenas um teste com mock manual que exige exatamente uma notificação com ID 123, rejeita chamadas inesperadas e verifica ausência de chamada no final. Reutilizar closeConversation sem alterar produção; explicar que nomenclatura varia entre ferramentas. Um desafio por turno.
+
+## Aula 020 — Test Doubles: Mock
+
+- Evidência 24/11/2026: execução reportada como “Funcionou”; resposta C (expectativas predefinidas sobre interação caracterizam Mock na classificação clássica).
+- Conceitos validados em nível introdutório: Mock, expectativas de argumento e quantidade de chamadas, distinção conceitual de Spy e variação de nomenclatura entre ferramentas. Logs, contagem individual e commit local não apresentados.
+- Referência: [Mock](../engineering-notebook.html#connect-mock).
+- Próxima ação (Aula 021): finalizar os cinco tipos clássicos com Dummy; acrescentar um teste de closeConversation para status CLOSED fornecendo uma função vazia como argumento não utilizado, sem modificar produção. Verificar estado e identidade do objeto retornado, explicar que Dummy não verifica interações e que Spy seria necessário para comprovar ausência de chamada. Um desafio por turno; depois retomar regras de negócio e máquinas de estados.
 
 ## Registro das próximas etapas
 
