@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "lastVerified": "2026-11-23",
-  "lastVerifiedLabel": "23/11/2026",
+  "lastVerified": "2026-11-24",
+  "lastVerifiedLabel": "24/11/2026",
   "sourcesNote": "O radar é atualizado por verificações periódicas; não consulta bancas em tempo real ao abrir a página. Sempre confirme condições e prazos no edital.",
   "contests": [
     {
@@ -1521,6 +1521,66 @@
       "notes": "PSS 2/2026. Inscrições até 18/12/2026 às 17h (Brasília). Jornada 40h presencial. Formação e aceitação do Tecnólogo ADS não verificadas no edital integral.",
       "userStage": "não informado",
       "verified": true
+    },
+    {
+      "agency": "Instituto Federal de Goiás (IFG)",
+      "scope": "GO",
+      "board": "Instituto AOCP",
+      "kind": "Concurso público — estatutário",
+      "status": "inscrições abertas",
+      "applicationStart": "2026-11-24",
+      "applicationEnd": "2026-12-23",
+      "examDate": "2027-02-14",
+      "source": "https://www.ifg.edu.br/institucional/17-ifg/ultimas-noticias/48575-ifg-publica-edital-de-concurso-com-36-vagas-e-vencimentos-de-ate-r-5-2-mil",
+      "priority": "Nacional — TI",
+      "userStage": "não informado",
+      "verified": true,
+      "id": "ifg-2026-401",
+      "role": "Analista de Tecnologia da Informação",
+      "place": "Goiânia — GO (Reitoria)",
+      "salary": 5215.39,
+      "vacancies": "2 vagas reservadas; sem ampla concorrência imediata",
+      "notes": "Edital 001/2026, publicado no DOU em 16/11. Isenção até 25/11 às 16h. Banca: https://www.institutoaocp.org.br/concursos/724. Curso superior em Informática reconhecido pelo MEC; ADS não citado nominalmente, confirmar com banca."
+    },
+    {
+      "agency": "Instituto Federal de Goiás (IFG)",
+      "scope": "GO",
+      "board": "Instituto AOCP",
+      "kind": "Concurso público — estatutário",
+      "status": "inscrições abertas",
+      "applicationStart": "2026-11-24",
+      "applicationEnd": "2026-12-23",
+      "examDate": "2027-02-14",
+      "source": "https://www.ifg.edu.br/institucional/17-ifg/ultimas-noticias/48575-ifg-publica-edital-de-concurso-com-36-vagas-e-vencimentos-de-ate-r-5-2-mil",
+      "priority": "Nacional — TI",
+      "userStage": "não informado",
+      "verified": true,
+      "id": "ifg-2026-310",
+      "role": "Técnico de Tecnologia da Informação",
+      "place": "Goiânia, Luziânia e Reitoria — GO",
+      "salary": 3181.39,
+      "vacancies": "3 vagas",
+      "notes": "Edital 001/2026, publicado no DOU em 16/11. Isenção até 25/11 às 16h. Banca: https://www.institutoaocp.org.br/concursos/724. Médio profissionalizante ou médio completo e técnico na área; ADS isoladamente não confirmado."
+    },
+    {
+      "agency": "Instituto Federal de Goiás (IFG)",
+      "scope": "GO",
+      "board": "Instituto AOCP",
+      "kind": "Concurso público — estatutário",
+      "status": "inscrições abertas",
+      "applicationStart": "2026-11-24",
+      "applicationEnd": "2026-12-23",
+      "examDate": "2027-02-14",
+      "source": "https://www.ifg.edu.br/institucional/17-ifg/ultimas-noticias/48575-ifg-publica-edital-de-concurso-com-36-vagas-e-vencimentos-de-ate-r-5-2-mil",
+      "priority": "Nacional — TI",
+      "userStage": "não informado",
+      "verified": true,
+      "id": "ifg-2026-307",
+      "role": "Técnico de Laboratório — Informática",
+      "place": "Águas Lindas — GO",
+      "salary": 3181.39,
+      "vacancies": "1 vaga",
+      "notes": "Edital 001/2026, publicado no DOU em 16/11. Isenção até 25/11 às 16h. Banca: https://www.institutoaocp.org.br/concursos/724. Médio profissionalizante ou médio completo e técnico na área; ADS isoladamente não confirmado."
     }
   ],
   "watchlist": [
@@ -1763,6 +1823,11 @@
       "name": "TCE-ES PSS 2/2026 — três áreas de TI; inscrições até 18/12",
       "note": "Fonte oficial de 09/11/2026 e página institucional confirmam 15 vagas C# Full Stack, 1 infraestrutura, IA somente CR; R$ 17.645,21, presencial, temporário. Confirmar no edital integral requisitos de formação e pontuação; Tecnólogo ADS não validado.",
       "url": "https://www.tcees.tc.br/processoseletivo/"
+    },
+    {
+      "name": "IFG 001/2026 — isenção até 25/11",
+      "note": "Inscrições abertas em 24/11; isenção até 25/11 às 16h, inscrições até 23/12, prova 14/02/2027. Seis vagas em três cargos de TI.",
+      "url": "https://www.ifg.edu.br/institucional/17-ifg/ultimas-noticias/48575-ifg-publica-edital-de-concurso-com-36-vagas-e-vencimentos-de-ate-r-5-2-mil"
     }
   ]
 }
