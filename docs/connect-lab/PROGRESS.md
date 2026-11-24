@@ -6,10 +6,10 @@ Fonte de verdade do tutor: [currículo e protocolo](index.html). Referência tra
 
 ## Estado atual
 
-- Módulo 01: iniciado (Desafios 001–020 corretos; testes com Mock executados segundo relato).
+- Módulo 01: iniciado (Desafios 001–021 corretos; cinco tipos clássicos de Test Doubles validados em nível introdutório).
 - Módulos 02–12: planejados.
 - Repositório de implementação: projeto local connect-lab; remoto e commits do código ainda não confirmados.
-- Evidências práticas: aluno confirmou execução bem-sucedida do servidor HTTP nativo, roteamento, Express e middleware de logging e proteção simulada de conversas e agrupamento e extração do Router e do middleware de autenticação e do Conversation Service, além do primeiro teste unitário e ciclo TDD completo, testes negativos, experimento manual de mutação, testes de caracterização, seam temporal, Stub, Fake, Spy e Mock, nas Aulas 002–020; sem logs anexados.
+- Evidências práticas: aluno confirmou execução bem-sucedida do servidor HTTP nativo, roteamento, Express e middleware de logging e proteção simulada de conversas e agrupamento e extração do Router e do middleware de autenticação e do Conversation Service, além do primeiro teste unitário e ciclo TDD completo, testes negativos, experimento manual de mutação, testes de caracterização, seam temporal, Stub, Fake, Spy, Mock e Dummy, nas Aulas 002–021; sem logs anexados.
 
 ## Aula 001 — Runtime versus framework
 
@@ -153,6 +153,13 @@ Fonte de verdade do tutor: [currículo e protocolo](index.html). Referência tra
 - Conceitos validados em nível introdutório: Mock, expectativas de argumento e quantidade de chamadas, distinção conceitual de Spy e variação de nomenclatura entre ferramentas. Logs, contagem individual e commit local não apresentados.
 - Referência: [Mock](../engineering-notebook.html#connect-mock).
 - Próxima ação (Aula 021): finalizar os cinco tipos clássicos com Dummy; acrescentar um teste de closeConversation para status CLOSED fornecendo uma função vazia como argumento não utilizado, sem modificar produção. Verificar estado e identidade do objeto retornado, explicar que Dummy não verifica interações e que Spy seria necessário para comprovar ausência de chamada. Um desafio por turno; depois retomar regras de negócio e máquinas de estados.
+
+## Aula 021 — Test Doubles: Dummy
+
+- Evidência 24/11/2026: execução reportada como “Funcionou”; resposta A (substituto fornecido apenas para preencher parâmetro sem uso no cenário é Dummy).
+- Conceitos validados em nível introdutório: Dummy, retorno antecipado, identidade de objetos com assert/strict e diferença entre preencher parâmetro e verificar ausência de interação. Cinco tipos clássicos de Test Doubles concluídos no nível introdutório. Logs, contagem individual e commit local não apresentados.
+- Referência: [Dummy](../engineering-notebook.html#connect-dummy).
+- Próxima ação (Aula 022): introduzir máquina de estados finita para conversas, com WAITING --ASSIGN--> OPEN e OPEN --CLOSE--> CLOSED; transições não previstas preservam estado no exercício. Criar conversations/conversation-state.js com transitionConversation(status, event) e três testes (atribuir, encerrar, atribuição inválida após encerramento). Não modificar serviço existente ou HTTP nesta etapa; regra de atribuição é decisão didática, não requisito confirmado da Plug Social. Um desafio por turno.
 
 ## Registro das próximas etapas
 
