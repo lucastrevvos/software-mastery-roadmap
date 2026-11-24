@@ -6,10 +6,10 @@ Fonte de verdade do tutor: [currículo e protocolo](index.html). Referência tra
 
 ## Estado atual
 
-- Módulo 01: iniciado (Desafios 001–014 corretos; TDD e experimento manual de mutação confirmados pelo aluno).
+- Módulo 01: iniciado (Desafios 001–015 corretos; testes de caracterização executados segundo relato).
 - Módulos 02–12: planejados.
 - Repositório de implementação: projeto local connect-lab; remoto e commits do código ainda não confirmados.
-- Evidências práticas: aluno confirmou execução bem-sucedida do servidor HTTP nativo, roteamento, Express e middleware de logging e proteção simulada de conversas e agrupamento e extração do Router e do middleware de autenticação e do Conversation Service, além do primeiro teste unitário e ciclo TDD completo, testes negativos e experimento manual de mutação, nas Aulas 002–014; sem logs anexados.
+- Evidências práticas: aluno confirmou execução bem-sucedida do servidor HTTP nativo, roteamento, Express e middleware de logging e proteção simulada de conversas e agrupamento e extração do Router e do middleware de autenticação e do Conversation Service, além do primeiro teste unitário e ciclo TDD completo, testes negativos, experimento manual de mutação e testes de caracterização, nas Aulas 002–015; sem logs anexados.
 
 ## Aula 001 — Runtime versus framework
 
@@ -110,6 +110,13 @@ Fonte de verdade do tutor: [currículo e protocolo](index.html). Referência tra
 - Observação do aluno: testar código legado também é um desafio. Incorporar testes de caracterização, identificação de dependências e introdução de seams à trilha de qualidade, sem assumir que o produto da Plug Social é legado.
 - Referência: [Testes negativos e mutação](../engineering-notebook.html#connect-negative-testing).
 - Próxima ação (Aula 015, inserida antes de máquinas de estados): criar exemplo isolado de classificação legada de conversas, observar comportamento existente, registrar testes de caracterização incluindo comportamento surpreendente, distinguir comportamento observado de requisito correto e não alterar a regra sem decisão de negócio. Preservar código atual do produto. Um desafio por turno.
+
+## Aula 015 — Testes de caracterização de código legado
+
+- Evidência 24/11/2026: execução reportada como “Funcionou”; resposta D (caracterizar comportamento existente, investigar requisitos e decidir alteração conscientemente).
+- Conceitos validados em nível introdutório: characterization testing, distinção de comportamento observado e desejado, valores-limite (30/31 minutos). Contagem individual de testes, mudança deliberada da fronteira e commit local não confirmados.
+- Referência: [Testes de caracterização](../engineering-notebook.html#connect-characterization).
+- Próxima ação (Aula 016): introduzir um seam em função legada de cálculo de prioridade dependente de Date.now(), preservando chamadas existentes com parâmetro now padrão; usar relógio controlado em teste determinístico sem sleep ou mock global. Explicar injeção de dependência por parâmetro e diferenciar seam de test double; não alterar regras anteriores nem avançar para máquinas de estados ainda. Um desafio por turno.
 
 ## Registro das próximas etapas
 
