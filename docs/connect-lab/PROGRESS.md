@@ -6,10 +6,10 @@ Fonte de verdade do tutor: [currículo e protocolo](index.html). Referência tra
 
 ## Estado atual
 
-- Módulo 01: iniciado (Desafios 001 e 002 corretos; servidor HTTP nativo executado segundo relato).
+- Módulo 01: iniciado (Desafios 001–003 corretos; servidor e roteamento HTTP nativos executados segundo relato).
 - Módulos 02–12: planejados.
 - Repositório de implementação: projeto local connect-lab; remoto e commits do código ainda não confirmados.
-- Evidências práticas: aluno confirmou execução bem-sucedida do servidor HTTP nativo na Aula 002; sem logs anexados.
+- Evidências práticas: aluno confirmou execução bem-sucedida do servidor HTTP nativo e roteamento nas Aulas 002–003; sem logs anexados.
 
 ## Aula 001 — Runtime versus framework
 
@@ -24,6 +24,14 @@ Fonte de verdade do tutor: [currículo e protocolo](index.html). Referência tra
 - Conceitos validados no nível introdutório: listener de requisição, req/res, escuta na porta e resposta HTTP. Não implica thread por requisição.
 - Referência: [Callback e eventos HTTP](../engineering-notebook.html#connect-http-callback).
 - Próxima ação (Aula 003): implementar roteamento manual por método e caminho, GET /health com 200 e fallback 404; testar as duas respostas; desafio de compreensão. Express somente depois.
+
+## Aula 003 — Roteamento HTTP nativo
+
+- Evidência: execução reportada como “Funcionou”; resposta C (POST /health retorna 404 no código atual).
+- Conceito validado no nível introdutório: seleção de handler por método e caminho. Explicada distinção entre fallback 404 e 405 para método não permitido; query string é uma limitação da comparação literal.
+- Commit local sugerido anteriormente, ainda não confirmado pelo aluno.
+- Referência: [Roteamento HTTP](../engineering-notebook.html#connect-http-routing).
+- Próxima ação (Aula 004): reproduzir o mesmo contrato GET /health e fallback 404 com Express, instalar a dependência npm e comparar a abstração com o servidor nativo. Testar antes de avançar; um desafio por turno.
 
 ## Registro das próximas etapas
 
