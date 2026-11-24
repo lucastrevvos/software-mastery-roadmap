@@ -6,10 +6,10 @@ Fonte de verdade do tutor: [currículo e protocolo](index.html). Referência tra
 
 ## Estado atual
 
-- Módulo 01: iniciado (Desafios 001–007 corretos; middleware de rota executado segundo relato).
+- Módulo 01: iniciado (Desafios 001–008 corretos; Router privado executado segundo relato).
 - Módulos 02–12: planejados.
 - Repositório de implementação: projeto local connect-lab; remoto e commits do código ainda não confirmados.
-- Evidências práticas: aluno confirmou execução bem-sucedida do servidor HTTP nativo, roteamento, Express e middleware de logging e proteção simulada de conversas nas Aulas 002–007; sem logs anexados.
+- Evidências práticas: aluno confirmou execução bem-sucedida do servidor HTTP nativo, roteamento, Express e middleware de logging e proteção simulada de conversas e agrupamento de rotas nas Aulas 002–008; sem logs anexados.
 
 ## Aula 001 — Runtime versus framework
 
@@ -60,6 +60,13 @@ Fonte de verdade do tutor: [currículo e protocolo](index.html). Referência tra
 - Conceitos validados no nível introdutório: middleware de rota, composição e reutilização. Commit local e resultados individuais dos quatro testes não confirmados.
 - Referência: [Escopo de middleware](../engineering-notebook.html#connect-middleware-scope).
 - Próxima ação (Aula 008): usar express.Router(), registrar requireAuth no início do grupo privado, montar em /api e incluir GET /conversations e GET /customers no grupo. Manter GET /health público e fallback 404 externo. Testar acesso com e sem token fictício; não expor dados reais. Um desafio por turno.
+
+## Aula 008 — Router e agrupamento de rotas
+
+- Evidência 24/11/2026: execução reportada como “Funcionou”; resposta C (rota /api/messages registrada depois de requireAuth no Router retorna 401 sem token).
+- Conceitos validados no nível introdutório: agrupamento, prefixo de montagem e proteção por padrão no grupo. Token simulado; commit local e resultados individuais dos testes não confirmados.
+- Referência: [Agrupamento de rotas](../engineering-notebook.html#connect-router-groups).
+- Próxima ação (Aula 009): extrair o Router privado, incluindo sua proteção simulada e handlers existentes, para api-router.js; exportar com module.exports e importar em server.js via require. Preservar o contrato HTTP e testar regressão; introduzir Separation of Concerns, módulos CommonJS e refatoração sem criar camadas adicionais. Um desafio por turno.
 
 ## Registro das próximas etapas
 
