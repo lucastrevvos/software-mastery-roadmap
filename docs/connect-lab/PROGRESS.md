@@ -6,10 +6,10 @@ Fonte de verdade do tutor: [currículo e protocolo](index.html). Referência tra
 
 ## Estado atual
 
-- Módulo 01: iniciado (Desafios 001–016 corretos; seam temporal e testes determinísticos executados segundo relato).
+- Módulo 01: iniciado (Desafios 001–017 corretos; testes com Stub executados segundo relato).
 - Módulos 02–12: planejados.
 - Repositório de implementação: projeto local connect-lab; remoto e commits do código ainda não confirmados.
-- Evidências práticas: aluno confirmou execução bem-sucedida do servidor HTTP nativo, roteamento, Express e middleware de logging e proteção simulada de conversas e agrupamento e extração do Router e do middleware de autenticação e do Conversation Service, além do primeiro teste unitário e ciclo TDD completo, testes negativos, experimento manual de mutação, testes de caracterização e seam temporal, nas Aulas 002–016; sem logs anexados.
+- Evidências práticas: aluno confirmou execução bem-sucedida do servidor HTTP nativo, roteamento, Express e middleware de logging e proteção simulada de conversas e agrupamento e extração do Router e do middleware de autenticação e do Conversation Service, além do primeiro teste unitário e ciclo TDD completo, testes negativos, experimento manual de mutação, testes de caracterização, seam temporal e Stub, nas Aulas 002–017; sem logs anexados.
 
 ## Aula 001 — Runtime versus framework
 
@@ -124,6 +124,13 @@ Fonte de verdade do tutor: [currículo e protocolo](index.html). Referência tra
 - Conceitos validados em nível introdutório: seam, fornecimento de timestamp por parâmetro e teste determinístico; distinção entre ponto de substituição e substituto. Contagem individual dos testes, logs e commit local não apresentados.
 - Referência: [Test Seams](../engineering-notebook.html#connect-test-seams).
 - Próxima ação (Aula 017): introduzir Test Doubles focando somente Stub; criar legacy/customer-priority.js com getPriorityForCustomer(customerId, waitingMinutes, getCustomerType), reutilizando calculatePriority da Aula 015. Testar com função síncrona injetada que devolve VIP ou REGULAR; não chamar API/banco real, não introduzir framework de mocks. Distinguir retorno predefinido de verificação de interações. Manter demais tipos de double para aulas posteriores. Um desafio por turno.
+
+## Aula 017 — Test Doubles: Stub
+
+- Evidência 24/11/2026: execução reportada como “Funcionou”; resposta C (função que fornece saldo predefinido é um Stub).
+- Conceitos validados em nível introdutório: test double, Stub e resposta controlada por função injetada; distinção de verificação de interações. Consulta CRM simulada e síncrona. Contagem individual dos testes, logs e commit local não apresentados.
+- Referência: [Stub](../engineering-notebook.html#connect-stub).
+- Próxima ação (Aula 018): introduzir Fake com repositório de clientes em memória (Map, save e getCustomerType), usado exclusivamente em teste de getPriorityForCustomer. Verificar a mudança de REGULAR para VIP no mesmo cliente e manter a suíte anterior. Não adicionar banco real, frameworks nem outros tipos de double; explicitar que Fake não reproduz garantias reais de persistência. Um desafio por turno.
 
 ## Registro das próximas etapas
 
