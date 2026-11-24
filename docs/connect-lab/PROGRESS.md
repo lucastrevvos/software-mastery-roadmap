@@ -6,10 +6,10 @@ Fonte de verdade do tutor: [currículo e protocolo](index.html). Referência tra
 
 ## Estado atual
 
-- Módulo 01: iniciado (Desafios 001–011 corretos; Conversation Service extraído segundo relato).
+- Módulo 01: iniciado (Desafios 001–012 corretos; primeiro teste unitário executado segundo relato).
 - Módulos 02–12: planejados.
 - Repositório de implementação: projeto local connect-lab; remoto e commits do código ainda não confirmados.
-- Evidências práticas: aluno confirmou execução bem-sucedida do servidor HTTP nativo, roteamento, Express e middleware de logging e proteção simulada de conversas e agrupamento e extração do Router e do middleware de autenticação e do Conversation Service nas Aulas 002–011; sem logs anexados.
+- Evidências práticas: aluno confirmou execução bem-sucedida do servidor HTTP nativo, roteamento, Express e middleware de logging e proteção simulada de conversas e agrupamento e extração do Router e do middleware de autenticação e do Conversation Service, além do primeiro teste unitário, nas Aulas 002–012; sem logs anexados.
 
 ## Aula 001 — Runtime versus framework
 
@@ -88,6 +88,13 @@ Fonte de verdade do tutor: [currículo e protocolo](index.html). Referência tra
 - Conceitos validados em nível introdutório: coesão, acoplamento e separação da lógica de consulta do transporte HTTP. listConversations() extraída segundo relato; commit local e saídas individuais não confirmados.
 - Referência: [Coesão e acoplamento](../engineering-notebook.html#connect-cohesion-coupling).
 - Próxima ação (Aula 012): criar teste unitário com node:test e node:assert/strict para listConversations(), usando Arrange–Act–Assert e node --test; observar uma falha deliberada e restaurar o teste. Não instalar dependências adicionais. Um desafio por turno.
+
+## Aula 012 — Testes unitários e AAA
+
+- Evidência 24/11/2026: execução reportada como “Funcionou”; resposta C (acoplamento aos objetos HTTP aumenta preparação/simulação necessária para teste isolado).
+- Conceitos validados em nível introdutório: teste unitário isolado, AAA, assertions e relação com desacoplamento; node:test e node:assert/strict apresentados. Resultado individual do experimento de falha/restauração e commit local não confirmados.
+- Referência: [Testes unitários e AAA](../engineering-notebook.html#connect-unit-testing-aaa).
+- Próxima ação (Aula 013): primeiro ciclo TDD Red–Green–Refactor, adicionando teste para canCloseConversation(status) que permite encerrar apenas conversa OPEN. Ver falha pela ausência da função; implementar o mínimo, executar toda a suíte e avaliar necessidade de refatorar. Sem alterar endpoints ou persistir estado ainda. Um desafio por turno.
 
 ## Registro das próximas etapas
 
