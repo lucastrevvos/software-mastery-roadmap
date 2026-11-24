@@ -6,10 +6,10 @@ Fonte de verdade do tutor: [currículo e protocolo](index.html). Referência tra
 
 ## Estado atual
 
-- Módulo 01: iniciado (Desafios 001–005 corretos; middleware de logging executado segundo relato).
+- Módulo 01: iniciado (Desafios 001–006 corretos; endpoint de conversas com proteção simulada executado segundo relato).
 - Módulos 02–12: planejados.
 - Repositório de implementação: projeto local connect-lab; remoto e commits do código ainda não confirmados.
-- Evidências práticas: aluno confirmou execução bem-sucedida do servidor HTTP nativo, roteamento, Express e middleware de logging nas Aulas 002–005; sem logs anexados.
+- Evidências práticas: aluno confirmou execução bem-sucedida do servidor HTTP nativo, roteamento, Express e middleware de logging e proteção simulada de conversas nas Aulas 002–006; sem logs anexados.
 
 ## Aula 001 — Runtime versus framework
 
@@ -46,6 +46,13 @@ Fonte de verdade do tutor: [currículo e protocolo](index.html). Referência tra
 - Conceitos validados no nível introdutório: next(), responsabilidades transversais e short-circuiting. Logging testado segundo relato; autenticação 401 analisada teoricamente. Commit local não confirmado.
 - Referência: [Middleware pipeline](../engineering-notebook.html#connect-middleware-pipeline).
 - Próxima ação (Aula 006): experimentar ordem de registro e interrupção antecipada em rota protegida GET /conversations, usando cabeçalho fictício x-lab-token exclusivamente para demonstração local; manter /health público, testar 401 e 200 e verificar posicionamento do middleware. Não tratar token fixo como segurança real.
+
+## Aula 006 — Ordem dos middlewares e acesso protegido
+
+- Evidência: execução reportada como “Funcionou”; resposta C (handler anterior ao middleware de autenticação permite acesso sem a verificação).
+- Conceitos validados no nível introdutório: ordem de registro, rota pública, rota protegida e risco de controle de acesso. Token fictício exclusivamente local; JWT ainda não implementado. Commit local não confirmado.
+- Referência: [Ordem do pipeline](../engineering-notebook.html#connect-middleware-order).
+- Próxima ação (Aula 007): extrair requireAuth como função e registrá-la explicitamente em GET /conversations antes do handler, remover autenticação global; verificar 200 público, 401 protegido sem token, 200 com token e 404 para rota inexistente sem token. Um desafio por turno.
 
 ## Registro das próximas etapas
 
