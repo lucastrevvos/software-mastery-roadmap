@@ -6,10 +6,10 @@ Fonte de verdade do tutor: [currículo e protocolo](index.html). Referência tra
 
 ## Estado atual
 
-- Módulo 01: iniciado (Desafios 001–017 corretos; testes com Stub executados segundo relato).
+- Módulo 01: iniciado (Desafios 001–018 corretos; testes com Fake executados segundo relato).
 - Módulos 02–12: planejados.
 - Repositório de implementação: projeto local connect-lab; remoto e commits do código ainda não confirmados.
-- Evidências práticas: aluno confirmou execução bem-sucedida do servidor HTTP nativo, roteamento, Express e middleware de logging e proteção simulada de conversas e agrupamento e extração do Router e do middleware de autenticação e do Conversation Service, além do primeiro teste unitário e ciclo TDD completo, testes negativos, experimento manual de mutação, testes de caracterização, seam temporal e Stub, nas Aulas 002–017; sem logs anexados.
+- Evidências práticas: aluno confirmou execução bem-sucedida do servidor HTTP nativo, roteamento, Express e middleware de logging e proteção simulada de conversas e agrupamento e extração do Router e do middleware de autenticação e do Conversation Service, além do primeiro teste unitário e ciclo TDD completo, testes negativos, experimento manual de mutação, testes de caracterização, seam temporal, Stub e Fake, nas Aulas 002–018; sem logs anexados.
 
 ## Aula 001 — Runtime versus framework
 
@@ -131,6 +131,13 @@ Fonte de verdade do tutor: [currículo e protocolo](index.html). Referência tra
 - Conceitos validados em nível introdutório: test double, Stub e resposta controlada por função injetada; distinção de verificação de interações. Consulta CRM simulada e síncrona. Contagem individual dos testes, logs e commit local não apresentados.
 - Referência: [Stub](../engineering-notebook.html#connect-stub).
 - Próxima ação (Aula 018): introduzir Fake com repositório de clientes em memória (Map, save e getCustomerType), usado exclusivamente em teste de getPriorityForCustomer. Verificar a mudança de REGULAR para VIP no mesmo cliente e manter a suíte anterior. Não adicionar banco real, frameworks nem outros tipos de double; explicitar que Fake não reproduz garantias reais de persistência. Um desafio por turno.
+
+## Aula 018 — Test Doubles: Fake
+
+- Evidência 24/11/2026: execução reportada como “Funcionou”; resposta D (repositório funcional em memória é um Fake).
+- Conceitos validados em nível introdutório: Fake, estado em memória, Map chave-valor, diferença de Stub e limites de simulação de banco. Contagem individual dos testes, logs e commit local não apresentados.
+- Referência: [Fake](../engineering-notebook.html#connect-fake).
+- Próxima ação (Aula 019): introduzir Spy manual com array de chamadas; criar função closeConversation(conversation, notifyCustomer) em conversations/conversation-service.js que retorna nova conversa CLOSED para OPEN e solicita notificação com ID; para status não permitido retorna a conversa original sem notificar. Reutilizar canCloseConversation; adicionar dois testes de interação para quantidade, argumento e ausência de chamada; não integrar ao HTTP nem enviar notificações reais. Um desafio por turno.
 
 ## Registro das próximas etapas
 
