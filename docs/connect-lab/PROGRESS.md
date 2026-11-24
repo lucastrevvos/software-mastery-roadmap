@@ -6,10 +6,10 @@ Fonte de verdade do tutor: [currículo e protocolo](index.html). Referência tra
 
 ## Estado atual
 
-- Módulo 01: iniciado (Desafios 001–003 corretos; servidor e roteamento HTTP nativos executados segundo relato).
+- Módulo 01: iniciado (Desafios 001–004 corretos; migração para Express executada segundo relato).
 - Módulos 02–12: planejados.
 - Repositório de implementação: projeto local connect-lab; remoto e commits do código ainda não confirmados.
-- Evidências práticas: aluno confirmou execução bem-sucedida do servidor HTTP nativo e roteamento nas Aulas 002–003; sem logs anexados.
+- Evidências práticas: aluno confirmou execução bem-sucedida do servidor HTTP nativo, roteamento e migração para Express nas Aulas 002–004; sem logs anexados.
 
 ## Aula 001 — Runtime versus framework
 
@@ -32,6 +32,13 @@ Fonte de verdade do tutor: [currículo e protocolo](index.html). Referência tra
 - Commit local sugerido anteriormente, ainda não confirmado pelo aluno.
 - Referência: [Roteamento HTTP](../engineering-notebook.html#connect-http-routing).
 - Próxima ação (Aula 004): reproduzir o mesmo contrato GET /health e fallback 404 com Express, instalar a dependência npm e comparar a abstração com o servidor nativo. Testar antes de avançar; um desafio por turno.
+
+## Aula 004 — Express e abstração HTTP
+
+- Evidência: execução reportada como “Funcionou”; resposta C (roteador do Express seleciona o handler).
+- Conceitos validados no nível introdutório: abstração do roteamento, integração Express/Node.js; npm, manifesto e lockfile apresentados. Commit local não confirmado.
+- Referência: [Framework HTTP e dependências](../engineering-notebook.html#connect-express-abstraction).
+- Próxima ação (Aula 005): adicionar middleware global de logging antes das rotas; observar ordem de execução e o papel de next(); testar GET /health e GET /clientes. Um desafio por turno.
 
 ## Registro das próximas etapas
 
