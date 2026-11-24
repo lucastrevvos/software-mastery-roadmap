@@ -6,10 +6,10 @@ Fonte de verdade do tutor: [currículo e protocolo](index.html). Referência tra
 
 ## Estado atual
 
-- Módulo 01: iniciado (Desafios 001–012 corretos; primeiro teste unitário executado segundo relato).
+- Módulo 01: iniciado (Desafios 001–013 corretos; primeiro ciclo TDD confirmado pelo aluno).
 - Módulos 02–12: planejados.
 - Repositório de implementação: projeto local connect-lab; remoto e commits do código ainda não confirmados.
-- Evidências práticas: aluno confirmou execução bem-sucedida do servidor HTTP nativo, roteamento, Express e middleware de logging e proteção simulada de conversas e agrupamento e extração do Router e do middleware de autenticação e do Conversation Service, além do primeiro teste unitário, nas Aulas 002–012; sem logs anexados.
+- Evidências práticas: aluno confirmou execução bem-sucedida do servidor HTTP nativo, roteamento, Express e middleware de logging e proteção simulada de conversas e agrupamento e extração do Router e do middleware de autenticação e do Conversation Service, além do primeiro teste unitário e ciclo TDD completo, nas Aulas 002–013; sem logs anexados.
 
 ## Aula 001 — Runtime versus framework
 
@@ -95,6 +95,13 @@ Fonte de verdade do tutor: [currículo e protocolo](index.html). Referência tra
 - Conceitos validados em nível introdutório: teste unitário isolado, AAA, assertions e relação com desacoplamento; node:test e node:assert/strict apresentados. Resultado individual do experimento de falha/restauração e commit local não confirmados.
 - Referência: [Testes unitários e AAA](../engineering-notebook.html#connect-unit-testing-aaa).
 - Próxima ação (Aula 013): primeiro ciclo TDD Red–Green–Refactor, adicionando teste para canCloseConversation(status) que permite encerrar apenas conversa OPEN. Ver falha pela ausência da função; implementar o mínimo, executar toda a suíte e avaliar necessidade de refatorar. Sem alterar endpoints ou persistir estado ainda. Um desafio por turno.
+
+## Aula 013 — TDD: Red–Green–Refactor
+
+- Evidência 24/11/2026: execução reportada como “Funcionou”; resposta B. Aluno confirmou explicitamente: escreveu o teste primeiro, observou a falha, implementou a função, observou aprovação da suíte e avaliou a necessidade de refatoração.
+- Conceito validado em nível introdutório: TDD como processo de desenvolvimento; regra canCloseConversation(status) permite OPEN. Primeiro teste cobre apenas OPEN; casos negativos ainda pendentes. Logs e commit local não apresentados.
+- Referência: [TDD](../engineering-notebook.html#connect-tdd).
+- Próxima ação (Aula 014): acrescentar dois testes negativos WAITING e CLOSED, executar suíte, experimentar temporariamente implementação defeituosa return true e observar que os novos testes detectam a falha, restaurar regra e executar novamente. Explicar que é ampliação de cobertura e experimento manual de mutação, não novo ciclo TDD estrito. Um desafio por turno.
 
 ## Registro das próximas etapas
 
