@@ -6,10 +6,10 @@ Fonte de verdade do tutor: [currículo e protocolo](index.html). Referência tra
 
 ## Estado atual
 
-- Módulo 01: iniciado (Desafios 001–013 corretos; primeiro ciclo TDD confirmado pelo aluno).
+- Módulo 01: iniciado (Desafios 001–014 corretos; TDD e experimento manual de mutação confirmados pelo aluno).
 - Módulos 02–12: planejados.
 - Repositório de implementação: projeto local connect-lab; remoto e commits do código ainda não confirmados.
-- Evidências práticas: aluno confirmou execução bem-sucedida do servidor HTTP nativo, roteamento, Express e middleware de logging e proteção simulada de conversas e agrupamento e extração do Router e do middleware de autenticação e do Conversation Service, além do primeiro teste unitário e ciclo TDD completo, nas Aulas 002–013; sem logs anexados.
+- Evidências práticas: aluno confirmou execução bem-sucedida do servidor HTTP nativo, roteamento, Express e middleware de logging e proteção simulada de conversas e agrupamento e extração do Router e do middleware de autenticação e do Conversation Service, além do primeiro teste unitário e ciclo TDD completo, testes negativos e experimento manual de mutação, nas Aulas 002–014; sem logs anexados.
 
 ## Aula 001 — Runtime versus framework
 
@@ -102,6 +102,14 @@ Fonte de verdade do tutor: [currículo e protocolo](index.html). Referência tra
 - Conceito validado em nível introdutório: TDD como processo de desenvolvimento; regra canCloseConversation(status) permite OPEN. Primeiro teste cobre apenas OPEN; casos negativos ainda pendentes. Logs e commit local não apresentados.
 - Referência: [TDD](../engineering-notebook.html#connect-tdd).
 - Próxima ação (Aula 014): acrescentar dois testes negativos WAITING e CLOSED, executar suíte, experimentar temporariamente implementação defeituosa return true e observar que os novos testes detectam a falha, restaurar regra e executar novamente. Explicar que é ampliação de cobertura e experimento manual de mutação, não novo ciclo TDD estrito. Um desafio por turno.
+
+## Aula 014 — Testes positivos, negativos e mutação
+
+- Evidência 24/11/2026: execução reportada como “Funcionou”; resposta C. Aluno confirmou adição dos testes negativos, quatro testes aprovados, introdução de defeito com falhas e restauração da regra correta.
+- Conceito validado em nível introdutório: testes cobrem cenários/assertions, e uma suíte verde não garante ausência de bugs; mutação manual ajuda a avaliar capacidade de detecção. Logs e commit local não apresentados.
+- Observação do aluno: testar código legado também é um desafio. Incorporar testes de caracterização, identificação de dependências e introdução de seams à trilha de qualidade, sem assumir que o produto da Plug Social é legado.
+- Referência: [Testes negativos e mutação](../engineering-notebook.html#connect-negative-testing).
+- Próxima ação (Aula 015, inserida antes de máquinas de estados): criar exemplo isolado de classificação legada de conversas, observar comportamento existente, registrar testes de caracterização incluindo comportamento surpreendente, distinguir comportamento observado de requisito correto e não alterar a regra sem decisão de negócio. Preservar código atual do produto. Um desafio por turno.
 
 ## Registro das próximas etapas
 
