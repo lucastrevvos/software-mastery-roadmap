@@ -1,15 +1,15 @@
 # Connect Lab — progresso e retomada
 
-Atualizado: 2026-11-23
+Atualizado: 2026-11-24
 
 Fonte de verdade do tutor: [currículo e protocolo](index.html). Referência transversal: [Caderno do Engenheiro](../engineering-notebook.html). Não presumir domínio, execução de código ou sincronização automática.
 
 ## Estado atual
 
-- Módulo 01: iniciado (Desafios 001–006 corretos; endpoint de conversas com proteção simulada executado segundo relato).
+- Módulo 01: iniciado (Desafios 001–007 corretos; middleware de rota executado segundo relato).
 - Módulos 02–12: planejados.
 - Repositório de implementação: projeto local connect-lab; remoto e commits do código ainda não confirmados.
-- Evidências práticas: aluno confirmou execução bem-sucedida do servidor HTTP nativo, roteamento, Express e middleware de logging e proteção simulada de conversas nas Aulas 002–006; sem logs anexados.
+- Evidências práticas: aluno confirmou execução bem-sucedida do servidor HTTP nativo, roteamento, Express e middleware de logging e proteção simulada de conversas nas Aulas 002–007; sem logs anexados.
 
 ## Aula 001 — Runtime versus framework
 
@@ -53,6 +53,13 @@ Fonte de verdade do tutor: [currículo e protocolo](index.html). Referência tra
 - Conceitos validados no nível introdutório: ordem de registro, rota pública, rota protegida e risco de controle de acesso. Token fictício exclusivamente local; JWT ainda não implementado. Commit local não confirmado.
 - Referência: [Ordem do pipeline](../engineering-notebook.html#connect-middleware-order).
 - Próxima ação (Aula 007): extrair requireAuth como função e registrá-la explicitamente em GET /conversations antes do handler, remover autenticação global; verificar 200 público, 401 protegido sem token, 200 com token e 404 para rota inexistente sem token. Um desafio por turno.
+
+## Aula 007 — Escopo de middleware e composição
+
+- Evidência 24/11/2026: execução reportada como “Funcionou”; resposta B (GET /customers sem associação a requireAuth não está protegido).
+- Conceitos validados no nível introdutório: middleware de rota, composição e reutilização. Commit local e resultados individuais dos quatro testes não confirmados.
+- Referência: [Escopo de middleware](../engineering-notebook.html#connect-middleware-scope).
+- Próxima ação (Aula 008): usar express.Router(), registrar requireAuth no início do grupo privado, montar em /api e incluir GET /conversations e GET /customers no grupo. Manter GET /health público e fallback 404 externo. Testar acesso com e sem token fictício; não expor dados reais. Um desafio por turno.
 
 ## Registro das próximas etapas
 
