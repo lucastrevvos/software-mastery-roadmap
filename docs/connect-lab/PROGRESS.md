@@ -6,10 +6,10 @@ Fonte de verdade do tutor: [currículo e protocolo](index.html). Referência tra
 
 ## Estado atual
 
-- Módulo 01: iniciado (Desafios 001–010 corretos; extração de requireAuth executada segundo relato).
+- Módulo 01: iniciado (Desafios 001–011 corretos; Conversation Service extraído segundo relato).
 - Módulos 02–12: planejados.
 - Repositório de implementação: projeto local connect-lab; remoto e commits do código ainda não confirmados.
-- Evidências práticas: aluno confirmou execução bem-sucedida do servidor HTTP nativo, roteamento, Express e middleware de logging e proteção simulada de conversas e agrupamento e extração do Router e do middleware de autenticação nas Aulas 002–010; sem logs anexados.
+- Evidências práticas: aluno confirmou execução bem-sucedida do servidor HTTP nativo, roteamento, Express e middleware de logging e proteção simulada de conversas e agrupamento e extração do Router e do middleware de autenticação e do Conversation Service nas Aulas 002–011; sem logs anexados.
 
 ## Aula 001 — Runtime versus framework
 
@@ -81,6 +81,13 @@ Fonte de verdade do tutor: [currículo e protocolo](index.html). Referência tra
 - Conceito validado em nível introdutório: SRP, distinção de SoC e extração de requireAuth para middleware/require-auth.js. Token fictício apenas local; commit local e resultados individuais dos testes não confirmados.
 - Referência: [SRP](../engineering-notebook.html#connect-srp).
 - Próxima ação (Aula 011): introduzir coesão e acoplamento por meio da extração de dados e lógica de consulta de conversas para conversations/conversation-service.js; exportar listConversations(), sem dependência de Express, manter handler responsável pela resposta HTTP e dados atuais. Testar função diretamente e endpoint com token; explicar que dependências explícitas ainda existem e não são necessariamente ruins. Um desafio por turno.
+
+## Aula 011 — Coesão e acoplamento
+
+- Evidência 24/11/2026: execução reportada como “Funcionou”; resposta D (Service não depende diretamente dos componentes HTTP do Express).
+- Conceitos validados em nível introdutório: coesão, acoplamento e separação da lógica de consulta do transporte HTTP. listConversations() extraída segundo relato; commit local e saídas individuais não confirmados.
+- Referência: [Coesão e acoplamento](../engineering-notebook.html#connect-cohesion-coupling).
+- Próxima ação (Aula 012): criar teste unitário com node:test e node:assert/strict para listConversations(), usando Arrange–Act–Assert e node --test; observar uma falha deliberada e restaurar o teste. Não instalar dependências adicionais. Um desafio por turno.
 
 ## Registro das próximas etapas
 
