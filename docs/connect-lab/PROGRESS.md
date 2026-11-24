@@ -6,10 +6,10 @@ Fonte de verdade do tutor: [currículo e protocolo](index.html). Referência tra
 
 ## Estado atual
 
-- Módulo 01: iniciado (Desafios 001–021 corretos; cinco tipos clássicos de Test Doubles validados em nível introdutório).
+- Módulo 01: iniciado (Desafios 001–022 corretos; FSM de conversas executada segundo relato).
 - Módulos 02–12: planejados.
 - Repositório de implementação: projeto local connect-lab; remoto e commits do código ainda não confirmados.
-- Evidências práticas: aluno confirmou execução bem-sucedida do servidor HTTP nativo, roteamento, Express e middleware de logging e proteção simulada de conversas e agrupamento e extração do Router e do middleware de autenticação e do Conversation Service, além do primeiro teste unitário e ciclo TDD completo, testes negativos, experimento manual de mutação, testes de caracterização, seam temporal, Stub, Fake, Spy, Mock e Dummy, nas Aulas 002–021; sem logs anexados.
+- Evidências práticas: aluno confirmou execução bem-sucedida do servidor HTTP nativo, roteamento, Express e middleware de logging e proteção simulada de conversas e agrupamento e extração do Router e do middleware de autenticação e do Conversation Service, além do primeiro teste unitário e ciclo TDD completo, testes negativos, experimento manual de mutação, testes de caracterização, seam temporal, Stub, Fake, Spy, Mock, Dummy e FSM, nas Aulas 002–022; sem logs anexados.
 
 ## Aula 001 — Runtime versus framework
 
@@ -160,6 +160,14 @@ Fonte de verdade do tutor: [currículo e protocolo](index.html). Referência tra
 - Conceitos validados em nível introdutório: Dummy, retorno antecipado, identidade de objetos com assert/strict e diferença entre preencher parâmetro e verificar ausência de interação. Cinco tipos clássicos de Test Doubles concluídos no nível introdutório. Logs, contagem individual e commit local não apresentados.
 - Referência: [Dummy](../engineering-notebook.html#connect-dummy).
 - Próxima ação (Aula 022): introduzir máquina de estados finita para conversas, com WAITING --ASSIGN--> OPEN e OPEN --CLOSE--> CLOSED; transições não previstas preservam estado no exercício. Criar conversations/conversation-state.js com transitionConversation(status, event) e três testes (atribuir, encerrar, atribuição inválida após encerramento). Não modificar serviço existente ou HTTP nesta etapa; regra de atribuição é decisão didática, não requisito confirmado da Plug Social. Um desafio por turno.
+
+## Aula 022 — Finite State Machine
+
+- Evidência 24/11/2026: execução reportada como “Funcionou”; resposta C (WAITING + CLOSE preserva WAITING; ASSIGN leva a OPEN; CLOSE leva a CLOSED).
+- Conceitos validados em nível introdutório: estado, evento, transição permitida, transição inválida preservando estado. Logs, contagem individual e commit local não apresentados.
+- Direção do produto reafirmada pelo aluno: construir plataforma omnichannel própria inspirada nas funcionalidades públicas da Plug Social, com evolução real de backend, interface Angular, canais, mensagens em tempo real, filas, persistência, automação e IA. Preservar os 12 módulos e o Método DECA (conceito primeiro, implementação depois, transferência por último; um pequeno passo por turno). Não alegar conhecimento da arquitetura proprietária; integrações reais dependem de acesso e credenciais.
+- Referência: [FSM](../engineering-notebook.html#connect-fsm).
+- Próxima ação (Aula 023): refatorar transitionConversation em tabela de transições com Map aninhado e fallback via optional chaining e nullish coalescing; preservar contrato e estados, executar testes existentes, acrescentar caso WAITING + CLOSE caso ausente. Não alterar Service ou HTTP. Um desafio por turno.
 
 ## Registro das próximas etapas
 
