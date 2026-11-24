@@ -6,10 +6,10 @@ Fonte de verdade do tutor: [currículo e protocolo](index.html). Referência tra
 
 ## Estado atual
 
-- Módulo 01: iniciado (Desafios 001–008 corretos; Router privado executado segundo relato).
+- Módulo 01: iniciado (Desafios 001–009 corretos; extração do Router executada segundo relato).
 - Módulos 02–12: planejados.
 - Repositório de implementação: projeto local connect-lab; remoto e commits do código ainda não confirmados.
-- Evidências práticas: aluno confirmou execução bem-sucedida do servidor HTTP nativo, roteamento, Express e middleware de logging e proteção simulada de conversas e agrupamento de rotas nas Aulas 002–008; sem logs anexados.
+- Evidências práticas: aluno confirmou execução bem-sucedida do servidor HTTP nativo, roteamento, Express e middleware de logging e proteção simulada de conversas e agrupamento e extração do Router nas Aulas 002–009; sem logs anexados.
 
 ## Aula 001 — Runtime versus framework
 
@@ -67,6 +67,13 @@ Fonte de verdade do tutor: [currículo e protocolo](index.html). Referência tra
 - Conceitos validados no nível introdutório: agrupamento, prefixo de montagem e proteção por padrão no grupo. Token simulado; commit local e resultados individuais dos testes não confirmados.
 - Referência: [Agrupamento de rotas](../engineering-notebook.html#connect-router-groups).
 - Próxima ação (Aula 009): extrair o Router privado, incluindo sua proteção simulada e handlers existentes, para api-router.js; exportar com module.exports e importar em server.js via require. Preservar o contrato HTTP e testar regressão; introduzir Separation of Concerns, módulos CommonJS e refatoração sem criar camadas adicionais. Um desafio por turno.
+
+## Aula 009 — Separation of Concerns e CommonJS
+
+- Evidência 24/11/2026: execução reportada como “Funcionou”; resposta A (refatoração preserva comportamento observável).
+- Conceitos apresentados e validados em nível introdutório: SoC, refatoração e módulos CommonJS. Router extraído para api-router.js segundo relato; commit local e resultados individuais dos testes não confirmados.
+- Referência: [SoC e refatoração](../engineering-notebook.html#connect-separation-of-concerns).
+- Próxima ação (Aula 010): extrair requireAuth para middleware/require-auth.js, manter Router e handlers atuais, explicar SRP como razão de mudança associada a uma responsabilidade/ator e distinguir de SoC; preservar endpoints e testar 401/200. Um desafio por turno.
 
 ## Registro das próximas etapas
 
