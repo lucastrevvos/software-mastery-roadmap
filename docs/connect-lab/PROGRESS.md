@@ -6,10 +6,10 @@ Fonte de verdade do tutor: [currículo e protocolo](index.html). Referência tra
 
 ## Estado atual
 
-- Módulo 01: iniciado (Desafios 001–004 corretos; migração para Express executada segundo relato).
+- Módulo 01: iniciado (Desafios 001–005 corretos; middleware de logging executado segundo relato).
 - Módulos 02–12: planejados.
 - Repositório de implementação: projeto local connect-lab; remoto e commits do código ainda não confirmados.
-- Evidências práticas: aluno confirmou execução bem-sucedida do servidor HTTP nativo, roteamento e migração para Express nas Aulas 002–004; sem logs anexados.
+- Evidências práticas: aluno confirmou execução bem-sucedida do servidor HTTP nativo, roteamento, Express e middleware de logging nas Aulas 002–005; sem logs anexados.
 
 ## Aula 001 — Runtime versus framework
 
@@ -39,6 +39,13 @@ Fonte de verdade do tutor: [currículo e protocolo](index.html). Referência tra
 - Conceitos validados no nível introdutório: abstração do roteamento, integração Express/Node.js; npm, manifesto e lockfile apresentados. Commit local não confirmado.
 - Referência: [Framework HTTP e dependências](../engineering-notebook.html#connect-express-abstraction).
 - Próxima ação (Aula 005): adicionar middleware global de logging antes das rotas; observar ordem de execução e o papel de next(); testar GET /health e GET /clientes. Um desafio por turno.
+
+## Aula 005 — Middleware pipeline
+
+- Evidência: execução reportada como “Funcionou”; resposta B (middleware que envia 401 sem next não executa o handler).
+- Conceitos validados no nível introdutório: next(), responsabilidades transversais e short-circuiting. Logging testado segundo relato; autenticação 401 analisada teoricamente. Commit local não confirmado.
+- Referência: [Middleware pipeline](../engineering-notebook.html#connect-middleware-pipeline).
+- Próxima ação (Aula 006): experimentar ordem de registro e interrupção antecipada em rota protegida GET /conversations, usando cabeçalho fictício x-lab-token exclusivamente para demonstração local; manter /health público, testar 401 e 200 e verificar posicionamento do middleware. Não tratar token fixo como segurança real.
 
 ## Registro das próximas etapas
 
