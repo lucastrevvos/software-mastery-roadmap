@@ -6,12 +6,12 @@ Fonte de verdade do tutor: [currículo e protocolo](index.html). Referência tra
 
 ## Estado atual
 
-- Módulo 01: iniciado (Desafios 001–028 corretos; experimento introdutório de Event Loop executado segundo relato; gate de runtime ainda pendente).
+- Módulo 01: iniciado (Desafios 001–029 corretos; bloqueio HTTP CPU-bound executado segundo relato; gate completo de runtime ainda pendente).
 - Módulos 02 e 09: tópicos antecipados em nível introdutório (HTTP/arquitetura/domínio e testes/qualidade); gates e entregas completas pendentes.
 - Módulos 03–08 e 10–12: entregas principais planejadas; transferência conceitual e preparação para entrevista já realizadas pontualmente.
 - Currículo original consultado em 25/11/2026: M01 ainda exige aprofundamento de event loop, V8/libuv, memória, async/await, microtasks, I/O, concorrência/paralelismo, workers, streams/buffers, ESM e TypeScript; gate CPU-bound pendente. Não há calendário com datas nem total fixo de aulas; acertos não representam percentual de conclusão. Incremento de transição imutável concluído segundo relato; retomada dos fundamentos de execução na Aula 028 antes de avançar a persistência.
 - Repositório de implementação: projeto local connect-lab; remoto e commits do código ainda não confirmados.
-- Evidências práticas: aluno confirmou execução bem-sucedida do servidor HTTP nativo, roteamento, Express e middleware de logging e proteção simulada de conversas e agrupamento e extração do Router e do middleware de autenticação e do Conversation Service, além do primeiro teste unitário e ciclo TDD completo, testes negativos, experimento manual de mutação, testes de caracterização, seam temporal, Stub, Fake, Spy, Mock, Dummy, FSM, tabela de transições, integração ao Service, factory, imutabilidade superficial, transição imutável e experimento de Event Loop, nas Aulas 002–028; sem logs anexados.
+- Evidências práticas: aluno confirmou execução bem-sucedida do servidor HTTP nativo, roteamento, Express e middleware de logging e proteção simulada de conversas e agrupamento e extração do Router e do middleware de autenticação e do Conversation Service, além do primeiro teste unitário e ciclo TDD completo, testes negativos, experimento manual de mutação, testes de caracterização, seam temporal, Stub, Fake, Spy, Mock, Dummy, FSM, tabela de transições, integração ao Service, factory, imutabilidade superficial, transição imutável, experimento de Event Loop e bloqueio HTTP CPU-bound, nas Aulas 002–029; sem logs anexados.
 
 ## Aula 001 — Runtime versus framework
 
@@ -214,6 +214,14 @@ Fonte de verdade do tutor: [currículo e protocolo](index.html). Referência tra
 - Conceitos validados em nível introdutório: agendamento de timer, execução síncrona, bloqueio da thread JavaScript e distinção entre assincronia e paralelismo. Logs, tempos medidos e commit local não apresentados.
 - Referência: [Event Loop](../engineering-notebook.html#connect-event-loop).
 - Próxima ação (Aula 029): demonstrar impacto de processamento CPU-bound em servidor HTTP isolado experiments/blocking-server.js, escutando somente 127.0.0.1:3001, com /heavy executando laço síncrono limitado a aproximadamente 3 s e /health imediato. Cliente experiments/blocking-client.js em processo separado, Node 18+, mede /health sozinho e depois durante /heavy, iniciando /health 200 ms após disparo de /heavy; ordem depende do agendamento, verificar logs e repetir se necessário. Não modificar API principal nem publicar rota de bloqueio. Um desafio por turno; próxima etapa contrastar espera assíncrona I/O-bound simulada por timer, sem alegar que timer torna cálculo paralelo.
+
+## Aula 029 — Event Loop Blocking em HTTP
+
+- Evidência 25/11/2026: execução reportada como “Funcionou”; resposta C (processamento CPU-bound síncrono atrasa outros callbacks da mesma thread JavaScript).
+- Conceitos validados em nível introdutório: CPU-bound versus I/O-bound, latência compartilhada por requisições concorrentes, experimento isolado HTTP local. Logs, tempos medidos e commit local não apresentados; gate completo de runtime ainda pendente.
+- Dúvida espontânea: por que await request('/health') na medição isolada e ausência de await imediato nas chamadas concorrentes? Explicados sequenciamento, início da operação com Promise retornada, espera posterior com Promise.all, suspensão da função assíncrona sem bloquear toda a thread e analogia com Task.WhenAll em C#. Não inferir domínio de Promises por essa explicação.
+- Referência: [CPU-bound e concorrência](../engineering-notebook.html#connect-http-blocking).
+- Próxima ação (Aula 030): adicionar /waiting ao servidor experimental com setTimeout de 3000 ms que responde no callback, preservando /heavy e /health. Parametrizar caminho da primeira requisição no cliente por argumento CLI (default /heavy). Comparar as duas execuções e observar /health respondendo enquanto /waiting aguarda. Timer simula espera, não é I/O real nem paraleliza trabalho CPU-bound; não modificar API principal. Um desafio por turno. Próximo passo: aprofundar I/O real e papel de libuv/SO.
 
 ## Registro das próximas etapas
 
