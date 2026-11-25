@@ -6,12 +6,12 @@ Fonte de verdade do tutor: [currículo e protocolo](index.html). Referência tra
 
 ## Estado atual
 
-- Módulo 01: iniciado (Desafios 001–027 corretos; transição imutável executada segundo relato; gate de runtime ainda pendente).
+- Módulo 01: iniciado (Desafios 001–028 corretos; experimento introdutório de Event Loop executado segundo relato; gate de runtime ainda pendente).
 - Módulos 02 e 09: tópicos antecipados em nível introdutório (HTTP/arquitetura/domínio e testes/qualidade); gates e entregas completas pendentes.
 - Módulos 03–08 e 10–12: entregas principais planejadas; transferência conceitual e preparação para entrevista já realizadas pontualmente.
-- Currículo original consultado em 25/11/2026: M01 ainda exige event loop, V8/libuv, memória, async/await, microtasks, I/O, concorrência/paralelismo, workers, streams/buffers, ESM e TypeScript; gate CPU-bound pendente. Não há calendário com datas nem total fixo de aulas; acertos não representam percentual de conclusão. Incremento de transição imutável concluído segundo relato; retomada dos fundamentos de execução na Aula 028 antes de avançar a persistência.
+- Currículo original consultado em 25/11/2026: M01 ainda exige aprofundamento de event loop, V8/libuv, memória, async/await, microtasks, I/O, concorrência/paralelismo, workers, streams/buffers, ESM e TypeScript; gate CPU-bound pendente. Não há calendário com datas nem total fixo de aulas; acertos não representam percentual de conclusão. Incremento de transição imutável concluído segundo relato; retomada dos fundamentos de execução na Aula 028 antes de avançar a persistência.
 - Repositório de implementação: projeto local connect-lab; remoto e commits do código ainda não confirmados.
-- Evidências práticas: aluno confirmou execução bem-sucedida do servidor HTTP nativo, roteamento, Express e middleware de logging e proteção simulada de conversas e agrupamento e extração do Router e do middleware de autenticação e do Conversation Service, além do primeiro teste unitário e ciclo TDD completo, testes negativos, experimento manual de mutação, testes de caracterização, seam temporal, Stub, Fake, Spy, Mock, Dummy, FSM, tabela de transições, integração ao Service, factory, imutabilidade superficial e transição imutável, nas Aulas 002–027; sem logs anexados.
+- Evidências práticas: aluno confirmou execução bem-sucedida do servidor HTTP nativo, roteamento, Express e middleware de logging e proteção simulada de conversas e agrupamento e extração do Router e do middleware de autenticação e do Conversation Service, além do primeiro teste unitário e ciclo TDD completo, testes negativos, experimento manual de mutação, testes de caracterização, seam temporal, Stub, Fake, Spy, Mock, Dummy, FSM, tabela de transições, integração ao Service, factory, imutabilidade superficial, transição imutável e experimento de Event Loop, nas Aulas 002–028; sem logs anexados.
 
 ## Aula 001 — Runtime versus framework
 
@@ -207,6 +207,13 @@ Fonte de verdade do tutor: [currículo e protocolo](index.html). Referência tra
 - Conceitos validados em nível introdutório: cópia superficial, identidade de referência versus ID, novo snapshot protegido por Object.freeze. Serviço mantém identidade no caminho sem transição. Logs, resultados individuais e commit local não apresentados.
 - Referência: [Immutable State Transition](../engineering-notebook.html#connect-immutable-transition).
 - Próxima ação (Aula 028): retomar módulo 01 original, introduzir Event Loop e bloqueio da thread de JavaScript em experimento isolado experiments/event-loop.js: agendar setTimeout de 0 ms, executar laço síncrono limitado por aproximadamente 2 s usando performance.now(), observar ordenação e atraso do callback, comparar sem o laço. Não modificar a API; próximo passo demonstrar efeito em requisições HTTP concorrentes e aprofundar runtime. Um desafio por turno.
+
+## Aula 028 — Event Loop
+
+- Evidência 25/11/2026: execução reportada como “Funcionou”; resposta B (console.log síncrono executa antes do callback de setTimeout com atraso zero).
+- Conceitos validados em nível introdutório: agendamento de timer, execução síncrona, bloqueio da thread JavaScript e distinção entre assincronia e paralelismo. Logs, tempos medidos e commit local não apresentados.
+- Referência: [Event Loop](../engineering-notebook.html#connect-event-loop).
+- Próxima ação (Aula 029): demonstrar impacto de processamento CPU-bound em servidor HTTP isolado experiments/blocking-server.js, escutando somente 127.0.0.1:3001, com /heavy executando laço síncrono limitado a aproximadamente 3 s e /health imediato. Cliente experiments/blocking-client.js em processo separado, Node 18+, mede /health sozinho e depois durante /heavy, iniciando /health 200 ms após disparo de /heavy; ordem depende do agendamento, verificar logs e repetir se necessário. Não modificar API principal nem publicar rota de bloqueio. Um desafio por turno; próxima etapa contrastar espera assíncrona I/O-bound simulada por timer, sem alegar que timer torna cálculo paralelo.
 
 ## Registro das próximas etapas
 
