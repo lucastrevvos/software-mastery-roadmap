@@ -1,15 +1,15 @@
 # Connect Lab — progresso e retomada
 
-Atualizado: 2026-11-24
+Atualizado: 2026-11-25
 
 Fonte de verdade do tutor: [currículo e protocolo](index.html). Referência transversal: [Caderno do Engenheiro](../engineering-notebook.html). Não presumir domínio, execução de código ou sincronização automática.
 
 ## Estado atual
 
-- Módulo 01: iniciado (Desafios 001–022 corretos; FSM de conversas executada segundo relato).
+- Módulo 01: iniciado (Desafios 001–023 corretos; tabela de transições executada segundo relato).
 - Módulos 02–12: planejados.
 - Repositório de implementação: projeto local connect-lab; remoto e commits do código ainda não confirmados.
-- Evidências práticas: aluno confirmou execução bem-sucedida do servidor HTTP nativo, roteamento, Express e middleware de logging e proteção simulada de conversas e agrupamento e extração do Router e do middleware de autenticação e do Conversation Service, além do primeiro teste unitário e ciclo TDD completo, testes negativos, experimento manual de mutação, testes de caracterização, seam temporal, Stub, Fake, Spy, Mock, Dummy e FSM, nas Aulas 002–022; sem logs anexados.
+- Evidências práticas: aluno confirmou execução bem-sucedida do servidor HTTP nativo, roteamento, Express e middleware de logging e proteção simulada de conversas e agrupamento e extração do Router e do middleware de autenticação e do Conversation Service, além do primeiro teste unitário e ciclo TDD completo, testes negativos, experimento manual de mutação, testes de caracterização, seam temporal, Stub, Fake, Spy, Mock, Dummy, FSM e tabela de transições, nas Aulas 002–023; sem logs anexados.
 
 ## Aula 001 — Runtime versus framework
 
@@ -168,6 +168,14 @@ Fonte de verdade do tutor: [currículo e protocolo](index.html). Referência tra
 - Direção do produto reafirmada pelo aluno: construir plataforma omnichannel própria inspirada nas funcionalidades públicas da Plug Social, com evolução real de backend, interface Angular, canais, mensagens em tempo real, filas, persistência, automação e IA. Preservar os 12 módulos e o Método DECA (conceito primeiro, implementação depois, transferência por último; um pequeno passo por turno). Não alegar conhecimento da arquitetura proprietária; integrações reais dependem de acesso e credenciais.
 - Referência: [FSM](../engineering-notebook.html#connect-fsm).
 - Próxima ação (Aula 023): refatorar transitionConversation em tabela de transições com Map aninhado e fallback via optional chaining e nullish coalescing; preservar contrato e estados, executar testes existentes, acrescentar caso WAITING + CLOSE caso ausente. Não alterar Service ou HTTP. Um desafio por turno.
+
+## Aula 023 — Transition Table
+
+- Evidência 25/11/2026: execução reportada como “Funcionou”; resposta C (OPEN + ASSIGN não está na tabela e preserva OPEN).
+- Conceitos validados em nível introdutório: tabela de transições, Map aninhado, optional chaining e nullish coalescing no fallback. Logs, contagem individual e commit local não apresentados.
+- Dúvida espontânea sobre persistência: explicada diferença entre definição de transições e estado/histórico de cada conversa. Direção arquitetural proposta: regras fundamentais estáticas no código em memória, estado e histórico no banco (MongoDB previsto) e configuração de automações por cliente persistida futuramente com validação/versionamento. Não afirmar que essa arquitetura pertence à Plug Social nem que persistência já foi implementada.
+- Referência: [Transition Table](../engineering-notebook.html#connect-transition-table).
+- Próxima ação (Aula 024): integrar FSM ao Conversation Service como fonte única das regras de transição. Importar transitionConversation; canCloseConversation deriva permissão de mudança de estado pelo evento CLOSE; closeConversation usa próximo estado calculado pela FSM, retorna conversa original sem notificar se não houver mudança e mantém notificação simulada em transição válida. Preservar contrato existente e executar suíte; acrescentar teste Spy verificando ausência de notificação para CLOSED. Explicar limitação da comparação de estados caso futuramente haja self-transitions. Não alterar HTTP nem persistência nesta etapa. Um desafio por turno.
 
 ## Registro das próximas etapas
 
