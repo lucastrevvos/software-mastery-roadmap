@@ -6,10 +6,12 @@ Fonte de verdade do tutor: [currículo e protocolo](index.html). Referência tra
 
 ## Estado atual
 
-- Módulo 01: iniciado (Desafios 001–025 corretos; factory com invariantes de criação executada segundo relato).
-- Módulos 02–12: planejados.
+- Módulo 01: iniciado (Desafios 001–026 corretos; factory com snapshot congelado executada segundo relato; gate de runtime ainda pendente).
+- Módulos 02 e 09: tópicos antecipados em nível introdutório (HTTP/arquitetura/domínio e testes/qualidade); gates e entregas completas pendentes.
+- Módulos 03–08 e 10–12: entregas principais planejadas; transferência conceitual e preparação para entrevista já realizadas pontualmente.
+- Currículo original consultado em 25/11/2026: M01 ainda exige event loop, V8/libuv, memória, async/await, microtasks, I/O, concorrência/paralelismo, workers, streams/buffers, ESM e TypeScript; gate CPU-bound pendente. Não há calendário com datas nem total fixo de aulas; acertos não representam percentual de conclusão. Após um incremento de transição imutável, retomar fundamentos de execução antes de avançar a persistência.
 - Repositório de implementação: projeto local connect-lab; remoto e commits do código ainda não confirmados.
-- Evidências práticas: aluno confirmou execução bem-sucedida do servidor HTTP nativo, roteamento, Express e middleware de logging e proteção simulada de conversas e agrupamento e extração do Router e do middleware de autenticação e do Conversation Service, além do primeiro teste unitário e ciclo TDD completo, testes negativos, experimento manual de mutação, testes de caracterização, seam temporal, Stub, Fake, Spy, Mock, Dummy, FSM, tabela de transições, integração ao Service e factory de conversa, nas Aulas 002–025; sem logs anexados.
+- Evidências práticas: aluno confirmou execução bem-sucedida do servidor HTTP nativo, roteamento, Express e middleware de logging e proteção simulada de conversas e agrupamento e extração do Router e do middleware de autenticação e do Conversation Service, além do primeiro teste unitário e ciclo TDD completo, testes negativos, experimento manual de mutação, testes de caracterização, seam temporal, Stub, Fake, Spy, Mock, Dummy, FSM, tabela de transições, integração ao Service, factory e imutabilidade superficial, nas Aulas 002–026; sem logs anexados.
 
 ## Aula 001 — Runtime versus framework
 
@@ -190,6 +192,14 @@ Fonte de verdade do tutor: [currículo e protocolo](index.html). Referência tra
 - Conceitos validados em nível introdutório: invariantes, factory function e validação na criação; assert.deepEqual e assert.throws apresentados. Estado WAITING é condição inicial, não invariante permanente. Logs, resultados individuais e commit local não apresentados.
 - Referência: [Domain Invariants](../engineering-notebook.html#connect-domain-invariants).
 - Próxima ação (Aula 026): primeiro passo de encapsulamento por proteção de snapshots imutáveis: usar Object.freeze no objeto retornado por createConversation, mantendo formato e contrato; adicionar teste em modo estrito verificando TypeError ao alterar status e preservação de WAITING. Explicar freeze superficial, diferença entre encapsulamento e imutabilidade, limitação de objetos criados por outros caminhos e que Service/FSM ainda não foram integrados à factory. Não adicionar classes, banco ou HTTP nesta etapa. Um desafio por turno.
+
+## Aula 026 — Encapsulation e Immutability
+
+- Evidência 25/11/2026: execução reportada como “Funcionou”; resposta B (Object.freeze é superficial, objeto address aninhado continua mutável).
+- Conceitos validados em nível introdutório: imutabilidade superficial, strict mode, distinção de encapsulamento, limites da proteção. Logs, resultados individuais e commit local não apresentados.
+- Aluno pediu localização no cronograma: conferido currículo original de 12 módulos, sem datas fixas; M01 aberto, conteúdo de M02/M09 antecipado, gates não concluídos. Retomar runtime/event loop após a próxima pequena integração, sem eliminar tópicos pendentes.
+- Referência: [Imutabilidade](../engineering-notebook.html#connect-immutability).
+- Próxima ação (Aula 027): proteger snapshot retornado por closeConversation com Object.freeze sobre novo objeto spread, preservando comportamento e identidade no caminho inválido; acrescentar um teste com objeto criado pela factory em WAITING, transição ASSIGN preparada explicitamente como snapshot congelado, e closeConversation com notificação simulada, verificando original OPEN, novo CLOSED, identidade distinta e Object.isFrozen. Não integrar HTTP nem banco; próxima aula após validação: retomar event loop. Um desafio por turno.
 
 ## Registro das próximas etapas
 
