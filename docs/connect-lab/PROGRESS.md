@@ -6,10 +6,10 @@ Fonte de verdade do tutor: [currículo e protocolo](index.html). Referência tra
 
 ## Estado atual
 
-- Módulo 01: iniciado (Desafios 001–024 corretos; FSM integrada ao Conversation Service segundo relato).
+- Módulo 01: iniciado (Desafios 001–025 corretos; factory com invariantes de criação executada segundo relato).
 - Módulos 02–12: planejados.
 - Repositório de implementação: projeto local connect-lab; remoto e commits do código ainda não confirmados.
-- Evidências práticas: aluno confirmou execução bem-sucedida do servidor HTTP nativo, roteamento, Express e middleware de logging e proteção simulada de conversas e agrupamento e extração do Router e do middleware de autenticação e do Conversation Service, além do primeiro teste unitário e ciclo TDD completo, testes negativos, experimento manual de mutação, testes de caracterização, seam temporal, Stub, Fake, Spy, Mock, Dummy, FSM, tabela de transições e integração ao Service, nas Aulas 002–024; sem logs anexados.
+- Evidências práticas: aluno confirmou execução bem-sucedida do servidor HTTP nativo, roteamento, Express e middleware de logging e proteção simulada de conversas e agrupamento e extração do Router e do middleware de autenticação e do Conversation Service, além do primeiro teste unitário e ciclo TDD completo, testes negativos, experimento manual de mutação, testes de caracterização, seam temporal, Stub, Fake, Spy, Mock, Dummy, FSM, tabela de transições, integração ao Service e factory de conversa, nas Aulas 002–025; sem logs anexados.
 
 ## Aula 001 — Runtime versus framework
 
@@ -183,6 +183,13 @@ Fonte de verdade do tutor: [currículo e protocolo](index.html). Referência tra
 - Conceitos validados em nível introdutório: SSOT, centralização das regras de transição na FSM, preservação de comportamento por regressão e verificação de interação via Spy. Limitação de comparação de estados sem self-transitions explicada. Logs, resultados individuais e commit local não apresentados.
 - Referência: [SSOT](../engineering-notebook.html#connect-ssot).
 - Próxima ação (Aula 025): introduzir invariantes de domínio na criação de conversa por uma factory createConversation(id, customer) em conversations/conversation.js: ID inteiro positivo, nome não vazio após trim, estado inicial WAITING definido internamente. Acrescentar três testes (criação válida, ID inválido, cliente em branco), sem alterar listagem, FSM, Service ou HTTP. Explicar que factory protege apenas objetos criados por ela, não mutações posteriores, unicidade ou existência de cliente no banco. Regras didáticas do Connect Lab. Um desafio por turno.
+
+## Aula 025 — Domain Invariants
+
+- Evidência 25/11/2026: execução reportada como “Funcionou”; resposta C (saldo não negativo em conta sem cheque especial é invariante de domínio).
+- Conceitos validados em nível introdutório: invariantes, factory function e validação na criação; assert.deepEqual e assert.throws apresentados. Estado WAITING é condição inicial, não invariante permanente. Logs, resultados individuais e commit local não apresentados.
+- Referência: [Domain Invariants](../engineering-notebook.html#connect-domain-invariants).
+- Próxima ação (Aula 026): primeiro passo de encapsulamento por proteção de snapshots imutáveis: usar Object.freeze no objeto retornado por createConversation, mantendo formato e contrato; adicionar teste em modo estrito verificando TypeError ao alterar status e preservação de WAITING. Explicar freeze superficial, diferença entre encapsulamento e imutabilidade, limitação de objetos criados por outros caminhos e que Service/FSM ainda não foram integrados à factory. Não adicionar classes, banco ou HTTP nesta etapa. Um desafio por turno.
 
 ## Registro das próximas etapas
 
