@@ -6,12 +6,12 @@ Fonte de verdade do tutor: [currículo e protocolo](index.html). Referência tra
 
 ## Estado atual
 
-- Módulo 01: iniciado (Desafios 001–026 corretos; factory com snapshot congelado executada segundo relato; gate de runtime ainda pendente).
+- Módulo 01: iniciado (Desafios 001–027 corretos; transição imutável executada segundo relato; gate de runtime ainda pendente).
 - Módulos 02 e 09: tópicos antecipados em nível introdutório (HTTP/arquitetura/domínio e testes/qualidade); gates e entregas completas pendentes.
 - Módulos 03–08 e 10–12: entregas principais planejadas; transferência conceitual e preparação para entrevista já realizadas pontualmente.
-- Currículo original consultado em 25/11/2026: M01 ainda exige event loop, V8/libuv, memória, async/await, microtasks, I/O, concorrência/paralelismo, workers, streams/buffers, ESM e TypeScript; gate CPU-bound pendente. Não há calendário com datas nem total fixo de aulas; acertos não representam percentual de conclusão. Após um incremento de transição imutável, retomar fundamentos de execução antes de avançar a persistência.
+- Currículo original consultado em 25/11/2026: M01 ainda exige event loop, V8/libuv, memória, async/await, microtasks, I/O, concorrência/paralelismo, workers, streams/buffers, ESM e TypeScript; gate CPU-bound pendente. Não há calendário com datas nem total fixo de aulas; acertos não representam percentual de conclusão. Incremento de transição imutável concluído segundo relato; retomada dos fundamentos de execução na Aula 028 antes de avançar a persistência.
 - Repositório de implementação: projeto local connect-lab; remoto e commits do código ainda não confirmados.
-- Evidências práticas: aluno confirmou execução bem-sucedida do servidor HTTP nativo, roteamento, Express e middleware de logging e proteção simulada de conversas e agrupamento e extração do Router e do middleware de autenticação e do Conversation Service, além do primeiro teste unitário e ciclo TDD completo, testes negativos, experimento manual de mutação, testes de caracterização, seam temporal, Stub, Fake, Spy, Mock, Dummy, FSM, tabela de transições, integração ao Service, factory e imutabilidade superficial, nas Aulas 002–026; sem logs anexados.
+- Evidências práticas: aluno confirmou execução bem-sucedida do servidor HTTP nativo, roteamento, Express e middleware de logging e proteção simulada de conversas e agrupamento e extração do Router e do middleware de autenticação e do Conversation Service, além do primeiro teste unitário e ciclo TDD completo, testes negativos, experimento manual de mutação, testes de caracterização, seam temporal, Stub, Fake, Spy, Mock, Dummy, FSM, tabela de transições, integração ao Service, factory, imutabilidade superficial e transição imutável, nas Aulas 002–027; sem logs anexados.
 
 ## Aula 001 — Runtime versus framework
 
@@ -200,6 +200,13 @@ Fonte de verdade do tutor: [currículo e protocolo](index.html). Referência tra
 - Aluno pediu localização no cronograma: conferido currículo original de 12 módulos, sem datas fixas; M01 aberto, conteúdo de M02/M09 antecipado, gates não concluídos. Retomar runtime/event loop após a próxima pequena integração, sem eliminar tópicos pendentes.
 - Referência: [Imutabilidade](../engineering-notebook.html#connect-immutability).
 - Próxima ação (Aula 027): proteger snapshot retornado por closeConversation com Object.freeze sobre novo objeto spread, preservando comportamento e identidade no caminho inválido; acrescentar um teste com objeto criado pela factory em WAITING, transição ASSIGN preparada explicitamente como snapshot congelado, e closeConversation com notificação simulada, verificando original OPEN, novo CLOSED, identidade distinta e Object.isFrozen. Não integrar HTTP nem banco; próxima aula após validação: retomar event loop. Um desafio por turno.
+
+## Aula 027 — Immutable State Transition
+
+- Evidência 25/11/2026: execução reportada como “Funcionou”; resposta D (spread cria novo objeto mutável, preservando original congelado e seu estado).
+- Conceitos validados em nível introdutório: cópia superficial, identidade de referência versus ID, novo snapshot protegido por Object.freeze. Serviço mantém identidade no caminho sem transição. Logs, resultados individuais e commit local não apresentados.
+- Referência: [Immutable State Transition](../engineering-notebook.html#connect-immutable-transition).
+- Próxima ação (Aula 028): retomar módulo 01 original, introduzir Event Loop e bloqueio da thread de JavaScript em experimento isolado experiments/event-loop.js: agendar setTimeout de 0 ms, executar laço síncrono limitado por aproximadamente 2 s usando performance.now(), observar ordenação e atraso do callback, comparar sem o laço. Não modificar a API; próximo passo demonstrar efeito em requisições HTTP concorrentes e aprofundar runtime. Um desafio por turno.
 
 ## Registro das próximas etapas
 
