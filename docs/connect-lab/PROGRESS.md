@@ -6,12 +6,12 @@ Fonte de verdade do tutor: [currículo e protocolo](index.html). Referência tra
 
 ## Estado atual
 
-- Módulo 01: iniciado (Desafios 001–030 corretos; comparação blocking/non-blocking executada segundo relato; gate completo de runtime ainda pendente).
+- Módulo 01: iniciado (Desafios 001–031 corretos; leitura assíncrona de arquivo com libuv executada segundo relato; gate completo de runtime ainda pendente).
 - Módulos 02 e 09: tópicos antecipados em nível introdutório (HTTP/arquitetura/domínio e testes/qualidade); gates e entregas completas pendentes.
 - Módulos 03–08 e 10–12: entregas principais planejadas; transferência conceitual e preparação para entrevista já realizadas pontualmente.
 - Currículo original consultado em 25/11/2026: M01 ainda exige aprofundamento de event loop, V8/libuv, memória, async/await, microtasks, I/O, concorrência/paralelismo, workers, streams/buffers, ESM e TypeScript; gate CPU-bound pendente. Não há calendário com datas nem total fixo de aulas; acertos não representam percentual de conclusão. Incremento de transição imutável concluído segundo relato; retomada dos fundamentos de execução na Aula 028 antes de avançar a persistência.
 - Repositório de implementação: projeto local connect-lab; remoto e commits do código ainda não confirmados.
-- Evidências práticas: aluno confirmou execução bem-sucedida do servidor HTTP nativo, roteamento, Express e middleware de logging e proteção simulada de conversas e agrupamento e extração do Router e do middleware de autenticação e do Conversation Service, além do primeiro teste unitário e ciclo TDD completo, testes negativos, experimento manual de mutação, testes de caracterização, seam temporal, Stub, Fake, Spy, Mock, Dummy, FSM, tabela de transições, integração ao Service, factory, imutabilidade superficial, transição imutável, experimento de Event Loop, bloqueio HTTP CPU-bound e espera assíncrona simulada, nas Aulas 002–030; sem logs anexados.
+- Evidências práticas: aluno confirmou execução bem-sucedida do servidor HTTP nativo, roteamento, Express e middleware de logging e proteção simulada de conversas e agrupamento e extração do Router e do middleware de autenticação e do Conversation Service, além do primeiro teste unitário e ciclo TDD completo, testes negativos, experimento manual de mutação, testes de caracterização, seam temporal, Stub, Fake, Spy, Mock, Dummy, FSM, tabela de transições, integração ao Service, factory, imutabilidade superficial, transição imutável, experimento de Event Loop, bloqueio HTTP CPU-bound, espera assíncrona simulada e leitura assíncrona real, nas Aulas 002–031; sem logs anexados.
 
 ## Aula 001 — Runtime versus framework
 
@@ -230,6 +230,13 @@ Fonte de verdade do tutor: [currículo e protocolo](index.html). Referência tra
 - Preferência permanente confirmada pelo aluno: laboratórios animados interativos no Método DECA, quando úteis, com foco em Call Stack, Heap, Event Loop, Promises, libuv, Worker Threads, RabbitMQ e WebSockets. Diretriz incorporada ao protocolo oficial em index.html; simulações não substituem experimentos reais nem um desafio por turno.
 - Referência: [Non-blocking I/O](../engineering-notebook.html#connect-nonblocking-io).
 - Próxima ação (Aula 031): apresentar libuv com animação de delegação e retorno de I/O, distinguindo pool de threads para filesystem e mecanismos de I/O de rede do SO. Criar experiments/libuv.js com fs.readFile(__filename, 'utf8', callback) e logs antes/depois da chamada, observando callback posterior ao código síncrono. Não adicionar rotas nem afirmar que todo I/O usa thread pool. Um desafio por turno; depois aprofundar Call Stack e Heap.
+
+## Aula 031 — libuv
+
+- Evidência 25/11/2026: execução reportada como “Funcionou”; resposta D (leitura de arquivo utiliza pool da libuv, callback JavaScript executa na thread JavaScript).
+- Conceitos validados em nível introdutório: distinção entre V8, APIs Node.js, libuv, pool de threads e I/O de rede do SO. Leitura assíncrona real via fs.readFile; ordem de logs esperada, sem logs ou commit local apresentados. A animação didática não demonstra rastreamento real de threads.
+- Referência: [libuv](../engineering-notebook.html#connect-libuv).
+- Próxima ação (Aula 032): Call Stack e LIFO; animar entrada/saída de funções receiveMessage → handleMessage → normalizeMessage, com reprodução, pausa e avanço por etapa. Criar experiments/call-stack.js com chamadas síncronas aninhadas, console.trace em normalizeMessage e retorno do texto normalizado por trim. Observar frames em ordem do mais recente ao chamador; distinguir stack trace de instrumentação ao vivo. Não alterar produto ou aprofundar heap ainda. Um desafio por turno; próxima etapa Heap e referências.
 
 ## Registro das próximas etapas
 
