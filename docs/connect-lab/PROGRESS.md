@@ -6,12 +6,12 @@ Fonte de verdade do tutor: [currículo e protocolo](index.html). Referência tra
 
 ## Estado atual
 
-- Módulo 01: iniciado (Desafios 001–036 corretos; ciclo de vida de Promise validado em nível introdutório; gate completo de runtime ainda pendente).
+- Módulo 01: iniciado (36 acertos em 37 desafios respondidos; Desafio 037 incorreto na primeira tentativa, reteste pendente; gate completo de runtime ainda pendente).
 - Módulos 02 e 09: tópicos antecipados em nível introdutório (HTTP/arquitetura/domínio e testes/qualidade); gates e entregas completas pendentes.
 - Módulos 03–08 e 10–12: entregas principais planejadas; transferência conceitual e preparação para entrevista já realizadas pontualmente.
 - Currículo original consultado em 25/11/2026: M01 ainda exige aprofundamento de event loop, V8/libuv, memória, async/await, microtasks, I/O, concorrência/paralelismo, workers, streams/buffers, ESM e TypeScript; gate CPU-bound pendente. Não há calendário com datas nem total fixo de aulas; acertos não representam percentual de conclusão. Incremento de transição imutável concluído segundo relato; retomada dos fundamentos de execução na Aula 028 antes de avançar a persistência.
 - Repositório de implementação: projeto local connect-lab; remoto e commits do código ainda não confirmados.
-- Evidências práticas: aluno confirmou execução bem-sucedida do servidor HTTP nativo, roteamento, Express e middleware de logging e proteção simulada de conversas e agrupamento e extração do Router e do middleware de autenticação e do Conversation Service, além do primeiro teste unitário e ciclo TDD completo, testes negativos, experimento manual de mutação, testes de caracterização, seam temporal, Stub, Fake, Spy, Mock, Dummy, FSM, tabela de transições, integração ao Service, factory, imutabilidade superficial, transição imutável, experimento de Event Loop, bloqueio HTTP CPU-bound, espera assíncrona simulada, leitura assíncrona real, stack trace, referências de objetos, Garbage Collection, retenção de memória/cache limitado e ciclo de vida de Promise, nas Aulas 002–036; sem logs anexados.
+- Evidências práticas: aluno confirmou execução bem-sucedida do servidor HTTP nativo, roteamento, Express e middleware de logging e proteção simulada de conversas e agrupamento e extração do Router e do middleware de autenticação e do Conversation Service, além do primeiro teste unitário e ciclo TDD completo, testes negativos, experimento manual de mutação, testes de caracterização, seam temporal, Stub, Fake, Spy, Mock, Dummy, FSM, tabela de transições, integração ao Service, factory, imutabilidade superficial, transição imutável, experimento de Event Loop, bloqueio HTTP CPU-bound, espera assíncrona simulada, leitura assíncrona real, stack trace, referências de objetos, Garbage Collection, retenção de memória/cache limitado ciclo de vida de Promise e experimento de encadeamento de Promises, nas Aulas 002–037; sem logs anexados.
 
 ## Aula 001 — Runtime versus framework
 
@@ -272,6 +272,12 @@ Fonte de verdade do tutor: [currículo e protocolo](index.html). Referência tra
 - Conceitos validados em nível introdutório: pending, fulfilled, rejected, settled, executor síncrono e consumo assíncrono via then/catch. Não inferir domínio de microtasks, adoção de thenables ou encadeamento. Logs e commit local não apresentados.
 - Referência: [Promise lifecycle](../engineering-notebook.html#connect-promise-lifecycle).
 - Próxima ação (Aula 037): Promise chaining com propagação de valores e rejeições. Criar experiments/promise-chaining.js com receiveMessage retornando Promise resolvida, saveMessage(message) simulando persistência via timer e sucesso/falha por argumento CLI success/failure, notifyOperator(savedMessage) retornando confirmação. Encadear receiveMessage().then(saveMessage).then(notifyOperator).then(console.log).catch(handler), demonstrar que retorno de Promise é aguardado pela próxima etapa e que rejeição pula handlers de sucesso subsequentes. Animação comparativa sucesso/falha com pausa e reinício; persistência e notificação simuladas, sem alterar API principal. Um desafio por turno; próximo passo reescrever cadeia com async/await e try/catch.
+
+## Aula 037 — Promise Chaining
+
+- Evidência 25/11/2026: execução reportada como “Funcionou”; resposta D (objeto Promise), incorreta. Resultado correto C (25). Sem justificativa apresentada; causa cognitiva específica não confirmada. Logs e commit local não apresentados.
+- Lacuna a verificar: distinguir objeto Promise retornado pelo callback do valor de cumprimento recebido pelo próximo then; cada then retorna nova Promise que adota o resultado do callback, inclusive outra Promise. Não marcar domínio de encadeamento ainda. 36 acertos em 37 primeiras tentativas.
+- Próxima ação (Reteste 037.1): explicar com três Promises nomeadas e animação de adoção de resultado; executar experimento curto isolado que compara Promise com valor recebido no callback, com timer para demonstrar espera. Aplicar um único desafio de transferência com valores diferentes e justificativa opcional. Não avançar para async/await até validar o conceito. Registrar no Caderno do Engenheiro quando consolidado, preservando erro inicial e reteste.
 
 ## Registro das próximas etapas
 
