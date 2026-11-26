@@ -6,12 +6,12 @@ Fonte de verdade do tutor: [currículo e protocolo](index.html). Referência tra
 
 ## Estado atual
 
-- Módulo 01: iniciado (Desafios 001–034 corretos; alcançabilidade e Garbage Collector validados em nível introdutório; gate completo de runtime ainda pendente).
+- Módulo 01: iniciado (Desafios 001–035 corretos; retenção de memória e cache limitado validados em nível introdutório; gate completo de runtime ainda pendente).
 - Módulos 02 e 09: tópicos antecipados em nível introdutório (HTTP/arquitetura/domínio e testes/qualidade); gates e entregas completas pendentes.
 - Módulos 03–08 e 10–12: entregas principais planejadas; transferência conceitual e preparação para entrevista já realizadas pontualmente.
 - Currículo original consultado em 25/11/2026: M01 ainda exige aprofundamento de event loop, V8/libuv, memória, async/await, microtasks, I/O, concorrência/paralelismo, workers, streams/buffers, ESM e TypeScript; gate CPU-bound pendente. Não há calendário com datas nem total fixo de aulas; acertos não representam percentual de conclusão. Incremento de transição imutável concluído segundo relato; retomada dos fundamentos de execução na Aula 028 antes de avançar a persistência.
 - Repositório de implementação: projeto local connect-lab; remoto e commits do código ainda não confirmados.
-- Evidências práticas: aluno confirmou execução bem-sucedida do servidor HTTP nativo, roteamento, Express e middleware de logging e proteção simulada de conversas e agrupamento e extração do Router e do middleware de autenticação e do Conversation Service, além do primeiro teste unitário e ciclo TDD completo, testes negativos, experimento manual de mutação, testes de caracterização, seam temporal, Stub, Fake, Spy, Mock, Dummy, FSM, tabela de transições, integração ao Service, factory, imutabilidade superficial, transição imutável, experimento de Event Loop, bloqueio HTTP CPU-bound, espera assíncrona simulada, leitura assíncrona real, stack trace, referências de objetos e experimento de Garbage Collection, nas Aulas 002–034; sem logs anexados.
+- Evidências práticas: aluno confirmou execução bem-sucedida do servidor HTTP nativo, roteamento, Express e middleware de logging e proteção simulada de conversas e agrupamento e extração do Router e do middleware de autenticação e do Conversation Service, além do primeiro teste unitário e ciclo TDD completo, testes negativos, experimento manual de mutação, testes de caracterização, seam temporal, Stub, Fake, Spy, Mock, Dummy, FSM, tabela de transições, integração ao Service, factory, imutabilidade superficial, transição imutável, experimento de Event Loop, bloqueio HTTP CPU-bound, espera assíncrona simulada, leitura assíncrona real, stack trace, referências de objetos, Garbage Collection e experimento de retenção de memória/cache limitado, nas Aulas 002–035; sem logs anexados.
 
 ## Aula 001 — Runtime versus framework
 
@@ -258,6 +258,13 @@ Fonte de verdade do tutor: [currículo e protocolo](index.html). Referência tra
 - Conceitos validados em nível introdutório: alcançabilidade, raízes, elegibilidade para coleta, diferença entre remoção de referência e recuperação de memória. Experimento com heapUsed e solicitação explícita de GC. Logs, valores reais e commit local não apresentados.
 - Referência: [Garbage Collector](../engineering-notebook.html#connect-garbage-collector).
 - Próxima ação (Aula 035): memory leak por retenção em cache sem limite, com animação comparativa de crescimento e cache limitado. Criar experiments/memory-leak.js, usando Map de longa duração, cinco lotes de 10000 objetos e modo bounded com limite de 10000 entradas por remoção das mais antigas; medir size e heapUsed após solicitação opcional de GC. Executar modos leak e bounded em processos separados com node --expose-gc; argumentos CLI sem barra. Diferenciar cache intencional de retenção indefinida de dados desnecessários; tamanho limitado não garante ausência de outros vazamentos. Não alterar API principal. Um desafio por turno; próxima etapa retomar Promises.
+
+## Aula 035 — Memory Leak
+
+- Evidência 25/11/2026: execução reportada como “Funcionou”; resposta D (remover sessões desnecessárias do Map permite coleta dos objetos que se tornam inalcançáveis). Não duplicar registro da Aula 034, reenviada antes da resposta atual.
+- Conceitos validados em nível introdutório: retenção indevida, cache limitado, remoção FIFO, distinção entre tratar causa e aumentar memória/forçar GC. Valores reais de heapUsed, logs e commit local não apresentados.
+- Referência: [Memory Leak](../engineering-notebook.html#connect-memory-leak).
+- Próxima ação (Aula 036): Promise como representação de resultado futuro, estados pending, fulfilled e rejected, transição única a estado settled. Animação interativa de sucesso e falha, com reprodução/pausa/reinício. Criar experiments/promises.js com simulação de envio de mensagem via new Promise, executor síncrono, setTimeout de 1 s e resolve/reject conforme argumento CLI success/failure; consumir com then e catch, logs antes/depois da criação. Explicar que Promise não é thread, não torna CPU-bound não bloqueante e que resolve com valor simples difere de adoção de outra Promise (adiar detalhes). Não modificar API principal. Um desafio por turno; próxima etapa encadeamento de Promises.
 
 ## Registro das próximas etapas
 
