@@ -6,12 +6,12 @@ Fonte de verdade do tutor: [currículo e protocolo](index.html). Referência tra
 
 ## Estado atual
 
-- Módulo 01: iniciado (41 desafios validados em nível introdutório; 39/41 acertos na primeira tentativa; Retestes 037.1 e 039.1 corretos; gate completo de runtime ainda pendente).
+- Módulo 01: iniciado (42 desafios validados em nível introdutório; 40/42 acertos na primeira tentativa; Retestes 037.1 e 039.1 corretos; gate completo de runtime ainda pendente).
 - Módulos 02 e 09: tópicos antecipados em nível introdutório (HTTP/arquitetura/domínio e testes/qualidade); gates e entregas completas pendentes.
 - Módulos 03–08 e 10–12: entregas principais planejadas; transferência conceitual e preparação para entrevista já realizadas pontualmente.
 - Currículo original consultado em 25/11/2026: M01 ainda exige aprofundamento de event loop, V8/libuv, memória, async/await, microtasks, I/O, concorrência/paralelismo, workers, streams/buffers, ESM e TypeScript; gate CPU-bound pendente. Não há calendário com datas nem total fixo de aulas; acertos não representam percentual de conclusão. Incremento de transição imutável concluído segundo relato; retomada dos fundamentos de execução na Aula 028 antes de avançar a persistência.
 - Repositório de implementação: projeto local connect-lab; remoto e commits do código ainda não confirmados.
-- Evidências práticas: aluno confirmou execução bem-sucedida do servidor HTTP nativo, roteamento, Express e middleware de logging e proteção simulada de conversas e agrupamento e extração do Router e do middleware de autenticação e do Conversation Service, além do primeiro teste unitário e ciclo TDD completo, testes negativos, experimento manual de mutação, testes de caracterização, seam temporal, Stub, Fake, Spy, Mock, Dummy, FSM, tabela de transições, integração ao Service, factory, imutabilidade superficial, transição imutável, experimento de Event Loop, bloqueio HTTP CPU-bound, espera assíncrona simulada, leitura assíncrona real, stack trace, referências de objetos, Garbage Collection, retenção de memória/cache limitado, ciclo de vida de Promise, encadeamento de Promises, adoção de resultado, async/await e experimentos de ordem de microtasks, FIFO, Next Tick Queue e setImmediate em contexto de I/O, nas Aulas 002–041; sem logs anexados.
+- Evidências práticas: aluno confirmou execução bem-sucedida do servidor HTTP nativo, roteamento, Express e middleware de logging e proteção simulada de conversas e agrupamento e extração do Router e do middleware de autenticação e do Conversation Service, além do primeiro teste unitário e ciclo TDD completo, testes negativos, experimento manual de mutação, testes de caracterização, seam temporal, Stub, Fake, Spy, Mock, Dummy, FSM, tabela de transições, integração ao Service, factory, imutabilidade superficial, transição imutável, experimento de Event Loop, bloqueio HTTP CPU-bound, espera assíncrona simulada, leitura assíncrona real, stack trace, referências de objetos, Garbage Collection, retenção de memória/cache limitado, ciclo de vida de Promise, encadeamento de Promises, adoção de resultado, async/await e experimentos de ordem de microtasks, FIFO, Next Tick Queue, setImmediate em contexto de I/O e starvation/yielding, nas Aulas 002–042; sem logs anexados.
 
 ## Aula 001 — Runtime versus framework
 
@@ -321,6 +321,13 @@ Fonte de verdade do tutor: [currículo e protocolo](index.html). Referência tra
 - Métricas: 41 desafios validados; 39/41 acertos de primeira tentativa (95,1%); dois retestes corretos.
 - Referência: [setImmediate](../engineering-notebook.html#connect-set-immediate).
 - Próxima ação (Aula 042): Event Loop Starvation por microtasks que se reabastecem. Criar experiments/starvation.cjs com modo microtask versus immediate, trabalho finito de 100000 passos, timer de 0 ms e contagem dos passos completados no timer; mesmo trabalho nas duas versões, uma função por passo, sem loop infinito. No modo microtask o timer só executa após todos os passos; no immediate pode executar antes do fim, contagem variável. Animação comparativa de fila que se reabastece e cessão cooperativa de controle. Não confundir yielding com paralelismo nem prometer latência exata. Um desafio por turno; próxima etapa concorrência versus paralelismo e posteriormente Worker Threads.
+
+## Aula 042 — Event Loop Starvation
+
+- Evidência 26/11/2026: execução reportada como “Funcionou”; resposta C correta (setImmediate permite oportunidades de executar outros eventos entre etapas, sem criar threads nem paralelizar JS). Validação introdutória; logs, contagens e commit local não apresentados.
+- Métricas: 42 desafios validados; 40/42 acertos de primeira tentativa (95,2%); dois retestes corretos.
+- Referência: [Event Loop Starvation](../engineering-notebook.html#connect-event-loop-starvation).
+- Próxima ação (Aula 043): concorrência versus paralelismo, reaproveitando discussão da Aula 038 e experimentos 029–030. Criar experiments/concurrency.cjs com duas operações de espera simulada (timer de 1000 ms cada), modo sequential com awaits consecutivos e modo concurrent com Promise.all; medir duração via performance.now e registrar threadId de worker_threads para evidenciar execução JS na mesma thread. Tempos aproximados, sem confundir espera simulada com I/O real ou inferir paralelismo pela redução de tempo. Laboratório animado comparando sequencial, concorrente e paralelismo idealizado em threads distintas; apenas dois primeiros implementados nesta aula. Um desafio de transferência; próxima etapa Worker Threads para código CPU-bound.
 
 ## Registro das próximas etapas
 
