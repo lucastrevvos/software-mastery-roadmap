@@ -1,0 +1,1219 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-26",
+  "program": {
+    "name": "Production Engineering Lab",
+    "project": "OrderOps",
+    "method": "DECA",
+    "objective": "Assumir e operar um sistema existente; conceito primeiro, investigação e evidência antes de correção; transferir depois.",
+    "environment": "Produção didática isolada com usuários e dados sintéticos; sem staging permanente. CI efêmero e testes automatizados permanecem.",
+    "stack": "Node.js, TypeScript, NestJS, PostgreSQL, React, Jest; GitHub; AWS inicial mediante decisão de custo. Redis, RabbitMQ, CQRS, MongoDB e Kubernetes progressivamente.",
+    "status": "planejado"
+  },
+  "modules": [
+    {
+      "id": "PE-M01",
+      "title": "Onboarding e engenharia reversa",
+      "topics": [
+        {
+          "id": "PE-M01-T01",
+          "title": "Mapa de módulos"
+        },
+        {
+          "id": "PE-M01-T02",
+          "title": "fluxo de pedidos"
+        },
+        {
+          "id": "PE-M01-T03",
+          "title": "dependências"
+        },
+        {
+          "id": "PE-M01-T04",
+          "title": "configuração"
+        },
+        {
+          "id": "PE-M01-T05",
+          "title": "contratos"
+        },
+        {
+          "id": "PE-M01-T06",
+          "title": "ADRs"
+        },
+        {
+          "id": "PE-M01-T07",
+          "title": "ownership"
+        },
+        {
+          "id": "PE-M01-T08",
+          "title": "requisitos não funcionais"
+        }
+      ],
+      "lab": "Reconstruir o fluxo pedido → expedição a partir do código entregue.",
+      "gate": "Explicar fronteiras, fluxo e riscos sem depender do Codex.",
+      "status": "planejado"
+    },
+    {
+      "id": "PE-M02",
+      "title": "Git e recuperação",
+      "topics": [
+        {
+          "id": "PE-M02-T01",
+          "title": "Objetos e refs"
+        },
+        {
+          "id": "PE-M02-T02",
+          "title": "branch e merge"
+        },
+        {
+          "id": "PE-M02-T03",
+          "title": "rebase"
+        },
+        {
+          "id": "PE-M02-T04",
+          "title": "cherry-pick"
+        },
+        {
+          "id": "PE-M02-T05",
+          "title": "revert vs reset"
+        },
+        {
+          "id": "PE-M02-T06",
+          "title": "reflog"
+        },
+        {
+          "id": "PE-M02-T07",
+          "title": "bisect"
+        },
+        {
+          "id": "PE-M02-T08",
+          "title": "conflitos"
+        },
+        {
+          "id": "PE-M02-T09",
+          "title": "tags e releases"
+        },
+        {
+          "id": "PE-M02-T10",
+          "title": "worktrees"
+        },
+        {
+          "id": "PE-M02-T11",
+          "title": "blame"
+        },
+        {
+          "id": "PE-M02-T12",
+          "title": "PR e revisão"
+        }
+      ],
+      "lab": "Encontrar regressão em histórico real e recuperar uma alteração perdida.",
+      "gate": "Recuperar sem reescrever histórico compartilhado e justificar estratégia.",
+      "status": "planejado"
+    },
+    {
+      "id": "PE-M03",
+      "title": "Linux, runtime e redes",
+      "topics": [
+        {
+          "id": "PE-M03-T01",
+          "title": "Processos e sinais"
+        },
+        {
+          "id": "PE-M03-T02",
+          "title": "CPU e memória"
+        },
+        {
+          "id": "PE-M03-T03",
+          "title": "permissões"
+        },
+        {
+          "id": "PE-M03-T04",
+          "title": "filesystem"
+        },
+        {
+          "id": "PE-M03-T05",
+          "title": "sockets e portas"
+        },
+        {
+          "id": "PE-M03-T06",
+          "title": "DNS"
+        },
+        {
+          "id": "PE-M03-T07",
+          "title": "TCP"
+        },
+        {
+          "id": "PE-M03-T08",
+          "title": "HTTP"
+        },
+        {
+          "id": "PE-M03-T09",
+          "title": "TLS"
+        },
+        {
+          "id": "PE-M03-T10",
+          "title": "proxy"
+        },
+        {
+          "id": "PE-M03-T11",
+          "title": "firewall"
+        },
+        {
+          "id": "PE-M03-T12",
+          "title": "diagnóstico com ferramentas Linux"
+        },
+        {
+          "id": "PE-M03-T13",
+          "title": "Node event loop"
+        }
+      ],
+      "lab": "Investigar processo indisponível, DNS ou porta errada.",
+      "gate": "Demonstrar causa com evidências e explicar caminho da requisição.",
+      "status": "planejado"
+    },
+    {
+      "id": "PE-M04",
+      "title": "Containers",
+      "topics": [
+        {
+          "id": "PE-M04-T01",
+          "title": "Imagem e camadas"
+        },
+        {
+          "id": "PE-M04-T02",
+          "title": "Dockerfile multi-stage"
+        },
+        {
+          "id": "PE-M04-T03",
+          "title": "registry"
+        },
+        {
+          "id": "PE-M04-T04",
+          "title": "volumes"
+        },
+        {
+          "id": "PE-M04-T05",
+          "title": "redes"
+        },
+        {
+          "id": "PE-M04-T06",
+          "title": "Compose"
+        },
+        {
+          "id": "PE-M04-T07",
+          "title": "healthchecks"
+        },
+        {
+          "id": "PE-M04-T08",
+          "title": "limites"
+        },
+        {
+          "id": "PE-M04-T09",
+          "title": "usuário não-root"
+        },
+        {
+          "id": "PE-M04-T10",
+          "title": "logs"
+        },
+        {
+          "id": "PE-M04-T11",
+          "title": "build reproduzível"
+        }
+      ],
+      "lab": "Diagnosticar container em restart e persistência perdida.",
+      "gate": "Construir e operar imagem reproduzível e segura.",
+      "status": "planejado"
+    },
+    {
+      "id": "PE-M05",
+      "title": "AWS e decisões de infraestrutura",
+      "topics": [
+        {
+          "id": "PE-M05-T01",
+          "title": "Regiões e AZs"
+        },
+        {
+          "id": "PE-M05-T02",
+          "title": "IAM"
+        },
+        {
+          "id": "PE-M05-T03",
+          "title": "VPC"
+        },
+        {
+          "id": "PE-M05-T04",
+          "title": "subnets"
+        },
+        {
+          "id": "PE-M05-T05",
+          "title": "security groups"
+        },
+        {
+          "id": "PE-M05-T06",
+          "title": "EC2 vs ECS/Fargate vs Lambda"
+        },
+        {
+          "id": "PE-M05-T07",
+          "title": "ECR"
+        },
+        {
+          "id": "PE-M05-T08",
+          "title": "RDS vs autogerenciado"
+        },
+        {
+          "id": "PE-M05-T09",
+          "title": "ALB"
+        },
+        {
+          "id": "PE-M05-T10",
+          "title": "Route 53"
+        },
+        {
+          "id": "PE-M05-T11",
+          "title": "ACM"
+        },
+        {
+          "id": "PE-M05-T12",
+          "title": "S3"
+        },
+        {
+          "id": "PE-M05-T13",
+          "title": "CloudWatch"
+        },
+        {
+          "id": "PE-M05-T14",
+          "title": "Secrets Manager/SSM"
+        },
+        {
+          "id": "PE-M05-T15",
+          "title": "custos e quotas"
+        }
+      ],
+      "lab": "Comparar arquiteturas e provisionar a opção aprovada de menor custo adequado.",
+      "gate": "ADR com custo estimado, risco, disponibilidade, teardown e evidência de deploy.",
+      "status": "planejado"
+    },
+    {
+      "id": "PE-M06",
+      "title": "Infraestrutura como código",
+      "topics": [
+        {
+          "id": "PE-M06-T01",
+          "title": "Terraform"
+        },
+        {
+          "id": "PE-M06-T02",
+          "title": "providers"
+        },
+        {
+          "id": "PE-M06-T03",
+          "title": "plan/apply"
+        },
+        {
+          "id": "PE-M06-T04",
+          "title": "state e locking"
+        },
+        {
+          "id": "PE-M06-T05",
+          "title": "drift"
+        },
+        {
+          "id": "PE-M06-T06",
+          "title": "módulos"
+        },
+        {
+          "id": "PE-M06-T07",
+          "title": "outputs"
+        },
+        {
+          "id": "PE-M06-T08",
+          "title": "variáveis"
+        },
+        {
+          "id": "PE-M06-T09",
+          "title": "secrets"
+        },
+        {
+          "id": "PE-M06-T10",
+          "title": "import"
+        },
+        {
+          "id": "PE-M06-T11",
+          "title": "destroy"
+        },
+        {
+          "id": "PE-M06-T12",
+          "title": "configuração reproduzível"
+        }
+      ],
+      "lab": "Reconstruir infraestrutura e corrigir drift.",
+      "gate": "Reproduzir recursos e proteger state sem credenciais no Git.",
+      "status": "planejado"
+    },
+    {
+      "id": "PE-M07",
+      "title": "CI/CD e releases",
+      "topics": [
+        {
+          "id": "PE-M07-T01",
+          "title": "GitHub Actions"
+        },
+        {
+          "id": "PE-M07-T02",
+          "title": "triggers"
+        },
+        {
+          "id": "PE-M07-T03",
+          "title": "runners"
+        },
+        {
+          "id": "PE-M07-T04",
+          "title": "artefatos"
+        },
+        {
+          "id": "PE-M07-T05",
+          "title": "cache"
+        },
+        {
+          "id": "PE-M07-T06",
+          "title": "testes"
+        },
+        {
+          "id": "PE-M07-T07",
+          "title": "quality gates"
+        },
+        {
+          "id": "PE-M07-T08",
+          "title": "OIDC"
+        },
+        {
+          "id": "PE-M07-T09",
+          "title": "registry"
+        },
+        {
+          "id": "PE-M07-T10",
+          "title": "migrations"
+        },
+        {
+          "id": "PE-M07-T11",
+          "title": "versionamento"
+        },
+        {
+          "id": "PE-M07-T12",
+          "title": "deploy rolling/blue-green/canary"
+        },
+        {
+          "id": "PE-M07-T13",
+          "title": "rollback"
+        },
+        {
+          "id": "PE-M07-T14",
+          "title": "feature flags"
+        }
+      ],
+      "lab": "Publicar release e recuperar deploy quebrado.",
+      "gate": "Pipeline rastreável do commit ao serviço, com rollback validado.",
+      "status": "planejado"
+    },
+    {
+      "id": "PE-M08",
+      "title": "Observabilidade",
+      "topics": [
+        {
+          "id": "PE-M08-T01",
+          "title": "Logs estruturados"
+        },
+        {
+          "id": "PE-M08-T02",
+          "title": "correlação"
+        },
+        {
+          "id": "PE-M08-T03",
+          "title": "métricas RED/USE"
+        },
+        {
+          "id": "PE-M08-T04",
+          "title": "tracing"
+        },
+        {
+          "id": "PE-M08-T05",
+          "title": "OpenTelemetry"
+        },
+        {
+          "id": "PE-M08-T06",
+          "title": "Prometheus"
+        },
+        {
+          "id": "PE-M08-T07",
+          "title": "Grafana"
+        },
+        {
+          "id": "PE-M08-T08",
+          "title": "CloudWatch"
+        },
+        {
+          "id": "PE-M08-T09",
+          "title": "cardinalidade"
+        },
+        {
+          "id": "PE-M08-T10",
+          "title": "sampling"
+        },
+        {
+          "id": "PE-M08-T11",
+          "title": "alertas"
+        },
+        {
+          "id": "PE-M08-T12",
+          "title": "dashboards"
+        },
+        {
+          "id": "PE-M08-T13",
+          "title": "health/readiness"
+        }
+      ],
+      "lab": "Investigar aumento de p95 e erros correlacionando telemetria.",
+      "gate": "Encontrar causa usando evidência e reduzir ruído de alerta.",
+      "status": "planejado"
+    },
+    {
+      "id": "PE-M09",
+      "title": "Sustentação e gestão de incidentes",
+      "topics": [
+        {
+          "id": "PE-M09-T01",
+          "title": "Triagem"
+        },
+        {
+          "id": "PE-M09-T02",
+          "title": "severidade"
+        },
+        {
+          "id": "PE-M09-T03",
+          "title": "impacto"
+        },
+        {
+          "id": "PE-M09-T04",
+          "title": "timeline"
+        },
+        {
+          "id": "PE-M09-T05",
+          "title": "hipóteses"
+        },
+        {
+          "id": "PE-M09-T06",
+          "title": "troubleshooting"
+        },
+        {
+          "id": "PE-M09-T07",
+          "title": "mitigação"
+        },
+        {
+          "id": "PE-M09-T08",
+          "title": "rollback vs hotfix"
+        },
+        {
+          "id": "PE-M09-T09",
+          "title": "RCA"
+        },
+        {
+          "id": "PE-M09-T10",
+          "title": "post-mortem sem culpa"
+        },
+        {
+          "id": "PE-M09-T11",
+          "title": "runbooks"
+        },
+        {
+          "id": "PE-M09-T12",
+          "title": "comunicação"
+        },
+        {
+          "id": "PE-M09-T13",
+          "title": "escalonamento"
+        }
+      ],
+      "lab": "Atender chamado de produção sem conhecer a causa.",
+      "gate": "Recuperar serviço, medir impacto e prevenir recorrência.",
+      "status": "planejado"
+    },
+    {
+      "id": "PE-M10",
+      "title": "Manutenibilidade e qualidade",
+      "topics": [
+        {
+          "id": "PE-M10-T01",
+          "title": "Coesão e acoplamento"
+        },
+        {
+          "id": "PE-M10-T02",
+          "title": "SOLID aplicado"
+        },
+        {
+          "id": "PE-M10-T03",
+          "title": "arquitetura modular"
+        },
+        {
+          "id": "PE-M10-T04",
+          "title": "dívida técnica"
+        },
+        {
+          "id": "PE-M10-T05",
+          "title": "refatoração segura"
+        },
+        {
+          "id": "PE-M10-T06",
+          "title": "testes de caracterização"
+        },
+        {
+          "id": "PE-M10-T07",
+          "title": "contratos"
+        },
+        {
+          "id": "PE-M10-T08",
+          "title": "cobertura útil"
+        },
+        {
+          "id": "PE-M10-T09",
+          "title": "análise estática"
+        },
+        {
+          "id": "PE-M10-T10",
+          "title": "dependências"
+        },
+        {
+          "id": "PE-M10-T11",
+          "title": "compatibilidade"
+        },
+        {
+          "id": "PE-M10-T12",
+          "title": "documentação"
+        }
+      ],
+      "lab": "Corrigir regressão em código legado com teste de caracterização.",
+      "gate": "Melhorar estrutura preservando comportamento e explicar trade-offs.",
+      "status": "planejado"
+    },
+    {
+      "id": "PE-M11",
+      "title": "Segurança e DevSecOps",
+      "topics": [
+        {
+          "id": "PE-M11-T01",
+          "title": "Threat modeling"
+        },
+        {
+          "id": "PE-M11-T02",
+          "title": "OWASP"
+        },
+        {
+          "id": "PE-M11-T03",
+          "title": "autenticação/autorização"
+        },
+        {
+          "id": "PE-M11-T04",
+          "title": "RBAC"
+        },
+        {
+          "id": "PE-M11-T05",
+          "title": "JWT"
+        },
+        {
+          "id": "PE-M11-T06",
+          "title": "validação"
+        },
+        {
+          "id": "PE-M11-T07",
+          "title": "rate limits"
+        },
+        {
+          "id": "PE-M11-T08",
+          "title": "IAM least privilege"
+        },
+        {
+          "id": "PE-M11-T09",
+          "title": "TLS"
+        },
+        {
+          "id": "PE-M11-T10",
+          "title": "secrets e rotação"
+        },
+        {
+          "id": "PE-M11-T11",
+          "title": "SAST/DAST/SCA"
+        },
+        {
+          "id": "PE-M11-T12",
+          "title": "SBOM"
+        },
+        {
+          "id": "PE-M11-T13",
+          "title": "supply chain"
+        },
+        {
+          "id": "PE-M11-T14",
+          "title": "auditoria"
+        },
+        {
+          "id": "PE-M11-T15",
+          "title": "resposta a incidentes"
+        }
+      ],
+      "lab": "Investigar falha de autorização ou segredo sintético exposto no lab.",
+      "gate": "Reproduzir em escopo autorizado, corrigir e provar defesa.",
+      "status": "planejado"
+    },
+    {
+      "id": "PE-M12",
+      "title": "Performance e capacidade",
+      "topics": [
+        {
+          "id": "PE-M12-T01",
+          "title": "p50/p95/p99"
+        },
+        {
+          "id": "PE-M12-T02",
+          "title": "throughput"
+        },
+        {
+          "id": "PE-M12-T03",
+          "title": "carga"
+        },
+        {
+          "id": "PE-M12-T04",
+          "title": "stress"
+        },
+        {
+          "id": "PE-M12-T05",
+          "title": "soak"
+        },
+        {
+          "id": "PE-M12-T06",
+          "title": "profiling CPU/heap"
+        },
+        {
+          "id": "PE-M12-T07",
+          "title": "GC"
+        },
+        {
+          "id": "PE-M12-T08",
+          "title": "event loop lag"
+        },
+        {
+          "id": "PE-M12-T09",
+          "title": "pools"
+        },
+        {
+          "id": "PE-M12-T10",
+          "title": "backpressure"
+        },
+        {
+          "id": "PE-M12-T11",
+          "title": "N+1"
+        },
+        {
+          "id": "PE-M12-T12",
+          "title": "cache"
+        },
+        {
+          "id": "PE-M12-T13",
+          "title": "capacity planning"
+        }
+      ],
+      "lab": "Localizar gargalo com carga sintética e perfil.",
+      "gate": "Medir antes/depois sem deslocar gargalo nem violar orçamento.",
+      "status": "planejado"
+    },
+    {
+      "id": "PE-M13",
+      "title": "PostgreSQL em produção",
+      "topics": [
+        {
+          "id": "PE-M13-T01",
+          "title": "EXPLAIN ANALYZE"
+        },
+        {
+          "id": "PE-M13-T02",
+          "title": "índices"
+        },
+        {
+          "id": "PE-M13-T03",
+          "title": "MVCC"
+        },
+        {
+          "id": "PE-M13-T04",
+          "title": "locks"
+        },
+        {
+          "id": "PE-M13-T05",
+          "title": "deadlocks"
+        },
+        {
+          "id": "PE-M13-T06",
+          "title": "isolamento"
+        },
+        {
+          "id": "PE-M13-T07",
+          "title": "pool"
+        },
+        {
+          "id": "PE-M13-T08",
+          "title": "migrations expand/contract"
+        },
+        {
+          "id": "PE-M13-T09",
+          "title": "replicação"
+        },
+        {
+          "id": "PE-M13-T10",
+          "title": "backups"
+        },
+        {
+          "id": "PE-M13-T11",
+          "title": "PITR"
+        },
+        {
+          "id": "PE-M13-T12",
+          "title": "vacuum"
+        },
+        {
+          "id": "PE-M13-T13",
+          "title": "limites de conexão"
+        }
+      ],
+      "lab": "Resolver consulta lenta e contenção de transações.",
+      "gate": "Evidenciar plano, invariantes e recuperação de dados.",
+      "status": "planejado"
+    },
+    {
+      "id": "PE-M14",
+      "title": "Resiliência, Redis e mensageria",
+      "topics": [
+        {
+          "id": "PE-M14-T01",
+          "title": "Timeout"
+        },
+        {
+          "id": "PE-M14-T02",
+          "title": "retry com jitter"
+        },
+        {
+          "id": "PE-M14-T03",
+          "title": "circuit breaker"
+        },
+        {
+          "id": "PE-M14-T04",
+          "title": "bulkhead"
+        },
+        {
+          "id": "PE-M14-T05",
+          "title": "idempotência"
+        },
+        {
+          "id": "PE-M14-T06",
+          "title": "Redis TTL/invalidação"
+        },
+        {
+          "id": "PE-M14-T07",
+          "title": "RabbitMQ"
+        },
+        {
+          "id": "PE-M14-T08",
+          "title": "ack/nack"
+        },
+        {
+          "id": "PE-M14-T09",
+          "title": "DLQ"
+        },
+        {
+          "id": "PE-M14-T10",
+          "title": "ordering"
+        },
+        {
+          "id": "PE-M14-T11",
+          "title": "backpressure"
+        },
+        {
+          "id": "PE-M14-T12",
+          "title": "outbox/inbox"
+        },
+        {
+          "id": "PE-M14-T13",
+          "title": "entrega pelo menos uma vez"
+        }
+      ],
+      "lab": "Recuperar fila acumulada e duplicatas sem duplicar pedido.",
+      "gate": "Demonstrar comportamento sob falha e recuperação segura.",
+      "status": "planejado"
+    },
+    {
+      "id": "PE-M15",
+      "title": "Extração de microsserviços",
+      "topics": [
+        {
+          "id": "PE-M15-T01",
+          "title": "Bounded contexts"
+        },
+        {
+          "id": "PE-M15-T02",
+          "title": "ownership de dados"
+        },
+        {
+          "id": "PE-M15-T03",
+          "title": "strangler fig"
+        },
+        {
+          "id": "PE-M15-T04",
+          "title": "contratos HTTP/eventos"
+        },
+        {
+          "id": "PE-M15-T05",
+          "title": "discovery"
+        },
+        {
+          "id": "PE-M15-T06",
+          "title": "tracing"
+        },
+        {
+          "id": "PE-M15-T07",
+          "title": "consistência eventual"
+        },
+        {
+          "id": "PE-M15-T08",
+          "title": "saga"
+        },
+        {
+          "id": "PE-M15-T09",
+          "title": "compensação"
+        },
+        {
+          "id": "PE-M15-T10",
+          "title": "versionamento"
+        },
+        {
+          "id": "PE-M15-T11",
+          "title": "deploy independente"
+        },
+        {
+          "id": "PE-M15-T12",
+          "title": "distributed monolith"
+        }
+      ],
+      "lab": "Codex extrai Notificações como referência; aluno extrai outro módulo com o assistente.",
+      "gate": "Justificar fronteira, migração de dados e rollback; comparar com monólito.",
+      "status": "planejado"
+    },
+    {
+      "id": "PE-M16",
+      "title": "CQRS e MongoDB",
+      "topics": [
+        {
+          "id": "PE-M16-T01",
+          "title": "Comandos vs consultas"
+        },
+        {
+          "id": "PE-M16-T02",
+          "title": "CQRS sem exigir event sourcing"
+        },
+        {
+          "id": "PE-M16-T03",
+          "title": "projeções"
+        },
+        {
+          "id": "PE-M16-T04",
+          "title": "read model"
+        },
+        {
+          "id": "PE-M16-T05",
+          "title": "consistência eventual"
+        },
+        {
+          "id": "PE-M16-T06",
+          "title": "reconstrução/replay"
+        },
+        {
+          "id": "PE-M16-T07",
+          "title": "MongoDB documentos"
+        },
+        {
+          "id": "PE-M16-T08",
+          "title": "agregações"
+        },
+        {
+          "id": "PE-M16-T09",
+          "title": "índices"
+        },
+        {
+          "id": "PE-M16-T10",
+          "title": "schema validation"
+        },
+        {
+          "id": "PE-M16-T11",
+          "title": "replicação"
+        },
+        {
+          "id": "PE-M16-T12",
+          "title": "transações"
+        },
+        {
+          "id": "PE-M16-T13",
+          "title": "escolha SQL vs NoSQL"
+        }
+      ],
+      "lab": "Criar projeção de leitura de pedidos em MongoDB e diagnosticar atraso.",
+      "gate": "Demonstrar invariantes no write model e reconstrução de projeções.",
+      "status": "planejado"
+    },
+    {
+      "id": "PE-M17",
+      "title": "Kubernetes e Helm",
+      "topics": [
+        {
+          "id": "PE-M17-T01",
+          "title": "Control plane"
+        },
+        {
+          "id": "PE-M17-T02",
+          "title": "Pods"
+        },
+        {
+          "id": "PE-M17-T03",
+          "title": "Deployments"
+        },
+        {
+          "id": "PE-M17-T04",
+          "title": "ReplicaSets"
+        },
+        {
+          "id": "PE-M17-T05",
+          "title": "Services"
+        },
+        {
+          "id": "PE-M17-T06",
+          "title": "DNS"
+        },
+        {
+          "id": "PE-M17-T07",
+          "title": "Ingress/Gateway"
+        },
+        {
+          "id": "PE-M17-T08",
+          "title": "ConfigMaps"
+        },
+        {
+          "id": "PE-M17-T09",
+          "title": "Secrets"
+        },
+        {
+          "id": "PE-M17-T10",
+          "title": "probes"
+        },
+        {
+          "id": "PE-M17-T11",
+          "title": "requests/limits"
+        },
+        {
+          "id": "PE-M17-T12",
+          "title": "HPA"
+        },
+        {
+          "id": "PE-M17-T13",
+          "title": "PVC"
+        },
+        {
+          "id": "PE-M17-T14",
+          "title": "RBAC"
+        },
+        {
+          "id": "PE-M17-T15",
+          "title": "NetworkPolicy"
+        },
+        {
+          "id": "PE-M17-T16",
+          "title": "Helm"
+        },
+        {
+          "id": "PE-M17-T17",
+          "title": "rollout"
+        },
+        {
+          "id": "PE-M17-T18",
+          "title": "logs/events"
+        },
+        {
+          "id": "PE-M17-T19",
+          "title": "EKS vs cluster local"
+        }
+      ],
+      "lab": "Operar workloads e investigar CrashLoopBackOff, OOM e falhas de readiness.",
+      "gate": "Demonstrar rollout, recuperação, isolamento e custo justificado.",
+      "status": "planejado"
+    },
+    {
+      "id": "PE-M18",
+      "title": "Escalabilidade e sistemas distribuídos",
+      "topics": [
+        {
+          "id": "PE-M18-T01",
+          "title": "Balanceamento"
+        },
+        {
+          "id": "PE-M18-T02",
+          "title": "horizontal vs vertical"
+        },
+        {
+          "id": "PE-M18-T03",
+          "title": "stateless"
+        },
+        {
+          "id": "PE-M18-T04",
+          "title": "session management"
+        },
+        {
+          "id": "PE-M18-T05",
+          "title": "particionamento"
+        },
+        {
+          "id": "PE-M18-T06",
+          "title": "replicação"
+        },
+        {
+          "id": "PE-M18-T07",
+          "title": "CAP"
+        },
+        {
+          "id": "PE-M18-T08",
+          "title": "consistência"
+        },
+        {
+          "id": "PE-M18-T09",
+          "title": "hot partitions"
+        },
+        {
+          "id": "PE-M18-T10",
+          "title": "cache stampede"
+        },
+        {
+          "id": "PE-M18-T11",
+          "title": "autoscaling"
+        },
+        {
+          "id": "PE-M18-T12",
+          "title": "load shedding"
+        }
+      ],
+      "lab": "Simular pico e falha de dependência.",
+      "gate": "Sustentar SLO com custo e capacidade documentados.",
+      "status": "planejado"
+    },
+    {
+      "id": "PE-M19",
+      "title": "Disaster Recovery e continuidade",
+      "topics": [
+        {
+          "id": "PE-M19-T01",
+          "title": "RPO/RTO"
+        },
+        {
+          "id": "PE-M19-T02",
+          "title": "backups"
+        },
+        {
+          "id": "PE-M19-T03",
+          "title": "restauração"
+        },
+        {
+          "id": "PE-M19-T04",
+          "title": "PITR"
+        },
+        {
+          "id": "PE-M19-T05",
+          "title": "failover"
+        },
+        {
+          "id": "PE-M19-T06",
+          "title": "snapshots"
+        },
+        {
+          "id": "PE-M19-T07",
+          "title": "recuperação de state"
+        },
+        {
+          "id": "PE-M19-T08",
+          "title": "runbooks"
+        },
+        {
+          "id": "PE-M19-T09",
+          "title": "exercícios"
+        },
+        {
+          "id": "PE-M19-T10",
+          "title": "integridade"
+        }
+      ],
+      "lab": "Restaurar dados sintéticos e medir RPO/RTO.",
+      "gate": "Recuperação comprovada, não apenas backup criado.",
+      "status": "planejado"
+    },
+    {
+      "id": "PE-M20",
+      "title": "SRE, Chaos Engineering e FinOps",
+      "topics": [
+        {
+          "id": "PE-M20-T01",
+          "title": "SLI/SLO/SLA"
+        },
+        {
+          "id": "PE-M20-T02",
+          "title": "error budget"
+        },
+        {
+          "id": "PE-M20-T03",
+          "title": "toil"
+        },
+        {
+          "id": "PE-M20-T04",
+          "title": "on-call simulado"
+        },
+        {
+          "id": "PE-M20-T05",
+          "title": "game days"
+        },
+        {
+          "id": "PE-M20-T06",
+          "title": "hipóteses de caos"
+        },
+        {
+          "id": "PE-M20-T07",
+          "title": "blast radius"
+        },
+        {
+          "id": "PE-M20-T08",
+          "title": "abort conditions"
+        },
+        {
+          "id": "PE-M20-T09",
+          "title": "custo por pedido"
+        },
+        {
+          "id": "PE-M20-T10",
+          "title": "tags"
+        },
+        {
+          "id": "PE-M20-T11",
+          "title": "quotas"
+        },
+        {
+          "id": "PE-M20-T12",
+          "title": "budgets"
+        },
+        {
+          "id": "PE-M20-T13",
+          "title": "teardown"
+        }
+      ],
+      "lab": "Executar game day com falha controlada e tráfego sintético.",
+      "gate": "Provar recuperação, aprendizado, limites de custo e prevenção.",
+      "status": "planejado"
+    }
+  ]
+}
