@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "lastVerified": "2026-11-24",
-  "lastVerifiedLabel": "24/11/2026",
+  "lastVerified": "2026-11-27",
+  "lastVerifiedLabel": "27/11/2026",
   "sourcesNote": "O radar é atualizado por verificações periódicas; não consulta bancas em tempo real ao abrir a página. Sempre confirme condições e prazos no edital.",
   "contests": [
     {
@@ -19,7 +19,7 @@
       "vacancies": "20 vagas + 80 CR em Florianópolis (referência de planejamento)",
       "source": "https://conhecimento.fgv.br/concursos/dataprev26",
       "priority": "Consultar resultado individual e classificação",
-      "notes": "Gabarito oficial PRELIMINAR publicado em 13/10/2026. Recursos de 14 a 15/10, prazo encerrado. 2ª retificação publicada em 04/11: vagas adicionais de reserva indígena/quilombola com distribuição dinâmica nacional e novas datas de avaliações; resultado da prova objetiva e respostas aos recursos publicados pela FGV em 18/11/2026; documentos de convocação para avaliações complementares também publicados em 18/11. Não foi possível extrair a lista completa ou confirmar classificação individual de Desenvolvimento de Software em Florianópolis. FGV publicou explicitamente Gabarito Oficial Definitivo da Prova Objetiva e Consulta individual — Resultado da Prova Objetiva em 19/11/2026. Conteúdo do gabarito por tipo e classificação individual ainda não conferidos. Estimativa pessoal Tipo 1: 37/70 e 59,5/115 (cartão a conferir). Resultado previsto para 14/01/2027.",
+      "notes": "Gabarito oficial PRELIMINAR publicado em 13/10/2026. Recursos de 14 a 15/10, prazo encerrado. 2ª retificação publicada em 04/11: vagas adicionais de reserva indígena/quilombola com distribuição dinâmica nacional e novas datas de avaliações; resultado da prova objetiva e respostas aos recursos publicados pela FGV em 18/11/2026; documentos de convocação para avaliações complementares também publicados em 18/11. Não foi possível extrair a lista completa ou confirmar classificação individual de Desenvolvimento de Software em Florianópolis. FGV publicou explicitamente Gabarito Oficial Definitivo da Prova Objetiva e Consulta individual — Resultado da Prova Objetiva em 19/11/2026. Conteúdo do gabarito por tipo e classificação individual ainda não conferidos. Estimativa pessoal Tipo 1: 37/70 e 59,5/115 (cartão a conferir). Resultado previsto para 14/01/2027. Comunicado FGV de 26/11: CCI disponível a partir de 30/11 para procedimentos complementares de 06/12; não constitui nova classificação.",
       "userStage": "prova realizada; resultado objetivo 18/11 e consulta individual 19/11 disponíveis",
       "verified": true
     },
@@ -1828,6 +1828,11 @@
       "name": "IFG 001/2026 — isenção até 25/11",
       "note": "Inscrições abertas em 24/11; isenção até 25/11 às 16h, inscrições até 23/12, prova 14/02/2027. Seis vagas em três cargos de TI.",
       "url": "https://www.ifg.edu.br/institucional/17-ifg/ultimas-noticias/48575-ifg-publica-edital-de-concurso-com-36-vagas-e-vencimentos-de-ate-r-5-2-mil"
+    },
+    {
+      "name": "Dataprev 2026 — comunicado CCI de 26/11",
+      "note": "FGV informa que o Cartão de Confirmação de Inscrição estará disponível a partir de 30/11/2026 para os procedimentos de 06/12/2026: confirmação complementar de autodeclaração de pessoas pretas e pardas, avaliação biopsicossocial e verificação documental complementar de pessoas quilombolas e indígenas. Não é publicação de classificação final.",
+      "url": "https://conhecimento.fgv.br/sites/default/files/concursos/26.11-comunicado-cci.pdf"
     }
   ]
 }
