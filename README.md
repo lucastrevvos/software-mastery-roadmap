@@ -12,6 +12,14 @@ Este repositório é a fonte da verdade para quatro coisas diferentes:
 
 > Curso concluído não significa domínio. Certificado é evidência externa; Mastery Gate é evidência interna.
 
+## Production Engineering Lab — OrderOps
+
+Formação DECA de engenharia de produção: Codex entrega um monólito modular incrementalmente; o estudante assume operação, Git avançado, AWS, Terraform, CI/CD, observabilidade, sustentação, segurança, performance, bancos, microserviços, CQRS, MongoDB, Kubernetes e SRE. Produção didática isolada com tráfego sintético, sem staging permanente, mantendo testes e CI efêmero. Incidentes reais no laboratório com limites e rollback.
+
+- **Grade:** 20 módulos, 256 tópicos, laboratórios e mastery gates.
+- **Painel:** [Production Engineering Lab](https://lucastrevvos.github.io/software-mastery-roadmap/production-engineering/) · [currículo](docs/production-engineering/curriculum.json) · [manual](docs/production-engineering/README.md) · [Codex](docs/production-engineering/CODEX.md) · [progresso](docs/production-engineering/PROGRESS.md) · [teoria](docs/production-engineering/theory.json).
+- **Retomada:** PE-001, fundação do OrderOps. Nenhuma aplicação ou infraestrutura criada ainda. Progresso exige evidência e commit; Runtime Lens transversal.
+
 ## AcervoLab Academy — Engenharia de Software, .NET e IA (6 semestres)
 
 Nova trilha acadêmica independente, baseada em **um único sistema simples de empréstimos e reservas**. O AcervoLab evolui de Console C# para monólito com PostgreSQL/API/web, cloud, arquitetura modular, sistemas distribuídos e **Engenharia de IA** (ML, LLM, RAG, agentes, LLMOps, segurança, governança e operação).
