@@ -11,6 +11,7 @@ Data: 2026-11-27. Evidências: saídas e respostas fornecidas pelo estudante, n�
 | 007 | git --no-pager branch -vv, behind | Escolheu B; main 9ef37e2 [origin/main: behind 11], branch ativa ba256c7; seis branches locais mantiveram os hashes anteriores | validado nesta atividade |
 | 008 | git log --oneline --graph --decorate, divergência | Escolheu B; grafo mostra base comum 9ef37e2, 11 commits exclusivos de origin/main (37ea052) e 8 exclusivos de HEAD (ba256c7) | validado nesta atividade |
 | 009 | git merge-base HEAD origin/main | Escolheu C; saída 9ef37e2dbc0593127052e9d30cccae6bccb9bf02 confirma o melhor ancestral comum | validado nesta atividade |
+| 010 | git diff --name-status main..HEAD | Escolheu B; 8 caminhos modificados e 1 adicionado (render-panel.cjs), 0 excluídos; total 9 caminhos, 8 commits exclusivos | validado nesta atividade |
 ## Notas teóricas da sessão (consolidar em theory.json preservando IDs)
 - Working tree, index e HEAD são estados locais; clean não significa sincronizado.
 - Branch é referência móvel a commit, que referencia snapshot; HEAD normalmente referencia a branch atual.
@@ -21,5 +22,6 @@ Data: 2026-11-27. Evidências: saídas e respostas fornecidas pelo estudante, n�
 - O histórico Git é um DAG: commits apontam para seus pais, podendo ter mais de um em merges. Branches divergentes possuem commits exclusivos de cada lado a partir de ancestral comum. Divergência não implica conflito de arquivos. --graph representa relações; --decorate identifica refs. Limitar histórico com intervalo quando pertinente.
 - Merge base é um melhor ancestral comum entre commits; pode haver mais de um em históricos complexos. git merge-base consulta o grafo sem integrar históricos ou alterar refs. Neste caso a base é a main local 9ef37e2.
 - Three-way merge considera base comum e os snapshots das duas pontas; divergência sozinha não prova conflito.
+- git diff --name-status A..B compara os snapshots de A e B; A (adicionado), M (modificado), D (excluído), podendo haver outros estados. Quantidade de commits não determina quantidade de caminhos com diferença líquida. Arquivos locais observados: README.md, docs/index.html, docs/production-engineering/{CODEX.md,PROGRESS.md,README.md,curriculum.json,index.html,render-panel.cjs,theory.json}.
 ## Próximo passo
-Experimento 010: git diff --name-status main..HEAD; inspecionar os caminhos cujo conteúdo difere entre a base comum e nossa branch, sem alterar arquivos. Distinguir contagem de commits de contagem de caminhos modificados. Reteste 005 continua pendente. Não executar merge, pull, rebase, push ou reset; preservar ambos os históricos.
+Experimento 011: git diff --name-status main..origin/main; comparar a base comum com a ponta remota conhecida, identificar interseção de caminhos com o resultado 010, sem presumir conflito por sobreposição. Reteste 005 pendente. Não executar merge, pull, rebase, push ou reset. Preservar ambos os históricos.
