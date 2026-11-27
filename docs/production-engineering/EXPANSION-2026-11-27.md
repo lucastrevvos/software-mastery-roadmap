@@ -1,7 +1,7 @@
 # Expansão curricular e direção estratégica — 27/11/2026
 **Status:** decisões acordadas em conversa; consolidação no currículo local e painel pendente. Este adendo prevalece sobre a regra antiga de extração pelo Codex. Não substitui o curriculum.json, PROGRESS.md, theory.json ou os documentos locais mais recentes. Nenhum domínio atribuído.
 ## Baseline conhecida
-A main remota foi verificada com 20 módulos/256 tópicos. Conforme relatórios do Codex (não verificados independentemente), a versão local após PE-006 tem 27 módulos/319 tópicos, 83 registros teóricos, preserva IDs anteriores e contém as expansões DDD/TDD etc.; último commit local do roadmap 3c14652 (não encontrado no GitHub). Produto local C:\dev\PROJETOS\orderops, commit efdab2e, nove módulos, três portais, 203 testes aprovados em execuções completas, 51 rotas, 19 tabelas, 11 schemas, 11 migrations, 13 diagramas, backlog de 32 riscos. PE-007 (simulador) encomendada; conclusão não confirmada. Não marcar entrega ou aprendizagem sem evidência.
+A main remota foi verificada com 20 módulos/256 tópicos. Conforme relatórios do Codex (não verificados independentemente), a versão local após PE-006 tem 27 módulos/319 tópicos, 83 registros teóricos, preserva IDs anteriores e contém as expansões DDD/TDD etc.; último commit local do roadmap 3c14652 (não encontrado no GitHub). Produto local C:\dev\PROJETOS\orderops, commit efdab2e, nove módulos, três portais, 203 testes aprovados em execuções completas, 51 rotas, 19 tabelas, 11 schemas, 11 migrations, 13 diagramas, backlog de 32 riscos. PE-007 concluída localmente conforme relatório recebido; ver registro abaixo. Não marcar entrega ou aprendizagem sem evidência.
 ## Decisões permanentes
 - Codex entrega o monólito modular e o simulador; estudante com ChatGPT assume TODAS as extrações de microsserviços, DDD, TDD, CQRS, MongoDB, Kubernetes, infraestrutura AWS, Git, CI/CD, observabilidade e evoluções. Codex auxilia sob orientação e pode injetar incidentes controlados, sem resolver antecipadamente.
 - Produção didática real, isolada, com tráfego e dados sintéticos, sem staging permanente; manter testes automatizados e CI efêmero. Aprovar orçamento, escopo, limites e rollback antes de provisionar ou injetar falhas. Segurança antes de exposição; não usar credenciais, dados ou alvos de terceiros.
@@ -72,9 +72,36 @@ Componentes propostos: Connector Engine (REST primeiro, SOAP/GraphQL depois), MC
 MVP: importar OpenAPI/Swagger; gerar ferramentas candidatas semiautomaticamente; administrador seleciona e valida contratos, permissões e risco; publicar MCP somente leitura; testar integração real, falhas, isolamento, segurança e métricas. Escritas e automação crítica depois, com autorização, idempotência, aprovação, recuperação e auditoria. Reutilizar conectores sem expor endpoints indiscriminadamente.
 Modelo comercial proposto: implantação, assinatura recorrente, conectores personalizados, hospedagem privada e sustentação; agentes e governança como extensões. Posicionamento: Não substituímos o software da sua empresa. Conectamos sua empresa à inteligência artificial.
 ## Sequência pedagógica e integração
-1. Finalizar PE-007 conforme contrato; registrar evidências e riscos reais, não presumir conclusão.
+1. PE-007 concluída conforme relatório recebido; revisar evidências locais durante handover.
 2. Primeiro laboratório: onboarding e Git (inventário, commits, branches, remotos, integração segura, revisão de diffs); preservar histórico e trabalho local.
 3. Consolidar este adendo na versão local de 27 módulos/319 tópicos (ou mais recente), deduplicar e preservar IDs; corrigir referências antigas à extração pelo Codex em TODOS os documentos, currículo e painel.
 4. Incorporar MCP e AIOps como duas disciplinas planejadas, com laboratórios e gates acima; se todos os tópicos forem inéditos, referência preliminar 29 módulos/362 tópicos (319 + 31 + 12), recalcular de verdade após deduplicação. Não marcar tópicos dominados nem inventar notas de teoria.
 5. Atualizar README, CODEX, PROGRESS, curriculum.json, theory.json conforme protocolo, index.html da trilha e contagens/links no painel e README raiz. Verificar JSON, IDs únicos e preservados, links e renderização. Commit de integração e publicação quando autorizado, sem force push.
 6. Estudar produção, segurança, Git, testes, arquitetura, dados, microsserviços, Kubernetes, e só então automatizar diagnóstico via IA. O MVP comercial pode ser prototipado em etapa separada quando fundamentos de integração e segurança estiverem validados.
+
+## Encerramento da construção delegada — PE-007 (27/11/2026)
+Fonte: relatório do Codex compartilhado pelo estudante; arquivos, commits e testes locais não inspecionados independentemente. Sete entregas reportadas concluídas; handover pelo estudante pendente, zero domínio atribuído, PE-008 não iniciada.
+| Entrega | Estado reportado | Commit local |
+| --- | --- | --- |
+| PE-001 | Fundação | 4ea8a64 |
+| PE-002 | Identidade, clientes, catálogo | 907ca65 |
+| PE-003 | Estoque, pedidos | c6440e2 |
+| PE-004 | Pagamentos, expedição, notificações, auditoria | a11b570 |
+| PE-005 | Frontend e autorização por recurso | 42a75c7 |
+| PE-006 | Baseline e handover | efdab2e |
+| PE-007 | Simulador independente | 131d2ef50123822eda075e8d60c0222b1105fdc1 |
+
+### Repositórios reportados
+- OrderOps: pe-005-commercial-frontend, efdab2e, working tree limpa, sem alterações em PE-007.
+- OrderOps Traffic Simulator: main, 131d2ef50123822eda075e8d60c0222b1105fdc1, local sem remoto.
+- Roadmap: pe-005-frontend-and-curriculum, ba256c75f9cd08b740099fc0769a985512d0ed8f, working tree limpa, remoto configurado não usado na entrega; 27 módulos/319 tópicos.
+- Nenhum push, integração de branches ou provisionamento na PE-007. Preservar históricos e IDs; não sobrescrever currículo local com o remoto antigo.
+### Evidências reportadas
+Simulador Node.js/TypeScript, HTTP por APIs públicas, apenas loopback, sem acesso direto ao PostgreSQL. Perfis smoke, normal, pico, sazonal e soak; seed reproduzível; limites de usuários, concorrência, RPS, duração e requisições; timeout, limite de erros, parada graciosa e imediata. Limpeza desativa contas e produtos, preservando histórico.
+- Smoke real local: 109 requisições/54,536 s; throughput observado pelo cliente 1,999 req/s; p50 27,82 ms, p95 235,18 ms, p99 303,54 ms; conflito de estoque esperado, zero erros inesperados; um vencedor, saldos não negativos, reservas finais zero, pedidos em estados terminais. Não representa capacidade do servidor, SLO ou telemetria interna.
+- 14 testes/6 suítes, typecheck e audit sem achados reportados. Demais perfis não exercitados contra backend. Primeira tentativa revelou parser incorreto do envelope 409; corrigido, pedido reservado cancelado pela API, recursos desativados.
+- API e PostgreSQL encerrados; portas 3100/54329 livres; volume preservado.
+- Limites: loopback apenas, AWS ainda não suportada; longa duração, capacidade e plataformas não Windows não verificadas; interrupção forçada pode deixar operação ambígua, recuperação manual; limpeza pode afetar estoque.
+- Documentos locais: orderops-traffic-simulator/README.md, docs/PE-007.md, docs/adr/001-node-typescript-http-only.md, reports/pe007-local-smoke.json; OrderOps docs/handover/README.md e docs/PE-006.md.
+### Próximo passo DECA
+Onboarding e Git: estudante identifica HEAD, branches, working tree, histórico e remotos dos três repos com comandos de inspeção. Não realizar merge, rebase, pull, push, reset ou provisionamento antes de compreender o grafo e definir estratégia. Reconciliar histórico local e remoto, integrar este adendo sem perder IDs e evidências, atualizar currículo/painel e validar contagens. 29 módulos/362 tópicos são previsão, não implementação. Runtime Lens distingue grafo ilustrativo de saída real; não expor credenciais/URLs com tokens. Zero domínio atribuído.
