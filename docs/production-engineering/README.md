@@ -1,0 +1,21 @@
+# Production Engineering Lab — OrderOps
+## Fonte de verdade e retomada
+Leia este manual, curriculum.json, PROGRESS.md, theory.json e CODEX.md antes de cada sessão. O roadmap é o registro pedagógico; o repositório da aplicação será independente e ainda não foi definido. Nenhum tópico é dominado apenas porque o Codex o implementou.
+## Missão
+Aprender engenharia de produção de trás para frente: receber software funcional, entender, versionar, operar, diagnosticar, recuperar, proteger e evoluir. Codex é equipe de desenvolvimento; estudante é responsável pelas decisões e evidências; ChatGPT é tutor e facilitador de incidentes.
+## Produto e evolução
+OrderOps: identidade, clientes, catálogo, estoque, pedidos, pagamentos simulados, notificações, expedição, auditoria. Começar como monólito modular Node.js/TypeScript/NestJS/PostgreSQL, React futuro, Jest. Codex entrega partes pequenas com ADRs, commits, testes e documentação. Após baseline funcional, estudar Git profundamente e assumir deploy e operação AWS. Comparar serviços, custos e riscos antes de provisionar. Redis/RabbitMQ quando houver problema demonstrado. Codex extrai um serviço (proposta: Notificações); estudante extrai outro com orientação, sem antecipação. CQRS e MongoDB obrigatórios no currículo, não na primeira versão. Kubernetes e Helm após containers e problemas de orquestração; comparar local e EKS. Não presumir que microserviços, CQRS ou MongoDB são sempre necessários.
+## Produção didática
+Uma única produção operacional de laboratório, infraestrutura e requisições reais, usuários/dados/pagamentos sintéticos. Sem staging permanente por padrão; testes automatizados e CI efêmero mantidos. Simulador separado com personas (cliente, administrador, operador, integração, abandono, duplicata), seed reproduzível, ritmo configurável, sazonalidade, picos e pausas. Não operar 24/7 sem decisão explícita de custo. Ferramentas possíveis k6 ou Locust; escolher durante aprendizagem. Não compartilhar conta, rede, dados, credenciais ou recursos com produção comercial. Definir escopo, teto de gasto, limites de taxa/concurrency, quotas, stop switch, backup/restauração e janela de incidentes antes de executar. Budgets são alertas, não garantia de bloqueio. Nenhuma injeção contra terceiros, nenhuma exposição pública de falhas deliberadas, nenhuma credencial real em exercícios. AWS e qualquer serviço pago requerem aprovação de orçamento e teardown. 
+## Método DECA
+D — Descomplicar: conceito, problema, contexto, modelo mental e Runtime Lens.
+E — Experimentar: estudante prevê, executa, coleta evidências e formula hipóteses.
+C — Corrigir: tutor revisa raciocínio, valida causa, compara alternativas, confirma efeito.
+A — Avançar: prevenção, transferência, reteste e um pequeno passo.
+Em TODO exemplo de código, Runtime Lens interativo adaptado ao runtime; estender para Git, Linux, rede, CI, cloud, banco, segurança e Kubernetes. Distinguir visualização simulada de telemetria real. Não revelar solução ou causa no enunciado do desafio. Não substituir investigação do estudante por automação do Codex. Segurança e custo são transversais desde o início.
+## Evidências e progresso
+Estados: planejado, em estudo, experimentado, validado, dominado, reteste pendente. Registrar ID, data, hipótese, comandos/observações sanitizados, commits ou resultados, diagnóstico, correção, antes/depois, lacunas e próximo passo. Domínio requer execução própria e transferência/reteste. Atualizar PROGRESS.md e theory.json por commit, sem alegar sincronização automática. Cada conceito novo recebe definição, problema, exemplo, armadilha, relações e referência/evidência. Não gravar secrets. O currículo é editável com decisões explícitas.
+## Incidentes
+Cada incidente: ID, severidade, sintomas, impacto, baseline, janela, escopo, limites/abort, evidências, mitigação, RCA, prevenção e reteste. Manter causa e instruções de injeção fora do material visível ao aluno até a correção (por exemplo sessão separada do Codex); não guardar segredo real. Incidentes reais no ambiente didático, não meras perguntas teóricas. Antes de injetar, validar autorização, custo, isolamento, recuperação e ausência de tráfego real. Priorizar restaurar serviço, depois RCA. 
+## Primeiro passo
+PE-001: fundação do OrderOps, ver CODEX.md. Nenhum sistema, simulador, recurso cloud ou incidente foi executado ainda.
