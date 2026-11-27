@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-26",
+  "program": "Production Engineering Lab",
+  "entries": [],
+  "entrySchema": {
+    "id": "PE-Mxx-Txx",
+    "definition": "",
+    "problem": "",
+    "example": "",
+    "pitfall": "",
+    "relations": [],
+    "evidence": [],
+    "status": "em estudo"
+  },
+  "note": "Nenhum conceito marcado como ensinado nesta trilha. Atualizar por commit após sessão real."
+}
