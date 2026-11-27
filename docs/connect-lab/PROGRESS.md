@@ -1,17 +1,17 @@
 # Connect Lab — progresso e retomada
 
-Atualizado: 2026-11-26
+Atualizado: 2026-11-27
 
 Fonte de verdade do tutor: [currículo e protocolo](index.html). Referência transversal: [Caderno do Engenheiro](../engineering-notebook.html). Não presumir domínio, execução de código ou sincronização automática.
 
 ## Estado atual
 
-- Módulo 01: iniciado (45 desafios validados em nível introdutório; 43/45 acertos na primeira tentativa; Retestes 037.1 e 039.1 corretos; reforço 043.1 correto em nível introdutório; gate completo de runtime ainda pendente).
+- Módulo 01: iniciado (46 desafios validados em nível introdutório; 44/46 acertos na primeira tentativa; Retestes 037.1 e 039.1 corretos; reforço 043.1 correto em nível introdutório; gate completo de runtime ainda pendente).
 - Módulos 02 e 09: tópicos antecipados em nível introdutório (HTTP/arquitetura/domínio e testes/qualidade); gates e entregas completas pendentes.
 - Módulos 03–08 e 10–12: entregas principais planejadas; transferência conceitual e preparação para entrevista já realizadas pontualmente.
 - Currículo original consultado em 25/11/2026: M01 ainda exige aprofundamento de event loop, V8/libuv, memória, async/await, microtasks, I/O, concorrência/paralelismo, workers, streams/buffers, ESM e TypeScript; gate CPU-bound pendente. Não há calendário com datas nem total fixo de aulas; acertos não representam percentual de conclusão. Incremento de transição imutável concluído segundo relato; retomada dos fundamentos de execução na Aula 028 antes de avançar a persistência.
 - Repositório de implementação: projeto local connect-lab; remoto e commits do código ainda não confirmados.
-- Evidências práticas: aluno confirmou execução bem-sucedida do servidor HTTP nativo, roteamento, Express e middleware de logging e proteção simulada de conversas e agrupamento e extração do Router e do middleware de autenticação e do Conversation Service, além do primeiro teste unitário e ciclo TDD completo, testes negativos, experimento manual de mutação, testes de caracterização, seam temporal, Stub, Fake, Spy, Mock, Dummy, FSM, tabela de transições, integração ao Service, factory, imutabilidade superficial, transição imutável, experimento de Event Loop, bloqueio HTTP CPU-bound, espera assíncrona simulada, leitura assíncrona real, stack trace, referências de objetos, Garbage Collection, retenção de memória/cache limitado, ciclo de vida de Promise, encadeamento de Promises, adoção de resultado, async/await e experimentos de ordem de microtasks, FIFO, Next Tick Queue, setImmediate em contexto de I/O e starvation/yielding e esperas sequenciais/concorrentes com Promise.all e rastreamento de conclusão e reações e primeiro experimento de Worker Threads e comunicação por cópia estruturada, nas Aulas 002–045; sem logs anexados.
+- Evidências práticas: aluno confirmou execução bem-sucedida do servidor HTTP nativo, roteamento, Express e middleware de logging e proteção simulada de conversas e agrupamento e extração do Router e do middleware de autenticação e do Conversation Service, além do primeiro teste unitário e ciclo TDD completo, testes negativos, experimento manual de mutação, testes de caracterização, seam temporal, Stub, Fake, Spy, Mock, Dummy, FSM, tabela de transições, integração ao Service, factory, imutabilidade superficial, transição imutável, experimento de Event Loop, bloqueio HTTP CPU-bound, espera assíncrona simulada, leitura assíncrona real, stack trace, referências de objetos, Garbage Collection, retenção de memória/cache limitado, ciclo de vida de Promise, encadeamento de Promises, adoção de resultado, async/await e experimentos de ordem de microtasks, FIFO, Next Tick Queue, setImmediate em contexto de I/O e starvation/yielding e esperas sequenciais/concorrentes com Promise.all e rastreamento de conclusão e reações e primeiro experimento de Worker Threads e comunicação por cópia estruturada e transferência de ArrayBuffer, nas Aulas 002–046; sem logs anexados.
 
 ## Aula 001 — Runtime versus framework
 
@@ -356,6 +356,13 @@ Fonte de verdade do tutor: [currículo e protocolo](index.html). Referência tra
 - Métricas: 45 desafios validados em nível introdutório; 43/45 acertos de primeira tentativa (95,6%); dois retestes corretos, reforço 043.1 concluído. Gate completo de runtime pendente.
 - Referência: [Worker Data](../engineering-notebook.html#connect-worker-data).
 - Próxima ação (Aula 046): transferência de propriedade de ArrayBuffer via transferList em worker.postMessage. Criar experiments/worker-transfer.cjs com modos clone e transfer, ArrayBuffer explícito de 4 bytes, Uint8Array inicializado com [10,20,30,40]; enviar ao Worker, verificar byteLength do buffer original imediatamente após envio, calcular soma no Worker e enviar resultado. Demonstrar buffer original preservado na cópia e detached na transferência, sem acesso concorrente à mesma região. Visualizar ownership, diferenciar ArrayBuffer de SharedArrayBuffer sem implementar compartilhamento nesta aula; não prometer ganho de desempenho sem medir. Um desafio de transferência; próxima etapa SharedArrayBuffer e sincronização ou pool conforme evidência.
+
+## Aula 046 — Ownership Transfer
+
+- Evidência 27/11/2026: execução reportada como “Funcionou”; resposta D correta (byteLength zero após transferência bem-sucedida). Aluno perguntou quando shared memory ou transferência são justificáveis. Discutidos volume e frequência de dados, necessidade de manter acesso no remetente, custo de cópia e sincronização; exemplos são possibilidades, não requisitos obrigatórios nem benchmarks. Logs e commit local não apresentados.
+- Métricas: 46 desafios validados em nível introdutório; 44/46 acertos de primeira tentativa (95,7%); dois retestes corretos, reforço 043.1 concluído. Gate completo de runtime pendente.
+- Referência: [Ownership Transfer](../engineering-notebook.html#connect-worker-transfer).
+- Próxima ação (Aula 047): SharedArrayBuffer, com experimento experiments/worker-shared.cjs de região de 4 bytes e Int32Array. Main inicializa progresso 0 via Atomics.store, envia buffer via workerData (sem transferList), Worker altera para 100 via Atomics.store e sinaliza conclusão por mensagem sem retornar o valor; Main lê via Atomics.load e observa que buffer permanece com 4 bytes. Simular progresso apenas para demonstrar acesso à mesma região; não alegar necessidade de memória compartilhada neste caso simples. Introduzir load/store apenas como acesso atômico seguro, sem aprofundar read-modify-write, locks ou Atomics.wait. Visualização de dois heaps com views distintas e backing store compartilhado; um desafio. Próxima etapa: race condition com atualização concorrente e Atomics.add.
 
 ## Registro das próximas etapas
 
